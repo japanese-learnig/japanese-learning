@@ -268,7 +268,7 @@
   // --- Data Loading & Persistence ---
   function initData() {
     // Master data version check to ensure newly added cards & furigana updates are immediately visible
-    const CURRENT_DATA_VERSION = 'v27_comprehensive_natural_examples_and_folder_selector';
+    const CURRENT_DATA_VERSION = 'v28_authentic_natural_dialogues_for_all_students';
     const savedVersion = localStorage.getItem('haku_vocab_version');
 
     const seedCards = window.INITIAL_VOCAB_DATA || [];
@@ -276,13 +276,18 @@
     const combinedMasterCards = [...seedCards, ...classCards];
 
     if (savedVersion !== CURRENT_DATA_VERSION) {
-      // Refresh with latest master data while keeping any custom created student cards
+      // Build lookup map for latest master definitions
+      const masterCardMap = new Map();
+      combinedMasterCards.forEach(c => masterCardMap.set(c.id, c));
+
+      // Refresh with latest master data while keeping genuinely custom created cards
       const savedVocab = localStorage.getItem('haku_vocab_data');
       if (savedVocab) {
         try {
           const oldList = JSON.parse(savedVocab);
-          const customStudentCards = oldList.filter(c => c.isCustom || (c.studentId && c.studentId !== 'all'));
-          vocabList = [...combinedMasterCards, ...customStudentCards];
+          // Only preserve cards that are genuinely custom (user added) and not part of master class_word or seed
+          const customCards = oldList.filter(c => c.isCustom && !masterCardMap.has(c.id));
+          vocabList = [...combinedMasterCards, ...customCards];
         } catch (e) {
           vocabList = combinedMasterCards;
         }
