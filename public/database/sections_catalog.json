@@ -1,0 +1,310 @@
+[
+  {
+    "num": 0,
+    "title": "まずは授業で使う単語を覚えよう！",
+    "folder_id": "folder_1",
+    "folder_name": "初級 1-10",
+    "count": 46
+  },
+  {
+    "num": 1,
+    "title": "simple phrase",
+    "folder_id": "folder_1",
+    "folder_name": "初級 1-10",
+    "count": 23
+  },
+  {
+    "num": 2,
+    "title": "身の回りのもの",
+    "folder_id": "folder_1",
+    "folder_name": "初級 1-10",
+    "count": 23
+  },
+  {
+    "num": 3,
+    "title": "代名詞/家族",
+    "folder_id": "folder_1",
+    "folder_name": "初級 1-10",
+    "count": 28
+  },
+  {
+    "num": 4,
+    "title": "場所",
+    "folder_id": "folder_1",
+    "folder_name": "初級 1-10",
+    "count": 29
+  },
+  {
+    "num": 5,
+    "title": "動物",
+    "folder_id": "folder_1",
+    "folder_name": "初級 1-10",
+    "count": 16
+  },
+  {
+    "num": 6,
+    "title": "職業/身分",
+    "folder_id": "folder_1",
+    "folder_name": "初級 1-10",
+    "count": 27
+  },
+  {
+    "num": 7,
+    "title": "国/地名",
+    "folder_id": "folder_1",
+    "folder_name": "初級 1-10",
+    "count": 23
+  },
+  {
+    "num": 8,
+    "title": "体の名前",
+    "folder_id": "folder_1",
+    "folder_name": "初級 1-10",
+    "count": 23
+  },
+  {
+    "num": 9,
+    "title": "位置",
+    "folder_id": "folder_1",
+    "folder_name": "初級 1-10",
+    "count": 10
+  },
+  {
+    "num": 10,
+    "title": "基本の数字",
+    "folder_id": "folder_1",
+    "folder_name": "初級 1-10",
+    "count": 14
+  },
+  {
+    "num": 11,
+    "title": "日付（月/日）",
+    "folder_id": "folder_2",
+    "folder_name": "初級 11-20",
+    "count": 25
+  },
+  {
+    "num": 12,
+    "title": "時間/時間帯",
+    "folder_id": "folder_2",
+    "folder_name": "初級 11-20",
+    "count": 31
+  },
+  {
+    "num": 13,
+    "title": "もの/人の数え方",
+    "folder_id": "folder_2",
+    "folder_name": "初級 11-20",
+    "count": 30
+  },
+  {
+    "num": 14,
+    "title": "時間/時制表現",
+    "folder_id": "folder_2",
+    "folder_name": "初級 11-20",
+    "count": 25
+  },
+  {
+    "num": 15,
+    "title": "基本動詞(1)",
+    "folder_id": "folder_2",
+    "folder_name": "初級 11-20",
+    "count": 26
+  },
+  {
+    "num": 16,
+    "title": "乗り物",
+    "folder_id": "folder_2",
+    "folder_name": "初級 11-20",
+    "count": 11
+  },
+  {
+    "num": 17,
+    "title": "時間/頻度",
+    "folder_id": "folder_2",
+    "folder_name": "初級 11-20",
+    "count": 19
+  },
+  {
+    "num": 18,
+    "title": "食べ物",
+    "folder_id": "folder_2",
+    "folder_name": "初級 11-20",
+    "count": 30
+  },
+  {
+    "num": 19,
+    "title": "基本動詞(2)",
+    "folder_id": "folder_2",
+    "folder_name": "初級 11-20",
+    "count": 25
+  },
+  {
+    "num": 20,
+    "title": "する動詞（名詞）",
+    "folder_id": "folder_2",
+    "folder_name": "初級 11-20",
+    "count": 29
+  },
+  {
+    "num": 21,
+    "title": "あいづち/接続し",
+    "folder_id": "folder_3",
+    "folder_name": "初級 21-30",
+    "count": 27
+  },
+  {
+    "num": 22,
+    "title": "い形容詞(1)",
+    "folder_id": "folder_3",
+    "folder_name": "初級 21-30",
+    "count": 20
+  },
+  {
+    "num": 23,
+    "title": "な形容詞",
+    "folder_id": "folder_3",
+    "folder_name": "初級 21-30",
+    "count": 20
+  },
+  {
+    "num": 24,
+    "title": "色/味",
+    "folder_id": "folder_3",
+    "folder_name": "初級 21-30",
+    "count": 19
+  },
+  {
+    "num": 25,
+    "title": "予定/映画/スポーツ",
+    "folder_id": "folder_3",
+    "folder_name": "初級 21-30",
+    "count": 23
+  },
+  {
+    "num": 26,
+    "title": "季節/天気",
+    "folder_id": "folder_3",
+    "folder_name": "初級 21-30",
+    "count": 23
+  },
+  {
+    "num": 27,
+    "title": "基本動詞(3)",
+    "folder_id": "folder_3",
+    "folder_name": "初級 21-30",
+    "count": 18
+  },
+  {
+    "num": 28,
+    "title": "お出掛け",
+    "folder_id": "folder_3",
+    "folder_name": "初級 21-30",
+    "count": 19
+  },
+  {
+    "num": 29,
+    "title": "電車",
+    "folder_id": "folder_3",
+    "folder_name": "初級 21-30",
+    "count": 20
+  },
+  {
+    "num": 30,
+    "title": "基本動詞(1) てform",
+    "folder_id": "folder_3",
+    "folder_name": "初級 21-30",
+    "count": 26
+  },
+  {
+    "num": 31,
+    "title": "基本動詞(2) てform",
+    "folder_id": "folder_4",
+    "folder_name": "初級 31-43",
+    "count": 25
+  },
+  {
+    "num": 32,
+    "title": "基本動詞(3) てform",
+    "folder_id": "folder_4",
+    "folder_name": "初級 31-43",
+    "count": 18
+  },
+  {
+    "num": 33,
+    "title": "基本動詞(4)",
+    "folder_id": "folder_4",
+    "folder_name": "初級 31-43",
+    "count": 19
+  },
+  {
+    "num": 34,
+    "title": "基本動詞(5)",
+    "folder_id": "folder_4",
+    "folder_name": "初級 31-43",
+    "count": 22
+  },
+  {
+    "num": 35,
+    "title": "い形容詞(2)",
+    "folder_id": "folder_4",
+    "folder_name": "初級 31-43",
+    "count": 19
+  },
+  {
+    "num": 36,
+    "title": "病気/症状",
+    "folder_id": "folder_4",
+    "folder_name": "初級 31-43",
+    "count": 27
+  },
+  {
+    "num": 37,
+    "title": "基本動詞 ないform (1)",
+    "folder_id": "folder_4",
+    "folder_name": "初級 31-43",
+    "count": 26
+  },
+  {
+    "num": 38,
+    "title": "基本動詞 ないform (2)",
+    "folder_id": "folder_4",
+    "folder_name": "初級 31-43",
+    "count": 25
+  },
+  {
+    "num": 39,
+    "title": "基本動詞 ないform (3)",
+    "folder_id": "folder_4",
+    "folder_name": "初級 31-43",
+    "count": 18
+  },
+  {
+    "num": 40,
+    "title": "基本動詞 ないform (4)",
+    "folder_id": "folder_4",
+    "folder_name": "初級 31-43",
+    "count": 19
+  },
+  {
+    "num": 41,
+    "title": "基本動詞 ないform (5)",
+    "folder_id": "folder_4",
+    "folder_name": "初級 31-43",
+    "count": 22
+  },
+  {
+    "num": 42,
+    "title": "基本動詞 可能形 (1)",
+    "folder_id": "folder_4",
+    "folder_name": "初級 31-43",
+    "count": 26
+  },
+  {
+    "num": 43,
+    "title": "基本動詞 可能形 (2)",
+    "folder_id": "folder_4",
+    "folder_name": "初級 31-43",
+    "count": 24
+  }
+]

@@ -1,0 +1,5 @@
+.DS_Store
+tmp_doc/
+*.pyc
+__pycache__/
+.system_generated/
