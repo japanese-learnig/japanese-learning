@@ -2110,33 +2110,53 @@
           reading = match[2].trim();
         }
 
-        const rawTrans = parts[1] ? parts[1].trim() : '';
-        const exJa = parts[2] ? parts[2].trim() : '';
-        const related = parts[3] ? parts[3].trim() : '';
+        let rawTrans = '';
+        let parsedNative = '';
+        let parsedEn = '';
+        let exJa = '';
+        let related = '';
 
-        // Smart parser for bilingual meaning (e.g., "吃 (to eat)" or "去 / to go" or "to eat")
-        let parsedNative = rawTrans;
-        let parsedEn = rawTrans;
+        if (parts.length >= 4) {
+          // Format 4-column: 日本語 \t 生徒の母国語 \t 英語 \t 例文
+          parsedNative = parts[1].trim();
+          parsedEn = parts[2].trim();
+          exJa = parts[3].trim();
+          rawTrans = parsedNative;
+          if (parts[4]) related = parts[4].trim();
+        } else if (parts.length === 3) {
+          // Could be: 日本語 \t 意味(母国語/英語) \t 例文
+          rawTrans = parts[1].trim();
+          exJa = parts[2].trim();
+          parsedNative = rawTrans;
+          parsedEn = rawTrans;
+        } else {
+          // 2 columns or 1 column
+          rawTrans = parts[1] ? parts[1].trim() : '';
+          parsedNative = rawTrans;
+          parsedEn = rawTrans;
+        }
 
-        // Check for formats like "吃 (to eat)", "去 [to go]", "吃 / to eat"
-        const parenMatch = rawTrans.match(/^(.*?)[（\(\[](.*?)[）\)\]]$/);
-        if (parenMatch) {
-          const p1 = parenMatch[1].trim();
-          const p2 = parenMatch[2].trim();
-          if (/[a-zA-Z]/.test(p2)) {
-            parsedNative = p1 || p2;
-            parsedEn = p2;
-          } else if (/[a-zA-Z]/.test(p1)) {
-            parsedNative = p2;
-            parsedEn = p1;
-          }
-        } else if (rawTrans.includes('/')) {
-          const slashParts = rawTrans.split('/').map(s => s.trim());
-          const enPart = slashParts.find(s => /^[a-zA-Z\s,.'"-]+$/.test(s));
-          const nativePart = slashParts.find(s => !/^[a-zA-Z\s,.'"-]+$/.test(s));
-          if (enPart && nativePart) {
-            parsedEn = enPart;
-            parsedNative = nativePart;
+        // Smart parser for bilingual meaning if still packed (e.g., "吃 (to eat)" or "去 / to go")
+        if (!parsedEn || parsedEn === parsedNative) {
+          const parenMatch = rawTrans.match(/^(.*?)[（\(\[](.*?)[）\)\]]$/);
+          if (parenMatch) {
+            const p1 = parenMatch[1].trim();
+            const p2 = parenMatch[2].trim();
+            if (/[a-zA-Z]/.test(p2)) {
+              parsedNative = p1 || p2;
+              parsedEn = p2;
+            } else if (/[a-zA-Z]/.test(p1)) {
+              parsedNative = p2;
+              parsedEn = p1;
+            }
+          } else if (rawTrans.includes('/')) {
+            const slashParts = rawTrans.split('/').map(s => s.trim());
+            const enPart = slashParts.find(s => /^[a-zA-Z\s,.'"-]+$/.test(s));
+            const nativePart = slashParts.find(s => !/^[a-zA-Z\s,.'"-]+$/.test(s));
+            if (enPart && nativePart) {
+              parsedEn = enPart;
+              parsedNative = nativePart;
+            }
           }
         }
 
