@@ -1,4 +1,3 @@
-// Auto-generated Class Vocabulary Data from Teacher Docs
 window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0001",
@@ -123,7 +122,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0006",
     "word": "お利口",
-    "reading": "お利口",
+    "reading": "おりこう",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "good boy/ good girl",
@@ -746,8 +745,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_0032",
-    "word": "背—身長",
-    "reading": "せ—身長",
+    "word": "身長",
+    "reading": "しんちょう",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "height (of a person)",
@@ -1154,8 +1153,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_0049",
-    "word": "かかる—時間が",
-    "reading": "かかる—時間が",
+    "word": "時間がかかる",
+    "reading": "じかんがかかる",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "to take (time)",
@@ -1178,8 +1177,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_0050",
-    "word": "かかる—お金が",
-    "reading": "かかる—お金が",
+    "word": "お金がかかる",
+    "reading": "おかねがかかる",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "to cost (money)",
@@ -1202,8 +1201,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_0051",
-    "word": "どれくらい—時間",
-    "reading": "どれくらい—時間",
+    "word": "どれくらい（時間）",
+    "reading": "どれくらい",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "how long",
@@ -1226,8 +1225,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_0052",
-    "word": "どれくらい—量・お金",
-    "reading": "どれくらい—量・お金",
+    "word": "どれくらい（費用・量）",
+    "reading": "どれくらい",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "how much",
@@ -1443,7 +1442,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0061",
     "word": "同い年",
-    "reading": "同いおないどし",
+    "reading": "おないどし",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "same age / born the same year",
@@ -3098,16 +3097,16 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_0130",
-    "word": "for vehicles) ／ 道路 ／ 馬路, 道路",
-    "reading": "for vehicles) ／ 道路 ／ 馬路, 道路",
+    "word": "車道",
+    "reading": "しゃどう",
     "category": "授業で習った言葉",
     "meaning": {
-      "en": "road; street (paved",
-      "zh_TW": "道路；街道（鋪好的",
-      "zh_CN": "道路；街道（鋪好的",
-      "ko": "도로; 거리(포장된",
-      "zh_HK": "道路；街道（鋪好的",
-      "fr": "route; rue (pavée"
+      "en": "roadway / roadway for vehicles",
+      "zh_TW": "車道",
+      "zh_CN": "车道",
+      "ko": "차도",
+      "zh_HK": "車道",
+      "fr": "chaussée / voie pour véhicules"
     },
     "example": {
       "ja": "A: <ruby>for vehicles) ／ 道路 ／ 馬路, 道路<rt>for vehicles) ／ 道路 ／ 馬路, 道路</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
@@ -3118,12 +3117,12 @@ window.CLASS_VOCAB_DATA = [
       "zh_HK": "A: 我哋嚟傾下關於「for vehicles) ／ 道路 ／ 馬路, 道路」嘅話題啦。<br/>B: 好呀，明白！",
       "fr": "A: Parlons de « for vehicles) ／ 道路 ／ 馬路, 道路 ».<br/>B: Oui, d'accord !"
     },
-    "related": "for vehicles) ／ 道路 ／ 馬路, 道路（授業の重要表現）"
+    "related": "車道（授業の重要表現）"
   },
   {
     "id": "class_word_0131",
     "word": "道",
-    "reading": "道",
+    "reading": "みち",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "road; way; path",
@@ -3171,7 +3170,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0133",
     "word": "噛む",
-    "reading": "噛む",
+    "reading": "かむ",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "to bite; to chew",
@@ -3195,7 +3194,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0134",
     "word": "レジ袋",
-    "reading": "レジ袋",
+    "reading": "レジぶくろ",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "plastic bag",
@@ -3267,7 +3266,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0137",
     "word": "近所の人",
-    "reading": "きんじょの人",
+    "reading": "きんじょのひと",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "neighbor (in the area)",
@@ -4779,7 +4778,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0200",
     "word": "甥っ子",
-    "reading": "おいっ子",
+    "reading": "おいっこ",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "nephew",
@@ -4803,7 +4802,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0201",
     "word": "姪っ子",
-    "reading": "めいっ子",
+    "reading": "めいっこ",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "niece",
@@ -5139,7 +5138,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0215",
     "word": "なくし物",
-    "reading": "なくし物",
+    "reading": "なくしもの",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "lost item; lost property",
@@ -10083,7 +10082,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0421",
     "word": "何ヶ月間",
-    "reading": "何ヶなんかげつかん",
+    "reading": "なんかげつかん",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "how many months / combien de mois",
@@ -12914,8 +12913,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_0539",
-    "word": "かんこう",
-    "reading": "観光",
+    "word": "観光",
+    "reading": "かんこう",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "sightseeing",
@@ -12962,8 +12961,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_0541",
-    "word": "りゅうがく",
-    "reading": "留学",
+    "word": "留学",
+    "reading": "りゅうがく",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "studying abroad",
@@ -12986,8 +12985,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_0542",
-    "word": "りゅうがくせい",
-    "reading": "留学生",
+    "word": "留学生",
+    "reading": "りゅうがくせい",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "international student",
@@ -13010,8 +13009,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_0543",
-    "word": "しょうがくせい",
-    "reading": "小学生",
+    "word": "小学生",
+    "reading": "しょうがくせい",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "elementary school student",
@@ -13034,8 +13033,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_0544",
-    "word": "ちゅうがくせい",
-    "reading": "中学生",
+    "word": "中学生",
+    "reading": "ちゅうがくせい",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "junior high school student",
@@ -13058,8 +13057,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_0545",
-    "word": "こうこうせい",
-    "reading": "高校生",
+    "word": "高校生",
+    "reading": "こうこうせい",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "high school student",
@@ -13251,7 +13250,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0553",
     "word": "タバコを吸う",
-    "reading": "タバコを吸う",
+    "reading": "タバコをすう",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "to smoke",
@@ -13611,7 +13610,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0568",
     "word": "演技する、演じる",
-    "reading": "演技する、演じる",
+    "reading": "えんぎする、えんじる",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "to act, to perform",
@@ -13754,8 +13753,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_0574",
-    "word": "かぐ",
-    "reading": "家具",
+    "word": "家具",
+    "reading": "かぐ",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "furniture",
@@ -14186,8 +14185,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_0592",
-    "word": "ひいおじいさん",
-    "reading": "曾祖父",
+    "word": "ひいおじいさん（曾祖父）",
+    "reading": "ひいおじいさん",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "great-grandfather",
@@ -14210,8 +14209,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_0593",
-    "word": "ひいおばあさん",
-    "reading": "曾祖母",
+    "word": "ひいおばあさん（曾祖母）",
+    "reading": "ひいおばあさん",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "great-grandmother",
@@ -14474,8 +14473,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_0604",
-    "word": "例え・例—接続詞的に",
-    "reading": "例え・たとえ・れい—接続詞的に",
+    "word": "たとえば",
+    "reading": "たとえば",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "for example / for instance",
@@ -14619,7 +14618,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0610",
     "word": "歯磨き粉",
-    "reading": "歯磨きはみがきこ",
+    "reading": "はみがきこ",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "toothpaste",
@@ -14691,7 +14690,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0613",
     "word": "上から目線",
-    "reading": "上からうえからめせん",
+    "reading": "うえからめせん",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "condescending attitude / looking down on others",
@@ -14739,7 +14738,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0615",
     "word": "偉い人",
-    "reading": "偉いえらいひと",
+    "reading": "えらいひと",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "important person / person of high status",
@@ -14787,7 +14786,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0617",
     "word": "仕事納めの日",
-    "reading": "仕事納めのしごとおさめのひ",
+    "reading": "しごとおさめのひ",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "last working day of the year",
@@ -14834,8 +14833,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_0619",
-    "word": "〜んち",
-    "reading": "〜の家",
+    "word": "んち（〜の家）",
+    "reading": "んち",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "〜's place / 〜's house",
@@ -15507,7 +15506,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0647",
     "word": "忙しいから",
-    "reading": "忙しいから",
+    "reading": "いそがしいから",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "❌ 忙しいだから → 正しくは？",
@@ -15531,7 +15530,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0648",
     "word": "楽しいから",
-    "reading": "楽しいから",
+    "reading": "たのしいから",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "❌ 楽しいだから → 正しくは？",
@@ -15555,7 +15554,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0649",
     "word": "安いと思う",
-    "reading": "安いと思う",
+    "reading": "やすいとおもう",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "❌ 安いだと思う → 正しくは？",
@@ -15579,7 +15578,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0650",
     "word": "安いとしたら",
-    "reading": "安いとしたら",
+    "reading": "やすいとしたら",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "❌ 安いだとしたら → 正しくは？",
@@ -15627,7 +15626,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0652",
     "word": "違うから",
-    "reading": "違うから",
+    "reading": "ちがうから",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "❌ 違うだから → 正しくは？",
@@ -15675,7 +15674,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0654",
     "word": "申し訳ないけど／申し訳ないですけど／申し訳ありませんが（formal）",
-    "reading": "申しもうしわけないけど／申し訳ないですけど／申し訳ありませんが",
+    "reading": "もうしわけないけど／もうしわけないですけど／もうしわけありませんが",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "❌ すみませんですけど → 正しくは？",
@@ -15843,7 +15842,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0661",
     "word": "元カレ／元カノ",
-    "reading": "元カレ／元カノ",
+    "reading": "もとカレ／もとカノ",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "ex-boyfriend / ex-girlfriend",
@@ -15891,7 +15890,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0663",
     "word": "喧嘩して／喧嘩になって",
-    "reading": "喧嘩して／喧嘩になって",
+    "reading": "けんかして／けんかになって",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "❌ 喧嘩（けんか）があって → 正しくは？",
@@ -16226,8 +16225,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_0677",
-    "word": "シャイ",
-    "reading": "な人",
+    "word": "シャイな人",
+    "reading": "シャイなひと",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "shy (personality trait)",
@@ -16299,7 +16298,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0680",
     "word": "大雨が降った／大雨だった",
-    "reading": "大雨がふった／大雨だった",
+    "reading": "おおあめがふった／おおあめだった",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "❌ 大雨（おおあめ）があった → 正しくは？",
@@ -16419,7 +16418,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0685",
     "word": "自信がなくなる／自信をなくす",
-    "reading": "じしんがなくなる／自信をなくす",
+    "reading": "じしんがなくなる／じしんをなくす",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "to lose one's confidence",
@@ -16707,7 +16706,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0697",
     "word": "銃を突きつけられた",
-    "reading": "銃をつきつけられた",
+    "reading": "じゅうをつきつけられた",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "❌ 銃（じゅう）を押し付けられた → 正しくは？",
@@ -17187,7 +17186,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0717",
     "word": "複雑な気分になる／複雑な気持ちになる",
-    "reading": "複雑なきぶんになる／複雑なきもちになる",
+    "reading": "ふくざつなきぶんになる／ふくざつなきもちになる",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "❌ 複雑（ふくざつ）な気分がある → 正しくは？",
@@ -19227,7 +19226,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0802",
     "word": "読書をします",
-    "reading": "読書をします",
+    "reading": "どくしょをします",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "❌ 読書（どくしょ）を読みます → 正しくは？",
@@ -19755,7 +19754,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0824",
     "word": "間違える／間違いをする",
-    "reading": "間違える／間違いをする",
+    "reading": "まちがえる／まちがいをする",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "❌ 間違（まちが）いをつける → 正しくは？",
@@ -19803,7 +19802,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0826",
     "word": "喋れないので",
-    "reading": "喋れないので",
+    "reading": "しゃべれないので",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "❌ 喋（しゃべ）れないなので → 正しくは？",
@@ -19827,7 +19826,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0827",
     "word": "熱中症になった／にかかった",
-    "reading": "熱中症になった／にかかった",
+    "reading": "ねっちゅうしょうになった／にかかった",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "❌ 熱中症（ねっちゅうしょう）があった → 正しくは？",
@@ -19851,7 +19850,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0828",
     "word": "緊張して",
-    "reading": "緊張して",
+    "reading": "きんちょうして",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "❌ 緊張（きんちょう）になって → 正しくは？",
@@ -21099,7 +21098,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0880",
     "word": "余り物",
-    "reading": "余りあまりもの",
+    "reading": "あまりもの",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "남은 것 / 남은 음식",
@@ -22130,8 +22129,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_0923",
-    "word": "からい—スパイシー",
-    "reading": "辛い",
+    "word": "辛い",
+    "reading": "からい",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "spicy / hot",
@@ -22154,8 +22153,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_0924",
-    "word": "からくない",
-    "reading": "辛くない",
+    "word": "辛くない",
+    "reading": "からくない",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "not spicy / mild",
@@ -22707,7 +22706,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0947",
     "word": "習い事",
-    "reading": "習いならいごと",
+    "reading": "ならいごと",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "extracurricular lesson / hobby class",
@@ -22875,7 +22874,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0954",
     "word": "決め台詞",
-    "reading": "決めきめぜりふ",
+    "reading": "きめぜりふ",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "signature line / catchphrase / iconic quote",
@@ -23162,16 +23161,16 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_0966",
-    "word": "person attracted to unattractive people  ／ 못생긴 사람을 좋아하는 타입 ／ 偏好外貌不出眾者／醜咖控",
-    "reading": "slang",
+    "word": "B専",
+    "reading": "ビーせん",
     "category": "授業で習った言葉",
     "meaning": {
-      "en": "B専（ビーせん）",
-      "zh_TW": "B専（ビーせん）",
-      "zh_CN": "B専（ビーせん）",
-      "ko": "B専(비せん)",
-      "zh_HK": "B専（ビーせん）",
-      "fr": "B専（ビーせん）"
+      "en": "B-sen (person attracted to unconventional/unattractive people, slang)",
+      "zh_TW": "B専（偏好外貌不出眾者／醜咖控，俚語）",
+      "zh_CN": "B専（偏好外貌不出众者，俚语）",
+      "ko": "B専 (못생긴 사람을 좋아하는 타입, 속어)",
+      "zh_HK": "B専（醜咖控，俗語）",
+      "fr": "B-sen (personne attirée par les personnes au physique atypique, argot)"
     },
     "example": {
       "ja": "A: <ruby>person attracted to unattractive people  ／ 못생긴 사람을 좋아하는 타입 ／ 偏好外貌不出眾者／醜咖控<rt>slang</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
@@ -23182,7 +23181,7 @@ window.CLASS_VOCAB_DATA = [
       "zh_HK": "A: 我哋嚟傾下關於「person attracted to unattractive people  ／ 못생긴 사람을 좋아하는 타입 ／ 偏好外貌不出眾者／醜咖控」嘅話題啦。<br/>B: 好呀，明白！",
       "fr": "A: Parlons de « person attracted to unattractive people  ／ 못생긴 사람을 좋아하는 타입 ／ 偏好外貌不出眾者／醜咖控 ».<br/>B: Oui, d'accord !"
     },
-    "related": "slang（授業の重要表現）"
+    "related": "ビーせん（俗語・スラング）"
   },
   {
     "id": "class_word_0967",
@@ -23235,7 +23234,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0969",
     "word": "穴埋め問題",
-    "reading": "穴埋めあなうめもんだい",
+    "reading": "あなうめもんだい",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "fill-in-the-blank question",
@@ -23283,7 +23282,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_0971",
     "word": "稼ぎ頭",
-    "reading": "稼ぎかせぎがしら",
+    "reading": "かせぎがしら",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "main breadwinner / top earner in the family",
@@ -23979,7 +23978,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_1000",
     "word": "自信を持って",
-    "reading": "じしんを持って",
+    "reading": "じしんをもって",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "자신감을 가져 / 자신 있게 해 / have confidence / do it with confidence",
@@ -24651,7 +24650,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_1028",
     "word": "ほうれい線",
-    "reading": "ほうれい線",
+    "reading": "ほうれいせん",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "팔자주름 / nasolabial fold / smile lines",
@@ -24819,7 +24818,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_1035",
     "word": "大きな買い物",
-    "reading": "おおきなかい物",
+    "reading": "おおきなかいもの",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "큰 소비 / 큰 지출 / big purchase / major expense",
@@ -24963,7 +24962,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_1041",
     "word": "〜ヶ月",
-    "reading": "〜ヶ月",
+    "reading": "〜かげつ",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "〜개월 / 〜달 / 〜month(s)",
@@ -26139,7 +26138,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_1090",
     "word": "大きな買い物",
-    "reading": "おおきなかい物",
+    "reading": "おおきなかいもの",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "큰 지출 / 비싼 물건 구입 / big purchase / major expense",
@@ -26763,7 +26762,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_1116",
     "word": "自信を持って",
-    "reading": "じしんを持って",
+    "reading": "じしんをもって",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "자신감을 가져 / 자신 있게 해 / have confidence / do it with confidence",
@@ -27770,8 +27769,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_1158",
-    "word": "国語—学校の教科",
-    "reading": "こくご—学校の教科",
+    "word": "国語",
+    "reading": "こくご",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "Japanese language (as a school subject)",
@@ -27842,8 +27841,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_1161",
-    "word": "社会—学校の教科",
-    "reading": "しゃかい—学校の教科",
+    "word": "社会",
+    "reading": "しゃかい",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "social studies",
@@ -27986,8 +27985,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_1167",
-    "word": "〜かかります",
-    "reading": "分",
+    "word": "〜分かかります",
+    "reading": "〜ふんかかります",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "it takes ~ minutes",
@@ -28707,7 +28706,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_1197",
     "word": "近所の人",
-    "reading": "きんじょの人",
+    "reading": "きんじょのひと",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "neighbor / people in the neighborhood",
@@ -29450,8 +29449,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_1228",
-    "word": "はやぶさ",
-    "reading": "隼",
+    "word": "隼",
+    "reading": "はやぶさ",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "peregrine falcon / falcon",
@@ -29570,8 +29569,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_1233",
-    "word": "なんですか",
-    "reading": "何ですか",
+    "word": "何ですか",
+    "reading": "なんですか",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "What is it? / What is that?",
@@ -29787,7 +29786,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_1242",
     "word": "もう一度・もう一回",
-    "reading": "もう一度・もうもういちど・もういっかい",
+    "reading": "もういちど・もういっかい",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "one more time / once again",
@@ -30314,8 +30313,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_1264",
-    "word": "なに・なん",
-    "reading": "何",
+    "word": "何",
+    "reading": "なに・なん",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "what",
@@ -30531,7 +30530,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_1273",
     "word": "食べ物",
-    "reading": "食べたべもの",
+    "reading": "たべもの",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "food / things to eat",
@@ -30675,7 +30674,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_1279",
     "word": "末っ子",
-    "reading": "末っすえっこ",
+    "reading": "すえっこ",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "youngest child",
@@ -30771,7 +30770,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_1283",
     "word": "ちょっと待ってください",
-    "reading": "ちょっと待ってください",
+    "reading": "ちょっとまってください",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "Please wait / Give me a second",
@@ -31347,7 +31346,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_1307",
     "word": "僕もそう思います",
-    "reading": "ぼくもそう思います",
+    "reading": "ぼくもそうおもいます",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "저도 그렇게 생각해요 / I think so too / I agree",
@@ -31635,7 +31634,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_1319",
     "word": "文章・文",
-    "reading": "文章・ぶんしょう・ぶん",
+    "reading": "ぶんしょう・ぶん",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "sentence / text",
@@ -34011,7 +34010,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_1418",
     "word": "姪・姪っ子",
-    "reading": "姪・姪っめい・めいっこ",
+    "reading": "めい・めいっこ",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "niece",
@@ -34035,7 +34034,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_1419",
     "word": "甥・甥っ子",
-    "reading": "甥・甥っおい・おいっこ",
+    "reading": "おい・おいっこ",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "nephew",
@@ -34082,8 +34081,8 @@ window.CLASS_VOCAB_DATA = [
   },
   {
     "id": "class_word_1421",
-    "word": "あいづち",
-    "reading": "相槌",
+    "word": "相槌",
+    "reading": "あいづち",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "backchanneling / verbal acknowledgment in conversation",
@@ -34683,7 +34682,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_1446",
     "word": "卵黄・黄身",
-    "reading": "卵黄・らんおう・きみ",
+    "reading": "らんおう・きみ",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "egg yolk",
@@ -35187,7 +35186,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_1467",
     "word": "二の腕",
-    "reading": "二のにのうで",
+    "reading": "にのうで",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "upper arm",
@@ -37755,7 +37754,7 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_1574",
     "word": "いくつ",
-    "reading": "数量・年齢",
+    "reading": "いくつ",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "how many?",

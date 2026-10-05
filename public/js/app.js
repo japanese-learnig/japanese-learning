@@ -23,14 +23,15 @@
   let quizCurrentQuestion = null;
   let quizScore = 0;
 
-  // --- TTS Speech Engine ---
+  // --- High-Fidelity TTS Speech Engine ---
+  // Converts kanji sentences to pure furigana readings using <ruby><rt>furigana</rt></ruby> tags,
+  // ensuring the browser's speech synthesizer never misreads words like 二重価格.
   function cleanJapaneseForSpeech(text) {
     if (!text) return '';
     let s = String(text);
-    // 1. Remove <rt>...</rt> and <rp>...</rp> completely so furigana readings are not voiced twice
-    s = s.replace(/<rt[^>]*>[\s\S]*?<\/rt>/gi, '');
-    s = s.replace(/<rp[^>]*>[\s\S]*?<\/rp>/gi, '');
-    // 2. Remove any remaining HTML tags (e.g. <ruby>, <br>, etc.)
+    // 1. If text contains <ruby> tags, replace each <ruby>...<rt>(reading)</rt>...</ruby> with the exact reading!
+    s = s.replace(/<ruby[^>]*>(?:(?!<ruby)[\s\S])*?<rt[^>]*>([\s\S]*?)<\/rt>[\s\S]*?<\/ruby>/gi, ' $1 ');
+    // 2. Remove any remaining HTML tags
     s = s.replace(/<[^>]+>/g, ' ');
     // 3. Remove parentheses furigana readings: （しんごう） or (しんごう)
     s = s.replace(/[（\(][\u3040-\u309F\u30A0-\u30FF・ー\s]+[）\)]/g, '');
@@ -38,13 +39,26 @@
     return s.replace(/\s+/g, ' ').trim();
   }
 
-  function speakJapanese(text) {
+  // Accepts either a string OR a card object { word, reading, example }
+  // When given a card, prefers card.reading (e.g. にじゅうかかく) so kanji is read 100% accurately!
+  function speakJapanese(target) {
     if (!('speechSynthesis' in window)) {
       showToast('お使いのブラウザは音声再生に対応していません');
       return;
     }
     window.speechSynthesis.cancel(); // Stop any pending speech
-    const cleanText = cleanJapaneseForSpeech(text);
+
+    let textToSpeak = '';
+    if (target && typeof target === 'object') {
+      // If object has reading (hiragana), use reading so TTS never mispronounces kanji!
+      // (Clean reading of any slash alternatives e.g. "スマートフォン/スマホ" -> "スマートフォン")
+      const r = (target.reading || '').split(/[/／・]/)[0].trim();
+      textToSpeak = r || target.word || '';
+    } else {
+      textToSpeak = String(target || '');
+    }
+
+    const cleanText = cleanJapaneseForSpeech(textToSpeak);
     if (!cleanText) return;
 
     const utterance = new SpeechSynthesisUtterance(cleanText);
@@ -230,21 +244,12 @@
     // 10. Mylist View
     const mylistHeaderTitle = document.getElementById('mylistHeaderTitle');
     if (mylistHeaderTitle) {
-      if (lang === 'ja') mylistHeaderTitle.textContent = 'マイリスト（学習・復習）';
-      else if (lang === 'zh_TW' || lang === 'zh_HK') mylistHeaderTitle.textContent = '我的清單（複習與練習）';
-      else if (lang === 'zh_CN') mylistHeaderTitle.textContent = '我的清单（复习与练习）';
-      else if (lang === 'ko') mylistHeaderTitle.textContent = '마이 리스트 (복습 및 학습)';
-      else if (lang === 'fr') mylistHeaderTitle.textContent = 'Ma liste (Révision & Pratique)';
-      else mylistHeaderTitle.textContent = 'My List (Review & Study)';
-    }
-    const mylistHeaderSub = document.getElementById('mylistHeaderSub');
-    if (mylistHeaderSub) {
-      if (lang === 'ja') mylistHeaderSub.textContent = '保存した単語をカスタムフォルダに整理';
-      else if (lang === 'zh_TW' || lang === 'zh_HK') mylistHeaderSub.textContent = '將收藏的單字整理至自訂資料夾';
-      else if (lang === 'zh_CN') mylistHeaderSub.textContent = '将收藏的单词整理至自定义文件夹';
-      else if (lang === 'ko') mylistHeaderSub.textContent = '저장한 단어를 폴더별로 정리';
-      else if (lang === 'fr') mylistHeaderSub.textContent = 'Organisez vos mots dans des dossiers';
-      else mylistHeaderSub.textContent = 'Organize starred words into custom folders';
+      if (lang === 'ja') mylistHeaderTitle.textContent = 'マイリスト';
+      else if (lang === 'zh_TW' || lang === 'zh_HK') mylistHeaderTitle.textContent = '我的清單';
+      else if (lang === 'zh_CN') mylistHeaderTitle.textContent = '我的清单';
+      else if (lang === 'ko') mylistHeaderTitle.textContent = '마이 리스트';
+      else if (lang === 'fr') mylistHeaderTitle.textContent = 'Ma liste';
+      else mylistHeaderTitle.textContent = 'My List';
     }
     const btnToggleFoldersLabel = document.getElementById('btnToggleMylistFoldersLabel');
     if (btnToggleFoldersLabel) {
@@ -933,7 +938,7 @@
         if (audioWordBtn) {
           audioWordBtn.addEventListener('click', (e) => {
             e.stopPropagation();
-            speakJapanese(card.word);
+            speakJapanese(card);
           });
         }
         const audioExBtn = itemCard.querySelector('.btn-audio-example');
@@ -1801,7 +1806,7 @@
       feedbackBox.className = 'p-3 rounded-2xl my-2 text-center bg-emerald-50 border border-emerald-200 text-emerald-800';
       feedbackMsg.textContent = 'Correct! ✨';
       feedbackDetail.textContent = `${quizCurrentQuestion.word}（${quizCurrentQuestion.reading || ''}）`;
-      speakJapanese(quizCurrentQuestion.word);
+      speakJapanese(quizCurrentQuestion);
     } else {
       clickedBtn.classList.remove('border-softBorder');
       clickedBtn.classList.add('border-coralPink', 'bg-rose-50', 'text-rose-900');
@@ -1981,7 +1986,7 @@
       if (btnStudySingle) btnStudySingle.addEventListener('click', studySingleHandler);
 
       // Voice
-      item.querySelector('.btn-voice').addEventListener('click', () => speakJapanese(card.word));
+      item.querySelector('.btn-voice').addEventListener('click', () => speakJapanese(card));
 
       // Remove from star
       item.querySelector('.btn-remove-star').addEventListener('click', () => {
@@ -2586,14 +2591,14 @@
     document.getElementById('btnSpeakFront').addEventListener('click', (e) => {
       e.stopPropagation();
       if (activeDeck[currentIndex]) {
-        speakJapanese(activeDeck[currentIndex].word);
+        speakJapanese(activeDeck[currentIndex]);
       }
     });
 
     document.getElementById('btnSpeakBack').addEventListener('click', (e) => {
       e.stopPropagation();
       if (activeDeck[currentIndex]) {
-        speakJapanese(activeDeck[currentIndex].word);
+        speakJapanese(activeDeck[currentIndex]);
       }
     });
 
