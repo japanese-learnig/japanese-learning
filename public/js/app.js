@@ -229,15 +229,68 @@
 
     // 10. Mylist View
     const mylistHeaderTitle = document.getElementById('mylistHeaderTitle');
-    if (mylistHeaderTitle) mylistHeaderTitle.textContent = isJa ? 'マイリスト（学習・復習）' : 'My List (Review & Study)';
+    if (mylistHeaderTitle) {
+      if (lang === 'ja') mylistHeaderTitle.textContent = 'マイリスト（学習・復習）';
+      else if (lang === 'zh_TW' || lang === 'zh_HK') mylistHeaderTitle.textContent = '我的清單（複習與練習）';
+      else if (lang === 'zh_CN') mylistHeaderTitle.textContent = '我的清单（复习与练习）';
+      else if (lang === 'ko') mylistHeaderTitle.textContent = '마이 리스트 (복습 및 학습)';
+      else if (lang === 'fr') mylistHeaderTitle.textContent = 'Ma liste (Révision & Pratique)';
+      else mylistHeaderTitle.textContent = 'My List (Review & Study)';
+    }
     const mylistHeaderSub = document.getElementById('mylistHeaderSub');
-    if (mylistHeaderSub) mylistHeaderSub.textContent = isJa ? '保存した単語をカスタムフォルダに整理' : 'Organize starred words into custom folders';
+    if (mylistHeaderSub) {
+      if (lang === 'ja') mylistHeaderSub.textContent = '保存した単語をカスタムフォルダに整理';
+      else if (lang === 'zh_TW' || lang === 'zh_HK') mylistHeaderSub.textContent = '將收藏的單字整理至自訂資料夾';
+      else if (lang === 'zh_CN') mylistHeaderSub.textContent = '将收藏的单词整理至自定义文件夹';
+      else if (lang === 'ko') mylistHeaderSub.textContent = '저장한 단어를 폴더별로 정리';
+      else if (lang === 'fr') mylistHeaderSub.textContent = 'Organisez vos mots dans des dossiers';
+      else mylistHeaderSub.textContent = 'Organize starred words into custom folders';
+    }
     const btnCreateMylistLabel = document.getElementById('btnCreateMylistFolderLabel');
-    if (btnCreateMylistLabel) btnCreateMylistLabel.textContent = isJa ? '新規フォルダ' : 'New Folder';
+    if (btnCreateMylistLabel) {
+      if (lang === 'ja') btnCreateMylistLabel.textContent = '新規フォルダ';
+      else if (lang === 'zh_TW' || lang === 'zh_HK') btnCreateMylistLabel.textContent = '新增資料夾';
+      else if (lang === 'zh_CN') btnCreateMylistLabel.textContent = '新建文件夹';
+      else if (lang === 'ko') btnCreateMylistLabel.textContent = '새 폴더';
+      else if (lang === 'fr') btnCreateMylistLabel.textContent = 'Nouveau dossier';
+      else btnCreateMylistLabel.textContent = 'New Folder';
+    }
+    const btnStudyMylist = document.getElementById('btnStudyMylist');
     const btnStudyMylistLabel = document.getElementById('btnStudyMylistLabel');
-    if (btnStudyMylistLabel) btnStudyMylistLabel.textContent = isJa ? '学習' : 'Study';
+    if (btnStudyMylistLabel) {
+      let labelText = '練習カード';
+      let titleText = '練習カードで学習する';
+      if (lang === 'ja') {
+        labelText = '練習カード';
+        titleText = '練習カードで学習する';
+      } else if (lang === 'zh_TW' || lang === 'zh_HK') {
+        labelText = '練習卡片';
+        titleText = '使用練習卡片學習';
+      } else if (lang === 'zh_CN') {
+        labelText = '练习卡片';
+        titleText = '使用练习卡片学习';
+      } else if (lang === 'ko') {
+        labelText = '연습 카드';
+        titleText = '연습 카드로 학습하기';
+      } else if (lang === 'fr') {
+        labelText = 'Cartes de pratique';
+        titleText = 'Pratiquer avec les cartes mémoire';
+      } else {
+        labelText = 'Practice Cards';
+        titleText = 'Practice with flashcards';
+      }
+      btnStudyMylistLabel.textContent = labelText;
+      if (btnStudyMylist) btnStudyMylist.setAttribute('title', titleText);
+    }
     const btnTestMylistLabel = document.getElementById('btnTestMylistLabel');
-    if (btnTestMylistLabel) btnTestMylistLabel.textContent = isJa ? 'テスト' : 'Test';
+    if (btnTestMylistLabel) {
+      if (lang === 'ja') btnTestMylistLabel.textContent = 'テスト';
+      else if (lang === 'zh_TW' || lang === 'zh_HK') btnTestMylistLabel.textContent = '測驗';
+      else if (lang === 'zh_CN') btnTestMylistLabel.textContent = '测验';
+      else if (lang === 'ko') btnTestMylistLabel.textContent = '테스트';
+      else if (lang === 'fr') btnTestMylistLabel.textContent = 'Test';
+      else btnTestMylistLabel.textContent = 'Test';
+    }
 
     // 11. Side Drawer Menu
     const drawerMenuLabel = document.getElementById('drawerMenuLabel');
@@ -1876,7 +1929,7 @@
           </div>
         </div>
         <div class="flex items-center space-x-1 shrink-0">
-          <button class="btn-study-single p-2 text-deepNavy hover:text-coralPink transition rounded-full hover:bg-white" title="${currentLang === 'ja' ? 'カードで学習' : 'Study Card'}">
+          <button class="btn-study-single p-2 text-deepNavy hover:text-coralPink transition rounded-full hover:bg-white" title="${currentLang === 'ja' ? '練習カードで学習' : (currentLang === 'zh_TW' || currentLang === 'zh_HK' ? '練習卡片' : (currentLang === 'zh_CN' ? '练习卡片' : (currentLang === 'ko' ? '연습 카드' : (currentLang === 'fr' ? 'Cartes de pratique' : 'Practice Card'))))}">
             <i data-lucide="play" class="w-4 h-4 fill-deepNavy"></i>
           </button>
           <button class="btn-voice p-2 text-slate-500 hover:text-coralPink transition rounded-full hover:bg-white" title="Listen">
@@ -2644,10 +2697,14 @@
       document.getElementById('unitListPanel').classList.add('hidden');
       document.getElementById('activeStudyHeader').classList.remove('hidden');
       document.getElementById('activeStudySectionName').textContent = folderName;
-      document.getElementById('activeStudyFolderName').textContent = currentLang === 'ja' ? 'マイリスト' : 'My List';
-
       renderCurrentCard();
-      showToast(currentLang === 'ja' ? `「${folderName}」のフラッシュカード学習を開始します ⭐` : `Studying "${folderName}" flashcards ⭐`);
+      let startMsg = `「${folderName}」の練習カードを開始します ⭐`;
+      if (currentLang === 'zh_TW' || currentLang === 'zh_HK') startMsg = `開始「${folderName}」的練習卡片 ⭐`;
+      else if (currentLang === 'zh_CN') startMsg = `开始「${folderName}」的练习卡片 ⭐`;
+      else if (currentLang === 'ko') startMsg = `"${folderName}" 연습 카드를 시작합니다 ⭐`;
+      else if (currentLang === 'fr') startMsg = `Début de la pratique des cartes pour « ${folderName} » ⭐`;
+      else if (currentLang !== 'ja') startMsg = `Practicing "${folderName}" cards ⭐`;
+      showToast(startMsg);
     });
 
     // Mylist Test button (Quizzes active folder, or all if 'all' is selected)
