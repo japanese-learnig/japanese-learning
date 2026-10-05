@@ -246,14 +246,32 @@
       else if (lang === 'fr') mylistHeaderSub.textContent = 'Organisez vos mots dans des dossiers';
       else mylistHeaderSub.textContent = 'Organize starred words into custom folders';
     }
+    const btnToggleFoldersLabel = document.getElementById('btnToggleMylistFoldersLabel');
+    if (btnToggleFoldersLabel) {
+      if (lang === 'ja') btnToggleFoldersLabel.textContent = 'フォルダ';
+      else if (lang === 'zh_TW' || lang === 'zh_HK') btnToggleFoldersLabel.textContent = '資料夾';
+      else if (lang === 'zh_CN') btnToggleFoldersLabel.textContent = '文件夹';
+      else if (lang === 'ko') btnToggleFoldersLabel.textContent = '폴더';
+      else if (lang === 'fr') btnToggleFoldersLabel.textContent = 'Dossiers';
+      else btnToggleFoldersLabel.textContent = 'Folders';
+    }
+    const mylistFolderSectionTitle = document.getElementById('mylistFolderSectionTitle');
+    if (mylistFolderSectionTitle) {
+      if (lang === 'ja') mylistFolderSectionTitle.textContent = '📁 フォルダを選択';
+      else if (lang === 'zh_TW' || lang === 'zh_HK') mylistFolderSectionTitle.textContent = '📁 選擇資料夾';
+      else if (lang === 'zh_CN') mylistFolderSectionTitle.textContent = '📁 选择文件夹';
+      else if (lang === 'ko') mylistFolderSectionTitle.textContent = '📁 폴더 선택';
+      else if (lang === 'fr') mylistFolderSectionTitle.textContent = '📁 Choisir un dossier';
+      else mylistFolderSectionTitle.textContent = '📁 Select Folder';
+    }
     const btnCreateMylistLabel = document.getElementById('btnCreateMylistFolderLabel');
     if (btnCreateMylistLabel) {
-      if (lang === 'ja') btnCreateMylistLabel.textContent = '新規フォルダ';
-      else if (lang === 'zh_TW' || lang === 'zh_HK') btnCreateMylistLabel.textContent = '新增資料夾';
-      else if (lang === 'zh_CN') btnCreateMylistLabel.textContent = '新建文件夹';
-      else if (lang === 'ko') btnCreateMylistLabel.textContent = '새 폴더';
-      else if (lang === 'fr') btnCreateMylistLabel.textContent = 'Nouveau dossier';
-      else btnCreateMylistLabel.textContent = 'New Folder';
+      if (lang === 'ja') btnCreateMylistLabel.textContent = '+ 新規フォルダ';
+      else if (lang === 'zh_TW' || lang === 'zh_HK') btnCreateMylistLabel.textContent = '+ 新增資料夾';
+      else if (lang === 'zh_CN') btnCreateMylistLabel.textContent = '+ 新建文件夹';
+      else if (lang === 'ko') btnCreateMylistLabel.textContent = '+ 새 폴더';
+      else if (lang === 'fr') btnCreateMylistLabel.textContent = '+ Nouveau dossier';
+      else btnCreateMylistLabel.textContent = '+ New Folder';
     }
     const btnStudyMylist = document.getElementById('btnStudyMylist');
     const btnStudyMylistLabel = document.getElementById('btnStudyMylistLabel');
@@ -2638,6 +2656,20 @@
       renderQuizQuestion();
     });
 
+    // Toggle Folders Dropdown in Mylist
+    const btnToggleFolders = document.getElementById('btnToggleMylistFolders');
+    const foldersContainer = document.getElementById('mylistFoldersDropdownContainer');
+    const arrowIcon = document.getElementById('iconToggleFoldersArrow');
+    if (btnToggleFolders && foldersContainer) {
+      btnToggleFolders.addEventListener('click', () => {
+        const isHidden = foldersContainer.classList.contains('hidden');
+        foldersContainer.classList.toggle('hidden', !isHidden);
+        if (arrowIcon) {
+          arrowIcon.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+      });
+    }
+
     // Create New Custom Folder in Mylist
     const btnCreateFolder = document.getElementById('btnCreateMylistFolder');
     if (btnCreateFolder) {
@@ -2805,7 +2837,10 @@
           .filter(n => !isNaN(n));
         const nextNum = numericIds.length > 0 ? Math.max(...numericIds) + 1 : 1;
         const nextIdStr = String(nextNum).padStart(4, '0');
-        const nextPasscodeStr = String(1000 + nextNum);
+        // Generate memorable paired digits (e.g. 1122, 2233, 3344, 4455, 5566...)
+        const d1 = (nextNum % 9) + 1;
+        const d2 = ((nextNum + 1) % 9) + 1;
+        const nextPasscodeStr = `${d1}${d1}${d2}${d2}`;
 
         if (nameInput) nameInput.value = '';
         if (idInput) idInput.value = nextIdStr;
@@ -2870,7 +2905,8 @@
 
         renderAdminStudentList();
         addStudentModal.classList.add('hidden');
-        showToast(`生徒「${nameVal}」（ID: ${idVal}）を追加しました！✨`);
+        showToast(`生徒「${nameVal}」（ID: ${idVal} / PIN: ${pinVal}）を追加しました！✨`);
+        alert(`【新規生徒アカウント発行完了】\n\n生徒名: ${nameVal}\n生徒ID: ${idVal}\nパスコード (PIN): ${pinVal}\n\n※このパスコードは先生用管理画面の「生徒アカウント一覧」でもいつでも確認できます。`);
       });
     }
   }
