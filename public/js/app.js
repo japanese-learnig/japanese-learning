@@ -321,7 +321,7 @@
   // --- Data Loading & Persistence ---
   function initData() {
     // Master data version check to ensure newly added cards & furigana updates are immediately visible
-    const CURRENT_DATA_VERSION = 'v28_authentic_natural_dialogues_for_all_students';
+    const CURRENT_DATA_VERSION = 'v29_updated_student_passcodes';
     const savedVersion = localStorage.getItem('haku_vocab_version');
 
     const seedCards = window.INITIAL_VOCAB_DATA || [];
@@ -382,7 +382,7 @@
         '0019': [1233, 1314],  // ミンギさん (82語)
         '0020': [1315, 1397],  // Colinさん (83語)
         '0021': [1398, 1598],  // ともやさん (201語)
-        '0022': [1599, 1602]   // 美玖さん (ユーザー追加語彙)
+        '0022': [1599, 1602]   // 生徒22 (追加語彙)
       };
 
       const allStudentIds = [...students.map(s => s.id), 'guest'];
@@ -1064,7 +1064,7 @@
     // 9: ミンギさん (0019) -> class_word_1233 ~ class_word_1314 (82 words)
     // 10: Colinさん (0020) -> class_word_1315 ~ class_word_1397 (83 words)
     // 11: ともやさん (0021) -> class_word_1398 ~ class_word_1598 (201 words)
-    // 12: 美玖さん (0022) -> class_word_1599 ~ class_word_1602 (User added words)
+    // 12: 生徒22 (0022) -> class_word_1599 ~ class_word_1602 (追加語彙)
     const STUDENT_DOC_RANGES = {
       '0012': [1, 289],
       '0011': [290, 498],
