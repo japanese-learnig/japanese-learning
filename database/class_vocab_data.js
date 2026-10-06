@@ -61,7 +61,7 @@ window.CLASS_VOCAB_DATA = [
       "fr": "instrument de musique"
     },
     "example": {
-      "ja": "<ruby>楽器<rt>がっき</rt></ruby>は<ruby>弾<rt>はじ</rt></ruby>ける？",
+      "ja": "<ruby>楽器<rt>がっき</rt></ruby>は<ruby>弾<rt>ひ</rt></ruby>ける？",
       "en": "Can you play a musical instrument?",
       "zh_TW": "Can you play a musical instrument?",
       "zh_CN": "Can you play a musical instrument?",
@@ -1213,13 +1213,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "combien de temps"
     },
     "example": {
-      "ja": "A: <ruby>実際<rt>じっさい</rt></ruby>に<ruby>使<rt>つか</rt></ruby>ってみると、とてもどれくらいと<ruby>感<rt>かん</rt></ruby>じました！<br/>B: <ruby>気に入<rt>きにい</rt></ruby>っていただけて<ruby>良<rt>よ</rt></ruby>かったです。<ruby>私<rt>わたし</rt></ruby>も<ruby>本当<rt>ほんとう</rt></ruby>にどれくらいと<ruby>思<rt>おも</rt></ruby>います。",
-      "en": "A: When I actually used it, I realized how great it was!<br/>B: I'm glad you liked it. I also really wonder how much.",
-      "zh_TW": "A：當我真正使用它的時候，我發現它有多棒！<br/>B：我很高興你喜歡它。我也想知道多少錢。",
-      "zh_CN": "A：当我真正使用它的时候，我发现它有多棒！<br/>B：我很高兴你喜欢它。我也很想知道多少钱。",
-      "ko": "A: 실제로 사용해 보면, 매우 얼마나 느꼈습니다!<br/>B : 마음에 드는 것이 좋았습니다. 나도 정말 얼마나 생각합니다.",
-      "zh_HK": "A：當我真正使用它的時候，我發現它有多棒！<br/>B：我很高興你喜歡它。我也想知道多少錢。",
-      "fr": "R : Quand je l’ai réellement utilisé, j’ai réalisé à quel point c’était génial !<br/>B : Je suis content que ça te plaise. Je me demande aussi vraiment à quel point."
+      "ja": "A: <ruby>新宿<rt>しんじゅく</rt></ruby><ruby>駅<rt>えき</rt></ruby>から<ruby>渋谷<rt>しぶや</rt></ruby><ruby>駅<rt>えき</rt></ruby>まで<ruby>電車<rt>でんしゃ</rt></ruby>でどれくらいかかりますか？<br/>B: <ruby>山手<rt>やまて</rt></ruby><ruby>線<rt>せん</rt></ruby>でだいたい7<ruby>分<rt>ふん</rt></ruby>くらいですよ。",
+      "en": "A: How long does it take by train from Shinjuku Station to Shibuya Station?<br/>B: It takes about seven minutes on the Yamanote Line.",
+      "zh_TW": "A: 從新宿站到澀谷站搭電車要多久？<br/>B: 搭山手線大約7分鐘左右喔。",
+      "zh_CN": "A: 从新宿站到涩谷站坐电车要多久？<br/>B: 坐山手线大约7分钟左右哦。",
+      "ko": "A: 신주쿠역에서 시부야역까지 전철로 얼마나 걸리나요?<br/>B: 야마노테선으로 대략 7분 정도 걸려요.",
+      "zh_HK": "A: 從新宿站到澀谷站搭電車要幾耐？<br/>B: 搭山手線大約7分鐘左右。",
+      "fr": "A: Combien de temps faut-il en train de la gare de Shinjuku à celle de Shibuya ?<br/>B: Environ sept minutes sur la ligne Yamanote."
     },
     "related": "どれくらい—時間（授業の重要表現）"
   },
@@ -1237,13 +1237,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "combien"
     },
     "example": {
-      "ja": "A: <ruby>実際<rt>じっさい</rt></ruby>に<ruby>使<rt>つか</rt></ruby>ってみると、とてもどれくらいと<ruby>感<rt>かん</rt></ruby>じました！<br/>B: <ruby>気に入<rt>きにい</rt></ruby>っていただけて<ruby>良<rt>よ</rt></ruby>かったです。<ruby>私<rt>わたし</rt></ruby>も<ruby>本当<rt>ほんとう</rt></ruby>にどれくらいと<ruby>思<rt>おも</rt></ruby>います。",
-      "en": "A: When I actually used it, I realized how great it was!<br/>B: I'm glad you liked it. I also really wonder how much.",
-      "zh_TW": "A：當我真正使用它的時候，我發現它有多棒！<br/>B：我很高興你喜歡它。我也想知道多少錢。",
-      "zh_CN": "A：当我真正使用它的时候，我发现它有多棒！<br/>B：我很高兴你喜欢它。我也很想知道多少钱。",
-      "ko": "A: 실제로 사용해 보면, 매우 얼마나 느꼈습니다!<br/>B : 마음에 드는 것이 좋았습니다. 나도 정말 얼마나 생각합니다.",
-      "zh_HK": "A：當我真正使用它的時候，我發現它有多棒！<br/>B：我很高興你喜歡它。我也想知道多少錢。",
-      "fr": "R : Quand je l’ai réellement utilisé, j’ai réalisé à quel point c’était génial !<br/>B : Je suis content que ça te plaise. Je me demande aussi vraiment à quel point."
+      "ja": "A: <ruby>東京<rt>とうきょう</rt></ruby>で<ruby>一人暮<rt>ひとりぐ</rt></ruby>らしをすると、<ruby>家賃<rt>やちん</rt></ruby>はどれくらいかかりますか？<br/>B: エリアにもよりますが、ワンルームなら<ruby>月<rt>つき</rt></ruby>7<ruby>万<rt>まん</rt></ruby><ruby>円<rt>えん</rt></ruby>から8<ruby>万<rt>まん</rt></ruby><ruby>円<rt>えん</rt></ruby>くらいです。",
+      "en": "A: How much is the rent if you live alone in Tokyo?<br/>B: It depends on the area, but for a studio apartment it's around 70,000 to 80,000 yen a month.",
+      "zh_TW": "A: 在東京一個人住的話，房租大約要多少？<br/>B: 雖然要看地區，但套房的話大約一個月7萬到8萬日圓左右。",
+      "zh_CN": "A: 在东京一个人住的话，房租大约要多少？<br/>B: 虽然要看地区，但单間的话大约一个月7万到8万日元左右。",
+      "ko": "A: 도쿄에서 자취를 하면 집세가 어느 정도 드나요?<br/>B: 지역에 따라 다르지만, 원룸이면 월 7만 엔에서 8만 엔 정도예요.",
+      "zh_HK": "A: 喺東京一個人住嘅話，租金大約要幾多？<br/>B: 睇地區啦，開放式單位嘅話大約一個月7萬到8萬日圓左右。",
+      "fr": "A: Combien coûte le loyer pour vivre seul à Tokyo ?<br/>B: Cela dépend du quartier, mais pour un studio, c'est environ 70 000 à 80 000 yens par mois."
     },
     "related": "どれくらい—量・お金（授業の重要表現）"
   },
@@ -3397,13 +3397,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "dîner sur place; manger ici"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>店内<rt>てんない</rt></ruby>でも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>店内<rt>てんない</rt></ruby>のお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 店内 for lunch?<br/>B: Sounds great! There's a delicious 店内 shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 店内 for lunch?<br/>B: Sounds great! There's a delicious 店内 shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 店内 for lunch?<br/>B: Sounds great! There's a delicious 店内 shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 店内 for lunch?<br/>B: Sounds great! There's a delicious 店内 shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 店内 for lunch?<br/>B: Sounds great! There's a delicious 店内 shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 店内 for lunch?<br/>B: Sounds great! There's a delicious 店内 shop near the station, let's go."
+      "ja": "A: ご<ruby>注文<rt>ちゅうもん</rt></ruby>はお<ruby>決<rt>き</rt></ruby>まりですか？<ruby>店内<rt>てんない</rt></ruby>でお<ruby>召し上<rt>めしあ</rt></ruby>がりですか？<br/>B: はい、<ruby>店内<rt>てんない</rt></ruby>でホットコーヒーとチーズケーキをお<ruby>願<rt>ねが</rt></ruby>いします。",
+      "en": "A: Have you decided on your order? Will you be dining in?<br/>B: Yes, I'd like a hot coffee and cheesecake for dining in, please.",
+      "zh_TW": "A: 請問決定好餐點了嗎？要在店內用餐嗎？<br/>B: 是的，在店內用，請給我一杯熱咖啡和起司蛋糕。",
+      "zh_CN": "A: 请问决定好餐点了吗？要在店内用餐吗？<br/>B: 是的，在店内用，请给我一杯热咖啡和芝士蛋糕。",
+      "ko": "A: 주문 결정하셨나요? 매장에서 드시고 가시나요?<br/>B: 네, 매장에서 핫커피와 치즈케이크 부탁드려요.",
+      "zh_HK": "A: 請問決定好叫咩未？喺度食定外賣？<br/>B: 喺度食，唔該要一杯熱咖啡同埋一件芝士蛋糕。",
+      "fr": "A: Avez-vous choisi ? Est-ce pour consommer sur place ?<br/>B: Oui, sur place, un café chaud et un cheesecake, s'il vous plaît."
     },
     "related": "てんない（授業の重要表現）"
   },
@@ -3589,13 +3589,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "rhume des foins; allergie au pollen"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>花粉<rt>かふん</rt></ruby><ruby>症<rt>しょう</rt></ruby>の<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 花粉症 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 花粉症 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 花粉症 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 花粉症 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 花粉症 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 花粉症 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: <ruby>目<rt>め</rt></ruby>が<ruby>赤<rt>あか</rt></ruby>くて<ruby>涙<rt>なみだ</rt></ruby>が<ruby>出<rt>で</rt></ruby>ていますね。<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>ですか？<br/>B: <ruby>春<rt>はる</rt></ruby>になると<ruby>毎年<rt>まいとし</rt></ruby>ひどい<ruby>花粉<rt>かふん</rt></ruby><ruby>症<rt>しょう</rt></ruby>になるんです。<ruby>鼻水<rt>はなみず</rt></ruby>も<ruby>止<rt>と</rt></ruby>まりません。",
+      "en": "A: Your eyes are red and watery. Are you okay?<br/>B: Every spring I get terrible hay fever. My runny nose won't stop either.",
+      "zh_TW": "A: 你眼睛紅紅的還流眼淚，沒事吧？<br/>B: 一到春天我每年的花粉症都很嚴重，鼻涕也流個不停。",
+      "zh_CN": "A: 你眼睛红红的还流眼泪，没事吧？<br/>B: 一到春天我每年的花粉症都很严重，鼻涕也流个不停。",
+      "ko": "A: 눈이 빨갛고 눈물이 나네요. 괜찮으세요?<br/>B: 봄이 되면 매년 심한 꽃가루 알레르기가 생겨요. 콧물도 멈추질 않네요.",
+      "zh_HK": "A: 你對眼紅晒仲流眼水，冇事呀話？<br/>B: 一到春天我每年的花粉症都好嚴重，鼻水都流個唔停。",
+      "fr": "A: Vos yeux sont tout rouges et larmoyants. Ça va ?<br/>B: Chaque printemps, j'ai un rhume des foins terrible. Mon nez ne s'arrête pas de couler non plus."
     },
     "related": "かふんしょう（授業の重要表現）"
   },
@@ -3781,13 +3781,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "faire la vaisselle; faire la vaisselle"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>皿洗<rt>さらあら</rt></ruby>いでも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>皿洗<rt>さらあら</rt></ruby>いのお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 皿洗い for lunch?<br/>B: Sounds great! There's a delicious 皿洗い shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 皿洗い for lunch?<br/>B: Sounds great! There's a delicious 皿洗い shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 皿洗い for lunch?<br/>B: Sounds great! There's a delicious 皿洗い shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 皿洗い for lunch?<br/>B: Sounds great! There's a delicious 皿洗い shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 皿洗い for lunch?<br/>B: Sounds great! There's a delicious 皿洗い shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 皿洗い for lunch?<br/>B: Sounds great! There's a delicious 皿洗い shop near the station, let's go."
+      "ja": "A: ごちそうさま！<ruby>美味<rt>おい</rt></ruby>しかったね。<ruby>皿洗<rt>さらあら</rt></ruby>いは<ruby>私<rt>わたし</rt></ruby>がやっておくよ。<br/>B: <ruby>本当<rt>ほんとう</rt></ruby>に？じゃあお<ruby>言葉<rt>ことば</rt></ruby>に<ruby>甘<rt>あま</rt></ruby>えてお<ruby>願<rt>ねが</rt></ruby>いしちゃおうかな。",
+      "en": "A: That was delicious! I'll do the dishes.<br/>B: Really? Then I'll gladly take you up on that offer.",
+      "zh_TW": "A: 多謝款待！真好吃。洗碗就交給我來洗吧。<br/>B: 真的嗎？那我就恭敬不如從命拜託你囉。",
+      "zh_CN": "A: 多谢款待！真好吃。洗碗就交给我来洗吧。<br/>B: 真的吗？那我就恭敬不如从命拜托你喽。",
+      "ko": "A: 잘 먹었습니다! 맛있었네요. 설거지는 제가 해둘게요.<br/>B: 정말요? 그럼 호의를 받아들여서 부탁할게요.",
+      "zh_HK": "A: 多謝款待！好好味。等我洗碗啦。<br/>B: 真係？咁我就唔客氣交畀你喇。",
+      "fr": "A: Merci pour ce repas, c'était délicieux ! Je vais faire la vaisselle.<br/>B: Vraiment ? Dans ce cas, je profite de ta gentillesse et je te laisse faire."
     },
     "related": "さらあらい（授業の重要表現）"
   },
@@ -4525,13 +4525,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "magasin de vêtements"
     },
     "example": {
-      "ja": "A: すみません、この<ruby>近<rt>ちか</rt></ruby>くに<ruby>服<rt>ふく</rt></ruby><ruby>屋<rt>や</rt></ruby>はありますか？<br/>B: はい、この<ruby>道<rt>みち</rt></ruby>をまっすぐ<ruby>進<rt>すす</rt></ruby>むと<ruby>右手<rt>みぎて</rt></ruby>に<ruby>服<rt>ふく</rt></ruby><ruby>屋<rt>や</rt></ruby>が<ruby>見<rt>み</rt></ruby>えますよ。",
-      "en": "A: Excuse me, is there a 服屋 near here?<br/>B: Yes, if you go straight down this street, you'll see 服屋 on your right.",
-      "zh_TW": "A: Excuse me, is there a 服屋 near here?<br/>B: Yes, if you go straight down this street, you'll see 服屋 on your right.",
-      "zh_CN": "A: Excuse me, is there a 服屋 near here?<br/>B: Yes, if you go straight down this street, you'll see 服屋 on your right.",
-      "ko": "A: Excuse me, is there a 服屋 near here?<br/>B: Yes, if you go straight down this street, you'll see 服屋 on your right.",
-      "zh_HK": "A: Excuse me, is there a 服屋 near here?<br/>B: Yes, if you go straight down this street, you'll see 服屋 on your right.",
-      "fr": "A: Excuse me, is there a 服屋 near here?<br/>B: Yes, if you go straight down this street, you'll see 服屋 on your right."
+      "ja": "A: <ruby>週末<rt>しゅうまつ</rt></ruby>に<ruby>駅前<rt>えきまえ</rt></ruby>の<ruby>服<rt>ふく</rt></ruby><ruby>屋<rt>や</rt></ruby>へ<ruby>買い物<rt>かいもの</rt></ruby>に<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！ちょうど<ruby>春物<rt>はるもの</rt></ruby>のジャケットを<ruby>探<rt>さが</rt></ruby>していたところなんだ。",
+      "en": "A: Want to go shopping at the clothing store in front of the station this weekend?<br/>B: Sounds great! I was just looking for a spring jacket.",
+      "zh_TW": "A: 週末要不要去車站前面的服飾店逛逛？<br/>B: 好啊！我剛好在找春季外套呢。",
+      "zh_CN": "A: 周末要不要去车站前面的服装店逛逛？<br/>B: 好啊！我刚好在找春季外套呢。",
+      "ko": "A: 주말에 역 앞 옷 가게로 쇼핑 갈래?<br/>B: 좋아! 마침 봄 자켓을 찾던 참이었어.",
+      "zh_HK": "A: 週末去唔去站前間衫舖買衫？<br/>B: 好呀！我啱啱好搵緊春裝褸呢。",
+      "fr": "A: Tu veux aller faire du shopping dans le magasin de vêtements devant la gare ce week-end ?<br/>B: Bonne idée ! Je cherchais justement une veste de printemps."
     },
     "related": "ふくや（授業の重要表現）"
   },
@@ -4645,13 +4645,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "en saison (nourriture)"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>旬<rt>しゅん</rt></ruby>でも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>旬<rt>しゅん</rt></ruby>のお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 旬 for lunch?<br/>B: Sounds great! There's a delicious 旬 shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 旬 for lunch?<br/>B: Sounds great! There's a delicious 旬 shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 旬 for lunch?<br/>B: Sounds great! There's a delicious 旬 shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 旬 for lunch?<br/>B: Sounds great! There's a delicious 旬 shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 旬 for lunch?<br/>B: Sounds great! There's a delicious 旬 shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 旬 for lunch?<br/>B: Sounds great! There's a delicious 旬 shop near the station, let's go."
+      "ja": "A: このサンマ、<ruby>脂<rt>あぶら</rt></ruby>がのっていてすごく<ruby>美味<rt>おい</rt></ruby>しいね！<br/>B: <ruby>秋<rt>あき</rt></ruby>が<ruby>旬<rt>しゅん</rt></ruby>の<ruby>魚<rt>さかな</rt></ruby>だから、<ruby>今<rt>いま</rt></ruby>の<ruby>時期<rt>じき</rt></ruby>が<ruby>一番<rt>いちばん</rt></ruby><ruby>味<rt>み</rt></ruby>が<ruby>良<rt>よ</rt></ruby>いんだよ。",
+      "en": "A: This Pacific saury is so fatty and delicious!<br/>B: It's in season in autumn, so right now is when it tastes best.",
+      "zh_TW": "A: 這條秋刀魚油脂很豐富，真好吃！<br/>B: 因為秋天是當季的魚，現在這個時期味道最棒了。",
+      "zh_CN": "A: 这条秋刀鱼油脂很丰富，真好吃！<br/>B: 因为秋天是当季的鱼，现在这个时期味道最棒了。",
+      "ko": "A: 이 꽁치, 기름이 잘 올라서 정말 맛있네요!<br/>B: 가을이 제철인 생선이라 지금 시기가 가장 맛이 좋아요.",
+      "zh_HK": "A: 呢條秋刀魚好多油香，好好食！<br/>B: 因為秋天係當造嘅魚，呢個時候食最正。",
+      "fr": "A: Ce balaou du Japon est bien gras et tellement bon !<br/>B: C'est un poisson de saison en automne, c'est en ce moment qu'il est le meilleur."
     },
     "related": "しゅん（授業の重要表現）"
   },
@@ -4765,13 +4765,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "si cela vous convient ; si tu veux"
     },
     "example": {
-      "ja": "A: <ruby>実際<rt>じっさい</rt></ruby>に<ruby>使<rt>つか</rt></ruby>ってみると、とてももしよかったらと<ruby>感<rt>かん</rt></ruby>じました！<br/>B: <ruby>気に入<rt>きにい</rt></ruby>っていただけて<ruby>良<rt>よ</rt></ruby>かったです。<ruby>私<rt>わたし</rt></ruby>も<ruby>本当<rt>ほんとう</rt></ruby>にもしよかったらと<ruby>思<rt>おも</rt></ruby>います。",
-      "en": "A: When I actually used it, I felt it was really good!<br/>B: I'm glad you liked it. I really wish I could too.",
-      "zh_TW": "A：我實際使用的時候，感覺真的很好！<br/>B：我很高興你喜歡它。我真的希望我也可以。",
-      "zh_CN": "A：我实际使用的时候，感觉真的很好！<br/>B：我很高兴你喜欢它。我真的希望我也可以。",
-      "ko": "A: 실제로 사용해 보니, 아주 좋았으면 느꼈습니다!<br/>B : 마음에 드는 것이 좋았습니다. 나도 정말로 좋았다고 생각합니다.",
-      "zh_HK": "A：我實際使用的時候，感覺真的很好！<br/>B：我很高興你喜歡它。我真的希望我也可以。",
-      "fr": "R : Quand je l’ai utilisé, j’ai trouvé que c’était vraiment bien !<br/>B : Je suis content que ça te plaise. J'aimerais vraiment pouvoir le faire aussi."
+      "ja": "A: <ruby>実家<rt>じっか</rt></ruby>からたくさんみかんが<ruby>送<rt>おく</rt></ruby>られてきたんだけど、もしよかったら<ruby>少<rt>すこ</rt></ruby>し<ruby>持<rt>も</rt></ruby>って<ruby>帰<rt>かえ</rt></ruby>る？<br/>B: わあ、<ruby>嬉<rt>うれ</rt></ruby>しい！<ruby>遠慮<rt>えんりょ</rt></ruby>なくいただきます。",
+      "en": "A: My family sent me a lot of mandarins from home. If you'd like, would you take some home?<br/>B: Wow, thank you! I'd love to.",
+      "zh_TW": "A: 老家寄來了好多橘子，如果方便的話你要不要帶一些回去？<br/>B: 哇，太感謝了！那我就不客氣地收下囉。",
+      "zh_CN": "A: 老家寄来了好多橘子，如果不介意的话你要不要带一些回去？<br/>B: 哇，太感谢了！那我就不客气地收下喽。",
+      "ko": "A: 본가에서 귤이 많이 올라왔는데, 괜찮으시면 좀 가져가실래요?<br/>B: 와, 감사해요! 사양 않고 받을게요.",
+      "zh_HK": "A: 屋企寄咗好多柑嚟，如果你想嘅話攞啲返去食呀？<br/>B: 嘩，真係多謝！咁我唔客氣喇。",
+      "fr": "A: Mes parents m'ont envoyé beaucoup de mandarines. Si tu veux, tu peux en emporter chez toi ?<br/>B: Ouah, merci beaucoup ! J'accepte avec plaisir."
     },
     "related": "もしよかったら（授業の重要表現）"
   },
@@ -5125,13 +5125,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "patch anti-douleur; timbre médicamenteux"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>湿布<rt>しっぷ</rt></ruby>の<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 湿布 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 湿布 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 湿布 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 湿布 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 湿布 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 湿布 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: <ruby>昨日<rt>きのう</rt></ruby><ruby>重<rt>おも</rt></ruby>い<ruby>荷物<rt>にもつ</rt></ruby>を<ruby>運<rt>はこ</rt></ruby>んだせいで、<ruby>腰<rt>こし</rt></ruby>がすごく<ruby>痛<rt>いた</rt></ruby>いんです。<br/>B: この<ruby>湿布<rt>しっぷ</rt></ruby>を<ruby>貼<rt>は</rt></ruby>ってみてください。<ruby>痛<rt>いた</rt></ruby>みがかなり<ruby>和<rt>やわ</rt></ruby>らぎますよ。",
+      "en": "A: My lower back hurts a lot from carrying heavy boxes yesterday.<br/>B: Try putting on this pain relief patch. It will ease the pain quite a bit.",
+      "zh_TW": "A: 昨天搬重物的緣故，腰超級痛的。<br/>B: 貼貼看這塊痠痛貼布吧，疼痛會舒緩很多的。",
+      "zh_CN": "A: 昨天搬重物的缘故，腰超级痛的。<br/>B: 贴贴看这块膏药贴布吧，疼痛会缓解很多的。",
+      "ko": "A: 어제 무거운 짐을 옮긴 탓에 허리가 너무 아파요.<br/>B: 이 파스를 붙여 보세요. 통증이 꽤 가라앉을 거예요.",
+      "zh_HK": "A: 琴日搬完重嘢，條腰痛到不得了。<br/>B: 試下貼呢張鎮痛貼啦，痛楚會減輕好多㗎。",
+      "fr": "A: J'ai très mal au bas du dos après avoir porté des cartons lourds hier.<br/>B: Essaie d'appliquer ce patch antidouleur. Ça va bien te soulager."
     },
     "related": "しっぷ（授業の重要表現）"
   },
@@ -5197,13 +5197,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "soigner quelqu'un; payer pour quelqu'un"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>奢<rt>おご</rt></ruby>るでも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>奢<rt>おご</rt></ruby>るのお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 奢る for lunch?<br/>B: Sounds great! There's a delicious 奢る shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 奢る for lunch?<br/>B: Sounds great! There's a delicious 奢る shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 奢る for lunch?<br/>B: Sounds great! There's a delicious 奢る shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 奢る for lunch?<br/>B: Sounds great! There's a delicious 奢る shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 奢る for lunch?<br/>B: Sounds great! There's a delicious 奢る shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 奢る for lunch?<br/>B: Sounds great! There's a delicious 奢る shop near the station, let's go."
+      "ja": "A: <ruby>今日<rt>きょう</rt></ruby>の<ruby>試験<rt>しけん</rt></ruby>、<ruby>無事<rt>ぶじ</rt></ruby>に<ruby>合格<rt>ごうかく</rt></ruby>できたよ！<br/>B: おめでとう！お<ruby>祝<rt>いわ</rt></ruby>いに<ruby>今夜<rt>こんや</rt></ruby>の<ruby>夕飯<rt>ゆうはん</rt></ruby>は<ruby>私<rt>わたし</rt></ruby>が<ruby>奢<rt>おご</rt></ruby>るね。",
+      "en": "A: I passed today's exam without any problems!<br/>B: Congratulations! Dinner tonight is on me to celebrate.",
+      "zh_TW": "A: 今天的考試我順利及格了！<br/>B: 恭喜你！為了慶祝，今晚這頓晚餐我請客吧。",
+      "zh_CN": "A: 今天的考试我顺利及格了！<br/>B: 恭喜你！为了庆祝，今晚这顿晚餐我请客吧。",
+      "ko": "A: 오늘 시험 무사히 합격했어!<br/>B: 축하해! 축하하는 의미로 오늘 저녁은 내가 쏠게.",
+      "zh_HK": "A: 今日個考試我順利合格咗！<br/>B: 恭喜你！為咗慶祝今晚等我請食飯啦。",
+      "fr": "A: J'ai réussi mon examen d'aujourd'hui sans problème !<br/>B: Félicitations ! Pour fêter ça, je t'invite à dîner ce soir."
     },
     "related": "おごる（授業の重要表現）"
   },
@@ -5221,13 +5221,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "manger une quantité énorme; manger de façon excessive"
     },
     "example": {
-      "ja": "A: <ruby>実際<rt>じっさい</rt></ruby>に<ruby>使<rt>つか</rt></ruby>ってみると、とても爆食いと<ruby>感<rt>かん</rt></ruby>じました！<br/>B: <ruby>気に入<rt>きにい</rt></ruby>っていただけて<ruby>良<rt>よ</rt></ruby>かったです。<ruby>私<rt>わたし</rt></ruby>も<ruby>本当<rt>ほんとう</rt></ruby>に爆食いと<ruby>思<rt>おも</rt></ruby>います。",
-      "en": "A: When I actually used it, I felt it was very satisfying!<br/>B: I'm glad you liked it. I also think it's a really good meal.",
-      "zh_TW": "A：我實際使用的時候，我覺得非常滿足！<br/>B：我很高興你喜歡它。我也覺得這頓飯真的很好吃。",
-      "zh_CN": "A：我实际使用的时候，感觉非常满意！<br/>B：我很高兴你喜欢它。我也觉得这顿饭真的很好吃。",
-      "ko": "A: 실제로 사용해 보면, 매우 폭식이라고 느꼈습니다!<br/>B : 마음에 드는 것이 좋았습니다. 나도 정말 폭식이라고 생각합니다.",
-      "zh_HK": "A：我實際使用的時候，我覺得非常滿足！<br/>B：我很高興你喜歡它。我也覺得這頓飯真的很好吃。",
-      "fr": "R : Lorsque je l’ai réellement utilisé, j’ai trouvé que c’était très satisfaisant !<br/>B : Je suis content que ça te plaise. Je pense aussi que c'est un très bon repas."
+      "ja": "A: <ruby>昨日<rt>きのう</rt></ruby><ruby>仕事<rt>しごと</rt></ruby>のストレスで、<ruby>夜中<rt>やちゅう</rt></ruby>にラーメンとケーキを爆食いしちゃった。<br/>B: <ruby>気持<rt>きも</rt></ruby>ちは<ruby>分<rt>わ</rt></ruby>かるけど、<ruby>胃<rt>い</rt></ruby>がもたれなかった？",
+      "en": "A: Due to work stress, I binge-ate ramen and cake in the middle of the night yesterday.<br/>B: I get how you feel, but did your stomach feel heavy afterwards?",
+      "zh_TW": "A: 昨天因為工作壓力太大，半夜狂吃拉麵和蛋糕。<br/>B: 我懂你的心情，但胃不會不舒服嗎？",
+      "zh_CN": "A: 昨天因为工作压力太大，半夜暴饮暴食了拉面和蛋糕。<br/>B: 我懂你的心情，但胃不会不舒服吗？",
+      "ko": "A: 어제 업무 스트레스 때문에 한밤중에 라면이랑 케이크를 폭식해 버렸어.<br/>B: 기분은 이해하지만 속 안 더부룩했어?",
+      "zh_HK": "A: 琴日因為返工壓力大，半夜暴飲暴食食咗拉麵同蛋糕。<br/>B: 我明你心情，不過個胃冇頂住頂住咩？",
+      "fr": "A: À cause du stress au travail, je me suis empiffré de ramen et de gâteau au milieu de la nuit hier.<br/>B: Je comprends tout à fait, mais tu n'as pas eu mal à l'estomac après ?"
     },
     "related": "ばくぐい（授業の重要表現）"
   },
@@ -5341,13 +5341,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "yaourt à boire"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>飲<rt>の</rt></ruby>むヨーグルトでも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>飲<rt>の</rt></ruby>むヨーグルトのお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 飲むヨーグルト for lunch?<br/>B: Sounds great! There's a delicious 飲むヨーグルト shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 飲むヨーグルト for lunch?<br/>B: Sounds great! There's a delicious 飲むヨーグルト shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 飲むヨーグルト for lunch?<br/>B: Sounds great! There's a delicious 飲むヨーグルト shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 飲むヨーグルト for lunch?<br/>B: Sounds great! There's a delicious 飲むヨーグルト shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 飲むヨーグルト for lunch?<br/>B: Sounds great! There's a delicious 飲むヨーグルト shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 飲むヨーグルト for lunch?<br/>B: Sounds great! There's a delicious 飲むヨーグルト shop near the station, let's go."
+      "ja": "A: <ruby>朝<rt>あさ</rt></ruby>ごはんはいつも<ruby>何<rt>なに</rt></ruby>を<ruby>食<rt>た</rt></ruby>べているの？<br/>B: <ruby>時間<rt>じかん</rt></ruby>がないから、バナナと<ruby>飲<rt>の</rt></ruby>むヨーグルトだけで<ruby>済<rt>す</rt></ruby>ませることが<ruby>多<rt>おお</rt></ruby>いよ。",
+      "en": "A: What do you usually have for breakfast?<br/>B: I don't have much time, so I usually just have a banana and drinkable yogurt.",
+      "zh_TW": "A: 你早餐通常都吃什麼？<br/>B: 因為沒時間，通常只吃香蕉配優酪乳解決。",
+      "zh_CN": "A: 你早餐通常都吃什么？<br/>B: 因为没时间，通常只吃香蕉配优酸乳解决。",
+      "ko": "A: 아침 식사로는 보통 뭘 먹어?<br/>B: 시간이 없어서 바나나랑 마시는 요거트만으로 때울 때가 많아.",
+      "zh_HK": "A: 你早餐多數食咩㗎？<br/>B: 趕時間吖嘛，好多時淨係食隻香蕉同飲樽乳酪飲品就算。",
+      "fr": "A: Qu'est-ce que tu manges d'habitude pour le petit déjeuner ?<br/>B: Comme je n'ai pas le temps, je me contente souvent d'une banane et d'un yaourt à boire."
     },
     "related": "のむヨーグルト（授業の重要表現）"
   },
@@ -5389,13 +5389,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "coiffeur; coiffeur"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>美容<rt>びよう</rt></ruby><ruby>師<rt>し</rt></ruby>の<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 美容師 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 美容師 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 美容師 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 美容師 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 美容師 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 美容師 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: その<ruby>髪型<rt>かみがた</rt></ruby>、すごく<ruby>似合<rt>にあ</rt></ruby>っているね！<br/>B: ありがとう！<ruby>担当<rt>たんとう</rt></ruby>の<ruby>美容<rt>びよう</rt></ruby><ruby>師<rt>し</rt></ruby>さんが<ruby>私<rt>わたし</rt></ruby>に<ruby>合<rt>あ</rt></ruby>うスタイルを<ruby>提案<rt>ていあん</rt></ruby>してくれたの。",
+      "en": "A: That hairstyle looks great on you!<br/>B: Thanks! My hairdresser suggested a style that would suit me.",
+      "zh_TW": "A: 這個髮型超級適合你的！<br/>B: 謝謝！負責幫我用的美髮師推薦了很適合我的造型。",
+      "zh_CN": "A: 这个发型超级适合你的！<br/>B: 谢谢！负责帮我理发的美发师推荐了很适合我的造型。",
+      "ko": "A: 그 머리 스타일 정말 잘 어울린다!<br/>B: 고마워! 담당 미용사분이 나한테 어울리는 스타일을 제안해 주셨거든.",
+      "zh_HK": "A: 呢個髮型好襯你呀！<br/>B: 多謝！幫我剪開個髮型師提議咗呢個啱我嘅造型。",
+      "fr": "A: Cette coupe de cheveux te va à ravir !<br/>B: Merci ! Ma coiffeuse m'a suggéré un style qui m'allait bien."
     },
     "related": "びようし（授業の重要表現）"
   },
@@ -5437,13 +5437,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "juste ce qu'il faut; quantité parfaite"
     },
     "example": {
-      "ja": "A: <ruby>実際<rt>じっさい</rt></ruby>に<ruby>使<rt>つか</rt></ruby>ってみると、とてもちょうどいいと<ruby>感<rt>かん</rt></ruby>じました！<br/>B: <ruby>気に入<rt>きにい</rt></ruby>っていただけて<ruby>良<rt>よ</rt></ruby>かったです。<ruby>私<rt>わたし</rt></ruby>も<ruby>本当<rt>ほんとう</rt></ruby>にちょうどいいと<ruby>思<rt>おも</rt></ruby>います。",
-      "en": "A: When I actually used it, I felt it was just right!<br/>B: I'm glad you liked it. I also think it's just right.",
-      "zh_TW": "A：我實際使用的時候，感覺剛剛好！<br/>B：我很高興你喜歡它。我也覺得剛剛好。",
-      "zh_CN": "A：我实际使用的时候，感觉刚刚好！<br/>B：我很高兴你喜欢它。我也觉得刚刚好。",
-      "ko": "A: 실제로 사용해 보면 매우 정확하다고 느꼈습니다!<br/>B : 마음에 드는 것이 좋았습니다. 나도 정말 그냥 좋다고 생각합니다.",
-      "zh_HK": "A：我實際使用的時候，感覺剛剛好！<br/>B：我很高興你喜歡它。我也覺得剛剛好。",
-      "fr": "R : Quand je l’ai utilisé, j’ai senti que c’était parfait !<br/>B : Je suis content que ça te plaise. Je pense aussi que c'est juste."
+      "ja": "A: お<ruby>風呂<rt>ふろ</rt></ruby>のお<ruby>湯<rt>ゆ</rt></ruby>の<ruby>温度<rt>おんど</rt></ruby>はどうですか？<ruby>熱<rt>あつ</rt></ruby>すぎませんか？<br/>B: いえ、ぬるくも<ruby>熱<rt>あつ</rt></ruby>くもなくてちょうどいい<ruby>湯<rt>ゆ</rt></ruby><ruby>加減<rt>かげん</rt></ruby>です。",
+      "en": "A: How is the bath water temperature? Is it too hot?<br/>B: No, it's neither too cool nor too hot; it's just right.",
+      "zh_TW": "A: 洗澡水的溫度怎麼樣？會太燙嗎？<br/>B: 不會，既不冷也不燙，水溫剛剛好。",
+      "zh_CN": "A: 洗澡水的温度怎么样？会太烫吗？<br/>B: 不会，既不凉也不烫，水温刚刚好。",
+      "ko": "A: 목욕물 온도는 어때요? 너무 뜨겁지 않나요?<br/>B: 아니요, 미지근하지도 뜨겁지도 않고 딱 좋은 온도예요.",
+      "zh_HK": "A: 沖涼水個水溫點呀？會唔會太熱？<br/>B: 唔會，唔凍唔熱啱啱好。",
+      "fr": "A: Comment est l'eau du bain ? Elle n'est pas trop chaude ?<br/>B: Non, ni trop tiède ni trop chaude, la température est juste parfaite."
     },
     "related": "ちょうどいい（授業の重要表現）"
   },
@@ -5677,13 +5677,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "tsundere (initialement froid mais secrètement chaud)"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだかツンデレの<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my ツンデレ hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my ツンデレ hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my ツンデレ hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my ツンデレ hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my ツンデレ hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my ツンデレ hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: <ruby>彼<rt>かれ</rt></ruby>は<ruby>普段<rt>ふだん</rt></ruby><ruby>冷<rt>つめ</rt></ruby>たいのに、<ruby>困<rt>こま</rt></ruby>っている<ruby>時<rt>とき</rt></ruby>はいつも<ruby>真っ先<rt>まっさき</rt></ruby>に<ruby>助<rt>たす</rt></ruby>けてくれるよね。<br/>B: <ruby>典型<rt>てんけい</rt></ruby><ruby>的<rt>てき</rt></ruby>なツンデレな<ruby>性格<rt>せいかく</rt></ruby>だから、<ruby>素直<rt>すなお</rt></ruby>になれないだけなんだよ。",
+      "en": "A: He's usually cold, but whenever someone is in trouble he's the first to help out.<br/>B: He's a typical tsundere, so he just can't be straightforward about his feelings.",
+      "zh_TW": "A: 他平時冷冰冰的，但遇到困難時總是第一個出手幫忙呢。<br/>B: 因為他是典型的傲嬌性格，只是沒辦法坦率表達而已啦。",
+      "zh_CN": "A: 他平时冷冰冰的，但遇到困难时总是第一个出手帮忙呢。<br/>B: 因为他是典型的傲娇性格，只是没办法坦率表达而已啦。",
+      "ko": "A: 그는 평소엔 쌀쌀맞은데 곤란할 땐 항상 가장 먼저 도와주네.<br/>B: 전형적인 츤데레 성격이라 솔직해지지 못할 뿐이야.",
+      "zh_HK": "A: 佢平時好似好冷淡，但有人遇到困難佢總係第一個幫手。<br/>B: 典型傲嬌性格吖嘛，只係唔識坦白表達出嚟啫。",
+      "fr": "A: Il a l'air distant d'habitude, mais dès que quelqu'un a un problème, il est le premier à aider.<br/>B: C'est un vrai tsundere, il a juste du mal à exprimer honnêtement ses sentiments."
     },
     "related": "ツンデレ（授業の重要表現）"
   },
@@ -5917,13 +5917,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "se teindre les cheveux"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>髪<rt>かみ</rt></ruby>を<ruby>染<rt>そ</rt></ruby>めるの<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 髪を染める hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 髪を染める hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 髪を染める hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 髪を染める hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 髪を染める hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 髪を染める hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: <ruby>夏休<rt>なつやす</rt></ruby>みになったら<ruby>明<rt>あか</rt></ruby>るい<ruby>茶色<rt>ちゃいろ</rt></ruby>に<ruby>髪<rt>かみ</rt></ruby>を<ruby>染<rt>そ</rt></ruby>めてみたいな。<br/>B: <ruby>似合<rt>にあ</rt></ruby>うと<ruby>思<rt>おも</rt></ruby>うよ！<ruby>初<rt>はじ</rt></ruby>めて<ruby>染<rt>そ</rt></ruby>めるなら<ruby>美容<rt>びよう</rt></ruby><ruby>院<rt>いん</rt></ruby>でやってもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
+      "en": "A: When summer vacation starts, I'd like to dye my hair light brown.<br/>B: I think it'll suit you! If it's your first time dyeing it, you should have it done at a salon.",
+      "zh_TW": "A: 等放暑假之後，我想把頭髮染成明亮的茶色看看。<br/>B: 我覺得很適合你喔！如果是第一次染髮的話，去髮廊請美髮師染比較好喔。",
+      "zh_CN": "A: 等放暑假之后，我想把头发染成明亮的棕色看看。<br/>B: 我觉得很适合你哦！如果是第一次染发的话，去理发店请理发师染比较好哦。",
+      "ko": "A: 여름 방학이 되면 밝은 갈색으로 머리를 염색해 보고 싶어.<br/>B: 잘 어울릴 것 같아! 처음 염색하는 거라면 미용실에서 하는 게 좋아.",
+      "zh_HK": "A: 放暑假嗰陣，我想將頭髮染成淺啡色呀。<br/>B: 我諗幾襯你喎！第一次染嘅話去髮型屋搵人染好啲。",
+      "fr": "A: Pour les vacances d'été, j'aimerais me teindre les cheveux en châtain clair.<br/>B: Je pense que ça t'irait très bien ! Si c'est ta première coloration, fais-le faire en salon."
     },
     "related": "かみをそめる（授業の重要表現）"
   },
@@ -6061,13 +6061,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "usé; en lambeaux; battre"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>にボロボロでも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しいボロボロのお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some ボロボロ for lunch?<br/>B: Sounds great! There's a delicious ボロボロ shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some ボロボロ for lunch?<br/>B: Sounds great! There's a delicious ボロボロ shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some ボロボロ for lunch?<br/>B: Sounds great! There's a delicious ボロボロ shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some ボロボロ for lunch?<br/>B: Sounds great! There's a delicious ボロボロ shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some ボロボロ for lunch?<br/>B: Sounds great! There's a delicious ボロボロ shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some ボロボロ for lunch?<br/>B: Sounds great! There's a delicious ボロボロ shop near the station, let's go."
+      "ja": "A: そのスニーカー、<ruby>底<rt>そこ</rt></ruby>がすり<ruby>減<rt>へ</rt></ruby>ってボロボロになっているよ。<br/>B: <ruby>履<rt>は</rt></ruby>きやすくて<ruby>気に入<rt>きにい</rt></ruby>っていたんだけど、そろそろ<ruby>買い替<rt>かいか</rt></ruby>え<ruby>時<rt>じ</rt></ruby>かな。",
+      "en": "A: The soles on those sneakers are worn down and beat up.<br/>B: They were so comfortable and I loved them, but I guess it's about time to replace them.",
+      "zh_TW": "A: 你那雙球鞋鞋底都磨平、變得破破爛爛的了。<br/>B: 穿起來很舒服我很喜歡，不過差不多也該換新的了。",
+      "zh_CN": "A: 你那双运动鞋鞋底都磨平、变得破破烂烂的了。<br/>B: 穿起来很舒服我很喜欢，不过差不多也该换新的了。",
+      "ko": "A: 그 운동화, 밑창이 닳아서 너덜너덜해졌어.<br/>B: 편해서 마음에 들었는데 슬슬 새로 바꿀 때인가 봐.",
+      "zh_HK": "A: 你對波鞋鞋底磨到爛晒喇喎。<br/>B: 著得好舒服我很鍾意㗎，不過睇嚟係時候買過對新嘅。",
+      "fr": "A: Ces baskets ont les semelles tellement usées qu'elles sont en lambeaux.<br/>B: Elles étaient si confortables et je les aimais bien, mais il est temps d'en changer."
     },
     "related": "ボロボロ（授業の重要表現）"
   },
@@ -6277,13 +6277,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "divination; divination"
     },
     "example": {
-      "ja": "A: <ruby>実際<rt>じっさい</rt></ruby>に<ruby>使<rt>つか</rt></ruby>ってみると、とても<ruby>占<rt>うらな</rt></ruby>いと<ruby>感<rt>かん</rt></ruby>じました！<br/>B: <ruby>気に入<rt>きにい</rt></ruby>っていただけて<ruby>良<rt>よ</rt></ruby>かったです。<ruby>私<rt>わたし</rt></ruby>も<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>占<rt>うらな</rt></ruby>いと<ruby>思<rt>おも</rt></ruby>います。",
-      "en": "A: When I actually used it, it felt like fortune telling!<br/>B: I'm glad you liked it. I also really think it's fortune telling.",
-      "zh_TW": "A：我實際使用的時候，感覺就像算命一樣！<br/>B：我很高興你喜歡它。我也確實覺得這是算命。",
-      "zh_CN": "A：我实际使用的时候，感觉就像算命一样！<br/>B：我很高兴你喜欢它。我也确实觉得这是算命。",
-      "ko": "A: 실제로 사용해 보면 매우 운세라고 느꼈습니다!<br/>B : 마음에 드는 것이 좋았습니다. 나도 정말 운세라고 생각합니다.",
-      "zh_HK": "A：我實際使用的時候，感覺就像算命一樣！<br/>B：我很高興你喜歡它。我也確實覺得這是算命。",
-      "fr": "R : Quand je l’utilisais réellement, c’était comme une divination !<br/>B : Je suis content que ça te plaise. Je pense aussi vraiment que c'est une divination."
+      "ja": "A: <ruby>朝<rt>あさ</rt></ruby>のニュースで<ruby>今日<rt>きょう</rt></ruby>の<ruby>星座<rt>せいざ</rt></ruby><ruby>占<rt>うらな</rt></ruby>いを<ruby>見<rt>み</rt></ruby>たら、<ruby>一<rt>いち</rt></ruby><ruby>位<rt>い</rt></ruby>だったよ！<br/>B: それは<ruby>幸先<rt>さいさき</rt></ruby>がいいね。<ruby>今日<rt>きょう</rt></ruby>は<ruby>何<rt>なに</rt></ruby>か<ruby>良<rt>よ</rt></ruby>いことがあるかもね。",
+      "en": "A: I watched the horoscope on the morning news, and my zodiac sign was number one!<br/>B: That's a good omen. Something great might happen today.",
+      "zh_TW": "A: 我看早間新聞的今日星座占卜，我的星座是第一名耶！<br/>B: 真是有個好兆頭，今天說不定會有什麼好事發生喔。",
+      "zh_CN": "A: 我看早间新闻的今日星座占卜，我的星座是第一名耶！<br/>B: 真是有个好兆头，今天说不定会有什么好事发生哦。",
+      "ko": "A: 아침 뉴스에서 오늘의 별자리 운세를 봤는데 1위였어!<br/>B: 출발이 좋은데? 오늘은 뭔가 좋은 일이 생길지도 몰라.",
+      "zh_HK": "A: 今朝睇晨早新聞個星座占卜，我個星座排第一呀！<br/>B: 好好彩頭喎，今日話唔定有好事發生。",
+      "fr": "A: J'ai regardé l'horoscope aux infos ce matin, et mon signe était à la première place !<br/>B: C'est de bon augure. Quelque chose de bien pourrait t'arriver aujourd'hui."
     },
     "related": "うらない（授業の重要表現）"
   },
@@ -6325,13 +6325,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "pétillant; scintillant"
     },
     "example": {
-      "ja": "A: すみません、この<ruby>近<rt>ちか</rt></ruby>くにキラキラはありますか？<br/>B: はい、この<ruby>道<rt>みち</rt></ruby>をまっすぐ<ruby>進<rt>すす</rt></ruby>むと<ruby>右手<rt>みぎて</rt></ruby>にキラキラが<ruby>見<rt>み</rt></ruby>えますよ。",
-      "en": "A: Excuse me, is there a キラキラ near here?<br/>B: Yes, if you go straight down this street, you'll see キラキラ on your right.",
-      "zh_TW": "A: Excuse me, is there a キラキラ near here?<br/>B: Yes, if you go straight down this street, you'll see キラキラ on your right.",
-      "zh_CN": "A: Excuse me, is there a キラキラ near here?<br/>B: Yes, if you go straight down this street, you'll see キラキラ on your right.",
-      "ko": "A: Excuse me, is there a キラキラ near here?<br/>B: Yes, if you go straight down this street, you'll see キラキラ on your right.",
-      "zh_HK": "A: Excuse me, is there a キラキラ near here?<br/>B: Yes, if you go straight down this street, you'll see キラキラ on your right.",
-      "fr": "A: Excuse me, is there a キラキラ near here?<br/>B: Yes, if you go straight down this street, you'll see キラキラ on your right."
+      "ja": "A: <ruby>空気<rt>くうき</rt></ruby>が<ruby>澄<rt>す</rt></ruby>んでいて、<ruby>夜空<rt>よぞら</rt></ruby>の<ruby>星<rt>ほし</rt></ruby>がキラキラ<ruby>輝<rt>かがや</rt></ruby>いているね。<br/>B: <ruby>本当<rt>ほんとう</rt></ruby>に<ruby>綺麗<rt>きれい</rt></ruby>。<ruby>都会<rt>とかい</rt></ruby>ではなかなか<ruby>見<rt>み</rt></ruby>られない<ruby>景色<rt>けしき</rt></ruby>だね。",
+      "en": "A: The air is so clear, and the stars in the night sky are sparkling brilliantly.<br/>B: Truly beautiful. It's a view you rarely get to see in the city.",
+      "zh_TW": "A: 空氣好清新，夜空中的星星一閃一閃地亮著呢。<br/>B: 真的很美。在城市裡很難看到這樣的景色呢。",
+      "zh_CN": "A: 空气好清新，夜空中的星星一闪一闪地亮着呢。<br/>B: 真的很美。在城市里很难看到这样的景色呢。",
+      "ko": "A: 공기가 맑아서 밤하늘의 별들이 반짝반짝 빛나고 있네.<br/>B: 정말 예쁘다. 도시에서는 좀처럼 보기 힘든 풍경이야.",
+      "zh_HK": "A: 空氣好清新，夜空啲星星粒粒都閃令令。<br/>B: 真係好靚。喺市區好少機會睇到咁嘅景色。",
+      "fr": "A: L'air est si pur, les étoiles scintillent de mille feux dans le ciel nocturne.<br/>B: C'est magnifique. C'est un spectacle qu'on voit rarement en ville."
     },
     "related": "キラキラ（授業の重要表現）"
   },
@@ -6757,13 +6757,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "eye drops"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>目薬<rt>めぐすり</rt></ruby>の<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 目薬 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 目薬 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 目薬 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 目薬 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 目薬 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 目薬 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: パソコンを<ruby>長時間<rt>ちょうじかん</rt></ruby><ruby>使<rt>つか</rt></ruby>っていたから、<ruby>目<rt>め</rt></ruby>がショボショボするよ。<br/>B: <ruby>乾燥<rt>かんそう</rt></ruby>しているのかもね。この<ruby>目薬<rt>めぐすり</rt></ruby>を<ruby>差<rt>さ</rt></ruby>すとスッキリするよ。",
+      "en": "A: Because I was on the computer for hours, my eyes are tired and stinging.<br/>B: They might be dry. Putting in these eye drops will make them feel refreshed.",
+      "zh_TW": "A: 長時間用電腦，眼睛覺得好乾澀不舒服。<br/>B: 可能是眼睛太乾了。點這個眼藥水會舒服很多喔。",
+      "zh_CN": "A: 长时间用电脑，眼睛觉得好干涩不舒服。<br/>B: 可能是眼睛太干了。滴这个眼药水会舒服很多哦。",
+      "ko": "A: 컴퓨터를 오래 했더니 눈이 뻑뻑하고 피로해.<br/>B: 건조해서 그럴 수도 있어. 이 안약 넣으면 한결 시원해질 거야.",
+      "zh_HK": "A: 對住部電腦咁耐，對眼又乾又攰。<br/>B: 可能太乾喇。滴少少呢隻眼藥水會舒服好多㗎。",
+      "fr": "A: À force de rester sur l'ordinateur, mes yeux piquent et sont fatigués.<br/>B: Ils sont peut-être secs. Mettre ces gouttes pour les yeux te fera du bien."
     },
     "related": "めぐすり（授業の重要表現）"
   },
@@ -7213,13 +7213,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "breaded pork cutlet / escalope de porc panée"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>豚カツ<rt>とんかつ</rt></ruby>でも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>豚カツ<rt>とんかつ</rt></ruby>のお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 豚カツ for lunch?<br/>B: Sounds great! There's a delicious 豚カツ shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 豚カツ for lunch?<br/>B: Sounds great! There's a delicious 豚カツ shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 豚カツ for lunch?<br/>B: Sounds great! There's a delicious 豚カツ shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 豚カツ for lunch?<br/>B: Sounds great! There's a delicious 豚カツ shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 豚カツ for lunch?<br/>B: Sounds great! There's a delicious 豚カツ shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 豚カツ for lunch?<br/>B: Sounds great! There's a delicious 豚カツ shop near the station, let's go."
+      "ja": "A: <ruby>今日<rt>きょう</rt></ruby>の<ruby>夕飯<rt>ゆうはん</rt></ruby>は<ruby>何<rt>なに</rt></ruby>にする？<ruby>何<rt>なに</rt></ruby>かガッツリしたものが<ruby>食<rt>た</rt></ruby>べたいな。<br/>B: じゃあ、<ruby>揚<rt>あ</rt></ruby>げたてでサクサクの<ruby>豚カツ<rt>とんかつ</rt></ruby><ruby>定食<rt>ていしょく</rt></ruby>はどう？",
+      "en": "A: What should we have for dinner tonight? I feel like having something hearty.<br/>B: How about a freshly fried, crispy tonkatsu (pork cutlet) set meal?",
+      "zh_TW": "A: 今晚晚餐要吃什麼？我想吃點有份量、過癮的東西。<br/>B: 那現炸香脆的炸豬排定食怎麼樣？",
+      "zh_CN": "A: 今晚晚餐要吃什么？我想吃点有分量、过瘾的东西。<br/>B: 那现炸酥脆的炸猪排定食怎么样？",
+      "ko": "A: 오늘 저녁 뭐 먹을까? 뭔가 든든하고 푸짐한 게 먹고 싶은데.<br/>B: 그럼 갓 튀겨서 바삭바삭한 돈가스 정식 어때?",
+      "zh_HK": "A: 今晚晚餐食咩好？想食啲濃味又夠飽肚嘅嘢。<br/>B: 咁啱啱炸好、脆卜卜嘅日式炸豬扒定食點睇？",
+      "fr": "A: Qu'est-ce qu'on mange ce soir ? J'ai envie d'un plat bien consistant.<br/>B: Alors que dis-tu d'un menu tonkatsu bien croustillant et tout juste frit ?"
     },
     "related": "とんかつ（授業の重要表現）"
   },
@@ -8485,13 +8485,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "chicken (meat) / poulet (viande)"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>鶏肉<rt>けいにく</rt></ruby>でも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>鶏肉<rt>けいにく</rt></ruby>のお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 鶏肉 for lunch?<br/>B: Sounds great! There's a delicious 鶏肉 shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 鶏肉 for lunch?<br/>B: Sounds great! There's a delicious 鶏肉 shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 鶏肉 for lunch?<br/>B: Sounds great! There's a delicious 鶏肉 shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 鶏肉 for lunch?<br/>B: Sounds great! There's a delicious 鶏肉 shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 鶏肉 for lunch?<br/>B: Sounds great! There's a delicious 鶏肉 shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 鶏肉 for lunch?<br/>B: Sounds great! There's a delicious 鶏肉 shop near the station, let's go."
+      "ja": "A: カレーに<ruby>入<rt>い</rt></ruby>れるお<ruby>肉<rt>にく</rt></ruby>は<ruby>牛肉<rt>ぎゅうにく</rt></ruby>にする？それとも<ruby>豚肉<rt>ぶたにく</rt></ruby>？<br/>B: <ruby>今日<rt>きょう</rt></ruby>はヘルシーに<ruby>鶏肉<rt>けいにく</rt></ruby>のチキンカレーにしようよ。",
+      "en": "A: For the meat in the curry, should we use beef or pork?<br/>B: Let's keep it healthy today and use chicken for a chicken curry.",
+      "zh_TW": "A: 咖哩裡面要加的肉要用牛肉還是豬肉？<br/>B: 今天健康一點，用雞肉煮雞肉咖哩吧。",
+      "zh_CN": "A: 咖喱里面要加的肉要用牛肉还是猪肉？<br/>B: 今天健康一点，用鸡肉煮鸡肉咖喱吧。",
+      "ko": "A: 카레에 넣을 고기는 소고기로 할까, 아니면 돼지고기?<br/>B: 오늘은 건강하게 닭고기로 치킨 카레를 만들자.",
+      "zh_HK": "A: 咖喱要落嘅肉用牛肉定豬肉好？<br/>B: 今日健康啲，落雞肉煮雞肉咖喱啦。",
+      "fr": "A: Pour la viande dans le curry, on met du bœuf ou du porc ?<br/>B: Faisons plus léger aujourd'hui et utilisons du poulet pour un curry de poulet."
     },
     "related": "とりにく（授業の重要表現）"
   },
@@ -8557,13 +8557,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "strength training / muscle training / musculation"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>筋<rt>すじ</rt></ruby>トレの<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 筋トレ hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 筋トレ hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 筋トレ hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 筋トレ hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 筋トレ hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 筋トレ hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby><ruby>体<rt>からだ</rt></ruby>が<ruby>引き締<rt>ひきし</rt></ruby>まってきたね！<ruby>何<rt>なに</rt></ruby>か<ruby>運動<rt>うんどう</rt></ruby>しているの？<br/>B: <ruby>週<rt>しゅう</rt></ruby>に<ruby>三<rt>さん</rt></ruby><ruby>回<rt>かい</rt></ruby>ジムに<ruby>通<rt>かよ</rt></ruby>って<ruby>筋<rt>すじ</rt></ruby>トレを<ruby>始<rt>はじ</rt></ruby>めたんだ。",
+      "en": "A: Your body looks toned lately! Have you been working out?<br/>B: I started going to the gym three times a week for strength training.",
+      "zh_TW": "A: 你最近身材變結實了呢！有在做什麼運動嗎？<br/>B: 我開始每週去三次健身房做重量訓練了。",
+      "zh_CN": "A: 你最近身材变结实了呢！有在做什么运动吗？<br/>B: 我开始每周去三次健身房做力量训练了。",
+      "ko": "A: 요즘 몸이 탄탄해졌네! 무슨 운동이라도 해?<br/>B: 일주일에 세 번 헬스장 가서 근력 운동을 시작했거든.",
+      "zh_HK": "A: 你最近身型實淨咗好多喎！係咪做緊運動？<br/>B: 我開始咗一個禮拜去三次gym做重訓健身。",
+      "fr": "A: Tu as l'air plus affûté ces derniers temps ! Tu fais du sport ?<br/>B: J'ai commencé à aller à la salle trois fois par semaine pour faire de la musculation."
     },
     "related": "きんトレ（授業の重要表現）"
   },
@@ -9325,13 +9325,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "chest muscles / pectoraux"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>胸<rt>むね</rt></ruby><ruby>筋<rt>すじ</rt></ruby>の<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 胸筋 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 胸筋 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 胸筋 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 胸筋 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 胸筋 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 胸筋 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: <ruby>胸<rt>むね</rt></ruby><ruby>筋<rt>すじ</rt></ruby>を<ruby>鍛<rt>きた</rt></ruby>えるにはどんなトレーニングが<ruby>一番<rt>いちばん</rt></ruby><ruby>効果<rt>こうか</rt></ruby><ruby>的<rt>てき</rt></ruby>ですか？<br/>B: <ruby>初心者<rt>しょしんしゃ</rt></ruby>ならまず<ruby>腕立て伏<rt>うでたてふ</rt></ruby>せから<ruby>始<rt>はじ</rt></ruby>めるのがおすすめですよ。",
+      "en": "A: What exercise is most effective for training the chest muscles?<br/>B: If you're a beginner, I recommend starting with push-ups first.",
+      "zh_TW": "A: 要鍛鍊胸肌的話，哪種訓練最有效果？<br/>B: 如果是初學者，建議先從伏地挺身開始練起喔。",
+      "zh_CN": "A: 要锻炼胸肌的话，哪种训练最有效果？<br/>B: 如果是初学者，建议先从俯卧撑开始练起哦。",
+      "ko": "A: 가슴 근육을 키우려면 어떤 운동이 가장 효과적인가요?<br/>B: 초보자라면 먼저 팔굽혀펴기부터 시작하는 걸 추천해요.",
+      "zh_HK": "A: 想練胸肌嘅話，做咩動作最有效？<br/>B: 初學者建議先由掌上壓開始練起。",
+      "fr": "A: Quel entraînement est le plus efficace pour développer les pectoraux ?<br/>B: Si vous êtes débutant, je vous conseille de commencer par des pompes."
     },
     "related": "むねきん（授業の重要表現）"
   },
@@ -9589,7 +9589,7 @@ window.CLASS_VOCAB_DATA = [
       "fr": "if that's the case / if so / si c'est le cas"
     },
     "example": {
-      "ja": "A: <ruby>電車<rt>でんしゃ</rt></ruby>が<ruby>遅延<rt>ちえん</rt></ruby>しているそうですよ。<br/>B: もしそうなら、バスで<ruby>行<rt>おこな</rt></ruby>ったほうが<ruby>早<rt>はや</rt></ruby>く<ruby>着<rt>つ</rt></ruby>くかもしれませんね。",
+      "ja": "A: <ruby>電車<rt>でんしゃ</rt></ruby>が<ruby>遅延<rt>ちえん</rt></ruby>しているそうですよ。<br/>B: もしそうなら、バスで<ruby>行<rt>い</rt></ruby>ったほうが<ruby>早<rt>はや</rt></ruby>く<ruby>着<rt>つ</rt></ruby>くかもしれませんね。",
       "en": "A: I heard the train is delayed.<br/>B: If that's the case, taking the bus might get us there faster.",
       "zh_TW": "A: I heard the train is delayed.<br/>B: If that's the case, taking the bus might get us there faster.",
       "zh_CN": "A: I heard the train is delayed.<br/>B: If that's the case, taking the bus might get us there faster.",
@@ -10453,7 +10453,7 @@ window.CLASS_VOCAB_DATA = [
       "fr": "to play 〜 (string/keyboard instrument) / jouer de 〜"
     },
     "example": {
-      "ja": "A: <ruby>音楽<rt>おんがく</rt></ruby>の<ruby>趣味<rt>しゅみ</rt></ruby>は<ruby>何<rt>なに</rt></ruby>かありますか？<br/>B: <ruby>毎週<rt>まいしゅう</rt></ruby><ruby>末<rt>まつ</rt></ruby>、<ruby>家<rt>いえ</rt></ruby>で<ruby>大好<rt>だいす</rt></ruby>きなピアノを<ruby>弾<rt>はじ</rt></ruby>きますよ。",
+      "ja": "A: <ruby>音楽<rt>おんがく</rt></ruby>の<ruby>趣味<rt>しゅみ</rt></ruby>は<ruby>何<rt>なに</rt></ruby>かありますか？<br/>B: <ruby>毎週<rt>まいしゅう</rt></ruby><ruby>末<rt>まつ</rt></ruby>、<ruby>家<rt>いえ</rt></ruby>で<ruby>大好<rt>だいす</rt></ruby>きなピアノを<ruby>弾<rt>ひ</rt></ruby>きますよ。",
       "en": "A: Do you have any musical hobbies?<br/>B: Every weekend, I play my favorite piano at home.",
       "zh_TW": "A: Do you have any musical hobbies?<br/>B: Every weekend, I play my favorite piano at home.",
       "zh_CN": "A: Do you have any musical hobbies?<br/>B: Every weekend, I play my favorite piano at home.",
@@ -11197,13 +11197,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "priority seat / siège prioritaire"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>優先<rt>ゆうせん</rt></ruby><ruby>席<rt>せき</rt></ruby>でも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>優先<rt>ゆうせん</rt></ruby><ruby>席<rt>せき</rt></ruby>のお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 優先席 for lunch?<br/>B: Sounds great! There's a delicious 優先席 shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 優先席 for lunch?<br/>B: Sounds great! There's a delicious 優先席 shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 優先席 for lunch?<br/>B: Sounds great! There's a delicious 優先席 shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 優先席 for lunch?<br/>B: Sounds great! There's a delicious 優先席 shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 優先席 for lunch?<br/>B: Sounds great! There's a delicious 優先席 shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 優先席 for lunch?<br/>B: Sounds great! There's a delicious 優先席 shop near the station, let's go."
+      "ja": "A: <ruby>電車<rt>でんしゃ</rt></ruby>が<ruby>混<rt>こ</rt></ruby>んできたね。ここは<ruby>優先<rt>ゆうせん</rt></ruby><ruby>席<rt>せき</rt></ruby>だから<ruby>立<rt>た</rt></ruby>とうか。<br/>B: そうだね。お<ruby>年寄<rt>としよ</rt></ruby>りや<ruby>妊婦<rt>にんぷ</rt></ruby>さんが<ruby>乗<rt>の</rt></ruby>ってきたらすぐ<ruby>譲<rt>ゆず</rt></ruby>れるようにしよう。",
+      "en": "A: The train is getting crowded. This is a priority seat, so shall we stand up?<br/>B: Good idea. That way elderly passengers or expectant mothers can sit down easily.",
+      "zh_TW": "A: 電車變得好擠。這裡是博愛座，我們要不要站起來？<br/>B: 好啊。這樣有長輩或孕婦上車時就能馬上讓座。",
+      "zh_CN": "A: 电车变得好挤。这里是老弱病残孕专座，我们要不要站起来？<br/>B: 好啊。这样有老人或孕妇上车时就能马上让座。",
+      "ko": "A: 전철이 붐비기 시작했네. 여긴 노약자석이니까 일어설까?<br/>B: 그러자. 어르신이나 임산부 분이 타시면 바로 양보할 수 있게.",
+      "zh_HK": "A: 架火車愈嚟愈逼喇。呢度係關愛座，不如企返起身啦？<br/>B: 好呀，有長者或者大肚婆上車就可以即刻讓畀人。",
+      "fr": "A: Le train commence à être bondé. Ce sont des sièges prioritaires, on ferait mieux de se lever ?<br/>B: Tu as raison. Comme ça, les personnes âgées ou enceintes pourront s'asseoir directement."
     },
     "related": "ゆうせんせき（授業の重要表現）"
   },
@@ -11389,13 +11389,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "scattered / all over the place / in pieces / éparpillé / en morceaux"
     },
     "example": {
-      "ja": "A: すみません、この<ruby>近<rt>ちか</rt></ruby>くにバラバラはありますか？<br/>B: はい、この<ruby>道<rt>みち</rt></ruby>をまっすぐ<ruby>進<rt>すす</rt></ruby>むと<ruby>右手<rt>みぎて</rt></ruby>にバラバラが<ruby>見<rt>み</rt></ruby>えますよ。",
-      "en": "A: Excuse me, is there a バラバラ near here?<br/>B: Yes, if you go straight down this street, you'll see バラバラ on your right.",
-      "zh_TW": "A: Excuse me, is there a バラバラ near here?<br/>B: Yes, if you go straight down this street, you'll see バラバラ on your right.",
-      "zh_CN": "A: Excuse me, is there a バラバラ near here?<br/>B: Yes, if you go straight down this street, you'll see バラバラ on your right.",
-      "ko": "A: Excuse me, is there a バラバラ near here?<br/>B: Yes, if you go straight down this street, you'll see バラバラ on your right.",
-      "zh_HK": "A: Excuse me, is there a バラバラ near here?<br/>B: Yes, if you go straight down this street, you'll see バラバラ on your right.",
-      "fr": "A: Excuse me, is there a バラバラ near here?<br/>B: Yes, if you go straight down this street, you'll see バラバラ on your right."
+      "ja": "A: <ruby>手<rt>て</rt></ruby>が<ruby>滑<rt>すべ</rt></ruby>って<ruby>書類<rt>しょるい</rt></ruby>の<ruby>束<rt>たば</rt></ruby>を<ruby>落<rt>お</rt></ruby>としちゃった！<br/>B: <ruby>大丈夫<rt>だいじょうぶ</rt></ruby>？ページが<ruby>床<rt>ゆか</rt></ruby>にバラバラに<ruby>散<rt>ち</rt></ruby>らばったから、<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>拾<rt>ひろ</rt></ruby>おう。",
+      "en": "A: My hands slipped and I dropped the stack of documents!<br/>B: Are you okay? The pages scattered all over the floor, let me help you pick them up.",
+      "zh_TW": "A: 我手滑把整疊文件掉在地上上了！<br/>B: 沒事吧？紙張散落得滿地都是，我來幫你一起撿。",
+      "zh_CN": "A: 我手滑把整叠文件掉在地上上了！<br/>B: 没事吧？纸张散落得满地都是，我来帮你一起捡。",
+      "ko": "A: 손이 미끄러져서 서류 뭉치를 떨어뜨렸어!<br/>B: 괜찮아? 페이지가 바닥에 뿔뿔이 흩어졌네, 같이 주울게.",
+      "zh_HK": "A: 手跣跌咗成疊文件喺地下添！<br/>B: 冇事嘛？啲紙散到成地都係，我同你一齊執返啦。",
+      "fr": "A: Mes mains ont glissé et j'ai fait tomber la pile de documents !<br/>B: Ça va ? Les feuilles sont éparpillées partout par terre, je t'aide à les ramasser."
     },
     "related": "バラバラ（授業の重要表現）"
   },
@@ -11917,13 +11917,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "cannibalisme, luttes intestines (cannibalisme, lutte fratricide)"
     },
     "example": {
-      "ja": "A: <ruby>実際<rt>じっさい</rt></ruby>に<ruby>使<rt>つか</rt></ruby>ってみると、とても<ruby>共食<rt>ともぐ</rt></ruby>いと<ruby>感<rt>かん</rt></ruby>じました！<br/>B: <ruby>気に入<rt>きにい</rt></ruby>っていただけて<ruby>良<rt>よ</rt></ruby>かったです。<ruby>私<rt>わたし</rt></ruby>も<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>共食<rt>ともぐ</rt></ruby>いと<ruby>思<rt>おも</rt></ruby>います。",
-      "en": "A: When I actually used it, it felt very cannibalistic!<br/>B: I'm glad you liked it. I also think it's really cannibalism.",
-      "zh_TW": "A：我實際使用的時候，我覺得很吃人！<br/>B：我很高興你喜歡它。我也認為這確實是同類相食。",
-      "zh_CN": "A：我实际使用的时候，感觉很吃人！<br/>B：我很高兴你喜欢它。我也认为这确实是同类相食。",
-      "ko": "A: 실제로 사용해 보면, 매우 공식하다고 느꼈습니다!<br/>B : 마음에 드는 것이 좋았습니다. 저도 정말 공식하고 싶습니다.",
-      "zh_HK": "A：我實際使用的時候，我覺得很吃人！<br/>B：我很高興你喜歡它。我也認為這確實是同類相食。",
-      "fr": "R : Quand je l’ai utilisé, c’était très cannibale !<br/>B : Je suis content que ça te plaise. Je pense aussi que c'est vraiment du cannibalisme."
+      "ja": "A: <ruby>同<rt>おな</rt></ruby>じ<ruby>会社<rt>かいしゃ</rt></ruby>から<ruby>似<rt>に</rt></ruby>たような<ruby>新<rt>しん</rt></ruby><ruby>商品<rt>しょうひん</rt></ruby>を<ruby>二<rt>ふた</rt></ruby>つも<ruby>出<rt>だ</rt></ruby>すと、<ruby>売上<rt>うりあげ</rt></ruby>が<ruby>共食<rt>ともぐ</rt></ruby>いになりませんか？<br/>B: その<ruby>通<rt>とお</rt></ruby>りですね。ターゲット<ruby>層<rt>そう</rt></ruby>を<ruby>明確<rt>めいかく</rt></ruby>に<ruby>分<rt>わ</rt></ruby>ける<ruby>必要<rt>ひつよう</rt></ruby>があります。",
+      "en": "A: If we release two similar new products from the same company, won't sales cannibalize each other?<br/>B: Exactly. We need to clearly separate our target customer bases.",
+      "zh_TW": "A: 同一家公司推出兩款相似的新產品，銷量會不會互相廝殺搶客？<br/>B: 沒錯。我們必須把目標客群明確區分開來。",
+      "zh_CN": "A: 同一家公司推出两款相似的新产品，销量会不会互相抢占？<br/>B: 没错。我们必须把目标客户群明确区分开来。",
+      "ko": "A: 같은 회사에서 비슷한 신제품을 둘이나 내놓으면 제 살 깎아먹기(잠식)가 되지 않을까요?<br/>B: 맞습니다. 타깃 고객층을 명확히 나눌 필요가 있어요.",
+      "zh_HK": "A: 同一間公司出兩款差唔多嘅新產品，會唔會自己人打自己人搶客？<br/>B: 冇錯。我哋一定要將目標客層分得清清楚楚。",
+      "fr": "A: Si notre entreprise lance deux produits très similaires, les ventes ne risquent-elles pas de se cannibaliser ?<br/>B: Tout à fait. Nous devons cibler des clientèles bien distinctes."
     },
     "related": "ともぐい（授業の重要表現）"
   },
@@ -12637,13 +12637,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "grand; petit (grande taille)"
     },
     "example": {
-      "ja": "A: <ruby>実際<rt>じっさい</rt></ruby>に<ruby>使<rt>つか</rt></ruby>ってみると、とても<ruby>低<rt>ひく</rt></ruby>いと<ruby>感<rt>かん</rt></ruby>じました！<br/>B: <ruby>気に入<rt>きにい</rt></ruby>っていただけて<ruby>良<rt>よ</rt></ruby>かったです。<ruby>私<rt>わたし</rt></ruby>も<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>低<rt>ひく</rt></ruby>いと<ruby>思<rt>おも</rt></ruby>います。",
-      "en": "A: When I actually used it, I felt it was very low!<br/>B: I'm glad you liked it. I also think it's really low.",
-      "zh_TW": "A：我實際使用的時候，感覺很低！<br/>B：我很高興你喜歡它。我也覺得確實很低。",
-      "zh_CN": "A：我实际使用的时候，感觉很低！<br/>B：我很高兴你喜欢它。我也觉得确实很低。",
-      "ko": "A: 실제로 사용해 보면 매우 낮다고 느꼈습니다!<br/>B : 마음에 드는 것이 좋았습니다. 저도 정말 낮다고 생각합니다.",
-      "zh_HK": "A：我實際使用的時候，感覺很低！<br/>B：我很高興你喜歡它。我也覺得確實很低。",
-      "fr": "R : Lorsque je l’ai utilisé, j’ai senti qu’il était très faible !<br/>B : Je suis content que ça te plaise. Je pense aussi que c'est vraiment bas."
+      "ja": "A: ご<ruby>兄弟<rt>きょうだい</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で、<ruby>誰<rt>だれ</rt></ruby>が<ruby>一番<rt>いちばん</rt></ruby><ruby>背<rt>せ</rt></ruby>が<ruby>高<rt>たか</rt></ruby>いですか？<br/>B: <ruby>弟<rt>おとうと</rt></ruby>が185センチあって<ruby>一番<rt>いちばん</rt></ruby><ruby>高<rt>たか</rt></ruby>くて、<ruby>私<rt>わたし</rt></ruby>は<ruby>家族<rt>かぞく</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で<ruby>一番<rt>いちばん</rt></ruby><ruby>背<rt>せ</rt></ruby>が<ruby>低<rt>ひく</rt></ruby>いです。",
+      "en": "A: Among your siblings, who is the tallest?<br/>B: My younger brother is the tallest at 185 cm, and I am the shortest in our family.",
+      "zh_TW": "A: 你們兄弟姊妹當中，誰的個子最高？<br/>B: 弟弟有185公分是最高的，而我是全家個子最矮的。",
+      "zh_CN": "A: 你们兄弟姐妹当中，谁的个子最高？<br/>B: 弟弟有185厘米是最高的，而我是全家个子最矮的。",
+      "ko": "A: 형제분들 중에서 누가 제일 키가 커요?<br/>B: 남동생이 185센티로 제일 크고, 저는 가족 중에서 제일 키가 작아요.",
+      "zh_HK": "A: 你哋幾兄弟姊妹之中邊個最高？<br/>B: 細佬185厘米最高，我就係成家最矮嗰個。",
+      "fr": "A: Parmi tes frères et sœurs, qui est le plus grand ?<br/>B: Mon petit frère est le plus grand avec son mètre 85, et moi je suis le plus petit de la famille."
     },
     "related": "せがたかい／ひくい（授業の重要表現）"
   },
@@ -12757,13 +12757,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Boutique à 100 yens (tout est bon marché)"
     },
     "example": {
-      "ja": "A: すみません、この<ruby>近<rt>ちか</rt></ruby>くに<ruby>百<rt>ひゃく</rt></ruby><ruby>均<rt>ひとし</rt></ruby>はありますか？<br/>B: はい、この<ruby>道<rt>みち</rt></ruby>をまっすぐ<ruby>進<rt>すす</rt></ruby>むと<ruby>右手<rt>みぎて</rt></ruby>に<ruby>百<rt>ひゃく</rt></ruby><ruby>均<rt>ひとし</rt></ruby>が<ruby>見<rt>み</rt></ruby>えますよ。",
-      "en": "A: Excuse me, is there a 百均 near here?<br/>B: Yes, if you go straight down this street, you'll see 百均 on your right.",
-      "zh_TW": "A: Excuse me, is there a 百均 near here?<br/>B: Yes, if you go straight down this street, you'll see 百均 on your right.",
-      "zh_CN": "A: Excuse me, is there a 百均 near here?<br/>B: Yes, if you go straight down this street, you'll see 百均 on your right.",
-      "ko": "A: Excuse me, is there a 百均 near here?<br/>B: Yes, if you go straight down this street, you'll see 百均 on your right.",
-      "zh_HK": "A: Excuse me, is there a 百均 near here?<br/>B: Yes, if you go straight down this street, you'll see 百均 on your right.",
-      "fr": "A: Excuse me, is there a 百均 near here?<br/>B: Yes, if you go straight down this street, you'll see 百均 on your right."
+      "ja": "A: ノートやボールペンを<ruby>買<rt>か</rt></ruby>いたいんだけど、どこが<ruby>安<rt>やす</rt></ruby>いかな？<br/>B: <ruby>駅前<rt>えきまえ</rt></ruby>の<ruby>百<rt>ひゃく</rt></ruby><ruby>均<rt>ひとし</rt></ruby>に<ruby>行<rt>い</rt></ruby>けば、<ruby>文房具<rt>ぶんぼうぐ</rt></ruby>が<ruby>何<rt>なに</rt></ruby>でも<ruby>揃<rt>そろ</rt></ruby>っていて<ruby>安<rt>やす</rt></ruby>く<ruby>買<rt>か</rt></ruby>えるよ。",
+      "en": "A: I want to buy some notebooks and pens. Where would be cheap?<br/>B: If you go to the 100-yen shop in front of the station, they have all kinds of stationery cheap.",
+      "zh_TW": "A: 我想買筆記本和原子筆，哪裡比較便宜呢？<br/>B: 去車站前的百元商店的話，文具應有盡有而且很便宜喔。",
+      "zh_CN": "A: 我想买笔记本和圆珠笔，哪里比较便宜呢？<br/>B: 去车站前的一元店（百元店）的话，文具应有尽有而且很便宜哦。",
+      "ko": "A: 공책이랑 볼펜을 사고 싶은데 어디가 쌀까?<br/>B: 역 앞 다이소(백엔숍)에 가면 문구류가 다 갖춰져 있어서 저렴하게 살 수 있어.",
+      "zh_HK": "A: 我想買筆記簿同原子筆，邊度買平啲？<br/>B: 去站前間百円店啦，文具應有盡有又抵買。",
+      "fr": "A: Je veux acheter des cahiers et des stylos. Où est-ce que c'est bon marché ?<br/>B: Si tu vas au magasin à 100 yens devant la gare, tu trouveras toutes sortes de fournitures pas chères."
     },
     "related": "ひゃっきん（授業の重要表現）"
   },
@@ -12901,13 +12901,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "en bonne santé; sain"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>健康<rt>けんこう</rt></ruby><ruby>的<rt>てき</rt></ruby>なの<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 健康的な hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 健康的な hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 健康的な hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 健康的な hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 健康的な hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 健康的な hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby><ruby>毎日<rt>まいにち</rt></ruby><ruby>野菜<rt>やさい</rt></ruby>たっぷりの<ruby>自炊<rt>じすい</rt></ruby>をしているんだ。<br/>B: すごく<ruby>健康<rt>けんこう</rt></ruby><ruby>的<rt>てき</rt></ruby>でいいね！<ruby>体調<rt>たいちょう</rt></ruby>も<ruby>良<rt>よ</rt></ruby>くなりそうだね。",
+      "en": "A: Lately I've been cooking at home every day with lots of fresh vegetables.<br/>B: That's so healthy and wonderful! You must feel much better too.",
+      "zh_TW": "A: 我最近每天都自己煮飯，吃很多蔬菜。<br/>B: 非常健康很棒耶！身體狀況感覺也會變好呢。",
+      "zh_CN": "A: 我最近每天都自己做饭，吃很多蔬菜。<br/>B: 非常健康很棒耶！身体状况感觉也会变好呢。",
+      "ko": "A: 요즘 매일 채소 듬뿍 넣어서 집밥을 해 먹고 있어.<br/>B: 정말 건강하고 좋다! 컨디션도 좋아지겠네.",
+      "zh_HK": "A: 我最近日日自己煮飯，食好多蔬菜。<br/>B: 好健康好正呀！身體狀態都應該會好咗好多。",
+      "fr": "A: Ces derniers temps, je cuisine tous les jours chez moi avec plein de légumes.<br/>B: C'est très sain et équilibré ! Tu dois te sentir en bien meilleure forme."
     },
     "related": "けんこうてきな（授業の重要表現）"
   },
@@ -13669,13 +13669,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "réaménagement de la pièce"
     },
     "example": {
-      "ja": "A: すみません、この<ruby>近<rt>ちか</rt></ruby>くに<ruby>模様替<rt>もようが</rt></ruby>えはありますか？<br/>B: はい、この<ruby>道<rt>みち</rt></ruby>をまっすぐ<ruby>進<rt>すす</rt></ruby>むと<ruby>右手<rt>みぎて</rt></ruby>に<ruby>模様替<rt>もようが</rt></ruby>えが<ruby>見<rt>み</rt></ruby>えますよ。",
-      "en": "A: Excuse me, is there a 模様替え near here?<br/>B: Yes, if you go straight down this street, you'll see 模様替え on your right.",
-      "zh_TW": "A: Excuse me, is there a 模様替え near here?<br/>B: Yes, if you go straight down this street, you'll see 模様替え on your right.",
-      "zh_CN": "A: Excuse me, is there a 模様替え near here?<br/>B: Yes, if you go straight down this street, you'll see 模様替え on your right.",
-      "ko": "A: Excuse me, is there a 模様替え near here?<br/>B: Yes, if you go straight down this street, you'll see 模様替え on your right.",
-      "zh_HK": "A: Excuse me, is there a 模様替え near here?<br/>B: Yes, if you go straight down this street, you'll see 模様替え on your right.",
-      "fr": "A: Excuse me, is there a 模様替え near here?<br/>B: Yes, if you go straight down this street, you'll see 模様替え on your right."
+      "ja": "A: <ruby>今度<rt>こんど</rt></ruby>の<ruby>週末<rt>しゅうまつ</rt></ruby>、<ruby>気分<rt>きぶん</rt></ruby><ruby>転換<rt>てんかん</rt></ruby>に<ruby>部屋<rt>へや</rt></ruby>の<ruby>模様替<rt>もようが</rt></ruby>えをしようと<ruby>思<rt>おも</rt></ruby>っているんだ。<br/>B: いいね！ベッドや<ruby>机<rt>つくえ</rt></ruby>の<ruby>配置<rt>はいち</rt></ruby>を<ruby>変<rt>か</rt></ruby>えるだけでも<ruby>雰囲気<rt>ふんいき</rt></ruby>がガラッと<ruby>変<rt>か</rt></ruby>わるよ。",
+      "en": "A: This weekend, I'm thinking of rearranging my room for a change of pace.<br/>B: Sounds nice! Just changing the layout of the bed and desk makes the room feel totally different.",
+      "zh_TW": "A: 這個週末我想換個心情，把房間重新佈置一下。<br/>B: 很好耶！光是改變床和書桌的擺設，整個房間的氛圍就會大不同喔。",
+      "zh_CN": "A: 这个周末我想换个心情，把房间重新布置一下。<br/>B: 很好耶！光是改变床和书桌的摆设，整个房间的氛围就会大不同哦。",
+      "ko": "A: 이번 주말에 기분 전환할 겸 방 가구 배치를 좀 바꿔보려고 해.<br/>B: 좋다! 침대랑 책상 위치만 바꿔도 분위기가 확 달라지지.",
+      "zh_HK": "A: 今個禮拜天我想轉下心情，幫間房大搬位重新佈置。<br/>B: 好喎！淨係調動下張床同書枱個位，成間房個feel已經完全唔同晒。",
+      "fr": "A: Ce week-end, je pense réaménager ma chambre pour changer d'ambiance.<br/>B: Bonne idée ! Il suffit de déplacer le lit et le bureau pour métamorphoser la pièce."
     },
     "related": "もようがえ（授業の重要表現）"
   },
@@ -13957,13 +13957,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "correspondance"
     },
     "example": {
-      "ja": "A: <ruby>実際<rt>じっさい</rt></ruby>に<ruby>使<rt>つか</rt></ruby>ってみると、とてもおそろいと<ruby>感<rt>かん</rt></ruby>じました！<br/>B: <ruby>気に入<rt>きにい</rt></ruby>っていただけて<ruby>良<rt>よ</rt></ruby>かったです。<ruby>私<rt>わたし</rt></ruby>も<ruby>本当<rt>ほんとう</rt></ruby>におそろいと<ruby>思<rt>おも</rt></ruby>います。",
-      "en": "A: When I tried it on, I found it to be a great match!<br/>B: I'm glad you liked it. I think they really match too.",
-      "zh_TW": "A：試穿的時候，我發現它非常搭配！<br/>B：我很高興你喜歡它。我覺得他們也真的很配。",
-      "zh_CN": "A：当我试穿的时候，我发现它非常搭配！<br/>B：我很高兴你喜欢它。我觉得他们也真的很般配。",
-      "ko": "A: 실제로 사용해 보면, 매우 합리적이라고 느꼈습니다!<br/>B : 마음에 드는 것이 좋았습니다. 나도 정말 괜찮다고 생각합니다.",
-      "zh_HK": "A：試穿的時候，我發現它非常搭配！<br/>B：我很高興你喜歡它。我覺得他們也真的很配。",
-      "fr": "R : Quand je l’ai essayé, j’ai trouvé que c’était un super match !<br/>B : Je suis content que ça te plaise. Je pense qu'ils correspondent vraiment aussi."
+      "ja": "A: そのスマホケース、<ruby>二<rt>に</rt></ruby><ruby>人<rt>にん</rt></ruby>ともおそろいなの？<br/>B: うん、<ruby>先週<rt>せんしゅう</rt></ruby><ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>旅行<rt>りょこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>った<ruby>時<rt>とき</rt></ruby>に<ruby>買<rt>か</rt></ruby>ったお<ruby>気に入<rt>きにい</rt></ruby>りなんだ。",
+      "en": "A: Are both of your phone cases matching?<br/>B: Yeah, we bought matching ones when we traveled together last week, and we love them.",
+      "zh_TW": "A: 你們兩個的手機殼是同款情侶配成一對的嗎？<br/>B: 對呀，上週一起去旅行時買的，我們都很喜歡。",
+      "zh_CN": "A: 你们两个的手机壳是同款配成一对的吗？<br/>B: 对呀，上周一起去旅行时买的，我们都很喜欢。",
+      "ko": "A: 그 스마트폰 케이스 둘이 커플로 맞춘 거야?<br/>B: 응, 지난주에 같이 여행 갔을 때 산 건데 아주 마음에 들어.",
+      "zh_HK": "A: 你哋兩個部電話個套係咪同一款match埋一齊㗎？<br/>B: 係呀，上個禮拜一齊去旅行嗰陣買㗎，好鍾意。",
+      "fr": "A: Vos coques de téléphone sont assorties tous les deux ?<br/>B: Oui, on les a achetées ensemble pendant notre voyage la semaine dernière, on les adore."
     },
     "related": "おそろい（授業の重要表現）"
   },
@@ -14197,13 +14197,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "arrière-grand-père"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>にひいおじいさんでも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しいひいおじいさんのお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some ひいおじいさん for lunch?<br/>B: Sounds great! There's a delicious ひいおじいさん shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some ひいおじいさん for lunch?<br/>B: Sounds great! There's a delicious ひいおじいさん shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some ひいおじいさん for lunch?<br/>B: Sounds great! There's a delicious ひいおじいさん shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some ひいおじいさん for lunch?<br/>B: Sounds great! There's a delicious ひいおじいさん shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some ひいおじいさん for lunch?<br/>B: Sounds great! There's a delicious ひいおじいさん shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some ひいおじいさん for lunch?<br/>B: Sounds great! There's a delicious ひいおじいさん shop near the station, let's go."
+      "ja": "A: <ruby>古<rt>ふる</rt></ruby>い<ruby>家族<rt>かぞく</rt></ruby><ruby>写真<rt>しゃしん</rt></ruby>を<ruby>見<rt>み</rt></ruby>せてもらったんだけど、この<ruby>立派<rt>りっぱ</rt></ruby>な<ruby>男性<rt>だんせい</rt></ruby>はどなたですか？<br/>B: <ruby>私<rt>わたし</rt></ruby>のひいおじいさんです。<ruby>明治<rt>めいじ</rt></ruby><ruby>時代<rt>じだい</rt></ruby>に<ruby>生<rt>う</rt></ruby>まれた<ruby>人<rt>ひと</rt></ruby>なんですよ。",
+      "en": "A: You showed me an old family photo—who is this distinguished gentleman?<br/>B: That's my great-grandfather. He was born back in the Meiji era.",
+      "zh_TW": "A: 我看了這張老家族照片，這位很有威嚴的男士是哪一位？<br/>B: 那是我的曾祖父。他是明治時代出生的人喔。",
+      "zh_CN": "A: 我看了这张老家族照片，这位很有威严的男士是哪一位？<br/>B: 那是我的曾祖父。他是明治时代出生的人哦。",
+      "ko": "A: 오래된 가족 사진을 봤는데, 이 멋진 남성분은 누구세요?<br/>B: 저희 증조할아버지세요. 메이지 시대에 태어나신 분이에요.",
+      "zh_HK": "A: 睇咗你張舊屋企相，呢位咁有氣派嘅先生係邊個嚟㗎？<br/>B: 係我太公（曾祖父）。佢喺明治時代出世㗎。",
+      "fr": "A: J'ai vu cette vieille photo de famille, qui est cet homme si élégant ?<br/>B: C'est mon arrière-grand-père. Il est né à l'époque Meiji."
     },
     "related": "曾祖父（授業の重要表現）"
   },
@@ -14221,13 +14221,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "arrière-grand-mère"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>にひいおばあさんでも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しいひいおばあさんのお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some ひいおばあさん for lunch?<br/>B: Sounds great! There's a delicious ひいおばあさん shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some ひいおばあさん for lunch?<br/>B: Sounds great! There's a delicious ひいおばあさん shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some ひいおばあさん for lunch?<br/>B: Sounds great! There's a delicious ひいおばあさん shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some ひいおばあさん for lunch?<br/>B: Sounds great! There's a delicious ひいおばあさん shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some ひいおばあさん for lunch?<br/>B: Sounds great! There's a delicious ひいおばあさん shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some ひいおばあさん for lunch?<br/>B: Sounds great! There's a delicious ひいおばあさん shop near the station, let's go."
+      "ja": "A: ご<ruby>親戚<rt>しんせき</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で<ruby>最<rt>さい</rt></ruby><ruby>高齢<rt>こうれい</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>はどなたですか？<br/>B: <ruby>私<rt>わたし</rt></ruby>のひいおばあさんです。<ruby>今年<rt>ことし</rt></ruby>でなんと100<ruby>歳<rt>さい</rt></ruby>を<ruby>迎<rt>むか</rt></ruby>えました。",
+      "en": "A: Who is the oldest person among your relatives?<br/>B: My great-grandmother. She celebrated her 100th birthday this year.",
+      "zh_TW": "A: 你的親戚裡面年紀最大的是哪一位？<br/>B: 是我的曾祖母。今年居然已經迎來100歲高壽了。",
+      "zh_CN": "A: 你的亲戚里面年纪最大的是哪一位？<br/>B: 是我的曾祖母。今年居然已经迎来100岁高寿了。",
+      "ko": "A: 친척분들 중에서 가장 고령이신 분은 누구신가요?<br/>B: 제 증조할머니세요. 올해로 무려 100세를 맞이하셨어요.",
+      "zh_HK": "A: 你親戚入面年紀最大嗰個係邊個？<br/>B: 係我太婆（曾祖母）。佢今年啱啱滿100歲大壽添。",
+      "fr": "A: Qui est la personne la plus âgée parmi tes proches ?<br/>B: C'est mon arrière-grand-mère. Elle a fêté ses 100 ans cette année."
     },
     "related": "曾祖母（授業の重要表現）"
   },
@@ -14365,13 +14365,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "maux d'estomac / douleurs abdominales"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>腹痛<rt>はらいた</rt></ruby>の<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 腹痛 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 腹痛 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 腹痛 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 腹痛 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 腹痛 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 腹痛 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: <ruby>顔色<rt>かおいろ</rt></ruby>が<ruby>青白<rt>あおじろ</rt></ruby>いですが、どこか<ruby>具合<rt>ぐあい</rt></ruby>が<ruby>悪<rt>わる</rt></ruby>いんですか？<br/>B: <ruby>朝<rt>あさ</rt></ruby>から<ruby>激<rt>はげ</rt></ruby>しい<ruby>腹痛<rt>はらいた</rt></ruby>があって、<ruby>立<rt>た</rt></ruby>っているのもつらいんです。",
+      "en": "A: You look pale. Are you feeling unwell somewhere?<br/>B: I've had a severe stomachache since morning, and it hurts even to stand up.",
+      "zh_TW": "A: 你的臉色很蒼白，是哪裡不舒服嗎？<br/>B: 我從早上開始肚子就劇痛，痛到連站著都很難受。",
+      "zh_CN": "A: 你的脸色很苍白，是哪里不舒服吗？<br/>B: 我从早上开始肚子就剧痛，痛到连站着都很受罪。",
+      "ko": "A: 안색이 창백한데 어디 안 좋으세요?<br/>B: 아침부터 극심한 복통이 있어서 서 있기도 힘들어요.",
+      "zh_HK": "A: 你塊面好青白喎，係咪邊度唔舒服？<br/>B: 我今朝開始個肚痛得好交關，痛到企都企唔穩。",
+      "fr": "A: Tu es tout pâle, tu ne te sens pas bien ?<br/>B: J'ai de violents maux de ventre depuis ce matin, j'ai même du mal à rester debout."
     },
     "related": "ふくつう（授業の重要表現）"
   },
@@ -14533,13 +14533,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "vouloir devenir"
     },
     "example": {
-      "ja": "A: <ruby>実際<rt>じっさい</rt></ruby>に<ruby>使<rt>つか</rt></ruby>ってみると、とてもなりたいと<ruby>感<rt>かん</rt></ruby>じました！<br/>B: <ruby>気に入<rt>きにい</rt></ruby>っていただけて<ruby>良<rt>よ</rt></ruby>かったです。<ruby>私<rt>わたし</rt></ruby>も<ruby>本当<rt>ほんとう</rt></ruby>になりたいと<ruby>思<rt>おも</rt></ruby>います。",
-      "en": "A: When I actually used it, I felt like I really wanted to be one!<br/>B: I'm glad you liked it. I really want to be one too.",
-      "zh_TW": "A：當我真正使用它的時候，我覺得我真的很想成為其中之一！<br/>B：我很高興你喜歡它。我也真的很想成為其中一員。",
-      "zh_CN": "A：当我真正使用它的时候，我觉得我真的很想成为其中之一！<br/>B：我很高兴你喜欢它。我也真的很想成为其中一员。",
-      "ko": "A: 실제로 사용해 보면, 매우 되고 싶다고 느꼈습니다!<br/>B : 마음에 드는 것이 좋았습니다. 저도 정말 되고 싶습니다.",
-      "zh_HK": "A：當我真正使用它的時候，我覺得我真的很想成為其中之一！<br/>B：我很高興你喜歡它。我也真的很想成為其中一員。",
-      "fr": "R : Quand je l’ai réellement utilisé, j’avais l’impression que je voulais vraiment en être un !<br/>B : Je suis content que ça te plaise. Je veux vraiment en être un aussi."
+      "ja": "A: <ruby>将来<rt>しょうらい</rt></ruby>はどんな<ruby>仕事<rt>しごと</rt></ruby>に<ruby>就<rt>つ</rt></ruby>きたいですか？<br/>B: <ruby>子供<rt>こども</rt></ruby>の<ruby>頃<rt>ころ</rt></ruby>からの<ruby>夢<rt>ゆめ</rt></ruby>で、<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>先生<rt>せんせい</rt></ruby>になりたいです。",
+      "en": "A: What kind of job would you like to have in the future?<br/>B: It's been my dream since childhood to become a Japanese teacher.",
+      "zh_TW": "A: 你將來想做什麼樣的工作？<br/>B: 這是我從小以來的夢想，我想成為一名日語老師。",
+      "zh_CN": "A: 你将来想做什么样的工作？<br/>B: 这是我从小以来的梦想，我想成为一名日语老师。",
+      "ko": "A: 장래에는 어떤 직업을 갖고 싶으세요?<br/>B: 어릴 적부터의 꿈이라서 일본어 선생님이 되고 싶어요.",
+      "zh_HK": "A: 第時你大個想做咩工？<br/>B: 我由細到大嘅夢想，係想成為一個日語老師。",
+      "fr": "A: Quel travail aimerais-tu faire à l'avenir ?<br/>B: C'est mon rêve depuis l'enfance : je veux devenir professeur de japonais."
     },
     "related": "なりたい（授業の重要表現）"
   },
@@ -14629,13 +14629,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "dentifrice"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>歯磨<rt>はみが</rt></ruby>き<ruby>粉<rt>こな</rt></ruby>の<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 歯磨き粉 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 歯磨き粉 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 歯磨き粉 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 歯磨き粉 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 歯磨き粉 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 歯磨き粉 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: <ruby>買い物<rt>かいもの</rt></ruby>に<ruby>行<rt>い</rt></ruby>くけど、<ruby>何<rt>なに</rt></ruby>か<ruby>頼<rt>たの</rt></ruby>みたいものはある？<br/>B: <ruby>洗面<rt>せんめん</rt></ruby><ruby>所<rt>しょ</rt></ruby>の<ruby>歯磨き粉<rt>はみがきこ</rt></ruby>がなくなりそうだから、1<ruby>本<rt>ほん</rt></ruby><ruby>買<rt>か</rt></ruby>ってきてほしいな。",
+      "en": "A: I'm going shopping. Is there anything you'd like me to pick up?<br/>B: The toothpaste in the bathroom is running out, could you buy a tube for me?",
+      "zh_TW": "A: 我要去買東西，有什麼要順便買的嗎？<br/>B: 洗手台的牙膏快用完了，想請你幫忙買一條回來。",
+      "zh_CN": "A: 我要去买东西，有什么要顺便买的吗？<br/>B: 洗手间的牙膏快用完了，想请你帮忙买一支回来。",
+      "ko": "A: 장 보러 가는데 뭐 사다 줄 거 있어?<br/>B: 욕실에 치약이 다 떨어져 가는데 한 개만 사다 줄래?",
+      "zh_HK": "A: 我出去買嘢，有冇嘢想我幫手買？<br/>B: 廁所個牙膏差唔多用晒，可唔可以幫我買支返嚟？",
+      "fr": "A: Je vais faire des courses, tu as besoin de quelque chose ?<br/>B: On n'a presque plus de dentifrice dans la salle de bain, tu peux m'en prendre un tube ?"
     },
     "related": "歯磨きはみがきこ（授業の重要表現）"
   },
@@ -14653,13 +14653,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "brosse à dents"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>歯ブラシ<rt>はぶらし</rt></ruby>の<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 歯ブラシ hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 歯ブラシ hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 歯ブラシ hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 歯ブラシ hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 歯ブラシ hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 歯ブラシ hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: <ruby>歯ブラシ<rt>はぶらし</rt></ruby>ってどのくらいの<ruby>頻度<rt>ひんど</rt></ruby>で<ruby>交換<rt>こうかん</rt></ruby>していますか？<br/>B: <ruby>毛<rt>け</rt></ruby><ruby>先<rt>さき</rt></ruby>が<ruby>開<rt>ひら</rt></ruby>いてくるので、だいたい<ruby>月<rt>つき</rt></ruby>に<ruby>一<rt>いち</rt></ruby><ruby>回<rt>かい</rt></ruby><ruby>新<rt>あたら</rt></ruby>しいものに<ruby>変<rt>か</rt></ruby>えています。",
+      "en": "A: How often do you replace your toothbrush?<br/>B: The bristles start to fray, so I usually switch to a new one about once a month.",
+      "zh_TW": "A: 你大概多久換一次牙刷呢？<br/>B: 因為刷毛會開叉，我大概一個月換一次新的。",
+      "zh_CN": "A: 你大概多久换一次牙刷呢？<br/>B: 因为刷毛会分叉，我大概一个月换一次新的。",
+      "ko": "A: 칫솔은 보통 얼마나 자주 교체하세요?<br/>B: 칫솔모가 벌어져서 대략 한 달에 한 번은 새것으로 바꿔요.",
+      "zh_HK": "A: 你通常幾耐換一次牙刷？<br/>B: 啲毛會開叉吖嘛，我大約一個月換一次新嘅。",
+      "fr": "A: À quelle fréquence remplaces-tu ta brosse à dents ?<br/>B: Comme les poils s'écartent, j'en change généralement une fois par mois."
     },
     "related": "はブラシ（授業の重要表現）"
   },
@@ -14845,13 +14845,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Chez 〜 / chez 〜"
     },
     "example": {
-      "ja": "A: すみません、この<ruby>近<rt>ちか</rt></ruby>くにんちはありますか？<br/>B: はい、この<ruby>道<rt>みち</rt></ruby>をまっすぐ<ruby>進<rt>すす</rt></ruby>むと<ruby>右手<rt>みぎて</rt></ruby>にんちが<ruby>見<rt>み</rt></ruby>えますよ。",
-      "en": "A: Excuse me, is there a んち near here?<br/>B: Yes, if you go straight down this street, you'll see んち on your right.",
-      "zh_TW": "A: Excuse me, is there a んち near here?<br/>B: Yes, if you go straight down this street, you'll see んち on your right.",
-      "zh_CN": "A: Excuse me, is there a んち near here?<br/>B: Yes, if you go straight down this street, you'll see んち on your right.",
-      "ko": "A: Excuse me, is there a んち near here?<br/>B: Yes, if you go straight down this street, you'll see んち on your right.",
-      "zh_HK": "A: Excuse me, is there a んち near here?<br/>B: Yes, if you go straight down this street, you'll see んち on your right.",
-      "fr": "A: Excuse me, is there a んち near here?<br/>B: Yes, if you go straight down this street, you'll see んち on your right."
+      "ja": "A: <ruby>今日<rt>きょう</rt></ruby>の<ruby>放課後<rt>ほうかご</rt></ruby>はどこで<ruby>遊<rt>あそ</rt></ruby>ぶ？<br/>B: たかしんちで<ruby>新<rt>あたら</rt></ruby>しいゲームをしようよ！",
+      "en": "A: Where are we hanging out after school today?<br/>B: Let's play the new video game at Takashi's place!",
+      "zh_TW": "A: 今天放學後要去哪裡玩？<br/>B: 去隆志家玩最新出的電動遊戲吧！",
+      "zh_CN": "A: 今天放学后要去哪里玩？<br/>B: 去隆志家玩最新出的游戏机吧！",
+      "ko": "A: 오늘 방과 후에 어디서 놀래?<br/>B: 타카시네 집에서 새 게임 하자!",
+      "zh_HK": "A: 今日放學去邊度玩好？<br/>B: 不如去隆志屋企打新嗰隻game啦！",
+      "fr": "A: Où est-ce qu'on se retrouve après les cours aujourd'hui ?<br/>B: Allons jouer au nouveau jeu vidéo chez Takashi !"
     },
     "related": "〜の家（授業の重要表現）"
   },
@@ -16069,13 +16069,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "la personne avec qui quelqu'un triche"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>浮気<rt>うわき</rt></ruby><ruby>相手<rt>あいて</rt></ruby>でも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>浮気<rt>うわき</rt></ruby><ruby>相手<rt>あいて</rt></ruby>のお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 浮気相手 for lunch?<br/>B: Sounds great! There's a delicious 浮気相手 shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 浮気相手 for lunch?<br/>B: Sounds great! There's a delicious 浮気相手 shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 浮気相手 for lunch?<br/>B: Sounds great! There's a delicious 浮気相手 shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 浮気相手 for lunch?<br/>B: Sounds great! There's a delicious 浮気相手 shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 浮気相手 for lunch?<br/>B: Sounds great! There's a delicious 浮気相手 shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 浮気相手 for lunch?<br/>B: Sounds great! There's a delicious 浮気相手 shop near the station, let's go."
+      "ja": "A: ドラマの<ruby>主人公<rt>しゅじんこう</rt></ruby>、<ruby>浮気<rt>うわき</rt></ruby><ruby>相手<rt>あいて</rt></ruby>と<ruby>密会<rt>みっかい</rt></ruby>しているところを<ruby>配偶<rt>はいぐう</rt></ruby><ruby>者<rt>しゃ</rt></ruby>に<ruby>見<rt>み</rt></ruby>つかったね。<br/>B: あんな<ruby>決定的<rt>けっていてき</rt></ruby>な<ruby>現場<rt>げんば</rt></ruby>を<ruby>見<rt>み</rt></ruby>られたら、もう<ruby>言い逃<rt>いいのが</rt></ruby>れできないよね。",
+      "en": "A: The main character in the drama got caught by their spouse meeting up with their affair partner.<br/>B: Getting caught red-handed like that, there's no making excuses anymore.",
+      "zh_TW": "A: 電視劇的主角跟外遇對象秘密約會時，被配偶抓個正著呢。<br/>B: 被看到那麼確鑿的現場，已經百口莫辯了吧。",
+      "zh_CN": "A: 电视剧的主角跟出轨对象秘密约会时，被配偶抓个正着呢。<br/>B: 被看到那么确凿的现场，已经百口莫辩了吧。",
+      "ko": "A: 드라마 주인공, 바람피우는 상대랑 밀회하다가 배우자한테 들켰네.<br/>B: 저런 결정적인 현장을 들켰으니 이젠 발뺌도 못 하겠어.",
+      "zh_HK": "A: 套劇個主角同小三幽會嗰陣，俾老婆/老公捉個正著呀。<br/>B: 俾人斷正睇到咁嘅場面，想兜都兜唔返啦。",
+      "fr": "A: Le personnage principal du feuilleton s'est fait surprendre par son conjoint en plein rendez-vous avec son amant.<br/>B: Pris la main dans le sac comme ça, impossible de trouver une excuse."
     },
     "related": "うわきあいて（授業の重要表現）"
   },
@@ -20269,13 +20269,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "les cheveux sont abîmés"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>髪<rt>かみ</rt></ruby>が<ruby>傷<rt>いた</rt></ruby>むの<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 髪が傷む hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 髪が傷む hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 髪が傷む hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 髪が傷む hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 髪が傷む hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 髪が傷む hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: <ruby>毎日<rt>まいにち</rt></ruby>のヘアアイロンのせいで、<ruby>毛<rt>け</rt></ruby><ruby>先<rt>さき</rt></ruby>がパサついて<ruby>髪<rt>かみ</rt></ruby>が<ruby>傷<rt>いた</rt></ruby>んできたよ。<br/>B: <ruby>洗髪<rt>せんぱつ</rt></ruby><ruby>後<rt>ご</rt></ruby>にしっかりヘアオイルをつけて<ruby>保<rt>ほ</rt></ruby><ruby>湿<rt>しめ</rt></ruby>した<ruby>方<rt>ほう</rt></ruby>がいいよ。",
+      "en": "A: Using a curling iron every day made my ends dry and damaged my hair.<br/>B: You should apply hair oil after washing your hair to keep it moisturized.",
+      "zh_TW": "A: 每天用離子夾燙頭髮，髮尾變得好乾燥、頭髮都受損了。<br/>B: 洗完頭之後最好好好塗抹護髮油來保濕喔。",
+      "zh_CN": "A: 每天用卷发棒烫头发，发尾变得好干燥、头发都受损了。<br/>B: 洗完头之后最好好好涂抹护发精油来保湿哦。",
+      "ko": "A: 매일 고데기를 썼더니 머리끝이 푸석해지고 머릿결이 많이 상했어.<br/>B: 머리 감고 나서 헤어 오일을 꼼꼼히 발라서 보습해 주는 게 좋아.",
+      "zh_HK": "A: 日日用直髮夾夾頭髮，髮尾乾晒傷晒頭髮。<br/>B: 洗完頭之後最好搽返啲護髮油保濕下。",
+      "fr": "A: À force d'utiliser le fer à lisser tous les jours, mes pointes sont sèches et mes cheveux sont abîmés.<br/>B: Tu devrais bien appliquer de l'huile capillaire après le lavage pour les hydrater."
     },
     "related": "かみがいたむ（授業の重要表現）"
   },
@@ -20821,13 +20821,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "génial / magnifique"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>偉大<rt>いだい</rt></ruby>なでも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>偉大<rt>いだい</rt></ruby>なのお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 偉大な for lunch?<br/>B: Sounds great! There's a delicious 偉大な shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 偉大な for lunch?<br/>B: Sounds great! There's a delicious 偉大な shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 偉大な for lunch?<br/>B: Sounds great! There's a delicious 偉大な shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 偉大な for lunch?<br/>B: Sounds great! There's a delicious 偉大な shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 偉大な for lunch?<br/>B: Sounds great! There's a delicious 偉大な shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 偉大な for lunch?<br/>B: Sounds great! There's a delicious 偉大な shop near the station, let's go."
+      "ja": "A: <ruby>彼<rt>かれ</rt></ruby>は<ruby>世界<rt>せかい</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>賞<rt>しょう</rt></ruby>を<ruby>受賞<rt>じゅしょう</rt></ruby>して、<ruby>科学<rt>かがく</rt></ruby>の<ruby>歴史<rt>れきし</rt></ruby>に<ruby>偉大<rt>いだい</rt></ruby>な<ruby>功績<rt>こうせき</rt></ruby>を<ruby>残<rt>のこ</rt></ruby>しましたね。<br/>B: <ruby>本当<rt>ほんとう</rt></ruby>ですね。<ruby>彼<rt>かれ</rt></ruby>のような<ruby>偉大<rt>いだい</rt></ruby>な<ruby>研究<rt>けんきゅう</rt></ruby><ruby>者<rt>しゃ</rt></ruby>は<ruby>滅多<rt>めった</rt></ruby>に<ruby>現<rt>あらわ</rt></ruby>れません。",
+      "en": "A: He won a global award and left a great achievement in scientific history.<br/>B: Absolutely. A great researcher like him rarely comes along.",
+      "zh_TW": "A: 他榮獲國際大獎，在科學史上留下了偉大的貢獻呢。<br/>B: 真的，像他這樣偉大的研究者十分難得一見。",
+      "zh_CN": "A: 他荣获国际大奖，在科学史上留下了伟大的贡献呢。<br/>B: 真的，像他这样伟大的研究者十分难得一见。",
+      "ko": "A: 그는 세계적인 상을 수상하며 과학 역사에 위대한 업적을 남겼네요.<br/>B: 맞습니다. 그처럼 위대한 연구자는 참 보기 드물죠.",
+      "zh_HK": "A: 佢攞咗個國際大獎，喺科學歷史上留低咗好偉大嘅成就。<br/>B: 真係好勁，好少會出到一個咁偉大嘅研究者。",
+      "fr": "A: Il a reçu un prix international et a laissé une contribution immense dans l'histoire de la science.<br/>B: C'est vrai. Un chercheur aussi remarquable est extrêmement rare."
     },
     "related": "いだいな（授業の重要表現）"
   },
@@ -22693,13 +22693,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "traiter quelqu'un / quelqu'un d'autre en payant"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>奢<rt>おご</rt></ruby>りでも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>奢<rt>おご</rt></ruby>りのお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 奢り for lunch?<br/>B: Sounds great! There's a delicious 奢り shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 奢り for lunch?<br/>B: Sounds great! There's a delicious 奢り shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 奢り for lunch?<br/>B: Sounds great! There's a delicious 奢り shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 奢り for lunch?<br/>B: Sounds great! There's a delicious 奢り shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 奢り for lunch?<br/>B: Sounds great! There's a delicious 奢り shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 奢り for lunch?<br/>B: Sounds great! There's a delicious 奢り shop near the station, let's go."
+      "ja": "A: <ruby>今日<rt>きょう</rt></ruby>のお<ruby>会計<rt>かいけい</rt></ruby>、<ruby>部長<rt>ぶちょう</rt></ruby>が<ruby>全部<rt>ぜんぶ</rt></ruby><ruby>払<rt>はら</rt></ruby>ってくださったよ！<br/>B: <ruby>本当<rt>ほんとう</rt></ruby>に？<ruby>部長<rt>ぶちょう</rt></ruby>の<ruby>奢<rt>おご</rt></ruby>りなら、<ruby>遠慮<rt>えんりょ</rt></ruby>せずごちそうになろう。",
+      "en": "A: The department manager paid for the entire bill today!<br/>B: Really? Since it's the manager's treat, let's gladly accept it.",
+      "zh_TW": "A: 今天的帳單，部長替大家全額買單了喔！<br/>B: 真的嗎？既然是部長請客，那我們就不客氣地接受囉。",
+      "zh_CN": "A: 今天的账单，部长替大家全额买单了哦！<br/>B: 真的吗？既然是部长请客，那我们就不客气地接受喽。",
+      "ko": "A: 오늘 계산 부장님이 전부 내주셨어!<br/>B: 정말? 부장님이 쏘시는 거라면 사양 말고 맛있게 얻어먹자.",
+      "zh_HK": "A: 今日張單部長同我哋找晒數呀！<br/>B: 真係？既然部長請客，我哋就唔客氣喇。",
+      "fr": "A: Le chef de service a payé toute l'addition aujourd'hui !<br/>B: Vraiment ? Comme c'est la tournée du chef, profitons-en avec plaisir."
     },
     "related": "おごり（授業の重要表現）"
   },
@@ -22981,13 +22981,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "intoxication alimentaire"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>食中毒<rt>しょくちゅうどく</rt></ruby>でも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>食中毒<rt>しょくちゅうどく</rt></ruby>のお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 食中毒 for lunch?<br/>B: Sounds great! There's a delicious 食中毒 shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 食中毒 for lunch?<br/>B: Sounds great! There's a delicious 食中毒 shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 食中毒 for lunch?<br/>B: Sounds great! There's a delicious 食中毒 shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 食中毒 for lunch?<br/>B: Sounds great! There's a delicious 食中毒 shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 食中毒 for lunch?<br/>B: Sounds great! There's a delicious 食中毒 shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 食中毒 for lunch?<br/>B: Sounds great! There's a delicious 食中毒 shop near the station, let's go."
+      "ja": "A: <ruby>夏場<rt>なつば</rt></ruby>に<ruby>作<rt>つく</rt></ruby>り<ruby>置<rt>お</rt></ruby>きしたおかずを<ruby>常温<rt>じょうおん</rt></ruby>で<ruby>放置<rt>ほうち</rt></ruby>するのは<ruby>危険<rt>きけん</rt></ruby>ですよ。<br/>B: そうですね。<ruby>細菌<rt>さいきん</rt></ruby>が<ruby>繁殖<rt>はんしょく</rt></ruby>して<ruby>食中毒<rt>しょくちゅうどく</rt></ruby>になると<ruby>大変<rt>たいへん</rt></ruby>ですからね。",
+      "en": "A: Leaving batch-cooked dishes at room temperature in the summer is dangerous.<br/>B: That's right. If bacteria multiply and cause food poisoning, it'll be terrible.",
+      "zh_TW": "A: 夏天把做好的常備菜放在室溫下不管是很危險的喔。<br/>B: 是啊，萬一細菌滋生引起食物中毒就很麻煩了。",
+      "zh_CN": "A: 夏天把做好的常备菜放在室温下不管是很危险的哦。<br/>B: 是啊，万一细菌滋生引起食物中毒就很麻烦了。",
+      "ko": "A: 여름철에 미리 만든 반찬을 상온에 방치하는 건 위험해요.<br/>B: 맞아요. 세균이 번식해서 식중독에 걸리면 큰일이니까요.",
+      "zh_HK": "A: 夏天將煮好嘅餸擺喺室溫唔理係好危險㗎。<br/>B: 係呀，滋生細菌搞到食物中毒就大件事。",
+      "fr": "A: Laisser des plats cuisinés à température ambiante en été est dangereux.<br/>B: En effet. Si des bactéries prolifèrent et causent une intoxication alimentaire, c'est grave."
     },
     "related": "しょくちゅうどく（授業の重要表現）"
   },
@@ -23149,13 +23149,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "voix rauque à force de boire / voix de buveur"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>酒焼<rt>さかや</rt></ruby>けでも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>酒焼<rt>さかや</rt></ruby>けのお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 酒焼け for lunch?<br/>B: Sounds great! There's a delicious 酒焼け shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 酒焼け for lunch?<br/>B: Sounds great! There's a delicious 酒焼け shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 酒焼け for lunch?<br/>B: Sounds great! There's a delicious 酒焼け shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 酒焼け for lunch?<br/>B: Sounds great! There's a delicious 酒焼け shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 酒焼け for lunch?<br/>B: Sounds great! There's a delicious 酒焼け shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 酒焼け for lunch?<br/>B: Sounds great! There's a delicious 酒焼け shop near the station, let's go."
+      "ja": "A: その<ruby>居酒屋<rt>いざかや</rt></ruby>のママさん、<ruby>声<rt>こえ</rt></ruby>がすごくハスキーで<ruby>味<rt>あじ</rt></ruby>があるね。<br/>B: <ruby>長年<rt>ながねん</rt></ruby>お<ruby>酒<rt>さけ</rt></ruby>を<ruby>飲<rt>の</rt></ruby>んでタバコも<ruby>吸<rt>す</rt></ruby>っていたから、<ruby>酒焼<rt>さけや</rt></ruby>けしているんだって。",
+      "en": "A: The owner lady of that izakaya has such a deep, raspy voice with a lot of character.<br/>B: She said her voice got husky from drinking and smoking over many years.",
+      "zh_TW": "A: 那家居酒屋的老闆娘，聲音沙啞得很有韻味呢。<br/>B: 聽說是因為多年來常喝酒又抽菸，把嗓子喝沙啞了。",
+      "zh_CN": "A: 那家居酒屋的老板娘，声音沙哑得很有韵味呢。<br/>B: 听说是因为多年来常喝酒又抽烟，把嗓子喝沙哑了。",
+      "ko": "A: 그 이자카야 여사장님, 목소리가 아주 허스키하고 매력 있네.<br/>B: 오랜 세월 술 마시고 담배도 피우셔서 술 때문에 목이 쉰 거라고 하시더라.",
+      "zh_HK": "A: 嗰間居酒屋個老闆娘，把聲沙沙地幾有味道喎。<br/>B: 聽講佢飲咗咁多年酒又食煙，把聲先搞到咁沙啞。",
+      "fr": "A: La patronne de cet izakaya a une voix rauque qui ne manque pas de charme.<br/>B: Elle dit que c'est à cause de l'alcool et de la cigarette consommés pendant de longues années."
     },
     "related": "さけやけ（授業の重要表現）"
   },
@@ -23197,13 +23197,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "vouloir vivre (dans un endroit) / vouloir résider"
     },
     "example": {
-      "ja": "A: <ruby>将来<rt>しょうらい</rt></ruby>の<ruby>夢<rt>ゆめ</rt></ruby>や<ruby>目標<rt>もくひょう</rt></ruby>について<ruby>聞<rt>き</rt></ruby>かせてくれますか？<br/>B: はい、いつか<ruby>日本<rt>にっぽん</rt></ruby>で<ruby>自分<rt>じぶん</rt></ruby>の<ruby>力<rt>ちから</rt></ruby>で<ruby>住<rt>す</rt></ruby>みたいと<ruby>思<rt>おも</rt></ruby>っています。",
-      "en": "A: Could you tell me about your future dreams and goals?<br/>B: Yes, someday in Japan, I hope to 住みたい on my own.",
-      "zh_TW": "A: Could you tell me about your future dreams and goals?<br/>B: Yes, someday in Japan, I hope to 住みたい on my own.",
-      "zh_CN": "A: Could you tell me about your future dreams and goals?<br/>B: Yes, someday in Japan, I hope to 住みたい on my own.",
-      "ko": "A: Could you tell me about your future dreams and goals?<br/>B: Yes, someday in Japan, I hope to 住みたい on my own.",
-      "zh_HK": "A: Could you tell me about your future dreams and goals?<br/>B: Yes, someday in Japan, I hope to 住みたい on my own.",
-      "fr": "A: Could you tell me about your future dreams and goals?<br/>B: Yes, someday in Japan, I hope to 住みたい on my own."
+      "ja": "A: <ruby>将来<rt>しょうらい</rt></ruby><ruby>日本<rt>にっぽん</rt></ruby>で<ruby>暮<rt>く</rt></ruby>らすなら、どんな<ruby>街<rt>まち</rt></ruby>に<ruby>住<rt>す</rt></ruby>みたいですか？<br/>B: <ruby>交通<rt>こうつう</rt></ruby>が<ruby>便利<rt>べんり</rt></ruby>で<ruby>静<rt>しず</rt></ruby>かな<ruby>住宅<rt>じゅうたく</rt></ruby><ruby>街<rt>がい</rt></ruby>に<ruby>住<rt>す</rt></ruby>みたいです。",
+      "en": "A: If you live in Japan in the future, what kind of town would you like to live in?<br/>B: I'd like to live in a quiet residential area with convenient transportation.",
+      "zh_TW": "A: 將來如果在日本生活，你想住在什麼樣的城鎮？<br/>B: 我想住在交通方便又安靜的住宅區。",
+      "zh_CN": "A: 将来如果在日本生活，你想住在什么样的城镇？<br/>B: 我想住在交通方便又安静的住宅区。",
+      "ko": "A: 장래에 일본에서 산다면 어떤 동네에 살고 싶으세요?<br/>B: 교통이 편리하고 조용한 주택가에 살고 싶어요.",
+      "zh_HK": "A: 第時如果喺日本住，你想住喺點樣嘅市鎮？<br/>B: 我想住喺交通方便又安靜嘅住宅區。",
+      "fr": "A: Si tu venais à vivre au Japon à l'avenir, dans quelle ville aimerais-tu habiter ?<br/>B: J'aimerais habiter dans un quartier résidentiel calme et bien desservi par les transports."
     },
     "related": "すみたい（授業の重要表現）"
   },
@@ -25189,13 +25189,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Affiliés / sociétés affiliées / société affiliée / société liée"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>の<ruby>系列<rt>けいれつ</rt></ruby><ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>状況<rt>じょうきょう</rt></ruby>はいかがですか？<ruby>順調<rt>じゅんちょう</rt></ruby>ですか？<br/>B: はい、<ruby>同僚<rt>どうりょう</rt></ruby>と<ruby>協力<rt>きょうりょく</rt></ruby>しながら<ruby>系列<rt>けいれつ</rt></ruby><ruby>会社<rt>かいしゃ</rt></ruby>に<ruby>真面目<rt>まじめ</rt></ruby>に<ruby>取り組<rt>とりく</rt></ruby>んでいます。",
-      "en": "A: How is the situation with your 系列会社 lately? Going well?<br/>B: Yes, I'm working diligently on 系列会社 in cooperation with colleagues.",
-      "zh_TW": "A: How is the situation with your 系列会社 lately? Going well?<br/>B: Yes, I'm working diligently on 系列会社 in cooperation with colleagues.",
-      "zh_CN": "A: How is the situation with your 系列会社 lately? Going well?<br/>B: Yes, I'm working diligently on 系列会社 in cooperation with colleagues.",
-      "ko": "A: How is the situation with your 系列会社 lately? Going well?<br/>B: Yes, I'm working diligently on 系列会社 in cooperation with colleagues.",
-      "zh_HK": "A: How is the situation with your 系列会社 lately? Going well?<br/>B: Yes, I'm working diligently on 系列会社 in cooperation with colleagues.",
-      "fr": "A: How is the situation with your 系列会社 lately? Going well?<br/>B: Yes, I'm working diligently on 系列会社 in cooperation with colleagues."
+      "ja": "A: <ruby>来月<rt>らいげつ</rt></ruby>から<ruby>系列<rt>けいれつ</rt></ruby><ruby>会社<rt>かいしゃ</rt></ruby>のITサポート<ruby>部門<rt>ぶもん</rt></ruby>へ<ruby>異動<rt>いどう</rt></ruby>することになりました。<br/>B: <ruby>同<rt>おな</rt></ruby>じグループ<ruby>内<rt>ない</rt></ruby>でも<ruby>業務<rt>ぎょうむ</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>がガラリと<ruby>変<rt>か</rt></ruby>わるから、<ruby>頑張<rt>がんば</rt></ruby>ってくださいね。",
+      "en": "A: Starting next month, I'm being transferred to an affiliate company's IT support department.<br/>B: Even within the same corporate group, the work will change completely, so best of luck!",
+      "zh_TW": "A: 下個月開始我要調動到關聯公司的IT支援部門了。<br/>B: 即使在同一個集團內，工作內容也會徹底不同，請加油喔！",
+      "zh_CN": "A: 下个月开始我要调动到关联公司的IT支持部门了。<br/>B: 即使在同一个集团内，工作内容也会彻底不同，请加油哦！",
+      "ko": "A: 다음 달부터 계열사의 IT 지원 부서로 이동하게 되었습니다.<br/>B: 같은 그룹 내라도 업무 내용이 완전히 달라지니 힘내세요.",
+      "zh_HK": "A: 下個月開始我要調去關聯公司嘅IT支援部喇。<br/>B: 就算喺同一個集團入面，工作內容都會好唔同，加油呀！",
+      "fr": "A: À partir du mois prochain, je suis muté au service informatique d'une société affiliée.<br/>B: Même au sein d'un même groupe, les missions seront très différentes, bon courage !"
     },
     "related": "けいれつがいしゃ（授業の重要表現）"
   },
@@ -25285,13 +25285,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Base clients / base clients / base clients / type de clientèle"
     },
     "example": {
-      "ja": "A: <ruby>現場<rt>げんば</rt></ruby>で<ruby>頼<rt>たよ</rt></ruby>りになる<ruby>客層<rt>きゃくそう</rt></ruby>がいると<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>心強<rt>こころづよ</rt></ruby>いですね。<br/>B: ええ、いつも<ruby>親切<rt>しんせつ</rt></ruby>で<ruby>経験<rt>けいけん</rt></ruby><ruby>豊富<rt>ほうふ</rt></ruby>な<ruby>素晴<rt>すば</rt></ruby>らしい<ruby>客層<rt>きゃくそう</rt></ruby>ですよ。",
-      "en": "A: Having a dependable 客層 on site is truly reassuring.<br/>B: Yes, they are a wonderful 客層 who is always kind and experienced.",
-      "zh_TW": "A: Having a dependable 客層 on site is truly reassuring.<br/>B: Yes, they are a wonderful 客層 who is always kind and experienced.",
-      "zh_CN": "A: Having a dependable 客層 on site is truly reassuring.<br/>B: Yes, they are a wonderful 客層 who is always kind and experienced.",
-      "ko": "A: Having a dependable 客層 on site is truly reassuring.<br/>B: Yes, they are a wonderful 客層 who is always kind and experienced.",
-      "zh_HK": "A: Having a dependable 客層 on site is truly reassuring.<br/>B: Yes, they are a wonderful 客層 who is always kind and experienced.",
-      "fr": "A: Having a dependable 客層 on site is truly reassuring.<br/>B: Yes, they are a wonderful 客層 who is always kind and experienced."
+      "ja": "A: このカフェは<ruby>落ち着<rt>おちつ</rt></ruby>いた<ruby>雰囲気<rt>ふんいき</rt></ruby>で<ruby>居心地<rt>いごこち</rt></ruby>がいいですね。<br/>B: ええ、<ruby>静<rt>しず</rt></ruby>かに<ruby>読書<rt>どくしょ</rt></ruby>や<ruby>仕事<rt>しごと</rt></ruby>をする<ruby>大人<rt>おとな</rt></ruby>の<ruby>客層<rt>きゃくそう</rt></ruby>が<ruby>多<rt>おお</rt></ruby>いのが<ruby>特徴<rt>とくちょう</rt></ruby>です。",
+      "en": "A: This café has a relaxing atmosphere and is very comfortable.<br/>B: Yes, its customer base mainly consists of adults who read or work quietly.",
+      "zh_TW": "A: 這家咖啡廳氛圍沉穩，待起來很舒服呢。<br/>B: 是啊，安靜閱讀或工作的大人客群居多是這裡的特色。",
+      "zh_CN": "A: 这家咖啡厅氛围沉稳，待起来很舒服呢。<br/>B: 是啊，安静阅读或工作的大人客群居多是这里的特色。",
+      "ko": "A: 이 카페는 차분한 분위기라 참 아늑하네요.<br/>B: 네, 조용히 독서나 업무를 하는 어른 고객층이 많은 게 특징이에요.",
+      "zh_HK": "A: 呢間咖啡店環境好舒服安靜喎。<br/>B: 係呀，呢度嘅客層多數係靜靜睇書或者做嘢嘅成年人。",
+      "fr": "A: Ce café dégage une ambiance calme et chaleureuse.<br/>B: Oui, sa clientèle se compose principalement d'adultes qui viennent lire ou travailler dans le calme."
     },
     "related": "きゃくそう（授業の重要表現）"
   },
@@ -25477,13 +25477,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "responsable / responsable / personne de contact"
     },
     "example": {
-      "ja": "A: <ruby>現場<rt>げんば</rt></ruby>で<ruby>頼<rt>たよ</rt></ruby>りになる<ruby>担当<rt>たんとう</rt></ruby><ruby>者<rt>しゃ</rt></ruby>がいると<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>心強<rt>こころづよ</rt></ruby>いですね。<br/>B: ええ、いつも<ruby>親切<rt>しんせつ</rt></ruby>で<ruby>経験<rt>けいけん</rt></ruby><ruby>豊富<rt>ほうふ</rt></ruby>な<ruby>素晴<rt>すば</rt></ruby>らしい<ruby>担当<rt>たんとう</rt></ruby><ruby>者<rt>しゃ</rt></ruby>ですよ。",
-      "en": "A: Having a dependable 担当者 on site is truly reassuring.<br/>B: Yes, they are a wonderful 担当者 who is always kind and experienced.",
-      "zh_TW": "A: Having a dependable 担当者 on site is truly reassuring.<br/>B: Yes, they are a wonderful 担当者 who is always kind and experienced.",
-      "zh_CN": "A: Having a dependable 担当者 on site is truly reassuring.<br/>B: Yes, they are a wonderful 担当者 who is always kind and experienced.",
-      "ko": "A: Having a dependable 担当者 on site is truly reassuring.<br/>B: Yes, they are a wonderful 担当者 who is always kind and experienced.",
-      "zh_HK": "A: Having a dependable 担当者 on site is truly reassuring.<br/>B: Yes, they are a wonderful 担当者 who is always kind and experienced.",
-      "fr": "A: Having a dependable 担当者 on site is truly reassuring.<br/>B: Yes, they are a wonderful 担当者 who is always kind and experienced."
+      "ja": "A: お<ruby>電話<rt>でんわ</rt></ruby>ありがとうございます。<ruby>契約<rt>けいやく</rt></ruby>の<ruby>件<rt>けん</rt></ruby>についてご<ruby>相談<rt>そうだん</rt></ruby>でしょうか？<br/>B: はい、<ruby>担当<rt>たんとう</rt></ruby><ruby>者<rt>しゃ</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>におつなぎいただけますでしょうか。",
+      "en": "A: Thank you for calling. Are you calling regarding the contract?<br/>B: Yes, could you please connect me to the person in charge?",
+      "zh_TW": "A: 謝謝您的來電，您是要洽詢合約相關事宜嗎？<br/>B: 是的，可以請您幫我轉接給業務負責人嗎？",
+      "zh_CN": "A: 谢谢您的来电，您是要洽询合同相关事宜吗？<br/>B: 是的，可以请您帮我转接给业务负责人吗？",
+      "ko": "A: 전화 주셔서 감사합니다. 계약 관련 상담이신가요?<br/>B: 네, 담당자분께 연결해 주실 수 있을까요?",
+      "zh_HK": "A: 多謝你嘅電話，請問係咪想傾合約嘅事宜？<br/>B: 係呀，麻煩你幫我駁去負責人度。",
+      "fr": "A: Merci de votre appel. Souhaitez-vous des renseignements concernant le contrat ?<br/>B: Oui, pourriez-vous s'il vous plaît me passer la personne en charge du dossier ?"
     },
     "related": "たんとうしゃ（授業の重要表現）"
   },
@@ -25765,7 +25765,7 @@ window.CLASS_VOCAB_DATA = [
       "fr": "quelques fois / plusieurs fois / quelques fois / plusieurs fois"
     },
     "example": {
-      "ja": "A: <ruby>京都<rt>きょうと</rt></ruby>には<ruby>今<rt>いま</rt></ruby>までに<ruby>何<rt>なに</rt></ruby><ruby>回<rt>かい</rt></ruby>か<ruby>行<rt>おこな</rt></ruby>ったことがありますか？<br/>B: はい、<ruby>修学旅行<rt>しゅうがくりょこう</rt></ruby>と<ruby>観光<rt>かんこう</rt></ruby>で<ruby>何<rt>なに</rt></ruby><ruby>回<rt>かい</rt></ruby>か<ruby>訪<rt>おとず</rt></ruby>れましたよ。",
+      "ja": "A: <ruby>京都<rt>きょうと</rt></ruby>には<ruby>今<rt>いま</rt></ruby>までに<ruby>何<rt>なに</rt></ruby><ruby>回<rt>かい</rt></ruby>か<ruby>行<rt>い</rt></ruby>ったことがありますか？<br/>B: はい、<ruby>修学旅行<rt>しゅうがくりょこう</rt></ruby>と<ruby>観光<rt>かんこう</rt></ruby>で<ruby>何<rt>なに</rt></ruby><ruby>回<rt>かい</rt></ruby>か<ruby>訪<rt>おとず</rt></ruby>れましたよ。",
       "en": "A: Have you been to Kyoto several times so far?<br/>B: Yes, I visited a few times on school trips and vacations.",
       "zh_TW": "A: Have you been to Kyoto several times so far?<br/>B: Yes, I visited a few times on school trips and vacations.",
       "zh_CN": "A: Have you been to Kyoto several times so far?<br/>B: Yes, I visited a few times on school trips and vacations.",
@@ -25837,13 +25837,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Affiliés / société affiliée / société liée"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>の<ruby>系列<rt>けいれつ</rt></ruby><ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>状況<rt>じょうきょう</rt></ruby>はいかがですか？<ruby>順調<rt>じゅんちょう</rt></ruby>ですか？<br/>B: はい、<ruby>同僚<rt>どうりょう</rt></ruby>と<ruby>協力<rt>きょうりょく</rt></ruby>しながら<ruby>系列<rt>けいれつ</rt></ruby><ruby>会社<rt>かいしゃ</rt></ruby>に<ruby>真面目<rt>まじめ</rt></ruby>に<ruby>取り組<rt>とりく</rt></ruby>んでいます。",
-      "en": "A: How is the situation with your 系列会社 lately? Going well?<br/>B: Yes, I'm working diligently on 系列会社 in cooperation with colleagues.",
-      "zh_TW": "A: How is the situation with your 系列会社 lately? Going well?<br/>B: Yes, I'm working diligently on 系列会社 in cooperation with colleagues.",
-      "zh_CN": "A: How is the situation with your 系列会社 lately? Going well?<br/>B: Yes, I'm working diligently on 系列会社 in cooperation with colleagues.",
-      "ko": "A: How is the situation with your 系列会社 lately? Going well?<br/>B: Yes, I'm working diligently on 系列会社 in cooperation with colleagues.",
-      "zh_HK": "A: How is the situation with your 系列会社 lately? Going well?<br/>B: Yes, I'm working diligently on 系列会社 in cooperation with colleagues.",
-      "fr": "A: How is the situation with your 系列会社 lately? Going well?<br/>B: Yes, I'm working diligently on 系列会社 in cooperation with colleagues."
+      "ja": "A: この<ruby>製品<rt>せいひん</rt></ruby>の<ruby>部品<rt>ぶひん</rt></ruby>は<ruby>海外<rt>かいがい</rt></ruby>から<ruby>仕入<rt>しい</rt></ruby>れているのですか？<br/>B: いいえ、<ruby>国内<rt>こくない</rt></ruby>にある<ruby>系列<rt>けいれつ</rt></ruby><ruby>会社<rt>かいしゃ</rt></ruby>で<ruby>一括<rt>いっかつ</rt></ruby>して<ruby>製造<rt>せいぞう</rt></ruby>しています。",
+      "en": "A: Are the components for this product procured from abroad?<br/>B: No, they are manufactured collectively by an affiliated company domestically.",
+      "zh_TW": "A: 這項產品的零件是從國外進口的嗎？<br/>B: 不是，是由國內的關聯公司統一生產製造的。",
+      "zh_CN": "A: 这项产品的零件是从国外进口的吗？<br/>B: 不是，是由国内的关联公司统一定制生产的。",
+      "ko": "A: 이 제품 부품은 해외에서 들여오나요?<br/>B: 아니요, 국내에 있는 계열사에서 일괄 생산하고 있습니다.",
+      "zh_HK": "A: 呢件產品啲零件係咪喺外國買返嚟㗎？<br/>B: 唔係，係由日本國內嘅關聯公司一站式生產製造。",
+      "fr": "A: Les pièces de ce produit proviennent-elles de l'étranger ?<br/>B: Non, elles sont toutes fabriquées par une société affiliée sur le territoire national."
     },
     "related": "けいれつがいしゃ（授業の重要表現）"
   },
@@ -25933,13 +25933,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Clientèle / clientèle / type de clientèle"
     },
     "example": {
-      "ja": "A: <ruby>現場<rt>げんば</rt></ruby>で<ruby>頼<rt>たよ</rt></ruby>りになる<ruby>客層<rt>きゃくそう</rt></ruby>がいると<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>心強<rt>こころづよ</rt></ruby>いですね。<br/>B: ええ、いつも<ruby>親切<rt>しんせつ</rt></ruby>で<ruby>経験<rt>けいけん</rt></ruby><ruby>豊富<rt>ほうふ</rt></ruby>な<ruby>素晴<rt>すば</rt></ruby>らしい<ruby>客層<rt>きゃくそう</rt></ruby>ですよ。",
-      "en": "A: Having a dependable 客層 on site is truly reassuring.<br/>B: Yes, they are a wonderful 客層 who is always kind and experienced.",
-      "zh_TW": "A: Having a dependable 客層 on site is truly reassuring.<br/>B: Yes, they are a wonderful 客層 who is always kind and experienced.",
-      "zh_CN": "A: Having a dependable 客層 on site is truly reassuring.<br/>B: Yes, they are a wonderful 客層 who is always kind and experienced.",
-      "ko": "A: Having a dependable 客層 on site is truly reassuring.<br/>B: Yes, they are a wonderful 客層 who is always kind and experienced.",
-      "zh_HK": "A: Having a dependable 客層 on site is truly reassuring.<br/>B: Yes, they are a wonderful 客層 who is always kind and experienced.",
-      "fr": "A: Having a dependable 客層 on site is truly reassuring.<br/>B: Yes, they are a wonderful 客層 who is always kind and experienced."
+      "ja": "A: <ruby>新<rt>しん</rt></ruby><ruby>店舗<rt>てんぽ</rt></ruby>のオープン<ruby>場所<rt>ばしょ</rt></ruby>はどのあたりを<ruby>検討<rt>けんとう</rt></ruby>していますか？<br/>B: <ruby>若<rt>わか</rt></ruby>い<ruby>客層<rt>きゃくそう</rt></ruby>を<ruby>取り込<rt>とりこ</rt></ruby>みたいので、<ruby>大学<rt>だいがく</rt></ruby>や<ruby>専門<rt>せんもん</rt></ruby><ruby>学校<rt>がっこう</rt></ruby>の<ruby>近<rt>ちか</rt></ruby>くを<ruby>検討<rt>けんとう</rt></ruby>しています。",
+      "en": "A: Around where are you considering opening the new store?<br/>B: We want to attract a younger customer base, so we're looking near universities and vocational schools.",
+      "zh_TW": "A: 新分店的地點你們考慮開在哪個區域？<br/>B: 因為想吸引年輕客群，所以正考慮選在大學或專門學校附近。",
+      "zh_CN": "A: 新分店的地点你们考虑开在哪个区域？<br/>B: 因为想吸引年轻客群，所以正考虑选在大学或专门学校附近。",
+      "ko": "A: 새 매장 오픈 장소는 어디 쪽으로 검토하고 계신가요?<br/>B: 젊은 고객층을 끌어들이고 싶어서 대학교나 전문학교 근처를 보고 있습니다.",
+      "zh_HK": "A: 新舖頭諗住喺邊個位開呀？<br/>B: 我哋想做後生仔客層嘅生意，所以考慮緊大學同大專院校附近。",
+      "fr": "A: Où envisagez-vous d'implanter la nouvelle boutique ?<br/>B: Comme nous voulons attirer une jeune clientèle, nous ciblons les abords des universités et des écoles."
     },
     "related": "きゃくそう（授業の重要表現）"
   },
@@ -26101,13 +26101,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Dents de Buck / bouche saillante / dents de Buck / dents saillantes"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>出っ歯<rt>でっぱ</rt></ruby>の<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 出っ歯 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 出っ歯 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 出っ歯 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 出っ歯 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 出っ歯 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 出っ歯 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: <ruby>子供<rt>こども</rt></ruby>の<ruby>頃<rt>ころ</rt></ruby>から<ruby>出っ歯<rt>でっぱ</rt></ruby>がずっとコンプレックスだったんだ。<br/>B: そうだったんだ。<ruby>最近<rt>さいきん</rt></ruby>は<ruby>目立<rt>めだ</rt></ruby>たないマウスピース<ruby>矯正<rt>きょうせい</rt></ruby>もあるみたいだよ。",
+      "en": "A: Ever since childhood, I was insecure about my protruding teeth.<br/>B: Really? Nowadays there are invisible aligners available, so you could look into that.",
+      "zh_TW": "A: 我從小就一直因為暴牙而感到自卑。<br/>B: 原來是這樣啊。最近好像有那種不顯眼的透明隱形牙套可以矯正喔。",
+      "zh_CN": "A: 我从小就一直因为龅牙而感到自卑。<br/>B: 原来是这样啊。最近好像有那种不显眼的透明隐形牙套可以矫正哦。",
+      "ko": "A: 어릴 때부터 뻐드렁니가 늘 콤플렉스였어.<br/>B: 그랬구나. 요즘은 눈에 잘 안 띄는 투명 교정 장치도 있다고 하더라.",
+      "zh_HK": "A: 我由細到大都因為哨牙好介意、好冇自信。<br/>B: 係咩？最近好似有啲好隱形嘅透明牙箍可以矯正㗎喎。",
+      "fr": "A: Depuis tout petit, mes dents en avant ont toujours été un vrai complexe pour moi.<br/>B: Ah bon ? De nos jours, il existe des gouttières transparentes et discrètes pour corriger ça."
     },
     "related": "でっば（授業の重要表現）"
   },
@@ -26365,13 +26365,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "épingle à cheveux / épingle à cheveux / pince à cheveux / épingle à cheveux"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>髪<rt>かみ</rt></ruby><ruby>留<rt>と</rt></ruby>めの<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 髪留め hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 髪留め hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 髪留め hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 髪留め hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 髪留め hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 髪留め hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: その<ruby>花<rt>はな</rt></ruby>の<ruby>飾<rt>かざ</rt></ruby>りがついた<ruby>髪<rt>かみ</rt></ruby><ruby>留<rt>と</rt></ruby>め、とても<ruby>可愛<rt>かわい</rt></ruby>いね！<br/>B: ありがとう！<ruby>前髪<rt>まえがみ</rt></ruby>が<ruby>目<rt>め</rt></ruby>にかかるから<ruby>留<rt>と</rt></ruby>めているの。",
+      "en": "A: That hair clip with the flower decoration is so pretty!<br/>B: Thank you! My bangs were getting in my eyes, so I clipped them back.",
+      "zh_TW": "A: 那個帶有花朵裝飾的髮夾好可愛喔！<br/>B: 謝謝！因為瀏海會遮到眼睛，所以把它夾起來了。",
+      "zh_CN": "A: 那个带有花朵装饰的发夹好可爱哦！<br/>B: 谢谢！因为刘海会遮到眼睛，所以把它夹起来了。",
+      "ko": "A: 꽃 장식이 달린 그 머리핀, 정말 귀엽다!<br/>B: 고마워! 앞머리가 눈을 찔러서 꽂아 둔 거야.",
+      "zh_HK": "A: 你個花花髮夾好靚好得意喎！<br/>B: 多謝！啲前陰成日遮住對眼，所以夾起咗佢。",
+      "fr": "A: Cette barrette ornée d'une fleur est adorable !<br/>B: Merci ! Ma frange me tombait dans les yeux, alors je l'ai attachée."
     },
     "related": "かみどめ（授業の重要表現）"
   },
@@ -26509,13 +26509,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "cheveux noirs / cheveux noirs / cheveux noirs"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>黒髪<rt>くろかみ</rt></ruby>の<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 黒髪 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 黒髪 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 黒髪 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 黒髪 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 黒髪 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 黒髪 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: <ruby>就職<rt>しゅうしょく</rt></ruby><ruby>活動<rt>かつどう</rt></ruby>が<ruby>始<rt>はじ</rt></ruby>まるから、<ruby>髪<rt>かみ</rt></ruby><ruby>色<rt>しょく</rt></ruby>を<ruby>戻<rt>もど</rt></ruby>さなきゃいけないんだ。<br/>B: <ruby>黒髪<rt>くろかみ</rt></ruby>も<ruby>落ち着<rt>おちつ</rt></ruby>いた<ruby>印象<rt>いんしょう</rt></ruby>に<ruby>見<rt>み</rt></ruby>えて<ruby>清潔<rt>せいけつ</rt></ruby><ruby>感<rt>かん</rt></ruby>があるよ。",
+      "en": "A: Job hunting is starting, so I need to dye my hair back to normal.<br/>B: Black hair gives a calm and clean impression too, so it looks great.",
+      "zh_TW": "A: 求職面試要開始了，我必須把頭髮染回原本的顏色。<br/>B: 黑髮看起來沉穩又乾淨俐落，也很不錯啊。",
+      "zh_CN": "A: 求职面试要开始了，我必须把头发染回原本的颜色。<br/>B: 黑发看起来沉稳又干净利落，也很不错啊。",
+      "ko": "A: 취업 준비가 시작되니까 머리 색을 원래대로 되돌려야 해.<br/>B: 흑발도 차분해 보이고 깔끔한 인상을 줘서 보기 좋아.",
+      "zh_HK": "A: 就嚟要見工面試，我要將啲頭髮染返黑先得。<br/>B: 黑髮睇落成熟穩重又有乾淨感，都好啱你呀。",
+      "fr": "A: La recherche d'emploi commence, je dois refaire ma couleur d'origine.<br/>B: Les cheveux noirs donnent un air sobre et soigné, ça te va très bien."
     },
     "related": "くろかみ（授業の重要表現）"
   },
@@ -26581,13 +26581,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "avoir des traits nets / avoir des traits du visage définis"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>彫<rt>ほ</rt></ruby>りが<ruby>深<rt>ふか</rt></ruby>いでも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>彫<rt>ほ</rt></ruby>りが<ruby>深<rt>ふか</rt></ruby>いのお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 彫りが深い for lunch?<br/>B: Sounds great! There's a delicious 彫りが深い shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 彫りが深い for lunch?<br/>B: Sounds great! There's a delicious 彫りが深い shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 彫りが深い for lunch?<br/>B: Sounds great! There's a delicious 彫りが深い shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 彫りが深い for lunch?<br/>B: Sounds great! There's a delicious 彫りが深い shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 彫りが深い for lunch?<br/>B: Sounds great! There's a delicious 彫りが深い shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 彫りが深い for lunch?<br/>B: Sounds great! There's a delicious 彫りが深い shop near the station, let's go."
+      "ja": "A: あの<ruby>俳優<rt>はいゆう</rt></ruby>さん、<ruby>目元<rt>めもと</rt></ruby>がキリッとしていて<ruby>彫<rt>ほ</rt></ruby>りが<ruby>深<rt>ふか</rt></ruby>い<ruby>顔立<rt>かおだ</rt></ruby>ちだね。<br/>B: うん、<ruby>横顔<rt>よこがお</rt></ruby>のシルエットもすごく<ruby>立体<rt>りったい</rt></ruby><ruby>感<rt>かん</rt></ruby>があってかっこいいよね。",
+      "en": "A: That actor has sharp eyes and very well-defined facial features.<br/>B: Yeah, his side profile is so sculpted and handsome too.",
+      "zh_TW": "A: 那位演員眼神深邃，五官非常立體深邃呢。<br/>B: 嗯，側臉的輪廓也很有立體感，超級帥氣的。",
+      "zh_CN": "A: 那位演员眼神深邃，五官非常立体深邃呢。<br/>B: 嗯，侧脸的轮廓也很有立体感，超级帅气的。",
+      "ko": "A: 저 배우는 눈매가 또렷하고 이목구비가 뚜렷하네.<br/>B: 응, 옆모습 실루엣도 입체적이고 정말 멋있어.",
+      "zh_HK": "A: 個男演員眼神好利，五官好立體深邃喎。<br/>B: 係呀，個側臉輪廓好有線條，真係好型。",
+      "fr": "A: Cet acteur a un regard perçant et des traits de visage très sculptés.<br/>B: Oui, son profil a tellement de relief, il est très séduisant."
     },
     "related": "ほりがふかい（授業の重要表現）"
   },
@@ -26869,13 +26869,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "aller voir une maison / regarder à l'intérieur / voir une propriété / visiter un lieu"
     },
     "example": {
-      "ja": "A: すみません、この<ruby>近<rt>ちか</rt></ruby>くに<ruby>内<rt>うち</rt></ruby><ruby>見<rt>み</rt></ruby>はありますか？<br/>B: はい、この<ruby>道<rt>みち</rt></ruby>をまっすぐ<ruby>進<rt>すす</rt></ruby>むと<ruby>右手<rt>みぎて</rt></ruby>に<ruby>内<rt>うち</rt></ruby><ruby>見<rt>み</rt></ruby>が<ruby>見<rt>み</rt></ruby>えますよ。",
-      "en": "A: Excuse me, is there a 内見 near here?<br/>B: Yes, if you go straight down this street, you'll see 内見 on your right.",
-      "zh_TW": "A: Excuse me, is there a 内見 near here?<br/>B: Yes, if you go straight down this street, you'll see 内見 on your right.",
-      "zh_CN": "A: Excuse me, is there a 内見 near here?<br/>B: Yes, if you go straight down this street, you'll see 内見 on your right.",
-      "ko": "A: Excuse me, is there a 内見 near here?<br/>B: Yes, if you go straight down this street, you'll see 内見 on your right.",
-      "zh_HK": "A: Excuse me, is there a 内見 near here?<br/>B: Yes, if you go straight down this street, you'll see 内見 on your right.",
-      "fr": "A: Excuse me, is there a 内見 near here?<br/>B: Yes, if you go straight down this street, you'll see 内見 on your right."
+      "ja": "A: ネットで<ruby>気<rt>き</rt></ruby>になった<ruby>部屋<rt>へや</rt></ruby>を<ruby>見<rt>み</rt></ruby>つけたんだけど、<ruby>申し込<rt>もうしこ</rt></ruby>もうかな。<br/>B: <ruby>日当<rt>ひあ</rt></ruby>たりや<ruby>騒音<rt>そうおん</rt></ruby>も<ruby>確<rt>たし</rt></ruby>かめたいから、<ruby>契約<rt>けいやく</rt></ruby><ruby>前<rt>まえ</rt></ruby>に<ruby>必<rt>かなら</rt></ruby>ず<ruby>内<rt>うち</rt></ruby><ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>った<ruby>方<rt>ほう</rt></ruby>がいいよ。",
+      "en": "A: I found an apartment online that I like—should I apply for it?<br/>B: You should definitely go for a property viewing before signing, to check sunlight and noise levels.",
+      "zh_TW": "A: 我在網路上找到一間中意的房子，該不該直接提出申請呢？<br/>B: 還需要確認採光和隔音，簽約前一定要去實地看房比較好喔。",
+      "zh_CN": "A: 我在网上找到一间中意的房子，该不该直接提出申请呢？<br/>B: 还需要确认采光和隔音，签约前一定要去实地看房比较好哦。",
+      "ko": "A: 인터넷에서 마음에 드는 방을 찾았는데 신청해 버릴까?<br/>B: 채광이나 소음도 확인해야 하니까 계약 전에 꼭 집 보러(내견) 가봐야 해.",
+      "zh_HK": "A: 喺網上睇中咗間房，好唔好直接填表租？<br/>B: 要睇下採光同隔音㗎嘛，簽約前一定要親身去睇樓呀。",
+      "fr": "A: J'ai trouvé un appartement qui me plaît en ligne, je devrais déposer un dossier ?<br/>B: Tu devrais absolument faire une visite avant de signer pour vérifier la luminosité et le bruit."
     },
     "related": "ないけん（授業の重要表現）"
   },
@@ -27157,13 +27157,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Boutique à 1 000 wons / Daiso / Boutique à 100 yens / Magasin à un dollar"
     },
     "example": {
-      "ja": "A: すみません、この<ruby>近<rt>ちか</rt></ruby>くに<ruby>百<rt>ひゃく</rt></ruby><ruby>均<rt>ひとし</rt></ruby>はありますか？<br/>B: はい、この<ruby>道<rt>みち</rt></ruby>をまっすぐ<ruby>進<rt>すす</rt></ruby>むと<ruby>右手<rt>みぎて</rt></ruby>に<ruby>百<rt>ひゃく</rt></ruby><ruby>均<rt>ひとし</rt></ruby>が<ruby>見<rt>み</rt></ruby>えますよ。",
-      "en": "A: Excuse me, is there a 百均 near here?<br/>B: Yes, if you go straight down this street, you'll see 百均 on your right.",
-      "zh_TW": "A: Excuse me, is there a 百均 near here?<br/>B: Yes, if you go straight down this street, you'll see 百均 on your right.",
-      "zh_CN": "A: Excuse me, is there a 百均 near here?<br/>B: Yes, if you go straight down this street, you'll see 百均 on your right.",
-      "ko": "A: Excuse me, is there a 百均 near here?<br/>B: Yes, if you go straight down this street, you'll see 百均 on your right.",
-      "zh_HK": "A: Excuse me, is there a 百均 near here?<br/>B: Yes, if you go straight down this street, you'll see 百均 on your right.",
-      "fr": "A: Excuse me, is there a 百均 near here?<br/>B: Yes, if you go straight down this street, you'll see 百均 on your right."
+      "ja": "A: <ruby>引っ越<rt>ひっこ</rt></ruby>してきたばかりで、キッチン<ruby>用<rt>よう</rt></ruby>の<ruby>小物<rt>こもの</rt></ruby>が<ruby>足<rt>た</rt></ruby>りないんだ。<br/>B: <ruby>百<rt>ひゃく</rt></ruby><ruby>均<rt>ひとし</rt></ruby>に<ruby>行<rt>い</rt></ruby>けばスポンジやお<ruby>皿<rt>さら</rt></ruby>も<ruby>安<rt>やす</rt></ruby>く<ruby>手<rt>て</rt></ruby>に<ruby>入<rt>はい</rt></ruby>るから、まずは<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>ってみなよ。",
+      "en": "A: I just moved in, and I'm missing some small kitchen supplies.<br/>B: If you head to a 100-yen shop, you can get sponges and plates cheaply, so go take a look first.",
+      "zh_TW": "A: 我剛搬家過來，廚房的生活雜物還缺不少。<br/>B: 去百元商店的話海綿和盤子都能便宜買到，先去那裡看看吧。",
+      "zh_CN": "A: 我刚搬家过来，厨房的生活杂物还缺不少。<br/>B: 去一元店（百元店）的话海绵和盘子都能便宜买到，先去那里看看吧。",
+      "ko": "A: 막 이사 와서 주방용 소품이 부족해.<br/>B: 다이소(백엔숍)에 가면 수세미나 접시도 싸게 살 수 있으니까 일단 가봐.",
+      "zh_HK": "A: 啱啱搬完屋，廚房仲差啲日用品。<br/>B: 去百円店睇下啦，百潔布同碗碟都平靚正，不妨去行個圈先。",
+      "fr": "A: Je viens d'emménager et il me manque plein de petits ustensiles de cuisine.<br/>B: Va faire un tour dans un magasin à 100 yens, tu y trouveras éponges et assiettes pour presque rien."
     },
     "related": "ひゃっきん（授業の重要表現）"
   },
@@ -28189,13 +28189,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "tag / it (jeu pour enfants)"
     },
     "example": {
-      "ja": "A: <ruby>現場<rt>げんば</rt></ruby>で<ruby>頼<rt>たよ</rt></ruby>りになる<ruby>鬼<rt>おに</rt></ruby>ごっこがいると<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>心強<rt>こころづよ</rt></ruby>いですね。<br/>B: ええ、いつも<ruby>親切<rt>しんせつ</rt></ruby>で<ruby>経験<rt>けいけん</rt></ruby><ruby>豊富<rt>ほうふ</rt></ruby>な<ruby>素晴<rt>すば</rt></ruby>らしい<ruby>鬼<rt>おに</rt></ruby>ごっこですよ。",
-      "en": "A: Having a dependable 鬼ごっこ on site is truly reassuring.<br/>B: Yes, they are a wonderful 鬼ごっこ who is always kind and experienced.",
-      "zh_TW": "A: Having a dependable 鬼ごっこ on site is truly reassuring.<br/>B: Yes, they are a wonderful 鬼ごっこ who is always kind and experienced.",
-      "zh_CN": "A: Having a dependable 鬼ごっこ on site is truly reassuring.<br/>B: Yes, they are a wonderful 鬼ごっこ who is always kind and experienced.",
-      "ko": "A: Having a dependable 鬼ごっこ on site is truly reassuring.<br/>B: Yes, they are a wonderful 鬼ごっこ who is always kind and experienced.",
-      "zh_HK": "A: Having a dependable 鬼ごっこ on site is truly reassuring.<br/>B: Yes, they are a wonderful 鬼ごっこ who is always kind and experienced.",
-      "fr": "A: Having a dependable 鬼ごっこ on site is truly reassuring.<br/>B: Yes, they are a wonderful 鬼ごっこ who is always kind and experienced."
+      "ja": "A: <ruby>公園<rt>こうえん</rt></ruby>で<ruby>子供<rt>こども</rt></ruby>たちが<ruby>元気<rt>げんき</rt></ruby>に<ruby>鬼<rt>おに</rt></ruby>ごっこをして<ruby>走り回<rt>はしりまわ</rt></ruby>っているね。<br/>B: <ruby>見<rt>み</rt></ruby>ているだけで<ruby>懐<rt>なつ</rt></ruby>かしいね。<ruby>昔<rt>むかし</rt></ruby>は<ruby>日<rt>ひ</rt></ruby>が<ruby>暮<rt>く</rt></ruby>れるまで<ruby>遊<rt>あそ</rt></ruby>んだものだよ。",
+      "en": "A: The kids are running around energetically playing tag in the park.<br/>B: Just watching them brings back memories. We used to play until sundown back in the day.",
+      "zh_TW": "A: 公園裡孩子們很有活力地玩鬼抓人、到處跑來跑去呢。<br/>B: 光是看著就覺得好懷念。以前我們也是玩到太陽下山呢。",
+      "zh_CN": "A: 公园里孩子们很有活力地玩捉迷藏抓人、到处跑来跑去呢。<br/>B: 光是看着就觉得好怀念。以前我们也是玩到太阳下山呢。",
+      "ko": "A: 공원에서 아이들이 활기차게 술래잡기를 하며 뛰어다니고 있네.<br/>B: 보고만 있어도 그립다. 옛날엔 해 질 때까지 놀곤 했지.",
+      "zh_HK": "A: 公園啲小朋友好精神咁走嚟走去玩捉伊人。<br/>B: 睇住都覺得好懷念，細個嗰陣我都玩到天黑先返屋企。",
+      "fr": "A: Les enfants courent partout dans le parc en jouant à chat avec énergie.<br/>B: Rien que de les voir, ça me rappelle des souvenirs. On jouait jusqu'au coucher du soleil autrefois."
     },
     "related": "おにごっこ（授業の重要表現）"
   },
@@ -28717,13 +28717,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "voisin / gens du quartier"
     },
     "example": {
-      "ja": "A: <ruby>現場<rt>げんば</rt></ruby>で<ruby>頼<rt>たよ</rt></ruby>りになる<ruby>近所<rt>きんじょ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>がいると<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>心強<rt>こころづよ</rt></ruby>いですね。<br/>B: ええ、いつも<ruby>親切<rt>しんせつ</rt></ruby>で<ruby>経験<rt>けいけん</rt></ruby><ruby>豊富<rt>ほうふ</rt></ruby>な<ruby>素晴<rt>すば</rt></ruby>らしい<ruby>近所<rt>きんじょ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>ですよ。",
-      "en": "A: Having a dependable 近所の人 on site is truly reassuring.<br/>B: Yes, they are a wonderful 近所の人 who is always kind and experienced.",
-      "zh_TW": "A: Having a dependable 近所の人 on site is truly reassuring.<br/>B: Yes, they are a wonderful 近所の人 who is always kind and experienced.",
-      "zh_CN": "A: Having a dependable 近所の人 on site is truly reassuring.<br/>B: Yes, they are a wonderful 近所の人 who is always kind and experienced.",
-      "ko": "A: Having a dependable 近所の人 on site is truly reassuring.<br/>B: Yes, they are a wonderful 近所の人 who is always kind and experienced.",
-      "zh_HK": "A: Having a dependable 近所の人 on site is truly reassuring.<br/>B: Yes, they are a wonderful 近所の人 who is always kind and experienced.",
-      "fr": "A: Having a dependable 近所の人 on site is truly reassuring.<br/>B: Yes, they are a wonderful 近所の人 who is always kind and experienced."
+      "ja": "A: <ruby>朝<rt>あさ</rt></ruby>の<ruby>散歩<rt>さんぽ</rt></ruby><ruby>中<rt>ちゅう</rt></ruby>、<ruby>近所<rt>きんじょ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>たちとすれ<ruby>違<rt>ちが</rt></ruby>う<ruby>時<rt>とき</rt></ruby>は<ruby>挨拶<rt>あいさつ</rt></ruby>している？<br/>B: うん、「おはようございます」と<ruby>笑顔<rt>えがお</rt></ruby>で<ruby>挨拶<rt>あいさつ</rt></ruby>するようにしているよ。",
+      "en": "A: When you pass neighbors during your morning walk, do you greet them?<br/>B: Yes, I make sure to smile and say 'Good morning'.",
+      "zh_TW": "A: 早上散步經過附近鄰居時，你會跟他們打招呼嗎？<br/>B: 會呀，我都會微笑著說「早安」。",
+      "zh_CN": "A: 早上散步经过附近邻居时，你会跟他们打招呼吗？<br/>B: 会呀，我都会微笑着说“早安”。",
+      "ko": "A: 아침 산책 중에 이웃 주민들과 마주치면 인사해?<br/>B: 응, '안녕하세요'라고 웃으면서 인사하려고 해.",
+      "zh_HK": "A: 朝早散步撞到街坊鄰居嗰陣，你會唔會同佢哋打招呼？<br/>B: 會呀，我會笑笑口同人講聲「早晨」。",
+      "fr": "A: Quand tu croises des voisins pendant ta promenade matinale, tu leur dis bonjour ?<br/>B: Oui, je fais en sorte de sourire et de leur souhaiter une bonne journée."
     },
     "related": "きんじょの人（授業の重要表現）"
   },
@@ -29413,13 +29413,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "salon de coiffure/salon de beauté"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>美容<rt>びよう</rt></ruby><ruby>室<rt>しつ</rt></ruby>の<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 美容室 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 美容室 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 美容室 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 美容室 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 美容室 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 美容室 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: <ruby>髪<rt>かみ</rt></ruby>が<ruby>伸<rt>の</rt></ruby>びてきたので、<ruby>週末<rt>しゅうまつ</rt></ruby>に<ruby>美容<rt>びよう</rt></ruby><ruby>室<rt>しつ</rt></ruby>へ<ruby>行<rt>い</rt></ruby>ってきます。<br/>B: どんな<ruby>髪型<rt>かみがた</rt></ruby>にするんですか？<ruby>楽<rt>たの</rt></ruby>しみですね。",
+      "en": "A: My hair has gotten long, so I'm going to the hair salon this weekend.<br/>B: What kind of hairstyle are you going for? That sounds exciting!",
+      "zh_TW": "A: 頭髮長長了，我週末打算去一趟美髮店。<br/>B: 想要剪什麼樣的髮型呢？真令人期待呢。",
+      "zh_CN": "A: 头发长长了，我周末打算去一趟理发店。<br/>B: 想要剪什么样的发型呢？真令人期待呢。",
+      "ko": "A: 머리가 많이 자라서 주말에 미용실에 다녀오려고요.<br/>B: 어떤 머리 스타일로 하실 거예요? 기대되네요.",
+      "zh_HK": "A: 頭髮長咗好多，週末諗住去剪頭髮。<br/>B: 想剪咩髮型呀？好令人期待喎。",
+      "fr": "A: Mes cheveux ont bien poussé, je vais au salon de coiffure ce week-end.<br/>B: Quel genre de coupe vas-tu faire ? J'ai hâte de voir ça !"
     },
     "related": "びよういん／びようしつ（授業の重要表現）"
   },
@@ -29533,13 +29533,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "poulet (viande)"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>鶏肉<rt>けいにく</rt></ruby>でも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>鶏肉<rt>けいにく</rt></ruby>のお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 鶏肉 for lunch?<br/>B: Sounds great! There's a delicious 鶏肉 shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 鶏肉 for lunch?<br/>B: Sounds great! There's a delicious 鶏肉 shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 鶏肉 for lunch?<br/>B: Sounds great! There's a delicious 鶏肉 shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 鶏肉 for lunch?<br/>B: Sounds great! There's a delicious 鶏肉 shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 鶏肉 for lunch?<br/>B: Sounds great! There's a delicious 鶏肉 shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 鶏肉 for lunch?<br/>B: Sounds great! There's a delicious 鶏肉 shop near the station, let's go."
+      "ja": "A: <ruby>今夜<rt>こんや</rt></ruby>は<ruby>鶏肉<rt>けいにく</rt></ruby>を<ruby>使<rt>つか</rt></ruby>って<ruby>唐<rt>とう</rt></ruby><ruby>揚<rt>あ</rt></ruby>げを<ruby>作<rt>つく</rt></ruby>ろうと<ruby>思<rt>おも</rt></ruby>うんだけど、どう？<br/>B: <ruby>大<rt>だい</rt></ruby><ruby>賛成<rt>さんせい</rt></ruby>！<ruby>揚<rt>あ</rt></ruby>げたてのジューシーな<ruby>唐<rt>とう</rt></ruby><ruby>揚<rt>あ</rt></ruby>げ、<ruby>楽<rt>たの</rt></ruby>しみだな。",
+      "en": "A: I'm thinking of using chicken to make karaage (fried chicken) tonight, how does that sound?<br/>B: Totally agree! I'm really looking forward to juicy, freshly fried karaage.",
+      "zh_TW": "A: 今晚我想用雞肉來做日式日式炸雞，你覺得如何？<br/>B: 大贊成！好期待剛炸好又鮮嫩多汁的炸雞塊喔。",
+      "zh_CN": "A: 今晚我想用鸡肉来做日式炸鸡，你觉得如何？<br/>B: 大赞成！好期待刚炸好又鲜嫩多汁的炸鸡块哦。",
+      "ko": "A: 오늘 밤엔 닭고기로 가라아게(치킨)를 만들까 하는데 어때?<br/>B: 대찬성! 갓 튀긴 육즙 가득한 치킨 정말 기대된다.",
+      "zh_HK": "A: 今晚諗住用雞肉整日式炸雞，點睇？<br/>B: 舉腳贊成！好期待新鮮炸出嚟熱辣辣又多汁嘅炸雞。",
+      "fr": "A: Je pensais utiliser du poulet pour faire du karaage ce soir, qu'en dis-tu ?<br/>B: Tout à fait pour ! J'ai hâte de déguster ce poulet frit bien juteux."
     },
     "related": "とりにく（授業の重要表現）"
   },
@@ -29821,13 +29821,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Retrouvons-nous / On se reverra"
     },
     "example": {
-      "ja": "A: <ruby>普段<rt>ふだん</rt></ruby>からよくまた<ruby>会<rt>あ</rt></ruby>いましょう<ruby>機会<rt>きかい</rt></ruby>はありますか？<br/>B: はい、<ruby>生活<rt>せいかつ</rt></ruby>リズムを<ruby>整<rt>ととの</rt></ruby>えるために<ruby>意識<rt>いしき</rt></ruby>してまた<ruby>会<rt>あ</rt></ruby>いましょうようにしています。",
-      "en": "A: Do you often have opportunities to また会いましょう in daily life?<br/>B: Yes, I make a conscious effort to また会いましょう to maintain a good lifestyle rhythm.",
-      "zh_TW": "A: Do you often have opportunities to また会いましょう in daily life?<br/>B: Yes, I make a conscious effort to また会いましょう to maintain a good lifestyle rhythm.",
-      "zh_CN": "A: Do you often have opportunities to また会いましょう in daily life?<br/>B: Yes, I make a conscious effort to また会いましょう to maintain a good lifestyle rhythm.",
-      "ko": "A: Do you often have opportunities to また会いましょう in daily life?<br/>B: Yes, I make a conscious effort to また会いましょう to maintain a good lifestyle rhythm.",
-      "zh_HK": "A: Do you often have opportunities to また会いましょう in daily life?<br/>B: Yes, I make a conscious effort to また会いましょう to maintain a good lifestyle rhythm.",
-      "fr": "A: Do you often have opportunities to また会いましょう in daily life?<br/>B: Yes, I make a conscious effort to また会いましょう to maintain a good lifestyle rhythm."
+      "ja": "A: <ruby>今日<rt>きょう</rt></ruby>は<ruby>久<rt>ひさ</rt></ruby>しぶりにゆっくり<ruby>話<rt>はな</rt></ruby>せて<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>楽<rt>たの</rt></ruby>しかったです。<br/>B: <ruby>私<rt>わたし</rt></ruby>もです！<ruby>近<rt>ちか</rt></ruby>いうちにまた<ruby>会<rt>あ</rt></ruby>いましょうね。",
+      "en": "A: It was so much fun being able to catch up properly today after so long.<br/>B: Same here! Let's meet up again soon.",
+      "zh_TW": "A: 今天久違地好好聊了天，真的很開心。<br/>B: 我也是！近期我們再約見面喔。",
+      "zh_CN": "A: 今天久违地好好聊了天，真的很开心。<br/>B: 我也是！近期我们再约见面哦。",
+      "ko": "A: 오늘 오랜만에 여유롭게 이야기 나눌 수 있어서 정말 즐거웠어요.<br/>B: 저도요! 조만간 또 만나요.",
+      "zh_HK": "A: 今日難得可以坐低慢慢傾偈，真係好開心。<br/>B: 我都係！遲啲再約出嚟見面啦。",
+      "fr": "A: J'ai vraiment passé un très bon moment à bavarder tranquillement aujourd'hui.<br/>B: Moi aussi ! Revoyons-nous très bientôt."
     },
     "related": "またあいましょう（授業の重要表現）"
   },
@@ -30181,13 +30181,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "allons-y"
     },
     "example": {
-      "ja": "A: <ruby>普段<rt>ふだん</rt></ruby>からよく<ruby>行<rt>い</rt></ruby>きましょう<ruby>機会<rt>きかい</rt></ruby>はありますか？<br/>B: はい、<ruby>生活<rt>せいかつ</rt></ruby>リズムを<ruby>整<rt>ととの</rt></ruby>えるために<ruby>意識<rt>いしき</rt></ruby>して<ruby>行<rt>い</rt></ruby>きましょうようにしています。",
-      "en": "A: Do you often have opportunities to 行きましょう in daily life?<br/>B: Yes, I make a conscious effort to 行きましょう to maintain a good lifestyle rhythm.",
-      "zh_TW": "A: Do you often have opportunities to 行きましょう in daily life?<br/>B: Yes, I make a conscious effort to 行きましょう to maintain a good lifestyle rhythm.",
-      "zh_CN": "A: Do you often have opportunities to 行きましょう in daily life?<br/>B: Yes, I make a conscious effort to 行きましょう to maintain a good lifestyle rhythm.",
-      "ko": "A: Do you often have opportunities to 行きましょう in daily life?<br/>B: Yes, I make a conscious effort to 行きましょう to maintain a good lifestyle rhythm.",
-      "zh_HK": "A: Do you often have opportunities to 行きましょう in daily life?<br/>B: Yes, I make a conscious effort to 行きましょう to maintain a good lifestyle rhythm.",
-      "fr": "A: Do you often have opportunities to 行きましょう in daily life?<br/>B: Yes, I make a conscious effort to 行きましょう to maintain a good lifestyle rhythm."
+      "ja": "A: そろそろ<ruby>映画<rt>えいが</rt></ruby>の<ruby>上映<rt>じょうえい</rt></ruby><ruby>時間<rt>じかん</rt></ruby>が<ruby>近<rt>ちか</rt></ruby>づいてきたよ。<br/>B: じゃあ、チケット<ruby>売り場<rt>うりば</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きましょう！",
+      "en": "A: The movie's showtime is getting close.<br/>B: All right, let's head to the ticket counter!",
+      "zh_TW": "A: 電影放映的時間差不多要到了。<br/>B: 那我們去售票處吧！",
+      "zh_CN": "A: 电影放映的时间差不多要到了。<br/>B: 那我们去售票处吧！",
+      "ko": "A: 슬슬 영화 상영 시간이 다가오고 있어.<br/>B: 그럼 매표소로 가자!",
+      "zh_HK": "A: 套戲就嚟開場喇喎。<br/>B: 咁我哋行去售票處買飛啦！",
+      "fr": "A: L'heure de la séance de cinéma approche.<br/>B: Alors en route, allons au guichet !"
     },
     "related": "いきましょう（授業の重要表現）"
   },
@@ -30397,13 +30397,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "trois personnes"
     },
     "example": {
-      "ja": "A: <ruby>現場<rt>げんば</rt></ruby>で<ruby>頼<rt>たよ</rt></ruby>りになる<ruby>三<rt>さん</rt></ruby><ruby>人<rt>にん</rt></ruby>がいると<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>心強<rt>こころづよ</rt></ruby>いですね。<br/>B: ええ、いつも<ruby>親切<rt>しんせつ</rt></ruby>で<ruby>経験<rt>けいけん</rt></ruby><ruby>豊富<rt>ほうふ</rt></ruby>な<ruby>素晴<rt>すば</rt></ruby>らしい<ruby>三<rt>さん</rt></ruby><ruby>人<rt>にん</rt></ruby>ですよ。",
-      "en": "A: Having a dependable 三人 on site is truly reassuring.<br/>B: Yes, they are a wonderful 三人 who is always kind and experienced.",
-      "zh_TW": "A: Having a dependable 三人 on site is truly reassuring.<br/>B: Yes, they are a wonderful 三人 who is always kind and experienced.",
-      "zh_CN": "A: Having a dependable 三人 on site is truly reassuring.<br/>B: Yes, they are a wonderful 三人 who is always kind and experienced.",
-      "ko": "A: Having a dependable 三人 on site is truly reassuring.<br/>B: Yes, they are a wonderful 三人 who is always kind and experienced.",
-      "zh_HK": "A: Having a dependable 三人 on site is truly reassuring.<br/>B: Yes, they are a wonderful 三人 who is always kind and experienced.",
-      "fr": "A: Having a dependable 三人 on site is truly reassuring.<br/>B: Yes, they are a wonderful 三人 who is always kind and experienced."
+      "ja": "A: いらっしゃいませ！<ruby>何<rt>なん</rt></ruby><ruby>名<rt>めい</rt></ruby><ruby>様<rt>さま</rt></ruby>でしょうか？<br/>B: <ruby>予約<rt>よやく</rt></ruby>していた<ruby>佐藤<rt>さとう</rt></ruby>です。<ruby>三<rt>さん</rt></ruby><ruby>人<rt>にん</rt></ruby>でテーブル<ruby>席<rt>せき</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。",
+      "en": "A: Welcome! How many people in your party?<br/>B: I'm Sato, I have a reservation. A table for three, please.",
+      "zh_TW": "A: 歡迎光臨！請問幾位呢？<br/>B: 我是有預約的佐藤。三位，請給我們桌位。",
+      "zh_CN": "A: 欢迎光临！请问几位呢？<br/>B: 我是有预约的佐藤。三位，请给我们桌位。",
+      "ko": "A: 어서 오세요! 몇 분이신가요?<br/>B: 예약했던 사토입니다. 세 명이고 테이블 자리로 부탁드려요.",
+      "zh_HK": "A: 歡迎光臨！請問幾多位？<br/>B: 訂咗位嘅佐藤。三位，唔該要張枱。",
+      "fr": "A: Bienvenue ! Vous êtes combien ?<br/>B: Je suis M. Sato, j'ai une réservation. Une table pour trois personnes, s'il vous plaît."
     },
     "related": "さんにん（授業の重要表現）"
   },
@@ -30781,13 +30781,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "S'il vous plaît, attendez / Donnez-moi une seconde"
     },
     "example": {
-      "ja": "A: <ruby>自己<rt>じこ</rt></ruby><ruby>紹介<rt>しょうかい</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、<ruby>周<rt>まわ</rt></ruby>りの<ruby>人<rt>ひと</rt></ruby>には<ruby>何<rt>なに</rt></ruby>と<ruby>言<rt>い</rt></ruby>えばいいですか？<br/>B: 「<ruby>気軽<rt>きがる</rt></ruby>にちょっと<ruby>待<rt>ま</rt></ruby>ってください」と<ruby>伝<rt>つた</rt></ruby>えると<ruby>親<rt>した</rt></ruby>しみやすくなりますよ。",
-      "en": "A: When introducing myself, what should I say to the people around me?<br/>B: Telling them 'please feel free to ちょっと待ってください' makes you much more approachable.",
-      "zh_TW": "A: When introducing myself, what should I say to the people around me?<br/>B: Telling them 'please feel free to ちょっと待ってください' makes you much more approachable.",
-      "zh_CN": "A: When introducing myself, what should I say to the people around me?<br/>B: Telling them 'please feel free to ちょっと待ってください' makes you much more approachable.",
-      "ko": "A: When introducing myself, what should I say to the people around me?<br/>B: Telling them 'please feel free to ちょっと待ってください' makes you much more approachable.",
-      "zh_HK": "A: When introducing myself, what should I say to the people around me?<br/>B: Telling them 'please feel free to ちょっと待ってください' makes you much more approachable.",
-      "fr": "A: When introducing myself, what should I say to the people around me?<br/>B: Telling them 'please feel free to ちょっと待ってください' makes you much more approachable."
+      "ja": "A: すみません、<ruby>新幹線<rt>しんかんせん</rt></ruby>の<ruby>切符<rt>きっぷ</rt></ruby>を<ruby>買<rt>か</rt></ruby>いたいのですが。<br/>B: ただいま<ruby>画面<rt>がめん</rt></ruby>を<ruby>切り替<rt>きりか</rt></ruby>えますので、ちょっと<ruby>待<rt>ま</rt></ruby>ってくださいね。",
+      "en": "A: Excuse me, I would like to buy a Shinkansen ticket.<br/>B: I am switching the screen now, so please wait a moment.",
+      "zh_TW": "A: 不好意思，我想買新幹線的車票。<br/>B: 我現在正在切換畫面，請稍微等一下喔。",
+      "zh_CN": "A: 不好意思，我想买新干线的车票。<br/>B: 我现在正在切换画面，请稍微等一下哦。",
+      "ko": "A: 실례합니다, 신칸센 표를 사고 싶은데요.<br/>B: 지금 화면 전환 중이니 잠시만 기다려 주세요.",
+      "zh_HK": "A: 唔好意思，我想買新幹線火車飛。<br/>B: 我轉緊畫面，唔該稍等一陣呀。",
+      "fr": "A: Excusez-moi, je voudrais acheter un billet de Shinkansen.<br/>B: Je change d'écran, veuillez patienter un instant s'il vous plaît."
     },
     "related": "ちょっと待ってください（授業の重要表現）"
   },
@@ -30853,13 +30853,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "il n'y a pas (personne/animal) / pas ici"
     },
     "example": {
-      "ja": "A: <ruby>現場<rt>げんば</rt></ruby>で<ruby>頼<rt>たよ</rt></ruby>りになるいませんがいると<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>心強<rt>こころづよ</rt></ruby>いですね。<br/>B: ええ、いつも<ruby>親切<rt>しんせつ</rt></ruby>で<ruby>経験<rt>けいけん</rt></ruby><ruby>豊富<rt>ほうふ</rt></ruby>な<ruby>素晴<rt>すば</rt></ruby>らしいいませんですよ。",
-      "en": "A: Having a dependable いません on site is truly reassuring.<br/>B: Yes, they are a wonderful いません who is always kind and experienced.",
-      "zh_TW": "A: Having a dependable いません on site is truly reassuring.<br/>B: Yes, they are a wonderful いません who is always kind and experienced.",
-      "zh_CN": "A: Having a dependable いません on site is truly reassuring.<br/>B: Yes, they are a wonderful いません who is always kind and experienced.",
-      "ko": "A: Having a dependable いません on site is truly reassuring.<br/>B: Yes, they are a wonderful いません who is always kind and experienced.",
-      "zh_HK": "A: Having a dependable いません on site is truly reassuring.<br/>B: Yes, they are a wonderful いません who is always kind and experienced.",
-      "fr": "A: Having a dependable いません on site is truly reassuring.<br/>B: Yes, they are a wonderful いません who is always kind and experienced."
+      "ja": "A: すみません、<ruby>山田<rt>やまだ</rt></ruby><ruby>課長<rt>かちょう</rt></ruby>はいらっしゃいますか？<br/>B: あいにく<ruby>山田<rt>やまだ</rt></ruby>は<ruby>外出<rt>がいしゅつ</rt></ruby><ruby>中<rt>ちゅう</rt></ruby>で、<ruby>今<rt>いま</rt></ruby>は<ruby>席<rt>せき</rt></ruby>にいません。",
+      "en": "A: Excuse me, is Section Chief Yamada here?<br/>B: Unfortunately, Yamada is currently out of the office and not at his desk.",
+      "zh_TW": "A: 不好意思，請問山田課長在嗎？<br/>B: 不巧山田現在外出，不在座位上。",
+      "zh_CN": "A: 不好意思，请问山田课长在吗？<br/>B: 不巧山田现在外出，不在座位上。",
+      "ko": "A: 실례합니다, 야마다 과장님 계신가요?<br/>B: 공교롭게도 야마다는 외출 중이라 지금 자리에 없습니다.",
+      "zh_HK": "A: 唔好意思，請問山田課長喺唔喺度？<br/>B: 好唔啱佢出咗去，依家唔喺位。",
+      "fr": "A: Excusez-moi, le chef de section Yamada est-il là ?<br/>B: Malheureusement, il est en déplacement et n'est pas à son bureau en ce moment."
     },
     "related": "いません（授業の重要表現）"
   },
@@ -31957,13 +31957,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "pas bon / pas génial"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>によくないでも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しいよくないのお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some よくない for lunch?<br/>B: Sounds great! There's a delicious よくない shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some よくない for lunch?<br/>B: Sounds great! There's a delicious よくない shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some よくない for lunch?<br/>B: Sounds great! There's a delicious よくない shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some よくない for lunch?<br/>B: Sounds great! There's a delicious よくない shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some よくない for lunch?<br/>B: Sounds great! There's a delicious よくない shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some よくない for lunch?<br/>B: Sounds great! There's a delicious よくない shop near the station, let's go."
+      "ja": "A: ずっとスマホを<ruby>見<rt>み</rt></ruby>ながら<ruby>歩<rt>ある</rt></ruby>いているよ。<ruby>危<rt>あぶ</rt></ruby>ないんじゃない？<br/>B: そうだね、<ruby>周<rt>まわ</rt></ruby>りが<ruby>見<rt>み</rt></ruby>えなくなるから<ruby>本当<rt>ほんとう</rt></ruby>によくないね。",
+      "en": "A: You're walking while staring at your phone all the time. Isn't that dangerous?<br/>B: You're right, you can't see what's around you, so it's really not good.",
+      "zh_TW": "A: 你一直邊走路邊看手機，這樣不是很危險嗎？<br/>B: 說得對，這樣會看不到周遭路況，真的很不好。",
+      "zh_CN": "A: 你一直边走路边看手机，这样不是很危险吗？<br/>B: 说得对，这样会看不到周围路况，真的很不好。",
+      "ko": "A: 계속 스마트폰 보면서 걷고 있네. 위험하지 않아?<br/>B: 맞아, 주변을 못 보게 되니까 정말 좋지 않은 행동이야.",
+      "zh_HK": "A: 你一路行一路掛住睇電話，好危險㗎喎？<br/>B: 係呀，睇唔到周圍真係好唔好，要改咗佢。",
+      "fr": "A: Tu marches en fixant ton smartphone. Ce n'est pas dangereux ?<br/>B: Tu as raison, on ne voit plus ce qui nous entoure, ce n'est vraiment pas bien."
     },
     "related": "よくない（授業の重要表現）"
   },
@@ -32029,13 +32029,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "ami d'enfance"
     },
     "example": {
-      "ja": "A: <ruby>現場<rt>げんば</rt></ruby>で<ruby>頼<rt>たよ</rt></ruby>りになる<ruby>幼馴染<rt>おさななじみ</rt></ruby>がいると<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>心強<rt>こころづよ</rt></ruby>いですね。<br/>B: ええ、いつも<ruby>親切<rt>しんせつ</rt></ruby>で<ruby>経験<rt>けいけん</rt></ruby><ruby>豊富<rt>ほうふ</rt></ruby>な<ruby>素晴<rt>すば</rt></ruby>らしい<ruby>幼馴染<rt>おさななじみ</rt></ruby>ですよ。",
-      "en": "A: Having a dependable 幼馴染 on site is truly reassuring.<br/>B: Yes, they are a wonderful 幼馴染 who is always kind and experienced.",
-      "zh_TW": "A: Having a dependable 幼馴染 on site is truly reassuring.<br/>B: Yes, they are a wonderful 幼馴染 who is always kind and experienced.",
-      "zh_CN": "A: Having a dependable 幼馴染 on site is truly reassuring.<br/>B: Yes, they are a wonderful 幼馴染 who is always kind and experienced.",
-      "ko": "A: Having a dependable 幼馴染 on site is truly reassuring.<br/>B: Yes, they are a wonderful 幼馴染 who is always kind and experienced.",
-      "zh_HK": "A: Having a dependable 幼馴染 on site is truly reassuring.<br/>B: Yes, they are a wonderful 幼馴染 who is always kind and experienced.",
-      "fr": "A: Having a dependable 幼馴染 on site is truly reassuring.<br/>B: Yes, they are a wonderful 幼馴染 who is always kind and experienced."
+      "ja": "A: あの<ruby>二<rt>に</rt></ruby><ruby>人<rt>にん</rt></ruby>、すごく<ruby>息<rt>いき</rt></ruby>が<ruby>合<rt>あ</rt></ruby>っているね。<br/>B: <ruby>保育園<rt>ほいくえん</rt></ruby>の<ruby>頃<rt>ころ</rt></ruby>からずっと<ruby>一緒<rt>いっしょ</rt></ruby>の<ruby>幼馴染<rt>おさななじみ</rt></ruby>なんだって。",
+      "en": "A: Those two work in complete sync, don't they?<br/>B: I heard they're childhood friends who have been together since nursery school.",
+      "zh_TW": "A: 他們兩個默契超級好呢。<br/>B: 聽說他們是從幼兒園就一直在一起的青梅竹馬。",
+      "zh_CN": "A: 他们两个默契超级好呢。<br/>B: 听说他们是从幼儿园就一直在一起的发小（青梅竹马）。",
+      "ko": "A: 저 두 사람, 정말 손발이 척척 잘 맞네.<br/>B: 어린이집 시절부터 줄곧 함께한 소꿉친구래.",
+      "zh_HK": "A: 嗰兩個人好有默契喎。<br/>B: 聽講佢哋由幼稚園開始已經一齊玩，係由細玩到大嘅青梅竹馬。",
+      "fr": "A: Ces deux-là sont tellement complices !<br/>B: J'ai entendu dire qu'ils étaient des amis d'enfance inséparables depuis la maternelle."
     },
     "related": "おさななじみ（授業の重要表現）"
   },
@@ -32197,13 +32197,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "un (petit animal / poisson)"
     },
     "example": {
-      "ja": "A: この<ruby>一<rt>いち</rt></ruby><ruby>匹<rt>ひき</rt></ruby>は<ruby>風味<rt>ふうみ</rt></ruby><ruby>豊<rt>ゆた</rt></ruby>かでとても<ruby>美味<rt>おい</rt></ruby>しいですね！<br/>B: ええ、<ruby>新鮮<rt>しんせん</rt></ruby>な<ruby>素材<rt>そざい</rt></ruby>を<ruby>活<rt>い</rt></ruby>かした<ruby>人気<rt>にんき</rt></ruby>の<ruby>一<rt>いち</rt></ruby><ruby>匹<rt>ひき</rt></ruby>なんですよ。",
-      "en": "A: This 一匹 is richly flavorful and very delicious!<br/>B: Yes, it's a popular 一匹 that brings out the best of fresh ingredients.",
-      "zh_TW": "A: This 一匹 is richly flavorful and very delicious!<br/>B: Yes, it's a popular 一匹 that brings out the best of fresh ingredients.",
-      "zh_CN": "A: This 一匹 is richly flavorful and very delicious!<br/>B: Yes, it's a popular 一匹 that brings out the best of fresh ingredients.",
-      "ko": "A: This 一匹 is richly flavorful and very delicious!<br/>B: Yes, it's a popular 一匹 that brings out the best of fresh ingredients.",
-      "zh_HK": "A: This 一匹 is richly flavorful and very delicious!<br/>B: Yes, it's a popular 一匹 that brings out the best of fresh ingredients.",
-      "fr": "A: This 一匹 is richly flavorful and very delicious!<br/>B: Yes, it's a popular 一匹 that brings out the best of fresh ingredients."
+      "ja": "A: お<ruby>庭<rt>にわ</rt></ruby>の<ruby>草<rt>くさ</rt></ruby>むらで<ruby>猫<rt>ねこ</rt></ruby>が<ruby>一<rt>いち</rt></ruby><ruby>匹<rt>ひき</rt></ruby>、<ruby>気持<rt>きも</rt></ruby>ちよさそうに<ruby>日向<rt>ひなた</rt></ruby>ぼっこしているよ。<br/>B: <ruby>暖<rt>あたた</rt></ruby>かくてうとうと<ruby>眠<rt>ねむ</rt></ruby>っているみたいで<ruby>可愛<rt>かわい</rt></ruby>いね。",
+      "en": "A: There is one cat basking happily in the sun in the yard's grass.<br/>B: It looks so cute dozing off in the warmth.",
+      "zh_TW": "A: 庭院草叢裡有一隻貓，很舒服地在那裡曬太陽呢。<br/>B: 暖洋洋地好像在打瞌睡，真可愛。",
+      "zh_CN": "A: 庭院草丛里有一只猫，很舒服地在那里晒太阳呢。<br/>B: 暖洋洋地好像在打瞌睡，真可爱。",
+      "ko": "A: 마당 풀숲에서 고양이 한 마리가 기분 좋게 일광욕을 하고 있어.<br/>B: 따뜻해서 꾸벅꾸벅 조는 것 같아 귀엽다.",
+      "zh_HK": "A: 花園草叢有隻貓喺度好舒服咁曬太陽。<br/>B: 暖笠笠好似瞌緊睡咁，真係得意。",
+      "fr": "A: Il y a un chat qui se prélasse tranquillement au soleil dans l'herbe du jardin.<br/>B: Il a l'air de somnoler avec cette chaleur, comme c'est mignon."
     },
     "related": "いっぴき（授業の重要表現）"
   },
@@ -32221,13 +32221,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "deux (petits animaux / poissons)"
     },
     "example": {
-      "ja": "A: この<ruby>二<rt>に</rt></ruby><ruby>匹<rt>ひき</rt></ruby>は<ruby>風味<rt>ふうみ</rt></ruby><ruby>豊<rt>ゆた</rt></ruby>かでとても<ruby>美味<rt>おい</rt></ruby>しいですね！<br/>B: ええ、<ruby>新鮮<rt>しんせん</rt></ruby>な<ruby>素材<rt>そざい</rt></ruby>を<ruby>活<rt>い</rt></ruby>かした<ruby>人気<rt>にんき</rt></ruby>の<ruby>二<rt>に</rt></ruby><ruby>匹<rt>ひき</rt></ruby>なんですよ。",
-      "en": "A: This 二匹 is richly flavorful and very delicious!<br/>B: Yes, it's a popular 二匹 that brings out the best of fresh ingredients.",
-      "zh_TW": "A: This 二匹 is richly flavorful and very delicious!<br/>B: Yes, it's a popular 二匹 that brings out the best of fresh ingredients.",
-      "zh_CN": "A: This 二匹 is richly flavorful and very delicious!<br/>B: Yes, it's a popular 二匹 that brings out the best of fresh ingredients.",
-      "ko": "A: This 二匹 is richly flavorful and very delicious!<br/>B: Yes, it's a popular 二匹 that brings out the best of fresh ingredients.",
-      "zh_HK": "A: This 二匹 is richly flavorful and very delicious!<br/>B: Yes, it's a popular 二匹 that brings out the best of fresh ingredients.",
-      "fr": "A: This 二匹 is richly flavorful and very delicious!<br/>B: Yes, it's a popular 二匹 that brings out the best of fresh ingredients."
+      "ja": "A: ペットは<ruby>何<rt>なに</rt></ruby>か<ruby>飼<rt>か</rt></ruby>っていますか？<br/>B: はい、<ruby>保護<rt>ほご</rt></ruby><ruby>犬<rt>けん</rt></ruby>を<ruby>二<rt>に</rt></ruby><ruby>匹<rt>ひき</rt></ruby><ruby>飼<rt>か</rt></ruby>っていて、<ruby>毎朝<rt>まいあさ</rt></ruby><ruby>散歩<rt>さんぽ</rt></ruby>させています。",
+      "en": "A: Do you have any pets?<br/>B: Yes, I have two rescue dogs and I walk them every morning.",
+      "zh_TW": "A: 你有養什麼寵物嗎？<br/>B: 有，我養了兩隻領養的狗狗，每天早上都會帶牠們去散步。",
+      "zh_CN": "A: 你有养什么宠物吗？<br/>B: 有，我养了两只领养的狗狗，每天早上都会带它们去散步。",
+      "ko": "A: 반려동물 키우시는 거 있으세요?<br/>B: 네, 유기견 두 마리를 키우고 있어서 매일 아침 산책시키고 있어요.",
+      "zh_HK": "A: 你有冇養寵物呀？<br/>B: 有呀，我領養咗兩隻狗，每日朝早都帶佢哋去散步。",
+      "fr": "A: Avez-vous des animaux de compagnie ?<br/>B: Oui, j'ai deux chiens recueillis que je promène tous les matins."
     },
     "related": "にひき（授業の重要表現）"
   },
@@ -32413,13 +32413,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "s'il te plaît reviens / s'il te plaît reviens"
     },
     "example": {
-      "ja": "A: <ruby>自己<rt>じこ</rt></ruby><ruby>紹介<rt>しょうかい</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、<ruby>周<rt>まわ</rt></ruby>りの<ruby>人<rt>ひと</rt></ruby>には<ruby>何<rt>なに</rt></ruby>と<ruby>言<rt>い</rt></ruby>えばいいですか？<br/>B: 「<ruby>気軽<rt>きがる</rt></ruby>に<ruby>戻<rt>もど</rt></ruby>ってください」と<ruby>伝<rt>つた</rt></ruby>えると<ruby>親<rt>した</rt></ruby>しみやすくなりますよ。",
-      "en": "A: When introducing myself, what should I say to the people around me?<br/>B: Telling them 'please feel free to 戻ってください' makes you much more approachable.",
-      "zh_TW": "A: When introducing myself, what should I say to the people around me?<br/>B: Telling them 'please feel free to 戻ってください' makes you much more approachable.",
-      "zh_CN": "A: When introducing myself, what should I say to the people around me?<br/>B: Telling them 'please feel free to 戻ってください' makes you much more approachable.",
-      "ko": "A: When introducing myself, what should I say to the people around me?<br/>B: Telling them 'please feel free to 戻ってください' makes you much more approachable.",
-      "zh_HK": "A: When introducing myself, what should I say to the people around me?<br/>B: Telling them 'please feel free to 戻ってください' makes you much more approachable.",
-      "fr": "A: When introducing myself, what should I say to the people around me?<br/>B: Telling them 'please feel free to 戻ってください' makes you much more approachable."
+      "ja": "A: これから15<ruby>分間<rt>ふんかん</rt></ruby>の<ruby>休憩<rt>きゅうけい</rt></ruby>に<ruby>入<rt>はい</rt></ruby>ります。<br/>B: わかりました。11<ruby>時<rt>じ</rt></ruby>までには<ruby>自分<rt>じぶん</rt></ruby>の<ruby>席<rt>せき</rt></ruby>へ<ruby>戻<rt>もど</rt></ruby>ってくださいね。",
+      "en": "A: We will now take a 15-minute break.<br/>B: Understood. Please return to your seat by 11:00.",
+      "zh_TW": "A: 現在開始進入15分鐘的休息時間。<br/>B: 知道了。請在11點之前回到自己的座位上喔。",
+      "zh_CN": "A: 现在开始进入15分钟的休息时间。<br/>B: 知道了。请在11点之前回到自己的座位上哦。",
+      "ko": "A: 지금부터 15분간 쉬는 시간을 갖겠습니다.<br/>B: 알겠습니다. 11시까지는 각자 자리로 돌아와 주세요.",
+      "zh_HK": "A: 依家開始有15分鐘休息時間。<br/>B: 收到，請喺11點之前返返去自己個位度呀。",
+      "fr": "A: Nous allons faire une pause de quinze minutes.<br/>B: Bien compris. Veuillez retourner à votre place avant 11 heures."
     },
     "related": "もどってください（授業の重要表現）"
   },
@@ -32509,13 +32509,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "maux d'estomac / douleurs abdominales"
     },
     "example": {
-      "ja": "A: <ruby>体調<rt>たいちょう</rt></ruby>が<ruby>優<rt>すぐ</rt></ruby>れないときは<ruby>無理<rt>むり</rt></ruby>をせず、<ruby>腹痛<rt>はらいた</rt></ruby>に<ruby>気<rt>き</rt></ruby>をつけて<ruby>休<rt>やす</rt></ruby>んでくださいね。<br/>B: ありがとうございます。<ruby>温<rt>あたた</rt></ruby>かいものを<ruby>飲<rt>の</rt></ruby>んでゆっくり<ruby>休<rt>やす</rt></ruby>みます。",
-      "en": "A: When you don't feel well, don't push yourself and take good care of 腹痛.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "zh_TW": "A: When you don't feel well, don't push yourself and take good care of 腹痛.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "zh_CN": "A: When you don't feel well, don't push yourself and take good care of 腹痛.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "ko": "A: When you don't feel well, don't push yourself and take good care of 腹痛.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "zh_HK": "A: When you don't feel well, don't push yourself and take good care of 腹痛.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "fr": "A: When you don't feel well, don't push yourself and take good care of 腹痛.<br/>B: Thank you very much. I'll drink something warm and rest."
+      "ja": "A: <ruby>昨日<rt>きのう</rt></ruby>の<ruby>夜<rt>よる</rt></ruby>、<ruby>冷<rt>つめ</rt></ruby>たいものを<ruby>飲<rt>の</rt></ruby>みすぎて<ruby>腹痛<rt>はらいた</rt></ruby>になっちゃったんだ。<br/>B: お<ruby>腹<rt>なか</rt></ruby>を<ruby>冷<rt>ひ</rt></ruby>やすと<ruby>痛<rt>いた</rt></ruby>くなるよね。<ruby>温<rt>あたた</rt></ruby>かいお<ruby>茶<rt>ちゃ</rt></ruby>でも<ruby>飲<rt>の</rt></ruby>んで<ruby>休<rt>やす</rt></ruby>んでね。",
+      "en": "A: Last night I drank too many cold drinks and got a stomachache.<br/>B: If your stomach gets chilled, it starts hurting. Drink some warm tea and rest.",
+      "zh_TW": "A: 昨晚我喝了太多冷飲，結果肚子痛了起來。<br/>B: 肚子著涼就會痛呢。喝點熱茶好好休息吧。",
+      "zh_CN": "A: 昨晚我喝了太多冷饮，结果肚子痛了起来。<br/>B: 肚子着凉就会痛呢。喝点热茶好好休息吧。",
+      "ko": "A: 어젯밤에 찬 걸 너무 많이 마셔서 복통이 생겼어.<br/>B: 배를 차게 하면 탈이 나지. 따뜻한 차라도 마시고 쉬어.",
+      "zh_HK": "A: 琴晚飲咗太多凍嘢，搞到肚痛添。<br/>B: 個肚一受涼就會痛㗎喇。飲杯熱茶抖下啦。",
+      "fr": "A: Hier soir, j'ai bu trop de boissons glacées et j'ai eu mal au ventre.<br/>B: Prendre froid au ventre provoque des douleurs. Bois du thé chaud et repose-toi."
     },
     "related": "ふくつう（授業の重要表現）"
   },
@@ -32821,13 +32821,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "station service"
     },
     "example": {
-      "ja": "A: すみません、この<ruby>近<rt>ちか</rt></ruby>くにガソリンスタンドはありますか？<br/>B: はい、この<ruby>道<rt>みち</rt></ruby>をまっすぐ<ruby>進<rt>すす</rt></ruby>むと<ruby>右手<rt>みぎて</rt></ruby>にガソリンスタンドが<ruby>見<rt>み</rt></ruby>えますよ。",
-      "en": "A: Excuse me, is there a ガソリンスタンド near here?<br/>B: Yes, if you go straight down this street, you'll see ガソリンスタンド on your right.",
-      "zh_TW": "A: Excuse me, is there a ガソリンスタンド near here?<br/>B: Yes, if you go straight down this street, you'll see ガソリンスタンド on your right.",
-      "zh_CN": "A: Excuse me, is there a ガソリンスタンド near here?<br/>B: Yes, if you go straight down this street, you'll see ガソリンスタンド on your right.",
-      "ko": "A: Excuse me, is there a ガソリンスタンド near here?<br/>B: Yes, if you go straight down this street, you'll see ガソリンスタンド on your right.",
-      "zh_HK": "A: Excuse me, is there a ガソリンスタンド near here?<br/>B: Yes, if you go straight down this street, you'll see ガソリンスタンド on your right.",
-      "fr": "A: Excuse me, is there a ガソリンスタンド near here?<br/>B: Yes, if you go straight down this street, you'll see ガソリンスタンド on your right."
+      "ja": "A: ガソリンの<ruby>残<rt>ざん</rt></ruby><ruby>量<rt>りょう</rt></ruby>ランプが<ruby>点灯<rt>てんとう</rt></ruby>しちゃったよ！<br/>B: <ruby>次<rt>つぎ</rt></ruby>の<ruby>角<rt>かく</rt></ruby>を<ruby>曲<rt>ま</rt></ruby>がったところにガソリンスタンドがあるから、<ruby>急<rt>いそ</rt></ruby>いで<ruby>給油<rt>きゅうゆ</rt></ruby>しよう。",
+      "en": "A: The low-fuel warning light just turned on!<br/>B: There's a gas station right around the next corner, let's hurry and refuel.",
+      "zh_TW": "A: 油量警示燈亮起來了啦！<br/>B: 下個轉角處就有一家加油站，我們趕快去加油吧。",
+      "zh_CN": "A: 油量警示灯亮起来了啦！<br/>B: 下个转角处就有一家加油站，我们赶快去加油吧。",
+      "ko": "A: 주유 경고등에 불이 들어와 버렸어!<br/>B: 다음 코너 돌면 주유소가 있으니까 서둘러 기름 넣자.",
+      "zh_HK": "A: 著咗油燈喇添！<br/>B: 轉過下個彎有間油站，快啲去入油啦。",
+      "fr": "A: Le voyant d'essence vient de s'allumer !<br/>B: Il y a une station-service au prochain carrefour, dépêchons-nous d'aller faire le plein."
     },
     "related": "ガスタ（授業の重要表現）"
   },
@@ -32917,13 +32917,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "voisin / gens du quartier"
     },
     "example": {
-      "ja": "A: <ruby>現場<rt>げんば</rt></ruby>で<ruby>頼<rt>たよ</rt></ruby>りになるご<ruby>近所<rt>きんじょ</rt></ruby>さんがいると<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>心強<rt>こころづよ</rt></ruby>いですね。<br/>B: ええ、いつも<ruby>親切<rt>しんせつ</rt></ruby>で<ruby>経験<rt>けいけん</rt></ruby><ruby>豊富<rt>ほうふ</rt></ruby>な<ruby>素晴<rt>すば</rt></ruby>らしいご<ruby>近所<rt>きんじょ</rt></ruby>さんですよ。",
-      "en": "A: Having a dependable ご近所さん on site is truly reassuring.<br/>B: Yes, they are a wonderful ご近所さん who is always kind and experienced.",
-      "zh_TW": "A: Having a dependable ご近所さん on site is truly reassuring.<br/>B: Yes, they are a wonderful ご近所さん who is always kind and experienced.",
-      "zh_CN": "A: Having a dependable ご近所さん on site is truly reassuring.<br/>B: Yes, they are a wonderful ご近所さん who is always kind and experienced.",
-      "ko": "A: Having a dependable ご近所さん on site is truly reassuring.<br/>B: Yes, they are a wonderful ご近所さん who is always kind and experienced.",
-      "zh_HK": "A: Having a dependable ご近所さん on site is truly reassuring.<br/>B: Yes, they are a wonderful ご近所さん who is always kind and experienced.",
-      "fr": "A: Having a dependable ご近所さん on site is truly reassuring.<br/>B: Yes, they are a wonderful ご近所さん who is always kind and experienced."
+      "ja": "A: <ruby>新<rt>あたら</rt></ruby>しいマンションの<ruby>住<rt>す</rt></ruby>み<ruby>心地<rt>ごこち</rt></ruby>はどうですか？<br/>B: ご<ruby>近所<rt>きんじょ</rt></ruby>さんが<ruby>皆<rt>みな</rt></ruby>さん<ruby>親切<rt>しんせつ</rt></ruby>で、いつも<ruby>野菜<rt>やさい</rt></ruby>をおすそ<ruby>分<rt>わ</rt></ruby>けしてくれるんですよ。",
+      "en": "A: How do you like living in your new apartment?<br/>B: The neighbors are all so kind, and they often share homegrown vegetables with us.",
+      "zh_TW": "A: 新公寓住起來感覺如何？<br/>B: 附近的鄰居人都很親切，常常會分送新鮮蔬菜給我們呢。",
+      "zh_CN": "A: 新公寓住起来感觉如何？<br/>B: 附近的邻居人都很亲切，常常会分送新鲜蔬菜给我们呢。",
+      "ko": "A: 새 아파트 지내시기는 어떠세요?<br/>B: 이웃분들이 다들 친절하셔서 항상 채소도 나눠주시고 그래요.",
+      "zh_HK": "A: 新屋住成點呀？<br/>B: 啲街坊鄰里好熱情，成日攞啲新鮮蔬菜分畀我哋食。",
+      "fr": "A: Comment trouvez-vous la vie dans votre nouvel appartement ?<br/>B: Les voisins sont tous très gentils, ils viennent souvent partager des légumes de leur jardin."
     },
     "related": "ごきんじょさん（授業の重要表現）"
   },
@@ -33013,13 +33013,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "attraper froid"
     },
     "example": {
-      "ja": "A: <ruby>体調<rt>たいちょう</rt></ruby>が<ruby>優<rt>すぐ</rt></ruby>れないときは<ruby>無理<rt>むり</rt></ruby>をせず、<ruby>風邪<rt>かぜ</rt></ruby>をひくに<ruby>気<rt>き</rt></ruby>をつけて<ruby>休<rt>やす</rt></ruby>んでくださいね。<br/>B: ありがとうございます。<ruby>温<rt>あたた</rt></ruby>かいものを<ruby>飲<rt>の</rt></ruby>んでゆっくり<ruby>休<rt>やす</rt></ruby>みます。",
-      "en": "A: When you don't feel well, don't push yourself and take good care of 風邪をひく.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "zh_TW": "A: When you don't feel well, don't push yourself and take good care of 風邪をひく.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "zh_CN": "A: When you don't feel well, don't push yourself and take good care of 風邪をひく.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "ko": "A: When you don't feel well, don't push yourself and take good care of 風邪をひく.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "zh_HK": "A: When you don't feel well, don't push yourself and take good care of 風邪をひく.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "fr": "A: When you don't feel well, don't push yourself and take good care of 風邪をひく.<br/>B: Thank you very much. I'll drink something warm and rest."
+      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby><ruby>急<rt>きゅう</rt></ruby>に<ruby>寒<rt>さむ</rt></ruby>くなってきたから、<ruby>風邪<rt>かぜ</rt></ruby>をひかないように<ruby>気<rt>き</rt></ruby>をつけてね。<br/>B: ありがとう。<ruby>手洗<rt>てあらい</rt></ruby>いうがいをしっかりして<ruby>暖<rt>あたた</rt></ruby>かくして<ruby>寝<rt>ね</rt></ruby>るよ。",
+      "en": "A: It's gotten cold suddenly, so be careful not to catch a cold.<br/>B: Thanks. I'll make sure to wash my hands, gargle, and stay warm while sleeping.",
+      "zh_TW": "A: 最近天氣突然變冷了，小心別感冒囉。<br/>B: 謝謝。我會好好洗手漱口、睡覺時穿暖一點的。",
+      "zh_CN": "A: 最近天气突然变冷了，小心别感冒喽。<br/>B: 谢谢。我会好好洗手漱口、睡觉时穿暖一点的。",
+      "ko": "A: 요즘 갑자기 날씨가 추워졌으니 감기 걸리지 않게 조심해.<br/>B: 고마워. 손발 잘 씻고 가글도 하고 따뜻하게 잘게.",
+      "zh_HK": "A: 最近天氣突然轉凍，小心唔好冷親感冒呀。<br/>B: 唔該晒。我會洗多啲手浪多啲口，著暖啲先訓覺。",
+      "fr": "A: Le temps s'est rafraîchi d'un coup, fais bien attention à ne pas attraper froid.<br/>B: Merci. Je vais bien me laver les mains, me gargariser et dormir bien au chaud."
     },
     "related": "かぜをひく（授業の重要表現）"
   },
@@ -33253,13 +33253,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "personne du matin"
     },
     "example": {
-      "ja": "A: <ruby>現場<rt>げんば</rt></ruby>で<ruby>頼<rt>たよ</rt></ruby>りになる<ruby>朝<rt>ちょう</rt></ruby><ruby>型<rt>がた</rt></ruby>がいると<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>心強<rt>こころづよ</rt></ruby>いですね。<br/>B: ええ、いつも<ruby>親切<rt>しんせつ</rt></ruby>で<ruby>経験<rt>けいけん</rt></ruby><ruby>豊富<rt>ほうふ</rt></ruby>な<ruby>素晴<rt>すば</rt></ruby>らしい<ruby>朝<rt>あさ</rt></ruby><ruby>型<rt>がた</rt></ruby>ですよ。",
-      "en": "A: Having a dependable 朝型 on site is truly reassuring.<br/>B: Yes, they are a wonderful 朝型 who is always kind and experienced.",
-      "zh_TW": "A: Having a dependable 朝型 on site is truly reassuring.<br/>B: Yes, they are a wonderful 朝型 who is always kind and experienced.",
-      "zh_CN": "A: Having a dependable 朝型 on site is truly reassuring.<br/>B: Yes, they are a wonderful 朝型 who is always kind and experienced.",
-      "ko": "A: Having a dependable 朝型 on site is truly reassuring.<br/>B: Yes, they are a wonderful 朝型 who is always kind and experienced.",
-      "zh_HK": "A: Having a dependable 朝型 on site is truly reassuring.<br/>B: Yes, they are a wonderful 朝型 who is always kind and experienced.",
-      "fr": "A: Having a dependable 朝型 on site is truly reassuring.<br/>B: Yes, they are a wonderful 朝型 who is always kind and experienced."
+      "ja": "A: <ruby>毎朝<rt>まいあさ</rt></ruby>5<ruby>時<rt>じ</rt></ruby>に<ruby>起<rt>お</rt></ruby>きて<ruby>勉強<rt>べんきょう</rt></ruby>しているんですか？すごいですね！<br/>B: <ruby>私<rt>わたし</rt></ruby>は<ruby>完全<rt>かんぜん</rt></ruby>に<ruby>朝<rt>あさ</rt></ruby><ruby>型<rt>がた</rt></ruby>の<ruby>人間<rt>にんげん</rt></ruby>なので、<ruby>朝<rt>あさ</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が<ruby>集中<rt>しゅうちゅう</rt></ruby>できるんですよ。",
+      "en": "A: You wake up at 5 a.m. every morning to study? That's amazing!<br/>B: I'm completely a morning person, so I can concentrate much better in the morning.",
+      "zh_TW": "A: 你每天早上5點起床讀書嗎？太厲害了吧！<br/>B: 因為我是徹底的晨型人，早上反而更容易集中精神。",
+      "zh_CN": "A: 你每天早上5点起床读书吗？太厉害了吧！<br/>B: 因为我是彻底的早起型人（晨型人），早上反而更容易集中精神。",
+      "ko": "A: 매일 아침 5시에 일어나서 공부하시는 거예요? 대단하세요!<br/>B: 제가 완전 아침형 인간이라서 아침에 더 집중이 잘 되거든요.",
+      "zh_HK": "A: 你每日朝早5點起身溫書呀？好勁喎！<br/>B: 我係十足嘅早起晨型人，朝早溫書集中好多。",
+      "fr": "A: Vous vous levez tous les matins à 5 heures pour étudier ? C'est impressionnant !<br/>B: Je suis du matin, j'arrive beaucoup mieux à me concentrer tôt le matin."
     },
     "related": "あさがた（授業の重要表現）"
   },
@@ -33277,13 +33277,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "oiseau de nuit / personne de nuit"
     },
     "example": {
-      "ja": "A: <ruby>現場<rt>げんば</rt></ruby>で<ruby>頼<rt>たよ</rt></ruby>りになる<ruby>夜<rt>よる</rt></ruby><ruby>型<rt>がた</rt></ruby>がいると<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>心強<rt>こころづよ</rt></ruby>いですね。<br/>B: ええ、いつも<ruby>親切<rt>しんせつ</rt></ruby>で<ruby>経験<rt>けいけん</rt></ruby><ruby>豊富<rt>ほうふ</rt></ruby>な<ruby>素晴<rt>すば</rt></ruby>らしい<ruby>夜<rt>よる</rt></ruby><ruby>型<rt>がた</rt></ruby>ですよ。",
-      "en": "A: Having a dependable 夜型 on site is truly reassuring.<br/>B: Yes, they are a wonderful 夜型 who is always kind and experienced.",
-      "zh_TW": "A: Having a dependable 夜型 on site is truly reassuring.<br/>B: Yes, they are a wonderful 夜型 who is always kind and experienced.",
-      "zh_CN": "A: Having a dependable 夜型 on site is truly reassuring.<br/>B: Yes, they are a wonderful 夜型 who is always kind and experienced.",
-      "ko": "A: Having a dependable 夜型 on site is truly reassuring.<br/>B: Yes, they are a wonderful 夜型 who is always kind and experienced.",
-      "zh_HK": "A: Having a dependable 夜型 on site is truly reassuring.<br/>B: Yes, they are a wonderful 夜型 who is always kind and experienced.",
-      "fr": "A: Having a dependable 夜型 on site is truly reassuring.<br/>B: Yes, they are a wonderful 夜型 who is always kind and experienced."
+      "ja": "A: <ruby>午前<rt>ごぜん</rt></ruby><ruby>中<rt>ちゅう</rt></ruby>はいつも<ruby>眠<rt>ねむ</rt></ruby>そうにしているね。<br/>B: <ruby>昔<rt>むかし</rt></ruby>から<ruby>夜<rt>よる</rt></ruby><ruby>型<rt>がた</rt></ruby>だから、<ruby>夜中<rt>やちゅう</rt></ruby>にならないとやる<ruby>気<rt>き</rt></ruby>が<ruby>出<rt>で</rt></ruby>ないんだよ。",
+      "en": "A: You always look sleepy in the mornings.<br/>B: I've always been a night owl, so I don't feel motivated until late at night.",
+      "zh_TW": "A: 你上午看起來總是一副沒睡飽很睏的樣子呢。<br/>B: 我從小就是夜貓子，不到半夜很難提起勁做事情。",
+      "zh_CN": "A: 你上午看起来总是一副没睡饱很困的样子呢。<br/>B: 我从小就是夜猫子，不到半夜很难提起劲做事情。",
+      "ko": "A: 오전에는 항상 졸려 보이네.<br/>B: 원래부터 저녁형 인간이라 밤이 깊어져야 의욕이 나더라고.",
+      "zh_HK": "A: 你朝頭早成日好似好恰眼瞓咁。<br/>B: 由細到大都係夜鬼夜貓子，要到半夜先有精神做嘢。",
+      "fr": "A: Tu as toujours l'air fatigué le matin.<br/>B: J'ai toujours été un oiseau de nuit, je ne trouve ma motivation que tard le soir."
     },
     "related": "よるがた（授業の重要表現）"
   },
@@ -33421,13 +33421,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "entreprise familiale"
     },
     "example": {
-      "ja": "A: <ruby>現場<rt>げんば</rt></ruby>で<ruby>頼<rt>たよ</rt></ruby>りになる<ruby>家族<rt>かぞく</rt></ruby><ruby>経営<rt>けいえい</rt></ruby>がいると<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>心強<rt>こころづよ</rt></ruby>いですね。<br/>B: ええ、いつも<ruby>親切<rt>しんせつ</rt></ruby>で<ruby>経験<rt>けいけん</rt></ruby><ruby>豊富<rt>ほうふ</rt></ruby>な<ruby>素晴<rt>すば</rt></ruby>らしい<ruby>家族<rt>かぞく</rt></ruby><ruby>経営<rt>けいえい</rt></ruby>ですよ。",
-      "en": "A: Having a dependable 家族経営 on site is truly reassuring.<br/>B: Yes, they are a wonderful 家族経営 who is always kind and experienced.",
-      "zh_TW": "A: Having a dependable 家族経営 on site is truly reassuring.<br/>B: Yes, they are a wonderful 家族経営 who is always kind and experienced.",
-      "zh_CN": "A: Having a dependable 家族経営 on site is truly reassuring.<br/>B: Yes, they are a wonderful 家族経営 who is always kind and experienced.",
-      "ko": "A: Having a dependable 家族経営 on site is truly reassuring.<br/>B: Yes, they are a wonderful 家族経営 who is always kind and experienced.",
-      "zh_HK": "A: Having a dependable 家族経営 on site is truly reassuring.<br/>B: Yes, they are a wonderful 家族経営 who is always kind and experienced.",
-      "fr": "A: Having a dependable 家族経営 on site is truly reassuring.<br/>B: Yes, they are a wonderful 家族経営 who is always kind and experienced."
+      "ja": "A: このパン<ruby>屋<rt>や</rt></ruby>さん、アットホームで<ruby>温<rt>あたた</rt></ruby>かい<ruby>雰囲気<rt>ふんいき</rt></ruby>ですね。<br/>B: <ruby>親子<rt>おやこ</rt></ruby><ruby>三<rt>さん</rt></ruby><ruby>代<rt>だい</rt></ruby>で<ruby>家族<rt>かぞく</rt></ruby><ruby>経営<rt>けいえい</rt></ruby>を<ruby>続<rt>つづ</rt></ruby>けている<ruby>老舗<rt>しにせ</rt></ruby>なんですよ。",
+      "en": "A: This bakery has such a cozy, heartwarming atmosphere.<br/>B: It's a long-established shop run as a family business across three generations.",
+      "zh_TW": "A: 這家麵包店很有家庭氛圍、給人一種溫暖的感覺呢。<br/>B: 這是祖孫三代共同維持的家族經營老店喔。",
+      "zh_CN": "A: 这家面包店很有家庭氛围、给人一种温暖的感觉呢。<br/>B: 这是祖孙三代共同维持的家族经营老店哦。",
+      "ko": "A: 이 빵집은 정말 정겹고 따뜻한 분위기네요.<br/>B: 3대에 걸쳐 가족 경영을 이어오고 있는 유서 깊은 가게예요.",
+      "zh_HK": "A: 呢間麵包舖好有家庭溫暖嘅感覺喎。<br/>B: 一家三代合力家族經營嘅老字號舖頭嚟㗎。",
+      "fr": "A: Cette boulangerie dégage une atmosphère si chaleureuse et familiale.<br/>B: C'est un commerce traditionnel géré en entreprise familiale depuis trois générations."
     },
     "related": "かぞくけいえい（授業の重要表現）"
   },
@@ -34213,13 +34213,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "succursale"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>の<ruby>支社<rt>ししゃ</rt></ruby>の<ruby>状況<rt>じょうきょう</rt></ruby>はいかがですか？<ruby>順調<rt>じゅんちょう</rt></ruby>ですか？<br/>B: はい、<ruby>同僚<rt>どうりょう</rt></ruby>と<ruby>協力<rt>きょうりょく</rt></ruby>しながら<ruby>支社<rt>ししゃ</rt></ruby>に<ruby>真面目<rt>まじめ</rt></ruby>に<ruby>取り組<rt>とりく</rt></ruby>んでいます。",
-      "en": "A: How is the situation with your 支社 lately? Going well?<br/>B: Yes, I'm working diligently on 支社 in cooperation with colleagues.",
-      "zh_TW": "A: How is the situation with your 支社 lately? Going well?<br/>B: Yes, I'm working diligently on 支社 in cooperation with colleagues.",
-      "zh_CN": "A: How is the situation with your 支社 lately? Going well?<br/>B: Yes, I'm working diligently on 支社 in cooperation with colleagues.",
-      "ko": "A: How is the situation with your 支社 lately? Going well?<br/>B: Yes, I'm working diligently on 支社 in cooperation with colleagues.",
-      "zh_HK": "A: How is the situation with your 支社 lately? Going well?<br/>B: Yes, I'm working diligently on 支社 in cooperation with colleagues.",
-      "fr": "A: How is the situation with your 支社 lately? Going well?<br/>B: Yes, I'm working diligently on 支社 in cooperation with colleagues."
+      "ja": "A: <ruby>来期<rt>らいき</rt></ruby>から<ruby>大阪<rt>おおさか</rt></ruby>の<ruby>支社<rt>ししゃ</rt></ruby>へ<ruby>転勤<rt>てんきん</rt></ruby>することになりました。<br/>B: <ruby>東京<rt>とうきょう</rt></ruby>の<ruby>本社<rt>ほんしゃ</rt></ruby>を<ruby>離<rt>はな</rt></ruby>れるのは<ruby>寂<rt>さび</rt></ruby>しいですが、<ruby>新天地<rt>しんてんち</rt></ruby>でも<ruby>応援<rt>おうえん</rt></ruby>しています！",
+      "en": "A: I'm being transferred to our Osaka branch office starting next quarter.<br/>B: It's sad to see you leave headquarters in Tokyo, but I'm rooting for you in your new post!",
+      "zh_TW": "A: 下一季開始我要調動到大阪分公司了。<br/>B: 雖然離開東京總公司有點寂寞，但我會在背後為你的新挑戰加油的！",
+      "zh_CN": "A: 下一季开始我要调动到大阪分公司了。<br/>B: 虽然离开东京总公司有点寂寞，但我会在背后为你的新挑战加油的！",
+      "ko": "A: 다음 분기부터 오사카 지사로 전근을 가게 되었어요.<br/>B: 도쿄 본사를 떠나신다니 아쉽지만 새 근무지에서도 응원할게요!",
+      "zh_HK": "A: 下一季開始我要調去大阪分公司做嘢喇。<br/>B: 離開東京總公司真係有啲唔捨得，喺新地方加油呀！",
+      "fr": "A: Je suis muté à notre succursale d'Osaka à partir du prochain trimestre.<br/>B: C'est triste de te voir quitter le siège à Tokyo, mais bon vent dans tes nouvelles fonctions !"
     },
     "related": "ししゃ（授業の重要表現）"
   },
@@ -34237,13 +34237,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "détachement / transfert temporaire dans une autre entreprise"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>の<ruby>出向<rt>しゅっこう</rt></ruby>の<ruby>状況<rt>じょうきょう</rt></ruby>はいかがですか？<ruby>順調<rt>じゅんちょう</rt></ruby>ですか？<br/>B: はい、<ruby>同僚<rt>どうりょう</rt></ruby>と<ruby>協力<rt>きょうりょく</rt></ruby>しながら<ruby>出向<rt>しゅっこう</rt></ruby>に<ruby>真面目<rt>まじめ</rt></ruby>に<ruby>取り組<rt>とりく</rt></ruby>んでいます。",
-      "en": "A: How is the situation with your 出向 lately? Going well?<br/>B: Yes, I'm working diligently on 出向 in cooperation with colleagues.",
-      "zh_TW": "A: How is the situation with your 出向 lately? Going well?<br/>B: Yes, I'm working diligently on 出向 in cooperation with colleagues.",
-      "zh_CN": "A: How is the situation with your 出向 lately? Going well?<br/>B: Yes, I'm working diligently on 出向 in cooperation with colleagues.",
-      "ko": "A: How is the situation with your 出向 lately? Going well?<br/>B: Yes, I'm working diligently on 出向 in cooperation with colleagues.",
-      "zh_HK": "A: How is the situation with your 出向 lately? Going well?<br/>B: Yes, I'm working diligently on 出向 in cooperation with colleagues.",
-      "fr": "A: How is the situation with your 出向 lately? Going well?<br/>B: Yes, I'm working diligently on 出向 in cooperation with colleagues."
+      "ja": "A: <ruby>先輩<rt>せんぱい</rt></ruby>、<ruby>来月<rt>らいげつ</rt></ruby>からグループ<ruby>企業<rt>きぎょう</rt></ruby>へ<ruby>出向<rt>しゅっこう</rt></ruby>されるそうですね。<br/>B: ええ、2<ruby>年間<rt>ねんかん</rt></ruby>の<ruby>予定<rt>よてい</rt></ruby>で<ruby>新<rt>あたら</rt></ruby>しいプロジェクトの<ruby>立<rt>た</rt></ruby>ち<ruby>上<rt>あ</rt></ruby>げに<ruby>行<rt>い</rt></ruby>ってきます。",
+      "en": "A: Senpai, I heard you are on secondment to a group partner company starting next month.<br/>B: Yes, I'm heading there for a planned two years to launch a new project.",
+      "zh_TW": "A: 前輩，聽說你下個月要外派借調到集團關聯企業了呢。<br/>B: 對啊，預計去兩年，協助開展新專案。",
+      "zh_CN": "A: 前辈，听说你下个月要外派借调到集团关联企业了呢。<br/>B: 对啊，预计去两年，协助开展新项目。",
+      "ko": "A: 선배님, 다음 달부터 그룹 계열사로 파견(출향) 가신다면서요?<br/>B: 응, 2년 예정으로 새 프로젝트 런칭하러 다녀오려고.",
+      "zh_HK": "A: 前輩，聽講你下個月開始要外借調去集團旗下公司？<br/>B: 係呀，預計去兩年幫手搞新項目。",
+      "fr": "A: Senpai, j'ai appris que tu étais détaché dans une entreprise partenaire le mois prochain.<br/>B: Oui, je pars pour deux ans afin de participer au lancement d'un nouveau projet."
     },
     "related": "しゅっこう（授業の重要表現）"
   },
@@ -34525,13 +34525,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "vente par correspondance / achats en ligne"
     },
     "example": {
-      "ja": "A: すみません、この<ruby>近<rt>ちか</rt></ruby>くに<ruby>通販<rt>つうはん</rt></ruby>はありますか？<br/>B: はい、この<ruby>道<rt>みち</rt></ruby>をまっすぐ<ruby>進<rt>すす</rt></ruby>むと<ruby>右手<rt>みぎて</rt></ruby>に<ruby>通販<rt>つうはん</rt></ruby>が<ruby>見<rt>み</rt></ruby>えますよ。",
-      "en": "A: Excuse me, is there a 通販 near here?<br/>B: Yes, if you go straight down this street, you'll see 通販 on your right.",
-      "zh_TW": "A: Excuse me, is there a 通販 near here?<br/>B: Yes, if you go straight down this street, you'll see 通販 on your right.",
-      "zh_CN": "A: Excuse me, is there a 通販 near here?<br/>B: Yes, if you go straight down this street, you'll see 通販 on your right.",
-      "ko": "A: Excuse me, is there a 通販 near here?<br/>B: Yes, if you go straight down this street, you'll see 通販 on your right.",
-      "zh_HK": "A: Excuse me, is there a 通販 near here?<br/>B: Yes, if you go straight down this street, you'll see 通販 on your right.",
-      "fr": "A: Excuse me, is there a 通販 near here?<br/>B: Yes, if you go straight down this street, you'll see 通販 on your right."
+      "ja": "A: その<ruby>素敵<rt>すてき</rt></ruby>なテーブル、どこで<ruby>買<rt>か</rt></ruby>ったんですか？<br/>B: <ruby>家具<rt>かぐ</rt></ruby>の<ruby>通販<rt>つうはん</rt></ruby>サイトで<ruby>見<rt>み</rt></ruby>つけて、<ruby>家<rt>いえ</rt></ruby>まで<ruby>配達<rt>はいたつ</rt></ruby>してもらったんですよ。",
+      "en": "A: Where did you buy that lovely table?<br/>B: I found it on an online furniture shop and had it delivered straight home.",
+      "zh_TW": "A: 那張漂亮的桌子是在哪裡買的呀？<br/>B: 我是在家具網購網站找到的，店家直接宅配送到家裡。",
+      "zh_CN": "A: 那张漂亮的桌子是在哪里买的呀？<br/>B: 我是在家具网购网站找到的，店家直接送货上门。",
+      "ko": "A: 그 멋진 식탁 어디서 사셨어요?<br/>B: 가구 인터넷 쇼핑몰(통신판매)에서 찾아서 집까지 배송받았어요.",
+      "zh_HK": "A: 張咁靚嘅枱喺邊度買㗎？<br/>B: 喺網上傢俬舖搵到，直接送貨上門送到屋企。",
+      "fr": "A: Où as-tu acheté cette magnifique table ?<br/>B: Je l'ai trouvée sur un site de vente en ligne de meubles et je me la suis fait livrer chez moi."
     },
     "related": "つうはん（授業の重要表現）"
   },
@@ -34741,13 +34741,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "fermer définitivement / fermeture du magasin"
     },
     "example": {
-      "ja": "A: すみません、この<ruby>近<rt>ちか</rt></ruby>くに<ruby>閉店<rt>へいてん</rt></ruby>はありますか？<br/>B: はい、この<ruby>道<rt>みち</rt></ruby>をまっすぐ<ruby>進<rt>すす</rt></ruby>むと<ruby>右手<rt>みぎて</rt></ruby>に<ruby>閉店<rt>へいてん</rt></ruby>が<ruby>見<rt>み</rt></ruby>えますよ。",
-      "en": "A: Excuse me, is there a 閉店 near here?<br/>B: Yes, if you go straight down this street, you'll see 閉店 on your right.",
-      "zh_TW": "A: Excuse me, is there a 閉店 near here?<br/>B: Yes, if you go straight down this street, you'll see 閉店 on your right.",
-      "zh_CN": "A: Excuse me, is there a 閉店 near here?<br/>B: Yes, if you go straight down this street, you'll see 閉店 on your right.",
-      "ko": "A: Excuse me, is there a 閉店 near here?<br/>B: Yes, if you go straight down this street, you'll see 閉店 on your right.",
-      "zh_HK": "A: Excuse me, is there a 閉店 near here?<br/>B: Yes, if you go straight down this street, you'll see 閉店 on your right.",
-      "fr": "A: Excuse me, is there a 閉店 near here?<br/>B: Yes, if you go straight down this street, you'll see 閉店 on your right."
+      "ja": "A: <ruby>駅前<rt>えきまえ</rt></ruby>の<ruby>本屋<rt>ほんや</rt></ruby>さん、シャッターが<ruby>閉<rt>し</rt></ruby>まったままだね。<br/>B: <ruby>先月<rt>せんげつ</rt></ruby><ruby>末<rt>まつ</rt></ruby>で<ruby>閉店<rt>へいてん</rt></ruby>しちゃったんだよ。よく<ruby>利用<rt>りよう</rt></ruby>していたから<ruby>残念<rt>ざんねん</rt></ruby>だな。",
+      "en": "A: The bookstore in front of the station still has its shutters down.<br/>B: It closed down permanently at the end of last month. I used it often, so it's a real shame.",
+      "zh_TW": "A: 車站前面的那家書店鐵捲門一直拉著呢。<br/>B: 上個月底就永久歇業關店了。我常常去那裡買書，好可惜喔。",
+      "zh_CN": "A: 车站前面的那家书店卷帘门一直拉着呢。<br/>B: 上个月底就永久歇业关门了。我常常去那里买书，好可惜哦。",
+      "ko": "A: 역 앞 서점 셔터가 계속 내려가 있네.<br/>B: 지난달 말로 폐점했어. 자주 이용하던 곳이라 너무 아쉽다.",
+      "zh_HK": "A: 站前間書店一路落晒閘嘅。<br/>B: 上個月底結業執咗笠喇。以前成日幫襯，真係好可惜。",
+      "fr": "A: La librairie devant la gare a toujours ses rideaux de fer baissés.<br/>B: Elle a définitivement fermé à la fin du mois dernier. J'y allais souvent, c'est bien dommage."
     },
     "related": "へいてん（授業の重要表現）"
   },
@@ -34765,13 +34765,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "fermer (une porte/magasin pour la journée)"
     },
     "example": {
-      "ja": "A: すみません、この<ruby>近<rt>ちか</rt></ruby>くに<ruby>閉<rt>し</rt></ruby>まりますはありますか？<br/>B: はい、この<ruby>道<rt>みち</rt></ruby>をまっすぐ<ruby>進<rt>すす</rt></ruby>むと<ruby>右手<rt>みぎて</rt></ruby>に<ruby>閉<rt>し</rt></ruby>まりますが<ruby>見<rt>み</rt></ruby>えますよ。",
-      "en": "A: Excuse me, is there a 閉まります near here?<br/>B: Yes, if you go straight down this street, you'll see 閉まります on your right.",
-      "zh_TW": "A: Excuse me, is there a 閉まります near here?<br/>B: Yes, if you go straight down this street, you'll see 閉まります on your right.",
-      "zh_CN": "A: Excuse me, is there a 閉まります near here?<br/>B: Yes, if you go straight down this street, you'll see 閉まります on your right.",
-      "ko": "A: Excuse me, is there a 閉まります near here?<br/>B: Yes, if you go straight down this street, you'll see 閉まります on your right.",
-      "zh_HK": "A: Excuse me, is there a 閉まります near here?<br/>B: Yes, if you go straight down this street, you'll see 閉まります on your right.",
-      "fr": "A: Excuse me, is there a 閉まります near here?<br/>B: Yes, if you go straight down this street, you'll see 閉まります on your right."
+      "ja": "A: ドアが<ruby>閉<rt>し</rt></ruby>まりますので、<ruby>無理<rt>むり</rt></ruby>なご<ruby>乗車<rt>じょうしゃ</rt></ruby>はおやめください。<br/>B: <ruby>危<rt>あぶ</rt></ruby>ない！<ruby>次<rt>つぎ</rt></ruby>の<ruby>電車<rt>でんしゃ</rt></ruby>を<ruby>待<rt>ま</rt></ruby>とう。",
+      "en": "A: The doors are closing; please refrain from rushing onto the train.<br/>B: That was close! Let's wait for the next train.",
+      "zh_TW": "A: 車門即將關閉，請勿強行擠上車。<br/>B: 好危險！我們等下一班電車吧。",
+      "zh_CN": "A: 车门即将关闭，请勿强行挤上车。<br/>B: 好危险！我们等下一趟电车吧。",
+      "ko": "A: 출입문이 닫히오니 무리하게 승차하지 마시기 바랍니다.<br/>B: 위험해! 다음 전철을 기다리자.",
+      "zh_HK": "A: 車門即將關閉，請勿衝門。<br/>B: 好危險呀！等下一班火車啦。",
+      "fr": "A: Attention, fermeture des portes. Merci de ne pas monter à bord de force.<br/>B: C'était juste ! Attendons le prochain train."
     },
     "related": "しまります（授業の重要表現）"
   },
@@ -34837,13 +34837,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "être utile / être utile"
     },
     "example": {
-      "ja": "A: <ruby>普段<rt>ふだん</rt></ruby>からよく<ruby>役に立<rt>やくにた</rt></ruby>つ・<ruby>助<rt>たす</rt></ruby>けになる<ruby>機会<rt>きかい</rt></ruby>はありますか？<br/>B: はい、<ruby>生活<rt>せいかつ</rt></ruby>リズムを<ruby>整<rt>ととの</rt></ruby>えるために<ruby>意識<rt>いしき</rt></ruby>して<ruby>役に立<rt>やくにた</rt></ruby>つ・<ruby>助<rt>たす</rt></ruby>けになるようにしています。",
-      "en": "A: Do you often have opportunities to 役に立つ・助けになる in daily life?<br/>B: Yes, I make a conscious effort to 役に立つ・助けになる to maintain a good lifestyle rhythm.",
-      "zh_TW": "A: Do you often have opportunities to 役に立つ・助けになる in daily life?<br/>B: Yes, I make a conscious effort to 役に立つ・助けになる to maintain a good lifestyle rhythm.",
-      "zh_CN": "A: Do you often have opportunities to 役に立つ・助けになる in daily life?<br/>B: Yes, I make a conscious effort to 役に立つ・助けになる to maintain a good lifestyle rhythm.",
-      "ko": "A: Do you often have opportunities to 役に立つ・助けになる in daily life?<br/>B: Yes, I make a conscious effort to 役に立つ・助けになる to maintain a good lifestyle rhythm.",
-      "zh_HK": "A: Do you often have opportunities to 役に立つ・助けになる in daily life?<br/>B: Yes, I make a conscious effort to 役に立つ・助けになる to maintain a good lifestyle rhythm.",
-      "fr": "A: Do you often have opportunities to 役に立つ・助けになる in daily life?<br/>B: Yes, I make a conscious effort to 役に立つ・助けになる to maintain a good lifestyle rhythm."
+      "ja": "A: この<ruby>本<rt>ほん</rt></ruby>、<ruby>仕事<rt>しごと</rt></ruby>に<ruby>役に立<rt>やくにた</rt></ruby>つアドバイスがたくさん<ruby>載<rt>の</rt></ruby>っているよ。<br/>B: <ruby>本当<rt>ほんとう</rt></ruby>？<ruby>新入<rt>しんにゅう</rt></ruby><ruby>社員<rt>しゃいん</rt></ruby>の<ruby>教育<rt>きょういく</rt></ruby>にも<ruby>助<rt>たす</rt></ruby>けになりそうだね。",
+      "en": "A: This book has a lot of advice that is really useful for work.<br/>B: Really? It sounds like it will be very helpful for training new employees too.",
+      "zh_TW": "A: 這本書裡面有很多對工作非常實用有幫助的建議喔。<br/>B: 真的嗎？感覺對培訓新進員工也很有助益呢。",
+      "zh_CN": "A: 这本书里面有很多对工作非常实用有帮助的建议哦。<br/>B: 真的吗？感觉对培训新进员工也很有助益呢。",
+      "ko": "A: 이 책, 업무에 유용한 조언이 많이 실려 있어.<br/>B: 정말? 신입 사원 교육에도 큰 도움이 되겠네.",
+      "zh_HK": "A: 呢本書好多對工作好實用嘅建議。<br/>B: 真係？對培訓新入職員工都好有幫助喎。",
+      "fr": "A: Ce livre regorge de conseils très utiles pour le travail.<br/>B: Vraiment ? Ça a l'air d'être une aide précieuse pour former les nouvelles recrues."
     },
     "related": "やくにたつ・たすけになる（授業の重要表現）"
   },
@@ -35029,13 +35029,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "opérateur de téléphonie mobile/compagnie de téléphone"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>の<ruby>携帯<rt>けいたい</rt></ruby><ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>状況<rt>じょうきょう</rt></ruby>はいかがですか？<ruby>順調<rt>じゅんちょう</rt></ruby>ですか？<br/>B: はい、<ruby>同僚<rt>どうりょう</rt></ruby>と<ruby>協力<rt>きょうりょく</rt></ruby>しながら<ruby>携帯<rt>けいたい</rt></ruby><ruby>会社<rt>かいしゃ</rt></ruby>に<ruby>真面目<rt>まじめ</rt></ruby>に<ruby>取り組<rt>とりく</rt></ruby>んでいます。",
-      "en": "A: How is the situation with your 携帯会社 lately? Going well?<br/>B: Yes, I'm working diligently on 携帯会社 in cooperation with colleagues.",
-      "zh_TW": "A: How is the situation with your 携帯会社 lately? Going well?<br/>B: Yes, I'm working diligently on 携帯会社 in cooperation with colleagues.",
-      "zh_CN": "A: How is the situation with your 携帯会社 lately? Going well?<br/>B: Yes, I'm working diligently on 携帯会社 in cooperation with colleagues.",
-      "ko": "A: How is the situation with your 携帯会社 lately? Going well?<br/>B: Yes, I'm working diligently on 携帯会社 in cooperation with colleagues.",
-      "zh_HK": "A: How is the situation with your 携帯会社 lately? Going well?<br/>B: Yes, I'm working diligently on 携帯会社 in cooperation with colleagues.",
-      "fr": "A: How is the situation with your 携帯会社 lately? Going well?<br/>B: Yes, I'm working diligently on 携帯会社 in cooperation with colleagues."
+      "ja": "A: <ruby>毎月<rt>まいつき</rt></ruby>のスマホ<ruby>代<rt>だい</rt></ruby>が<ruby>高<rt>たか</rt></ruby>くて<ruby>悩<rt>なや</rt></ruby>んでいるんだ。<br/>B: <ruby>格安<rt>かくやす</rt></ruby>プランを<ruby>扱<rt>あつか</rt></ruby>っている<ruby>携帯<rt>けいたい</rt></ruby><ruby>会社<rt>かいしゃ</rt></ruby>に<ruby>乗り換<rt>のりか</rt></ruby>えると、<ruby>半額<rt>はんがく</rt></ruby>くらいに<ruby>抑<rt>おさ</rt></ruby>えられるよ。",
+      "en": "A: I'm worried because my monthly phone bill is so expensive.<br/>B: If you switch to a mobile carrier offering budget plans, you can cut it by about half.",
+      "zh_TW": "A: 我每個月的手機資費都好貴，真煩惱。<br/>B: 如果跳槽換到有廉價方案的電信公司，可以省下將近一半喔。",
+      "zh_CN": "A: 我每个月的手机话费都好贵，真烦恼。<br/>B: 如果换到有廉价套餐的运营商，可以省下将近一半哦。",
+      "ko": "A: 매달 나가는 휴대폰 요금이 너무 비싸서 고민이야.<br/>B: 알뜰폰 요금제가 있는 이동통신사로 갈아타면 절반 정도로 줄일 수 있어.",
+      "zh_HK": "A: 每個月電話費好貴，好肉赤呀。<br/>B: 轉去有平價plan嘅電訊公司，可以慳返差唔多一半㗎。",
+      "fr": "A: Ma facture de portable est trop élevée tous les mois, ça m'inquiète.<br/>B: Si tu changes d'opérateur mobile pour un forfait économique, tu pourras diviser le prix par deux."
     },
     "related": "けいたいがいしゃ（授業の重要表現）"
   },
@@ -35221,13 +35221,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "se faire couper les cheveux / se couper les cheveux"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>髪<rt>かみ</rt></ruby>を<ruby>切<rt>き</rt></ruby>るの<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 髪を切る hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 髪を切る hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 髪を切る hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 髪を切る hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 髪を切る hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 髪を切る hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: あれ、<ruby>髪<rt>かみ</rt></ruby>を<ruby>切<rt>き</rt></ruby>った？すごくスッキリして<ruby>似合<rt>にあ</rt></ruby>っているよ！<br/>B: <ruby>気<rt>き</rt></ruby>づいてくれてありがとう！<ruby>思い切<rt>おもいき</rt></ruby>ってショートにしたんだ。",
+      "en": "A: Oh, did you get a haircut? It looks so neat and fresh on you!<br/>B: Thanks for noticing! I took the plunge and went for short hair.",
+      "zh_TW": "A: 咦，你剪頭髮了嗎？看起來好清爽、非常適合你耶！<br/>B: 謝謝你發現了！我下定決心剪了短髮。",
+      "zh_CN": "A: 咦，你剪头发了吗？看起来好清爽、非常适合你耶！<br/>B: 谢谢你发现了！我下定决心剪了短发。",
+      "ko": "A: 어, 머리 잘랐어? 아주 깔끔하고 잘 어울린다!<br/>B: 알아봐 줘서 고마워! 과감하게 단발로 잘랐거든.",
+      "zh_HK": "A: 咦，剪咗頭髮呀？成個人精神晒好襯你喎！<br/>B: 多謝你留意到！我的起心肝剪咗短髮。",
+      "fr": "A: Tiens, tu t'es coupé les cheveux ? Ça te donne un coup de frais, ça te va super bien !<br/>B: Merci de l'avoir remarqué ! J'ai franchi le pas et je suis passé aux cheveux courts."
     },
     "related": "かみをきる（授業の重要表現）"
   },
@@ -36469,13 +36469,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "santé mentale; état d'esprit"
     },
     "example": {
-      "ja": "A: <ruby>体調<rt>たいちょう</rt></ruby>が<ruby>優<rt>すぐ</rt></ruby>れないときは<ruby>無理<rt>むり</rt></ruby>をせず、メンタルに<ruby>気<rt>き</rt></ruby>をつけて<ruby>休<rt>やす</rt></ruby>んでくださいね。<br/>B: ありがとうございます。<ruby>温<rt>あたた</rt></ruby>かいものを<ruby>飲<rt>の</rt></ruby>んでゆっくり<ruby>休<rt>やす</rt></ruby>みます。",
-      "en": "A: When you don't feel well, don't push yourself and take good care of メンタル.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "zh_TW": "A: When you don't feel well, don't push yourself and take good care of メンタル.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "zh_CN": "A: When you don't feel well, don't push yourself and take good care of メンタル.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "ko": "A: When you don't feel well, don't push yourself and take good care of メンタル.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "zh_HK": "A: When you don't feel well, don't push yourself and take good care of メンタル.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "fr": "A: When you don't feel well, don't push yourself and take good care of メンタル.<br/>B: Thank you very much. I'll drink something warm and rest."
+      "ja": "A: プレッシャーのかかる<ruby>大<rt>だい</rt></ruby><ruby>舞台<rt>ぶたい</rt></ruby>なのに、<ruby>彼<rt>かれ</rt></ruby>は<ruby>堂々<rt>どうどう</rt></ruby>とプレーしているね。<br/>B: <ruby>本当<rt>ほんとう</rt></ruby>に<ruby>強<rt>つよ</rt></ruby>いメンタルを<ruby>持<rt>も</rt></ruby>っている<ruby>選手<rt>せんしゅ</rt></ruby>だね。",
+      "en": "A: Even on such a high-pressure stage, he's playing with complete confidence.<br/>B: He's an athlete with truly incredible mental strength.",
+      "zh_TW": "A: 在壓力這麼大的大賽舞台上，他依然能沉著自信地比賽呢。<br/>B: 他真是一位心態非常強大的選手。",
+      "zh_CN": "A: 在压力这么大的大赛舞台上，他依然能沉着自信地比赛呢。<br/>B: 他真是一位心态非常强大的选手。",
+      "ko": "A: 압박감이 큰 큰 무대인데도 그는 당당하게 플레이하네.<br/>B: 정말 멘탈이 강한 선수야.",
+      "zh_HK": "A: 喺咁大壓力嘅大場面，佢都可以打得咁淡定咁有自信。<br/>B: 佢心理質素真係好強大。",
+      "fr": "A: Malgré la pression énorme d'une telle compétition, il joue avec une assurance remarquable.<br/>B: C'est un athlète qui a un mental d'acier."
     },
     "related": "メンタル（授業の重要表現）"
   },
@@ -36853,13 +36853,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "salaire minimum"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>の<ruby>最低<rt>さいてい</rt></ruby><ruby>賃金<rt>ちんぎん</rt></ruby>の<ruby>状況<rt>じょうきょう</rt></ruby>はいかがですか？<ruby>順調<rt>じゅんちょう</rt></ruby>ですか？<br/>B: はい、<ruby>同僚<rt>どうりょう</rt></ruby>と<ruby>協力<rt>きょうりょく</rt></ruby>しながら<ruby>最低<rt>さいてい</rt></ruby><ruby>賃金<rt>ちんぎん</rt></ruby>に<ruby>真面目<rt>まじめ</rt></ruby>に<ruby>取り組<rt>とりく</rt></ruby>んでいます。",
-      "en": "A: How is the situation with your 最低賃金 lately? Going well?<br/>B: Yes, I'm working diligently on 最低賃金 in cooperation with colleagues.",
-      "zh_TW": "A: How is the situation with your 最低賃金 lately? Going well?<br/>B: Yes, I'm working diligently on 最低賃金 in cooperation with colleagues.",
-      "zh_CN": "A: How is the situation with your 最低賃金 lately? Going well?<br/>B: Yes, I'm working diligently on 最低賃金 in cooperation with colleagues.",
-      "ko": "A: How is the situation with your 最低賃金 lately? Going well?<br/>B: Yes, I'm working diligently on 最低賃金 in cooperation with colleagues.",
-      "zh_HK": "A: How is the situation with your 最低賃金 lately? Going well?<br/>B: Yes, I'm working diligently on 最低賃金 in cooperation with colleagues.",
-      "fr": "A: How is the situation with your 最低賃金 lately? Going well?<br/>B: Yes, I'm working diligently on 最低賃金 in cooperation with colleagues."
+      "ja": "A: <ruby>今年<rt>ことし</rt></ruby>の<ruby>秋<rt>あき</rt></ruby>から<ruby>全国<rt>ぜんこく</rt></ruby>で<ruby>最低<rt>さいてい</rt></ruby><ruby>賃金<rt>ちんぎん</rt></ruby>が<ruby>引き上<rt>ひきあ</rt></ruby>げられるそうですね。<br/>B: アルバイトをする<ruby>学生<rt>がくせい</rt></ruby>にとっては<ruby>嬉<rt>うれ</rt></ruby>しいニュースですね。",
+      "en": "A: I heard the minimum wage will be raised nationwide starting this autumn.<br/>B: That's welcome news for students working part-time jobs.",
+      "zh_TW": "A: 聽說今年秋天開始全國的最低薪資要調漲了呢。<br/>B: 這對打工的學生來說是個令人高興的好消息呢。",
+      "zh_CN": "A: 听说今年秋天开始全国的最低工资要上调了呢。<br/>B: 这对打工的学生来说是个令人高兴的好消息呢。",
+      "ko": "A: 올가을부터 전국 최저임금이 인상된다고 하네요.<br/>B: 아르바이트를 하는 학생들에게는 반가운 소식이네요.",
+      "zh_HK": "A: 聽講今年秋天開始全日本嘅最低工資會調高喎。<br/>B: 對於班做兼職嘅學生哥嚟講真係天大喜訊。",
+      "fr": "A: J'ai entendu dire que le salaire minimum allait être augmenté dans tout le pays cet automne.<br/>B: C'est une excellente nouvelle pour les étudiants qui font des petits boulots."
     },
     "related": "さいていちんぎん（授業の重要表現）"
   },
@@ -37093,13 +37093,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "subir des dommages; être touché par une catastrophe"
     },
     "example": {
-      "ja": "A: <ruby>普段<rt>ふだん</rt></ruby>からよく<ruby>被害<rt>ひがい</rt></ruby>に<ruby>遭<rt>あ</rt></ruby>う<ruby>機会<rt>きかい</rt></ruby>はありますか？<br/>B: はい、<ruby>生活<rt>せいかつ</rt></ruby>リズムを<ruby>整<rt>ととの</rt></ruby>えるために<ruby>意識<rt>いしき</rt></ruby>して<ruby>被害<rt>ひがい</rt></ruby>に<ruby>遭<rt>あ</rt></ruby>うようにしています。",
-      "en": "A: Do you often have opportunities to 被害に遭う in daily life?<br/>B: Yes, I make a conscious effort to 被害に遭う to maintain a good lifestyle rhythm.",
-      "zh_TW": "A: Do you often have opportunities to 被害に遭う in daily life?<br/>B: Yes, I make a conscious effort to 被害に遭う to maintain a good lifestyle rhythm.",
-      "zh_CN": "A: Do you often have opportunities to 被害に遭う in daily life?<br/>B: Yes, I make a conscious effort to 被害に遭う to maintain a good lifestyle rhythm.",
-      "ko": "A: Do you often have opportunities to 被害に遭う in daily life?<br/>B: Yes, I make a conscious effort to 被害に遭う to maintain a good lifestyle rhythm.",
-      "zh_HK": "A: Do you often have opportunities to 被害に遭う in daily life?<br/>B: Yes, I make a conscious effort to 被害に遭う to maintain a good lifestyle rhythm.",
-      "fr": "A: Do you often have opportunities to 被害に遭う in daily life?<br/>B: Yes, I make a conscious effort to 被害に遭う to maintain a good lifestyle rhythm."
+      "ja": "A: <ruby>昨日<rt>きのう</rt></ruby>の<ruby>大型<rt>おおがた</rt></ruby><ruby>台風<rt>たいふう</rt></ruby>で、<ruby>何<rt>なに</rt></ruby>か<ruby>被害<rt>ひがい</rt></ruby>に<ruby>遭<rt>あ</rt></ruby>いませんでしたか？<br/>B: <ruby>幸<rt>さいわ</rt></ruby>い<ruby>窓<rt>まど</rt></ruby>や<ruby>屋根<rt>やね</rt></ruby>は<ruby>無事<rt>ぶじ</rt></ruby>でしたが、<ruby>一<rt>いち</rt></ruby><ruby>晩<rt>ばん</rt></ruby><ruby>中<rt>ちゅう</rt></ruby><ruby>停電<rt>ていでん</rt></ruby>して<ruby>大変<rt>たいへん</rt></ruby>でした。",
+      "en": "A: Did you suffer any damage from yesterday's massive typhoon?<br/>B: Fortunately our windows and roof were safe, but we lost power all night which was tough.",
+      "zh_TW": "A: 昨天的強烈颱風，你們有遭受什麼災情損失嗎？<br/>B: 幸好窗戶和屋頂都沒事，但停電了一整晚真的很折騰。",
+      "zh_CN": "A: 昨天的强烈台风，你们有遭受什么灾情损失吗？<br/>B: 幸好窗户和屋顶都没事，但停电了一整晚真的很折腾。",
+      "ko": "A: 어제 대형 태풍으로 무슨 피해를 입지는 않으셨나요?<br/>B: 다행히 창문이나 지붕은 무사했지만 밤새 정전이라 고생했어요.",
+      "zh_HK": "A: 琴日個大颱風，你有冇受災受影響？<br/>B: 好彩門窗屋頂冇事，不過成晚停電真係好慘。",
+      "fr": "A: Avez-vous subi des dégâts à cause du violent typhon d'hier ?<br/>B: Heureusement, les fenêtres et le toit sont intacts, mais nous avons été privés d'électricité toute la nuit."
     },
     "related": "ひがいにあう（授業の重要表現）"
   },
@@ -37214,12 +37214,12 @@ window.CLASS_VOCAB_DATA = [
     },
     "example": {
       "ja": "A: この<ruby>魚<rt>さかな</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby>の<ruby>漢字<rt>かんじ</rt></ruby>、<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>教<rt>おし</rt></ruby>えていただけますか？<br/>B: これは「<ruby>鮭<rt>さけ</rt></ruby>」と<ruby>書<rt>か</rt></ruby>いて「さけ」と<ruby>読<rt>よ</rt></ruby>みますよ。",
-      "en": "A: Could you teach me how to read the kanji for this fish's name?<br/>B: It is written '鮭' and read as 'sake'.",
-      "zh_TW": "A: Could you teach me how to read the kanji for this fish's name?<br/>B: It is written '鮭' and read as 'sake'.",
-      "zh_CN": "A: Could you teach me how to read the kanji for this fish's name?<br/>B: It is written '鮭' and read as 'sake'.",
-      "ko": "A: Could you teach me how to read the kanji for this fish's name?<br/>B: It is written '鮭' and read as 'sake'.",
-      "zh_HK": "A: Could you teach me how to read the kanji for this fish's name?<br/>B: It is written '鮭' and read as 'sake'.",
-      "fr": "A: Could you teach me how to read the kanji for this fish's name?<br/>B: It is written '鮭' and read as 'sake'."
+      "en": "A: Could you teach me how to read the kanji for this fish's name?<br/>B: It is written with the kanji for salmon and read as 'sake'.",
+      "zh_TW": "A: 可以請您教我這條魚名字的漢字怎麼唸嗎？<br/>B: 這個字寫作「鮭」，唸作「さけ（sake）」喔。",
+      "zh_CN": "A: 可以请您教我这条鱼名字的汉字怎么读吗？<br/>B: 这个字写作「鲑」，读作「さけ（sake）」哦。",
+      "ko": "A: 이 물고기 이름의 한자 읽는 법을 알려주실 수 있나요?<br/>B: 이건 연어 '鮭'자로 쓰고 '사케(sake)'라고 읽어요.",
+      "zh_HK": "A: 可唔可以教我條魚個名嘅漢字點讀？<br/>B: 呢個字寫做「鮭」，讀做「さけ（sake）」㗎。",
+      "fr": "A: Pourriez-vous m'apprendre à lire le kanji du nom de ce poisson ?<br/>B: Il s'écrit avec le kanji du saumon et se lit 'sake'."
     },
     "related": "よみかた（授業の重要表現）"
   },
@@ -37357,13 +37357,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "dépassé; surcapacité"
     },
     "example": {
-      "ja": "A: すみません、この<ruby>近<rt>ちか</rt></ruby>くにキャパオーバーはありますか？<br/>B: はい、この<ruby>道<rt>みち</rt></ruby>をまっすぐ<ruby>進<rt>すす</rt></ruby>むと<ruby>右手<rt>みぎて</rt></ruby>にキャパオーバーが<ruby>見<rt>み</rt></ruby>えますよ。",
-      "en": "A: Excuse me, is there a キャパオーバー near here?<br/>B: Yes, if you go straight down this street, you'll see キャパオーバー on your right.",
-      "zh_TW": "A: Excuse me, is there a キャパオーバー near here?<br/>B: Yes, if you go straight down this street, you'll see キャパオーバー on your right.",
-      "zh_CN": "A: Excuse me, is there a キャパオーバー near here?<br/>B: Yes, if you go straight down this street, you'll see キャパオーバー on your right.",
-      "ko": "A: Excuse me, is there a キャパオーバー near here?<br/>B: Yes, if you go straight down this street, you'll see キャパオーバー on your right.",
-      "zh_HK": "A: Excuse me, is there a キャパオーバー near here?<br/>B: Yes, if you go straight down this street, you'll see キャパオーバー on your right.",
-      "fr": "A: Excuse me, is there a キャパオーバー near here?<br/>B: Yes, if you go straight down this street, you'll see キャパオーバー on your right."
+      "ja": "A: <ruby>一<rt>いち</rt></ruby><ruby>人<rt>にん</rt></ruby>で<ruby>三<rt>みっ</rt></ruby>つの<ruby>案件<rt>あんけん</rt></ruby>を<ruby>同時<rt>どうじ</rt></ruby>に<ruby>抱<rt>かか</rt></ruby>えていて、もうキャパオーバーです。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、<ruby>他<rt>た</rt></ruby>のメンバーに<ruby>仕事<rt>しごと</rt></ruby>を<ruby>分担<rt>ぶんたん</rt></ruby>してもらいましょう。",
+      "en": "A: I'm handling three projects all by myself, and I'm totally overwhelmed.<br/>B: Don't push yourself too hard. Let's ask other team members to share the workload.",
+      "zh_TW": "A: 我一個人同時扛了三個專案，已經徹底超出負荷了。<br/>B: 不要勉強硬撐，我們請其他成員一起分擔工作吧。",
+      "zh_CN": "A: 我一个人同时扛了三个项目，已经彻底超出负荷了。<br/>B: 不要勉强硬撑，我们请其他成员一起分担工作吧。",
+      "ko": "A: 혼자서 세 건의 프로젝트를 동시에 맡고 있어서 완전히 한계(과부하)예요.<br/>B: 무리하지 말고 다른 팀원들에게 업무를 분담해 달라고 해요.",
+      "zh_HK": "A: 我一個人頂住三個project，已經爆煲頂唔順喇。<br/>B: 唔好夾硬頂，叫其他同事分擔下啲工作啦。",
+      "fr": "A: Je gère trois projets tout seul en même temps, je suis complètement dépassé.<br/>B: Ne force pas trop. Demandons aux autres collègues de se répartir la charge de travail."
     },
     "related": "キャパオーバー（授業の重要表現）"
   },
@@ -37909,13 +37909,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "élever des enfants"
     },
     "example": {
-      "ja": "A: <ruby>現場<rt>げんば</rt></ruby>で<ruby>頼<rt>たよ</rt></ruby>りになる<ruby>子育<rt>こそだ</rt></ruby>てがいると<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>心強<rt>こころづよ</rt></ruby>いですね。<br/>B: ええ、いつも<ruby>親切<rt>しんせつ</rt></ruby>で<ruby>経験<rt>けいけん</rt></ruby><ruby>豊富<rt>ほうふ</rt></ruby>な<ruby>素晴<rt>すば</rt></ruby>らしい<ruby>子育<rt>こそだ</rt></ruby>てですよ。",
-      "en": "A: Having a dependable 子育て on site is truly reassuring.<br/>B: Yes, they are a wonderful 子育て who is always kind and experienced.",
-      "zh_TW": "A: Having a dependable 子育て on site is truly reassuring.<br/>B: Yes, they are a wonderful 子育て who is always kind and experienced.",
-      "zh_CN": "A: Having a dependable 子育て on site is truly reassuring.<br/>B: Yes, they are a wonderful 子育て who is always kind and experienced.",
-      "ko": "A: Having a dependable 子育て on site is truly reassuring.<br/>B: Yes, they are a wonderful 子育て who is always kind and experienced.",
-      "zh_HK": "A: Having a dependable 子育て on site is truly reassuring.<br/>B: Yes, they are a wonderful 子育て who is always kind and experienced.",
-      "fr": "A: Having a dependable 子育て on site is truly reassuring.<br/>B: Yes, they are a wonderful 子育て who is always kind and experienced."
+      "ja": "A: <ruby>仕事<rt>しごと</rt></ruby>と<ruby>子育<rt>こそだ</rt></ruby>ての<ruby>両立<rt>りょうりつ</rt></ruby>は<ruby>毎日<rt>まいにち</rt></ruby><ruby>本当<rt>ほんとう</rt></ruby>に<ruby>忙<rt>いそが</rt></ruby>しいですね。<br/>B: ええ、でも<ruby>子供<rt>こども</rt></ruby>の<ruby>成長<rt>せいちょう</rt></ruby>を<ruby>近<rt>ちか</rt></ruby>くで<ruby>見守<rt>みまも</rt></ruby>れるのは<ruby>何<rt>なに</rt></ruby>よりの<ruby>喜<rt>よろこ</rt></ruby>びです。",
+      "en": "A: Balancing work and child-rearing is truly busy every single day.<br/>B: Yes, but watching our child grow up right beside us is the greatest joy of all.",
+      "zh_TW": "A: 同時兼顧工作和育兒，每天真的都好忙碌呢。<br/>B: 是啊，不過能在身邊看著孩子長大是無可比擬的喜悅。",
+      "zh_CN": "A: 同时兼顾工作和育儿，每天真的都好忙碌呢。<br/>B: 是啊，不过能在身边看着孩子长大是无可比拟的喜悦。",
+      "ko": "A: 일과 육아를 병행하는 건 매일 정말 눈코 뜰 새 없이 바쁘네요.<br/>B: 맞아요, 그래도 아이가 자라는 모습을 곁에서 지켜보는 건 최고의 기쁨이죠.",
+      "zh_HK": "A: 一路返工一路湊仔，每日真係忙到七彩。<br/>B: 係呀，不過睇住個仔日日長大，幾辛苦都值得。",
+      "fr": "A: Concilier travail et éducation des enfants demande un rythme effréné tous les jours.<br/>B: Oui, mais voir grandir son enfant au quotidien est la plus belle des joies."
     },
     "related": "こそだて（授業の重要表現）"
   },
@@ -38687,13 +38687,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Seafood"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>海鮮<rt>かいせん</rt></ruby>でも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>海鮮<rt>かいせん</rt></ruby>のお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 海鮮 for lunch?<br/>B: Sounds great! There's a delicious 海鮮 shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 海鮮 for lunch?<br/>B: Sounds great! There's a delicious 海鮮 shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 海鮮 for lunch?<br/>B: Sounds great! There's a delicious 海鮮 shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 海鮮 for lunch?<br/>B: Sounds great! There's a delicious 海鮮 shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 海鮮 for lunch?<br/>B: Sounds great! There's a delicious 海鮮 shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 海鮮 for lunch?<br/>B: Sounds great! There's a delicious 海鮮 shop near the station, let's go."
+      "ja": "A: <ruby>北海道<rt>ほっかいどう</rt></ruby>へ<ruby>旅行<rt>りょこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>ったら、<ruby>何<rt>なに</rt></ruby>を<ruby>食<rt>た</rt></ruby>べたいですか？<br/>B: カニやイクラがたっぷり<ruby>乗<rt>の</rt></ruby>った<ruby>新鮮<rt>しんせん</rt></ruby>な<ruby>海鮮<rt>かいせん</rt></ruby><ruby>丼<rt>どんぶり</rt></ruby>を<ruby>食<rt>た</rt></ruby>べたいです！",
+      "en": "A: When you travel to Hokkaido, what would you like to eat?<br/>B: I want to eat a fresh seafood bowl loaded with crab and salmon roe!",
+      "zh_TW": "A: 去北海道旅行的話，你會想吃什麼？<br/>B: 我想吃鋪滿滿滿螃蟹和鮭魚卵的新鮮海鮮丼！",
+      "zh_CN": "A: 去北海道旅行的话，你会想吃什么？<br/>B: 我想吃铺满满满螃蟹和鲑鱼籽的新鲜海鲜丼！",
+      "ko": "A: 홋카이도로 여행을 가면 뭘 먹고 싶으세요?<br/>B: 게와 연어알이 듬뿍 올라간 신선한 해물 덮밥(카이센동)을 먹고 싶어요!",
+      "zh_HK": "A: 去北海道旅行嘅話你想食咩？<br/>B: 我想食鋪滿蟹肉同三文魚籽嘅新鮮海鮮丼！",
+      "fr": "A: Si tu pars en voyage à Hokkaido, qu'aimerais-tu manger ?<br/>B: J'aimerais manger un bol de fruits de mer frais garni de crabe et d'œufs de saumon !"
     },
     "related": "Seafood — fresh fish and shellfish from the sea. Used in restaurant names and menus."
   },
@@ -39237,13 +39237,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Healthy"
     },
     "example": {
-      "ja": "A: <ruby>体調<rt>たいちょう</rt></ruby>が<ruby>優<rt>すぐ</rt></ruby>れないときは<ruby>無理<rt>むり</rt></ruby>をせず、<ruby>健康<rt>けんこう</rt></ruby><ruby>的<rt>てき</rt></ruby>に<ruby>気<rt>き</rt></ruby>をつけて<ruby>休<rt>やす</rt></ruby>んでくださいね。<br/>B: ありがとうございます。<ruby>温<rt>あたた</rt></ruby>かいものを<ruby>飲<rt>の</rt></ruby>んでゆっくり<ruby>休<rt>やす</rt></ruby>みます。",
-      "en": "A: When you don't feel well, don't push yourself and take good care of 健康的.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "zh_TW": "A: When you don't feel well, don't push yourself and take good care of 健康的.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "zh_CN": "A: When you don't feel well, don't push yourself and take good care of 健康的.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "ko": "A: When you don't feel well, don't push yourself and take good care of 健康的.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "zh_HK": "A: When you don't feel well, don't push yourself and take good care of 健康的.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "fr": "A: When you don't feel well, don't push yourself and take good care of 健康的.<br/>B: Thank you very much. I'll drink something warm and rest."
+      "ja": "A: お<ruby>弁当<rt>べんとう</rt></ruby>の<ruby>色合<rt>いろあ</rt></ruby>いが<ruby>鮮<rt>あざ</rt></ruby>やかで、とても<ruby>健康<rt>けんこう</rt></ruby><ruby>的<rt>てき</rt></ruby>ですね。<br/>B: <ruby>栄養<rt>えいよう</rt></ruby>バランスを<ruby>考<rt>かんが</rt></ruby>えて、<ruby>野菜<rt>やさい</rt></ruby>を<ruby>多<rt>おお</rt></ruby>めに<ruby>入<rt>い</rt></ruby>れるようにしているんです。",
+      "en": "A: The colors of your bento are so vibrant and look very healthy.<br/>B: I try to pack extra vegetables to keep a balanced nutritional intake.",
+      "zh_TW": "A: 你的便當色彩好豐富，看起來非常健康呢。<br/>B: 考慮到營養均衡，我特地多放了一些蔬菜。",
+      "zh_CN": "A: 你的便当色彩好丰富，看起来非常健康呢。<br/>B: 考虑到营养均衡，我特地多放了一些蔬菜。",
+      "ko": "A: 도시락 색감이 알록달록해서 참 건강해 보이네요.<br/>B: 영양 균형을 생각해서 채소를 넉넉히 넣으려고 하거든요.",
+      "zh_HK": "A: 你個飯盒啲色水好豐富，好健康喎。<br/>B: 講求營養均衡吖嘛，我專登擺多啲菜。",
+      "fr": "A: Votre bento est très coloré et a l'air particulièrement sain.<br/>B: J'essaie d'y mettre beaucoup de légumes pour veiller à l'équilibre nutritionnel."
     },
     "related": "Healthy — describes something that promotes good health. Used as a な-adjective."
   },
@@ -39662,13 +39662,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "To shut down a business / to bankrupt a shop"
     },
     "example": {
-      "ja": "A: すみません、この<ruby>近<rt>ちか</rt></ruby>くに<ruby>店<rt>みせ</rt></ruby>を<ruby>潰<rt>つぶ</rt></ruby>すはありますか？<br/>B: はい、この<ruby>道<rt>みち</rt></ruby>をまっすぐ<ruby>進<rt>すす</rt></ruby>むと<ruby>右手<rt>みぎて</rt></ruby>に<ruby>店<rt>みせ</rt></ruby>を<ruby>潰<rt>つぶ</rt></ruby>すが<ruby>見<rt>み</rt></ruby>えますよ。",
-      "en": "A: Excuse me, is there a 店を潰す near here?<br/>B: Yes, if you go straight down this street, you'll see 店を潰す on your right.",
-      "zh_TW": "A: Excuse me, is there a 店を潰す near here?<br/>B: Yes, if you go straight down this street, you'll see 店を潰す on your right.",
-      "zh_CN": "A: Excuse me, is there a 店を潰す near here?<br/>B: Yes, if you go straight down this street, you'll see 店を潰す on your right.",
-      "ko": "A: Excuse me, is there a 店を潰す near here?<br/>B: Yes, if you go straight down this street, you'll see 店を潰す on your right.",
-      "zh_HK": "A: Excuse me, is there a 店を潰す near here?<br/>B: Yes, if you go straight down this street, you'll see 店を潰す on your right.",
-      "fr": "A: Excuse me, is there a 店を潰す near here?<br/>B: Yes, if you go straight down this street, you'll see 店を潰す on your right."
+      "ja": "A: あんなに<ruby>人気<rt>にんき</rt></ruby>だったカフェが<ruby>半年<rt>はんとし</rt></ruby>で<ruby>店<rt>みせ</rt></ruby>を<ruby>潰<rt>つぶ</rt></ruby>してしまったそうだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>な<ruby>店舗<rt>てんぽ</rt></ruby><ruby>拡大<rt>かくだい</rt></ruby>と<ruby>資金繰<rt>しきんぐ</rt></ruby>りの<ruby>悪化<rt>あっか</rt></ruby>が<ruby>原因<rt>げんいん</rt></ruby>だったらしいよ。",
+      "en": "A: I heard that café, which used to be so popular, went out of business in just six months.<br/>B: Apparently overly aggressive expansion and cash flow trouble were the cause.",
+      "zh_TW": "A: 聽說那家原本那麼有人氣的咖啡店，半年內就把店給搞垮歇業了。<br/>B: 聽說是因為過度擴展分店以及資金周轉不靈導致的。",
+      "zh_CN": "A: 听说那家原本那么有人气的咖啡店，半年内就把店给搞垮歇业了。<br/>B: 听说是因为过度扩张以及资金周转不灵导致的。",
+      "ko": "A: 그렇게 인기 있던 카페가 반년 만에 가게 문을 닫아버렸대(망했대).<br/>B: 무리한 매장 확장과 자금난 악화가 원인이었다나 봐.",
+      "zh_HK": "A: 原本咁好生意嗰間咖啡舖，半年就執咗笠。<br/>B: 聽講係因為夾硬開分店同資金周轉不靈搞到咁。",
+      "fr": "A: J'ai entendu dire que ce café pourtant si populaire avait fait faillite en six mois.<br/>B: Il paraît que cela était dû à une expansion trop rapide et à des problèmes de trésorerie."
     },
     "related": "To shut down a business / to bankrupt a shop — 潰す（つぶす）= to crush/destroy. Used when a business fails or is forced to clo"
   },
@@ -40487,13 +40487,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Close friend / good friend"
     },
     "example": {
-      "ja": "A: <ruby>現場<rt>げんば</rt></ruby>で<ruby>頼<rt>たよ</rt></ruby>りになる<ruby>仲<rt>なか</rt></ruby>がいい<ruby>友達<rt>ともだち</rt></ruby>がいると<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>心強<rt>こころづよ</rt></ruby>いですね。<br/>B: ええ、いつも<ruby>親切<rt>しんせつ</rt></ruby>で<ruby>経験<rt>けいけん</rt></ruby><ruby>豊富<rt>ほうふ</rt></ruby>な<ruby>素晴<rt>すば</rt></ruby>らしい<ruby>仲<rt>なか</rt></ruby>がいい<ruby>友達<rt>ともだち</rt></ruby>ですよ。",
-      "en": "A: Having a dependable 仲がいい友達 on site is truly reassuring.<br/>B: Yes, they are a wonderful 仲がいい友達 who is always kind and experienced.",
-      "zh_TW": "A: Having a dependable 仲がいい友達 on site is truly reassuring.<br/>B: Yes, they are a wonderful 仲がいい友達 who is always kind and experienced.",
-      "zh_CN": "A: Having a dependable 仲がいい友達 on site is truly reassuring.<br/>B: Yes, they are a wonderful 仲がいい友達 who is always kind and experienced.",
-      "ko": "A: Having a dependable 仲がいい友達 on site is truly reassuring.<br/>B: Yes, they are a wonderful 仲がいい友達 who is always kind and experienced.",
-      "zh_HK": "A: Having a dependable 仲がいい友達 on site is truly reassuring.<br/>B: Yes, they are a wonderful 仲がいい友達 who is always kind and experienced.",
-      "fr": "A: Having a dependable 仲がいい友達 on site is truly reassuring.<br/>B: Yes, they are a wonderful 仲がいい友達 who is always kind and experienced."
+      "ja": "A: <ruby>週末<rt>しゅうまつ</rt></ruby>はどんなふうに<ruby>過<rt>す</rt></ruby>ごしましたか？<br/>B: <ruby>学生<rt>がくせい</rt></ruby><ruby>時代<rt>じだい</rt></ruby>から<ruby>仲<rt>なか</rt></ruby>がいい<ruby>友達<rt>ともだち</rt></ruby>と<ruby>集<rt>あつ</rt></ruby>まって、<ruby>一<rt>いち</rt></ruby><ruby>日<rt>にち</rt></ruby><ruby>中<rt>ちゅう</rt></ruby>おしゃべりしていました。",
+      "en": "A: How did you spend your weekend?<br/>B: I got together with good friends from my school days and chatted all day.",
+      "zh_TW": "A: 你週末過得如何？<br/>B: 我跟從學生時代感情就很好的朋友聚會，聊了一整天。",
+      "zh_CN": "A: 你周末过得如何？<br/>B: 我跟从学生时代感情就很好的朋友聚会，聊了一整天。",
+      "ko": "A: 주말은 어떻게 보내셨어요?<br/>B: 학창 시절부터 친하게 지낸 친구들과 모여서 하루 종일 수다를 떨었어요.",
+      "zh_HK": "A: 你個禮拜天點過呀？<br/>B: 同班讀書嗰陣好老友嘅朋友聚埋一齊，傾咗成日偈。",
+      "fr": "A: Comment s'est passé votre week-end ?<br/>B: J'ai retrouvé des amis proches de mes années étudiantes et on a discuté toute la journée."
     },
     "related": "Close friend / good friend — a friend you have a strong, warm relationship with. 仲（なか）refers to the relationship between"
   },
@@ -41437,13 +41437,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "poids (de son corps)"
     },
     "example": {
-      "ja": "A: <ruby>体調<rt>たいちょう</rt></ruby>が<ruby>優<rt>すぐ</rt></ruby>れないときは<ruby>無理<rt>むり</rt></ruby>をせず、<ruby>体重<rt>たいじゅう</rt></ruby>に<ruby>気<rt>き</rt></ruby>をつけて<ruby>休<rt>やす</rt></ruby>んでくださいね。<br/>B: ありがとうございます。<ruby>温<rt>あたた</rt></ruby>かいものを<ruby>飲<rt>の</rt></ruby>んでゆっくり<ruby>休<rt>やす</rt></ruby>みます。",
-      "en": "A: When you don't feel well, don't push yourself and take good care of 体重.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "zh_TW": "A: When you don't feel well, don't push yourself and take good care of 体重.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "zh_CN": "A: When you don't feel well, don't push yourself and take good care of 体重.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "ko": "A: When you don't feel well, don't push yourself and take good care of 体重.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "zh_HK": "A: When you don't feel well, don't push yourself and take good care of 体重.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "fr": "A: When you don't feel well, don't push yourself and take good care of 体重.<br/>B: Thank you very much. I'll drink something warm and rest."
+      "ja": "A: <ruby>毎日<rt>まいにち</rt></ruby>のウォーキングを<ruby>続<rt>つづ</rt></ruby>けたら、<ruby>体重<rt>たいじゅう</rt></ruby>が3キロ<ruby>落<rt>お</rt></ruby>ちたよ！<br/>B: すごい！<ruby>健康<rt>けんこう</rt></ruby><ruby>的<rt>てき</rt></ruby>にダイエットができて<ruby>素晴<rt>すば</rt></ruby>らしい<ruby>成果<rt>せいか</rt></ruby>だね。",
+      "en": "A: By sticking to my daily walks, my weight dropped by 3 kilograms!<br/>B: That's awesome! Losing weight in a healthy way is a great achievement.",
+      "zh_TW": "A: 持續每天散步快走之後，我的體重減了3公斤耶！<br/>B: 太厲害了！以健康的方式成功減重，真是了不起的成果。",
+      "zh_CN": "A: 持续每天散步快走之后，我的体重减了3公斤耶！<br/>B: 太厉害了！以健康的方式成功减重，真是了不起的成果。",
+      "ko": "A: 매일 걷기 운동을 꾸준히 했더니 체중이 3킬로나 줄었어!<br/>B: 대단하다! 건강하게 다이어트해서 정말 훌륭한 성과네.",
+      "zh_HK": "A: 堅持每日散步快步行之後，我體重輕咗3公斤呀！<br/>B: 好犀利！健康減肥減得咁成功，真係好成績。",
+      "fr": "A: En marchant régulièrement tous les jours, mon poids a baissé de trois kilos !<br/>B: Formidable ! Perdre du poids de façon saine est une vraie réussite."
     },
     "related": "Body weight — the measurement of how much a person's body weighs."
   },
@@ -41787,13 +41787,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "To share the same hobbies / to have matching interests"
     },
     "example": {
-      "ja": "A: <ruby>普段<rt>ふだん</rt></ruby>からよく<ruby>趣味<rt>しゅみ</rt></ruby>が<ruby>合<rt>あ</rt></ruby>う<ruby>機会<rt>きかい</rt></ruby>はありますか？<br/>B: はい、<ruby>生活<rt>せいかつ</rt></ruby>リズムを<ruby>整<rt>ととの</rt></ruby>えるために<ruby>意識<rt>いしき</rt></ruby>して<ruby>趣味<rt>しゅみ</rt></ruby>が<ruby>合<rt>あ</rt></ruby>うようにしています。",
-      "en": "A: Do you often have opportunities to 趣味が合う in daily life?<br/>B: Yes, I make a conscious effort to 趣味が合う to maintain a good lifestyle rhythm.",
-      "zh_TW": "A: Do you often have opportunities to 趣味が合う in daily life?<br/>B: Yes, I make a conscious effort to 趣味が合う to maintain a good lifestyle rhythm.",
-      "zh_CN": "A: Do you often have opportunities to 趣味が合う in daily life?<br/>B: Yes, I make a conscious effort to 趣味が合う to maintain a good lifestyle rhythm.",
-      "ko": "A: Do you often have opportunities to 趣味が合う in daily life?<br/>B: Yes, I make a conscious effort to 趣味が合う to maintain a good lifestyle rhythm.",
-      "zh_HK": "A: Do you often have opportunities to 趣味が合う in daily life?<br/>B: Yes, I make a conscious effort to 趣味が合う to maintain a good lifestyle rhythm.",
-      "fr": "A: Do you often have opportunities to 趣味が合う in daily life?<br/>B: Yes, I make a conscious effort to 趣味が合う to maintain a good lifestyle rhythm."
+      "ja": "A: <ruby>新<rt>あたら</rt></ruby>しく<ruby>入<rt>はい</rt></ruby>った<ruby>同僚<rt>どうりょう</rt></ruby>とはもう<ruby>打ち解<rt>うちと</rt></ruby>けられた？<br/>B: うん、<ruby>映画<rt>えいが</rt></ruby>やキャンプの<ruby>趣味<rt>しゅみ</rt></ruby>が<ruby>合<rt>あ</rt></ruby>うからすぐに<ruby>仲良<rt>なかよ</rt></ruby>くなれたよ。",
+      "en": "A: Have you bonded with your new coworker yet?<br/>B: Yeah, we share the same hobbies like movies and camping, so we hit it off right away.",
+      "zh_TW": "A: 你跟新來的同事處得融洽了嗎？<br/>B: 嗯，因為在電影和露營上的興趣很投合，所以馬上就變成了好朋友。",
+      "zh_CN": "A: 你跟新来的同事处得融洽了吗？<br/>B: 嗯，因为在电影和露营上的兴趣很投缘，所以马上就变成了好朋友。",
+      "ko": "A: 새로 들어온 동료와는 벌써 친해졌어?<br/>B: 응, 영화나 캠핑 같은 취미가 잘 맞아서 금방 친해졌어.",
+      "zh_HK": "A: 同新嚟嗰位同事熟絡咗未呀？<br/>B: 熟咗喇，大家喺睇戲同露營嘅興趣好夾，好快就傾得埋。",
+      "fr": "A: Tu t'entends bien avec ton nouveau collègue ?<br/>B: Oui, nous partageons les mêmes centres d'intérêt comme le cinéma et le camping, le courant est passé tout de suite."
     },
     "related": "To share the same hobbies / to have matching interests — describes two people whose leisure interests align, often makin"
   },
@@ -41937,13 +41937,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Hairstyle"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>髪型<rt>かみがた</rt></ruby>の<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 髪型 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 髪型 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 髪型 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 髪型 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 髪型 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 髪型 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: <ruby>次<rt>つぎ</rt></ruby>の<ruby>美容<rt>びよう</rt></ruby><ruby>院<rt>いん</rt></ruby>ではどんな<ruby>髪型<rt>かみがた</rt></ruby>にしようか<ruby>迷<rt>まよ</rt></ruby>っているんだ。<br/>B: <ruby>夏<rt>なつ</rt></ruby>だし、<ruby>首<rt>くび</rt></ruby><ruby>回<rt>まわ</rt></ruby>りをすっきりさせたボブヘアなんて<ruby>似合<rt>にあ</rt></ruby>いそうだよ。",
+      "en": "A: I'm debating what hairstyle to get at the salon next time.<br/>B: Since it's summer, a neat bob cut around the neck would look great on you.",
+      "zh_TW": "A: 我在猶豫下次去美髮店要換什麼樣的髮型。<br/>B: 現在是夏天，把脖子周圍修得俐落的鮑伯頭應該很適合你喔。",
+      "zh_CN": "A: 我在犹豫下次去理发店要换什么样的发型。<br/>B: 现在是夏天，把脖子周围修得利落的波波头应该很适合你哦。",
+      "ko": "A: 다음번에 미용실 가면 어떤 머리 스타일로 할지 고민 중이야.<br/>B: 여름이니까 목선이 시원하게 드러나는 단발 보브컷이 잘 어울릴 것 같아.",
+      "zh_HK": "A: 諗緊下次去剪頭髮轉咩髮型好。<br/>B: 夏天喎，剪個乾淨清爽露條頸出嚟嘅Bob頭應該幾好睇。",
+      "fr": "A: J'hésite sur la coiffure à demander lors de mon prochain passage chez le coiffeur.<br/>B: Comme c'est l'été, un carré court dégageant la nuque t'irait très bien."
     },
     "related": "Hairstyle — the way hair is cut, styled, or arranged."
   },
@@ -41962,13 +41962,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Looks smart / seems intelligent"
     },
     "example": {
-      "ja": "A: <ruby>普段<rt>ふだん</rt></ruby>からよく<ruby>賢<rt>かしこ</rt></ruby>そう<ruby>機会<rt>きかい</rt></ruby>はありますか？<br/>B: はい、<ruby>生活<rt>せいかつ</rt></ruby>リズムを<ruby>整<rt>ととの</rt></ruby>えるために<ruby>意識<rt>いしき</rt></ruby>して<ruby>賢<rt>かしこ</rt></ruby>そうようにしています。",
-      "en": "A: Do you often have opportunities to 賢そう in daily life?<br/>B: Yes, I make a conscious effort to 賢そう to maintain a good lifestyle rhythm.",
-      "zh_TW": "A: Do you often have opportunities to 賢そう in daily life?<br/>B: Yes, I make a conscious effort to 賢そう to maintain a good lifestyle rhythm.",
-      "zh_CN": "A: Do you often have opportunities to 賢そう in daily life?<br/>B: Yes, I make a conscious effort to 賢そう to maintain a good lifestyle rhythm.",
-      "ko": "A: Do you often have opportunities to 賢そう in daily life?<br/>B: Yes, I make a conscious effort to 賢そう to maintain a good lifestyle rhythm.",
-      "zh_HK": "A: Do you often have opportunities to 賢そう in daily life?<br/>B: Yes, I make a conscious effort to 賢そう to maintain a good lifestyle rhythm.",
-      "fr": "A: Do you often have opportunities to 賢そう in daily life?<br/>B: Yes, I make a conscious effort to 賢そう to maintain a good lifestyle rhythm."
+      "ja": "A: あの<ruby>子<rt>こ</rt></ruby>、<ruby>受け答<rt>うけこた</rt></ruby>えがハキハキしていて<ruby>賢<rt>かしこ</rt></ruby>そうに<ruby>見<rt>み</rt></ruby>えるね。<br/>B: ええ、<ruby>小学生<rt>しょうがくせい</rt></ruby>なのに<ruby>難<rt>むずか</rt></ruby>しい<ruby>本<rt>ほん</rt></ruby>をたくさん<ruby>読<rt>よ</rt></ruby>んでいるそうですよ。",
+      "en": "A: That child answers so crisply and clearly; they look very smart.<br/>B: Yes, I hear they read lots of difficult books even though they're only in elementary school.",
+      "zh_TW": "A: 那個孩子回答問題落落大方，看起來好聰明機靈呢。<br/>B: 是啊，聽說雖然只是小學生，卻已經讀了好多難懂的大部頭書呢。",
+      "zh_CN": "A: 那个孩子回答问题落落大方，看起来好聪明机灵呢。<br/>B: 是啊，听说虽然只是小学生，却已经读了好多难懂的书呢。",
+      "ko": "A: 저 아이는 또박또박 대답하는 게 아주 똑똑해 보이네.<br/>B: 네, 초등학생인데도 어려운 책을 많이 읽는다고 하더라고요.",
+      "zh_HK": "A: 個小朋友對答如流好淡定，睇落好醒目好聰明。<br/>B: 係呀，聽講雖然只係小學生，但已經睇好多好深嘅書。",
+      "fr": "A: Cet enfant répond avec tellement d'assurance, il a l'air très intelligent.<br/>B: Oui, et il paraît qu'il lit déjà plein de livres complexes alors qu'il n'est qu'en primaire."
     },
     "related": "Looks smart / seems intelligent — 〜そう expresses that something appears or seems a certain way based on appearance or imp"
   },
@@ -43112,13 +43112,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Short hair"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>短髪<rt>たんぱつ</rt></ruby>の<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 短髪 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 短髪 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 短髪 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 短髪 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 短髪 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 短髪 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: ずっとロングだったのに、<ruby>短髪<rt>たんぱつ</rt></ruby>にしたんだね！<br/>B: うん、スポーツをする<ruby>時<rt>とき</rt></ruby>に<ruby>邪魔<rt>じゃま</rt></ruby>にならないし、ドライヤーも<ruby>楽<rt>らく</rt></ruby>だよ。",
+      "en": "A: You always had long hair, but you cut it short into short hair!<br/>B: Yeah, it doesn't get in the way during sports, and blow-drying is so much faster.",
+      "zh_TW": "A: 你以前一直留長髮，居然剪成短髮了呢！<br/>B: 嗯，做運動時不會礙手礙腳，吹頭髮也輕鬆多了。",
+      "zh_CN": "A: 你以前一直留长发，居然剪成短发了呢！<br/>B: 嗯，做运动时不会碍手碍脚，吹头发也轻松多了。",
+      "ko": "A: 계속 긴 머리였는데 짧은 머리(단발)로 잘랐네!<br/>B: 응, 운동할 때 거치적거리지도 않고 드라이기로 말리기도 편해.",
+      "zh_HK": "A: 之前一路留長頭髮，竟然剪咗短髮！<br/>B: 係呀，做運動嗰陣唔會阻住，吹頭又方便好多。",
+      "fr": "A: Tu as toujours eu les cheveux longs, tu es passé aux cheveux courts !<br/>B: Oui, ça ne me gêne pas pour faire du sport et c'est bien plus rapide à sécher."
     },
     "related": "Short hair — hair that is cut short, used especially for men but also applicable to women."
   },
@@ -43212,13 +43212,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Messy and dishevelled / unkempt"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>にボサボサでも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しいボサボサのお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some ボサボサ for lunch?<br/>B: Sounds great! There's a delicious ボサボサ shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some ボサボサ for lunch?<br/>B: Sounds great! There's a delicious ボサボサ shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some ボサボサ for lunch?<br/>B: Sounds great! There's a delicious ボサボサ shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some ボサボサ for lunch?<br/>B: Sounds great! There's a delicious ボサボサ shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some ボサボサ for lunch?<br/>B: Sounds great! There's a delicious ボサボサ shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some ボサボサ for lunch?<br/>B: Sounds great! There's a delicious ボサボサ shop near the station, let's go."
+      "ja": "A: <ruby>風<rt>かぜ</rt></ruby>が<ruby>強<rt>つよ</rt></ruby>くて、せっかくセットした<ruby>髪<rt>かみ</rt></ruby>がボサボサになっちゃったよ。<br/>B: <ruby>本当<rt>ほんとう</rt></ruby>だね。お<ruby>手洗<rt>てあら</rt></ruby>いの<ruby>鏡<rt>かがみ</rt></ruby>で<ruby>直<rt>なお</rt></ruby>してこようか。",
+      "en": "A: The wind was so strong that the hair I spent time styling got completely messy.<br/>B: You're right. Let's go fix it in the restroom mirror.",
+      "zh_TW": "A: 風太大了，我特地整理好的頭髮變得亂七八糟了。<br/>B: 真的耶。去洗手間的鏡子前整理一下吧。",
+      "zh_CN": "A: 风太大了，我特地整理好的头发变得乱七八糟了。<br/>B: 真的耶。去洗手间的镜子前整理一下吧。",
+      "ko": "A: 바람이 너무 세서 모처럼 손질한 머리가 부스스하게 엉망이 됐어.<br/>B: 그러네. 화장실 거울 보고 다시 정돈하고 올까?",
+      "zh_HK": "A: 大風到吹到我好辛苦整好個頭亂晒。<br/>B: 真係喎。去洗手間對住塊鏡梳返好佢啦。",
+      "fr": "A: Le vent soufflait si fort que mes cheveux soigneusement coiffés sont devenus tout ébouriffés.<br/>B: C'est vrai. Allons arranger ça devant le miroir des toilettes."
     },
     "related": "Messy and dishevelled / unkempt — describes hair (or fur, or surfaces) that is untidy, sticking out in all directions, a"
   },
@@ -44387,13 +44387,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "A twisted / cynical personality"
     },
     "example": {
-      "ja": "A: <ruby>現場<rt>げんば</rt></ruby>で<ruby>頼<rt>たよ</rt></ruby>りになるひねくれた<ruby>性格<rt>せいかく</rt></ruby>がいると<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>心強<rt>こころづよ</rt></ruby>いですね。<br/>B: ええ、いつも<ruby>親切<rt>しんせつ</rt></ruby>で<ruby>経験<rt>けいけん</rt></ruby><ruby>豊富<rt>ほうふ</rt></ruby>な<ruby>素晴<rt>すば</rt></ruby>らしいひねくれた<ruby>性格<rt>せいかく</rt></ruby>ですよ。",
-      "en": "A: Having a dependable ひねくれた性格 on site is truly reassuring.<br/>B: Yes, they are a wonderful ひねくれた性格 who is always kind and experienced.",
-      "zh_TW": "A: Having a dependable ひねくれた性格 on site is truly reassuring.<br/>B: Yes, they are a wonderful ひねくれた性格 who is always kind and experienced.",
-      "zh_CN": "A: Having a dependable ひねくれた性格 on site is truly reassuring.<br/>B: Yes, they are a wonderful ひねくれた性格 who is always kind and experienced.",
-      "ko": "A: Having a dependable ひねくれた性格 on site is truly reassuring.<br/>B: Yes, they are a wonderful ひねくれた性格 who is always kind and experienced.",
-      "zh_HK": "A: Having a dependable ひねくれた性格 on site is truly reassuring.<br/>B: Yes, they are a wonderful ひねくれた性格 who is always kind and experienced.",
-      "fr": "A: Having a dependable ひねくれた性格 on site is truly reassuring.<br/>B: Yes, they are a wonderful ひねくれた性格 who is always kind and experienced."
+      "ja": "A: <ruby>彼<rt>かれ</rt></ruby>は<ruby>素直<rt>すなお</rt></ruby>に<ruby>褒<rt>ほ</rt></ruby>め<ruby>言葉<rt>ことば</rt></ruby>を<ruby>受け取<rt>うけと</rt></ruby>らず、<ruby>皮肉<rt>ひにく</rt></ruby>ばかり<ruby>言<rt>い</rt></ruby>うね。<br/>B: ちょっとひねくれた<ruby>性格<rt>せいかく</rt></ruby>だから、<ruby>照れ隠<rt>てれかく</rt></ruby>しでそう<ruby>言<rt>い</rt></ruby>っちゃうんだよ。",
+      "en": "A: He never accepts compliments straightforwardly; he only replies with sarcasm.<br/>B: He has a bit of a cynical personality, so he says that to hide his embarrassment.",
+      "zh_TW": "A: 他都不肯坦率接受別人的誇獎，淨說些挖苦諷刺的話。<br/>B: 因為他的性格有點彆扭彆扭的，其實只是在掩飾害羞而已啦。",
+      "zh_CN": "A: 他都不肯坦率接受别人的夸奖，净说些挖苦讽刺的话。<br/>B: 因为他的性格有点别扭别扭的，其实只是在掩饰害羞而已啦。",
+      "ko": "A: 그는 칭찬을 순순히 받아들이지 않고 비꼬는 말만 하네.<br/>B: 성격이 좀 삐딱해서 쑥스러움을 감추려고 그러는 거야.",
+      "zh_HK": "A: 讚親佢都唔識老實收低，淨係識單單打打講風涼話。<br/>B: 佢個人性格有啲彆扭又嘴硬，其實只係怕醜掩飾緊啫。",
+      "fr": "A: Il ne sait pas accepter un compliment simplement, il ne répond que par du sarcasme.<br/>B: Il a un caractère un peu tordu, il fait ça pour cacher sa gêne."
     },
     "related": "A twisted / cynical personality — describes someone whose character has become distrustful, contrarian, or overly critic"
   },
@@ -44787,13 +44787,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Dual/split personality"
     },
     "example": {
-      "ja": "A: <ruby>現場<rt>げんば</rt></ruby>で<ruby>頼<rt>たよ</rt></ruby>りになる<ruby>二<rt>に</rt></ruby><ruby>重<rt>じゅう</rt></ruby><ruby>人格<rt>じんかく</rt></ruby>がいると<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>心強<rt>こころづよ</rt></ruby>いですね。<br/>B: ええ、いつも<ruby>親切<rt>しんせつ</rt></ruby>で<ruby>経験<rt>けいけん</rt></ruby><ruby>豊富<rt>ほうふ</rt></ruby>な<ruby>素晴<rt>すば</rt></ruby>らしい<ruby>二<rt>に</rt></ruby><ruby>重<rt>じゅう</rt></ruby><ruby>人格<rt>じんかく</rt></ruby>ですよ。",
-      "en": "A: Having a dependable 二重人格 on site is truly reassuring.<br/>B: Yes, they are a wonderful 二重人格 who is always kind and experienced.",
-      "zh_TW": "A: Having a dependable 二重人格 on site is truly reassuring.<br/>B: Yes, they are a wonderful 二重人格 who is always kind and experienced.",
-      "zh_CN": "A: Having a dependable 二重人格 on site is truly reassuring.<br/>B: Yes, they are a wonderful 二重人格 who is always kind and experienced.",
-      "ko": "A: Having a dependable 二重人格 on site is truly reassuring.<br/>B: Yes, they are a wonderful 二重人格 who is always kind and experienced.",
-      "zh_HK": "A: Having a dependable 二重人格 on site is truly reassuring.<br/>B: Yes, they are a wonderful 二重人格 who is always kind and experienced.",
-      "fr": "A: Having a dependable 二重人格 on site is truly reassuring.<br/>B: Yes, they are a wonderful 二重人格 who is always kind and experienced."
+      "ja": "A: <ruby>先輩<rt>せんぱい</rt></ruby>、<ruby>仕事<rt>しごと</rt></ruby><ruby>中<rt>ちゅう</rt></ruby>は<ruby>厳<rt>きび</rt></ruby>しいのに<ruby>飲<rt>の</rt></ruby>み<ruby>会<rt>かい</rt></ruby>になると<ruby>急<rt>きゅう</rt></ruby>に<ruby>甘えん坊<rt>あまえんぼう</rt></ruby>になるね。<br/>B: まるで<ruby>二<rt>に</rt></ruby><ruby>重<rt>じゅう</rt></ruby><ruby>人格<rt>じんかく</rt></ruby>みたいだけど、オンとオフの<ruby>切り替<rt>きりか</rt></ruby>えがはっきりしているんだね。",
+      "en": "A: Senpai is so strict during work, but at drinks parties he suddenly gets all cuddly.<br/>B: It's like having a split personality, but he certainly keeps work and private life separated.",
+      "zh_TW": "A: 前輩工作時那麼嚴厲，到了酒聚時突然變得很愛撒嬌呢。<br/>B: 簡直就像雙重人格一樣，不過代表他公私分得很清楚呢。",
+      "zh_CN": "A: 前辈工作时那么严厉，到了聚餐时突然变得很爱撒娇呢。<br/>B: 简直就像双重人格一样，不过代表他公私分得很清楚呢。",
+      "ko": "A: 선배님, 근무 중에는 엄격하신데 회식만 가면 갑자기 애교가 넘치시네.<br/>B: 마치 이중인격 같지만, 공과 사 구분이 확실하신 거겠지.",
+      "zh_HK": "A: 前輩返工嗰陣咁嚴，點知去到飲嘢聚會突然間咁小鳥依人嘅。<br/>B: 簡直好似雙重人格咁，不過都證明佢公私分明。",
+      "fr": "A: Senpai est si strict au travail, mais en soirée arrosée, il devient soudain très affectueux.<br/>B: C'est presque une double personnalité, mais au moins il sait faire la part des choses."
     },
     "related": "Dual/split personality — sometimes used casually for someone whose behavior changes drastically by situation, not just i"
   },
@@ -45012,13 +45012,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Private room"
     },
     "example": {
-      "ja": "A: すみません、この<ruby>近<rt>ちか</rt></ruby>くに<ruby>個室<rt>こしつ</rt></ruby>はありますか？<br/>B: はい、この<ruby>道<rt>みち</rt></ruby>をまっすぐ<ruby>進<rt>すす</rt></ruby>むと<ruby>右手<rt>みぎて</rt></ruby>に<ruby>個室<rt>こしつ</rt></ruby>が<ruby>見<rt>み</rt></ruby>えますよ。",
-      "en": "A: Excuse me, is there a 個室 near here?<br/>B: Yes, if you go straight down this street, you'll see 個室 on your right.",
-      "zh_TW": "A: Excuse me, is there a 個室 near here?<br/>B: Yes, if you go straight down this street, you'll see 個室 on your right.",
-      "zh_CN": "A: Excuse me, is there a 個室 near here?<br/>B: Yes, if you go straight down this street, you'll see 個室 on your right.",
-      "ko": "A: Excuse me, is there a 個室 near here?<br/>B: Yes, if you go straight down this street, you'll see 個室 on your right.",
-      "zh_HK": "A: Excuse me, is there a 個室 near here?<br/>B: Yes, if you go straight down this street, you'll see 個室 on your right.",
-      "fr": "A: Excuse me, is there a 個室 near here?<br/>B: Yes, if you go straight down this street, you'll see 個室 on your right."
+      "ja": "A: <ruby>今日<rt>きょう</rt></ruby>の<ruby>歓迎<rt>かんげい</rt></ruby><ruby>会<rt>かい</rt></ruby>、<ruby>静<rt>しず</rt></ruby>かな<ruby>場所<rt>ばしょ</rt></ruby>でゆっくり<ruby>話<rt>はな</rt></ruby>したいですね。<br/>B: <ruby>落ち着<rt>おちつ</rt></ruby>いて<ruby>話<rt>はな</rt></ruby>せるように、<ruby>個室<rt>こしつ</rt></ruby>を<ruby>予約<rt>よやく</rt></ruby>しておきましたよ。",
+      "en": "A: For today's welcome party, I'd love to chat leisurely in a quiet spot.<br/>B: I reserved a private room so we can talk comfortably.",
+      "zh_TW": "A: 今天的歡迎會，希望能找個安靜的地方好好聊聊。<br/>B: 為了能安心暢談，我已經預訂了包廂喔。",
+      "zh_CN": "A: 今天的欢迎会，希望能找个安静的地方好好聊聊。<br/>B: 为了能安心畅谈，我已经预订了包厢哦。",
+      "ko": "A: 오늘 환영회는 조용한 곳에서 오붓하게 이야기 나누고 싶네요.<br/>B: 편안하게 이야기 나눌 수 있도록 개별 룸(개실)으로 예약해 두었어요.",
+      "zh_HK": "A: 今日個歡迎會，想搵個靜靜地嘅地方坐低慢慢傾。<br/>B: 放心，為咗大家傾得開心，我一早book咗獨立包廂。",
+      "fr": "A: Pour la fête de bienvenue aujourd'hui, j'aimerais qu'on puisse discuter au calme.<br/>B: J'ai réservé un salon privé pour qu'on soit tranquilles."
     },
     "related": "Private room — a separate, enclosed room for individual/exclusive use, as opposed to a shared or open space."
   },
@@ -45037,13 +45037,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "All-you-can-drink"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>飲<rt>の</rt></ruby>み<ruby>放題<rt>ほうだい</rt></ruby>でも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>飲<rt>の</rt></ruby>み<ruby>放題<rt>ほうだい</rt></ruby>のお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 飲み放題 for lunch?<br/>B: Sounds great! There's a delicious 飲み放題 shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 飲み放題 for lunch?<br/>B: Sounds great! There's a delicious 飲み放題 shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 飲み放題 for lunch?<br/>B: Sounds great! There's a delicious 飲み放題 shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 飲み放題 for lunch?<br/>B: Sounds great! There's a delicious 飲み放題 shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 飲み放題 for lunch?<br/>B: Sounds great! There's a delicious 飲み放題 shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 飲み放題 for lunch?<br/>B: Sounds great! There's a delicious 飲み放題 shop near the station, let's go."
+      "ja": "A: <ruby>宴会<rt>えんかい</rt></ruby>コースに<ruby>飲<rt>の</rt></ruby>み<ruby>放題<rt>ほうだい</rt></ruby>はついていますか？<br/>B: はい、2<ruby>時間<rt>じかん</rt></ruby><ruby>飲<rt>の</rt></ruby>み<ruby>放題<rt>ほうだい</rt></ruby><ruby>付<rt>つ</rt></ruby>きで<ruby>生ビール<rt>なまびーる</rt></ruby>やカクテルも<ruby>注文<rt>ちゅうもん</rt></ruby>できます。",
+      "en": "A: Does the banquet course include an all-you-can-drink option?<br/>B: Yes, it includes two hours of all-you-can-drink, including draft beer and cocktails.",
+      "zh_TW": "A: 這個宴會套餐有附暢飲（喝到飽）嗎？<br/>B: 有的，附2小時暢飲，生啤酒和調酒都可以點。",
+      "zh_CN": "A: 这个宴会套餐有附畅饮（喝到饱）吗？<br/>B: 有的，附2小时畅饮，生啤酒和鸡尾酒都可以点。",
+      "ko": "A: 코스 요리에 음료 무제한(노미호다이)도 포함되어 있나요?<br/>B: 네, 2시간 무제한 포함이며 생맥주와 칵테일도 주문 가능합니다.",
+      "zh_HK": "A: 呢個套餐有冇包任飲暢飲㗎？<br/>B: 有呀，包2個鐘任飲，生啤同雞尾酒都可以任叫。",
+      "fr": "A: Le menu banquet comprend-il les boissons à volonté ?<br/>B: Oui, il inclut deux heures de boissons à volonté, y compris la bière pression et les cocktails."
     },
     "related": "All-you-can-drink — a set plan letting customers drink as much as they like within a set time for a fixed price."
   },
@@ -45062,13 +45062,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "All-you-can-eat."
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>食<rt>た</rt></ruby>べ<ruby>放題<rt>ほうだい</rt></ruby>でも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>食<rt>た</rt></ruby>べ<ruby>放題<rt>ほうだい</rt></ruby>のお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 食べ放題 for lunch?<br/>B: Sounds great! There's a delicious 食べ放題 shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 食べ放題 for lunch?<br/>B: Sounds great! There's a delicious 食べ放題 shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 食べ放題 for lunch?<br/>B: Sounds great! There's a delicious 食べ放題 shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 食べ放題 for lunch?<br/>B: Sounds great! There's a delicious 食べ放題 shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 食べ放題 for lunch?<br/>B: Sounds great! There's a delicious 食べ放題 shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 食べ放題 for lunch?<br/>B: Sounds great! There's a delicious 食べ放題 shop near the station, let's go."
+      "ja": "A: <ruby>週末<rt>しゅうまつ</rt></ruby>に<ruby>焼肉<rt>やきにく</rt></ruby>の<ruby>食<rt>た</rt></ruby>べ<ruby>放題<rt>ほうだい</rt></ruby>に<ruby>行<rt>い</rt></ruby>かない？お<ruby>腹<rt>はら</rt></ruby>いっぱいお<ruby>肉<rt>にく</rt></ruby>が<ruby>食<rt>た</rt></ruby>べたいんだ。<br/>B: いいね！カルビもロースも<ruby>好<rt>す</rt></ruby>きなだけ<ruby>頼<rt>たの</rt></ruby>もう。",
+      "en": "A: Want to go to an all-you-can-eat yakiniku restaurant this weekend? I want to eat my fill of meat.<br/>B: Sounds great! Let's order as much short rib and sirloin as we want.",
+      "zh_TW": "A: 週末要不要去吃燒肉吃到飽？我想大口吃肉吃到飽。<br/>B: 好啊！牛五花和牛里肌想點多少就點多少。",
+      "zh_CN": "A: 周末要不要去吃烤肉自助餐（吃到饱）？我想大口吃肉吃到饱。<br/>B: 好啊！牛五花和牛里脊想点多少就点多少。",
+      "ko": "A: 주말에 고기 무한리필(타베호다이) 갈래? 고기 배 터지게 먹고 싶어.<br/>B: 좋아! 갈비든 등심이든 마음껏 시키자.",
+      "zh_HK": "A: 週末去唔去食日式燒肉放題？好想瘋狂食肉食到飽。<br/>B: 好呀！牛五花同牛柳任叫任食。",
+      "fr": "A: Tu veux aller dans un restaurant de yakiniku à volonté ce week-end ? J'ai envie de me caler de viande.<br/>B: Carrément ! On pourra commander autant de viande qu'on veut."
     },
     "related": "All-you-can-eat."
   },
@@ -45612,13 +45612,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "siège principal"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>の<ruby>本社<rt>ほんしゃ</rt></ruby>の<ruby>状況<rt>じょうきょう</rt></ruby>はいかがですか？<ruby>順調<rt>じゅんちょう</rt></ruby>ですか？<br/>B: はい、<ruby>同僚<rt>どうりょう</rt></ruby>と<ruby>協力<rt>きょうりょく</rt></ruby>しながら<ruby>本社<rt>ほんしゃ</rt></ruby>に<ruby>真面目<rt>まじめ</rt></ruby>に<ruby>取り組<rt>とりく</rt></ruby>んでいます。",
-      "en": "A: How is the situation with your 本社 lately? Going well?<br/>B: Yes, I'm working diligently on 本社 in cooperation with colleagues.",
-      "zh_TW": "A: How is the situation with your 本社 lately? Going well?<br/>B: Yes, I'm working diligently on 本社 in cooperation with colleagues.",
-      "zh_CN": "A: How is the situation with your 本社 lately? Going well?<br/>B: Yes, I'm working diligently on 本社 in cooperation with colleagues.",
-      "ko": "A: How is the situation with your 本社 lately? Going well?<br/>B: Yes, I'm working diligently on 本社 in cooperation with colleagues.",
-      "zh_HK": "A: How is the situation with your 本社 lately? Going well?<br/>B: Yes, I'm working diligently on 本社 in cooperation with colleagues.",
-      "fr": "A: How is the situation with your 本社 lately? Going well?<br/>B: Yes, I'm working diligently on 本社 in cooperation with colleagues."
+      "ja": "A: <ruby>来週<rt>らいしゅう</rt></ruby>の<ruby>役員<rt>やくいん</rt></ruby><ruby>会議<rt>かいぎ</rt></ruby>はどこで<ruby>行<rt>おこな</rt></ruby>われますか？<br/>B: <ruby>丸の内<rt>まるのうち</rt></ruby>にある<ruby>本社<rt>ほんしゃ</rt></ruby>の<ruby>大<rt>だい</rt></ruby><ruby>会議<rt>かいぎ</rt></ruby><ruby>室<rt>しつ</rt></ruby>で<ruby>行<rt>おこな</rt></ruby>われます。",
+      "en": "A: Where will next week's board meeting take place?<br/>B: It will be held in the main conference room at our headquarters in Marunouchi.",
+      "zh_TW": "A: 下週的董事會議會在哪裡舉行？<br/>B: 會在位於丸之內的總公司大會議室舉行。",
+      "zh_CN": "A: 下周的董事会议会在哪里举行？<br/>B: 会在位于丸之内的总公司大会议室举行。",
+      "ko": "A: 다음 주 임원 회의는 어디서 열리나요?<br/>B: 마루노우치에 있는 본사 대회의실에서 진행됩니다.",
+      "zh_HK": "A: 下個禮拜個董事會議喺邊度開？<br/>B: 喺丸之內總公司個大會議室開。",
+      "fr": "A: Où se tiendra le conseil d'administration la semaine prochaine ?<br/>B: Dans la grande salle de réunion du siège social à Marunouchi."
     },
     "related": "Head office / headquarters."
   },
@@ -45637,13 +45637,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Foreign-affiliated (company)"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>の<ruby>外資<rt>がいし</rt></ruby><ruby>系<rt>けい</rt></ruby>の<ruby>状況<rt>じょうきょう</rt></ruby>はいかがですか？<ruby>順調<rt>じゅんちょう</rt></ruby>ですか？<br/>B: はい、<ruby>同僚<rt>どうりょう</rt></ruby>と<ruby>協力<rt>きょうりょく</rt></ruby>しながら<ruby>外資<rt>がいし</rt></ruby><ruby>系<rt>けい</rt></ruby>に<ruby>真面目<rt>まじめ</rt></ruby>に<ruby>取り組<rt>とりく</rt></ruby>んでいます。",
-      "en": "A: How is the situation with your 外資系 lately? Going well?<br/>B: Yes, I'm working diligently on 外資系 in cooperation with colleagues.",
-      "zh_TW": "A: How is the situation with your 外資系 lately? Going well?<br/>B: Yes, I'm working diligently on 外資系 in cooperation with colleagues.",
-      "zh_CN": "A: How is the situation with your 外資系 lately? Going well?<br/>B: Yes, I'm working diligently on 外資系 in cooperation with colleagues.",
-      "ko": "A: How is the situation with your 外資系 lately? Going well?<br/>B: Yes, I'm working diligently on 外資系 in cooperation with colleagues.",
-      "zh_HK": "A: How is the situation with your 外資系 lately? Going well?<br/>B: Yes, I'm working diligently on 外資系 in cooperation with colleagues.",
-      "fr": "A: How is the situation with your 外資系 lately? Going well?<br/>B: Yes, I'm working diligently on 外資系 in cooperation with colleagues."
+      "ja": "A: <ruby>転職<rt>てんしょく</rt></ruby><ruby>先<rt>さき</rt></ruby>は<ruby>外資<rt>がいし</rt></ruby><ruby>系<rt>けい</rt></ruby>のコンサルティング<ruby>会社<rt>かいしゃ</rt></ruby>に<ruby>決<rt>き</rt></ruby>まったそうですね。<br/>B: ええ、<ruby>社内<rt>しゃない</rt></ruby>では<ruby>英語<rt>えいご</rt></ruby>を<ruby>使<rt>つか</rt></ruby>う<ruby>機会<rt>きかい</rt></ruby>が<ruby>多<rt>おお</rt></ruby>くて<ruby>刺激<rt>しげき</rt></ruby><ruby>的<rt>てき</rt></ruby>です。",
+      "en": "A: I heard your new job is with a foreign-affiliated consulting firm.<br/>B: Yes, there are many opportunities to use English in the office, so it's very exciting.",
+      "zh_TW": "A: 聽說你的新工作決定去一家外商顧問公司了呢。<br/>B: 是的，公司內部使用英文的機會很多，非常具有挑戰性。",
+      "zh_CN": "A: 听说你的新工作决定去一家外企咨询公司了呢。<br/>B: 是的，公司内部使用英语的机会很多，非常具有挑战性。",
+      "ko": "A: 이직할 곳이 외국계 컨설팅 회사로 결정되었다면서요?<br/>B: 네, 사내에서 영어를 쓸 기회가 많아서 자극이 많이 돼요.",
+      "zh_HK": "A: 聽講你轉工去咗間外資顧問公司喎。<br/>B: 係呀，公司入面要成日用英文溝通，好有挑戰性。",
+      "fr": "A: J'ai appris que tu avais rejoint un cabinet de conseil international.<br/>B: Oui, j'ai souvent l'occasion de pratiquer l'anglais au bureau, c'est très stimulant."
     },
     "related": "Foreign-affiliated (company) — owned by or a subsidiary of a foreign corporation, as opposed to a purely domestic Japane"
   },
@@ -45712,13 +45712,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "s'alimenter selon son bon plaisir"
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>偏食<rt>へんしょく</rt></ruby>でも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>偏食<rt>へんしょく</rt></ruby>のお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 偏食 for lunch?<br/>B: Sounds great! There's a delicious 偏食 shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 偏食 for lunch?<br/>B: Sounds great! There's a delicious 偏食 shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 偏食 for lunch?<br/>B: Sounds great! There's a delicious 偏食 shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 偏食 for lunch?<br/>B: Sounds great! There's a delicious 偏食 shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 偏食 for lunch?<br/>B: Sounds great! There's a delicious 偏食 shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 偏食 for lunch?<br/>B: Sounds great! There's a delicious 偏食 shop near the station, let's go."
+      "ja": "A: うちの<ruby>息子<rt>むすこ</rt></ruby>、お<ruby>肉<rt>にく</rt></ruby>ばかり<ruby>食<rt>た</rt></ruby>べて<ruby>野菜<rt>やさい</rt></ruby>を<ruby>全然<rt>ぜんぜん</rt></ruby><ruby>食<rt>た</rt></ruby>べないの。<br/>B: <ruby>偏食<rt>へんしょく</rt></ruby>が<ruby>続<rt>つづ</rt></ruby>くと<ruby>栄養<rt>えいよう</rt></ruby>が<ruby>偏<rt>かたよ</rt></ruby>るから、<ruby>細<rt>こま</rt></ruby>かく<ruby>刻<rt>きざ</rt></ruby>んで<ruby>料理<rt>りょうり</rt></ruby>に<ruby>混<rt>ま</rt></ruby>ぜてみたら？",
+      "en": "A: My son eats only meat and won't touch vegetables at all.<br/>B: If his picky eating continues, his nutrition will be unbalanced. How about chopping them finely into his food?",
+      "zh_TW": "A: 我兒子只吃肉，蔬菜一口都不碰。<br/>B: 如果一直偏食營養會失衡，要不要切碎混進菜餚裡試試看？",
+      "zh_CN": "A: 我儿子只吃肉，蔬菜一口都不碰。<br/>B: 如果一直挑食营养会失衡，要不要切碎混进菜肴里试试看？",
+      "ko": "A: 우리 아들은 고기만 먹고 채소는 통 안 먹으려 해.<br/>B: 편식이 계속되면 영양이 불균형해지니까 잘게 다져서 요리에 섞어보면 어때?",
+      "zh_HK": "A: 我個仔淨係食肉，一條菜都唔肯食。<br/>B: 咁偏食營養會唔均衡㗎，不如試下切碎啲菜撈落啲餸度呃佢食？",
+      "fr": "A: Mon fils ne mange que de la viande et refuse catégoriquement les légumes.<br/>B: Ce régime alimentaire déséquilibré risque de créer des carences. Pourquoi ne pas les hacher menu dans les plats ?"
     },
     "related": "Picky eating / an unbalanced diet."
   },
@@ -45812,13 +45812,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "A reward / treat."
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>にご<ruby>褒美<rt>ほうび</rt></ruby>でも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しいご<ruby>褒美<rt>ほうび</rt></ruby>のお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some ご褒美 for lunch?<br/>B: Sounds great! There's a delicious ご褒美 shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some ご褒美 for lunch?<br/>B: Sounds great! There's a delicious ご褒美 shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some ご褒美 for lunch?<br/>B: Sounds great! There's a delicious ご褒美 shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some ご褒美 for lunch?<br/>B: Sounds great! There's a delicious ご褒美 shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some ご褒美 for lunch?<br/>B: Sounds great! There's a delicious ご褒美 shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some ご褒美 for lunch?<br/>B: Sounds great! There's a delicious ご褒美 shop near the station, let's go."
+      "ja": "A: <ruby>今週<rt>こんしゅう</rt></ruby>はずっと<ruby>残業<rt>ざんぎょう</rt></ruby><ruby>続<rt>つづ</rt></ruby>きで<ruby>大変<rt>たいへん</rt></ruby>だったね。<br/>B: <ruby>頑張<rt>がんば</rt></ruby>った<ruby>自分<rt>じぶん</rt></ruby>へのご<ruby>褒美<rt>ほうび</rt></ruby>に、ちょっと<ruby>高<rt>たか</rt></ruby>めのケーキを<ruby>買<rt>か</rt></ruby>って<ruby>帰<rt>かえ</rt></ruby>るよ。",
+      "en": "A: This week was tough with continuous overtime work, wasn't it?<br/>B: As a reward for working hard, I'm buying a slightly fancy cake to take home.",
+      "zh_TW": "A: 這週每天連續加班真的很辛苦呢。<br/>B: 作為對努力撐過來的自己的獎勵，我要買個稍貴一點的蛋糕回家吃。",
+      "zh_CN": "A: 这周每天连续加班真的很辛苦呢。<br/>B: 作为对努力撑过来的自己的奖励，我要买个稍贵一点的蛋糕回家吃。",
+      "ko": "A: 이번 주는 계속 야근하느라 정말 고생 많았어.<br/>B: 고생한 나를 위한 보상으로 조금 비싼 조각 케이크를 사 가려고 해.",
+      "zh_HK": "A: 今個禮拜晚晚OT真係好辛苦。<br/>B: 當係獎勵下咁捱得嘅自己，我買件貴啲嘅蛋糕返去食先。",
+      "fr": "A: Cette semaine a été éprouvante avec toutes ces heures supplémentaires.<br/>B: Pour me récompenser de mes efforts, je vais m'acheter une bonne pâtisserie sur le chemin du retour."
     },
     "related": "A reward / treat."
   },
@@ -45937,13 +45937,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "garder"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>見守<rt>みまも</rt></ruby>るの<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 見守る hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 見守る hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 見守る hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 見守る hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 見守る hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 見守る hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: <ruby>子供<rt>こども</rt></ruby>が<ruby>初<rt>はじ</rt></ruby>めて<ruby>一<rt>いち</rt></ruby><ruby>人<rt>にん</rt></ruby>で<ruby>自転車<rt>じてんしゃ</rt></ruby>に<ruby>乗<rt>の</rt></ruby>る<ruby>練習<rt>れんしゅう</rt></ruby>をしているよ。<br/>B: <ruby>転<rt>ころ</rt></ruby>ばないかハラハラするけど、<ruby>口<rt>くち</rt></ruby>を<ruby>出<rt>だ</rt></ruby>さずに<ruby>静<rt>しず</rt></ruby>かに<ruby>見守<rt>みまも</rt></ruby>ろう。",
+      "en": "A: Our child is practicing riding a bicycle alone for the first time.<br/>B: It's nerve-wracking watching for falls, but let's quietly keep an eye without interfering.",
+      "zh_TW": "A: 孩子第一次在練習自己一個人騎腳踏車呢。<br/>B: 雖然很擔心他會摔倒，但我們不要插嘴、在一旁靜靜守護他吧。",
+      "zh_CN": "A: 孩子第一次在练习自己一个人骑自行车呢。<br/>B: 虽然很担心他会摔倒，但我们不要插嘴、在一旁静静守护他吧。",
+      "ko": "A: 아이가 처음으로 혼자 자전거 타는 연습을 하고 있어.<br/>B: 넘어질까 봐 조마조마하지만 참견하지 말고 조용히 지켜보자.",
+      "zh_HK": "A: 仔仔第一次自己學踩單車呀。<br/>B: 雖然驚佢跌到實一實，但我哋唔好出聲，靜靜喺隔離睇住佢啦。",
+      "fr": "A: Notre enfant s'entraîne à faire du vélo tout seul pour la première fois.<br/>B: On a peur qu'il tombe, mais veillons sur lui en silence sans intervenir."
     },
     "related": "To watch over / keep an eye on — observing someone with care and attention, often protectively, without directly interve"
   },
@@ -46337,13 +46337,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "To spend money."
     },
     "example": {
-      "ja": "A: <ruby>普段<rt>ふだん</rt></ruby>からよくお<ruby>金<rt>かね</rt></ruby>を<ruby>使<rt>つか</rt></ruby>う<ruby>機会<rt>きかい</rt></ruby>はありますか？<br/>B: はい、<ruby>生活<rt>せいかつ</rt></ruby>リズムを<ruby>整<rt>ととの</rt></ruby>えるために<ruby>意識<rt>いしき</rt></ruby>してお<ruby>金<rt>かね</rt></ruby>を<ruby>使<rt>つか</rt></ruby>うようにしています。",
-      "en": "A: Do you often have opportunities to お金を使う in daily life?<br/>B: Yes, I make a conscious effort to お金を使う to maintain a good lifestyle rhythm.",
-      "zh_TW": "A: Do you often have opportunities to お金を使う in daily life?<br/>B: Yes, I make a conscious effort to お金を使う to maintain a good lifestyle rhythm.",
-      "zh_CN": "A: Do you often have opportunities to お金を使う in daily life?<br/>B: Yes, I make a conscious effort to お金を使う to maintain a good lifestyle rhythm.",
-      "ko": "A: Do you often have opportunities to お金を使う in daily life?<br/>B: Yes, I make a conscious effort to お金を使う to maintain a good lifestyle rhythm.",
-      "zh_HK": "A: Do you often have opportunities to お金を使う in daily life?<br/>B: Yes, I make a conscious effort to お金を使う to maintain a good lifestyle rhythm.",
-      "fr": "A: Do you often have opportunities to お金を使う in daily life?<br/>B: Yes, I make a conscious effort to お金を使う to maintain a good lifestyle rhythm."
+      "ja": "A: <ruby>旅行<rt>りょこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>くと、ついいろんなお<ruby>土産<rt>みやげ</rt></ruby>にお<ruby>金<rt>かね</rt></ruby>を<ruby>使<rt>つか</rt></ruby>ってしまうね。<br/>B: <ruby>旅先<rt>たびさき</rt></ruby>での<ruby>体験<rt>たいけん</rt></ruby>だから、たまには<ruby>贅沢<rt>ぜいたく</rt></ruby>にお<ruby>金<rt>かね</rt></ruby>を<ruby>使<rt>つか</rt></ruby>うのもいい<ruby>思い出<rt>おもいで</rt></ruby>だよ。",
+      "en": "A: Whenever I go on trips, I end up spending money on all kinds of souvenirs.<br/>B: It's part of the travel experience, so splurging once in a while makes great memories.",
+      "zh_TW": "A: 一去旅行，不知不覺就花好多錢在各種土產伴手禮上呢。<br/>B: 這是旅行體驗的一部分，偶爾揮霍花錢也是很棒的回憶。",
+      "zh_CN": "A: 一去旅行，不知不觉就花好多钱在各种土特产伴手礼上呢。<br/>B: 这是旅行体验的一部分，偶尔奢侈花钱也是很棒的回忆。",
+      "ko": "A: 여행만 가면 나도 모르게 온갖 기념품에 돈을 쓰게 되네.<br/>B: 여행지에서의 경험이니까 가끔은 기분 좋게 돈 쓰는 것도 좋은 추억이지.",
+      "zh_HK": "A: 每次去旅行，都不知不覺使咗好多錢買手信。<br/>B: 旅行體驗嚟㗎嘛，耐唔耐使多些少錢都係美好回憶。",
+      "fr": "A: Dès que je pars en voyage, je finis par dépenser beaucoup d'argent en souvenirs en tous genres.<br/>B: Ça fait partie du voyage, se faire plaisir de temps en temps crée de beaux souvenirs."
     },
     "related": "To spend money."
   },
@@ -46387,13 +46387,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "\"A cold gets transmitted / spreads\""
     },
     "example": {
-      "ja": "A: <ruby>体調<rt>たいちょう</rt></ruby>が<ruby>優<rt>すぐ</rt></ruby>れないときは<ruby>無理<rt>むり</rt></ruby>をせず、<ruby>風邪<rt>かぜ</rt></ruby>が<ruby>移<rt>うつ</rt></ruby>るに<ruby>気<rt>き</rt></ruby>をつけて<ruby>休<rt>やす</rt></ruby>んでくださいね。<br/>B: ありがとうございます。<ruby>温<rt>あたた</rt></ruby>かいものを<ruby>飲<rt>の</rt></ruby>んでゆっくり<ruby>休<rt>やす</rt></ruby>みます。",
-      "en": "A: When you don't feel well, don't push yourself and take good care of 風邪が移る.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "zh_TW": "A: When you don't feel well, don't push yourself and take good care of 風邪が移る.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "zh_CN": "A: When you don't feel well, don't push yourself and take good care of 風邪が移る.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "ko": "A: When you don't feel well, don't push yourself and take good care of 風邪が移る.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "zh_HK": "A: When you don't feel well, don't push yourself and take good care of 風邪が移る.<br/>B: Thank you very much. I'll drink something warm and rest.",
-      "fr": "A: When you don't feel well, don't push yourself and take good care of 風邪が移る.<br/>B: Thank you very much. I'll drink something warm and rest."
+      "ja": "A: <ruby>咳<rt>せき</rt></ruby>が<ruby>出<rt>で</rt></ruby>ているから、マスクをして<ruby>部屋<rt>へや</rt></ruby>も<ruby>換気<rt>かんき</rt></ruby>しよう。<br/>B: ありがとう。<ruby>家族<rt>かぞく</rt></ruby>に<ruby>風邪<rt>かぜ</rt></ruby>が<ruby>移<rt>うつ</rt></ruby>らないように<ruby>気<rt>き</rt></ruby>をつけないとね。",
+      "en": "A: You're coughing, so put on a mask and let's ventilate the room.<br/>B: Thanks. I have to be careful so my cold doesn't spread to the family.",
+      "zh_TW": "A: 你在咳嗽，戴上口罩然後把房間通風一下吧。<br/>B: 謝謝你。確實得小心不要把感冒傳染給家人呢。",
+      "zh_CN": "A: 你在咳嗽，戴上口罩然后把房间通风一下吧。<br/>B: 谢谢你。确实得小心不要把感冒传染给家人呢。",
+      "ko": "A: 기침이 나오니까 마스크 쓰고 방 환기도 시키자.<br/>B: 고마워. 가족들한테 감기가 옮지 않도록 조심해야겠어.",
+      "zh_HK": "A: 你有兩聲咳喎，戴返個口罩開窗通風啦。<br/>B: 唔該你。真係要小心啲唔好傳染個感冒畀屋企人。",
+      "fr": "A: Tu tousses, mets un masque et aérons la pièce.<br/>B: Merci. Je dois faire attention à ne pas transmettre mon rhume à la famille."
     },
     "related": "\"A cold gets transmitted / spreads\" — using the intransitive 移る, no focus on who caused it."
   },
@@ -46462,13 +46462,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "\"To go eat and come back\" / \"I'll eat (before coming)\""
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>食<rt>た</rt></ruby>べてくるでも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>食<rt>た</rt></ruby>べてくるのお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 食べてくる for lunch?<br/>B: Sounds great! There's a delicious 食べてくる shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 食べてくる for lunch?<br/>B: Sounds great! There's a delicious 食べてくる shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 食べてくる for lunch?<br/>B: Sounds great! There's a delicious 食べてくる shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 食べてくる for lunch?<br/>B: Sounds great! There's a delicious 食べてくる shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 食べてくる for lunch?<br/>B: Sounds great! There's a delicious 食べてくる shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 食べてくる for lunch?<br/>B: Sounds great! There's a delicious 食べてくる shop near the station, let's go."
+      "ja": "A: <ruby>今日<rt>きょう</rt></ruby>の<ruby>夕飯<rt>ゆうはん</rt></ruby>、<ruby>家<rt>いえ</rt></ruby>で<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>食<rt>た</rt></ruby>べる？<br/>B: <ruby>今日<rt>きょう</rt></ruby>は<ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>同僚<rt>どうりょう</rt></ruby>と<ruby>外<rt>そと</rt></ruby>で<ruby>食<rt>た</rt></ruby>べてくるから、<ruby>私<rt>わたし</rt></ruby>の<ruby>分<rt>ぶん</rt></ruby>は<ruby>作<rt>つく</rt></ruby>らなくて<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>だよ。",
+      "en": "A: Are you eating dinner with us at home tonight?<br/>B: I'm going out to eat with coworkers tonight, so you don't need to cook for me.",
+      "zh_TW": "A: 今晚晚餐你要在家一起吃嗎？<br/>B: 今天我會跟公司同事在外面吃過再回來，不用準備我的份喔。",
+      "zh_CN": "A: 今晚晚餐你要在家一起吃吗？<br/>B: 今天我会跟公司同事在外面吃过再回来，不用准备我的份哦。",
+      "ko": "A: 오늘 저녁 집에서 같이 먹어?<br/>B: 오늘은 회사 동료들과 밖에서 먹고 들어갈 테니까 내 밥은 안 챙겨줘도 돼.",
+      "zh_HK": "A: 今晚晚餐返唔返屋企食？<br/>B: 今日我同公司同事喺出面食完先返，唔使留我飯喇。",
+      "fr": "A: Tu manges à la maison avec nous ce soir ?<br/>B: Je mange dehors avec des collègues avant de rentrer, donc pas besoin de préparer pour moi."
     },
     "related": "\"To go eat and come back\" / \"I'll eat (before coming)\" — て+くる, indicating an action done elsewhere before returning, or "
   },
@@ -46512,13 +46512,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Parent company."
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>の<ruby>親会社<rt>おやがいしゃ</rt></ruby>の<ruby>状況<rt>じょうきょう</rt></ruby>はいかがですか？<ruby>順調<rt>じゅんちょう</rt></ruby>ですか？<br/>B: はい、<ruby>同僚<rt>どうりょう</rt></ruby>と<ruby>協力<rt>きょうりょく</rt></ruby>しながら<ruby>親会社<rt>おやがいしゃ</rt></ruby>に<ruby>真面目<rt>まじめ</rt></ruby>に<ruby>取り組<rt>とりく</rt></ruby>んでいます。",
-      "en": "A: How is the situation with your 親会社 lately? Going well?<br/>B: Yes, I'm working diligently on 親会社 in cooperation with colleagues.",
-      "zh_TW": "A: How is the situation with your 親会社 lately? Going well?<br/>B: Yes, I'm working diligently on 親会社 in cooperation with colleagues.",
-      "zh_CN": "A: How is the situation with your 親会社 lately? Going well?<br/>B: Yes, I'm working diligently on 親会社 in cooperation with colleagues.",
-      "ko": "A: How is the situation with your 親会社 lately? Going well?<br/>B: Yes, I'm working diligently on 親会社 in cooperation with colleagues.",
-      "zh_HK": "A: How is the situation with your 親会社 lately? Going well?<br/>B: Yes, I'm working diligently on 親会社 in cooperation with colleagues.",
-      "fr": "A: How is the situation with your 親会社 lately? Going well?<br/>B: Yes, I'm working diligently on 親会社 in cooperation with colleagues."
+      "ja": "A: この<ruby>新規<rt>しんき</rt></ruby><ruby>事業<rt>じぎょう</rt></ruby>の<ruby>予算<rt>よさん</rt></ruby><ruby>承認<rt>しょうにん</rt></ruby>は<ruby>社内<rt>しゃない</rt></ruby>だけで<ruby>決<rt>き</rt></ruby>められますか？<br/>B: いいえ、<ruby>親会社<rt>おやがいしゃ</rt></ruby>の<ruby>取締役<rt>とりしまりやく</rt></ruby><ruby>会<rt>かい</rt></ruby>での<ruby>承認<rt>しょうにん</rt></ruby>も<ruby>受<rt>う</rt></ruby>ける<ruby>必要<rt>ひつよう</rt></ruby>があります。",
+      "en": "A: Can budget approval for this new business be decided internally alone?<br/>B: No, it also requires approval from the parent company's board of directors.",
+      "zh_TW": "A: 這項新業務的預算批准在公司內部就能決定嗎？<br/>B: 不行，還需要母公司的董事會核准才行。",
+      "zh_CN": "A: 这项新业务的预算批准在公司内部就能决定吗？<br/>B: 不行，还需要母公司的董事会核准才行。",
+      "ko": "A: 이 신규 사업 예산 승인은 사내에서만 결정할 수 있나요?<br/>B: 아니요, 모회사 이사회의 승인도 받아야 합니다.",
+      "zh_HK": "A: 呢個新業務嘅預算喺公司內部批就得？<br/>B: 唔得，仲要母公司董事會通過先得。",
+      "fr": "A: Le budget de ce nouveau projet peut-il être approuvé en interne uniquement ?<br/>B: Non, il nécessite également l'approbation du conseil d'administration de la société mère."
     },
     "related": "Parent company."
   },
@@ -46537,13 +46537,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Subsidiary company"
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>の<ruby>子会社<rt>こがいしゃ</rt></ruby>の<ruby>状況<rt>じょうきょう</rt></ruby>はいかがですか？<ruby>順調<rt>じゅんちょう</rt></ruby>ですか？<br/>B: はい、<ruby>同僚<rt>どうりょう</rt></ruby>と<ruby>協力<rt>きょうりょく</rt></ruby>しながら<ruby>子会社<rt>こがいしゃ</rt></ruby>に<ruby>真面目<rt>まじめ</rt></ruby>に<ruby>取り組<rt>とりく</rt></ruby>んでいます。",
-      "en": "A: How is the situation with your 子会社 lately? Going well?<br/>B: Yes, I'm working diligently on 子会社 in cooperation with colleagues.",
-      "zh_TW": "A: How is the situation with your 子会社 lately? Going well?<br/>B: Yes, I'm working diligently on 子会社 in cooperation with colleagues.",
-      "zh_CN": "A: How is the situation with your 子会社 lately? Going well?<br/>B: Yes, I'm working diligently on 子会社 in cooperation with colleagues.",
-      "ko": "A: How is the situation with your 子会社 lately? Going well?<br/>B: Yes, I'm working diligently on 子会社 in cooperation with colleagues.",
-      "zh_HK": "A: How is the situation with your 子会社 lately? Going well?<br/>B: Yes, I'm working diligently on 子会社 in cooperation with colleagues.",
-      "fr": "A: How is the situation with your 子会社 lately? Going well?<br/>B: Yes, I'm working diligently on 子会社 in cooperation with colleagues."
+      "ja": "A: <ruby>来期<rt>らいき</rt></ruby>から<ruby>物流<rt>ぶつりゅう</rt></ruby><ruby>業務<rt>ぎょうむ</rt></ruby>を<ruby>子会社<rt>こがいしゃ</rt></ruby>へ<ruby>委託<rt>いたく</rt></ruby>する<ruby>計画<rt>けいかく</rt></ruby>が<ruby>進<rt>すす</rt></ruby>んでいます。<br/>B: <ruby>業務<rt>ぎょうむ</rt></ruby>を<ruby>専門<rt>せんもん</rt></ruby>の<ruby>子会社<rt>こがいしゃ</rt></ruby>に<ruby>集約<rt>しゅうやく</rt></ruby>することで、<ruby>効率<rt>こうりつ</rt></ruby><ruby>化<rt>か</rt></ruby>が<ruby>期待<rt>きたい</rt></ruby>できますね。",
+      "en": "A: Plans are underway to outsource logistics operations to a subsidiary next term.<br/>B: By consolidating operations under a dedicated subsidiary, we can expect greater efficiency.",
+      "zh_TW": "A: 下一期開始將物流業務委託給子公司的計畫正在推展中。<br/>B: 將業務集中交由專責子公司處理，預計能提升效率呢。",
+      "zh_CN": "A: 下一期开始将物流业务委托给子公司的计划正在推进中。<br/>B: 将业务集中交由专责子公司处理，预计能提升效率呢。",
+      "ko": "A: 다음 분기부터 물류 업무를 자회사에 위탁하는 계획이 진행 중입니다.<br/>B: 전문 자회사로 업무를 일원화하면 효율화를 기대할 수 있겠네요.",
+      "zh_HK": "A: 下期開始將物流工序外判畀子公司嘅計劃進行緊。<br/>B: 將工序集中交畀專門子公司搞，可以大幅提升效率。",
+      "fr": "A: Le projet d'externalisation de la logistique vers une filiale est en cours pour le prochain exercice.<br/>B: En regroupant les opérations au sein d'une filiale dédiée, nous pouvons espérer de vrais gains d'efficacité."
     },
     "related": "Subsidiary company — owned/controlled by a parent, while keeping its own legal identity."
   },
@@ -46662,13 +46662,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "To end up using/spending too much"
     },
     "example": {
-      "ja": "A: <ruby>普段<rt>ふだん</rt></ruby>からよく<ruby>使<rt>つか</rt></ruby>いすぎてしまう<ruby>機会<rt>きかい</rt></ruby>はありますか？<br/>B: はい、<ruby>生活<rt>せいかつ</rt></ruby>リズムを<ruby>整<rt>ととの</rt></ruby>えるために<ruby>意識<rt>いしき</rt></ruby>して<ruby>使<rt>つか</rt></ruby>いすぎてしまうようにしています。",
-      "en": "A: Do you often have opportunities to 使いすぎてしまう in daily life?<br/>B: Yes, I make a conscious effort to 使いすぎてしまう to maintain a good lifestyle rhythm.",
-      "zh_TW": "A: Do you often have opportunities to 使いすぎてしまう in daily life?<br/>B: Yes, I make a conscious effort to 使いすぎてしまう to maintain a good lifestyle rhythm.",
-      "zh_CN": "A: Do you often have opportunities to 使いすぎてしまう in daily life?<br/>B: Yes, I make a conscious effort to 使いすぎてしまう to maintain a good lifestyle rhythm.",
-      "ko": "A: Do you often have opportunities to 使いすぎてしまう in daily life?<br/>B: Yes, I make a conscious effort to 使いすぎてしまう to maintain a good lifestyle rhythm.",
-      "zh_HK": "A: Do you often have opportunities to 使いすぎてしまう in daily life?<br/>B: Yes, I make a conscious effort to 使いすぎてしまう to maintain a good lifestyle rhythm.",
-      "fr": "A: Do you often have opportunities to 使いすぎてしまう in daily life?<br/>B: Yes, I make a conscious effort to 使いすぎてしまう to maintain a good lifestyle rhythm."
+      "ja": "A: クレジットカードで<ruby>買い物<rt>かいもの</rt></ruby>をすると、ついお<ruby>金<rt>かね</rt></ruby>を<ruby>使<rt>つか</rt></ruby>いすぎてしまうよ。<br/>B: <ruby>毎月<rt>まいつき</rt></ruby>の<ruby>利用<rt>りよう</rt></ruby><ruby>限度<rt>げんど</rt></ruby><ruby>額<rt>がく</rt></ruby>を<ruby>設定<rt>せってい</rt></ruby>しておくと<ruby>使<rt>つか</rt></ruby>いすぎを<ruby>防<rt>ふせ</rt></ruby>げるよ。",
+      "en": "A: When I shop with a credit card, I inadvertently end up spending too much money.<br/>B: Setting a monthly spending limit will help prevent overspending.",
+      "zh_TW": "A: 用信用卡買東西時，不知不覺就會花費過度、花太多錢了。<br/>B: 設定每個月的額度上限，就能防止花費過度了喔。",
+      "zh_CN": "A: 用信用卡买东西时，不知不觉就会花费过度、花太多钱了。<br/>B: 设定每个月的额度上限，就能防止花费过度了哦。",
+      "ko": "A: 신용카드로 쇼핑하면 나도 모르게 돈을 너무 많이 써 버려.<br/>B: 매월 사용 한도를 설정해 두면 과소비를 막을 수 있어.",
+      "zh_HK": "A: 用信用卡買嘢嗰陣，成日不知不覺使多咗錢。<br/>B: 喺App度設定每個月使錢上限，就可以防止使大咗。",
+      "fr": "A: Quand je paie par carte bancaire, je finis toujours par dépenser trop d'argent.<br/>B: Fixer un plafond mensuel te permettra d'éviter les dépenses excessives."
     },
     "related": "To end up using/spending too much — 使いすぎる + てしまう, adding regret/unintentionality."
   },
@@ -46762,13 +46762,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "To grow one's hair."
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>髪<rt>かみ</rt></ruby>を<ruby>伸<rt>の</rt></ruby>ばすの<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 髪を伸ばす hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 髪を伸ばす hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 髪を伸ばす hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 髪を伸ばす hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 髪を伸ばす hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 髪を伸ばす hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby><ruby>髪型<rt>かみがた</rt></ruby>を<ruby>変<rt>か</rt></ruby>えずにそのままにしているね。<br/>B: <ruby>来年<rt>らいねん</rt></ruby>の<ruby>結婚式<rt>けっこんしき</rt></ruby>に<ruby>向<rt>む</rt></ruby>けて、きれいなアップヘアにしたいから<ruby>髪<rt>かみ</rt></ruby>を<ruby>伸<rt>の</rt></ruby>ばしているんだ。",
+      "en": "A: You haven't changed your hairstyle lately, have you?<br/>B: I'm growing my hair out because I want an updo for next year's wedding.",
+      "zh_TW": "A: 你最近都沒有換髮型、一直留著呢。<br/>B: 為了明年的婚禮想做漂亮的新娘盤髮，所以我正在把頭髮留長。",
+      "zh_CN": "A: 你最近都没有换发型、一直留着呢。<br/>B: 为了明年的婚礼想做漂亮的新娘盘发，所以我正在把头发留长。",
+      "ko": "A: 요즘 머리 스타일 안 바꾸고 그대로 두네?<br/>B: 내년 결혼식 때 예쁜 올림머리를 하고 싶어서 머리를 기르고 있거든.",
+      "zh_HK": "A: 你最近冇剪頭髮，一路留緊嘅？<br/>B: 為咗出年結婚嗰陣可以盤個靚頭，所以依家留緊長頭髮。",
+      "fr": "A: Tu n'as pas changé de coupe ces derniers temps, tu laisses pousser ?<br/>B: Je me laisse pousser les cheveux pour pouvoir faire un joli chignon à mon mariage l'an prochain."
     },
     "related": "To grow one's hair."
   },
@@ -46787,13 +46787,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Naturally curly/wavy hair."
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>癖<rt>くせ</rt></ruby><ruby>毛<rt>け</rt></ruby>の<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 癖毛 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 癖毛 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 癖毛 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 癖毛 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 癖毛 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 癖毛 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: <ruby>雨<rt>あめ</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>になると、<ruby>髪<rt>かみ</rt></ruby>がうねって<ruby>広<rt>ひろ</rt></ruby>がっちゃうんだ。<br/>B: <ruby>癖<rt>くせ</rt></ruby><ruby>毛<rt>け</rt></ruby>だと<ruby>湿気<rt>しっけ</rt></ruby>の<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>受<rt>う</rt></ruby>けやすいよね。<ruby>縮<rt>ちぢみ</rt></ruby><ruby>毛<rt>け</rt></ruby><ruby>矯正<rt>きょうせい</rt></ruby>をかけると<ruby>楽<rt>らく</rt></ruby>になるよ。",
+      "en": "A: On rainy days, my hair frizzes up and gets wavy.<br/>B: Naturally wavy hair reacts easily to humidity. Getting hair straightening makes life much easier.",
+      "zh_TW": "A: 一到下雨天，我的頭髮就又捲又毛躁地炸開。<br/>B: 自然捲容易受濕氣影響呢。去燙個縮毛矯正離子燙會輕鬆很多喔。",
+      "zh_CN": "A: 一到下雨天，我的头发就又卷又毛躁地炸开。<br/>B: 自然卷容易受湿气影响呢。去烫个缩毛矫正软化会轻松很多哦。",
+      "ko": "A: 비 오는 날만 되면 머리가 구불거리면서 부스스해져.<br/>B: 곱슬머리는 습기에 취약하잖아. 볼륨 매직(축모 교정)을 하면 손질하기 편해.",
+      "zh_HK": "A: 一落雨，我啲頭髮就攣起上嚟又蓬又鬆。<br/>B: 天生自然攣特別容易受濕氣影響。去做個負離子直髮會好打理好多。",
+      "fr": "A: Les jours de pluie, mes cheveux ondulent et prennent du volume.<br/>B: Les cheveux bouclés ou ondulés réagissent fort à l'humidité. Un lissage permanent te simplifierait la vie."
     },
     "related": "Naturally curly/wavy hair."
   },
@@ -46812,13 +46812,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Baldness / a bald person (casual/blunt)."
     },
     "example": {
-      "ja": "A: <ruby>現場<rt>げんば</rt></ruby>で<ruby>頼<rt>たよ</rt></ruby>りになるハゲがいると<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>心強<rt>こころづよ</rt></ruby>いですね。<br/>B: ええ、いつも<ruby>親切<rt>しんせつ</rt></ruby>で<ruby>経験<rt>けいけん</rt></ruby><ruby>豊富<rt>ほうふ</rt></ruby>な<ruby>素晴<rt>すば</rt></ruby>らしいハゲですよ。",
-      "en": "A: Having a dependable ハゲ on site is truly reassuring.<br/>B: Yes, they are a wonderful ハゲ who is always kind and experienced.",
-      "zh_TW": "A: Having a dependable ハゲ on site is truly reassuring.<br/>B: Yes, they are a wonderful ハゲ who is always kind and experienced.",
-      "zh_CN": "A: Having a dependable ハゲ on site is truly reassuring.<br/>B: Yes, they are a wonderful ハゲ who is always kind and experienced.",
-      "ko": "A: Having a dependable ハゲ on site is truly reassuring.<br/>B: Yes, they are a wonderful ハゲ who is always kind and experienced.",
-      "zh_HK": "A: Having a dependable ハゲ on site is truly reassuring.<br/>B: Yes, they are a wonderful ハゲ who is always kind and experienced.",
-      "fr": "A: Having a dependable ハゲ on site is truly reassuring.<br/>B: Yes, they are a wonderful ハゲ who is always kind and experienced."
+      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby><ruby>頭頂<rt>とうちょう</rt></ruby><ruby>部<rt>ぶ</rt></ruby>の<ruby>薄毛<rt>うすげ</rt></ruby>が<ruby>気<rt>き</rt></ruby>になって、<ruby>将来<rt>しょうらい</rt></ruby>ハゲるんじゃないかと<ruby>不安<rt>ふあん</rt></ruby>なんだ。<br/>B: <ruby>早<rt>はや</rt></ruby>めに<ruby>専門<rt>せんもん</rt></ruby>のクリニックで<ruby>頭皮<rt>とうひ</rt></ruby>ケアの<ruby>相談<rt>そうだん</rt></ruby>をしてみたら<ruby>安心<rt>あんしん</rt></ruby>だよ。",
+      "en": "A: Lately I've been worried about thinning hair at the crown, afraid I'll go bald in the future.<br/>B: If you consult a scalp care specialist early on, you'll feel much more at ease.",
+      "zh_TW": "A: 最近我很在意頭頂頭髮變稀疏，很擔心將來會禿頭。<br/>B: 早點去專業診所諮詢頭皮護理的話，心裡會踏實很多喔。",
+      "zh_CN": "A: 最近我很在意头顶头发变稀疏，很担心将来会秃头。<br/>B: 早点去专业诊所咨询头皮护理的话，心里会踏实很多哦。",
+      "ko": "A: 요즘 정수리 쪽 숱이 줄어서 나중에 대머리가 될까 봐 걱정돼.<br/>B: 일찍 전문 병원에서 두피 관리 상담을 받아 보면 안심될 거야.",
+      "zh_HK": "A: 最近好擔心個頭頂啲頭髮愈嚟愈疏，好驚第時會地中海變光頭禿頭。<br/>B: 早啲去專科診所搵醫生睇下做頭皮護理，會安心好多。",
+      "fr": "A: Mes cheveux s'éclaircissent sur le dessus de la tête, j'ai peur de devenir chauve plus tard.<br/>B: Consulte sans tarder une clinique spécialisée pour un traitement du cuir chevelu, ça te rassurera."
     },
     "related": "Baldness / a bald person (casual/blunt)."
   },
@@ -46962,13 +46962,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "maison (de ses parents)"
     },
     "example": {
-      "ja": "A: すみません、この<ruby>近<rt>ちか</rt></ruby>くに<ruby>実家<rt>じっか</rt></ruby>はありますか？<br/>B: はい、この<ruby>道<rt>みち</rt></ruby>をまっすぐ<ruby>進<rt>すす</rt></ruby>むと<ruby>右手<rt>みぎて</rt></ruby>に<ruby>実家<rt>じっか</rt></ruby>が<ruby>見<rt>み</rt></ruby>えますよ。",
-      "en": "A: Excuse me, is there a 実家 near here?<br/>B: Yes, if you go straight down this street, you'll see 実家 on your right.",
-      "zh_TW": "A: Excuse me, is there a 実家 near here?<br/>B: Yes, if you go straight down this street, you'll see 実家 on your right.",
-      "zh_CN": "A: Excuse me, is there a 実家 near here?<br/>B: Yes, if you go straight down this street, you'll see 実家 on your right.",
-      "ko": "A: Excuse me, is there a 実家 near here?<br/>B: Yes, if you go straight down this street, you'll see 実家 on your right.",
-      "zh_HK": "A: Excuse me, is there a 実家 near here?<br/>B: Yes, if you go straight down this street, you'll see 実家 on your right.",
-      "fr": "A: Excuse me, is there a 実家 near here?<br/>B: Yes, if you go straight down this street, you'll see 実家 on your right."
+      "ja": "A: <ruby>今年<rt>ことし</rt></ruby>のゴールデンウィークの<ruby>予定<rt>よてい</rt></ruby>は<ruby>決<rt>き</rt></ruby>まりましたか？<br/>B: <ruby>久<rt>ひさ</rt></ruby>しぶりに<ruby>実家<rt>じっか</rt></ruby>へ<ruby>帰省<rt>きせい</rt></ruby>して、<ruby>両親<rt>りょうしん</rt></ruby>とゆっくり<ruby>過<rt>す</rt></ruby>ごすつもりです。",
+      "en": "A: Have you decided on your plans for Golden Week this year?<br/>B: I'm planning to go back to my parents' home after a long time and relax with them.",
+      "zh_TW": "A: 今年的黃金週假期你計畫好要做什麼了嗎？<br/>B: 我打算久違地回老家一趟，好好陪陪父母。",
+      "zh_CN": "A: 今年的黄金周假期你计划好要做什么了吗？<br/>B: 我打算久违地回老家一趟，好好陪陪父母。",
+      "ko": "A: 올해 골든위크 연휴 계획은 정하셨어요?<br/>B: 오랜만에 본가에 내려가서 부모님과 여유롭게 시간을 보낼 생각이에요.",
+      "zh_HK": "A: 今年黃金週長假有咩打算呀？<br/>B: 好耐冇返過老家，諗住返去陪下爸爸媽媽過返幾日。",
+      "fr": "A: Avez-vous prévu quelque chose pour la Golden Week cette année ?<br/>B: Je compte retourner chez mes parents après un long moment d'absence et passer du temps avec eux."
     },
     "related": "One's parents' house / hometown home — the home where one grew up, as distinct from where one currently lives."
   },
@@ -47637,13 +47637,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "To let one's guard down / become careless (due to overconfidence or complacency)."
     },
     "example": {
-      "ja": "A: すみません、この<ruby>近<rt>ちか</rt></ruby>くに<ruby>油断<rt>ゆだん</rt></ruby>するはありますか？<br/>B: はい、この<ruby>道<rt>みち</rt></ruby>をまっすぐ<ruby>進<rt>すす</rt></ruby>むと<ruby>右手<rt>みぎて</rt></ruby>に<ruby>油断<rt>ゆだん</rt></ruby>するが<ruby>見<rt>み</rt></ruby>えますよ。",
-      "en": "A: Excuse me, is there a 油断する near here?<br/>B: Yes, if you go straight down this street, you'll see 油断する on your right.",
-      "zh_TW": "A: Excuse me, is there a 油断する near here?<br/>B: Yes, if you go straight down this street, you'll see 油断する on your right.",
-      "zh_CN": "A: Excuse me, is there a 油断する near here?<br/>B: Yes, if you go straight down this street, you'll see 油断する on your right.",
-      "ko": "A: Excuse me, is there a 油断する near here?<br/>B: Yes, if you go straight down this street, you'll see 油断する on your right.",
-      "zh_HK": "A: Excuse me, is there a 油断する near here?<br/>B: Yes, if you go straight down this street, you'll see 油断する on your right.",
-      "fr": "A: Excuse me, is there a 油断する near here?<br/>B: Yes, if you go straight down this street, you'll see 油断する on your right."
+      "ja": "A: <ruby>点差<rt>てんさ</rt></ruby>が<ruby>開<rt>ひら</rt></ruby>いて<ruby>勝<rt>か</rt></ruby>っているからといって、<ruby>油断<rt>ゆだん</rt></ruby>してはいけませんよ。<br/>B: はい！<ruby>試合<rt>しあい</rt></ruby><ruby>終了<rt>しゅうりょう</rt></ruby>の<ruby>笛<rt>ふえ</rt></ruby>が<ruby>鳴<rt>な</rt></ruby>るまで、<ruby>最後<rt>さいご</rt></ruby>まで<ruby>集中<rt>しゅうちゅう</rt></ruby>して<ruby>戦<rt>たたか</rt></ruby>います。",
+      "en": "A: Just because we have a comfortable lead, we must not let our guard down.<br/>B: Yes! We will stay fully focused until the final whistle blows.",
+      "zh_TW": "A: 就算比分大幅領先，也絕對不能大意鬆懈喔。<br/>B: 是的！直到比賽結束的哨音響起之前，我們都會全力保持專注拼戰。",
+      "zh_CN": "A: 就算比分大幅领先，也绝对不能大意松懈哦。<br/>B: 是的！直到比赛结束的哨音响起之前，我们都会全力保持专注拼战。",
+      "ko": "A: 점수 차가 벌어져 이기고 있다고 해서 방심하면 안 됩니다.<br/>B: 네! 경기 종료 휘슬이 울릴 때까지 끝까지 집중해서 뛰겠습니다.",
+      "zh_HK": "A: 就算拉開咗比分領先緊，都千祈唔好鬆懈大意呀。<br/>B: 收到！未到鳴笛吹哨完場一刻，我哋都會全神貫注打落去。",
+      "fr": "A: Ce n'est pas parce que nous menons au score qu'il faut baisser la garde.<br/>B: Oui ! Nous resterons concentrés jusqu'au coup de sifflet final."
     },
     "related": "To let one's guard down / become careless (due to overconfidence or complacency)."
   },
@@ -47662,13 +47662,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "Hair loss / fallen-out hair."
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>抜け毛<rt>ぬけげ</rt></ruby>の<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 抜け毛 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 抜け毛 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 抜け毛 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 抜け毛 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 抜け毛 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 抜け毛 hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: <ruby>季節<rt>きせつ</rt></ruby>の<ruby>変わり目<rt>かわりめ</rt></ruby>のせいか、<ruby>最近<rt>さいきん</rt></ruby>シャンプーの<ruby>時<rt>とき</rt></ruby>に<ruby>抜け毛<rt>ぬけげ</rt></ruby>が<ruby>増<rt>ふ</rt></ruby>えた<ruby>気<rt>き</rt></ruby>がするよ。<br/>B: <ruby>秋<rt>あき</rt></ruby>は<ruby>抜け毛<rt>ぬけげ</rt></ruby>が<ruby>増<rt>ふ</rt></ruby>えやすいって<ruby>言<rt>い</rt></ruby>うよね。<ruby>頭皮<rt>とうひ</rt></ruby>を<ruby>優<rt>やさ</rt></ruby>しくマッサージしてみたら？",
+      "en": "A: Maybe due to the change of seasons, I feel like hair loss has increased when shampooing.<br/>B: They say shedding naturally increases in autumn. How about gently massaging your scalp?",
+      "zh_TW": "A: 不知是不是換季的關係，最近洗頭時掉髮好像變多了。<br/>B: 聽說秋天本來就特別容易掉髮呢。要不要試試溫柔按摩頭皮？",
+      "zh_CN": "A: 不知是不是换季的关系，最近洗头时掉发好像变多了。<br/>B: 听说秋天本来就特别容易掉发呢。要不要试试温柔按摩头皮？",
+      "ko": "A: 환절기 탓인지 요즘 머리 감을 때 빠지는 머리카락(탈모)이 늘어난 것 같아.<br/>B: 가을에는 원래 털갈이하듯 잘 빠진다고 하잖아. 두피를 부드럽게 마사지해 보는 건 어때?",
+      "zh_HK": "A: 唔知係咪轉季，最近洗頭嗰陣好似甩多咗好多頭髮。<br/>B: 聽講秋天本來就特別容易甩頭髮。不如試下溫柔啲按摩下個頭皮？",
+      "fr": "A: À cause du changement de saison sans doute, j'ai l'impression de perdre plus de cheveux sous la douche.<br/>B: On dit qu'en automne les chutes de cheveux augmentent. Pourquoi ne pas masser doucement ton cuir chevelu ?"
     },
     "related": "Hair loss / fallen-out hair."
   },
@@ -47762,13 +47762,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "A famous person / celebrity"
     },
     "example": {
-      "ja": "A: <ruby>現場<rt>げんば</rt></ruby>で<ruby>頼<rt>たよ</rt></ruby>りになる<ruby>有名人<rt>ゆうめいじん</rt></ruby>がいると<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>心強<rt>こころづよ</rt></ruby>いですね。<br/>B: ええ、いつも<ruby>親切<rt>しんせつ</rt></ruby>で<ruby>経験<rt>けいけん</rt></ruby><ruby>豊富<rt>ほうふ</rt></ruby>な<ruby>素晴<rt>すば</rt></ruby>らしい<ruby>有名人<rt>ゆうめいじん</rt></ruby>ですよ。",
-      "en": "A: Having a dependable 有名人 on site is truly reassuring.<br/>B: Yes, they are a wonderful 有名人 who is always kind and experienced.",
-      "zh_TW": "A: Having a dependable 有名人 on site is truly reassuring.<br/>B: Yes, they are a wonderful 有名人 who is always kind and experienced.",
-      "zh_CN": "A: Having a dependable 有名人 on site is truly reassuring.<br/>B: Yes, they are a wonderful 有名人 who is always kind and experienced.",
-      "ko": "A: Having a dependable 有名人 on site is truly reassuring.<br/>B: Yes, they are a wonderful 有名人 who is always kind and experienced.",
-      "zh_HK": "A: Having a dependable 有名人 on site is truly reassuring.<br/>B: Yes, they are a wonderful 有名人 who is always kind and experienced.",
-      "fr": "A: Having a dependable 有名人 on site is truly reassuring.<br/>B: Yes, they are a wonderful 有名人 who is always kind and experienced."
+      "ja": "A: さっき<ruby>駅前<rt>えきまえ</rt></ruby>でテレビのロケをしていて、<ruby>有名人<rt>ゆうめいじん</rt></ruby>を<ruby>見<rt>み</rt></ruby>かけたよ！<br/>B: ええっ、<ruby>本当<rt>ほんとう</rt></ruby>？<ruby>誰<rt>だれ</rt></ruby>だったの？サインもらった？",
+      "en": "A: They were shooting a TV show in front of the station earlier, and I saw a famous celebrity!<br/>B: Wow, really? Who was it? Did you get an autograph?",
+      "zh_TW": "A: 剛才車站前面在拍電視外景，我看到名人了耶！<br/>B: 咦，真的嗎？是誰呀？有要簽名嗎？",
+      "zh_CN": "A: 刚才车站前面在拍电视外景，我看到名人了耶！<br/>B: 咦，真的吗？是谁呀？有要签名吗？",
+      "ko": "A: 방금 역 앞에서 TV 촬영을 하고 있어서 연예인(유명인)을 봤어!<br/>B: 헐, 진짜? 누구였어? 사인도 받았어?",
+      "zh_HK": "A: 頭先站前拍緊電視外景，我見到大明星名人呀！<br/>B: 哇，真係㗎？邊個嚟㗎？有冇叫佢簽名？",
+      "fr": "A: Il y avait un tournage télé devant la gare tout à l'heure, j'ai aperçu une célébrité !<br/>B: Ouah, sans blague ? C'était qui ? Tu as eu un autographe ?"
     },
     "related": "A famous person / celebrity — broader than 芸能人, covering anyone well-known, not just people in entertainment (e.g. athle"
   },
@@ -47912,13 +47912,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "\"Fatty\" / \"fat person\""
     },
     "example": {
-      "ja": "A: <ruby>現場<rt>げんば</rt></ruby>で<ruby>頼<rt>たよ</rt></ruby>りになるデブがいると<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>心強<rt>こころづよ</rt></ruby>いですね。<br/>B: ええ、いつも<ruby>親切<rt>しんせつ</rt></ruby>で<ruby>経験<rt>けいけん</rt></ruby><ruby>豊富<rt>ほうふ</rt></ruby>な<ruby>素晴<rt>すば</rt></ruby>らしいデブですよ。",
-      "en": "A: Having a dependable デブ on site is truly reassuring.<br/>B: Yes, they are a wonderful デブ who is always kind and experienced.",
-      "zh_TW": "A: Having a dependable デブ on site is truly reassuring.<br/>B: Yes, they are a wonderful デブ who is always kind and experienced.",
-      "zh_CN": "A: Having a dependable デブ on site is truly reassuring.<br/>B: Yes, they are a wonderful デブ who is always kind and experienced.",
-      "ko": "A: Having a dependable デブ on site is truly reassuring.<br/>B: Yes, they are a wonderful デブ who is always kind and experienced.",
-      "zh_HK": "A: Having a dependable デブ on site is truly reassuring.<br/>B: Yes, they are a wonderful デブ who is always kind and experienced.",
-      "fr": "A: Having a dependable デブ on site is truly reassuring.<br/>B: Yes, they are a wonderful デブ who is always kind and experienced."
+      "ja": "A: <ruby>弟<rt>おとうと</rt></ruby>に『デブ』ってからかわれてショックだったんだ。<br/>B: そんな<ruby>失礼<rt>しつれい</rt></ruby>な<ruby>言葉<rt>ことば</rt></ruby>は<ruby>気<rt>き</rt></ruby>にしなくていいよ。あなたは<ruby>全然<rt>ぜんぜん</rt></ruby><ruby>太<rt>ふと</rt></ruby>っていないんだから。",
+      "en": "A: My younger brother teased me by calling me 'fat', and it really hurt my feelings.<br/>B: You don't need to care about such rude remarks. You aren't overweight at all.",
+      "zh_TW": "A: 被弟弟嘲笑說是「大胖子」，我打擊好大喔。<br/>B: 那種沒禮貌的話別往心裡去，你根本一點都不胖好嗎。",
+      "zh_CN": "A: 被弟弟嘲笑说是“大胖子”，我打击好大哦。<br/>B: 那种没礼貌的话别往心里去，你根本一点都不胖好吗。",
+      "ko": "A: 남동생한테 '뚱보'라고 놀림받아서 충격받았어.<br/>B: 그런 무례한 말은 신경 쓸 필요 없어. 넌 전혀 살찌지 않았으니까.",
+      "zh_HK": "A: 俾細佬笑我「大肥佬/肥婆」，好心靈受創。<br/>B: 咁冇禮貌嘅說話唔使擺喺心，你根本一啲都唔肥。",
+      "fr": "A: Mon frère m'a blessé en me traitant de « gros ».<br/>B: Ne fais pas attention à des remarques aussi déplacées. Tu n'es pas gros du tout."
     },
     "related": "\"Fatty\" / \"fat person\" — a blunt, casual, and often rude/insulting slang term for someone overweight; not polite or neut"
   },
@@ -47937,13 +47937,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "\"Doesn't feed the fish they've already caught\""
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>釣<rt>つ</rt></ruby>った<ruby>魚<rt>さかな</rt></ruby>に<ruby>餌<rt>えさ</rt></ruby>をやらないでも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>釣<rt>つ</rt></ruby>った<ruby>魚<rt>さかな</rt></ruby>に<ruby>餌<rt>えさ</rt></ruby>をやらないのお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 釣った魚に餌をやらない for lunch?<br/>B: Sounds great! There's a delicious 釣った魚に餌をやらない shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 釣った魚に餌をやらない for lunch?<br/>B: Sounds great! There's a delicious 釣った魚に餌をやらない shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 釣った魚に餌をやらない for lunch?<br/>B: Sounds great! There's a delicious 釣った魚に餌をやらない shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 釣った魚に餌をやらない for lunch?<br/>B: Sounds great! There's a delicious 釣った魚に餌をやらない shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 釣った魚に餌をやらない for lunch?<br/>B: Sounds great! There's a delicious 釣った魚に餌をやらない shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 釣った魚に餌をやらない for lunch?<br/>B: Sounds great! There's a delicious 釣った魚に餌をやらない shop near the station, let's go."
+      "ja": "A: <ruby>彼<rt>かれ</rt></ruby>は<ruby>付き合<rt>つきあ</rt></ruby>い<ruby>始<rt>はじ</rt></ruby>めた<ruby>途端<rt>とたん</rt></ruby>、<ruby>連絡<rt>れんらく</rt></ruby>の<ruby>返信<rt>へんしん</rt></ruby>が<ruby>極端<rt>きょくたん</rt></ruby>に<ruby>遅<rt>おそ</rt></ruby>くなったの。<br/>B: まさに『<ruby>釣<rt>つ</rt></ruby>った<ruby>魚<rt>さかな</rt></ruby>に<ruby>餌<rt>えさ</rt></ruby>をやらない』タイプだね。ちゃんと<ruby>話し合<rt>はなしあ</rt></ruby>った<ruby>方<rt>ほう</rt></ruby>がいいよ。",
+      "en": "A: As soon as we started dating, he took forever to reply to messages.<br/>B: He's the classic 'takes you for granted once caught' type. You should talk things through with him.",
+      "zh_TW": "A: 他一交往之後，回訊息的速度就變得超級慢。<br/>B: 真是典型的「到手的魚不給餌（追到手就不珍惜）」類型呢。好好跟他溝通一下比較好喔。",
+      "zh_CN": "A: 他一交往之后，回消息的速度就变得超级慢。<br/>B: 真是典型的“到手的鱼不给饵（追到手就不珍惜）”类型呢。好好跟他沟通一下比较好哦。",
+      "ko": "A: 그는 사귀기 시작하자마자 연락 답장이 엄청 늦어졌어.<br/>B: 그야말로 '잡은 물고기에는 밥을 안 준다'는 타입이네. 진지하게 대화해 보는 게 좋겠어.",
+      "zh_HK": "A: 佢一拍拖之後，覆Message就變得慢到七彩。<br/>B: 真係典型嘅「捉到鹿唔識脫角 / 追到手就唔珍惜」類型。同佢坐低傾下好啲。",
+      "fr": "A: Dès que nous nous sommes mis ensemble, il a mis un temps fou à répondre à mes messages.<br/>B: C'est typique de ceux qui ne font plus d'efforts une fois la personne conquise. Tu devrais avoir une franche discussion avec lui."
     },
     "related": "\"Doesn't feed the fish they've already caught\" — an idiom describing someone (often in a romantic relationship) who stop"
   },
@@ -48112,13 +48112,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "\"That's admirable/well done\" vs. \"great/admirable/high-ranking\" vs. \"acting high and mighty\""
     },
     "example": {
-      "ja": "A: お<ruby>腹<rt>なか</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いたね。お<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>に<ruby>偉<rt>えら</rt></ruby>いねでも<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>かない？<br/>B: いいね！<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>美味<rt>おい</rt></ruby>しい<ruby>偉<rt>えら</rt></ruby>いねのお<ruby>店<rt>みせ</rt></ruby>があるから<ruby>行<rt>おこな</rt></ruby>ってみよう。",
-      "en": "A: I'm getting hungry. Want to go grab some 偉いね for lunch?<br/>B: Sounds great! There's a delicious 偉いね shop near the station, let's go.",
-      "zh_TW": "A: I'm getting hungry. Want to go grab some 偉いね for lunch?<br/>B: Sounds great! There's a delicious 偉いね shop near the station, let's go.",
-      "zh_CN": "A: I'm getting hungry. Want to go grab some 偉いね for lunch?<br/>B: Sounds great! There's a delicious 偉いね shop near the station, let's go.",
-      "ko": "A: I'm getting hungry. Want to go grab some 偉いね for lunch?<br/>B: Sounds great! There's a delicious 偉いね shop near the station, let's go.",
-      "zh_HK": "A: I'm getting hungry. Want to go grab some 偉いね for lunch?<br/>B: Sounds great! There's a delicious 偉いね shop near the station, let's go.",
-      "fr": "A: I'm getting hungry. Want to go grab some 偉いね for lunch?<br/>B: Sounds great! There's a delicious 偉いね shop near the station, let's go."
+      "ja": "A: <ruby>毎日<rt>まいにち</rt></ruby><ruby>忙<rt>いそが</rt></ruby>しいのに、<ruby>早起<rt>はやお</rt></ruby>きしてお<ruby>弁当<rt>べんとう</rt></ruby>を<ruby>手作<rt>てづく</rt></ruby>りしているんだって？<br/>B: ええ、<ruby>節約<rt>せつやく</rt></ruby>と<ruby>健康<rt>けんこう</rt></ruby>のために<ruby>続<rt>つづ</rt></ruby>けています。<br/>A: <ruby>自分<rt>じぶん</rt></ruby>できちんと<ruby>管理<rt>かんり</rt></ruby>していて<ruby>偉<rt>えら</rt></ruby>いね！",
+      "en": "A: Even though you're busy every day, you wake up early to make your own bento?<br/>B: Yes, I do it to save money and stay healthy.<br/>A: Managing yourself so responsibly is truly admirable!",
+      "zh_TW": "A: 明明每天都很忙，你還堅持早起親手做便當？<br/>B: 是啊，為了省錢和保持健康一直堅持著。<br/>A: 能把自己打理得這麼好，真了不起！",
+      "zh_CN": "A: 明明每天都很忙，你还坚持早起亲手做便当？<br/>B: 是啊，为了省钱和保持健康一直坚持着。<br/>A: 能把自己打理得这么好，真了不起！",
+      "ko": "A: 매일 바쁜데도 일찍 일어나서 도시락을 직접 싼다고?<br/>B: 네, 절약도 하고 건강도 챙기려고요.<br/>A: 스스로 철저히 관리하다니 정말 대견하고 훌륭해!",
+      "zh_HK": "A: 日日咁忙，你仲堅持咁早起身自己帶飯做飯盒？<br/>B: 係呀，為咗慳錢同健康啲嘛。<br/>A: 咁識照顧自己，真係好叻好值得讚！",
+      "fr": "A: Alors que tu es débordé, tu te lèves tôt tous les matins pour te préparer ton bento ?<br/>B: Oui, je le fais pour faire des économies et manger sainement.<br/>A: Tu es vraiment admirable de gérer tout ça aussi bien !"
     },
     "related": "\"That's admirable/well done\" vs. \"great/admirable/high-ranking\" vs. \"acting high and mighty\" — 偉いね is a warm, casual com"
   },
@@ -48187,13 +48187,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "To close one's eyes."
     },
     "example": {
-      "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>なんだか<ruby>目<rt>め</rt></ruby>を<ruby>閉<rt>と</rt></ruby>じるの<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>良<rt>よ</rt></ruby>くなくて<ruby>心配<rt>しんぱい</rt></ruby>なんだ。<br/>B: <ruby>無理<rt>むり</rt></ruby>をしないで、ひどくなる<ruby>前<rt>まえ</rt></ruby>に<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらった<ruby>方<rt>ほう</rt></ruby>がいいよ。",
-      "en": "A: Lately my 目を閉じる hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_TW": "A: Lately my 目を閉じる hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_CN": "A: Lately my 目を閉じる hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "ko": "A: Lately my 目を閉じる hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "zh_HK": "A: Lately my 目を閉じる hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse.",
-      "fr": "A: Lately my 目を閉じる hasn't been in good shape, and I'm worried.<br/>B: Don't push yourself, you should have a doctor check it before it gets worse."
+      "ja": "A: パソコン<ruby>作業<rt>さぎょう</rt></ruby>で<ruby>目<rt>め</rt></ruby>が<ruby>疲<rt>つか</rt></ruby>れたらどうしていますか？<br/>B: <ruby>椅子<rt>いす</rt></ruby>にもたれて5<ruby>分間<rt>ふんかん</rt></ruby>そっと<ruby>目<rt>め</rt></ruby>を<ruby>閉<rt>と</rt></ruby>じるだけでも、かなりリフレッシュできますよ。",
+      "en": "A: What do you do when your eyes get tired from computer work?<br/>B: Just leaning back in the chair and gently closing your eyes for five minutes refreshes you quite a bit.",
+      "zh_TW": "A: 用電腦眼睛覺得疲累時你都怎麼做？<br/>B: 只要靠著椅子輕輕閉上眼睛五分鐘，就能精神很多喔。",
+      "zh_CN": "A: 用电脑眼睛觉得疲累时你都怎么做？<br/>B: 只要靠着椅子轻轻闭上眼睛五分钟，就能精神很多哦。",
+      "ko": "A: 컴퓨터 작업으로 눈이 피로할 때는 어떻게 하세요?<br/>B: 의자에 기대어 5분간 가만히 눈을 감기만 해도 피로가 많이 풀려요.",
+      "zh_HK": "A: 對住部電腦對眼好攰嗰陣你會點做？<br/>B: 挨住張凳合埋對眼閉目養神5分鐘，個人已經精神返好多。",
+      "fr": "A: Que faites-vous quand vos yeux fatiguent devant l'ordinateur ?<br/>B: Il suffit de s'adosser à son fauteuil et de fermer doucement les yeux pendant cinq minutes pour se sentir revigoré."
     },
     "related": "To close one's eyes."
   },
