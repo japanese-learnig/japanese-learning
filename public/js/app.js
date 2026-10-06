@@ -1200,6 +1200,10 @@
   async function syncStudentToCloud(studentId) {
     if (!isFirebaseReady || !fbDb || !studentId || studentId === 'guest') return;
     try {
+      // Ensure user is authenticated first so Firestore security rule passes
+      if (currentStudent && currentStudent.id === studentId) {
+        await ensureStudentCloudAuth(studentId, currentStudent.passcode);
+      }
       const docRef = fbDb.collection('students').doc(studentId);
       await docRef.set({
         mylist: Array.from(mylistSet),
@@ -1208,6 +1212,7 @@
         updatedAt: firebase.firestore.FieldValue.serverTimestamp()
       }, { merge: true });
       console.log(`Cloud sync pushed for student ${studentId} ☁️`);
+      showToast('クラウドに同期しました ☁️✨');
     } catch (err) {
       console.warn('Cloud sync push note:', err.message);
     }
@@ -1217,6 +1222,10 @@
   async function syncStudentFromCloud(studentId) {
     if (!isFirebaseReady || !fbDb || !studentId || studentId === 'guest') return false;
     try {
+      // Ensure user is authenticated first
+      if (currentStudent && currentStudent.id === studentId) {
+        await ensureStudentCloudAuth(studentId, currentStudent.passcode);
+      }
       const docRef = fbDb.collection('students').doc(studentId);
       const snap = await docRef.get();
       if (snap.exists) {
@@ -1257,6 +1266,7 @@
             renderMylistView();
           }
           console.log(`Cloud data successfully synced down for ${studentId}! ☁️✨`);
+          showToast('クラウドから最新データを同期しました ☁️');
           return true;
         }
       }
@@ -2500,6 +2510,10 @@
     } else if (viewName === 'mylist') {
       document.getElementById('viewMylist').classList.remove('hidden');
       renderMylistView();
+      // Instantly pull any new data from cloud when opening My List
+      if (currentStudent && currentStudent.id !== 'guest') {
+        syncStudentFromCloud(currentStudent.id);
+      }
     } else if (viewName === 'admin') {
       document.getElementById('viewAdmin').classList.remove('hidden');
     }
