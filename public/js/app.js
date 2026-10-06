@@ -1204,11 +1204,16 @@
       if (currentStudent && currentStudent.id === studentId) {
         await ensureStudentCloudAuth(studentId, currentStudent.passcode);
       }
+      // Gather any custom card objects that this student has in their mylist
+      const mylistCardIds = new Set(mylistSet);
+      const customCardsToSync = vocabList.filter(c => mylistCardIds.has(c.id) && c.id.startsWith('card_'));
+
       const docRef = fbDb.collection('students').doc(studentId);
       await docRef.set({
         mylist: Array.from(mylistSet),
         folders: mylistFolders,
         cardFolderMap: mylistCardFolderMap,
+        customCards: customCardsToSync,
         updatedAt: firebase.firestore.FieldValue.serverTimestamp()
       }, { merge: true });
       console.log(`Cloud sync pushed for student ${studentId} ☁️`);
@@ -1230,6 +1235,25 @@
       if (snap.exists) {
         const data = snap.data();
         let changed = false;
+
+        // 1. Sync custom card definitions (e.g. newly imported cards from PC)
+        if (Array.isArray(data.customCards) && data.customCards.length > 0) {
+          let vocabChanged = false;
+          data.customCards.forEach(card => {
+            const exists = vocabList.find(c => c.id === card.id);
+            if (!exists) {
+              card.isCustom = true;
+              vocabList.push(card);
+              vocabChanged = true;
+            }
+          });
+          if (vocabChanged) {
+            localStorage.setItem('haku_vocab_data', JSON.stringify(vocabList));
+            changed = true;
+          }
+        }
+
+        // 2. Sync mylist IDs
         if (Array.isArray(data.mylist)) {
           data.mylist.forEach(id => {
             if (!mylistSet.has(id)) {
@@ -1238,8 +1262,9 @@
             }
           });
         }
+
+        // 3. Sync custom folders
         if (Array.isArray(data.folders) && data.folders.length > 0) {
-          // Merge custom folders
           data.folders.forEach(f => {
             if (!mylistFolders.find(ex => ex.id === f.id)) {
               mylistFolders.push(f);
@@ -1247,6 +1272,8 @@
             }
           });
         }
+
+        // 4. Sync card to folder mapping
         if (data.cardFolderMap && typeof data.cardFolderMap === 'object') {
           Object.assign(mylistCardFolderMap, data.cardFolderMap);
           changed = true;
@@ -2453,12 +2480,15 @@
           const setObj = new Set([...stSet, ...addedCardIds]);
           localStorage.setItem(key, JSON.stringify(Array.from(setObj)));
 
-          // Synchronize to Cloud for this student so their devices receive the new words
+          // Synchronize to Cloud for this student so their devices receive the new words AND the card definitions
           if (isFirebaseReady && fbDb && stId !== 'guest') {
+            const mylistCardIds = new Set(setObj);
+            const studentCustomCards = vocabList.filter(c => mylistCardIds.has(c.id) && c.id.startsWith('card_'));
             fbDb.collection('students').doc(stId).set({
               mylist: Array.from(setObj),
               folders: stFolders,
               cardFolderMap: stMap,
+              customCards: studentCustomCards,
               updatedAt: firebase.firestore.FieldValue.serverTimestamp()
             }, { merge: true }).catch(e => console.warn('Cloud broadcast note:', e.message));
           }
