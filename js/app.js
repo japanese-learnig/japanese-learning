@@ -365,6 +365,30 @@
         headerStudentBadge.textContent = isJa ? '生徒: ゲスト' : 'Student: Guest';
       }
     }
+
+    // 12. Re-render folder overview & units with updated bilingual titles
+    if (typeof renderFolderOverview === 'function') {
+      renderFolderOverview();
+    }
+    if (typeof renderSidebarFolderTree === 'function' && !sidebarSearchQuery) {
+      renderSidebarFolderTree();
+    }
+    // Update active study header if currently studying
+    const activeHeader = document.getElementById('activeStudyHeader');
+    if (activeHeader && !activeHeader.classList.contains('hidden') && typeof FOLDER_CONFIGS !== 'undefined') {
+      const fc = FOLDER_CONFIGS.find(f => f.id === currentFolder);
+      if (currentSection !== 'all') {
+        const sectionsCatalog = window.SECTIONS_DATA || [];
+        const catalogItem = sectionsCatalog.find(s => s.num === currentSection);
+        const rawSecTitle = catalogItem ? catalogItem.title : (window.SECTIONS && window.SECTIONS[currentSection]) || `単元${currentSection}`;
+        document.getElementById('activeStudySectionName').textContent = getBilingualSectionTitle(currentSection, rawSecTitle, lang);
+      } else if (fc) {
+        document.getElementById('activeStudySectionName').textContent = `${getBilingualFolderTitle(fc, lang)} (${isJa ? '全単元' : 'All Units'})`;
+      }
+      if (fc) {
+        document.getElementById('activeStudyFolderName').textContent = getBilingualFolderTitle(fc, lang);
+      }
+    }
   }
 
   // --- Data Loading & Persistence ---
@@ -610,6 +634,143 @@
     }
   }
 
+  // --- Filtering & Deck Navigation System ---
+  let currentFolder = 'all'; // 'folder_1', 'folder_2', 'folder_3', 'folder_4'
+  let currentSection = 'all'; // 1 to 43 or 'all'
+  let currentNavLevel = 'folders'; // 'folders' (level 1), 'units' (level 2), 'study' (level 3)
+
+  const FOLDER_CONFIGS = [
+    {
+      id: 'folder_1',
+      title: '初級 1-10',
+      desc: '挨拶・身の回り・家族・場所・体・数字',
+      range: [1, 10],
+      badge: 'STAGE 1',
+      trans: {
+        en: 'Beginner 1-10',
+        zh_TW: '初級 1-10',
+        zh_CN: '初级 1-10',
+        ko: '초급 1-10',
+        zh_HK: '初級 1-10',
+        fr: 'Débutant 1-10'
+      }
+    },
+    {
+      id: 'folder_2',
+      title: '初級 11-20',
+      desc: '日時・数え方・動詞・食べ物・する動詞',
+      range: [11, 20],
+      badge: 'STAGE 2',
+      trans: {
+        en: 'Beginner 11-20',
+        zh_TW: '初級 11-20',
+        zh_CN: '初级 11-20',
+        ko: '초급 11-20',
+        zh_HK: '初級 11-20',
+        fr: 'Débutant 11-20'
+      }
+    },
+    {
+      id: 'folder_3',
+      title: '初級 21-30',
+      desc: '会話・形容詞・予定・天気・電車・て形',
+      range: [21, 30],
+      badge: 'STAGE 3',
+      trans: {
+        en: 'Beginner 21-30',
+        zh_TW: '初級 21-30',
+        zh_CN: '初级 21-30',
+        ko: '초급 21-30',
+        zh_HK: '初級 21-30',
+        fr: 'Débutant 21-30'
+      }
+    },
+    {
+      id: 'folder_4',
+      title: '初級 31-43',
+      desc: 'て形応用・動詞4/5・病気・ない形・可能形',
+      range: [31, 43],
+      badge: 'STAGE 4',
+      trans: {
+        en: 'Beginner 31-43',
+        zh_TW: '初級 31-43',
+        zh_CN: '初级 31-43',
+        ko: '초급 31-43',
+        zh_HK: '初級 31-43',
+        fr: 'Débutant 31-43'
+      }
+    }
+  ];
+
+  // Multilingual translations for all 44 curriculum unit titles
+  const SECTION_TRANSLATIONS = {
+    0: { en: 'Classroom Phrases', zh_TW: '課堂常用句', zh_CN: '课堂常用句', ko: '수업 필수 표현', zh_HK: '課堂常用句', fr: 'Phrases de classe' },
+    1: { en: 'Simple Phrases', zh_TW: '簡易短句', zh_CN: '简易短句', ko: '간단한 표현', zh_HK: '簡易短句', fr: 'Phrases simples' },
+    2: { en: 'Everyday Objects', zh_TW: '隨身物品', zh_CN: '随身物品', ko: '주변 사물', zh_HK: '隨身物品', fr: 'Objets du quotidien' },
+    3: { en: 'Pronouns & Family', zh_TW: '代名詞與家族', zh_CN: '代名词与家族', ko: '대명사 및 가족', zh_HK: '代名詞與家族', fr: 'Pronoms et Famille' },
+    4: { en: 'Places', zh_TW: '場所', zh_CN: '场所', ko: '장소', zh_HK: '場所', fr: 'Lieux' },
+    5: { en: 'Animals', zh_TW: '動物', zh_CN: '动物', ko: '동물', zh_HK: '動物', fr: 'Animaux' },
+    6: { en: 'Occupations & Status', zh_TW: '職業與身分', zh_CN: '职业与身分', ko: '직업 및 신분', zh_HK: '職業與身分', fr: 'Métiers et Statut' },
+    7: { en: 'Countries & Locations', zh_TW: '國家與地名', zh_CN: '国家与地名', ko: '국가 및 지명', zh_HK: '國家與地名', fr: 'Pays et Lieux' },
+    8: { en: 'Body Parts', zh_TW: '身體部位', zh_CN: '身体部位', ko: '신체 부위', zh_HK: '身體部位', fr: 'Parties du corps' },
+    9: { en: 'Positions & Directions', zh_TW: '方位與位置', zh_CN: '方位与位置', ko: '위치 및 방향', zh_HK: '方位與位置', fr: 'Positions' },
+    10: { en: 'Basic Numbers', zh_TW: '基本數字', zh_CN: '基本数字', ko: '기본 숫자', zh_HK: '基本數字', fr: 'Nombres de base' },
+    11: { en: 'Dates (Month / Day)', zh_TW: '日期（月份／日期）', zh_CN: '日期（月份／日期）', ko: '날짜 (월/일)', zh_HK: '日期（月份／日期）', fr: 'Dates (Mois / Jour)' },
+    12: { en: 'Time & Time Periods', zh_TW: '時間與時段', zh_CN: '时间与时段', ko: '시간 및 시간대', zh_HK: '時間與時段', fr: 'Heure et Périodes' },
+    13: { en: 'Counters (Things / People)', zh_TW: '計數詞（物／人）', zh_CN: '计数词（物／人）', ko: '수사 (사물/사람)', zh_HK: '計數詞（物／人）', fr: 'Compteurs' },
+    14: { en: 'Time & Tense Expressions', zh_TW: '時間與時態', zh_CN: '时间与时态', ko: '시간 및 시제 표현', zh_HK: '時間與時態', fr: 'Temps et Expressions temporelles' },
+    15: { en: 'Basic Verbs 1', zh_TW: '基本動詞 1', zh_CN: '基本动词 1', ko: '기본 동사 1', zh_HK: '基本動詞 1', fr: 'Verbes de base 1' },
+    16: { en: 'Vehicles & Transport', zh_TW: '交通工具', zh_CN: '交通工具', ko: '교통수단', zh_HK: '交通工具', fr: 'Transports' },
+    17: { en: 'Time & Frequency', zh_TW: '時間與頻率', zh_CN: '时间与频率', ko: '시간 및 빈도', zh_HK: '時間與頻率', fr: 'Temps et Fréquence' },
+    18: { en: 'Food & Drinks', zh_TW: '食物與飲食', zh_CN: '食物与饮食', ko: '음식', zh_HK: '食物與飲食', fr: 'Nourriture' },
+    19: { en: 'Basic Verbs 2', zh_TW: '基本動詞 2', zh_CN: '基本动词 2', ko: '기본 동사 2', zh_HK: '基本動詞 2', fr: 'Verbes de base 2' },
+    20: { en: 'Suru Verbs (Nouns)', zh_TW: 'Suru動詞（名詞）', zh_CN: 'Suru动词（名词）', ko: 'Suru 동사 (명사)', zh_HK: 'Suru動詞（名詞）', fr: 'Verbes en Suru' },
+    21: { en: 'Fillers & Conjunctions', zh_TW: '隨聲附和與連接詞', zh_CN: '随声附和与连接词', ko: '맞장구 및 접속사', zh_HK: '隨聲附和與連接詞', fr: 'Interjections et Conjonctions' },
+    22: { en: 'I-Adjectives 1', zh_TW: 'い形容詞 1', zh_CN: 'い形容词 1', ko: 'い형용사 1', zh_HK: 'い形容詞 1', fr: 'Adjectifs en -i 1' },
+    23: { en: 'Na-Adjectives', zh_TW: 'な形容詞', zh_CN: 'な形容词', ko: 'な형용사', zh_HK: 'な形容詞', fr: 'Adjectifs en -na' },
+    24: { en: 'Colors & Tastes', zh_TW: '顏色與味道', zh_CN: '颜色与味道', ko: '색상 및 맛', zh_HK: '顏色與味道', fr: 'Couleurs et Goûts' },
+    25: { en: 'Plans, Movies & Sports', zh_TW: '計畫、電影與運動', zh_CN: '计划、电影与运动', ko: '일정, 영화, 스포츠', zh_HK: '計畫、電影與運動', fr: 'Projets, Films et Sports' },
+    26: { en: 'Seasons & Weather', zh_TW: '季節與天氣', zh_CN: '季节与天气', ko: '계절 및 날씨', zh_HK: '季節與天氣', fr: 'Saisons et Météo' },
+    27: { en: 'Basic Verbs 3', zh_TW: '基本動詞 3', zh_CN: '基本动词 3', ko: '기본 동사 3', zh_HK: '基本動詞 3', fr: 'Verbes de base 3' },
+    28: { en: 'Going Out', zh_TW: '外出', zh_CN: '外出', ko: '외출', zh_HK: '外出', fr: 'Sorties' },
+    29: { en: 'Trains & Subways', zh_TW: '電車與鐵路', zh_CN: '电车与铁路', ko: '전철 및 기차', zh_HK: '電車與鐵路', fr: 'Train et Métro' },
+    30: { en: 'Basic Verbs 1 (Te-form)', zh_TW: '基本動詞 1（て形）', zh_CN: '基本动词 1（て形）', ko: '기본 동사 1 (て형)', zh_HK: '基本動詞 1（て形）', fr: 'Verbes de base 1 (forme en te)' },
+    31: { en: 'Basic Verbs 2 (Te-form)', zh_TW: '基本動詞 2（て形）', zh_CN: '基本动词 2（て形）', ko: '기본 동사 2 (て형)', zh_HK: '基本動詞 2（て形）', fr: 'Verbes de base 2 (forme en te)' },
+    32: { en: 'Basic Verbs 3 (Te-form)', zh_TW: '基本動詞 3（て形）', zh_CN: '基本动词 3（て形）', ko: '기본 동사 3 (て형)', zh_HK: '基本動詞 3（て形）', fr: 'Verbes de base 3 (forme en te)' },
+    33: { en: 'Basic Verbs 4', zh_TW: '基本動詞 4', zh_CN: '基本动词 4', ko: '기본 동사 4', zh_HK: '基本動詞 4', fr: 'Verbes de base 4' },
+    34: { en: 'Basic Verbs 5', zh_TW: '基本動詞 5', zh_CN: '基本动词 5', ko: '기본 동사 5', zh_HK: '基本動詞 5', fr: 'Verbes de base 5' },
+    35: { en: 'I-Adjectives 2', zh_TW: 'い形容詞 2', zh_CN: 'い形容词 2', ko: 'い형용사 2', zh_HK: 'い形容詞 2', fr: 'Adjectifs en -i 2' },
+    36: { en: 'Illness & Symptoms', zh_TW: '疾病與症狀', zh_CN: '疾病与症状', ko: '질병 및 증상', zh_HK: '疾病與症狀', fr: 'Maladie et Symptômes' },
+    37: { en: 'Basic Verbs 1 (Nai-form)', zh_TW: '基本動詞 1（ない形）', zh_CN: '基本动词 1（ない形）', ko: '기본 동사 1 (ない형)', zh_HK: '基本動詞 1（ない形）', fr: 'Verbes de base 1 (forme en nai)' },
+    38: { en: 'Basic Verbs 2 (Nai-form)', zh_TW: '基本動詞 2（ない形）', zh_CN: '基本动词 2（ない形）', ko: '기본 동사 2 (ない형)', zh_HK: '基本動詞 2（ない形）', fr: 'Verbes de base 2 (forme en nai)' },
+    39: { en: 'Basic Verbs 3 (Nai-form)', zh_TW: '基本動詞 3（ない形）', zh_CN: '基本动词 3（ない形）', ko: '기본 동사 3 (ない형)', zh_HK: '基本動詞 3（ない形）', fr: 'Verbes de base 3 (forme en nai)' },
+    40: { en: 'Basic Verbs 4 (Nai-form)', zh_TW: '基本動詞 4（ない形）', zh_CN: '基本动词 4（ない形）', ko: '기본 동사 4 (ない형)', zh_HK: '基本動詞 4（ない形）', fr: 'Verbes de base 4 (forme en nai)' },
+    41: { en: 'Basic Verbs 5 (Nai-form)', zh_TW: '基本動詞 5（ない形）', zh_CN: '基本动词 5（ない形）', ko: '기본 동사 5 (ない형)', zh_HK: '基本動詞 5（ない形）', fr: 'Verbes de base 5 (forme en nai)' },
+    42: { en: 'Basic Verbs 1 (Potential)', zh_TW: '基本動詞 1（可能形）', zh_CN: '基本动词 1（可能形）', ko: '기본 동사 1 (가능형)', zh_HK: '基本動詞 1（可能形）', fr: 'Verbes de base 1 (forme potentielle)' },
+    43: { en: 'Basic Verbs 2 (Potential)', zh_TW: '基本動詞 2（可能形）', zh_CN: '基本动词 2（可能形）', ko: '기본 동사 2 (가능형)', zh_HK: '基本動詞 2（可能形）', fr: 'Verbes de base 2 (forme potentielle)' }
+  };
+
+  // Helper to format bilingual title: 日本語 (各言語訳)
+  function getBilingualSectionTitle(secNum, rawJapaneseTitle, lang) {
+    const jpTitle = rawJapaneseTitle || (SECTION_TRANSLATIONS[secNum] ? SECTION_TRANSLATIONS[secNum].ja : `単元${secNum}`);
+    if (lang === 'ja' || !lang) {
+      return jpTitle;
+    }
+    const tMap = SECTION_TRANSLATIONS[secNum];
+    if (!tMap) return jpTitle;
+    const trans = tMap[lang] || tMap.en;
+    if (!trans) return jpTitle;
+    return `${jpTitle} (${trans})`;
+  }
+
+  function getBilingualFolderTitle(fc, lang) {
+    if (!fc) return '';
+    if (lang === 'ja' || !lang) return fc.title;
+    const trans = fc.trans ? (fc.trans[lang] || fc.trans.en) : null;
+    if (!trans || trans === fc.title) return fc.title;
+    return `${fc.title} (${trans})`;
+  }
+
   // Render vertical bullet / hierarchical folder tree (PC版 縦の箇条書きスタイル)
   function renderSidebarFolderTree() {
     const container = document.getElementById('sidebarFolderListContainer');
@@ -622,6 +783,7 @@
     FOLDER_CONFIGS.forEach(fc => {
       const isExpanded = expandedFolderIds.has(fc.id);
       const folderCards = vocabList.filter(c => c.folder_id === fc.id);
+      const bilingualFolderTitle = getBilingualFolderTitle(fc, currentLang);
 
       // Folder Item Container
       const folderWrapper = document.createElement('div');
@@ -631,14 +793,14 @@
       const headerDiv = document.createElement('div');
       headerDiv.className = 'px-3 py-2.5 bg-slate-50/80 hover:bg-lightBlueBg/40 cursor-pointer flex items-center justify-between transition select-none';
       headerDiv.innerHTML = `
-        <div class="flex items-center space-x-2">
-          <i data-lucide="${isExpanded ? 'folder-open' : 'folder'}" class="w-4 h-4 text-deepNavy"></i>
-          <div>
-            <span class="text-xs font-bold text-darkNavyText">${fc.title}</span>
+        <div class="flex items-center space-x-2 truncate pr-2">
+          <i data-lucide="${isExpanded ? 'folder-open' : 'folder'}" class="w-4 h-4 text-deepNavy shrink-0"></i>
+          <div class="truncate">
+            <span class="text-xs font-bold text-darkNavyText truncate">${bilingualFolderTitle}</span>
             <span class="text-[10px] text-slate-400 font-medium ml-1">(${folderCards.length}語)</span>
           </div>
         </div>
-        <div class="flex items-center space-x-1">
+        <div class="flex items-center space-x-1 shrink-0">
           <button class="btn-folder-play p-1 text-deepNavy hover:bg-white rounded-lg transition" title="Study this entire folder">
             <i data-lucide="play" class="w-3.5 h-3.5 fill-deepNavy text-deepNavy"></i>
           </button>
@@ -694,7 +856,8 @@
           if (!catalogItem && !sectionsMap[secNum] && vocabList.filter(c => c.section_num === secNum).length === 0) {
             return;
           }
-          const secTitle = (catalogItem && catalogItem.title) || sectionsMap[secNum] || `${secNum}. 単元${secNum}`;
+          const rawSecTitle = (catalogItem && catalogItem.title) || sectionsMap[secNum] || `${secNum}. 単元${secNum}`;
+          const bilingualTitle = getBilingualSectionTitle(secNum, rawSecTitle, currentLang);
           const count = vocabList.filter(c => c.section_num === secNum).length;
           const isCurrentActive = (currentSection == secNum && currentFolder === fc.id);
           const numDisplay = secNum === 0 ? '★' : `${secNum}`;
@@ -710,7 +873,7 @@
             <div class="flex items-center space-x-2 truncate pr-2">
               <span class="w-1.5 h-1.5 rounded-full ${isCurrentActive ? 'bg-deepNavy' : 'bg-slate-300 group-hover:bg-coralPink'}"></span>
               <span class="text-[11px] font-bold text-slate-400 w-4 text-center">${numDisplay}</span>
-              <span class="truncate text-[11px]">${secTitle}</span>
+              <span class="truncate text-[11px]">${bilingualTitle}</span>
             </div>
             <div class="flex items-center space-x-1 shrink-0">
               <span class="text-[9px] px-1.5 py-0.2 rounded-full font-bold ${isCurrentActive ? 'bg-deepNavy text-white' : 'bg-slate-100 text-slate-500'}">${count}語</span>
@@ -720,7 +883,7 @@
 
           unitItem.addEventListener('click', () => {
             currentFolder = fc.id;
-            startStudyingSection(secNum, secTitle);
+            startStudyingSection(secNum, rawSecTitle);
             renderSidebarFolderTree();
           });
 
@@ -1534,18 +1697,6 @@
     }, 300);
   }
 
-  // --- Filtering & Deck Navigation System ---
-  let currentFolder = 'all'; // 'folder_1', 'folder_2', 'folder_3', 'folder_4'
-  let currentSection = 'all'; // 1 to 38 or 'all'
-  let currentNavLevel = 'folders'; // 'folders' (level 1), 'units' (level 2), 'study' (level 3)
-
-  const FOLDER_CONFIGS = [
-    { id: 'folder_1', title: '初級 1-10', desc: '挨拶・身の回り・家族・場所・体・数字', range: [1, 10], badge: 'STAGE 1' },
-    { id: 'folder_2', title: '初級 11-20', desc: '日時・数え方・動詞・食べ物・する動詞', range: [11, 20], badge: 'STAGE 2' },
-    { id: 'folder_3', title: '初級 21-30', desc: '会話・形容詞・予定・天気・電車・て形', range: [21, 30], badge: 'STAGE 3' },
-    { id: 'folder_4', title: '初級 31-43', desc: 'て形応用・動詞4/5・病気・ない形・可能形', range: [31, 43], badge: 'STAGE 4' }
-  ];
-
   let expandedOverviewFolderIds = new Set(); // tracks which folders are open in Level 1 overview
 
   function renderFolderOverview() {
@@ -1559,6 +1710,7 @@
     FOLDER_CONFIGS.forEach(fc => {
       const isExpanded = expandedOverviewFolderIds.has(fc.id);
       const folderCards = vocabList.filter(c => c.folder_id === fc.id);
+      const bilingualFolderTitle = getBilingualFolderTitle(fc, currentLang);
 
       // Wrapper matching Image 2: rounded-2xl border bg-white
       const folderWrapper = document.createElement('div');
@@ -1570,7 +1722,7 @@
       headerDiv.innerHTML = `
         <div class="flex items-center space-x-2.5 truncate pr-2">
           <i data-lucide="${isExpanded ? 'folder-open' : 'folder'}" class="w-5 h-5 text-deepNavy shrink-0"></i>
-          <span class="text-sm font-bold text-darkNavyText truncate">${fc.title}</span>
+          <span class="text-sm font-bold text-darkNavyText truncate">${bilingualFolderTitle}</span>
           <span class="text-xs text-slate-400 font-medium shrink-0">(${folderCards.length}語)</span>
         </div>
         <div class="flex items-center space-x-2 shrink-0">
@@ -1631,7 +1783,8 @@
           if (!catalogItem && !sectionsMap[secNum] && vocabList.filter(c => c.section_num === secNum).length === 0) {
             return;
           }
-          const secTitle = (catalogItem && catalogItem.title) || sectionsMap[secNum] || `${secNum}. 単元${secNum}`;
+          const rawSecTitle = (catalogItem && catalogItem.title) || sectionsMap[secNum] || `${secNum}. 単元${secNum}`;
+          const bilingualTitle = getBilingualSectionTitle(secNum, rawSecTitle, currentLang);
           const secCards = vocabList.filter(c => c.section_num === secNum);
           const numDisplay = secNum === 0 ? '★' : `${secNum}`;
 
@@ -1640,7 +1793,7 @@
           unitItem.innerHTML = `
             <div class="flex items-center space-x-2 truncate pr-2">
               <span class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 font-bold text-[10px] flex items-center justify-center shrink-0">${numDisplay}</span>
-              <span class="truncate font-semibold text-slate-800 text-xs">${secTitle}</span>
+              <span class="truncate font-semibold text-slate-800 text-xs">${bilingualTitle}</span>
             </div>
             <div class="flex items-center space-x-1 shrink-0 text-slate-400">
               <span class="text-[10px] px-1.5 py-0.5 rounded font-medium bg-slate-100 text-slate-600">${secCards.length}語</span>
@@ -1651,7 +1804,7 @@
           unitItem.addEventListener('click', (e) => {
             e.stopPropagation();
             currentFolder = fc.id;
-            startStudyingSection(secNum, secTitle);
+            startStudyingSection(secNum, rawSecTitle);
           });
 
           unitsContainer.appendChild(unitItem);
@@ -1671,7 +1824,8 @@
     currentNavLevel = 'units';
 
     const fc = FOLDER_CONFIGS.find(f => f.id === folderId);
-    document.getElementById('currentFolderTitle').textContent = fc ? `${fc.title}` : '単元一覧';
+    const bilingualFolderTitle = getBilingualFolderTitle(fc, currentLang);
+    document.getElementById('currentFolderTitle').textContent = fc ? bilingualFolderTitle : '単元一覧';
 
     const container = document.getElementById('unitButtonsContainer');
     container.innerHTML = '';
@@ -1693,18 +1847,19 @@
       if (!catalogItem && !sectionsMap[secNum] && vocabList.filter(c => c.section_num === secNum).length === 0) {
         return;
       }
-      const secTitle = (catalogItem && catalogItem.title) || sectionsMap[secNum] || `${secNum}. 単元${secNum}`;
+      const rawSecTitle = (catalogItem && catalogItem.title) || sectionsMap[secNum] || `${secNum}. 単元${secNum}`;
+      const bilingualTitle = getBilingualSectionTitle(secNum, rawSecTitle, currentLang);
       const secCards = vocabList.filter(c => c.section_num === secNum);
       const numDisplay = secNum === 0 ? '★' : `${secNum}`;
 
       const unitBtn = document.createElement('button');
       unitBtn.className = 'w-full p-2.5 rounded-xl border border-slate-200 bg-white hover:border-rose-300 hover:bg-rose-50/50 flex items-center justify-between text-left transition text-xs font-semibold text-slate-800 shadow-2xs';
       unitBtn.innerHTML = `
-        <div class="flex items-center space-x-2">
-          <span class="w-6 h-6 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-[11px]">${numDisplay}</span>
-          <span>${secTitle}</span>
+        <div class="flex items-center space-x-2 truncate pr-2">
+          <span class="w-6 h-6 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-[11px] shrink-0">${numDisplay}</span>
+          <span class="truncate">${bilingualTitle}</span>
         </div>
-        <div class="flex items-center space-x-1 text-slate-400">
+        <div class="flex items-center space-x-1 text-slate-400 shrink-0">
           <span class="text-[10px] bg-slate-100 px-1.5 py-0.5 rounded">${secCards.length}語</span>
           <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
         </div>
@@ -1712,7 +1867,7 @@
       lucide.createIcons({ root: unitBtn });
 
       unitBtn.addEventListener('click', () => {
-        startStudyingSection(secNum, secTitle);
+        startStudyingSection(secNum, rawSecTitle);
       });
       container.appendChild(unitBtn);
     });
@@ -1727,10 +1882,12 @@
     currentSection = sectionNum;
     currentNavLevel = 'study';
 
-    // Update active study header
+    // Update active study header with bilingual titles
     const fc = FOLDER_CONFIGS.find(f => f.id === currentFolder);
-    document.getElementById('activeStudySectionName').textContent = sectionTitle;
-    document.getElementById('activeStudyFolderName').textContent = fc ? `${fc.title}` : '';
+    const bilingualSec = getBilingualSectionTitle(sectionNum, sectionTitle, currentLang);
+    const bilingualFold = getBilingualFolderTitle(fc, currentLang);
+    document.getElementById('activeStudySectionName').textContent = bilingualSec;
+    document.getElementById('activeStudyFolderName').textContent = fc ? bilingualFold : '';
 
     // Switch panels
     document.getElementById('folderOverviewPanel').classList.add('hidden');
