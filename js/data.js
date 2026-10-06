@@ -28826,7 +28826,7 @@ window.SECTIONS_DATA = [
 window.INITIAL_STUDENTS = [
   { id: "haku", name: "ハク先生", lang: "ja", passcode: "ppooii0099" },
   { id: "admin", name: "管理者", lang: "ja", passcode: "ppooii0099" },
-  { id: "0001", name: "Conner", lang: "en", passcode: "1122" },
+  { id: "0001", name: "Connor", lang: "en", passcode: "1122" },
   { id: "0002", name: "Eason", lang: "zh_HK", passcode: "2233" },
   { id: "0003", name: "두성", lang: "ko", passcode: "3344" },
   { id: "0004", name: "はな", lang: "en", passcode: "4455" },
