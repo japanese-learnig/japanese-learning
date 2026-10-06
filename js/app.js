@@ -395,7 +395,7 @@
   // --- Data Loading & Persistence ---
   function initData() {
     // Master data version check to ensure newly added cards & furigana updates are immediately visible
-    const CURRENT_DATA_VERSION = 'v34_kame_natural_dialogues_final';
+    const CURRENT_DATA_VERSION = 'v35_complete_natural_dialogues_eradication';
     const savedVersion = localStorage.getItem('haku_vocab_version');
 
     const seedCards = window.INITIAL_VOCAB_DATA || [];
