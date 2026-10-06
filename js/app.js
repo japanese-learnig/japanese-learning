@@ -56,13 +56,21 @@
   function cleanJapaneseForSpeech(text) {
     if (!text) return '';
     let s = String(text);
-    // 1. If text contains <ruby> tags, replace each <ruby>...<rt>(reading)</rt>...</ruby> with the exact reading!
-    s = s.replace(/<ruby[^>]*>(?:(?!<ruby)[\s\S])*?<rt[^>]*>([\s\S]*?)<\/rt>[\s\S]*?<\/ruby>/gi, ' $1 ');
-    // 2. Remove any remaining HTML tags
-    s = s.replace(/<[^>]+>/g, ' ');
-    // 3. Remove parentheses furigana readings: （しんごう） or (しんごう)
+    // 1. Remove <rt> and <rp> ruby tags so the original natural kanji text is retained intact.
+    // (Inserting spaces around furigana breaks morphological parsing, causing particles like 'は' to be mispronounced as 'ha' instead of 'wa'!)
+    s = s.replace(/<rt[^>]*>[\s\S]*?<\/rt>/gi, '');
+    s = s.replace(/<rp[^>]*>[\s\S]*?<\/rp>/gi, '');
+    // 2. Replace <br> tags with natural sentence pauses (。)
+    s = s.replace(/<br\s*\/?>/gi, '。');
+    // 3. Remove all remaining HTML tags without inserting spaces between kanji and particles
+    s = s.replace(/<[^>]+>/g, '');
+    // 4. Strip speaker labels like A: or B:
+    s = s.replace(/^[ABａｂＡＢ][:：]\s*/g, '');
+    s = s.replace(/[。、!?！？]\s*[ABａｂＡＢ][:：]\s*/g, '。');
+    // 5. Remove parenthetical readings: （しんごう） or (しんごう)
     s = s.replace(/[（\(][\u3040-\u309F\u30A0-\u30FF・ー\s]+[）\)]/g, '');
-    // 4. Clean extra spaces
+    // 6. Clean duplicate punctuation and extra spaces
+    s = s.replace(/[。]+/g, '。');
     return s.replace(/\s+/g, ' ').trim();
   }
 
@@ -395,7 +403,7 @@
   // --- Data Loading & Persistence ---
   function initData() {
     // Master data version check to ensure newly added cards & furigana updates are immediately visible
-    const CURRENT_DATA_VERSION = 'v36_perfect_ruby_furigana';
+    const CURRENT_DATA_VERSION = 'v37_natural_tts_and_accurate_furigana';
     const savedVersion = localStorage.getItem('haku_vocab_version');
 
     const seedCards = window.INITIAL_VOCAB_DATA || [];

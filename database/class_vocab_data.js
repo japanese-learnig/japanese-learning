@@ -29269,7 +29269,7 @@ window.CLASS_VOCAB_DATA = [
       "fr": "trois ans de plus"
     },
     "example": {
-      "ja": "A: <ruby>彼<rt>かれ</rt></ruby>は<ruby>私<rt>わたし</rt></ruby>より3<ruby>歳上<rt>としうえ</rt></ruby>なので、とても<ruby>頼<rt>たよ</rt></ruby>りがいがあります。<br/>B: 3<ruby>歳<rt>さい</rt></ruby><ruby>年上<rt>としうえ</rt></ruby>だと<ruby>落ち着<rt>おちつ</rt></ruby>いていて<ruby>安心<rt>あんしん</rt></ruby><ruby>感<rt>かん</rt></ruby>がありますね。",
+      "ja": "A: <ruby>彼<rt>かれ</rt></ruby>は<ruby>私<rt>わたし</rt></ruby>より3<ruby>歳<rt>さい</rt></ruby><ruby>上<rt>うえ</rt></ruby>なので、とても<ruby>頼<rt>たよ</rt></ruby>りがいがあります。<br/>B: 3<ruby>歳<rt>さい</rt></ruby><ruby>年上<rt>としうえ</rt></ruby>だと<ruby>落ち着<rt>おちつ</rt></ruby>いていて<ruby>安心<rt>あんしん</rt></ruby><ruby>感<rt>かん</rt></ruby>がありますね。",
       "en": "A: He is three years older than me, so he is very dependable.<br/>B: Being three years older brings calm reliability.",
       "zh_TW": "A: He is three years older than me, so he is very dependable.<br/>B: Being three years older brings calm reliability.",
       "zh_CN": "A: He is three years older than me, so he is very dependable.<br/>B: Being three years older brings calm reliability.",
