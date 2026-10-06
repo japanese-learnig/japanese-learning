@@ -322,17 +322,28 @@
           </div>
         </div>
 
-        <!-- Bottom Controls -->
-        <div class="mt-3 flex items-center justify-between space-x-2.5">
-          <button id="btnPrev" class="flex-1 py-2.5 px-3 rounded-full bg-white border border-softBorder hover:border-deepNavy text-darkNavyText font-bold flex items-center justify-center space-x-1 transition shadow-xs active:scale-95 text-xs">
+        <!-- Bottom Controls (写真再現 ＆ 覚えた！・もう一度！大型ボタン) -->
+        <div class="mt-3 flex items-center justify-between gap-2 sm:gap-2.5">
+          <!-- 前へ (Prev) -->
+          <button id="btnPrev" class="py-3 px-3.5 rounded-full bg-white border border-softBorder hover:border-deepNavy text-darkNavyText font-bold flex items-center justify-center space-x-1 transition shadow-xs active:scale-95 text-xs sm:text-sm shrink-0" title="Prev">
             <i data-lucide="chevron-left" class="w-4 h-4"></i>
             <span id="btnPrevLabel">Prev</span>
           </button>
-          <button id="btnMarkKnown" class="py-2.5 px-3 rounded-full bg-white border border-softBorder hover:border-emerald-500 text-emerald-700 font-bold flex items-center justify-center space-x-1 transition shadow-xs active:scale-95 text-xs" title="Learned">
-            <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-            <span id="btnMarkKnownLabel">Learned</span>
+
+          <!-- もう一度！ (左側: オレンジ系またはアクセントカラー) -->
+          <button id="btnMarkReview" class="flex-1 py-3 px-3 rounded-full bg-amber-50 hover:bg-amber-100 border-2 border-amber-400 text-amber-800 font-extrabold flex items-center justify-center space-x-1.5 transition shadow-sm active:scale-95 text-xs sm:text-sm" title="もう一度復習する">
+            <i data-lucide="rotate-ccw" class="w-4 h-4 text-amber-600 stroke-[2.5]"></i>
+            <span id="btnMarkReviewLabel">もう一度！</span>
           </button>
-          <button id="btnNext" class="flex-1 py-2.5 px-3 rounded-full bg-coralPink hover:bg-coralPinkHover text-white font-bold flex items-center justify-center space-x-1 transition shadow-xs active:scale-95 text-xs">
+
+          <!-- 覚えた！ (右側: エメラルドグリーン系) -->
+          <button id="btnMarkKnown" class="flex-1 py-3 px-3 rounded-full bg-emerald-50 hover:bg-emerald-100 border-2 border-emerald-500 text-emerald-800 font-extrabold flex items-center justify-center space-x-1.5 transition shadow-sm active:scale-95 text-xs sm:text-sm" title="覚えた！">
+            <i data-lucide="check" class="w-4 h-4 text-emerald-600 stroke-[3]"></i>
+            <span id="btnMarkKnownLabel">覚えた！</span>
+          </button>
+
+          <!-- 次へ (Next) -->
+          <button id="btnNext" class="py-3 px-3.5 rounded-full bg-coralPink hover:bg-coralPinkHover text-white font-bold flex items-center justify-center space-x-1 transition shadow-xs active:scale-95 text-xs sm:text-sm shrink-0" title="Next">
             <span id="btnNextLabel">Next</span>
             <i data-lucide="chevron-right" class="w-4 h-4"></i>
           </button>

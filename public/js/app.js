@@ -257,8 +257,10 @@
     // 8. Flashcard Bottom Navigation
     const btnPrevLabel = document.getElementById('btnPrevLabel');
     if (btnPrevLabel) btnPrevLabel.textContent = isJa ? '前へ' : 'Prev';
+    const btnMarkReviewLabel = document.getElementById('btnMarkReviewLabel');
+    if (btnMarkReviewLabel) btnMarkReviewLabel.textContent = isJa ? 'もう一度！' : 'Again / Review';
     const btnMarkKnownLabel = document.getElementById('btnMarkKnownLabel');
-    if (btnMarkKnownLabel) btnMarkKnownLabel.textContent = isJa ? '覚えた' : 'Learned';
+    if (btnMarkKnownLabel) btnMarkKnownLabel.textContent = isJa ? '覚えた！' : 'Learned!';
     const btnNextLabel = document.getElementById('btnNextLabel');
     if (btnNextLabel) btnNextLabel.textContent = isJa ? '次へ' : 'Next';
 
@@ -405,7 +407,7 @@
   // --- Data Loading & Persistence ---
   function initData() {
     // Master data version check to ensure newly added cards & furigana updates are immediately visible
-    const CURRENT_DATA_VERSION = 'v43_student_edit_feature';
+    const CURRENT_DATA_VERSION = 'v44_flashcard_learned_review_folders';
     const savedVersion = localStorage.getItem('haku_vocab_version');
 
     const seedCards = window.INITIAL_VOCAB_DATA || [];
@@ -1369,11 +1371,31 @@
     const savedFolders = localStorage.getItem(foldersKey);
     mylistFolders = savedFolders ? JSON.parse(savedFolders) : [];
 
-    // Ensure the default folder "授業で習った言葉" is always present for every student
+    // Ensure the default folders are always present for every student:
+    // 1. "授業で習った言葉" (folder_class_words)
+    // 2. "覚えた！" (folder_learned)
+    // 3. "もう一度！" (folder_review)
     const CLASS_FOLDER_ID = 'folder_class_words';
     const CLASS_FOLDER_NAME = '授業で習った言葉';
+    const LEARNED_FOLDER_ID = 'folder_learned';
+    const LEARNED_FOLDER_NAME = '覚えた！';
+    const REVIEW_FOLDER_ID = 'folder_review';
+    const REVIEW_FOLDER_NAME = 'もう一度！';
+
+    let foldersUpdated = false;
     if (!mylistFolders.find(f => f.id === CLASS_FOLDER_ID || f.name === CLASS_FOLDER_NAME)) {
       mylistFolders.unshift({ id: CLASS_FOLDER_ID, name: CLASS_FOLDER_NAME });
+      foldersUpdated = true;
+    }
+    if (!mylistFolders.find(f => f.id === LEARNED_FOLDER_ID || f.name === LEARNED_FOLDER_NAME)) {
+      mylistFolders.push({ id: LEARNED_FOLDER_ID, name: LEARNED_FOLDER_NAME });
+      foldersUpdated = true;
+    }
+    if (!mylistFolders.find(f => f.id === REVIEW_FOLDER_ID || f.name === REVIEW_FOLDER_NAME)) {
+      mylistFolders.push({ id: REVIEW_FOLDER_ID, name: REVIEW_FOLDER_NAME });
+      foldersUpdated = true;
+    }
+    if (foldersUpdated) {
       localStorage.setItem(foldersKey, JSON.stringify(mylistFolders));
     }
 
@@ -3184,17 +3206,71 @@
       });
     });
 
-    // Mark Known button
-    document.getElementById('btnMarkKnown').addEventListener('click', () => {
-      if (!activeDeck[currentIndex]) return;
-      const card = activeDeck[currentIndex];
-      knownSet.add(card.id);
-      showToast(`Marked "${card.word}" as learned! 👍`);
-      if (currentIndex < activeDeck.length - 1) {
-        currentIndex++;
-        renderCurrentCard();
-      }
-    });
+    // 「覚えた！」ボタン (右側): マイリストに追加し「覚えた！」フォルダに保存して次のカードへ進む
+    const btnMarkKnown = document.getElementById('btnMarkKnown');
+    if (btnMarkKnown) {
+      btnMarkKnown.addEventListener('click', () => {
+        if (!activeDeck[currentIndex]) return;
+        const card = activeDeck[currentIndex];
+        const LEARNED_FOLDER_ID = 'folder_learned';
+        const LEARNED_FOLDER_NAME = '覚えた！';
+
+        // フォルダ存在確認
+        if (!mylistFolders.find(f => f.id === LEARNED_FOLDER_ID || f.name === LEARNED_FOLDER_NAME)) {
+          mylistFolders.push({ id: LEARNED_FOLDER_ID, name: LEARNED_FOLDER_NAME });
+        }
+
+        // マイリストに追加＆フォルダ割り当て
+        mylistSet.add(card.id);
+        mylistCardFolderMap[card.id] = LEARNED_FOLDER_ID;
+        knownSet.add(card.id);
+        saveMylistForCurrentStudent();
+
+        showToast(currentLang === 'ja' ? `「${card.word}」を『覚えた！』に保存しました ✨` : `Saved "${card.word}" to Learned! ✨`);
+
+        // 自動的に次のカードへ進む
+        if (currentIndex < activeDeck.length - 1) {
+          currentIndex++;
+          renderCurrentCard();
+        } else {
+          renderCurrentCard();
+          showToast(currentLang === 'ja' ? '最後のカードです！お疲れ様でした 🎉' : 'Last card! Great job 🎉');
+        }
+      });
+    }
+
+    // 「もう一度！」ボタン (左側): マイリストに追加し「もう一度！」フォルダに保存して次のカードへ進む
+    const btnMarkReview = document.getElementById('btnMarkReview');
+    if (btnMarkReview) {
+      btnMarkReview.addEventListener('click', () => {
+        if (!activeDeck[currentIndex]) return;
+        const card = activeDeck[currentIndex];
+        const REVIEW_FOLDER_ID = 'folder_review';
+        const REVIEW_FOLDER_NAME = 'もう一度！';
+
+        // フォルダ存在確認
+        if (!mylistFolders.find(f => f.id === REVIEW_FOLDER_ID || f.name === REVIEW_FOLDER_NAME)) {
+          mylistFolders.push({ id: REVIEW_FOLDER_ID, name: REVIEW_FOLDER_NAME });
+        }
+
+        // マイリストに追加＆フォルダ割り当て
+        mylistSet.add(card.id);
+        mylistCardFolderMap[card.id] = REVIEW_FOLDER_ID;
+        knownSet.delete(card.id); // まだ覚えていないので既習フラグを外す
+        saveMylistForCurrentStudent();
+
+        showToast(currentLang === 'ja' ? `「${card.word}」を『もう一度！』に保存しました 🔁` : `Saved "${card.word}" to Review again! 🔁`);
+
+        // 自動的に次のカードへ進む
+        if (currentIndex < activeDeck.length - 1) {
+          currentIndex++;
+          renderCurrentCard();
+        } else {
+          renderCurrentCard();
+          showToast(currentLang === 'ja' ? '最後のカードです！もう一度復習しましょう 🔁' : 'Last card! Review again 🔁');
+        }
+      });
+    }
 
     // Speech Audio buttons
     document.getElementById('btnSpeakFront').addEventListener('click', (e) => {
