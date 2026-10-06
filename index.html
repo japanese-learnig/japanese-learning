@@ -736,6 +736,51 @@
     </div>
   </div>
 
+  <!-- Edit Student Modal (名前・パスコード編集) -->
+  <div id="editStudentModal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-xs p-4 hidden animate-fade-in">
+    <div class="bg-white rounded-3xl max-w-sm w-full p-5 shadow-2xl border border-slate-200">
+      <div class="text-center mb-4">
+        <div class="w-10 h-10 rounded-full bg-sky-50 text-sky-600 flex items-center justify-center mx-auto mb-2 text-lg">
+          ✏️
+        </div>
+        <h3 class="font-bold text-darkNavyText text-sm">生徒情報の編集</h3>
+        <p class="text-[11px] text-slate-400">名前やパスコードを変更できます</p>
+      </div>
+
+      <div class="space-y-2.5 text-xs">
+        <div>
+          <label class="block font-bold text-slate-700 mb-0.5">生徒ID（変更不可）</label>
+          <input type="text" id="editStudentIdInput" readonly class="w-full p-2 rounded-xl border border-slate-200 bg-slate-100 font-mono text-center text-slate-500 font-bold cursor-not-allowed">
+        </div>
+        <div>
+          <label class="block font-bold text-slate-700 mb-0.5">生徒の名前 <span class="text-rose-500">*</span></label>
+          <input type="text" id="editStudentNameInput" placeholder="生徒名" class="w-full p-2 rounded-xl border border-softBorder text-slate-800 font-semibold focus:outline-none focus:ring-1 focus:ring-deepNavy">
+        </div>
+        <div>
+          <label class="block font-bold text-slate-700 mb-0.5">4桁パスコード <span class="text-rose-500">*</span></label>
+          <input type="text" id="editStudentPasscodeInput" placeholder="4桁の数字" maxlength="10" class="w-full p-2 rounded-xl border border-softBorder font-mono text-center text-slate-800 font-bold focus:outline-none focus:ring-1 focus:ring-deepNavy">
+        </div>
+        <div>
+          <label class="block font-bold text-slate-700 mb-0.5">母国語（自動設定）</label>
+          <select id="editStudentLangSelect" class="w-full p-2 rounded-xl border border-softBorder bg-slate-50 font-medium">
+            <option value="en">English</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+            <option value="zh_TW">繁體中文</option>
+            <option value="zh_CN">简体中文</option>
+            <option value="zh_HK">廣東話</option>
+            <option value="fr">Français</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mt-4 flex space-x-2">
+        <button id="btnCancelEditStudent" class="flex-1 py-2 rounded-full text-slate-400 text-xs font-semibold hover:text-slate-600">キャンセル</button>
+        <button id="btnSaveEditStudent" class="flex-1 py-2 rounded-full bg-sky-600 text-white text-xs font-bold shadow-xs hover:bg-sky-700 transition">保存する</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Toast Notification Container -->
   <div id="toastNotification" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-4 py-2 bg-darkNavyText text-white text-xs font-medium rounded-full shadow-lg opacity-0 transition-opacity pointer-events-none">
     メッセージ

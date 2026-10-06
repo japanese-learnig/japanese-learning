@@ -405,7 +405,7 @@
   // --- Data Loading & Persistence ---
   function initData() {
     // Master data version check to ensure newly added cards & furigana updates are immediately visible
-    const CURRENT_DATA_VERSION = 'v42_restore_arun_mylist';
+    const CURRENT_DATA_VERSION = 'v43_student_edit_feature';
     const savedVersion = localStorage.getItem('haku_vocab_version');
 
     const seedCards = window.INITIAL_VOCAB_DATA || [];
@@ -433,15 +433,22 @@
       }
       localStorage.setItem('haku_vocab_data', JSON.stringify(vocabList));
 
-      // Always reload latest INITIAL_STUDENTS master list when version updates, while preserving newly added ones
+      // Reload latest INITIAL_STUDENTS master list when version updates, while preserving edits & newly added ones
       const seedStudents = window.INITIAL_STUDENTS || [];
       const savedStudents = localStorage.getItem('haku_students');
       if (savedStudents) {
         try {
           const parsed = JSON.parse(savedStudents);
-          const masterIds = new Set(seedStudents.map(s => s.id));
-          const customExtra = parsed.filter(s => !masterIds.has(s.id) && s.id !== 'student_1' && s.id !== 'student_2' && s.id !== 'student_3' && s.id !== 'student_4' && s.id !== 'student_5' && s.id !== 'student_6');
-          students = [...seedStudents, ...customExtra];
+          const savedMap = new Map(parsed.map(s => [s.id, s]));
+          // Apply teacher's edited names/passcodes onto seed students, or fallback to seed
+          students = seedStudents.map(seed => {
+            const saved = savedMap.get(seed.id);
+            return saved ? { ...seed, ...saved } : seed;
+          });
+          // Also include any new students added beyond seed
+          const seedIds = new Set(seedStudents.map(s => s.id));
+          const customExtra = parsed.filter(s => !seedIds.has(s.id) && !s.id.startsWith('student_'));
+          students = [...students, ...customExtra];
         } catch (e) {
           students = seedStudents;
         }
@@ -2609,6 +2616,9 @@
             PIN: ${st.passcode}
           </span>
           ${!isTeacher ? `
+            <button class="btn-edit-student p-1 text-slate-400 hover:text-sky-600 transition" title="生徒情報を編集">
+              <i data-lucide="edit-3" class="w-3.5 h-3.5"></i>
+            </button>
             <button class="btn-delete-student p-1 text-slate-300 hover:text-rose-500 transition" title="生徒を削除">
               <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
             </button>
@@ -2618,6 +2628,13 @@
       lucide.createIcons({ root: row });
 
       if (!isTeacher) {
+        const editBtn = row.querySelector('.btn-edit-student');
+        if (editBtn) {
+          editBtn.addEventListener('click', () => {
+            openEditStudentModal(st);
+          });
+        }
+
         const delBtn = row.querySelector('.btn-delete-student');
         if (delBtn) {
           delBtn.addEventListener('click', () => {
@@ -3534,6 +3551,112 @@
         addStudentModal.classList.add('hidden');
         showToast(`生徒「${nameVal}」（ID: ${idVal} / PIN: ${pinVal}）を追加しました！✨`);
         alert(`【新規生徒アカウント発行完了】\n\n生徒名: ${nameVal}\n生徒ID: ${idVal}\nパスコード (PIN): ${pinVal}\n\n※このパスコードは先生用管理画面の「生徒アカウント一覧」でもいつでも確認できます。`);
+      });
+    }
+
+    // --- Edit Student Modal Handling ---
+    const editStudentModal = document.getElementById('editStudentModal');
+    const editIdInput = document.getElementById('editStudentIdInput');
+    const editNameInput = document.getElementById('editStudentNameInput');
+    const editPasscodeInput = document.getElementById('editStudentPasscodeInput');
+    const editLangSelect = document.getElementById('editStudentLangSelect');
+    const btnCancelEditStudent = document.getElementById('btnCancelEditStudent');
+    const btnSaveEditStudent = document.getElementById('btnSaveEditStudent');
+    let studentBeingEdited = null;
+
+    window.openEditStudentModal = function(studentObj) {
+      if (!studentObj || !editStudentModal) return;
+      studentBeingEdited = studentObj;
+      if (editIdInput) editIdInput.value = studentObj.id;
+      if (editNameInput) editNameInput.value = studentObj.name;
+      if (editPasscodeInput) editPasscodeInput.value = studentObj.passcode;
+      if (editLangSelect) editLangSelect.value = studentObj.lang || 'en';
+      editStudentModal.classList.remove('hidden');
+      if (editNameInput) editNameInput.focus();
+    };
+
+    if (btnCancelEditStudent && editStudentModal) {
+      btnCancelEditStudent.addEventListener('click', () => {
+        editStudentModal.classList.add('hidden');
+        studentBeingEdited = null;
+      });
+    }
+
+    if (btnSaveEditStudent && editStudentModal) {
+      btnSaveEditStudent.addEventListener('click', async () => {
+        if (!studentBeingEdited) return;
+        const newName = editNameInput ? editNameInput.value.trim() : '';
+        const newPin = editPasscodeInput ? editPasscodeInput.value.trim() : '';
+        const newLang = editLangSelect ? editLangSelect.value : 'en';
+
+        if (!newName) {
+          showToast('生徒の名前を入力してください');
+          if (editNameInput) editNameInput.focus();
+          return;
+        }
+
+        if (!newPin || newPin.length < 4) {
+          showToast('4桁以上のパスコードを入力してください');
+          if (editPasscodeInput) editPasscodeInput.focus();
+          return;
+        }
+
+        const oldPin = studentBeingEdited.passcode;
+        const studentId = studentBeingEdited.id;
+
+        // 1. Update in-memory and local storage
+        studentBeingEdited.name = newName;
+        studentBeingEdited.passcode = newPin;
+        studentBeingEdited.lang = newLang;
+
+        // Update in students array
+        const idx = students.findIndex(s => s.id === studentId);
+        if (idx !== -1) {
+          students[idx] = { ...studentBeingEdited };
+        }
+        localStorage.setItem('haku_students', JSON.stringify(students));
+
+        // If currently logged-in student is this student, update session info
+        if (currentStudent && currentStudent.id === studentId) {
+          currentStudent.name = newName;
+          currentStudent.passcode = newPin;
+          currentStudent.lang = newLang;
+          document.getElementById('headerStudentBadge').textContent = `Student: ${newName}`;
+          const drawerName = document.getElementById('drawerStudentName');
+          if (drawerName) drawerName.textContent = newName;
+        }
+
+        // 2. Synchronize new password to Firebase Cloud Auth behind the scenes
+        if (isFirebaseReady && fbAuth && studentId !== 'haku' && studentId !== 'admin') {
+          try {
+            const virtualEmail = `${studentId.toLowerCase()}@haku.local`;
+            const oldPasswordStr = `haku_${oldPin}_sec`;
+            const newPasswordStr = `haku_${newPin}_sec`;
+
+            // Try signing in with old passcode to update to new passcode
+            try {
+              const userCred = await fbAuth.signInWithEmailAndPassword(virtualEmail, oldPasswordStr);
+              if (userCred && userCred.user) {
+                await userCred.user.updatePassword(newPasswordStr);
+                console.log(`Cloud password updated for student ${studentId} ☁️🔑`);
+              }
+            } catch (authErr) {
+              // If not found or couldn't sign in, attempt account creation with new passcode
+              if (authErr.code === 'auth/user-not-found' || authErr.code === 'auth/invalid-credential') {
+                try {
+                  await fbAuth.createUserWithEmailAndPassword(virtualEmail, newPasswordStr);
+                  console.log(`New cloud account created with updated password for ${studentId} ☁️`);
+                } catch (cErr) {}
+              }
+            }
+          } catch (cloudErr) {
+            console.warn('Cloud password sync notice:', cloudErr);
+          }
+        }
+
+        renderAdminStudentList();
+        editStudentModal.classList.add('hidden');
+        showToast(`生徒「${newName}」（ID: ${studentId}）の情報を更新しました！✏️✨`);
       });
     }
   }
