@@ -405,7 +405,7 @@
   // --- Data Loading & Persistence ---
   function initData() {
     // Master data version check to ensure newly added cards & furigana updates are immediately visible
-    const CURRENT_DATA_VERSION = 'v39_interactive_example_selection_and_dict_mylist';
+    const CURRENT_DATA_VERSION = 'v40_restore_custom_cards_and_cloud_sync';
     const savedVersion = localStorage.getItem('haku_vocab_version');
 
     const seedCards = window.INITIAL_VOCAB_DATA || [];
@@ -2315,6 +2315,19 @@
     let found = vocabList.find(c => c.id === cardId || c.word === cardId);
     if (found) return found;
 
+    // 1b. Check haku_all_custom_cards from localStorage
+    try {
+      const storedCustom = JSON.parse(localStorage.getItem('haku_all_custom_cards') || '[]');
+      if (Array.isArray(storedCustom)) {
+        found = storedCustom.find(c => c.id === cardId || c.word === cardId);
+        if (found) {
+          found.isCustom = true;
+          vocabList.push(found);
+          return found;
+        }
+      }
+    } catch (e) {}
+
     // 2. Check CLASS_VOCAB_DATA
     if (window.CLASS_VOCAB_DATA) {
       found = window.CLASS_VOCAB_DATA.find(c => c.id === cardId || c.word === cardId);
@@ -2907,7 +2920,11 @@
       renderMylistView();
       // Instantly pull any new data from cloud when opening My List
       if (currentStudent && currentStudent.id !== 'guest') {
-        syncStudentFromCloud(currentStudent.id);
+        syncStudentFromCloud(currentStudent.id).then(changed => {
+          if (changed) {
+            renderMylistView();
+          }
+        });
       }
     } else if (viewName === 'admin') {
       document.getElementById('viewAdmin').classList.remove('hidden');
