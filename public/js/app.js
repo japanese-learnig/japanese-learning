@@ -737,6 +737,86 @@
   }
 
   // Render unified search results both into Dropdown (Mobile/PC instant preview) and Sidebar (PC tree)
+  // Helper to calculate relevance score for search query
+  function calculateSearchRelevance(item, rawQuery, hiraQuery) {
+    let score = 0;
+    const w = (item.word || '').toLowerCase();
+    const r = (item.reading || '').toLowerCase();
+    const rHira = toHiragana(r);
+    const wHira = toHiragana(w);
+
+    // Exact match on word or reading (highest priority)
+    if (w === rawQuery || r === rawQuery || wHira === hiraQuery || rHira === hiraQuery) {
+      score += 10000;
+    } else if (w.startsWith(rawQuery) || r.startsWith(rawQuery) || wHira.startsWith(hiraQuery) || rHira.startsWith(hiraQuery)) {
+      score += 5000;
+    } else if (w.includes(rawQuery) || r.includes(rawQuery) || wHira.includes(hiraQuery) || rHira.includes(hiraQuery)) {
+      score += 2000;
+    }
+
+    // Meaning matches (English, Chinese, etc.)
+    const meaningObj = item.meaning || {};
+    const meaningsList = Object.values(meaningObj).filter(Boolean);
+    const combinedMeanings = meaningsList.join(' ').toLowerCase();
+
+    // Check individual meanings or words
+    let exactMeaningMatch = false;
+    let wordBoundaryMatch = false;
+
+    // Regex for word boundary in English/alphabetic queries (e.g., "\bcat\b")
+    const isAlpha = /^[a-zA-Z0-9\s]+$/.test(rawQuery);
+    const boundRegex = isAlpha ? new RegExp(`\\b${rawQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i') : null;
+
+    for (const m of meaningsList) {
+      const mStr = String(m).toLowerCase();
+      // Split by comma or semicolon
+      const subMeanings = mStr.split(/[,;\/|]/).map(s => s.trim());
+      for (const sm of subMeanings) {
+        if (sm === rawQuery) {
+          exactMeaningMatch = true;
+          break;
+        }
+      }
+      if (boundRegex && boundRegex.test(mStr)) {
+        wordBoundaryMatch = true;
+      }
+    }
+
+    if (exactMeaningMatch) {
+      score += 8000;
+    } else if (wordBoundaryMatch) {
+      score += 4000;
+    } else if (combinedMeanings.startsWith(rawQuery)) {
+      score += 3000;
+    } else if (combinedMeanings.includes(rawQuery)) {
+      score += 1500;
+    }
+
+    // Example sentence matches
+    const exJa = (item.example && item.example.ja ? item.example.ja.replace(/<[^>]+>/g, '') : '').toLowerCase();
+    const exJaHira = toHiragana(exJa);
+    if (exJa.includes(rawQuery) || exJaHira.includes(hiraQuery)) {
+      score += 300;
+    }
+    const exTrans = Object.values(item.example || {}).join(' ').toLowerCase();
+    if (exTrans.includes(rawQuery)) {
+      score += 200;
+    }
+
+    // Boost curriculum cards slightly over dictionary entries when scores are comparable
+    if (!item.isDict) {
+      score += 50;
+    }
+
+    // Prefer shorter words when matching query (e.g., "cat" -> "猫" over long expressions)
+    if (w.length > 0 && score > 0) {
+      score += Math.max(0, 30 - w.length);
+    }
+
+    return score;
+  }
+
+  // Render unified search results both into Dropdown (Mobile/PC instant preview) and Sidebar (PC tree)
   function renderUnifiedSearchResults(rawQuery) {
     const sidebarContainer = document.getElementById('sidebarFolderListContainer');
     const dropdownContainer = document.getElementById('searchDropdownContainer');
@@ -744,44 +824,28 @@
     const hiraQuery = toHiragana(rawQuery);
 
     // Search Curriculum Words
-    let curFiltered = vocabList.filter(c => {
-      const w = (c.word || '').toLowerCase();
-      const r = (c.reading || '').toLowerCase();
-      const rHira = toHiragana(r);
-      const wHira = toHiragana(w);
-      const allMeanings = Object.values(c.meaning || {}).join(' ').toLowerCase();
-      const exJa = (c.example && c.example.ja ? c.example.ja.replace(/<[^>]+>/g, '') : '').toLowerCase();
-      const exTrans = Object.values(c.example || {}).join(' ').toLowerCase();
-      const cat = (c.category || '').toLowerCase();
-      const sec = (c.section_title || '').toLowerCase();
-
-      return (
-        w.includes(rawQuery) ||
-        r.includes(rawQuery) ||
-        wHira.includes(hiraQuery) ||
-        rHira.includes(hiraQuery) ||
-        allMeanings.includes(rawQuery) ||
-        exJa.includes(rawQuery) ||
-        exJa.includes(hiraQuery) ||
-        exTrans.includes(rawQuery) ||
-        cat.includes(rawQuery) ||
-        sec.includes(rawQuery)
-      );
-    });
+    let curFiltered = vocabList.map(c => {
+      const score = calculateSearchRelevance(c, rawQuery, hiraQuery);
+      return { card: c, score };
+    }).filter(item => item.score > 0);
 
     // Search Dictionary Words
     const dictSource = window.DICT_DATA || [];
     const exMap = window.DICT_EXAMPLES_MAP || {};
     const knownWords = new Set(vocabList.map(c => c.word));
 
-    const dictMatched = dictSource.filter(entry => {
-      if (knownWords.has(entry.w)) return false;
+    let dictFiltered = [];
+    for (let idx = 0; idx < dictSource.length; idx++) {
+      const entry = dictSource[idx];
+      if (knownWords.has(entry.w)) continue;
+
       const w = (entry.w || '').toLowerCase();
       const r = (entry.r || '').toLowerCase();
       const mList = (entry.m || []).join(' ').toLowerCase();
       const zhList = (entry.zh || []).join(' ').toLowerCase();
       const frList = (entry.fr || []).join(' ').toLowerCase();
-      return (
+
+      if (
         w.includes(rawQuery) ||
         r.includes(rawQuery) ||
         w.includes(hiraQuery) ||
@@ -789,33 +853,43 @@
         mList.includes(rawQuery) ||
         zhList.includes(rawQuery) ||
         frList.includes(rawQuery)
-      );
-    }).slice(0, 80).map((entry, idx) => {
-      const matchedEx = exMap[entry.w] || (entry.r ? exMap[entry.r] : null);
-      return {
-        id: `dict_${entry.w}_${idx}`,
-        word: entry.w,
-        reading: entry.r || entry.w,
-        category: entry.l ? `JLPT ${entry.l}` : '辞書',
-        section_title: '日本語大辞書',
-        meaning: {
-          en: (entry.m && entry.m.join(', ')) || '—',
-          zh_TW: (entry.zh && entry.zh.join(', ')) || (entry.m && entry.m.join(', ')) || '—',
-          zh_CN: (entry.zh && entry.zh.join(', ')) || (entry.m && entry.m.join(', ')) || '—',
-          ko: (entry.m && entry.m.join(', ')) || '—',
-          zh_HK: (entry.zh && entry.zh.join(', ')) || (entry.m && entry.m.join(', ')) || '—',
-          fr: (entry.fr && entry.fr.join(', ')) || (entry.m && entry.m.join(', ')) || '—'
-        },
-        example: {
-          ja: matchedEx ? matchedEx.ja : '',
-          en: matchedEx ? (matchedEx.en || '') : ''
-        },
-        related: `【品詞】${entry.p || '一般'} / 【JLPT】${entry.l || '一般'}`,
-        isDict: true
-      };
-    });
+      ) {
+        const matchedEx = exMap[entry.w] || (entry.r ? exMap[entry.r] : null);
+        const dictCard = {
+          id: `dict_${entry.w}_${idx}`,
+          word: entry.w,
+          reading: entry.r || entry.w,
+          category: entry.l ? `JLPT ${entry.l}` : '辞書',
+          section_title: '日本語大辞書',
+          meaning: {
+            en: (entry.m && entry.m.join(', ')) || '—',
+            zh_TW: (entry.zh && entry.zh.join(', ')) || (entry.m && entry.m.join(', ')) || '—',
+            zh_CN: (entry.zh && entry.zh.join(', ')) || (entry.m && entry.m.join(', ')) || '—',
+            ko: (entry.m && entry.m.join(', ')) || '—',
+            zh_HK: (entry.zh && entry.zh.join(', ')) || (entry.m && entry.m.join(', ')) || '—',
+            fr: (entry.fr && entry.fr.join(', ')) || (entry.m && entry.m.join(', ')) || '—'
+          },
+          example: {
+            ja: matchedEx ? matchedEx.ja : '',
+            en: matchedEx ? (matchedEx.en || '') : ''
+          },
+          related: `【品詞】${entry.p || '一般'} / 【JLPT】${entry.l || '一般'}`,
+          isDict: true
+        };
+        const score = calculateSearchRelevance(dictCard, rawQuery, hiraQuery);
+        dictFiltered.push({ card: dictCard, score });
+        if (dictFiltered.length >= 120) break; // Keep search fast
+      }
+    }
 
-    const results = [...curFiltered, ...dictMatched];
+    // Combine and sort strictly by relevance score descending
+    const allScored = [...curFiltered, ...dictFiltered];
+    allScored.sort((a, b) => b.score - a.score);
+
+    const results = allScored.map(item => item.card);
+
+    // Save previous scroll position of dropdown before re-rendering
+    const prevScrollTop = dropdownContainer ? dropdownContainer.scrollTop : 0;
 
     // Build DOM elements for a given container
     function populateContainer(targetDom, isDropdown = false) {
@@ -881,8 +955,8 @@
         const targetExTrans = getBilingualExampleTrans(card.example, currentLang);
 
         itemCard.innerHTML = `
-          <div class="p-2.5 flex items-center justify-between cursor-pointer">
-            <div class="flex-1 min-w-0 pr-2">
+          <div class="search-item-header p-2.5 flex items-center justify-between cursor-pointer select-none">
+            <div class="flex-1 min-w-0 pr-2 pointer-events-none">
               <div class="flex items-baseline space-x-1.5">
                 <span class="text-xs sm:text-sm font-bold text-darkNavyText">${card.word}</span>
                 ${card.reading && card.reading !== card.word ? `<span class="text-[11px] text-slate-400">（${card.reading}）</span>` : ''}
@@ -897,7 +971,9 @@
               <button class="btn-search-star p-1.5 rounded-full hover:bg-slate-100 text-slate-300 hover:text-amber-400 transition" title="マイリスト">
                 <i data-lucide="star" class="w-3.5 h-3.5 ${isStarred ? 'fill-amber-400 text-amber-400' : ''}"></i>
               </button>
-              <i data-lucide="${isExpanded ? 'chevron-up' : 'chevron-down'}" class="w-3.5 h-3.5 text-slate-400"></i>
+              <div class="p-1 rounded-full text-slate-400">
+                <i data-lucide="${isExpanded ? 'chevron-up' : 'chevron-down'}" class="w-3.5 h-3.5"></i>
+              </div>
             </div>
           </div>
 
@@ -946,15 +1022,15 @@
 
         lucide.createIcons({ root: itemCard });
 
-        // Click on header text to toggle accordion
-        itemCard.querySelector('.flex-1').addEventListener('click', () => {
-          expandedWordId = (expandedWordId === card.id) ? null : card.id;
-          renderUnifiedSearchResults(rawQuery);
-        });
-
-        const toggleChevron = itemCard.querySelector('[data-lucide="chevron-up"], [data-lucide="chevron-down"]');
-        if (toggleChevron && toggleChevron.parentElement) {
-          toggleChevron.parentElement.addEventListener('click', () => {
+        // Toggling accordion on clicking card header (excluding explicit buttons)
+        const itemHeader = itemCard.querySelector('.search-item-header');
+        if (itemHeader) {
+          itemHeader.addEventListener('click', (e) => {
+            // Ignore if clicked on play button or star button
+            if (e.target.closest('.btn-play-card') || e.target.closest('.btn-search-star')) {
+              return;
+            }
+            e.stopPropagation();
             expandedWordId = (expandedWordId === card.id) ? null : card.id;
             renderUnifiedSearchResults(rawQuery);
           });
@@ -1024,6 +1100,10 @@
     if (dropdownContainer) {
       dropdownContainer.classList.remove('hidden');
       populateContainer(dropdownContainer, true);
+      // Restore previous scroll position so user doesn't lose place when expanding/collapsing
+      if (prevScrollTop > 0) {
+        dropdownContainer.scrollTop = prevScrollTop;
+      }
     }
   }
 
