@@ -1292,16 +1292,21 @@
 
   function setStudent(student) {
     currentStudent = student;
+    const drawerName = document.getElementById('drawerStudentName');
+    const drawerStatus = document.getElementById('drawerStudentStatus');
+    const drawerBtnLogin = document.getElementById('drawerBtnLogin');
+    const drawerBtnLogout = document.getElementById('drawerBtnLogout');
+    const btnLoginLogout = document.getElementById('btnLoginLogout');
+
     if (student) {
       localStorage.setItem('haku_current_student_id', student.id);
       document.getElementById('headerStudentBadge').textContent = `Student: ${student.name}`;
       // Update drawer student display
-      const drawerName = document.getElementById('drawerStudentName');
-      const drawerStatus = document.getElementById('drawerStudentStatus');
-      const drawerBtnLogin = document.getElementById('drawerBtnLogin');
       if (drawerName) drawerName.textContent = student.name;
       if (drawerStatus) drawerStatus.textContent = 'Logged In';
-      if (drawerBtnLogin) drawerBtnLogin.textContent = 'Switch / Log Out';
+      if (drawerBtnLogin) drawerBtnLogin.textContent = 'Switch ID';
+      if (drawerBtnLogout) drawerBtnLogout.classList.remove('hidden');
+      if (btnLoginLogout) btnLoginLogout.classList.remove('hidden');
 
       // Auto-switch language based on student profile!
       currentLang = student.lang || 'en';
@@ -1317,12 +1322,11 @@
     } else {
       localStorage.removeItem('haku_current_student_id');
       document.getElementById('headerStudentBadge').textContent = 'Student: Guest';
-      const drawerName = document.getElementById('drawerStudentName');
-      const drawerStatus = document.getElementById('drawerStudentStatus');
-      const drawerBtnLogin = document.getElementById('drawerBtnLogin');
       if (drawerName) drawerName.textContent = 'Guest';
       if (drawerStatus) drawerStatus.textContent = 'Not logged in';
       if (drawerBtnLogin) drawerBtnLogin.textContent = 'Log In';
+      if (drawerBtnLogout) drawerBtnLogout.classList.add('hidden');
+      if (btnLoginLogout) btnLoginLogout.classList.add('hidden');
       if (fbAuth && fbAuth.currentUser) {
         fbAuth.signOut().catch(() => {});
       }
@@ -2993,6 +2997,15 @@
       });
     }
 
+    const drawerBtnLogout = document.getElementById('drawerBtnLogout');
+    if (drawerBtnLogout) {
+      drawerBtnLogout.addEventListener('click', () => {
+        closeMenuDrawer();
+        setStudent(null);
+        showToast('Logged out / ログアウトしました');
+      });
+    }
+
     // Language selector in Drawer (母国語設定)
     const drawerLangSelect = document.getElementById('drawerLangSelect');
     if (drawerLangSelect) {
@@ -3366,6 +3379,15 @@
         showToast('Invalid Student ID or passcode');
       }
     });
+
+    const btnLoginLogout = document.getElementById('btnLoginLogout');
+    if (btnLoginLogout) {
+      btnLoginLogout.addEventListener('click', () => {
+        setStudent(null);
+        document.getElementById('loginModal').classList.add('hidden');
+        showToast('Logged out / ログアウトしました');
+      });
+    }
 
     // Add new student button in admin (Opens modal with auto-suggested ID and passcode)
     const btnAddNewStudent = document.getElementById('btnAddNewStudent');

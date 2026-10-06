@@ -608,9 +608,14 @@
                 <p id="drawerStudentName" class="text-xs font-bold text-darkNavyText">Guest</p>
                 <p id="drawerStudentStatus" class="text-[10px] text-slate-400">Not logged in</p>
               </div>
-              <button id="drawerBtnLogin" class="px-3 py-1 bg-deepNavy text-white rounded-full text-xs font-bold shadow-2xs hover:opacity-90 transition">
-                Log In
-              </button>
+              <div class="flex items-center space-x-1.5">
+                <button id="drawerBtnLogin" class="px-3 py-1 bg-deepNavy text-white rounded-full text-xs font-bold shadow-2xs hover:opacity-90 transition">
+                  Log In
+                </button>
+                <button id="drawerBtnLogout" class="px-2.5 py-1 bg-slate-200 hover:bg-rose-100 text-slate-700 hover:text-rose-600 rounded-full text-xs font-bold transition hidden">
+                  Log Out
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -649,6 +654,9 @@
       <div class="mt-4 space-y-2">
         <button id="btnLoginSubmit" class="w-full py-2 rounded-full bg-deepNavy text-white font-bold text-sm shadow-xs transition hover:opacity-90">
           Log In
+        </button>
+        <button id="btnLoginLogout" class="w-full py-2 rounded-full bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold text-xs transition border border-rose-200 hidden">
+          Log Out (ログアウトしてゲストに戻る)
         </button>
         <button id="btnLoginCancel" class="w-full py-1.5 rounded-full text-slate-400 font-medium text-xs hover:text-slate-600">
           Close
