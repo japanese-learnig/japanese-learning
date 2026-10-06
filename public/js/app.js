@@ -405,7 +405,7 @@
   // --- Data Loading & Persistence ---
   function initData() {
     // Master data version check to ensure newly added cards & furigana updates are immediately visible
-    const CURRENT_DATA_VERSION = 'v40_restore_custom_cards_and_cloud_sync';
+    const CURRENT_DATA_VERSION = 'v41_register_student_0024';
     const savedVersion = localStorage.getItem('haku_vocab_version');
 
     const seedCards = window.INITIAL_VOCAB_DATA || [];
@@ -3385,7 +3385,7 @@
       document.getElementById('loginModal').classList.add('hidden');
     });
 
-    document.getElementById('btnLoginSubmit').addEventListener('click', () => {
+    document.getElementById('btnLoginSubmit').addEventListener('click', async () => {
       const studentIdInput = document.getElementById('loginStudentId').value.trim();
       const passcodeInput = document.getElementById('loginPasscode').value.trim();
 
@@ -3403,10 +3403,31 @@
         return;
       }
 
-      const student = students.find(s => 
+      let student = students.find(s => 
         (s.id.toLowerCase() === studentIdInput.toLowerCase() || s.name.toLowerCase() === studentIdInput.toLowerCase()) &&
         s.passcode === passcodeInput
       );
+
+      // If not matched locally, attempt Cloud Firebase authentication check
+      if (!student && isFirebaseReady && fbAuth && studentIdInput) {
+        try {
+          const authSuccess = await ensureStudentCloudAuth(studentIdInput, passcodeInput);
+          if (authSuccess) {
+            // Find existing student entry or create placeholder entry
+            student = students.find(s => s.id.toLowerCase() === studentIdInput.toLowerCase());
+            if (!student) {
+              student = { id: studentIdInput, name: `生徒${studentIdInput}`, lang: 'en', passcode: passcodeInput };
+              students.push(student);
+              localStorage.setItem('haku_students', JSON.stringify(students));
+            } else {
+              student.passcode = passcodeInput;
+              localStorage.setItem('haku_students', JSON.stringify(students));
+            }
+          }
+        } catch (authErr) {
+          console.warn('Cloud login attempt error:', authErr);
+        }
+      }
 
       if (student) {
         setStudent(student);
