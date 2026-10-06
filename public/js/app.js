@@ -1212,7 +1212,6 @@
         updatedAt: firebase.firestore.FieldValue.serverTimestamp()
       }, { merge: true });
       console.log(`Cloud sync pushed for student ${studentId} ☁️`);
-      showToast('クラウドに同期しました ☁️✨');
     } catch (err) {
       console.warn('Cloud sync push note:', err.message);
     }
@@ -1266,7 +1265,6 @@
             renderMylistView();
           }
           console.log(`Cloud data successfully synced down for ${studentId}! ☁️✨`);
-          showToast('クラウドから最新データを同期しました ☁️');
           return true;
         }
       }
