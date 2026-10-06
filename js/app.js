@@ -1447,9 +1447,15 @@
       if (currentStudent && currentStudent.id === studentId) {
         await ensureStudentCloudAuth(studentId, currentStudent.passcode);
       }
-      // Gather any custom card objects that this student has in their mylist
-      const mylistCardIds = new Set(mylistSet);
-      const customCardsToSync = vocabList.filter(c => mylistCardIds.has(c.id) && c.id.startsWith('card_'));
+      // Gather any card objects that this student has in their mylist and aren't in INITIAL_VOCAB_DATA
+      const seedIds = new Set((window.INITIAL_VOCAB_DATA || []).map(c => c.id));
+      const customCardsToSync = [];
+      mylistSet.forEach(cId => {
+        if (!seedIds.has(cId)) {
+          const resolvedCard = getCardById(cId);
+          if (resolvedCard) customCardsToSync.push(resolvedCard);
+        }
+      });
 
       const docRef = fbDb.collection('students').doc(studentId);
       await docRef.set({
@@ -1530,13 +1536,14 @@
           localStorage.setItem(key, JSON.stringify(Array.from(mylistSet)));
           localStorage.setItem(foldersKey, JSON.stringify(mylistFolders));
           localStorage.setItem(mapKey, JSON.stringify(mylistCardFolderMap));
-          updateMylistBadge();
-          if (document.getElementById('viewMylist') && !document.getElementById('viewMylist').classList.contains('hidden')) {
-            renderMylistView();
-          }
           console.log(`Cloud data successfully synced down for ${studentId}! ☁️✨`);
-          return true;
         }
+        updateMylistBadge();
+        const mylistViewElem = document.getElementById('viewMylist');
+        if (mylistViewElem && !mylistViewElem.classList.contains('hidden')) {
+          renderMylistView();
+        }
+        return changed;
       }
     } catch (err) {
       console.warn('Cloud sync pull note:', err.message);
@@ -2095,7 +2102,7 @@
     if (quizScope === 'all') {
       sourcePool = [...vocabList];
     } else if (quizScope === 'mylist') {
-      let starredCards = vocabList.filter(c => mylistSet.has(c.id));
+      let starredCards = getMylistCards();
       if (activeMylistFolderId && activeMylistFolderId !== 'all') {
         starredCards = starredCards.filter(c => mylistCardFolderMap[c.id] === activeMylistFolderId);
       }
@@ -2258,6 +2265,85 @@
     });
   }
 
+  // --- Card Resolution Helper for My List & Study ---
+  // Resolves a card by ID or word across vocabList, CLASS_VOCAB_DATA, INITIAL_VOCAB_DATA, and DICT_DATA
+  function getCardById(cardId) {
+    if (!cardId) return null;
+    // 1. Check current in-memory vocabList
+    let found = vocabList.find(c => c.id === cardId || c.word === cardId);
+    if (found) return found;
+
+    // 2. Check CLASS_VOCAB_DATA
+    if (window.CLASS_VOCAB_DATA) {
+      found = window.CLASS_VOCAB_DATA.find(c => c.id === cardId || c.word === cardId);
+      if (found) return found;
+    }
+
+    // 3. Check INITIAL_VOCAB_DATA
+    if (window.INITIAL_VOCAB_DATA) {
+      found = window.INITIAL_VOCAB_DATA.find(c => c.id === cardId || c.word === cardId);
+      if (found) return found;
+    }
+
+    // 4. Check DICT_DATA
+    if (window.DICT_DATA) {
+      let wordToFind = cardId;
+      if (cardId.startsWith('dict_')) {
+        const parts = cardId.split('_');
+        if (parts.length >= 3) {
+          wordToFind = parts.slice(1, parts.length - 1).join('_');
+        }
+      }
+      const entry = window.DICT_DATA.find(d => d.w === wordToFind || d.w === cardId);
+      if (entry) {
+        const exMap = window.DICT_EXAMPLES_MAP || {};
+        const matchedEx = exMap[entry.w] || (entry.r ? exMap[entry.r] : null);
+        return {
+          id: cardId,
+          word: entry.w,
+          reading: entry.r || entry.w,
+          category: entry.l ? `JLPT ${entry.l}` : '辞書',
+          section_title: '日本語大辞書',
+          meaning: {
+            en: (entry.m && entry.m.join(', ')) || '—',
+            ja: entry.w,
+            zh_TW: (entry.zh && entry.zh.join(', ')) || (entry.m && entry.m.join(', ')) || '—',
+            zh_CN: (entry.zh && entry.zh.join(', ')) || (entry.m && entry.m.join(', ')) || '—',
+            ko: (entry.m && entry.m.join(', ')) || '—',
+            zh_HK: (entry.zh && entry.zh.join(', ')) || (entry.m && entry.m.join(', ')) || '—',
+            fr: (entry.fr && entry.fr.join(', ')) || (entry.m && entry.m.join(', ')) || '—'
+          },
+          example: {
+            ja: matchedEx ? matchedEx.ja : `A: <ruby>${entry.w}<rt>${entry.r || entry.w}</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！`,
+            en: matchedEx ? (matchedEx.en || '') : `A: Let's talk about "${entry.w}".<br/>B: Yes, understood!`
+          },
+          related: `【品詞】${entry.p || '一般'} / 【JLPT】${entry.l || '一般'}`,
+          isDict: true
+        };
+      }
+    }
+
+    // 5. Fallback stub so word card always renders instead of being hidden
+    return {
+      id: cardId,
+      word: cardId.replace(/^card_\d+_/, '').replace(/^dict_/, '').replace(/_\d+$/, '') || cardId,
+      reading: '',
+      category: 'マイリスト',
+      meaning: { en: 'Saved Word', ja: cardId, zh_TW: '單詞', zh_CN: '单词', ko: '단어', zh_HK: '單詞', fr: 'Mot' },
+      example: { ja: '', en: '' }
+    };
+  }
+
+  // Returns all resolved card objects currently in My List
+  function getMylistCards() {
+    const cards = [];
+    mylistSet.forEach(id => {
+      const card = getCardById(id);
+      if (card) cards.push(card);
+    });
+    return cards;
+  }
+
   // --- Mylist View Rendering with Custom Folders ---
   function renderMylistView() {
     renderMylistFolderTabs();
@@ -2269,8 +2355,10 @@
     if (!tabsContainer) return;
     tabsContainer.innerHTML = '';
 
+    const allCards = getMylistCards();
+
     // 'All' tab
-    const allStarredCount = vocabList.filter(c => mylistSet.has(c.id)).length;
+    const allStarredCount = allCards.length;
     const allTab = document.createElement('button');
     const isAllActive = activeMylistFolderId === 'all';
     allTab.className = `px-3 py-1 rounded-full text-xs font-bold transition flex items-center space-x-1 shrink-0 ${
@@ -2287,7 +2375,7 @@
 
     // Custom folders tabs
     mylistFolders.forEach(folder => {
-      const folderCardsCount = vocabList.filter(c => mylistSet.has(c.id) && mylistCardFolderMap[c.id] === folder.id).length;
+      const folderCardsCount = allCards.filter(c => mylistCardFolderMap[c.id] === folder.id).length;
       const tab = document.createElement('button');
       const isActive = activeMylistFolderId === folder.id;
       tab.className = `px-3 py-1 rounded-full text-xs font-bold transition flex items-center space-x-1 shrink-0 ${
@@ -2326,7 +2414,7 @@
     if (!container) return;
     container.innerHTML = '';
 
-    let displayedCards = vocabList.filter(c => mylistSet.has(c.id));
+    let displayedCards = getMylistCards();
     if (activeMylistFolderId !== 'all') {
       displayedCards = displayedCards.filter(c => mylistCardFolderMap[c.id] === activeMylistFolderId);
     }
@@ -3165,7 +3253,7 @@
 
     // Mylist Study button (Studies active folder, or all if 'all' is selected)
     document.getElementById('btnStudyMylist').addEventListener('click', () => {
-      let targetCards = vocabList.filter(c => mylistSet.has(c.id));
+      let targetCards = getMylistCards();
       if (activeMylistFolderId !== 'all') {
         targetCards = targetCards.filter(c => mylistCardFolderMap[c.id] === activeMylistFolderId);
       }
@@ -3201,7 +3289,7 @@
     const btnTestMy = document.getElementById('btnTestMylist');
     if (btnTestMy) {
       btnTestMy.addEventListener('click', () => {
-        let targetCards = vocabList.filter(c => mylistSet.has(c.id));
+        let targetCards = getMylistCards();
         if (activeMylistFolderId !== 'all') {
           targetCards = targetCards.filter(c => mylistCardFolderMap[c.id] === activeMylistFolderId);
         }
