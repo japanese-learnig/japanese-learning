@@ -16,6 +16,9 @@
   let isSearchStudyMode = false; // true when studying a specific word clicked from search results
   let mylistSet = new Set(); // store card IDs in mylist
   let knownSet = new Set(); // store cards marked as learned
+  let isFuriganaEnabled = localStorage.getItem('haku_furigana_enabled') !== 'false'; // default true
+  let isAutoAudioEnabled = localStorage.getItem('haku_auto_audio_enabled') === 'true'; // default false
+  let autoAudioTimer = null; // timer for debounce / chaining
 
   // --- Firebase Cloud Sync Configuration ---
   const firebaseConfig = {
@@ -76,9 +79,9 @@
 
   // Accepts either a string OR a card object { word, reading, example }
   // When given a card, prefers card.reading (e.g. にじゅうかかく) so kanji is read 100% accurately!
-  function speakJapanese(target) {
+  function speakJapanese(target, onEnd = null) {
     if (!('speechSynthesis' in window)) {
-      showToast('お使いのブラウザは音声再生に対応していません');
+      if (onEnd) onEnd();
       return;
     }
     window.speechSynthesis.cancel(); // Stop any pending speech
@@ -94,7 +97,10 @@
     }
 
     const cleanText = cleanJapaneseForSpeech(textToSpeak);
-    if (!cleanText) return;
+    if (!cleanText) {
+      if (onEnd) onEnd();
+      return;
+    }
 
     const utterance = new SpeechSynthesisUtterance(cleanText);
     utterance.lang = 'ja-JP';
@@ -109,7 +115,56 @@
       utterance.voice = jaVoice;
     }
 
+    if (onEnd) {
+      utterance.onend = () => {
+        onEnd();
+      };
+      utterance.onerror = () => {
+        onEnd();
+      };
+    }
+
     window.speechSynthesis.speak(utterance);
+  }
+
+  // 連続再生（単語を発音後、例文を続けて再生）
+  function speakJapaneseSequence(firstTarget, secondTarget) {
+    if (!firstTarget && !secondTarget) return;
+    if (!secondTarget) {
+      speakJapanese(firstTarget);
+      return;
+    }
+    if (!firstTarget) {
+      speakJapanese(secondTarget);
+      return;
+    }
+
+    speakJapanese(firstTarget, () => {
+      // 単語読み上げ後に少し間を空けて例文を発話
+      setTimeout(() => {
+        // カードが途中で閉じられたり切り替わっていないか確認しつつ発音
+        if (!('speechSynthesis' in window)) return;
+        let textToSpeak = '';
+        if (typeof secondTarget === 'object') {
+          const r = (secondTarget.reading || '').split(/[/／・]/)[0].trim();
+          textToSpeak = r || secondTarget.word || '';
+        } else {
+          textToSpeak = String(secondTarget || '');
+        }
+        const cleanText = cleanJapaneseForSpeech(textToSpeak);
+        if (!cleanText) return;
+
+        const utterance = new SpeechSynthesisUtterance(cleanText);
+        utterance.lang = 'ja-JP';
+        utterance.rate = 0.9;
+        const voices = window.speechSynthesis.getVoices();
+        const jaVoice = voices.find(v => (v.lang === 'ja-JP' || v.lang === 'ja_JP') && v.name.includes('Google')) ||
+                        voices.find(v => (v.lang === 'ja-JP' || v.lang === 'ja_JP') && (v.name.includes('Kyoko') || v.name.includes('Otoya') || v.name.includes('Siri') || v.name.includes('Nanami') || v.name.includes('Keita'))) ||
+                        voices.find(v => v.lang === 'ja-JP' || v.lang === 'ja_JP');
+        if (jaVoice) utterance.voice = jaVoice;
+        window.speechSynthesis.speak(utterance);
+      }, 350);
+    });
   }
 
   // --- Bilingual Translation Formatters (必ず母国語 & 英語) ---
@@ -2143,6 +2198,17 @@
     } else {
       relContainer.classList.add('hidden');
     }
+
+    // ★ 音声自動再生: 表面が表示された瞬間に単語を自動再生
+    if (isAutoAudioEnabled && card) {
+      if (autoAudioTimer) clearTimeout(autoAudioTimer);
+      autoAudioTimer = setTimeout(() => {
+        // カードが表面のままであれば再生
+        if (!isCardFlipped) {
+          speakJapanese(card);
+        }
+      }, 200);
+    }
   }
 
   function flipCard() {
@@ -2151,8 +2217,29 @@
     isCardFlipped = !isCardFlipped;
     if (isCardFlipped) {
       cardEl.classList.add('rotate-y-180');
+      // ★ 音声自動再生: 裏面が表示された瞬間に単語と例文を連続自動再生
+      if (isAutoAudioEnabled && activeDeck[currentIndex]) {
+        const card = activeDeck[currentIndex];
+        if (autoAudioTimer) clearTimeout(autoAudioTimer);
+        autoAudioTimer = setTimeout(() => {
+          if (isCardFlipped) {
+            const exampleJa = (card.example && card.example.ja) ? card.example.ja : null;
+            speakJapaneseSequence(card, exampleJa);
+          }
+        }, 150);
+      }
     } else {
       cardEl.classList.remove('rotate-y-180');
+      // 表面に戻ったときも自動再生
+      if (isAutoAudioEnabled && activeDeck[currentIndex]) {
+        const card = activeDeck[currentIndex];
+        if (autoAudioTimer) clearTimeout(autoAudioTimer);
+        autoAudioTimer = setTimeout(() => {
+          if (!isCardFlipped) {
+            speakJapanese(card);
+          }
+        }, 150);
+      }
     }
   }
 
@@ -2529,7 +2616,7 @@
         <div class="flex-1 pr-2 cursor-pointer btn-open-card-study">
           <div class="flex items-center space-x-1.5">
             <span class="font-bold text-slate-900 text-sm hover:text-deepNavy transition">${card.word}</span>
-            <span class="text-xs text-slate-400">（${card.reading || ''}）</span>
+            <span class="card-reading-text text-xs text-slate-400">（${card.reading || ''}）</span>
           </div>
           <p class="text-xs text-rose-600 font-medium mt-0.5">${meaning}</p>
           <div class="mt-1 flex items-center space-x-1" onclick="event.stopPropagation()">
@@ -3010,6 +3097,90 @@
         showToast('パスワードが違います');
       }
     });
+
+    // --- Furigana & Auto Audio Toggle Controls (Top Header) ---
+    function updateFuriganaUi() {
+      const label = document.getElementById('labelToggleFurigana');
+      const btn = document.getElementById('btnToggleFurigana');
+      if (document.body) {
+        document.body.classList.toggle('furigana-off', !isFuriganaEnabled);
+      }
+      if (label) {
+        label.textContent = isFuriganaEnabled ? 'ふりがな ON' : 'ふりがな OFF';
+      }
+      if (btn) {
+        if (isFuriganaEnabled) {
+          btn.classList.add('bg-white/20');
+          btn.classList.remove('bg-white/5', 'opacity-60');
+        } else {
+          btn.classList.remove('bg-white/20');
+          btn.classList.add('bg-white/5', 'opacity-60');
+        }
+      }
+    }
+
+    function updateAutoAudioUi() {
+      const label = document.getElementById('labelToggleAutoAudio');
+      const icon = document.getElementById('iconToggleAutoAudio');
+      const btn = document.getElementById('btnToggleAutoAudio');
+      if (label) {
+        label.textContent = isAutoAudioEnabled ? '音声自動 ON' : '音声自動 OFF';
+      }
+      if (icon) {
+        icon.setAttribute('data-lucide', isAutoAudioEnabled ? 'volume-2' : 'volume-x');
+        if (isAutoAudioEnabled) {
+          icon.classList.remove('text-blue-200');
+          icon.classList.add('text-emerald-300');
+        } else {
+          icon.classList.remove('text-emerald-300');
+          icon.classList.add('text-blue-200');
+        }
+        if (window.lucide && btn) lucide.createIcons({ root: btn });
+      }
+      if (btn) {
+        if (isAutoAudioEnabled) {
+          btn.classList.add('bg-emerald-600/80', 'border-emerald-400');
+          btn.classList.remove('bg-white/10', 'bg-white/5', 'opacity-60');
+        } else {
+          btn.classList.remove('bg-emerald-600/80', 'border-emerald-400');
+          btn.classList.add('bg-white/10');
+        }
+      }
+    }
+
+    // Initial state setup on boot
+    updateFuriganaUi();
+    updateAutoAudioUi();
+
+    const btnToggleFuri = document.getElementById('btnToggleFurigana');
+    if (btnToggleFuri) {
+      btnToggleFuri.addEventListener('click', () => {
+        isFuriganaEnabled = !isFuriganaEnabled;
+        localStorage.setItem('haku_furigana_enabled', isFuriganaEnabled ? 'true' : 'false');
+        updateFuriganaUi();
+        showToast(isFuriganaEnabled ? 'ふりがなを表示します（ON）' : 'ふりがなを非表示にしました（OFF）');
+      });
+    }
+
+    const btnToggleAudio = document.getElementById('btnToggleAutoAudio');
+    if (btnToggleAudio) {
+      btnToggleAudio.addEventListener('click', () => {
+        isAutoAudioEnabled = !isAutoAudioEnabled;
+        localStorage.setItem('haku_auto_audio_enabled', isAutoAudioEnabled ? 'true' : 'false');
+        updateAutoAudioUi();
+        showToast(isAutoAudioEnabled ? '音声自動再生を有効にしました（ON 🔊）' : '音声自動再生を解除しました（OFF 🔇）');
+        // もしONにした瞬間、カードが開いていれば発音
+        if (isAutoAudioEnabled && activeDeck[currentIndex]) {
+          const card = activeDeck[currentIndex];
+          if (!isCardFlipped) {
+            speakJapanese(card);
+          } else {
+            const exampleJa = (card.example && card.example.ja) ? card.example.ja : null;
+            speakJapaneseSequence(card, exampleJa);
+          }
+        }
+      });
+    }
 
     // Portal Drawer Open/Close controls (2枚目写真仕様)
     const btnOpenDrawer = document.getElementById('btnOpenMenuDrawer');
