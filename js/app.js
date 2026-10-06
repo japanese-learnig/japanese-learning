@@ -395,7 +395,7 @@
   // --- Data Loading & Persistence ---
   function initData() {
     // Master data version check to ensure newly added cards & furigana updates are immediately visible
-    const CURRENT_DATA_VERSION = 'v30_connor_spelling_fix';
+    const CURRENT_DATA_VERSION = 'v31_arun_vocabulary';
     const savedVersion = localStorage.getItem('haku_vocab_version');
 
     const seedCards = window.INITIAL_VOCAB_DATA || [];
@@ -496,6 +496,12 @@
             filteredSet.push(cId);
             stMap[cId] = CLASS_FOLDER_ID;
           }
+        } else if (stId === '0023' && window.CLASS_ARUN_IDS) {
+          // Special exact list for Arun (523 unique words)
+          window.CLASS_ARUN_IDS.forEach(cId => {
+            filteredSet.push(cId);
+            stMap[cId] = CLASS_FOLDER_ID;
+          });
         }
 
         localStorage.setItem(key, JSON.stringify(Array.from(new Set(filteredSet))));
@@ -1396,6 +1402,22 @@
           needsSave = true;
         }
       }
+      if (needsSave) {
+        localStorage.setItem(key, JSON.stringify(Array.from(mylistSet)));
+        localStorage.setItem(mapKey, JSON.stringify(mylistCardFolderMap));
+      }
+    } else if (studentPrefix === '0023' && window.CLASS_ARUN_IDS) {
+      let needsSave = false;
+      window.CLASS_ARUN_IDS.forEach(cId => {
+        if (!mylistSet.has(cId)) {
+          mylistSet.add(cId);
+          needsSave = true;
+        }
+        if (!mylistCardFolderMap[cId]) {
+          mylistCardFolderMap[cId] = CLASS_FOLDER_ID;
+          needsSave = true;
+        }
+      });
       if (needsSave) {
         localStorage.setItem(key, JSON.stringify(Array.from(mylistSet)));
         localStorage.setItem(mapKey, JSON.stringify(mylistCardFolderMap));

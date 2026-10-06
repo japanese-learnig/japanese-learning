@@ -28847,5 +28847,6 @@ window.INITIAL_STUDENTS = [
   { id: "0019", name: "ミンギ", lang: "ko", passcode: "2266" },
   { id: "0020", name: "Colin", lang: "zh_HK", passcode: "3377" },
   { id: "0021", name: "ともや", lang: "zh_TW", passcode: "4488" },
-  { id: "0022", name: "生徒22", lang: "ja", passcode: "5599" }
+  { id: "0022", name: "生徒22", lang: "ja", passcode: "5599" },
+  { id: "0023", name: "Arun", lang: "en", passcode: "6600" }
 ];

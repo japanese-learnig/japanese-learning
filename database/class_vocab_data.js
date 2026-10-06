@@ -38446,5 +38446,10632 @@ window.CLASS_VOCAB_DATA = [
       "fr": "A: Cette personne fait toujours des choses bizarres, c'est un original !<br/>B: Mais en fait, c'est un chercheur de génie."
     },
     "related": "変わり者（かわかりもの：eccentric）・個性的（こせいてき：unique/individualistic）"
+  },
+  {
+    "id": "class_word_1603",
+    "word": "連絡",
+    "reading": "れんらく",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Contact / communication",
+      "ja": "連絡",
+      "zh_TW": "Contact / communication",
+      "zh_CN": "Contact / communication",
+      "ko": "Contact / communication",
+      "zh_HK": "Contact / communication",
+      "fr": "communication"
+    },
+    "example": {
+      "ja": "<ruby>連絡<rt>れんらく</rt></ruby>してね。",
+      "en": "Keep in touch.",
+      "zh_TW": "Keep in touch.",
+      "zh_CN": "Keep in touch.",
+      "ko": "Keep in touch.",
+      "zh_HK": "Keep in touch.",
+      "fr": "Keep in touch."
+    },
+    "related": "Contact / communication — getting in touch with someone, or a message/notification sent to them. Used as a noun or する-ve"
+  },
+  {
+    "id": "class_word_1604",
+    "word": "集中",
+    "reading": "しゅうちゅう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Both describe putting effort into something, but the nuance is different.",
+      "ja": "集中",
+      "zh_TW": "Both describe putting effort into something, but the nuance is different.",
+      "zh_CN": "Both describe putting effort into something, but the nuance is different.",
+      "ko": "Both describe putting effort into something, but the nuance is different.",
+      "zh_HK": "Both describe putting effort into something, but the nuance is different.",
+      "fr": "concentration"
+    },
+    "example": {
+      "ja": "<ruby>仕事<rt>しごと</rt></ruby>に<ruby>集中<rt>しゅうちゅう</rt></ruby>しろ。",
+      "en": "Keep focused on your work.",
+      "zh_TW": "Keep focused on your work.",
+      "zh_CN": "Keep focused on your work.",
+      "ko": "Keep focused on your work.",
+      "zh_HK": "Keep focused on your work.",
+      "fr": "Keep focused on your work."
+    },
+    "related": "Both describe putting effort into something, but the nuance is different."
+  },
+  {
+    "id": "class_word_1605",
+    "word": "〜の時",
+    "reading": "とき",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Both mean 'when' but 時 refers to a specific moment or condition, while 頃 refers to a broader, vaguer period.",
+      "ja": "〜の時",
+      "zh_TW": "Both mean 'when' but 時 refers to a specific moment or condition, while 頃 refers to a broader, vaguer period.",
+      "zh_CN": "Both mean 'when' but 時 refers to a specific moment or condition, while 頃 refers to a broader, vaguer period.",
+      "ko": "Both mean 'when' but 時 refers to a specific moment or condition, while 頃 refers to a broader, vaguer period.",
+      "zh_HK": "Both mean 'when' but 時 refers to a specific moment or condition, while 頃 refers to a broader, vaguer period.",
+      "fr": "Both mean 'when' but 時 refers to a specific moment or condition, while 頃 refers to a broader, vaguer period."
+    },
+    "example": {
+      "ja": "<ruby>何時<rt>なんじ</rt></ruby>ですか。",
+      "en": "What time do you have?",
+      "zh_TW": "What time do you have?",
+      "zh_CN": "What time do you have?",
+      "ko": "What time do you have?",
+      "zh_HK": "What time do you have?",
+      "fr": "What time do you have?"
+    },
+    "related": "Both mean 'when' but 時 refers to a specific moment or condition, while 頃 refers to a broader, vaguer period."
+  },
+  {
+    "id": "class_word_1606",
+    "word": "遠い",
+    "reading": "とおい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "【遠い（とおい）】Far / distant",
+      "ja": "遠い",
+      "zh_TW": "【遠い（とおい）】Far / distant",
+      "zh_CN": "【遠い（とおい）】Far / distant",
+      "ko": "【遠い（とおい）】Far / distant",
+      "zh_HK": "【遠い（とおい）】Far / distant",
+      "fr": "distant"
+    },
+    "example": {
+      "ja": "ここから<ruby>遠<rt>とお</rt></ruby>いの？",
+      "en": "Is it far from here?",
+      "zh_TW": "Is it far from here?",
+      "zh_CN": "Is it far from here?",
+      "ko": "Is it far from here?",
+      "zh_HK": "Is it far from here?",
+      "fr": "Is it far from here?"
+    },
+    "related": "【遠い（とおい）】Far / distant — physically far away, or a distant relationship/memory."
+  },
+  {
+    "id": "class_word_1607",
+    "word": "増やす",
+    "reading": "ふやす",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To increase / to add more",
+      "ja": "増やす",
+      "zh_TW": "To increase / to add more",
+      "zh_CN": "To increase / to add more",
+      "ko": "To increase / to add more",
+      "zh_HK": "To increase / to add more",
+      "fr": "augmenter"
+    },
+    "example": {
+      "ja": "<ruby>書物<rt>しょもつ</rt></ruby>は<ruby>人生<rt>じんせい</rt></ruby>の<ruby>楽<rt>たの</rt></ruby>しみを<ruby>増<rt>ふ</rt></ruby>やす。",
+      "en": "Books add to the pleasures of life.",
+      "zh_TW": "Books add to the pleasures of life.",
+      "zh_CN": "Books add to the pleasures of life.",
+      "ko": "Books add to the pleasures of life.",
+      "zh_HK": "Books add to the pleasures of life.",
+      "fr": "Books add to the pleasures of life."
+    },
+    "related": "To increase / to add more — to make something grow in number or amount. Transitive: someone increases something."
+  },
+  {
+    "id": "class_word_1608",
+    "word": "似ている",
+    "reading": "にている",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To resemble / to be similar",
+      "ja": "似ている",
+      "zh_TW": "To resemble / to be similar",
+      "zh_CN": "To resemble / to be similar",
+      "ko": "To resemble / to be similar",
+      "zh_HK": "To resemble / to be similar",
+      "fr": "To resemble / to be similar"
+    },
+    "example": {
+      "ja": "A: <ruby>似ている<rt>にている</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"似ている\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"似ている\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"似ている\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"似ている\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"似ている\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"似ている\".<br/>B: Yes, understood!"
+    },
+    "related": "To resemble / to be similar — used to describe when two things or people look alike or share similar qualities"
+  },
+  {
+    "id": "class_word_1609",
+    "word": "やりたいこと",
+    "reading": "やりたいこと",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Both are natural and nearly interchangeable, but have a slight difference in feel.",
+      "ja": "やりたいこと",
+      "zh_TW": "Both are natural and nearly interchangeable, but have a slight difference in feel.",
+      "zh_CN": "Both are natural and nearly interchangeable, but have a slight difference in feel.",
+      "ko": "Both are natural and nearly interchangeable, but have a slight difference in feel.",
+      "zh_HK": "Both are natural and nearly interchangeable, but have a slight difference in feel.",
+      "fr": "Both are natural and nearly interchangeable, but have a slight difference in feel."
+    },
+    "example": {
+      "ja": "A: <ruby>やりたいこと<rt>やりたいこと</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"やりたいこと\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"やりたいこと\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"やりたいこと\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"やりたいこと\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"やりたいこと\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"やりたいこと\".<br/>B: Yes, understood!"
+    },
+    "related": "Both are natural and nearly interchangeable, but have a slight difference in feel."
+  },
+  {
+    "id": "class_word_1610",
+    "word": "〜ところに行きました",
+    "reading": "〜ところにいきまました",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "I went to a place where 〜",
+      "ja": "〜ところに行きました",
+      "zh_TW": "I went to a place where 〜",
+      "zh_CN": "I went to a place where 〜",
+      "ko": "I went to a place where 〜",
+      "zh_HK": "I went to a place where 〜",
+      "fr": "I went to a place where 〜"
+    },
+    "example": {
+      "ja": "A: <ruby>〜ところに行きました<rt>〜ところにいきまました</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜ところに行きました\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜ところに行きました\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜ところに行きました\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜ところに行きました\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜ところに行きました\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜ところに行きました\".<br/>B: Yes, understood!"
+    },
+    "related": "I went to a place where 〜 — ところ here means 'a place'. Use a verb in plain form before ところ to describe what kind of place"
+  },
+  {
+    "id": "class_word_1611",
+    "word": "自然",
+    "reading": "しぜん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Nature",
+      "ja": "自然",
+      "zh_TW": "Nature",
+      "zh_CN": "Nature",
+      "ko": "Nature",
+      "zh_HK": "Nature",
+      "fr": "nature"
+    },
+    "example": {
+      "ja": "<ruby>自然<rt>しぜん</rt></ruby>は<ruby>真空<rt>しんくう</rt></ruby>を<ruby>嫌<rt>きら</rt></ruby>う。",
+      "en": "Nature abhors a vacuum.",
+      "zh_TW": "Nature abhors a vacuum.",
+      "zh_CN": "Nature abhors a vacuum.",
+      "ko": "Nature abhors a vacuum.",
+      "zh_HK": "Nature abhors a vacuum.",
+      "fr": "Nature abhors a vacuum."
+    },
+    "related": "Nature — the natural world: mountains, forests, rivers, and the outdoors. Also used as a な-adjective meaning 'natural'."
+  },
+  {
+    "id": "class_word_1612",
+    "word": "海鮮",
+    "reading": "かいせん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Seafood",
+      "ja": "海鮮",
+      "zh_TW": "Seafood",
+      "zh_CN": "Seafood",
+      "ko": "Seafood",
+      "zh_HK": "Seafood",
+      "fr": "Seafood"
+    },
+    "example": {
+      "ja": "A: <ruby>海鮮<rt>かいせん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"海鮮\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"海鮮\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"海鮮\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"海鮮\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"海鮮\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"海鮮\".<br/>B: Yes, understood!"
+    },
+    "related": "Seafood — fresh fish and shellfish from the sea. Used in restaurant names and menus."
+  },
+  {
+    "id": "class_word_1613",
+    "word": "目の前で",
+    "reading": "めのまえで",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Right in front of (me/you)",
+      "ja": "目の前で",
+      "zh_TW": "Right in front of (me/you)",
+      "zh_CN": "Right in front of (me/you)",
+      "ko": "Right in front of (me/you)",
+      "zh_HK": "Right in front of (me/you)",
+      "fr": "Right in front of (me/you)"
+    },
+    "example": {
+      "ja": "A: <ruby>目の前で<rt>めのまえで</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"目の前で\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"目の前で\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"目の前で\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"目の前で\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"目の前で\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"目の前で\".<br/>B: Yes, understood!"
+    },
+    "related": "Right in front of (me/you) — directly before one's eyes. Can describe physical location or something happening at that v"
+  },
+  {
+    "id": "class_word_1614",
+    "word": "簡潔に",
+    "reading": "かんけつに",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Both can follow 自己紹介してください but mean different things.",
+      "ja": "簡潔に",
+      "zh_TW": "Both can follow 自己紹介してください but mean different things.",
+      "zh_CN": "Both can follow 自己紹介してください but mean different things.",
+      "ko": "Both can follow 自己紹介してください but mean different things.",
+      "zh_HK": "Both can follow 自己紹介してください but mean different things.",
+      "fr": "Both can follow 自己紹介してください but mean different things."
+    },
+    "example": {
+      "ja": "A: <ruby>簡潔に<rt>かんけつに</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"簡潔に\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"簡潔に\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"簡潔に\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"簡潔に\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"簡潔に\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"簡潔に\".<br/>B: Yes, understood!"
+    },
+    "related": "Both can follow 自己紹介してください but mean different things."
+  },
+  {
+    "id": "class_word_1615",
+    "word": "努力する",
+    "reading": "どりょくする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To make an effort / to work hard",
+      "ja": "努力する",
+      "zh_TW": "To make an effort / to work hard",
+      "zh_CN": "To make an effort / to work hard",
+      "ko": "To make an effort / to work hard",
+      "zh_HK": "To make an effort / to work hard",
+      "fr": "To make an effort / to work hard"
+    },
+    "example": {
+      "ja": "A: <ruby>努力する<rt>どりょくする</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"努力する\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"努力する\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"努力する\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"努力する\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"努力する\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"努力する\".<br/>B: Yes, understood!"
+    },
+    "related": "To make an effort / to work hard — deliberate, sustained effort toward a goal"
+  },
+  {
+    "id": "class_word_1616",
+    "word": "選択肢",
+    "reading": "せんたくし",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Option / choice",
+      "ja": "選択肢",
+      "zh_TW": "Option / choice",
+      "zh_CN": "Option / choice",
+      "ko": "Option / choice",
+      "zh_HK": "Option / choice",
+      "fr": "Option / choice"
+    },
+    "example": {
+      "ja": "A: <ruby>選択肢<rt>せんたくし</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"選択肢\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"選択肢\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"選択肢\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"選択肢\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"選択肢\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"選択肢\".<br/>B: Yes, understood!"
+    },
+    "related": "Option / choice — one of several possibilities to choose from"
+  },
+  {
+    "id": "class_word_1617",
+    "word": "苦手",
+    "reading": "にがて",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Both express not liking something, but the reason and strength differ.",
+      "ja": "苦手",
+      "zh_TW": "Both express not liking something, but the reason and strength differ.",
+      "zh_CN": "Both express not liking something, but the reason and strength differ.",
+      "ko": "Both express not liking something, but the reason and strength differ.",
+      "zh_HK": "Both express not liking something, but the reason and strength differ.",
+      "fr": "chose pour laquelle on n'est pas doué"
+    },
+    "example": {
+      "ja": "<ruby>猫<rt>ねこ</rt></ruby>が<ruby>苦手<rt>にがて</rt></ruby>なの。",
+      "en": "I'm afraid of cats.",
+      "zh_TW": "I'm afraid of cats.",
+      "zh_CN": "I'm afraid of cats.",
+      "ko": "I'm afraid of cats.",
+      "zh_HK": "I'm afraid of cats.",
+      "fr": "I'm afraid of cats."
+    },
+    "related": "Both express not liking something, but the reason and strength differ."
+  },
+  {
+    "id": "class_word_1618",
+    "word": "行く",
+    "reading": "いく",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Both involve going somewhere, but 通う implies regularity and routine.",
+      "ja": "行く",
+      "zh_TW": "Both involve going somewhere, but 通う implies regularity and routine.",
+      "zh_CN": "Both involve going somewhere, but 通う implies regularity and routine.",
+      "ko": "Both involve going somewhere, but 通う implies regularity and routine.",
+      "zh_HK": "Both involve going somewhere, but 通う implies regularity and routine.",
+      "fr": "aller"
+    },
+    "example": {
+      "ja": "<ruby>誰<rt>だれ</rt></ruby>と<ruby>行<rt>い</rt></ruby>くの。",
+      "en": "Who will you go with?",
+      "zh_TW": "Who will you go with?",
+      "zh_CN": "Who will you go with?",
+      "ko": "Who will you go with?",
+      "zh_HK": "Who will you go with?",
+      "fr": "Who will you go with?"
+    },
+    "related": "Both involve going somewhere, but 通う implies regularity and routine."
+  },
+  {
+    "id": "class_word_1619",
+    "word": "心が通う",
+    "reading": "こころがかよう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Hearts connect / to feel a genuine connection",
+      "ja": "心が通う",
+      "zh_TW": "Hearts connect / to feel a genuine connection",
+      "zh_CN": "Hearts connect / to feel a genuine connection",
+      "ko": "Hearts connect / to feel a genuine connection",
+      "zh_HK": "Hearts connect / to feel a genuine connection",
+      "fr": "Hearts connect / to feel a genuine connection"
+    },
+    "example": {
+      "ja": "A: <ruby>心が通う<rt>こころがかよう</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"心が通う\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"心が通う\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"心が通う\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"心が通う\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"心が通う\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"心が通う\".<br/>B: Yes, understood!"
+    },
+    "related": "Hearts connect / to feel a genuine connection — when two people truly understand each other emotionally. A warm, poetic "
+  },
+  {
+    "id": "class_word_1620",
+    "word": "文通",
+    "reading": "ぶんつう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Pen pal correspondence",
+      "ja": "文通",
+      "zh_TW": "Pen pal correspondence",
+      "zh_CN": "Pen pal correspondence",
+      "ko": "Pen pal correspondence",
+      "zh_HK": "Pen pal correspondence",
+      "fr": "échange de lettres"
+    },
+    "example": {
+      "ja": "A: <ruby>文通<rt>ぶんつう</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"文通\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"文通\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"文通\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"文通\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"文通\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"文通\".<br/>B: Yes, understood!"
+    },
+    "related": "Pen pal correspondence — exchanging handwritten letters with someone, usually in another city or country"
+  },
+  {
+    "id": "class_word_1621",
+    "word": "交換日記",
+    "reading": "こうかんにっき",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Shared diary",
+      "ja": "交換日記",
+      "zh_TW": "Shared diary",
+      "zh_CN": "Shared diary",
+      "ko": "Shared diary",
+      "zh_HK": "Shared diary",
+      "fr": "Shared diary"
+    },
+    "example": {
+      "ja": "A: <ruby>交換日記<rt>こうかんにっき</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"交換日記\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"交換日記\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"交換日記\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"交換日記\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"交換日記\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"交換日記\".<br/>B: Yes, understood!"
+    },
+    "related": "Shared diary — a notebook passed back and forth between friends or a couple, where each person writes entries for the ot"
+  },
+  {
+    "id": "class_word_1622",
+    "word": "散策",
+    "reading": "さんさく",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Both mean walking around, but the atmosphere is different.",
+      "ja": "散策",
+      "zh_TW": "Both mean walking around, but the atmosphere is different.",
+      "zh_CN": "Both mean walking around, but the atmosphere is different.",
+      "ko": "Both mean walking around, but the atmosphere is different.",
+      "zh_HK": "Both mean walking around, but the atmosphere is different.",
+      "fr": "Both mean walking around, but the atmosphere is different."
+    },
+    "example": {
+      "ja": "A: <ruby>散策<rt>さんさく</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"散策\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"散策\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"散策\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"散策\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"散策\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"散策\".<br/>B: Yes, understood!"
+    },
+    "related": "Both mean walking around, but the atmosphere is different."
+  },
+  {
+    "id": "class_word_1623",
+    "word": "新鮮",
+    "reading": "しんせん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Fresh / novel",
+      "ja": "新鮮",
+      "zh_TW": "Fresh / novel",
+      "zh_CN": "Fresh / novel",
+      "ko": "Fresh / novel",
+      "zh_HK": "Fresh / novel",
+      "fr": "fraîche"
+    },
+    "example": {
+      "ja": "<ruby>朝<rt>あさ</rt></ruby>は<ruby>空気<rt>くうき</rt></ruby>が<ruby>新鮮<rt>しんせん</rt></ruby>だ。",
+      "en": "The air is fresh in the morning.",
+      "zh_TW": "The air is fresh in the morning.",
+      "zh_CN": "The air is fresh in the morning.",
+      "ko": "The air is fresh in the morning.",
+      "zh_HK": "The air is fresh in the morning.",
+      "fr": "The air is fresh in the morning."
+    },
+    "related": "Fresh / novel — used for food (freshly caught or picked) and experiences (new and stimulating). A very positive word."
+  },
+  {
+    "id": "class_word_1624",
+    "word": "やる気が起きない",
+    "reading": "やるきがおきない",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Can't get motivated / don't feel like doing anything",
+      "ja": "やる気が起きない",
+      "zh_TW": "Can't get motivated / don't feel like doing anything",
+      "zh_CN": "Can't get motivated / don't feel like doing anything",
+      "ko": "Can't get motivated / don't feel like doing anything",
+      "zh_HK": "Can't get motivated / don't feel like doing anything",
+      "fr": "Can't get motivated / don't feel like doing anything"
+    },
+    "example": {
+      "ja": "A: <ruby>やる気が起きない<rt>やるきがおきない</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"やる気が起きない\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"やる気が起きない\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"やる気が起きない\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"やる気が起きない\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"やる気が起きない\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"やる気が起きない\".<br/>B: Yes, understood!"
+    },
+    "related": "Can't get motivated / don't feel like doing anything — a common expression for lack of drive or energy"
+  },
+  {
+    "id": "class_word_1625",
+    "word": "詐欺",
+    "reading": "さぎ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Fraud / scam",
+      "ja": "詐欺",
+      "zh_TW": "Fraud / scam",
+      "zh_CN": "Fraud / scam",
+      "ko": "Fraud / scam",
+      "zh_HK": "Fraud / scam",
+      "fr": "escroquerie"
+    },
+    "example": {
+      "ja": "<ruby>詐欺<rt>さぎ</rt></ruby><ruby>臭<rt>くさ</rt></ruby>いな。",
+      "en": "It sounds like a scam.",
+      "zh_TW": "It sounds like a scam.",
+      "zh_CN": "It sounds like a scam.",
+      "ko": "It sounds like a scam.",
+      "zh_HK": "It sounds like a scam.",
+      "fr": "It sounds like a scam."
+    },
+    "related": "Fraud / scam — deliberately deceiving someone for money or personal gain"
+  },
+  {
+    "id": "class_word_1626",
+    "word": "帰りました",
+    "reading": "かえりました",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Both use 帰る (to return home) but describe opposite situations.",
+      "ja": "帰りました",
+      "zh_TW": "Both use 帰る (to return home) but describe opposite situations.",
+      "zh_CN": "Both use 帰る (to return home) but describe opposite situations.",
+      "ko": "Both use 帰る (to return home) but describe opposite situations.",
+      "zh_HK": "Both use 帰る (to return home) but describe opposite situations.",
+      "fr": "Both use 帰る (to return home) but describe opposite situations."
+    },
+    "example": {
+      "ja": "A: <ruby>帰りました<rt>かえりました</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"帰りました\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"帰りました\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"帰りました\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"帰りました\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"帰りました\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"帰りました\".<br/>B: Yes, understood!"
+    },
+    "related": "Both use 帰る (to return home) but describe opposite situations."
+  },
+  {
+    "id": "class_word_1627",
+    "word": "寂しい",
+    "reading": "さびしい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Both describe a kind of longing, but for different reasons.",
+      "ja": "寂しい",
+      "zh_TW": "Both describe a kind of longing, but for different reasons.",
+      "zh_CN": "Both describe a kind of longing, but for different reasons.",
+      "ko": "Both describe a kind of longing, but for different reasons.",
+      "zh_HK": "Both describe a kind of longing, but for different reasons.",
+      "fr": "abandonné"
+    },
+    "example": {
+      "ja": "<ruby>私<rt>わたし</rt></ruby>も<ruby>寂<rt>さび</rt></ruby>しいな。",
+      "en": "I also miss him.",
+      "zh_TW": "I also miss him.",
+      "zh_CN": "I also miss him.",
+      "ko": "I also miss him.",
+      "zh_HK": "I also miss him.",
+      "fr": "I also miss him."
+    },
+    "related": "Both describe a kind of longing, but for different reasons."
+  },
+  {
+    "id": "class_word_1628",
+    "word": "何人か〜",
+    "reading": "なんにんか",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "These are ways to express 'some' or 'a few' in Japanese.",
+      "ja": "何人か〜",
+      "zh_TW": "These are ways to express 'some' or 'a few' in Japanese.",
+      "zh_CN": "These are ways to express 'some' or 'a few' in Japanese.",
+      "ko": "These are ways to express 'some' or 'a few' in Japanese.",
+      "zh_HK": "These are ways to express 'some' or 'a few' in Japanese.",
+      "fr": "These are ways to express 'some' or 'a few' in Japanese."
+    },
+    "example": {
+      "ja": "A: <ruby>何人か〜<rt>なんにんか</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"何人か〜\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"何人か〜\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"何人か〜\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"何人か〜\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"何人か〜\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"何人か〜\".<br/>B: Yes, understood!"
+    },
+    "related": "These are ways to express 'some' or 'a few' in Japanese."
+  },
+  {
+    "id": "class_word_1629",
+    "word": "以内",
+    "reading": "いない",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Within / no more than",
+      "ja": "以内",
+      "zh_TW": "Within / no more than",
+      "zh_CN": "Within / no more than",
+      "ko": "Within / no more than",
+      "zh_HK": "Within / no more than",
+      "fr": "avant de"
+    },
+    "example": {
+      "ja": "<ruby>最大<rt>さいだい</rt></ruby>２００<ruby>語<rt>ご</rt></ruby><ruby>以内<rt>いない</rt></ruby>に。",
+      "en": "Maximum length: 200 words.",
+      "zh_TW": "Maximum length: 200 words.",
+      "zh_CN": "Maximum length: 200 words.",
+      "ko": "Maximum length: 200 words.",
+      "zh_HK": "Maximum length: 200 words.",
+      "fr": "Maximum length: 200 words."
+    },
+    "related": "Within / no more than — used to set an upper limit for time, distance, number, or quantity"
+  },
+  {
+    "id": "class_word_1630",
+    "word": "入ってる",
+    "reading": "はいってる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Casual contractions of 入っている and 入っていない. Used when asking or checking if something is included or contained.",
+      "ja": "入ってる",
+      "zh_TW": "Casual contractions of 入っている and 入っていない. Used when asking or checking if something is included or contained.",
+      "zh_CN": "Casual contractions of 入っている and 入っていない. Used when asking or checking if something is included or contained.",
+      "ko": "Casual contractions of 入っている and 入っていない. Used when asking or checking if something is included or contained.",
+      "zh_HK": "Casual contractions of 入っている and 入っていない. Used when asking or checking if something is included or contained.",
+      "fr": "Casual contractions of 入っている and 入っていない. Used when asking or checking if something is included or contained."
+    },
+    "example": {
+      "ja": "A: <ruby>入ってる<rt>はいってる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"入ってる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"入ってる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"入ってる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"入ってる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"入ってる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"入ってる\".<br/>B: Yes, understood!"
+    },
+    "related": "Casual contractions of 入っている and 入っていない. Used when asking or checking if something is included or contained."
+  },
+  {
+    "id": "class_word_1631",
+    "word": "最高",
+    "reading": "さいこう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "The best / highest / amazing",
+      "ja": "最高",
+      "zh_TW": "The best / highest / amazing",
+      "zh_CN": "The best / highest / amazing",
+      "ko": "The best / highest / amazing",
+      "zh_HK": "The best / highest / amazing",
+      "fr": "le plus"
+    },
+    "example": {
+      "ja": "<ruby>気分<rt>きぶん</rt></ruby>は<ruby>最高<rt>さいこう</rt></ruby>。",
+      "en": "We are having a whale of a time.",
+      "zh_TW": "We are having a whale of a time.",
+      "zh_CN": "We are having a whale of a time.",
+      "ko": "We are having a whale of a time.",
+      "zh_HK": "We are having a whale of a time.",
+      "fr": "We are having a whale of a time."
+    },
+    "related": "The best / highest / amazing — used for the highest level of something, or casually to express that something is great"
+  },
+  {
+    "id": "class_word_1632",
+    "word": "酔う",
+    "reading": "よう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "All relate to feeling unwell, but the causes and uses are different.",
+      "ja": "酔う",
+      "zh_TW": "All relate to feeling unwell, but the causes and uses are different.",
+      "zh_CN": "All relate to feeling unwell, but the causes and uses are different.",
+      "ko": "All relate to feeling unwell, but the causes and uses are different.",
+      "zh_HK": "All relate to feeling unwell, but the causes and uses are different.",
+      "fr": "se griser"
+    },
+    "example": {
+      "ja": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>酔<rt>よ</rt></ruby>うと<ruby>手<rt>て</rt></ruby>がつけられない。",
+      "en": "He is out of control when drunk.",
+      "zh_TW": "He is out of control when drunk.",
+      "zh_CN": "He is out of control when drunk.",
+      "ko": "He is out of control when drunk.",
+      "zh_HK": "He is out of control when drunk.",
+      "fr": "He is out of control when drunk."
+    },
+    "related": "All relate to feeling unwell, but the causes and uses are different."
+  },
+  {
+    "id": "class_word_1633",
+    "word": "決まっていません",
+    "reading": "きまっていません",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "It hasn't been decided / not fixed yet",
+      "ja": "決まっていません",
+      "zh_TW": "It hasn't been decided / not fixed yet",
+      "zh_CN": "It hasn't been decided / not fixed yet",
+      "ko": "It hasn't been decided / not fixed yet",
+      "zh_HK": "It hasn't been decided / not fixed yet",
+      "fr": "It hasn't been decided / not fixed yet"
+    },
+    "example": {
+      "ja": "A: <ruby>決まっていません<rt>きまっていません</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"決まっていません\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"決まっていません\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"決まっていません\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"決まっていません\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"決まっていません\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"決まっていません\".<br/>B: Yes, understood!"
+    },
+    "related": "It hasn't been decided / not fixed yet — the polite negative of 決まっている (it is decided/fixed)"
+  },
+  {
+    "id": "class_word_1634",
+    "word": "健康的",
+    "reading": "けんこうてき",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Healthy",
+      "ja": "健康的",
+      "zh_TW": "Healthy",
+      "zh_CN": "Healthy",
+      "ko": "Healthy",
+      "zh_HK": "Healthy",
+      "fr": "Healthy"
+    },
+    "example": {
+      "ja": "A: <ruby>健康的<rt>けんこうてき</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"健康的\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"健康的\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"健康的\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"健康的\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"健康的\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"健康的\".<br/>B: Yes, understood!"
+    },
+    "related": "Healthy — describes something that promotes good health. Used as a な-adjective."
+  },
+  {
+    "id": "class_word_1635",
+    "word": "色々なことに挑戦しようと思っています",
+    "reading": "いろいろなことにちょうせんしようとおもっています",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "I'm thinking of taking on various challenges",
+      "ja": "色々なことに挑戦しようと思っています",
+      "zh_TW": "I'm thinking of taking on various challenges",
+      "zh_CN": "I'm thinking of taking on various challenges",
+      "ko": "I'm thinking of taking on various challenges",
+      "zh_HK": "I'm thinking of taking on various challenges",
+      "fr": "I'm thinking of taking on various challenges"
+    },
+    "example": {
+      "ja": "A: <ruby>色々なことに挑戦しようと思っています<rt>いろいろなことにちょうせんしようとおもっています</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"色々なことに挑戦しようと思っています\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"色々なことに挑戦しようと思っています\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"色々なことに挑戦しようと思っています\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"色々なことに挑戦しようと思っています\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"色々なことに挑戦しようと思っています\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"色々なことに挑戦しようと思っています\".<br/>B: Yes, understood!"
+    },
+    "related": "I'm thinking of taking on various challenges — a natural way to express an intention to try new things"
+  },
+  {
+    "id": "class_word_1636",
+    "word": "飽きやすい",
+    "reading": "あきやすい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "All describe someone who loses interest quickly, but the nuance differs slightly.",
+      "ja": "飽きやすい",
+      "zh_TW": "All describe someone who loses interest quickly, but the nuance differs slightly.",
+      "zh_CN": "All describe someone who loses interest quickly, but the nuance differs slightly.",
+      "ko": "All describe someone who loses interest quickly, but the nuance differs slightly.",
+      "zh_HK": "All describe someone who loses interest quickly, but the nuance differs slightly.",
+      "fr": "All describe someone who loses interest quickly, but the nuance differs slightly."
+    },
+    "example": {
+      "ja": "A: <ruby>飽きやすい<rt>あきやすい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"飽きやすい\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"飽きやすい\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"飽きやすい\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"飽きやすい\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"飽きやすい\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"飽きやすい\".<br/>B: Yes, understood!"
+    },
+    "related": "All describe someone who loses interest quickly, but the nuance differs slightly."
+  },
+  {
+    "id": "class_word_1637",
+    "word": "順番",
+    "reading": "じゅんばん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Order / turn",
+      "ja": "順番",
+      "zh_TW": "Order / turn",
+      "zh_CN": "Order / turn",
+      "ko": "Order / turn",
+      "zh_HK": "Order / turn",
+      "fr": "ordre"
+    },
+    "example": {
+      "ja": "やっと<ruby>順番<rt>じゅんばん</rt></ruby>がきた。",
+      "en": "At last, my turn came.",
+      "zh_TW": "At last, my turn came.",
+      "zh_CN": "At last, my turn came.",
+      "ko": "At last, my turn came.",
+      "zh_HK": "At last, my turn came.",
+      "fr": "At last, my turn came."
+    },
+    "related": "Order / turn — the sequence in which things happen or people take their turn"
+  },
+  {
+    "id": "class_word_1638",
+    "word": "ゆっくり",
+    "reading": "ゆっくり",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Both suggest a slow, relaxed pace, but the feeling is different.",
+      "ja": "ゆっくり",
+      "zh_TW": "慢慢",
+      "zh_CN": "慢慢",
+      "ko": "Both suggest a slow, relaxed pace, but the feeling is different.",
+      "zh_HK": "慢慢",
+      "fr": "lentement"
+    },
+    "example": {
+      "ja": "ゆっくり<ruby>歩<rt>ある</rt></ruby>け。",
+      "en": "Walk slowly.",
+      "zh_TW": "Walk slowly.",
+      "zh_CN": "Walk slowly.",
+      "ko": "Walk slowly.",
+      "zh_HK": "Walk slowly.",
+      "fr": "Walk slowly."
+    },
+    "related": "Both suggest a slow, relaxed pace, but the feeling is different."
+  },
+  {
+    "id": "class_word_1639",
+    "word": "未来",
+    "reading": "みらい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Both mean 'future' but are used in different contexts.",
+      "ja": "未来",
+      "zh_TW": "Both mean 'future' but are used in different contexts.",
+      "zh_CN": "Both mean 'future' but are used in different contexts.",
+      "ko": "Both mean 'future' but are used in different contexts.",
+      "zh_HK": "Both mean 'future' but are used in different contexts.",
+      "fr": "futur"
+    },
+    "example": {
+      "ja": "<ruby>未来<rt>みらい</rt></ruby>から<ruby>来<rt>き</rt></ruby>ました。",
+      "en": "I come from the future.",
+      "zh_TW": "I come from the future.",
+      "zh_CN": "I come from the future.",
+      "ko": "I come from the future.",
+      "zh_HK": "I come from the future.",
+      "fr": "I come from the future."
+    },
+    "related": "Both mean 'future' but are used in different contexts."
+  },
+  {
+    "id": "class_word_1640",
+    "word": "卓球",
+    "reading": "たっきゅう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Table tennis / ping-pong",
+      "ja": "卓球",
+      "zh_TW": "Table tennis / ping-pong",
+      "zh_CN": "Table tennis / ping-pong",
+      "ko": "Table tennis / ping-pong",
+      "zh_HK": "Table tennis / ping-pong",
+      "fr": "table de ping-pong"
+    },
+    "example": {
+      "ja": "A: <ruby>卓球<rt>たっきゅう</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"卓球\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"卓球\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"卓球\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"卓球\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"卓球\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"卓球\".<br/>B: Yes, understood!"
+    },
+    "related": "Table tennis / ping-pong — a racket sport played on a table with a small ball"
+  },
+  {
+    "id": "class_word_1641",
+    "word": "学生のとき",
+    "reading": "がくせいのとき",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "When I was a student",
+      "ja": "学生のとき",
+      "zh_TW": "When I was a student",
+      "zh_CN": "When I was a student",
+      "ko": "When I was a student",
+      "zh_HK": "When I was a student",
+      "fr": "When I was a student"
+    },
+    "example": {
+      "ja": "A: <ruby>学生のとき<rt>がくせいのとき</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"学生のとき\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"学生のとき\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"学生のとき\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"学生のとき\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"学生のとき\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"学生のとき\".<br/>B: Yes, understood!"
+    },
+    "related": "When I was a student — a common expression for recalling past experiences during school years"
+  },
+  {
+    "id": "class_word_1642",
+    "word": "途中で",
+    "reading": "とちゅうで",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Halfway through / partway / on the way",
+      "ja": "途中で",
+      "zh_TW": "Halfway through / partway / on the way",
+      "zh_CN": "Halfway through / partway / on the way",
+      "ko": "Halfway through / partway / on the way",
+      "zh_HK": "Halfway through / partway / on the way",
+      "fr": "Halfway through / partway / on the way"
+    },
+    "example": {
+      "ja": "A: <ruby>途中で<rt>とちゅうで</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"途中で\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"途中で\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"途中で\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"途中で\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"途中で\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"途中で\".<br/>B: Yes, understood!"
+    },
+    "related": "Halfway through / partway / on the way — in the middle of a process, journey, or action"
+  },
+  {
+    "id": "class_word_1643",
+    "word": "〜系",
+    "reading": "〜けい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "〜 type / 〜 style / 〜 category",
+      "ja": "〜系",
+      "zh_TW": "〜 type / 〜 style / 〜 category",
+      "zh_CN": "〜 type / 〜 style / 〜 category",
+      "ko": "〜 type / 〜 style / 〜 category",
+      "zh_HK": "〜 type / 〜 style / 〜 category",
+      "fr": "〜 type / 〜 style / 〜 category"
+    },
+    "example": {
+      "ja": "A: <ruby>〜系<rt>〜けい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜系\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜系\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜系\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜系\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜系\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜系\".<br/>B: Yes, understood!"
+    },
+    "related": "〜 type / 〜 style / 〜 category — a suffix for classifying things by type, genre, or style"
+  },
+  {
+    "id": "class_word_1644",
+    "word": "頑張れる",
+    "reading": "がんばれる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Can do one's best / am able to keep going",
+      "ja": "頑張れる",
+      "zh_TW": "Can do one's best / am able to keep going",
+      "zh_CN": "Can do one's best / am able to keep going",
+      "ko": "Can do one's best / am able to keep going",
+      "zh_HK": "Can do one's best / am able to keep going",
+      "fr": "Can do one's best / am able to keep going"
+    },
+    "example": {
+      "ja": "A: <ruby>頑張れる<rt>がんばれる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"頑張れる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"頑張れる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"頑張れる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"頑張れる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"頑張れる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"頑張れる\".<br/>B: Yes, understood!"
+    },
+    "related": "Can do one's best / am able to keep going — the potential form of 頑張る. Expresses ability or capacity to put in effort."
+  },
+  {
+    "id": "class_word_1645",
+    "word": "仕送りをする",
+    "reading": "しおくりをする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To send money (to family)",
+      "ja": "仕送りをする",
+      "zh_TW": "To send money (to family)",
+      "zh_CN": "To send money (to family)",
+      "ko": "To send money (to family)",
+      "zh_HK": "To send money (to family)",
+      "fr": "To send money (to family)"
+    },
+    "example": {
+      "ja": "A: <ruby>仕送りをする<rt>しおくりをする</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"仕送りをする\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"仕送りをする\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"仕送りをする\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"仕送りをする\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"仕送りをする\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"仕送りをする\".<br/>B: Yes, understood!"
+    },
+    "related": "To send money (to family) — typically used for parents sending money to children studying or living away, or vice versa"
+  },
+  {
+    "id": "class_word_1646",
+    "word": "言っていた",
+    "reading": "いっていた",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Was saying / had said",
+      "ja": "言っていた",
+      "zh_TW": "Was saying / had said",
+      "zh_CN": "Was saying / had said",
+      "ko": "Was saying / had said",
+      "zh_HK": "Was saying / had said",
+      "fr": "Was saying / had said"
+    },
+    "example": {
+      "ja": "A: <ruby>言っていた<rt>いっていた</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"言っていた\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"言っていた\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"言っていた\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"言っていた\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"言っていた\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"言っていた\".<br/>B: Yes, understood!"
+    },
+    "related": "Was saying / had said — past continuous form, used to report what someone said earlier, often in casual recollection"
+  },
+  {
+    "id": "class_word_1647",
+    "word": "あと一つ・あと二つ",
+    "reading": "あとひとつ・あとふたつ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "One more / two more",
+      "ja": "あと一つ・あと二つ",
+      "zh_TW": "One more / two more",
+      "zh_CN": "One more / two more",
+      "ko": "One more / two more",
+      "zh_HK": "One more / two more",
+      "fr": "One more / two more"
+    },
+    "example": {
+      "ja": "A: <ruby>あと一つ・あと二つ<rt>あとひとつ・あとふたつ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"あと一つ・あと二つ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"あと一つ・あと二つ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"あと一つ・あと二つ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"あと一つ・あと二つ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"あと一つ・あと二つ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"あと一つ・あと二つ\".<br/>B: Yes, understood!"
+    },
+    "related": "One more / two more — あと = additionally/remaining, used to indicate quantity left or needed"
+  },
+  {
+    "id": "class_word_1648",
+    "word": "うまくいく",
+    "reading": "うまくいく",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "A set expression for things going well or not, used very commonly across many contexts.",
+      "ja": "うまくいく",
+      "zh_TW": "顺利进行",
+      "zh_CN": "顺利进行",
+      "ko": "A set expression for things going well or not, used very commonly across many contexts.",
+      "zh_HK": "顺利进行",
+      "fr": "A set expression for things going well or not, used very commonly across many contexts."
+    },
+    "example": {
+      "ja": "A: <ruby>うまくいく<rt>うまくいく</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"うまくいく\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"うまくいく\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"うまくいく\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"うまくいく\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"うまくいく\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"うまくいく\".<br/>B: Yes, understood!"
+    },
+    "related": "A set expression for things going well or not, used very commonly across many contexts."
+  },
+  {
+    "id": "class_word_1649",
+    "word": "経験を生かす",
+    "reading": "けいけんをいかす",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To make use of one's experience",
+      "ja": "経験を生かす",
+      "zh_TW": "To make use of one's experience",
+      "zh_CN": "To make use of one's experience",
+      "ko": "To make use of one's experience",
+      "zh_HK": "To make use of one's experience",
+      "fr": "To make use of one's experience"
+    },
+    "example": {
+      "ja": "A: <ruby>経験を生かす<rt>けいけんをいかす</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"経験を生かす\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"経験を生かす\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"経験を生かす\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"経験を生かす\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"経験を生かす\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"経験を生かす\".<br/>B: Yes, understood!"
+    },
+    "related": "To make use of one's experience — using past experience to benefit a current situation, often in a career or skill conte"
+  },
+  {
+    "id": "class_word_1650",
+    "word": "固定費",
+    "reading": "こていひ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Fixed costs / fixed expenses",
+      "ja": "固定費",
+      "zh_TW": "Fixed costs / fixed expenses",
+      "zh_CN": "Fixed costs / fixed expenses",
+      "ko": "Fixed costs / fixed expenses",
+      "zh_HK": "Fixed costs / fixed expenses",
+      "fr": "Fixed costs / fixed expenses"
+    },
+    "example": {
+      "ja": "A: <ruby>固定費<rt>こていひ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"固定費\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"固定費\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"固定費\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"固定費\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"固定費\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"固定費\".<br/>B: Yes, understood!"
+    },
+    "related": "Fixed costs / fixed expenses — regular, unchanging monthly expenses such as rent, insurance, or subscriptions"
+  },
+  {
+    "id": "class_word_1651",
+    "word": "店を潰す",
+    "reading": "みせをつぶす",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To shut down a business / to bankrupt a shop",
+      "ja": "店を潰す",
+      "zh_TW": "To shut down a business / to bankrupt a shop",
+      "zh_CN": "To shut down a business / to bankrupt a shop",
+      "ko": "To shut down a business / to bankrupt a shop",
+      "zh_HK": "To shut down a business / to bankrupt a shop",
+      "fr": "To shut down a business / to bankrupt a shop"
+    },
+    "example": {
+      "ja": "A: <ruby>店を潰す<rt>みせをつぶす</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"店を潰す\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"店を潰す\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"店を潰す\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"店を潰す\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"店を潰す\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"店を潰す\".<br/>B: Yes, understood!"
+    },
+    "related": "To shut down a business / to bankrupt a shop — 潰す（つぶす）= to crush/destroy. Used when a business fails or is forced to clo"
+  },
+  {
+    "id": "class_word_1652",
+    "word": "半年",
+    "reading": "はんとし",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Half a year / six months",
+      "ja": "半年",
+      "zh_TW": "Half a year / six months",
+      "zh_CN": "Half a year / six months",
+      "ko": "Half a year / six months",
+      "zh_HK": "Half a year / six months",
+      "fr": "une demi année"
+    },
+    "example": {
+      "ja": "A: <ruby>半年<rt>はんとし</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"半年\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"半年\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"半年\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"半年\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"半年\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"半年\".<br/>B: Yes, understood!"
+    },
+    "related": "Half a year / six months — はん = half, とし = year"
+  },
+  {
+    "id": "class_word_1653",
+    "word": "輸入",
+    "reading": "ゆにゅう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Two opposite trade terms.",
+      "ja": "輸入",
+      "zh_TW": "Two opposite trade terms.",
+      "zh_CN": "Two opposite trade terms.",
+      "ko": "Two opposite trade terms.",
+      "zh_HK": "Two opposite trade terms.",
+      "fr": "importation"
+    },
+    "example": {
+      "ja": "<ruby>輸入車<rt>ゆにゅうしゃ</rt></ruby>の<ruby>需要<rt>じゅよう</rt></ruby>は<ruby>強<rt>つよ</rt></ruby>い。",
+      "en": "Imported cars are in strong demand.",
+      "zh_TW": "Imported cars are in strong demand.",
+      "zh_CN": "Imported cars are in strong demand.",
+      "ko": "Imported cars are in strong demand.",
+      "zh_HK": "Imported cars are in strong demand.",
+      "fr": "Imported cars are in strong demand."
+    },
+    "related": "Two opposite trade terms."
+  },
+  {
+    "id": "class_word_1654",
+    "word": "教え方",
+    "reading": "おしえかた",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Teaching method / way of teaching",
+      "ja": "教え方",
+      "zh_TW": "Teaching method / way of teaching",
+      "zh_CN": "Teaching method / way of teaching",
+      "ko": "Teaching method / way of teaching",
+      "zh_HK": "Teaching method / way of teaching",
+      "fr": "Teaching method / way of teaching"
+    },
+    "example": {
+      "ja": "A: <ruby>教え方<rt>おしえかた</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"教え方\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"教え方\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"教え方\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"教え方\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"教え方\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"教え方\".<br/>B: Yes, understood!"
+    },
+    "related": "Teaching method / way of teaching — 教える + 方（かた）= the way of doing 〜"
+  },
+  {
+    "id": "class_word_1655",
+    "word": "力不足",
+    "reading": "ちからぶそく",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Lacking in ability / not skilled enough",
+      "ja": "力不足",
+      "zh_TW": "Lacking in ability / not skilled enough",
+      "zh_CN": "Lacking in ability / not skilled enough",
+      "ko": "Lacking in ability / not skilled enough",
+      "zh_HK": "Lacking in ability / not skilled enough",
+      "fr": "Lacking in ability / not skilled enough"
+    },
+    "example": {
+      "ja": "A: <ruby>力不足<rt>ちからぶそく</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"力不足\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"力不足\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"力不足\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"力不足\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"力不足\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"力不足\".<br/>B: Yes, understood!"
+    },
+    "related": "Lacking in ability / not skilled enough — a humble expression admitting one's own skills weren't sufficient"
+  },
+  {
+    "id": "class_word_1656",
+    "word": "どこらへん",
+    "reading": "どこらへん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Both ask roughly where/which part, but differ slightly in casualness.",
+      "ja": "どこらへん",
+      "zh_TW": "Both ask roughly where/which part, but differ slightly in casualness.",
+      "zh_CN": "Both ask roughly where/which part, but differ slightly in casualness.",
+      "ko": "Both ask roughly where/which part, but differ slightly in casualness.",
+      "zh_HK": "Both ask roughly where/which part, but differ slightly in casualness.",
+      "fr": "Both ask roughly where/which part, but differ slightly in casualness."
+    },
+    "example": {
+      "ja": "A: <ruby>どこらへん<rt>どこらへん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"どこらへん\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"どこらへん\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"どこらへん\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"どこらへん\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"どこらへん\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"どこらへん\".<br/>B: Yes, understood!"
+    },
+    "related": "Both ask roughly where/which part, but differ slightly in casualness."
+  },
+  {
+    "id": "class_word_1657",
+    "word": "共有",
+    "reading": "きょうゆう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Sharing / to share",
+      "ja": "共有",
+      "zh_TW": "Sharing / to share",
+      "zh_CN": "Sharing / to share",
+      "ko": "Sharing / to share",
+      "zh_HK": "Sharing / to share",
+      "fr": "copropriété"
+    },
+    "example": {
+      "ja": "A: <ruby>共有<rt>きょうゆう</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"共有\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"共有\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"共有\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"共有\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"共有\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"共有\".<br/>B: Yes, understood!"
+    },
+    "related": "Sharing / to share — used for sharing information, files, resources, or experiences with others"
+  },
+  {
+    "id": "class_word_1658",
+    "word": "年をとる",
+    "reading": "としをとる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To get older / to age",
+      "ja": "年をとる",
+      "zh_TW": "To get older / to age",
+      "zh_CN": "To get older / to age",
+      "ko": "To get older / to age",
+      "zh_HK": "To get older / to age",
+      "fr": "To get older / to age"
+    },
+    "example": {
+      "ja": "A: <ruby>年をとる<rt>としをとる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"年をとる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"年をとる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"年をとる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"年をとる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"年をとる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"年をとる\".<br/>B: Yes, understood!"
+    },
+    "related": "To get older / to age — a natural, everyday expression for growing older over time"
+  },
+  {
+    "id": "class_word_1659",
+    "word": "〜の方が好き",
+    "reading": "〜のほうがすき",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Both express preference, but the scope is different.",
+      "ja": "〜の方が好き",
+      "zh_TW": "Both express preference, but the scope is different.",
+      "zh_CN": "Both express preference, but the scope is different.",
+      "ko": "Both express preference, but the scope is different.",
+      "zh_HK": "Both express preference, but the scope is different.",
+      "fr": "Both express preference, but the scope is different."
+    },
+    "example": {
+      "ja": "A: <ruby>〜の方が好き<rt>〜のほうがすき</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜の方が好き\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜の方が好き\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜の方が好き\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜の方が好き\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜の方が好き\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜の方が好き\".<br/>B: Yes, understood!"
+    },
+    "related": "Both express preference, but the scope is different."
+  },
+  {
+    "id": "class_word_1660",
+    "word": "足",
+    "reading": "あし",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Body part vocabulary",
+      "ja": "足",
+      "zh_TW": "Body part vocabulary",
+      "zh_CN": "Body part vocabulary",
+      "ko": "Body part vocabulary",
+      "zh_HK": "Body part vocabulary",
+      "fr": "allure (de la marche)"
+    },
+    "example": {
+      "ja": "それで<ruby>満足<rt>まんぞく</rt></ruby>？",
+      "en": "Are you satisfied?",
+      "zh_TW": "Are you satisfied?",
+      "zh_CN": "Are you satisfied?",
+      "ko": "Are you satisfied?",
+      "zh_HK": "Are you satisfied?",
+      "fr": "Are you satisfied?"
+    },
+    "related": "Body part vocabulary — each is specific and not interchangeable."
+  },
+  {
+    "id": "class_word_1661",
+    "word": "ハマる",
+    "reading": "ハマる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To get hooked on / to become obsessed with",
+      "ja": "ハマる",
+      "zh_TW": "To get hooked on / to become obsessed with",
+      "zh_CN": "To get hooked on / to become obsessed with",
+      "ko": "To get hooked on / to become obsessed with",
+      "zh_HK": "To get hooked on / to become obsessed with",
+      "fr": "To get hooked on / to become obsessed with"
+    },
+    "example": {
+      "ja": "A: <ruby>ハマる<rt>ハマる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"ハマる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"ハマる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"ハマる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"ハマる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"ハマる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"ハマる\".<br/>B: Yes, understood!"
+    },
+    "related": "To get hooked on / to become obsessed with — to be deeply absorbed in a hobby, show, food, or activity"
+  },
+  {
+    "id": "class_word_1662",
+    "word": "細い",
+    "reading": "ほそい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Two opposites for describing width, thickness, or body size.",
+      "ja": "細い",
+      "zh_TW": "Two opposites for describing width, thickness, or body size.",
+      "zh_CN": "Two opposites for describing width, thickness, or body size.",
+      "ko": "Two opposites for describing width, thickness, or body size.",
+      "zh_HK": "Two opposites for describing width, thickness, or body size.",
+      "fr": "fin"
+    },
+    "example": {
+      "ja": "とても<ruby>心細<rt>こころぼそ</rt></ruby>いです。",
+      "en": "I'm so lonely.",
+      "zh_TW": "I'm so lonely.",
+      "zh_CN": "I'm so lonely.",
+      "ko": "I'm so lonely.",
+      "zh_HK": "I'm so lonely.",
+      "fr": "I'm so lonely."
+    },
+    "related": "Two opposites for describing width, thickness, or body size."
+  },
+  {
+    "id": "class_word_1663",
+    "word": "筋肉をつけたい",
+    "reading": "きんにくをつけたい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "I want to build muscle",
+      "ja": "筋肉をつけたい",
+      "zh_TW": "I want to build muscle",
+      "zh_CN": "I want to build muscle",
+      "ko": "I want to build muscle",
+      "zh_HK": "I want to build muscle",
+      "fr": "I want to build muscle"
+    },
+    "example": {
+      "ja": "A: <ruby>筋肉をつけたい<rt>きんにくをつけたい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"筋肉をつけたい\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"筋肉をつけたい\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"筋肉をつけたい\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"筋肉をつけたい\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"筋肉をつけたい\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"筋肉をつけたい\".<br/>B: Yes, understood!"
+    },
+    "related": "I want to build muscle — 筋肉（きんにく）= muscle, つける = to attach / to build, たい = want to"
+  },
+  {
+    "id": "class_word_1664",
+    "word": "悩み",
+    "reading": "なやみ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Worry / concern / personal problem",
+      "ja": "悩み",
+      "zh_TW": "Worry / concern / personal problem",
+      "zh_CN": "Worry / concern / personal problem",
+      "ko": "Worry / concern / personal problem",
+      "zh_HK": "Worry / concern / personal problem",
+      "fr": "ennui"
+    },
+    "example": {
+      "ja": "<ruby>深刻<rt>しんこく</rt></ruby>な<ruby>悩<rt>なや</rt></ruby>みがあるの。",
+      "en": "I have serious problems.",
+      "zh_TW": "I have serious problems.",
+      "zh_CN": "I have serious problems.",
+      "ko": "I have serious problems.",
+      "zh_HK": "I have serious problems.",
+      "fr": "I have serious problems."
+    },
+    "related": "Worry / concern / personal problem — something that is weighing on your mind or causing ongoing stress"
+  },
+  {
+    "id": "class_word_1665",
+    "word": "平均",
+    "reading": "へいきん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Average",
+      "ja": "平均",
+      "zh_TW": "Average",
+      "zh_CN": "Average",
+      "ko": "Average",
+      "zh_HK": "Average",
+      "fr": "équilibre"
+    },
+    "example": {
+      "ja": "<ruby>平均<rt>へいきん</rt></ruby><ruby>気温<rt>きおん</rt></ruby>が<ruby>上昇<rt>じょうしょう</rt></ruby>した。",
+      "en": "The average temperature has gone up.",
+      "zh_TW": "The average temperature has gone up.",
+      "zh_CN": "The average temperature has gone up.",
+      "ko": "The average temperature has gone up.",
+      "zh_HK": "The average temperature has gone up.",
+      "fr": "The average temperature has gone up."
+    },
+    "related": "Average — the typical or mean value of a set of data. Also used to describe what is typical or standard."
+  },
+  {
+    "id": "class_word_1666",
+    "word": "よく言われます",
+    "reading": "よくいわれます",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "I'm often told / people often say to me",
+      "ja": "よく言われます",
+      "zh_TW": "I'm often told / people often say to me",
+      "zh_CN": "I'm often told / people often say to me",
+      "ko": "I'm often told / people often say to me",
+      "zh_HK": "I'm often told / people often say to me",
+      "fr": "I'm often told / people often say to me"
+    },
+    "example": {
+      "ja": "A: <ruby>よく言われます<rt>よくいわれます</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"よく言われます\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"よく言われます\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"よく言われます\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"よく言われます\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"よく言われます\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"よく言われます\".<br/>B: Yes, understood!"
+    },
+    "related": "I'm often told / people often say to me — passive form of 言う (to say). Used when describing what others frequently comme"
+  },
+  {
+    "id": "class_word_1667",
+    "word": "童顔",
+    "reading": "どうがん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Baby face / youthful face",
+      "ja": "童顔",
+      "zh_TW": "Baby face / youthful face",
+      "zh_CN": "Baby face / youthful face",
+      "ko": "Baby face / youthful face",
+      "zh_HK": "Baby face / youthful face",
+      "fr": "visage d'enfant"
+    },
+    "example": {
+      "ja": "A: <ruby>童顔<rt>どうがん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"童顔\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"童顔\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"童顔\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"童顔\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"童顔\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"童顔\".<br/>B: Yes, understood!"
+    },
+    "related": "Baby face / youthful face — having a face that looks younger than one's actual age"
+  },
+  {
+    "id": "class_word_1668",
+    "word": "時代",
+    "reading": "じだい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Era / age / period",
+      "ja": "時代",
+      "zh_TW": "Era / age / period",
+      "zh_CN": "Era / age / period",
+      "ko": "Era / age / period",
+      "zh_HK": "Era / age / period",
+      "fr": "âge"
+    },
+    "example": {
+      "ja": "<ruby>彼<rt>か</rt></ruby>の<ruby>服<rt>ふく</rt></ruby>は<ruby>時代遅<rt>じだいおく</rt></ruby>れだ。",
+      "en": "His clothes are out of fashion.",
+      "zh_TW": "His clothes are out of fashion.",
+      "zh_CN": "His clothes are out of fashion.",
+      "ko": "His clothes are out of fashion.",
+      "zh_HK": "His clothes are out of fashion.",
+      "fr": "His clothes are out of fashion."
+    },
+    "related": "Era / age / period — a span of time defined by particular characteristics, often historical or cultural"
+  },
+  {
+    "id": "class_word_1669",
+    "word": "遺伝",
+    "reading": "いでん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Genetics / heredity",
+      "ja": "遺伝",
+      "zh_TW": "Genetics / heredity",
+      "zh_CN": "Genetics / heredity",
+      "ko": "Genetics / heredity",
+      "zh_HK": "Genetics / heredity",
+      "fr": "hérédité"
+    },
+    "example": {
+      "ja": "A: <ruby>遺伝<rt>いでん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"遺伝\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"遺伝\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"遺伝\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"遺伝\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"遺伝\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"遺伝\".<br/>B: Yes, understood!"
+    },
+    "related": "Genetics / heredity — the passing of characteristics from parents to children through genes"
+  },
+  {
+    "id": "class_word_1670",
+    "word": "何日間滞在しますか？",
+    "reading": "なんにちかんたいざいしますか？",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "How many days will you be staying?",
+      "ja": "何日間滞在しますか？",
+      "zh_TW": "How many days will you be staying?",
+      "zh_CN": "How many days will you be staying?",
+      "ko": "How many days will you be staying?",
+      "zh_HK": "How many days will you be staying?",
+      "fr": "How many days will you be staying?"
+    },
+    "example": {
+      "ja": "A: <ruby>何日間滞在しますか？<rt>なんにちかんたいざいしますか？</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"何日間滞在しますか？\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"何日間滞在しますか？\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"何日間滞在しますか？\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"何日間滞在しますか？\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"何日間滞在しますか？\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"何日間滞在しますか？\".<br/>B: Yes, understood!"
+    },
+    "related": "How many days will you be staying? — a natural question for hotels, travel planning, or immigration. 日間 = number of days"
+  },
+  {
+    "id": "class_word_1671",
+    "word": "宇宙",
+    "reading": "うちゅう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Space / the universe",
+      "ja": "宇宙",
+      "zh_TW": "Space / the universe",
+      "zh_CN": "Space / the universe",
+      "ko": "Space / the universe",
+      "zh_HK": "Space / the universe",
+      "fr": "cosmos"
+    },
+    "example": {
+      "ja": "<ruby>宇宙<rt>うちゅう</rt></ruby>は<ruby>無限<rt>むげん</rt></ruby>だ。",
+      "en": "The universe is endless.",
+      "zh_TW": "The universe is endless.",
+      "zh_CN": "The universe is endless.",
+      "ko": "The universe is endless.",
+      "zh_HK": "The universe is endless.",
+      "fr": "The universe is endless."
+    },
+    "related": "Space / the universe — the vast expanse beyond Earth's atmosphere; also used for the concept of the cosmos"
+  },
+  {
+    "id": "class_word_1672",
+    "word": "連れていきます",
+    "reading": "つれていきます",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "I will take (someone) somewhere / bring someone along",
+      "ja": "連れていきます",
+      "zh_TW": "I will take (someone) somewhere / bring someone along",
+      "zh_CN": "I will take (someone) somewhere / bring someone along",
+      "ko": "I will take (someone) somewhere / bring someone along",
+      "zh_HK": "I will take (someone) somewhere / bring someone along",
+      "fr": "I will take (someone) somewhere / bring someone along"
+    },
+    "example": {
+      "ja": "A: <ruby>連れていきます<rt>つれていきます</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"連れていきます\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"連れていきます\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"連れていきます\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"連れていきます\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"連れていきます\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"連れていきます\".<br/>B: Yes, understood!"
+    },
+    "related": "I will take (someone) somewhere / bring someone along — 連れる = to bring/take a person. いく = to go. Used when taking someo"
+  },
+  {
+    "id": "class_word_1673",
+    "word": "〜しすぎ / 〜しすぎる",
+    "reading": "しすぎ / しすぎる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Too much / excessive",
+      "ja": "〜しすぎ / 〜しすぎる",
+      "zh_TW": "Too much / excessive",
+      "zh_CN": "Too much / excessive",
+      "ko": "Too much / excessive",
+      "zh_HK": "Too much / excessive",
+      "fr": "Too much / excessive"
+    },
+    "example": {
+      "ja": "A: <ruby>〜しすぎ / 〜しすぎる<rt>しすぎ / しすぎる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜しすぎ / 〜しすぎる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜しすぎ / 〜しすぎる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜しすぎ / 〜しすぎる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜しすぎ / 〜しすぎる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜しすぎ / 〜しすぎる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜しすぎ / 〜しすぎる\".<br/>B: Yes, understood!"
+    },
+    "related": "Too much / excessive — verb stem or adjective + すぎる means doing/being something to excess."
+  },
+  {
+    "id": "class_word_1674",
+    "word": "〜による / 〜によります / 〜によって",
+    "reading": "による / によります / によって",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Depending on 〜 / due to 〜 / by means of 〜",
+      "ja": "〜による / 〜によります / 〜によって",
+      "zh_TW": "Depending on 〜 / due to 〜 / by means of 〜",
+      "zh_CN": "Depending on 〜 / due to 〜 / by means of 〜",
+      "ko": "Depending on 〜 / due to 〜 / by means of 〜",
+      "zh_HK": "Depending on 〜 / due to 〜 / by means of 〜",
+      "fr": "Depending on 〜 / due to 〜 / by means of 〜"
+    },
+    "example": {
+      "ja": "A: <ruby>〜による / 〜によります / 〜によって<rt>による / によります / によって</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜による / 〜によります / 〜によって\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜による / 〜によります / 〜によって\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜による / 〜によります / 〜によって\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜による / 〜によります / 〜によって\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜による / 〜によります / 〜によって\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜による / 〜によります / 〜によって\".<br/>B: Yes, understood!"
+    },
+    "related": "Depending on 〜 / due to 〜 / by means of 〜 — による has several distinct uses."
+  },
+  {
+    "id": "class_word_1675",
+    "word": "〜次第",
+    "reading": "〜しだい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Depending on 〜 / up to 〜 / as soon as",
+      "ja": "〜次第",
+      "zh_TW": "Depending on 〜 / up to 〜 / as soon as",
+      "zh_CN": "Depending on 〜 / up to 〜 / as soon as",
+      "ko": "Depending on 〜 / up to 〜 / as soon as",
+      "zh_HK": "Depending on 〜 / up to 〜 / as soon as",
+      "fr": "ordre"
+    },
+    "example": {
+      "ja": "A: <ruby>〜次第<rt>〜しだい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜次第\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜次第\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜次第\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜次第\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜次第\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜次第\".<br/>B: Yes, understood!"
+    },
+    "related": "Depending on 〜 / up to 〜 / as soon as — 次第 has three main meanings."
+  },
+  {
+    "id": "class_word_1676",
+    "word": "特に〜じゃない",
+    "reading": "とくに〜じゃない",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Not particularly 〜 / not especially 〜",
+      "ja": "特に〜じゃない",
+      "zh_TW": "Not particularly 〜 / not especially 〜",
+      "zh_CN": "Not particularly 〜 / not especially 〜",
+      "ko": "Not particularly 〜 / not especially 〜",
+      "zh_HK": "Not particularly 〜 / not especially 〜",
+      "fr": "Not particularly 〜 / not especially 〜"
+    },
+    "example": {
+      "ja": "A: <ruby>特に〜じゃない<rt>とくに〜じゃない</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"特に〜じゃない\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"特に〜じゃない\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"特に〜じゃない\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"特に〜じゃない\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"特に〜じゃない\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"特に〜じゃない\".<br/>B: Yes, understood!"
+    },
+    "related": "Not particularly 〜 / not especially 〜 — used to say something is not strong enough to warrant special mention."
+  },
+  {
+    "id": "class_word_1677",
+    "word": "変な",
+    "reading": "へんな",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Strange / weird / odd",
+      "ja": "変な",
+      "zh_TW": "Strange / weird / odd",
+      "zh_CN": "Strange / weird / odd",
+      "ko": "Strange / weird / odd",
+      "zh_HK": "Strange / weird / odd",
+      "fr": "Strange / weird / odd"
+    },
+    "example": {
+      "ja": "A: <ruby>変な<rt>へんな</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"変な\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"変な\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"変な\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"変な\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"変な\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"変な\".<br/>B: Yes, understood!"
+    },
+    "related": "Strange / weird / odd — used for people, situations, sounds, feelings, and more."
+  },
+  {
+    "id": "class_word_1678",
+    "word": "どうでしたか？",
+    "reading": "どうでしたか？",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "How was it?",
+      "ja": "どうでしたか？",
+      "zh_TW": "How was it?",
+      "zh_CN": "How was it?",
+      "ko": "How was it?",
+      "zh_HK": "How was it?",
+      "fr": "How was it?"
+    },
+    "example": {
+      "ja": "A: <ruby>どうでしたか？<rt>どうでしたか？</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"どうでしたか？\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"どうでしたか？\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"どうでしたか？\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"どうでしたか？\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"どうでしたか？\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"どうでしたか？\".<br/>B: Yes, understood!"
+    },
+    "related": "How was it? — a versatile question used after someone has experienced something."
+  },
+  {
+    "id": "class_word_1679",
+    "word": "迫力がある",
+    "reading": "はくりょくがある",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Powerful / impactful / impressive",
+      "ja": "迫力がある",
+      "zh_TW": "Powerful / impactful / impressive",
+      "zh_CN": "Powerful / impactful / impressive",
+      "ko": "Powerful / impactful / impressive",
+      "zh_HK": "Powerful / impactful / impressive",
+      "fr": "Powerful / impactful / impressive"
+    },
+    "example": {
+      "ja": "A: <ruby>迫力がある<rt>はくりょくがある</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"迫力がある\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"迫力がある\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"迫力がある\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"迫力がある\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"迫力がある\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"迫力がある\".<br/>B: Yes, understood!"
+    },
+    "related": "Powerful / impactful / impressive — describes something with a strong, overwhelming presence or force, such as a perform"
+  },
+  {
+    "id": "class_word_1680",
+    "word": "〜周年",
+    "reading": "〜しゅうねん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "〜th anniversary",
+      "ja": "〜周年",
+      "zh_TW": "〜th anniversary",
+      "zh_CN": "〜th anniversary",
+      "ko": "〜th anniversary",
+      "zh_HK": "〜th anniversary",
+      "fr": "〜th anniversary"
+    },
+    "example": {
+      "ja": "A: <ruby>〜周年<rt>〜しゅうねん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜周年\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜周年\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜周年\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜周年\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜周年\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜周年\".<br/>B: Yes, understood!"
+    },
+    "related": "〜th anniversary — a counter for anniversaries of any kind: relationships, businesses, events, albums."
+  },
+  {
+    "id": "class_word_1681",
+    "word": "夕飯",
+    "reading": "ゆうはん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Dinner / evening meal",
+      "ja": "夕飯",
+      "zh_TW": "Dinner / evening meal",
+      "zh_CN": "Dinner / evening meal",
+      "ko": "Dinner / evening meal",
+      "zh_HK": "Dinner / evening meal",
+      "fr": "souper (dîner en France)"
+    },
+    "example": {
+      "ja": "<ruby>今<rt>いま</rt></ruby>、<ruby>夕飯<rt>ゆうはん</rt></ruby><ruby>中<rt>なか</rt></ruby>。",
+      "en": "Right now, I'm eating dinner.",
+      "zh_TW": "Right now, I'm eating dinner.",
+      "zh_CN": "Right now, I'm eating dinner.",
+      "ko": "Right now, I'm eating dinner.",
+      "zh_HK": "Right now, I'm eating dinner.",
+      "fr": "Right now, I'm eating dinner."
+    },
+    "related": "Dinner / evening meal — one of the common words for the evening meal in Japanese."
+  },
+  {
+    "id": "class_word_1682",
+    "word": "お持ち帰り",
+    "reading": "おもちかえり",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Takeaway / to-go",
+      "ja": "お持ち帰り",
+      "zh_TW": "Takeaway / to-go",
+      "zh_CN": "Takeaway / to-go",
+      "ko": "Takeaway / to-go",
+      "zh_HK": "Takeaway / to-go",
+      "fr": "Takeaway / to-go"
+    },
+    "example": {
+      "ja": "A: <ruby>お持ち帰り<rt>おもちかえり</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"お持ち帰り\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"お持ち帰り\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"お持ち帰り\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"お持ち帰り\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"お持ち帰り\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"お持ち帰り\".<br/>B: Yes, understood!"
+    },
+    "related": "Takeaway / to-go — food ordered to take away rather than eat in. Also used for taking home leftovers."
+  },
+  {
+    "id": "class_word_1683",
+    "word": "片付ける",
+    "reading": "かたづける",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Both involve making a space better, but they describe different actions.",
+      "ja": "片付ける",
+      "zh_TW": "Both involve making a space better, but they describe different actions.",
+      "zh_CN": "Both involve making a space better, but they describe different actions.",
+      "ko": "Both involve making a space better, but they describe different actions.",
+      "zh_HK": "Both involve making a space better, but they describe different actions.",
+      "fr": "être arrangé"
+    },
+    "example": {
+      "ja": "<ruby>家<rt>いえ</rt></ruby>を<ruby>片付<rt>かたづ</rt></ruby>ける<ruby>必要<rt>ひつよう</rt></ruby>がある。",
+      "en": "I need to declutter my house.",
+      "zh_TW": "I need to declutter my house.",
+      "zh_CN": "I need to declutter my house.",
+      "ko": "I need to declutter my house.",
+      "zh_HK": "I need to declutter my house.",
+      "fr": "I need to declutter my house."
+    },
+    "related": "Both involve making a space better, but they describe different actions."
+  },
+  {
+    "id": "class_word_1684",
+    "word": "仲がいい友達",
+    "reading": "なかがいいともだち",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Close friend / good friend",
+      "ja": "仲がいい友達",
+      "zh_TW": "Close friend / good friend",
+      "zh_CN": "Close friend / good friend",
+      "ko": "Close friend / good friend",
+      "zh_HK": "Close friend / good friend",
+      "fr": "Close friend / good friend"
+    },
+    "example": {
+      "ja": "A: <ruby>仲がいい友達<rt>なかがいいともだち</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"仲がいい友達\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"仲がいい友達\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"仲がいい友達\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"仲がいい友達\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"仲がいい友達\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"仲がいい友達\".<br/>B: Yes, understood!"
+    },
+    "related": "Close friend / good friend — a friend you have a strong, warm relationship with. 仲（なか）refers to the relationship between"
+  },
+  {
+    "id": "class_word_1685",
+    "word": "卒業",
+    "reading": "そつぎょう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Graduation",
+      "ja": "卒業",
+      "zh_TW": "Graduation",
+      "zh_CN": "Graduation",
+      "ko": "Graduation",
+      "zh_HK": "Graduation",
+      "fr": "être diplomé"
+    },
+    "example": {
+      "ja": "<ruby>学校<rt>がっこう</rt></ruby>を<ruby>卒業<rt>そつぎょう</rt></ruby>した。",
+      "en": "I graduated from the school.",
+      "zh_TW": "I graduated from the school.",
+      "zh_CN": "I graduated from the school.",
+      "ko": "I graduated from the school.",
+      "zh_HK": "I graduated from the school.",
+      "fr": "I graduated from the school."
+    },
+    "related": "Graduation — completing a course of study at a school or university. Also used figuratively to mean 'moving on from' som"
+  },
+  {
+    "id": "class_word_1686",
+    "word": "正直",
+    "reading": "しょうじき",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Honest / honesty",
+      "ja": "正直",
+      "zh_TW": "Honest / honesty",
+      "zh_CN": "Honest / honesty",
+      "ko": "Honest / honesty",
+      "zh_HK": "Honest / honesty",
+      "fr": "honnêteté"
+    },
+    "example": {
+      "ja": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>正直者<rt>しょうじきもの</rt></ruby>だ。",
+      "en": "He is a square shooter.",
+      "zh_TW": "He is a square shooter.",
+      "zh_CN": "He is a square shooter.",
+      "ko": "He is a square shooter.",
+      "zh_HK": "He is a square shooter.",
+      "fr": "He is a square shooter."
+    },
+    "related": "Honest / honesty — describing a person who tells the truth, or used as an adverb meaning 'honestly speaking / to be fran"
+  },
+  {
+    "id": "class_word_1687",
+    "word": "機会",
+    "reading": "きかい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Opportunity / chance",
+      "ja": "機会",
+      "zh_TW": "Opportunity / chance",
+      "zh_CN": "Opportunity / chance",
+      "ko": "Opportunity / chance",
+      "zh_HK": "Opportunity / chance",
+      "fr": "chance"
+    },
+    "example": {
+      "ja": "<ruby>別<rt>べつ</rt></ruby>の<ruby>機会<rt>きかい</rt></ruby>を<ruby>待<rt>ま</rt></ruby>て。",
+      "en": "Wait for a second chance.",
+      "zh_TW": "Wait for a second chance.",
+      "zh_CN": "Wait for a second chance.",
+      "ko": "Wait for a second chance.",
+      "zh_HK": "Wait for a second chance.",
+      "fr": "Wait for a second chance."
+    },
+    "related": "Opportunity / chance — a suitable moment or situation that allows you to do something. More formal than チャンス."
+  },
+  {
+    "id": "class_word_1688",
+    "word": "のんびり",
+    "reading": "のんびり",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Relaxed / at a leisurely pace / taking it easy",
+      "ja": "のんびり",
+      "zh_TW": "悠闲",
+      "zh_CN": "悠闲",
+      "ko": "Relaxed / at a leisurely pace / taking it easy",
+      "zh_HK": "悠闲",
+      "fr": "à loisir"
+    },
+    "example": {
+      "ja": "のんびり<ruby>行<rt>い</rt></ruby>こう。",
+      "en": "Take it easy.",
+      "zh_TW": "Take it easy.",
+      "zh_CN": "Take it easy.",
+      "ko": "Take it easy.",
+      "zh_HK": "Take it easy.",
+      "fr": "Take it easy."
+    },
+    "related": "Relaxed / at a leisurely pace / taking it easy — an adverb describing a calm, unhurried state. Often implies freedom fro"
+  },
+  {
+    "id": "class_word_1689",
+    "word": "ゴキブリ",
+    "reading": "ゴキブリ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Cockroach",
+      "ja": "ゴキブリ",
+      "zh_TW": "Cockroach",
+      "zh_CN": "Cockroach",
+      "ko": "Cockroach",
+      "zh_HK": "Cockroach",
+      "fr": "Cockroach"
+    },
+    "example": {
+      "ja": "A: <ruby>ゴキブリ<rt>ゴキブリ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"ゴキブリ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"ゴキブリ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"ゴキブリ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"ゴキブリ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"ゴキブリ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"ゴキブリ\".<br/>B: Yes, understood!"
+    },
+    "related": "Cockroach — a common household insect considered a pest. The word is katakana despite being a native Japanese word."
+  },
+  {
+    "id": "class_word_1690",
+    "word": "ひなたぼっこ",
+    "reading": "ひなたぼっこ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Basking in the sun / sunbathing (casually)",
+      "ja": "ひなたぼっこ",
+      "zh_TW": "晒太阳",
+      "zh_CN": "晒太阳",
+      "ko": "Basking in the sun / sunbathing (casually)",
+      "zh_HK": "晒太阳",
+      "fr": "Basking in the sun / sunbathing (casually)"
+    },
+    "example": {
+      "ja": "A: <ruby>ひなたぼっこ<rt>ひなたぼっこ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"ひなたぼっこ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"ひなたぼっこ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"ひなたぼっこ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"ひなたぼっこ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"ひなたぼっこ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"ひなたぼっこ\".<br/>B: Yes, understood!"
+    },
+    "related": "Basking in the sun / sunbathing (casually) — the act of sitting or lying in a sunny spot to enjoy the warmth. A gentle, "
+  },
+  {
+    "id": "class_word_1691",
+    "word": "行き",
+    "reading": "いき",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "行き = the outward journey / going (to a destination). 帰り = the return journey / coming back (home or to the starting point).",
+      "ja": "行き",
+      "zh_TW": "行き = the outward journey / going (to a destination). 帰り = the return journey / coming back (home or to the starting point).",
+      "zh_CN": "行き = the outward journey / going (to a destination). 帰り = the return journey / coming back (home or to the starting point).",
+      "ko": "行き = the outward journey / going (to a destination). 帰り = the return journey / coming back (home or to the starting point).",
+      "zh_HK": "行き = the outward journey / going (to a destination). 帰り = the return journey / coming back (home or to the starting point).",
+      "fr": "déplacement"
+    },
+    "example": {
+      "ja": "<ruby>行<rt>い</rt></ruby>きなさい。",
+      "en": "Go.",
+      "zh_TW": "Go.",
+      "zh_CN": "Go.",
+      "ko": "Go.",
+      "zh_HK": "Go.",
+      "fr": "Go."
+    },
+    "related": "行き = the outward journey / going (to a destination). 帰り = the return journey / coming back (home or to the starting poin"
+  },
+  {
+    "id": "class_word_1692",
+    "word": "時差ボケ",
+    "reading": "じさボケ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Jet lag",
+      "ja": "時差ボケ",
+      "zh_TW": "Jet lag",
+      "zh_CN": "Jet lag",
+      "ko": "Jet lag",
+      "zh_HK": "Jet lag",
+      "fr": "Jet lag"
+    },
+    "example": {
+      "ja": "A: <ruby>時差ボケ<rt>じさボケ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"時差ボケ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"時差ボケ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"時差ボケ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"時差ボケ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"時差ボケ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"時差ボケ\".<br/>B: Yes, understood!"
+    },
+    "related": "Jet lag — the tiredness and disorientation felt after travelling across multiple time zones. 時差 = time difference, ボケ = "
+  },
+  {
+    "id": "class_word_1693",
+    "word": "ひっくり返す",
+    "reading": "ひっくりかえす",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To flip over / to overturn / to knock over",
+      "ja": "ひっくり返す",
+      "zh_TW": "To flip over / to overturn / to knock over",
+      "zh_CN": "To flip over / to overturn / to knock over",
+      "ko": "To flip over / to overturn / to knock over",
+      "zh_HK": "To flip over / to overturn / to knock over",
+      "fr": "To flip over / to overturn / to knock over"
+    },
+    "example": {
+      "ja": "A: <ruby>ひっくり返す<rt>ひっくりかえす</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"ひっくり返す\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"ひっくり返す\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"ひっくり返す\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"ひっくり返す\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"ひっくり返す\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"ひっくり返す\".<br/>B: Yes, understood!"
+    },
+    "related": "To flip over / to overturn / to knock over — to physically turn something upside down or on its side. Also used figurati"
+  },
+  {
+    "id": "class_word_1694",
+    "word": "人感センサー",
+    "reading": "じんかんセンサー",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Motion sensor / presence sensor",
+      "ja": "人感センサー",
+      "zh_TW": "Motion sensor / presence sensor",
+      "zh_CN": "Motion sensor / presence sensor",
+      "ko": "Motion sensor / presence sensor",
+      "zh_HK": "Motion sensor / presence sensor",
+      "fr": "Motion sensor / presence sensor"
+    },
+    "example": {
+      "ja": "A: <ruby>人感センサー<rt>じんかんセンサー</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"人感センサー\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"人感センサー\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"人感センサー\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"人感センサー\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"人感センサー\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"人感センサー\".<br/>B: Yes, understood!"
+    },
+    "related": "Motion sensor / presence sensor — a device that detects when a person enters or moves within its range. Used in lights, "
+  },
+  {
+    "id": "class_word_1695",
+    "word": "寝相",
+    "reading": "ねぞう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Sleeping position / the way one sleeps",
+      "ja": "寝相",
+      "zh_TW": "Sleeping position / the way one sleeps",
+      "zh_CN": "Sleeping position / the way one sleeps",
+      "ko": "Sleeping position / the way one sleeps",
+      "zh_HK": "Sleeping position / the way one sleeps",
+      "fr": "posture pendant le sommeil"
+    },
+    "example": {
+      "ja": "A: <ruby>寝相<rt>ねぞう</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"寝相\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"寝相\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"寝相\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"寝相\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"寝相\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"寝相\".<br/>B: Yes, understood!"
+    },
+    "related": "Sleeping position / the way one sleeps — refers to how a person positions their body while asleep, especially if they mo"
+  },
+  {
+    "id": "class_word_1696",
+    "word": "昼寝",
+    "reading": "ひるね",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Nap / daytime sleep",
+      "ja": "昼寝",
+      "zh_TW": "Nap / daytime sleep",
+      "zh_CN": "Nap / daytime sleep",
+      "ko": "Nap / daytime sleep",
+      "zh_HK": "Nap / daytime sleep",
+      "fr": "sieste"
+    },
+    "example": {
+      "ja": "<ruby>昼寝<rt>ひるね</rt></ruby>したら？",
+      "en": "Why don't you take a nap?",
+      "zh_TW": "Why don't you take a nap?",
+      "zh_CN": "Why don't you take a nap?",
+      "ko": "Why don't you take a nap?",
+      "zh_HK": "Why don't you take a nap?",
+      "fr": "Why don't you take a nap?"
+    },
+    "related": "Nap / daytime sleep — sleeping during the day, usually briefly, for rest. Literally: 昼（ひる）= daytime, 寝（ね）= sleep."
+  },
+  {
+    "id": "class_word_1697",
+    "word": "壊す",
+    "reading": "こわす",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To break / to damage / to destroy",
+      "ja": "壊す",
+      "zh_TW": "To break / to damage / to destroy",
+      "zh_CN": "To break / to damage / to destroy",
+      "ko": "To break / to damage / to destroy",
+      "zh_HK": "To break / to damage / to destroy",
+      "fr": "briser"
+    },
+    "example": {
+      "ja": "<ruby>文化<rt>ぶんか</rt></ruby>は<ruby>言語<rt>げんご</rt></ruby>を<ruby>破壊<rt>はかい</rt></ruby>する。",
+      "en": "Culture destroys language.",
+      "zh_TW": "Culture destroys language.",
+      "zh_CN": "Culture destroys language.",
+      "ko": "Culture destroys language.",
+      "zh_HK": "Culture destroys language.",
+      "fr": "Culture destroys language."
+    },
+    "related": "To break / to damage / to destroy — transitive verb. Someone actively breaks or damages something."
+  },
+  {
+    "id": "class_word_1698",
+    "word": "無意識",
+    "reading": "むいしき",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Unconscious / without awareness",
+      "ja": "無意識",
+      "zh_TW": "Unconscious / without awareness",
+      "zh_CN": "Unconscious / without awareness",
+      "ko": "Unconscious / without awareness",
+      "zh_HK": "Unconscious / without awareness",
+      "fr": "inconscient"
+    },
+    "example": {
+      "ja": "A: <ruby>無意識<rt>むいしき</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"無意識\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"無意識\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"無意識\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"無意識\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"無意識\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"無意識\".<br/>B: Yes, understood!"
+    },
+    "related": "Unconscious / without awareness — doing something without realising it, or the unconscious mind. Can be used as a noun o"
+  },
+  {
+    "id": "class_word_1699",
+    "word": "態度",
+    "reading": "たいど",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Attitude / manner / behaviour",
+      "ja": "態度",
+      "zh_TW": "Attitude / manner / behaviour",
+      "zh_CN": "Attitude / manner / behaviour",
+      "ko": "Attitude / manner / behaviour",
+      "zh_HK": "Attitude / manner / behaviour",
+      "fr": "attitude"
+    },
+    "example": {
+      "ja": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>態度<rt>たいど</rt></ruby>が<ruby>粗野<rt>そや</rt></ruby>だ。",
+      "en": "He is coarse in manner.",
+      "zh_TW": "He is coarse in manner.",
+      "zh_CN": "He is coarse in manner.",
+      "ko": "He is coarse in manner.",
+      "zh_HK": "He is coarse in manner.",
+      "fr": "He is coarse in manner."
+    },
+    "related": "Attitude / manner / behaviour — the way a person acts or carries themselves toward others or in a situation."
+  },
+  {
+    "id": "class_word_1700",
+    "word": "〜の代わりに",
+    "reading": "〜のかわりに",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Instead of ~ / in place of ~ / in return for ~",
+      "ja": "〜の代わりに",
+      "zh_TW": "Instead of ~ / in place of ~ / in return for ~",
+      "zh_CN": "Instead of ~ / in place of ~ / in return for ~",
+      "ko": "Instead of ~ / in place of ~ / in return for ~",
+      "zh_HK": "Instead of ~ / in place of ~ / in return for ~",
+      "fr": "Instead of ~ / in place of ~ / in return for ~"
+    },
+    "example": {
+      "ja": "A: <ruby>〜の代わりに<rt>〜のかわりに</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜の代わりに\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜の代わりに\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜の代わりに\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜の代わりに\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜の代わりに\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜の代わりに\".<br/>B: Yes, understood!"
+    },
+    "related": "Instead of ~ / in place of ~ / in return for ~ — used to express substitution or exchange."
+  },
+  {
+    "id": "class_word_1701",
+    "word": "事実",
+    "reading": "じじつ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Fact / the truth",
+      "ja": "事実",
+      "zh_TW": "Fact / the truth",
+      "zh_CN": "Fact / the truth",
+      "ko": "Fact / the truth",
+      "zh_HK": "Fact / the truth",
+      "fr": "un fait"
+    },
+    "example": {
+      "ja": "だって<ruby>事実<rt>じじつ</rt></ruby>だろ。",
+      "en": "But it's true.",
+      "zh_TW": "But it's true.",
+      "zh_CN": "But it's true.",
+      "ko": "But it's true.",
+      "zh_HK": "But it's true.",
+      "fr": "But it's true."
+    },
+    "related": "Fact / the truth — something that is objectively true or that actually happened. More formal than 本当."
+  },
+  {
+    "id": "class_word_1702",
+    "word": "お見合い",
+    "reading": "おみあい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Arranged meeting (for marriage) / matchmaking meeting",
+      "ja": "お見合い",
+      "zh_TW": "Arranged meeting (for marriage) / matchmaking meeting",
+      "zh_CN": "Arranged meeting (for marriage) / matchmaking meeting",
+      "ko": "Arranged meeting (for marriage) / matchmaking meeting",
+      "zh_HK": "Arranged meeting (for marriage) / matchmaking meeting",
+      "fr": "Arranged meeting (for marriage) / matchmaking meeting"
+    },
+    "example": {
+      "ja": "A: <ruby>お見合い<rt>おみあい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"お見合い\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"お見合い\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"お見合い\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"お見合い\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"お見合い\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"お見合い\".<br/>B: Yes, understood!"
+    },
+    "related": "Arranged meeting (for marriage) / matchmaking meeting — a formal or semi-formal meeting between two people, arranged by "
+  },
+  {
+    "id": "class_word_1703",
+    "word": "自由",
+    "reading": "じゆう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Freedom / liberty / free",
+      "ja": "自由",
+      "zh_TW": "Freedom / liberty / free",
+      "zh_CN": "Freedom / liberty / free",
+      "ko": "Freedom / liberty / free",
+      "zh_HK": "Freedom / liberty / free",
+      "fr": "comme il vous plaît"
+    },
+    "example": {
+      "ja": "<ruby>自由<rt>じゆう</rt></ruby>の<ruby>身<rt>み</rt></ruby>ね。",
+      "en": "You're a free man.",
+      "zh_TW": "You're a free man.",
+      "zh_CN": "You're a free man.",
+      "ko": "You're a free man.",
+      "zh_HK": "You're a free man.",
+      "fr": "You're a free man."
+    },
+    "related": "Freedom / liberty / free — the state of being free to act or choose as one wishes. Used as a noun or な-adjective."
+  },
+  {
+    "id": "class_word_1704",
+    "word": "いらない",
+    "reading": "いらない",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Don't need / don't want / unnecessary",
+      "ja": "いらない",
+      "zh_TW": "Don't need / don't want / unnecessary",
+      "zh_CN": "Don't need / don't want / unnecessary",
+      "ko": "Don't need / don't want / unnecessary",
+      "zh_HK": "Don't need / don't want / unnecessary",
+      "fr": "Don't need / don't want / unnecessary"
+    },
+    "example": {
+      "ja": "A: <ruby>いらない<rt>いらない</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"いらない\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"いらない\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"いらない\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"いらない\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"いらない\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"いらない\".<br/>B: Yes, understood!"
+    },
+    "related": "Don't need / don't want / unnecessary — casual way to say something is not needed or not wanted. Plain form of いりません."
+  },
+  {
+    "id": "class_word_1705",
+    "word": "世代",
+    "reading": "せだい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Generation",
+      "ja": "世代",
+      "zh_TW": "Generation",
+      "zh_CN": "Generation",
+      "ko": "Generation",
+      "zh_HK": "Generation",
+      "fr": "génération"
+    },
+    "example": {
+      "ja": "トムは<ruby>私<rt>わたし</rt></ruby>と<ruby>同世代<rt>どうせだい</rt></ruby>よ。",
+      "en": "Tom and I are the same generation.",
+      "zh_TW": "Tom and I are the same generation.",
+      "zh_CN": "Tom and I are the same generation.",
+      "ko": "Tom and I are the same generation.",
+      "zh_HK": "Tom and I are the same generation.",
+      "fr": "Tom and I are the same generation."
+    },
+    "related": "Generation — a group of people born and living around the same time, or a single step in a family line."
+  },
+  {
+    "id": "class_word_1706",
+    "word": "文化",
+    "reading": "ぶんか",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Culture",
+      "ja": "文化",
+      "zh_TW": "Culture",
+      "zh_CN": "Culture",
+      "ko": "Culture",
+      "zh_HK": "Culture",
+      "fr": "civilisation"
+    },
+    "example": {
+      "ja": "<ruby>文化人<rt>ぶんかじん</rt></ruby>です。",
+      "en": "I'm a man of culture.",
+      "zh_TW": "I'm a man of culture.",
+      "zh_CN": "I'm a man of culture.",
+      "ko": "I'm a man of culture.",
+      "zh_HK": "I'm a man of culture.",
+      "fr": "I'm a man of culture."
+    },
+    "related": "Culture — the customs, arts, social norms, and way of life of a particular group or society."
+  },
+  {
+    "id": "class_word_1707",
+    "word": "動画をする → 動画を見る",
+    "reading": "どうがをみる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Grammar correction: 動画 is something you watch, not something you \"do.\"",
+      "ja": "動画をする → 動画を見る",
+      "zh_TW": "Grammar correction: 動画 is something you watch, not something you \"do.\"",
+      "zh_CN": "Grammar correction: 動画 is something you watch, not something you \"do.\"",
+      "ko": "Grammar correction: 動画 is something you watch, not something you \"do.\"",
+      "zh_HK": "Grammar correction: 動画 is something you watch, not something you \"do.\"",
+      "fr": "Grammar correction: 動画 is something you watch, not something you \"do.\""
+    },
+    "example": {
+      "ja": "A: <ruby>動画をする → 動画を見る<rt>どうがをみる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"動画をする → 動画を見る\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"動画をする → 動画を見る\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"動画をする → 動画を見る\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"動画をする → 動画を見る\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"動画をする → 動画を見る\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"動画をする → 動画を見る\".<br/>B: Yes, understood!"
+    },
+    "related": "Grammar correction: 動画 is something you watch, not something you \"do.\""
+  },
+  {
+    "id": "class_word_1708",
+    "word": "自動",
+    "reading": "じどう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Automatic",
+      "ja": "自動",
+      "zh_TW": "Automatic",
+      "zh_CN": "Automatic",
+      "ko": "Automatic",
+      "zh_HK": "Automatic",
+      "fr": "automatique"
+    },
+    "example": {
+      "ja": "<ruby>自動<rt>じどう</rt></ruby>ドアです。",
+      "en": "The doors open automatically.",
+      "zh_TW": "The doors open automatically.",
+      "zh_CN": "The doors open automatically.",
+      "ko": "The doors open automatically.",
+      "zh_HK": "The doors open automatically.",
+      "fr": "The doors open automatically."
+    },
+    "related": "Automatic — operating by itself without human input. Used as a prefix in many compound words."
+  },
+  {
+    "id": "class_word_1709",
+    "word": "商品",
+    "reading": "しょうひん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Product / goods / merchandise",
+      "ja": "商品",
+      "zh_TW": "Product / goods / merchandise",
+      "zh_CN": "Product / goods / merchandise",
+      "ko": "Product / goods / merchandise",
+      "zh_HK": "Product / goods / merchandise",
+      "fr": "article"
+    },
+    "example": {
+      "ja": "<ruby>商品<rt>しょうひん</rt></ruby>に<ruby>触<rt>ふ</rt></ruby>れるな。",
+      "en": "Don't touch the goods.",
+      "zh_TW": "Don't touch the goods.",
+      "zh_CN": "Don't touch the goods.",
+      "ko": "Don't touch the goods.",
+      "zh_HK": "Don't touch the goods.",
+      "fr": "Don't touch the goods."
+    },
+    "related": "Product / goods / merchandise — items sold or available for purchase in a commercial context."
+  },
+  {
+    "id": "class_word_1710",
+    "word": "販売",
+    "reading": "はんばい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Sales / selling",
+      "ja": "販売",
+      "zh_TW": "Sales / selling",
+      "zh_CN": "Sales / selling",
+      "ko": "Sales / selling",
+      "zh_HK": "Sales / selling",
+      "fr": "vente"
+    },
+    "example": {
+      "ja": "<ruby>私<rt>わたし</rt></ruby>は<ruby>販売員<rt>はんばいいん</rt></ruby>です。",
+      "en": "I'm a salesperson.",
+      "zh_TW": "I'm a salesperson.",
+      "zh_CN": "I'm a salesperson.",
+      "ko": "I'm a salesperson.",
+      "zh_HK": "I'm a salesperson.",
+      "fr": "I'm a salesperson."
+    },
+    "related": "Sales / selling — the act of selling products or services. More formal than 売る."
+  },
+  {
+    "id": "class_word_1711",
+    "word": "注文",
+    "reading": "ちゅうもん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Order",
+      "ja": "注文",
+      "zh_TW": "Order",
+      "zh_CN": "Order",
+      "ko": "Order",
+      "zh_HK": "Order",
+      "fr": "commande"
+    },
+    "example": {
+      "ja": "<ruby>本<rt>ほん</rt></ruby>、<ruby>注文<rt>ちゅうもん</rt></ruby>した？",
+      "en": "Did you order a book?",
+      "zh_TW": "Did you order a book?",
+      "zh_CN": "Did you order a book?",
+      "ko": "Did you order a book?",
+      "zh_HK": "Did you order a book?",
+      "fr": "Did you order a book?"
+    },
+    "related": "Order — placing an order for food, goods, or services."
+  },
+  {
+    "id": "class_word_1712",
+    "word": "フラれる",
+    "reading": "フラれる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To be rejected / to be dumped",
+      "ja": "フラれる",
+      "zh_TW": "To be rejected / to be dumped",
+      "zh_CN": "To be rejected / to be dumped",
+      "ko": "To be rejected / to be dumped",
+      "zh_HK": "To be rejected / to be dumped",
+      "fr": "To be rejected / to be dumped"
+    },
+    "example": {
+      "ja": "A: <ruby>フラれる<rt>フラれる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"フラれる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"フラれる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"フラれる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"フラれる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"フラれる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"フラれる\".<br/>B: Yes, understood!"
+    },
+    "related": "To be rejected / to be dumped — to have one's romantic confession or relationship refused or ended by the other person. "
+  },
+  {
+    "id": "class_word_1713",
+    "word": "楽です",
+    "reading": "らくです",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Easy / comfortable / relaxed",
+      "ja": "楽です",
+      "zh_TW": "Easy / comfortable / relaxed",
+      "zh_CN": "Easy / comfortable / relaxed",
+      "ko": "Easy / comfortable / relaxed",
+      "zh_HK": "Easy / comfortable / relaxed",
+      "fr": "Easy / comfortable / relaxed"
+    },
+    "example": {
+      "ja": "A: <ruby>楽です<rt>らくです</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"楽です\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"楽です\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"楽です\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"楽です\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"楽です\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"楽です\".<br/>B: Yes, understood!"
+    },
+    "related": "Easy / comfortable / relaxed — describes something that requires little effort, causes no stress, or is physically comfo"
+  },
+  {
+    "id": "class_word_1714",
+    "word": "表面的な",
+    "reading": "ひょうめんてきな",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Superficial / surface-level",
+      "ja": "表面的な",
+      "zh_TW": "Superficial / surface-level",
+      "zh_CN": "Superficial / surface-level",
+      "ko": "Superficial / surface-level",
+      "zh_HK": "Superficial / surface-level",
+      "fr": "Superficial / surface-level"
+    },
+    "example": {
+      "ja": "A: <ruby>表面的な<rt>ひょうめんてきな</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"表面的な\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"表面的な\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"表面的な\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"表面的な\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"表面的な\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"表面的な\".<br/>B: Yes, understood!"
+    },
+    "related": "Superficial / surface-level — describing something that only deals with the outside or outward appearance, without depth"
+  },
+  {
+    "id": "class_word_1715",
+    "word": "全体",
+    "reading": "ぜんたい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "The whole / overall / entire",
+      "ja": "全体",
+      "zh_TW": "The whole / overall / entire",
+      "zh_CN": "The whole / overall / entire",
+      "ko": "The whole / overall / entire",
+      "zh_HK": "The whole / overall / entire",
+      "fr": "complètement"
+    },
+    "example": {
+      "ja": "<ruby>町全体<rt>まちぜんたい</rt></ruby>が<ruby>水没<rt>すいぼつ</rt></ruby>した。",
+      "en": "The entire town was under water.",
+      "zh_TW": "The entire town was under water.",
+      "zh_CN": "The entire town was under water.",
+      "ko": "The entire town was under water.",
+      "zh_HK": "The entire town was under water.",
+      "fr": "The entire town was under water."
+    },
+    "related": "The whole / overall / entire — referring to something in its entirety, as a complete unit."
+  },
+  {
+    "id": "class_word_1716",
+    "word": "残念です",
+    "reading": "ざんねんです",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "That's a shame / how unfortunate / I'm disappointed",
+      "ja": "残念です",
+      "zh_TW": "That's a shame / how unfortunate / I'm disappointed",
+      "zh_CN": "That's a shame / how unfortunate / I'm disappointed",
+      "ko": "That's a shame / how unfortunate / I'm disappointed",
+      "zh_HK": "That's a shame / how unfortunate / I'm disappointed",
+      "fr": "That's a shame / how unfortunate / I'm disappointed"
+    },
+    "example": {
+      "ja": "A: <ruby>残念です<rt>ざんねんです</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"残念です\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"残念です\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"残念です\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"残念です\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"残念です\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"残念です\".<br/>B: Yes, understood!"
+    },
+    "related": "That's a shame / how unfortunate / I'm disappointed — expresses regret, disappointment, or sympathy about something that"
+  },
+  {
+    "id": "class_word_1717",
+    "word": "できそうですか？",
+    "reading": "できそうですか？",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Does it seem like you can do it? / Do you think you'll be able to?",
+      "ja": "できそうですか？",
+      "zh_TW": "Does it seem like you can do it? / Do you think you'll be able to?",
+      "zh_CN": "Does it seem like you can do it? / Do you think you'll be able to?",
+      "ko": "Does it seem like you can do it? / Do you think you'll be able to?",
+      "zh_HK": "Does it seem like you can do it? / Do you think you'll be able to?",
+      "fr": "Does it seem like you can do it? / Do you think you'll be able to?"
+    },
+    "example": {
+      "ja": "A: <ruby>できそうですか？<rt>できそうですか？</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"できそうですか？\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"できそうですか？\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"できそうですか？\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"できそうですか？\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"できそうですか？\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"できそうですか？\".<br/>B: Yes, understood!"
+    },
+    "related": "Does it seem like you can do it? / Do you think you'll be able to? — asking whether something looks achievable or within"
+  },
+  {
+    "id": "class_word_1718",
+    "word": "作れそうですか？",
+    "reading": "つくれそうですか？",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Does it seem like you can make it? / Do you think you'll be able to make it?",
+      "ja": "作れそうですか？",
+      "zh_TW": "Does it seem like you can make it? / Do you think you'll be able to make it?",
+      "zh_CN": "Does it seem like you can make it? / Do you think you'll be able to make it?",
+      "ko": "Does it seem like you can make it? / Do you think you'll be able to make it?",
+      "zh_HK": "Does it seem like you can make it? / Do you think you'll be able to make it?",
+      "fr": "Does it seem like you can make it? / Do you think you'll be able to make it?"
+    },
+    "example": {
+      "ja": "A: <ruby>作れそうですか？<rt>つくれそうですか？</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"作れそうですか？\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"作れそうですか？\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"作れそうですか？\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"作れそうですか？\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"作れそうですか？\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"作れそうですか？\".<br/>B: Yes, understood!"
+    },
+    "related": "Does it seem like you can make it? / Do you think you'll be able to make it? — asking whether making or creating somethi"
+  },
+  {
+    "id": "class_word_1719",
+    "word": "自由に使っていい",
+    "reading": "じゆうにつかっていい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Feel free to use it / you can use it however you like",
+      "ja": "自由に使っていい",
+      "zh_TW": "Feel free to use it / you can use it however you like",
+      "zh_CN": "Feel free to use it / you can use it however you like",
+      "ko": "Feel free to use it / you can use it however you like",
+      "zh_HK": "Feel free to use it / you can use it however you like",
+      "fr": "Feel free to use it / you can use it however you like"
+    },
+    "example": {
+      "ja": "A: <ruby>自由に使っていい<rt>じゆうにつかっていい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"自由に使っていい\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"自由に使っていい\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"自由に使っていい\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"自由に使っていい\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"自由に使っていい\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"自由に使っていい\".<br/>B: Yes, understood!"
+    },
+    "related": "Feel free to use it / you can use it however you like — giving someone open permission to use something without restrict"
+  },
+  {
+    "id": "class_word_1720",
+    "word": "〜しか食べない",
+    "reading": "〜しかたべない",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Both mean \"only eat ~\" but with different nuances.",
+      "ja": "〜しか食べない",
+      "zh_TW": "Both mean \"only eat ~\" but with different nuances.",
+      "zh_CN": "Both mean \"only eat ~\" but with different nuances.",
+      "ko": "Both mean \"only eat ~\" but with different nuances.",
+      "zh_HK": "Both mean \"only eat ~\" but with different nuances.",
+      "fr": "Both mean \"only eat ~\" but with different nuances."
+    },
+    "example": {
+      "ja": "A: <ruby>〜しか食べない<rt>〜しかたべない</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜しか食べない\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜しか食べない\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜しか食べない\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜しか食べない\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜しか食べない\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜しか食べない\".<br/>B: Yes, understood!"
+    },
+    "related": "Both mean \"only eat ~\" but with different nuances."
+  },
+  {
+    "id": "class_word_1721",
+    "word": "よくなる",
+    "reading": "よくなる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To get better / to improve",
+      "ja": "よくなる",
+      "zh_TW": "To get better / to improve",
+      "zh_CN": "To get better / to improve",
+      "ko": "To get better / to improve",
+      "zh_HK": "To get better / to improve",
+      "fr": "To get better / to improve"
+    },
+    "example": {
+      "ja": "A: <ruby>よくなる<rt>よくなる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"よくなる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"よくなる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"よくなる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"よくなる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"よくなる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"よくなる\".<br/>B: Yes, understood!"
+    },
+    "related": "To get better / to improve — describes improvement in health, quality, a situation, or skill. 良くなる written in kanji."
+  },
+  {
+    "id": "class_word_1722",
+    "word": "体重",
+    "reading": "たいじゅう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Body weight",
+      "ja": "体重",
+      "zh_TW": "Body weight",
+      "zh_CN": "Body weight",
+      "ko": "Body weight",
+      "zh_HK": "Body weight",
+      "fr": "poids (de son corps)"
+    },
+    "example": {
+      "ja": "A: <ruby>体重<rt>たいじゅう</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"体重\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"体重\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"体重\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"体重\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"体重\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"体重\".<br/>B: Yes, understood!"
+    },
+    "related": "Body weight — the measurement of how much a person's body weighs."
+  },
+  {
+    "id": "class_word_1723",
+    "word": "軽い",
+    "reading": "かるい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Light (in weight) / mild / minor",
+      "ja": "軽い",
+      "zh_TW": "Light (in weight) / mild / minor",
+      "zh_CN": "Light (in weight) / mild / minor",
+      "ko": "Light (in weight) / mild / minor",
+      "zh_HK": "Light (in weight) / mild / minor",
+      "fr": "léger"
+    },
+    "example": {
+      "ja": "<ruby>軽<rt>かる</rt></ruby>い<ruby>風邪<rt>かぜ</rt></ruby>です。",
+      "en": "It's only a slight cold.",
+      "zh_TW": "It's only a slight cold.",
+      "zh_CN": "It's only a slight cold.",
+      "ko": "It's only a slight cold.",
+      "zh_HK": "It's only a slight cold.",
+      "fr": "It's only a slight cold."
+    },
+    "related": "Light (in weight) / mild / minor — describes something low in weight, or used figuratively for something not serious."
+  },
+  {
+    "id": "class_word_1724",
+    "word": "重い",
+    "reading": "おもい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Heavy (in weight) / serious / burdensome",
+      "ja": "重い",
+      "zh_TW": "Heavy (in weight) / serious / burdensome",
+      "zh_CN": "Heavy (in weight) / serious / burdensome",
+      "ko": "Heavy (in weight) / serious / burdensome",
+      "zh_HK": "Heavy (in weight) / serious / burdensome",
+      "fr": "lourd"
+    },
+    "example": {
+      "ja": "トムは<ruby>重<rt>おも</rt></ruby>い。",
+      "en": "Tom is heavy.",
+      "zh_TW": "Tom is heavy.",
+      "zh_CN": "Tom is heavy.",
+      "ko": "Tom is heavy.",
+      "zh_HK": "Tom is heavy.",
+      "fr": "Tom is heavy."
+    },
+    "related": "Heavy (in weight) / serious / burdensome — describes something with significant weight, or figuratively something seriou"
+  },
+  {
+    "id": "class_word_1725",
+    "word": "増える",
+    "reading": "ふえる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To increase / to grow in number or amount",
+      "ja": "増える",
+      "zh_TW": "To increase / to grow in number or amount",
+      "zh_CN": "To increase / to grow in number or amount",
+      "ko": "To increase / to grow in number or amount",
+      "zh_HK": "To increase / to grow in number or amount",
+      "fr": "augmenter"
+    },
+    "example": {
+      "ja": "これで<ruby>私<rt>わたし</rt></ruby>の<ruby>悩<rt>なや</rt></ruby>みが<ruby>増<rt>ふ</rt></ruby>える。",
+      "en": "This adds to my troubles.",
+      "zh_TW": "This adds to my troubles.",
+      "zh_CN": "This adds to my troubles.",
+      "ko": "This adds to my troubles.",
+      "zh_HK": "This adds to my troubles.",
+      "fr": "This adds to my troubles."
+    },
+    "related": "To increase / to grow in number or amount — intransitive; the number or quantity goes up on its own."
+  },
+  {
+    "id": "class_word_1726",
+    "word": "減る",
+    "reading": "へる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To decrease / to reduce in number or amount",
+      "ja": "減る",
+      "zh_TW": "To decrease / to reduce in number or amount",
+      "zh_CN": "To decrease / to reduce in number or amount",
+      "ko": "To decrease / to reduce in number or amount",
+      "zh_HK": "To decrease / to reduce in number or amount",
+      "fr": "ôter"
+    },
+    "example": {
+      "ja": "<ruby>列車<rt>れっしゃ</rt></ruby>の<ruby>旅<rt>たび</rt></ruby>は<ruby>減<rt>へ</rt></ruby>る<ruby>傾向<rt>けいこう</rt></ruby>にある。",
+      "en": "Travel by train has been on the decrease.",
+      "zh_TW": "Travel by train has been on the decrease.",
+      "zh_CN": "Travel by train has been on the decrease.",
+      "ko": "Travel by train has been on the decrease.",
+      "zh_HK": "Travel by train has been on the decrease.",
+      "fr": "Travel by train has been on the decrease."
+    },
+    "related": "To decrease / to reduce in number or amount — intransitive; the quantity goes down on its own."
+  },
+  {
+    "id": "class_word_1727",
+    "word": "隠れ肥満",
+    "reading": "かくれひまん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Skinny fat / hidden obesity",
+      "ja": "隠れ肥満",
+      "zh_TW": "Skinny fat / hidden obesity",
+      "zh_CN": "Skinny fat / hidden obesity",
+      "ko": "Skinny fat / hidden obesity",
+      "zh_HK": "Skinny fat / hidden obesity",
+      "fr": "Skinny fat / hidden obesity"
+    },
+    "example": {
+      "ja": "A: <ruby>隠れ肥満<rt>かくれひまん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"隠れ肥満\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"隠れ肥満\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"隠れ肥満\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"隠れ肥満\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"隠れ肥満\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"隠れ肥満\".<br/>B: Yes, understood!"
+    },
+    "related": "Skinny fat / hidden obesity — a condition where a person appears slim or normal weight but has a high proportion of body"
+  },
+  {
+    "id": "class_word_1728",
+    "word": "休みながらしました",
+    "reading": "やすみながらしました",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "I did it while taking breaks / I did it with rest in between",
+      "ja": "休みながらしました",
+      "zh_TW": "I did it while taking breaks / I did it with rest in between",
+      "zh_CN": "I did it while taking breaks / I did it with rest in between",
+      "ko": "I did it while taking breaks / I did it with rest in between",
+      "zh_HK": "I did it while taking breaks / I did it with rest in between",
+      "fr": "I did it while taking breaks / I did it with rest in between"
+    },
+    "example": {
+      "ja": "A: <ruby>休みながらしました<rt>やすみながらしました</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"休みながらしました\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"休みながらしました\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"休みながらしました\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"休みながらしました\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"休みながらしました\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"休みながらしました\".<br/>B: Yes, understood!"
+    },
+    "related": "I did it while taking breaks / I did it with rest in between — 〜ながら expresses doing two things simultaneously, but 休みながら"
+  },
+  {
+    "id": "class_word_1729",
+    "word": "物価",
+    "reading": "ぶっか",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Prices / cost of living",
+      "ja": "物価",
+      "zh_TW": "Prices / cost of living",
+      "zh_CN": "Prices / cost of living",
+      "ko": "Prices / cost of living",
+      "zh_HK": "Prices / cost of living",
+      "fr": "les prix"
+    },
+    "example": {
+      "ja": "<ruby>物価<rt>ぶっか</rt></ruby>が<ruby>上<rt>あ</rt></ruby>がった。",
+      "en": "The price rose.",
+      "zh_TW": "The price rose.",
+      "zh_CN": "The price rose.",
+      "ko": "The price rose.",
+      "zh_HK": "The price rose.",
+      "fr": "The price rose."
+    },
+    "related": "Prices / cost of living — the general level of prices for goods and services in a region or country."
+  },
+  {
+    "id": "class_word_1730",
+    "word": "つまらなくなる",
+    "reading": "つまらなくなる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To become boring / to lose interest",
+      "ja": "つまらなくなる",
+      "zh_TW": "To become boring / to lose interest",
+      "zh_CN": "To become boring / to lose interest",
+      "ko": "To become boring / to lose interest",
+      "zh_HK": "To become boring / to lose interest",
+      "fr": "To become boring / to lose interest"
+    },
+    "example": {
+      "ja": "A: <ruby>つまらなくなる<rt>つまらなくなる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"つまらなくなる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"つまらなくなる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"つまらなくなる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"つまらなくなる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"つまらなくなる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"つまらなくなる\".<br/>B: Yes, understood!"
+    },
+    "related": "To become boring / to lose interest — describes something that was enjoyable or interesting becoming dull or unengaging "
+  },
+  {
+    "id": "class_word_1731",
+    "word": "類似点",
+    "reading": "るいじてん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Similarity / point of resemblance",
+      "ja": "類似点",
+      "zh_TW": "Similarity / point of resemblance",
+      "zh_CN": "Similarity / point of resemblance",
+      "ko": "Similarity / point of resemblance",
+      "zh_HK": "Similarity / point of resemblance",
+      "fr": "Similarity / point of resemblance"
+    },
+    "example": {
+      "ja": "A: <ruby>類似点<rt>るいじてん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"類似点\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"類似点\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"類似点\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"類似点\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"類似点\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"類似点\".<br/>B: Yes, understood!"
+    },
+    "related": "Similarity / point of resemblance — a specific aspect in which two things are alike. Formal and analytical; used in comp"
+  },
+  {
+    "id": "class_word_1732",
+    "word": "そっくり",
+    "reading": "そっくり",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Exactly alike / a spitting image / identical in appearance",
+      "ja": "そっくり",
+      "zh_TW": "完全，一模一样的",
+      "zh_CN": "完全，一模一样的",
+      "ko": "Exactly alike / a spitting image / identical in appearance",
+      "zh_HK": "完全，一模一样的",
+      "fr": "tout"
+    },
+    "example": {
+      "ja": "<ruby>父親<rt>ちちおや</rt></ruby>にそっくりだ。",
+      "en": "He is the image of his father.",
+      "zh_TW": "He is the image of his father.",
+      "zh_CN": "He is the image of his father.",
+      "ko": "He is the image of his father.",
+      "zh_HK": "He is the image of his father.",
+      "fr": "He is the image of his father."
+    },
+    "related": "Exactly alike / a spitting image / identical in appearance — describes something or someone that looks almost exactly th"
+  },
+  {
+    "id": "class_word_1733",
+    "word": "資格",
+    "reading": "しかく",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Qualification / licence / credential",
+      "ja": "資格",
+      "zh_TW": "Qualification / licence / credential",
+      "zh_CN": "Qualification / licence / credential",
+      "ko": "Qualification / licence / credential",
+      "zh_HK": "Qualification / licence / credential",
+      "fr": "compétences"
+    },
+    "example": {
+      "ja": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>受験資格<rt>じゅけんしかく</rt></ruby>がない。",
+      "en": "He is not qualified to take the examination.",
+      "zh_TW": "He is not qualified to take the examination.",
+      "zh_CN": "He is not qualified to take the examination.",
+      "ko": "He is not qualified to take the examination.",
+      "zh_HK": "He is not qualified to take the examination.",
+      "fr": "He is not qualified to take the examination."
+    },
+    "related": "Qualification / licence / credential — an officially recognised certification that shows a person has the required knowl"
+  },
+  {
+    "id": "class_word_1734",
+    "word": "さっぱりした味",
+    "reading": "さっぱりしたあじ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Light and refreshing taste / clean flavour",
+      "ja": "さっぱりした味",
+      "zh_TW": "Light and refreshing taste / clean flavour",
+      "zh_CN": "Light and refreshing taste / clean flavour",
+      "ko": "Light and refreshing taste / clean flavour",
+      "zh_HK": "Light and refreshing taste / clean flavour",
+      "fr": "Light and refreshing taste / clean flavour"
+    },
+    "example": {
+      "ja": "A: <ruby>さっぱりした味<rt>さっぱりしたあじ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"さっぱりした味\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"さっぱりした味\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"さっぱりした味\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"さっぱりした味\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"さっぱりした味\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"さっぱりした味\".<br/>B: Yes, understood!"
+    },
+    "related": "Light and refreshing taste / clean flavour — describes food or drink that is not heavy, greasy, or overpowering. Fresh, "
+  },
+  {
+    "id": "class_word_1735",
+    "word": "好み",
+    "reading": "このみ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Preference / taste / liking",
+      "ja": "好み",
+      "zh_TW": "Preference / taste / liking",
+      "zh_CN": "Preference / taste / liking",
+      "ko": "Preference / taste / liking",
+      "zh_HK": "Preference / taste / liking",
+      "fr": "goût"
+    },
+    "example": {
+      "ja": "<ruby>好<rt>この</rt></ruby>みの<ruby>問題<rt>もんだい</rt></ruby>だ。",
+      "en": "It's a question of personal taste.",
+      "zh_TW": "It's a question of personal taste.",
+      "zh_CN": "It's a question of personal taste.",
+      "ko": "It's a question of personal taste.",
+      "zh_HK": "It's a question of personal taste.",
+      "fr": "It's a question of personal taste."
+    },
+    "related": "Preference / taste / liking — what a person personally likes or prefers, especially regarding food, style, or aesthetics"
+  },
+  {
+    "id": "class_word_1736",
+    "word": "趣味が合う",
+    "reading": "しゅみがあう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To share the same hobbies / to have matching interests",
+      "ja": "趣味が合う",
+      "zh_TW": "To share the same hobbies / to have matching interests",
+      "zh_CN": "To share the same hobbies / to have matching interests",
+      "ko": "To share the same hobbies / to have matching interests",
+      "zh_HK": "To share the same hobbies / to have matching interests",
+      "fr": "To share the same hobbies / to have matching interests"
+    },
+    "example": {
+      "ja": "A: <ruby>趣味が合う<rt>しゅみがあう</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"趣味が合う\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"趣味が合う\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"趣味が合う\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"趣味が合う\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"趣味が合う\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"趣味が合う\".<br/>B: Yes, understood!"
+    },
+    "related": "To share the same hobbies / to have matching interests — describes two people whose leisure interests align, often makin"
+  },
+  {
+    "id": "class_word_1737",
+    "word": "戦車",
+    "reading": "せんしゃ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Tank (military vehicle)",
+      "ja": "戦車",
+      "zh_TW": "Tank (military vehicle)",
+      "zh_CN": "Tank (military vehicle)",
+      "ko": "Tank (military vehicle)",
+      "zh_HK": "Tank (military vehicle)",
+      "fr": "char d'assaut"
+    },
+    "example": {
+      "ja": "A: <ruby>戦車<rt>せんしゃ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"戦車\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"戦車\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"戦車\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"戦車\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"戦車\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"戦車\".<br/>B: Yes, understood!"
+    },
+    "related": "Tank (military vehicle) — an armoured, tracked military vehicle equipped with a large gun. 戦（せん）= battle, 車（しゃ）= vehicle"
+  },
+  {
+    "id": "class_word_1738",
+    "word": "連絡先",
+    "reading": "れんらくさき",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Contact information / contact details",
+      "ja": "連絡先",
+      "zh_TW": "Contact information / contact details",
+      "zh_CN": "Contact information / contact details",
+      "ko": "Contact information / contact details",
+      "zh_HK": "Contact information / contact details",
+      "fr": "Contact information / contact details"
+    },
+    "example": {
+      "ja": "A: <ruby>連絡先<rt>れんらくさき</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"連絡先\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"連絡先\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"連絡先\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"連絡先\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"連絡先\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"連絡先\".<br/>B: Yes, understood!"
+    },
+    "related": "Contact information / contact details — a person's phone number, email address, or other means of getting in touch."
+  },
+  {
+    "id": "class_word_1739",
+    "word": "結果",
+    "reading": "けっか",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Result / outcome",
+      "ja": "結果",
+      "zh_TW": "Result / outcome",
+      "zh_CN": "Result / outcome",
+      "ko": "Result / outcome",
+      "zh_HK": "Result / outcome",
+      "fr": "conséquence"
+    },
+    "example": {
+      "ja": "<ruby>結果<rt>けっか</rt></ruby>は<ruby>良<rt>よ</rt></ruby>い。",
+      "en": "The results are good.",
+      "zh_TW": "The results are good.",
+      "zh_CN": "The results are good.",
+      "ko": "The results are good.",
+      "zh_HK": "The results are good.",
+      "fr": "The results are good."
+    },
+    "related": "Result / outcome — what happens as a consequence of an action, process, or event."
+  },
+  {
+    "id": "class_word_1740",
+    "word": "施設",
+    "reading": "しせつ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Facility / institution",
+      "ja": "施設",
+      "zh_TW": "Facility / institution",
+      "zh_CN": "Facility / institution",
+      "ko": "Facility / institution",
+      "zh_HK": "Facility / institution",
+      "fr": "établissement"
+    },
+    "example": {
+      "ja": "<ruby>宿泊施設<rt>しゅくはくしせつ</rt></ruby>を<ruby>捜<rt>さが</rt></ruby>しています。",
+      "en": "We are looking for lodging accommodations.",
+      "zh_TW": "We are looking for lodging accommodations.",
+      "zh_CN": "We are looking for lodging accommodations.",
+      "ko": "We are looking for lodging accommodations.",
+      "zh_HK": "We are looking for lodging accommodations.",
+      "fr": "We are looking for lodging accommodations."
+    },
+    "related": "Facility / institution — a place built and equipped for a specific purpose, such as a care home, sports facility, school"
+  },
+  {
+    "id": "class_word_1741",
+    "word": "一緒に過ごす",
+    "reading": "いっしょにすごす",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To spend time together",
+      "ja": "一緒に過ごす",
+      "zh_TW": "To spend time together",
+      "zh_CN": "To spend time together",
+      "ko": "To spend time together",
+      "zh_HK": "To spend time together",
+      "fr": "To spend time together"
+    },
+    "example": {
+      "ja": "A: <ruby>一緒に過ごす<rt>いっしょにすごす</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"一緒に過ごす\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"一緒に過ごす\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"一緒に過ごす\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"一緒に過ごす\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"一緒に過ごす\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"一緒に過ごす\".<br/>B: Yes, understood!"
+    },
+    "related": "To spend time together — to pass time in the company of others, whether doing activities or simply being together."
+  },
+  {
+    "id": "class_word_1742",
+    "word": "髪型",
+    "reading": "かみがた",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Hairstyle",
+      "ja": "髪型",
+      "zh_TW": "Hairstyle",
+      "zh_CN": "Hairstyle",
+      "ko": "Hairstyle",
+      "zh_HK": "Hairstyle",
+      "fr": "Hairstyle"
+    },
+    "example": {
+      "ja": "A: <ruby>髪型<rt>かみがた</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"髪型\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"髪型\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"髪型\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"髪型\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"髪型\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"髪型\".<br/>B: Yes, understood!"
+    },
+    "related": "Hairstyle — the way hair is cut, styled, or arranged."
+  },
+  {
+    "id": "class_word_1743",
+    "word": "賢そう",
+    "reading": "かしこそう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Looks smart / seems intelligent",
+      "ja": "賢そう",
+      "zh_TW": "Looks smart / seems intelligent",
+      "zh_CN": "Looks smart / seems intelligent",
+      "ko": "Looks smart / seems intelligent",
+      "zh_HK": "Looks smart / seems intelligent",
+      "fr": "Looks smart / seems intelligent"
+    },
+    "example": {
+      "ja": "A: <ruby>賢そう<rt>かしこそう</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"賢そう\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"賢そう\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"賢そう\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"賢そう\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"賢そう\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"賢そう\".<br/>B: Yes, understood!"
+    },
+    "related": "Looks smart / seems intelligent — 〜そう expresses that something appears or seems a certain way based on appearance or imp"
+  },
+  {
+    "id": "class_word_1744",
+    "word": "モテる",
+    "reading": "モテる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To be popular with the opposite sex / to be attractive to others",
+      "ja": "モテる",
+      "zh_TW": "To be popular with the opposite sex / to be attractive to others",
+      "zh_CN": "To be popular with the opposite sex / to be attractive to others",
+      "ko": "To be popular with the opposite sex / to be attractive to others",
+      "zh_HK": "To be popular with the opposite sex / to be attractive to others",
+      "fr": "To be popular with the opposite sex / to be attractive to others"
+    },
+    "example": {
+      "ja": "A: <ruby>モテる<rt>モテる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"モテる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"モテる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"モテる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"モテる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"モテる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"モテる\".<br/>B: Yes, understood!"
+    },
+    "related": "To be popular with the opposite sex / to be attractive to others — to naturally draw romantic or social interest from pe"
+  },
+  {
+    "id": "class_word_1745",
+    "word": "努力家",
+    "reading": "どりょくか",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Hard worker / diligent person",
+      "ja": "努力家",
+      "zh_TW": "Hard worker / diligent person",
+      "zh_CN": "Hard worker / diligent person",
+      "ko": "Hard worker / diligent person",
+      "zh_HK": "Hard worker / diligent person",
+      "fr": "Hard worker / diligent person"
+    },
+    "example": {
+      "ja": "A: <ruby>努力家<rt>どりょくか</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"努力家\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"努力家\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"努力家\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"努力家\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"努力家\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"努力家\".<br/>B: Yes, understood!"
+    },
+    "related": "Hard worker / diligent person — someone who consistently puts in effort and works hard, regardless of natural talent."
+  },
+  {
+    "id": "class_word_1746",
+    "word": "繋がり",
+    "reading": "つながり",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Connection / bond / link",
+      "ja": "繋がり",
+      "zh_TW": "Connection / bond / link",
+      "zh_CN": "Connection / bond / link",
+      "ko": "Connection / bond / link",
+      "zh_HK": "Connection / bond / link",
+      "fr": "connection"
+    },
+    "example": {
+      "ja": "インターネットを<ruby>繋<rt>つな</rt></ruby>ごうとしても、<ruby>繋<rt>つな</rt></ruby>がりません。",
+      "en": "Even if I try to connect to the internet, I can't connect.",
+      "zh_TW": "Even if I try to connect to the internet, I can't connect.",
+      "zh_CN": "Even if I try to connect to the internet, I can't connect.",
+      "ko": "Even if I try to connect to the internet, I can't connect.",
+      "zh_HK": "Even if I try to connect to the internet, I can't connect.",
+      "fr": "Even if I try to connect to the internet, I can't connect."
+    },
+    "related": "Connection / bond / link — a relationship or tie between people, groups, or things. Can be personal, social, or conceptu"
+  },
+  {
+    "id": "class_word_1747",
+    "word": "友達を作る",
+    "reading": "ともだちをつくる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To make friends",
+      "ja": "友達を作る",
+      "zh_TW": "To make friends",
+      "zh_CN": "To make friends",
+      "ko": "To make friends",
+      "zh_HK": "To make friends",
+      "fr": "To make friends"
+    },
+    "example": {
+      "ja": "A: <ruby>友達を作る<rt>ともだちをつくる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"友達を作る\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"友達を作る\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"友達を作る\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"友達を作る\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"友達を作る\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"友達を作る\".<br/>B: Yes, understood!"
+    },
+    "related": "To make friends — to form new friendships. 作る is used here in the sense of \"to create / to build\" a relationship."
+  },
+  {
+    "id": "class_word_1748",
+    "word": "ナンパする",
+    "reading": "ナンパする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To hit on someone / to approach a stranger romantically",
+      "ja": "ナンパする",
+      "zh_TW": "To hit on someone / to approach a stranger romantically",
+      "zh_CN": "To hit on someone / to approach a stranger romantically",
+      "ko": "To hit on someone / to approach a stranger romantically",
+      "zh_HK": "To hit on someone / to approach a stranger romantically",
+      "fr": "To hit on someone / to approach a stranger romantically"
+    },
+    "example": {
+      "ja": "A: <ruby>ナンパする<rt>ナンパする</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"ナンパする\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"ナンパする\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"ナンパする\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"ナンパする\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"ナンパする\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"ナンパする\".<br/>B: Yes, understood!"
+    },
+    "related": "To hit on someone / to approach a stranger romantically — to approach someone (usually on the street) with the intention"
+  },
+  {
+    "id": "class_word_1749",
+    "word": "支持率",
+    "reading": "しじりつ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Approval rating / support rate",
+      "ja": "支持率",
+      "zh_TW": "Approval rating / support rate",
+      "zh_CN": "Approval rating / support rate",
+      "ko": "Approval rating / support rate",
+      "zh_HK": "Approval rating / support rate",
+      "fr": "Approval rating / support rate"
+    },
+    "example": {
+      "ja": "A: <ruby>支持率<rt>しじりつ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"支持率\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"支持率\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"支持率\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"支持率\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"支持率\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"支持率\".<br/>B: Yes, understood!"
+    },
+    "related": "Approval rating / support rate — the percentage of people who support or approve of a political leader, party, or policy"
+  },
+  {
+    "id": "class_word_1750",
+    "word": "ぬいぐるみ",
+    "reading": "ぬいぐるみ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Stuffed animal / plush toy",
+      "ja": "ぬいぐるみ",
+      "zh_TW": "内填棉花的布制玩具",
+      "zh_CN": "内填棉花的布制玩具",
+      "ko": "Stuffed animal / plush toy",
+      "zh_HK": "内填棉花的布制玩具",
+      "fr": "Stuffed animal / plush toy"
+    },
+    "example": {
+      "ja": "A: <ruby>ぬいぐるみ<rt>ぬいぐるみ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"ぬいぐるみ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"ぬいぐるみ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"ぬいぐるみ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"ぬいぐるみ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"ぬいぐるみ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"ぬいぐるみ\".<br/>B: Yes, understood!"
+    },
+    "related": "Stuffed animal / plush toy — a soft toy made of fabric and stuffed with filling, shaped like an animal or character."
+  },
+  {
+    "id": "class_word_1751",
+    "word": "〜なら",
+    "reading": "なら",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "If it's ~ / speaking of ~ / if that's the case",
+      "ja": "〜なら",
+      "zh_TW": "奈良县，奈良市（日本）",
+      "zh_CN": "奈良县，奈良市（日本）",
+      "ko": "If it's ~ / speaking of ~ / if that's the case",
+      "zh_HK": "奈良县，奈良市（日本）",
+      "fr": "If it's ~ / speaking of ~ / if that's the case"
+    },
+    "example": {
+      "ja": "A: <ruby>〜なら<rt>なら</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜なら\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜なら\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜なら\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜なら\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜なら\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜なら\".<br/>B: Yes, understood!"
+    },
+    "related": "If it's ~ / speaking of ~ / if that's the case — a conditional that refers back to something already mentioned or assume"
+  },
+  {
+    "id": "class_word_1752",
+    "word": "めんどくさい",
+    "reading": "めんどくさい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Troublesome / can't be bothered / such a hassle",
+      "ja": "めんどくさい",
+      "zh_TW": "Troublesome / can't be bothered / such a hassle",
+      "zh_CN": "Troublesome / can't be bothered / such a hassle",
+      "ko": "Troublesome / can't be bothered / such a hassle",
+      "zh_HK": "Troublesome / can't be bothered / such a hassle",
+      "fr": "Troublesome / can't be bothered / such a hassle"
+    },
+    "example": {
+      "ja": "A: <ruby>めんどくさい<rt>めんどくさい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"めんどくさい\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"めんどくさい\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"めんどくさい\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"めんどくさい\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"めんどくさい\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"めんどくさい\".<br/>B: Yes, understood!"
+    },
+    "related": "Troublesome / can't be bothered / such a hassle — used when something feels like too much effort or too annoying to deal"
+  },
+  {
+    "id": "class_word_1753",
+    "word": "矯正",
+    "reading": "きょうせい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Correction / straightening / orthodontics",
+      "ja": "矯正",
+      "zh_TW": "Correction / straightening / orthodontics",
+      "zh_CN": "Correction / straightening / orthodontics",
+      "ko": "Correction / straightening / orthodontics",
+      "zh_HK": "Correction / straightening / orthodontics",
+      "fr": "correction"
+    },
+    "example": {
+      "ja": "<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>強制的<rt>きょうせいてき</rt></ruby>に<ruby>私<rt>わたし</rt></ruby>を<ruby>連<rt>つ</rt></ruby>れ<ruby>出<rt>だ</rt></ruby>した。",
+      "en": "She forced me to go out with her.",
+      "zh_TW": "She forced me to go out with her.",
+      "zh_CN": "She forced me to go out with her.",
+      "ko": "She forced me to go out with her.",
+      "zh_HK": "She forced me to go out with her.",
+      "fr": "She forced me to go out with her."
+    },
+    "related": "Correction / straightening / orthodontics — fixing something that is crooked or misaligned. Most commonly refers to dent"
+  },
+  {
+    "id": "class_word_1754",
+    "word": "お祝い",
+    "reading": "おいわい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Celebration / congratulations / a gift for a celebratory occasion",
+      "ja": "お祝い",
+      "zh_TW": "Celebration / congratulations / a gift for a celebratory occasion",
+      "zh_CN": "Celebration / congratulations / a gift for a celebratory occasion",
+      "ko": "Celebration / congratulations / a gift for a celebratory occasion",
+      "zh_HK": "Celebration / congratulations / a gift for a celebratory occasion",
+      "fr": "célébration"
+    },
+    "example": {
+      "ja": "<ruby>御成功<rt>ごせいこう</rt></ruby>をお<ruby>祝<rt>いわ</rt></ruby>いします。",
+      "en": "I congratulate you on your success.",
+      "zh_TW": "I congratulate you on your success.",
+      "zh_CN": "I congratulate you on your success.",
+      "ko": "I congratulate you on your success.",
+      "zh_HK": "I congratulate you on your success.",
+      "fr": "I congratulate you on your success."
+    },
+    "related": "Celebration / congratulations / a gift for a celebratory occasion — both the act of celebrating and a gift given to mark"
+  },
+  {
+    "id": "class_word_1755",
+    "word": "〜向け",
+    "reading": "〜むけ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Aimed at ~ / for ~ / targeted at ~",
+      "ja": "〜向け",
+      "zh_TW": "Aimed at ~ / for ~ / targeted at ~",
+      "zh_CN": "Aimed at ~ / for ~ / targeted at ~",
+      "ko": "Aimed at ~ / for ~ / targeted at ~",
+      "zh_HK": "Aimed at ~ / for ~ / targeted at ~",
+      "fr": "à l'intention de ~"
+    },
+    "example": {
+      "ja": "A: <ruby>〜向け<rt>〜むけ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜向け\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜向け\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜向け\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜向け\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜向け\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜向け\".<br/>B: Yes, understood!"
+    },
+    "related": "Aimed at ~ / for ~ / targeted at ~ — indicates that something is designed, intended, or suited for a specific group or p"
+  },
+  {
+    "id": "class_word_1756",
+    "word": "話題",
+    "reading": "わだい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Topic / subject of conversation",
+      "ja": "話題",
+      "zh_TW": "Topic / subject of conversation",
+      "zh_CN": "Topic / subject of conversation",
+      "ko": "Topic / subject of conversation",
+      "zh_HK": "Topic / subject of conversation",
+      "fr": "sujet"
+    },
+    "example": {
+      "ja": "<ruby>話題<rt>わだい</rt></ruby><ruby>変<rt>か</rt></ruby>えよう。",
+      "en": "Let's change the topic.",
+      "zh_TW": "Let's change the topic.",
+      "zh_CN": "Let's change the topic.",
+      "ko": "Let's change the topic.",
+      "zh_HK": "Let's change the topic.",
+      "fr": "Let's change the topic."
+    },
+    "related": "Topic / subject of conversation — what people are talking or thinking about at a given time. Can be a conversation topic"
+  },
+  {
+    "id": "class_word_1757",
+    "word": "初対面",
+    "reading": "しょたいめん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "First meeting / meeting for the first time",
+      "ja": "初対面",
+      "zh_TW": "First meeting / meeting for the first time",
+      "zh_CN": "First meeting / meeting for the first time",
+      "ko": "First meeting / meeting for the first time",
+      "zh_HK": "First meeting / meeting for the first time",
+      "fr": "First meeting / meeting for the first time"
+    },
+    "example": {
+      "ja": "A: <ruby>初対面<rt>しょたいめん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"初対面\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"初対面\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"初対面\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"初対面\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"初対面\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"初対面\".<br/>B: Yes, understood!"
+    },
+    "related": "First meeting / meeting for the first time — the occasion of encountering someone for the very first time. Often used in"
+  },
+  {
+    "id": "class_word_1758",
+    "word": "努力",
+    "reading": "どりょく",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Effort / hard work",
+      "ja": "努力",
+      "zh_TW": "Effort / hard work",
+      "zh_CN": "Effort / hard work",
+      "ko": "Effort / hard work",
+      "zh_HK": "Effort / hard work",
+      "fr": "effort"
+    },
+    "example": {
+      "ja": "<ruby>君<rt>くん</rt></ruby>も<ruby>努力<rt>どりょく</rt></ruby>してよ。",
+      "en": "You make an effort too!",
+      "zh_TW": "You make an effort too!",
+      "zh_CN": "You make an effort too!",
+      "ko": "You make an effort too!",
+      "zh_HK": "You make an effort too!",
+      "fr": "You make an effort too!"
+    },
+    "related": "Effort / hard work — consistent energy and commitment put into achieving something."
+  },
+  {
+    "id": "class_word_1759",
+    "word": "性格",
+    "reading": "せいかく",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Personality / character",
+      "ja": "性格",
+      "zh_TW": "Personality / character",
+      "zh_CN": "Personality / character",
+      "ko": "Personality / character",
+      "zh_HK": "Personality / character",
+      "fr": "caractère"
+    },
+    "example": {
+      "ja": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>性格<rt>せいかく</rt></ruby>がよい。",
+      "en": "He has a nice personality.",
+      "zh_TW": "He has a nice personality.",
+      "zh_CN": "He has a nice personality.",
+      "ko": "He has a nice personality.",
+      "zh_HK": "He has a nice personality.",
+      "fr": "He has a nice personality."
+    },
+    "related": "Personality / character — the combination of qualities and traits that make up a person's usual way of thinking, feeling"
+  },
+  {
+    "id": "class_word_1760",
+    "word": "ポジティブ・ネガティブ",
+    "reading": "ポジティブ・ネガティブ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Positive / negative",
+      "ja": "ポジティブ・ネガティブ",
+      "zh_TW": "Positive / negative",
+      "zh_CN": "Positive / negative",
+      "ko": "Positive / negative",
+      "zh_HK": "Positive / negative",
+      "fr": "Positive / negative"
+    },
+    "example": {
+      "ja": "A: <ruby>ポジティブ・ネガティブ<rt>ポジティブ・ネガティブ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"ポジティブ・ネガティブ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"ポジティブ・ネガティブ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"ポジティブ・ネガティブ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"ポジティブ・ネガティブ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"ポジティブ・ネガティブ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"ポジティブ・ネガティブ\".<br/>B: Yes, understood!"
+    },
+    "related": "Positive / negative — borrowed from English. Used to describe outlooks, thinking, energy, and attitudes. Very common in "
+  },
+  {
+    "id": "class_word_1761",
+    "word": "避ける",
+    "reading": "さける",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To avoid / to stay away from / to dodge",
+      "ja": "避ける",
+      "zh_TW": "To avoid / to stay away from / to dodge",
+      "zh_CN": "To avoid / to stay away from / to dodge",
+      "ko": "To avoid / to stay away from / to dodge",
+      "zh_HK": "To avoid / to stay away from / to dodge",
+      "fr": "éviter"
+    },
+    "example": {
+      "ja": "<ruby>悪友<rt>あくゆう</rt></ruby>は<ruby>避<rt>さ</rt></ruby>けるべきだ。",
+      "en": "You should keep away from bad company.",
+      "zh_TW": "You should keep away from bad company.",
+      "zh_CN": "You should keep away from bad company.",
+      "ko": "You should keep away from bad company.",
+      "zh_HK": "You should keep away from bad company.",
+      "fr": "You should keep away from bad company."
+    },
+    "related": "To avoid / to stay away from / to dodge — to deliberately keep away from something or someone, or to sidestep a situatio"
+  },
+  {
+    "id": "class_word_1762",
+    "word": "打たれ強い",
+    "reading": "うたれづよい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Resilient / tough / able to take a hit",
+      "ja": "打たれ強い",
+      "zh_TW": "Resilient / tough / able to take a hit",
+      "zh_CN": "Resilient / tough / able to take a hit",
+      "ko": "Resilient / tough / able to take a hit",
+      "zh_HK": "Resilient / tough / able to take a hit",
+      "fr": "Resilient / tough / able to take a hit"
+    },
+    "example": {
+      "ja": "A: <ruby>打たれ強い<rt>うたれづよい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"打たれ強い\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"打たれ強い\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"打たれ強い\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"打たれ強い\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"打たれ強い\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"打たれ強い\".<br/>B: Yes, understood!"
+    },
+    "related": "Resilient / tough / able to take a hit — describes a person who can withstand criticism, setbacks, or hard knocks withou"
+  },
+  {
+    "id": "class_word_1763",
+    "word": "落ち込む",
+    "reading": "おちこむ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To feel down / to get depressed / to be dejected",
+      "ja": "落ち込む",
+      "zh_TW": "To feel down / to get depressed / to be dejected",
+      "zh_CN": "To feel down / to get depressed / to be dejected",
+      "ko": "To feel down / to get depressed / to be dejected",
+      "zh_HK": "To feel down / to get depressed / to be dejected",
+      "fr": "devenir sombre, triste"
+    },
+    "example": {
+      "ja": "そう<ruby>落ち込<rt>おちこ</rt></ruby>むなよ。",
+      "en": "Keep your chin up.",
+      "zh_TW": "Keep your chin up.",
+      "zh_CN": "Keep your chin up.",
+      "ko": "Keep your chin up.",
+      "zh_HK": "Keep your chin up.",
+      "fr": "Keep your chin up."
+    },
+    "related": "To feel down / to get depressed / to be dejected — to sink into a low or gloomy emotional state, usually after something"
+  },
+  {
+    "id": "class_word_1764",
+    "word": "反抗する",
+    "reading": "はんこうする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To rebel / to defy / to resist",
+      "ja": "反抗する",
+      "zh_TW": "To rebel / to defy / to resist",
+      "zh_CN": "To rebel / to defy / to resist",
+      "ko": "To rebel / to defy / to resist",
+      "zh_HK": "To rebel / to defy / to resist",
+      "fr": "To rebel / to defy / to resist"
+    },
+    "example": {
+      "ja": "A: <ruby>反抗する<rt>はんこうする</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"反抗する\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"反抗する\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"反抗する\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"反抗する\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"反抗する\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"反抗する\".<br/>B: Yes, understood!"
+    },
+    "related": "To rebel / to defy / to resist — to actively oppose authority, rules, or someone in charge. More deliberate than 逆らう."
+  },
+  {
+    "id": "class_word_1765",
+    "word": "反抗期",
+    "reading": "はんこうき",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Rebellious phase / period of defiance",
+      "ja": "反抗期",
+      "zh_TW": "Rebellious phase / period of defiance",
+      "zh_CN": "Rebellious phase / period of defiance",
+      "ko": "Rebellious phase / period of defiance",
+      "zh_HK": "Rebellious phase / period of defiance",
+      "fr": "Rebellious phase / period of defiance"
+    },
+    "example": {
+      "ja": "A: <ruby>反抗期<rt>はんこうき</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"反抗期\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"反抗期\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"反抗期\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"反抗期\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"反抗期\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"反抗期\".<br/>B: Yes, understood!"
+    },
+    "related": "Rebellious phase / period of defiance — the stage in a child's development (typically early adolescence) when they resis"
+  },
+  {
+    "id": "class_word_1766",
+    "word": "苦難",
+    "reading": "くなん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Hardship / suffering / adversity",
+      "ja": "苦難",
+      "zh_TW": "Hardship / suffering / adversity",
+      "zh_CN": "Hardship / suffering / adversity",
+      "ko": "Hardship / suffering / adversity",
+      "zh_HK": "Hardship / suffering / adversity",
+      "fr": "Hardship / suffering / adversity"
+    },
+    "example": {
+      "ja": "A: <ruby>苦難<rt>くなん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"苦難\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"苦難\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"苦難\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"苦難\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"苦難\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"苦難\".<br/>B: Yes, understood!"
+    },
+    "related": "Hardship / suffering / adversity — serious difficulties or trials that require great endurance to overcome. More formal "
+  },
+  {
+    "id": "class_word_1767",
+    "word": "涼しい",
+    "reading": "すずしい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Cool / pleasantly cool",
+      "ja": "涼しい",
+      "zh_TW": "Cool / pleasantly cool",
+      "zh_CN": "Cool / pleasantly cool",
+      "ko": "Cool / pleasantly cool",
+      "zh_HK": "Cool / pleasantly cool",
+      "fr": "frais"
+    },
+    "example": {
+      "ja": "<ruby>秋<rt>あき</rt></ruby>は<ruby>涼<rt>すず</rt></ruby>しいです。",
+      "en": "Autumn is cool.",
+      "zh_TW": "Autumn is cool.",
+      "zh_CN": "Autumn is cool.",
+      "ko": "Autumn is cool.",
+      "zh_HK": "Autumn is cool.",
+      "fr": "Autumn is cool."
+    },
+    "related": "Cool / pleasantly cool — describes a temperature that feels refreshingly cool and comfortable, not cold."
+  },
+  {
+    "id": "class_word_1768",
+    "word": "待っています",
+    "reading": "まっています",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "I am waiting / I will be waiting",
+      "ja": "待っています",
+      "zh_TW": "I am waiting / I will be waiting",
+      "zh_CN": "I am waiting / I will be waiting",
+      "ko": "I am waiting / I will be waiting",
+      "zh_HK": "I am waiting / I will be waiting",
+      "fr": "I am waiting / I will be waiting"
+    },
+    "example": {
+      "ja": "A: <ruby>待っています<rt>まっています</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"待っています\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"待っています\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"待っています\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"待っています\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"待っています\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"待っています\".<br/>B: Yes, understood!"
+    },
+    "related": "I am waiting / I will be waiting — the te-form + いる of 待つ (to wait), expressing an ongoing or expected state of waiting."
+  },
+  {
+    "id": "class_word_1769",
+    "word": "無駄",
+    "reading": "むだ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Wasteful / pointless / a waste",
+      "ja": "無駄",
+      "zh_TW": "Wasteful / pointless / a waste",
+      "zh_CN": "Wasteful / pointless / a waste",
+      "ko": "Wasteful / pointless / a waste",
+      "zh_HK": "Wasteful / pointless / a waste",
+      "fr": "en pure perte"
+    },
+    "example": {
+      "ja": "<ruby>無駄足<rt>むだあし</rt></ruby>だったよ。",
+      "en": "It was a wild goose chase.",
+      "zh_TW": "It was a wild goose chase.",
+      "zh_CN": "It was a wild goose chase.",
+      "ko": "It was a wild goose chase.",
+      "zh_HK": "It was a wild goose chase.",
+      "fr": "It was a wild goose chase."
+    },
+    "related": "Wasteful / pointless / a waste — describing something that produces no useful result, or a resource spent without benefi"
+  },
+  {
+    "id": "class_word_1770",
+    "word": "先輩",
+    "reading": "せんぱい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Senior / upperclassman / someone more experienced",
+      "ja": "先輩",
+      "zh_TW": "Senior / upperclassman / someone more experienced",
+      "zh_CN": "Senior / upperclassman / someone more experienced",
+      "ko": "Senior / upperclassman / someone more experienced",
+      "zh_HK": "Senior / upperclassman / someone more experienced",
+      "fr": "aîné"
+    },
+    "example": {
+      "ja": "トムは<ruby>高校<rt>こうこう</rt></ruby>の<ruby>先輩<rt>せんぱい</rt></ruby>です。",
+      "en": "Tom and I went to the same high school.",
+      "zh_TW": "Tom and I went to the same high school.",
+      "zh_CN": "Tom and I went to the same high school.",
+      "ko": "Tom and I went to the same high school.",
+      "zh_HK": "Tom and I went to the same high school.",
+      "fr": "Tom and I went to the same high school."
+    },
+    "related": "Senior / upperclassman / someone more experienced — a person who is senior to you in school, club, or workplace. One of "
+  },
+  {
+    "id": "class_word_1771",
+    "word": "後輩",
+    "reading": "こうはい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Junior / someone less experienced",
+      "ja": "後輩",
+      "zh_TW": "Junior / someone less experienced",
+      "zh_CN": "Junior / someone less experienced",
+      "ko": "Junior / someone less experienced",
+      "zh_HK": "Junior / someone less experienced",
+      "fr": "cadet"
+    },
+    "example": {
+      "ja": "トムは<ruby>高校<rt>こうこう</rt></ruby>の<ruby>後輩<rt>こうはい</rt></ruby>です。",
+      "en": "Tom and I went to the same high school.",
+      "zh_TW": "Tom and I went to the same high school.",
+      "zh_CN": "Tom and I went to the same high school.",
+      "ko": "Tom and I went to the same high school.",
+      "zh_HK": "Tom and I went to the same high school.",
+      "fr": "Tom and I went to the same high school."
+    },
+    "related": "Junior / someone less experienced — a person who is junior to you in school, club, or workplace. The counterpart to 先輩."
+  },
+  {
+    "id": "class_word_1772",
+    "word": "〜以降",
+    "reading": "〜いこう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "From ~ onwards / after ~",
+      "ja": "〜以降",
+      "zh_TW": "From ~ onwards / after ~",
+      "zh_CN": "From ~ onwards / after ~",
+      "ko": "From ~ onwards / after ~",
+      "zh_HK": "From ~ onwards / after ~",
+      "fr": "à l'avenir"
+    },
+    "example": {
+      "ja": "A: <ruby>〜以降<rt>〜いこう</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜以降\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜以降\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜以降\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜以降\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜以降\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜以降\".<br/>B: Yes, understood!"
+    },
+    "related": "From ~ onwards / after ~ — marks a point in time and refers to everything from that point forward, including that point "
+  },
+  {
+    "id": "class_word_1773",
+    "word": "空気",
+    "reading": "くうき",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Air / atmosphere / mood of a situation",
+      "ja": "空気",
+      "zh_TW": "Air / atmosphere / mood of a situation",
+      "zh_CN": "Air / atmosphere / mood of a situation",
+      "ko": "Air / atmosphere / mood of a situation",
+      "zh_HK": "Air / atmosphere / mood of a situation",
+      "fr": "air"
+    },
+    "example": {
+      "ja": "<ruby>空気<rt>くうき</rt></ruby><ruby>読<rt>よ</rt></ruby>めない。",
+      "en": "Unable to sense the situation.",
+      "zh_TW": "Unable to sense the situation.",
+      "zh_CN": "Unable to sense the situation.",
+      "ko": "Unable to sense the situation.",
+      "zh_HK": "Unable to sense the situation.",
+      "fr": "Unable to sense the situation."
+    },
+    "related": "Air / atmosphere / mood of a situation — literally the air we breathe, but very commonly used figuratively to mean the v"
+  },
+  {
+    "id": "class_word_1774",
+    "word": "〜たらいいよ",
+    "reading": "たらいいよ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "You should ~ / why don't you ~ / it'd be good if you ~",
+      "ja": "〜たらいいよ",
+      "zh_TW": "You should ~ / why don't you ~ / it'd be good if you ~",
+      "zh_CN": "You should ~ / why don't you ~ / it'd be good if you ~",
+      "ko": "You should ~ / why don't you ~ / it'd be good if you ~",
+      "zh_HK": "You should ~ / why don't you ~ / it'd be good if you ~",
+      "fr": "You should ~ / why don't you ~ / it'd be good if you ~"
+    },
+    "example": {
+      "ja": "A: <ruby>〜たらいいよ<rt>たらいいよ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜たらいいよ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜たらいいよ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜たらいいよ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜たらいいよ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜たらいいよ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜たらいいよ\".<br/>B: Yes, understood!"
+    },
+    "related": "You should ~ / why don't you ~ / it'd be good if you ~ — a casual, friendly way to give advice or a suggestion. Softer t"
+  },
+  {
+    "id": "class_word_1775",
+    "word": "後悔",
+    "reading": "こうかい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Regret",
+      "ja": "後悔",
+      "zh_TW": "Regret",
+      "zh_CN": "Regret",
+      "ko": "Regret",
+      "zh_HK": "Regret",
+      "fr": "regret"
+    },
+    "example": {
+      "ja": "<ruby>後悔<rt>こうかい</rt></ruby>するよ。",
+      "en": "You'll regret it.",
+      "zh_TW": "You'll regret it.",
+      "zh_CN": "You'll regret it.",
+      "ko": "You'll regret it.",
+      "zh_HK": "You'll regret it.",
+      "fr": "You'll regret it."
+    },
+    "related": "Regret — the feeling of wishing you had done something differently; remorse over a past choice or action."
+  },
+  {
+    "id": "class_word_1776",
+    "word": "手遅れ",
+    "reading": "ておくれ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Too late / past the point of no return",
+      "ja": "手遅れ",
+      "zh_TW": "Too late / past the point of no return",
+      "zh_CN": "Too late / past the point of no return",
+      "ko": "Too late / past the point of no return",
+      "zh_HK": "Too late / past the point of no return",
+      "fr": "traitement tardif"
+    },
+    "example": {
+      "ja": "<ruby>手遅<rt>ておく</rt></ruby>れだね。",
+      "en": "It's too late.",
+      "zh_TW": "It's too late.",
+      "zh_CN": "It's too late.",
+      "ko": "It's too late.",
+      "zh_HK": "It's too late.",
+      "fr": "It's too late."
+    },
+    "related": "Too late / past the point of no return — the situation where action is no longer able to prevent or fix something becaus"
+  },
+  {
+    "id": "class_word_1777",
+    "word": "心に響く",
+    "reading": "こころにひびく",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To resonate / to touch the heart / to move someone deeply",
+      "ja": "心に響く",
+      "zh_TW": "To resonate / to touch the heart / to move someone deeply",
+      "zh_CN": "To resonate / to touch the heart / to move someone deeply",
+      "ko": "To resonate / to touch the heart / to move someone deeply",
+      "zh_HK": "To resonate / to touch the heart / to move someone deeply",
+      "fr": "To resonate / to touch the heart / to move someone deeply"
+    },
+    "example": {
+      "ja": "A: <ruby>心に響く<rt>こころにひびく</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"心に響く\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"心に響く\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"心に響く\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"心に響く\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"心に響く\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"心に響く\".<br/>B: Yes, understood!"
+    },
+    "related": "To resonate / to touch the heart / to move someone deeply — describes words, music, or experiences that deeply affect on"
+  },
+  {
+    "id": "class_word_1778",
+    "word": "ふりをする",
+    "reading": "ふりをする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To pretend / to act like",
+      "ja": "ふりをする",
+      "zh_TW": "To pretend / to act like",
+      "zh_CN": "To pretend / to act like",
+      "ko": "To pretend / to act like",
+      "zh_HK": "To pretend / to act like",
+      "fr": "To pretend / to act like"
+    },
+    "example": {
+      "ja": "A: <ruby>ふりをする<rt>ふりをする</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"ふりをする\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"ふりをする\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"ふりをする\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"ふりをする\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"ふりをする\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"ふりをする\".<br/>B: Yes, understood!"
+    },
+    "related": "To pretend / to act like — behaving in a certain way to make others believe something that is not true."
+  },
+  {
+    "id": "class_word_1779",
+    "word": "共感",
+    "reading": "きょうかん） / 共感する（きょうかんする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Empathy / to empathize / to relate",
+      "ja": "共感",
+      "zh_TW": "Empathy / to empathize / to relate",
+      "zh_CN": "Empathy / to empathize / to relate",
+      "ko": "Empathy / to empathize / to relate",
+      "zh_HK": "Empathy / to empathize / to relate",
+      "fr": "sympathie"
+    },
+    "example": {
+      "ja": "あなたの<ruby>考え方<rt>かんがえかた</rt></ruby>には<ruby>共感<rt>きょうかん</rt></ruby>できます。",
+      "en": "I really agree with what you're saying.",
+      "zh_TW": "I really agree with what you're saying.",
+      "zh_CN": "I really agree with what you're saying.",
+      "ko": "I really agree with what you're saying.",
+      "zh_HK": "I really agree with what you're saying.",
+      "fr": "I really agree with what you're saying."
+    },
+    "related": "Empathy / to empathize / to relate — to understand and share the feelings, opinions, or experiences of another person."
+  },
+  {
+    "id": "class_word_1780",
+    "word": "妥協する",
+    "reading": "だきょうする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To compromise / to make concessions",
+      "ja": "妥協する",
+      "zh_TW": "To compromise / to make concessions",
+      "zh_CN": "To compromise / to make concessions",
+      "ko": "To compromise / to make concessions",
+      "zh_HK": "To compromise / to make concessions",
+      "fr": "To compromise / to make concessions"
+    },
+    "example": {
+      "ja": "A: <ruby>妥協する<rt>だきょうする</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"妥協する\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"妥協する\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"妥協する\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"妥協する\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"妥協する\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"妥協する\".<br/>B: Yes, understood!"
+    },
+    "related": "To compromise / to make concessions — to accept something less than ideal in order to reach an agreement or settle a sit"
+  },
+  {
+    "id": "class_word_1781",
+    "word": "尊重する",
+    "reading": "そんちょうする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To respect / to value / to honour",
+      "ja": "尊重する",
+      "zh_TW": "To respect / to value / to honour",
+      "zh_CN": "To respect / to value / to honour",
+      "ko": "To respect / to value / to honour",
+      "zh_HK": "To respect / to value / to honour",
+      "fr": "To respect / to value / to honour"
+    },
+    "example": {
+      "ja": "A: <ruby>尊重する<rt>そんちょうする</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"尊重する\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"尊重する\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"尊重する\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"尊重する\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"尊重する\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"尊重する\".<br/>B: Yes, understood!"
+    },
+    "related": "To respect / to value / to honour — to recognise and treat something or someone as important and worthy of consideration"
+  },
+  {
+    "id": "class_word_1782",
+    "word": "有効",
+    "reading": "ゆうこう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Valid / effective / in effect",
+      "ja": "有効",
+      "zh_TW": "Valid / effective / in effect",
+      "zh_CN": "Valid / effective / in effect",
+      "ko": "Valid / effective / in effect",
+      "zh_HK": "Valid / effective / in effect",
+      "fr": "efficacité"
+    },
+    "example": {
+      "ja": "<ruby>切符<rt>きっぷ</rt></ruby>は<ruby>三日間<rt>みっかかん</rt></ruby><ruby>有効<rt>ゆうこう</rt></ruby>だ。",
+      "en": "The ticket holds good for three days.",
+      "zh_TW": "The ticket holds good for three days.",
+      "zh_CN": "The ticket holds good for three days.",
+      "ko": "The ticket holds good for three days.",
+      "zh_HK": "The ticket holds good for three days.",
+      "fr": "The ticket holds good for three days."
+    },
+    "related": "Valid / effective / in effect — describes something that is currently active, legally recognised, or produces a meaningf"
+  },
+  {
+    "id": "class_word_1783",
+    "word": "量が少ない",
+    "reading": "りょうがすくない",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "The amount is small / there isn't much / not enough of it",
+      "ja": "量が少ない",
+      "zh_TW": "The amount is small / there isn't much / not enough of it",
+      "zh_CN": "The amount is small / there isn't much / not enough of it",
+      "ko": "The amount is small / there isn't much / not enough of it",
+      "zh_HK": "The amount is small / there isn't much / not enough of it",
+      "fr": "The amount is small / there isn't much / not enough of it"
+    },
+    "example": {
+      "ja": "A: <ruby>量が少ない<rt>りょうがすくない</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"量が少ない\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"量が少ない\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"量が少ない\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"量が少ない\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"量が少ない\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"量が少ない\".<br/>B: Yes, understood!"
+    },
+    "related": "The amount is small / there isn't much / not enough of it — describing a quantity that is low or insufficient."
+  },
+  {
+    "id": "class_word_1784",
+    "word": "会うに来た → 会いに来た",
+    "reading": "あうにきた → あいにきた",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Grammar correction: to express coming in order to do something, use the verb stem (ます-form without ます) + に来た/来る, not the plain dictionary form + に.",
+      "ja": "会うに来た → 会いに来た",
+      "zh_TW": "Grammar correction: to express coming in order to do something, use the verb stem (ます-form without ます) + に来た/来る, not the plain dictionary form + に.",
+      "zh_CN": "Grammar correction: to express coming in order to do something, use the verb stem (ます-form without ます) + に来た/来る, not the plain dictionary form + に.",
+      "ko": "Grammar correction: to express coming in order to do something, use the verb stem (ます-form without ます) + に来た/来る, not the plain dictionary form + に.",
+      "zh_HK": "Grammar correction: to express coming in order to do something, use the verb stem (ます-form without ます) + に来た/来る, not the plain dictionary form + に.",
+      "fr": "Grammar correction: to express coming in order to do something, use the verb stem (ます-form without ます) + に来た/来る, not the plain dictionary form + に."
+    },
+    "example": {
+      "ja": "A: <ruby>会うに来た → 会いに来た<rt>あうにきた → あいにきた</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"会うに来た → 会いに来た\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"会うに来た → 会いに来た\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"会うに来た → 会いに来た\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"会うに来た → 会いに来た\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"会うに来た → 会いに来た\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"会うに来た → 会いに来た\".<br/>B: Yes, understood!"
+    },
+    "related": "Grammar correction: to express coming in order to do something, use the verb stem (ます-form without ます) + に来た/来る, not the"
+  },
+  {
+    "id": "class_word_1785",
+    "word": "〜時間かけて",
+    "reading": "〜じかんかけて",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Taking ~ hours / spending ~ hours on",
+      "ja": "〜時間かけて",
+      "zh_TW": "Taking ~ hours / spending ~ hours on",
+      "zh_CN": "Taking ~ hours / spending ~ hours on",
+      "ko": "Taking ~ hours / spending ~ hours on",
+      "zh_HK": "Taking ~ hours / spending ~ hours on",
+      "fr": "Taking ~ hours / spending ~ hours on"
+    },
+    "example": {
+      "ja": "A: <ruby>〜時間かけて<rt>〜じかんかけて</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜時間かけて\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜時間かけて\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜時間かけて\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜時間かけて\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜時間かけて\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜時間かけて\".<br/>B: Yes, understood!"
+    },
+    "related": "Taking ~ hours / spending ~ hours on — expresses that a certain amount of time was spent or invested in doing something."
+  },
+  {
+    "id": "class_word_1786",
+    "word": "草刈り",
+    "reading": "くさかり",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Grass cutting / mowing / weeding",
+      "ja": "草刈り",
+      "zh_TW": "Grass cutting / mowing / weeding",
+      "zh_CN": "Grass cutting / mowing / weeding",
+      "ko": "Grass cutting / mowing / weeding",
+      "zh_HK": "Grass cutting / mowing / weeding",
+      "fr": "Grass cutting / mowing / weeding"
+    },
+    "example": {
+      "ja": "A: <ruby>草刈り<rt>くさかり</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"草刈り\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"草刈り\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"草刈り\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"草刈り\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"草刈り\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"草刈り\".<br/>B: Yes, understood!"
+    },
+    "related": "Grass cutting / mowing / weeding — the act of cutting or trimming overgrown grass and weeds, typically in gardens, field"
+  },
+  {
+    "id": "class_word_1787",
+    "word": "当たる",
+    "reading": "あたる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To win (a lottery / prize) / to hit / to be correct / to be assigned",
+      "ja": "当たる",
+      "zh_TW": "To win (a lottery / prize) / to hit / to be correct / to be assigned",
+      "zh_CN": "To win (a lottery / prize) / to hit / to be correct / to be assigned",
+      "ko": "To win (a lottery / prize) / to hit / to be correct / to be assigned",
+      "zh_HK": "To win (a lottery / prize) / to hit / to be correct / to be assigned",
+      "fr": "être frappé"
+    },
+    "example": {
+      "ja": "<ruby>思<rt>おも</rt></ruby>い<ruby>当<rt>あ</rt></ruby>たる<ruby>節<rt>ふし</rt></ruby>はない。",
+      "en": "That doesn't ring a bell.",
+      "zh_TW": "That doesn't ring a bell.",
+      "zh_CN": "That doesn't ring a bell.",
+      "ko": "That doesn't ring a bell.",
+      "zh_HK": "That doesn't ring a bell.",
+      "fr": "That doesn't ring a bell."
+    },
+    "related": "To win (a lottery / prize) / to hit / to be correct / to be assigned — a versatile verb with several meanings depending "
+  },
+  {
+    "id": "class_word_1788",
+    "word": "免許",
+    "reading": "めんきょ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Licence / permit",
+      "ja": "免許",
+      "zh_TW": "Licence / permit",
+      "zh_CN": "Licence / permit",
+      "ko": "Licence / permit",
+      "zh_HK": "Licence / permit",
+      "fr": "autorisation"
+    },
+    "example": {
+      "ja": "<ruby>免許証<rt>めんきょしょう</rt></ruby>は<ruby>持<rt>も</rt></ruby>ってます。",
+      "en": "I have a driver's license.",
+      "zh_TW": "I have a driver's license.",
+      "zh_CN": "I have a driver's license.",
+      "ko": "I have a driver's license.",
+      "zh_HK": "I have a driver's license.",
+      "fr": "I have a driver's license."
+    },
+    "related": "Licence / permit — an official authorisation to do something, most commonly a driving licence, but also used for other p"
+  },
+  {
+    "id": "class_word_1789",
+    "word": "短髪",
+    "reading": "たんぱつ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Short hair",
+      "ja": "短髪",
+      "zh_TW": "Short hair",
+      "zh_CN": "Short hair",
+      "ko": "Short hair",
+      "zh_HK": "Short hair",
+      "fr": "Short hair"
+    },
+    "example": {
+      "ja": "A: <ruby>短髪<rt>たんぱつ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"短髪\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"短髪\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"短髪\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"短髪\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"短髪\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"短髪\".<br/>B: Yes, understood!"
+    },
+    "related": "Short hair — hair that is cut short, used especially for men but also applicable to women."
+  },
+  {
+    "id": "class_word_1790",
+    "word": "前髪",
+    "reading": "まえがみ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Fringe / bangs",
+      "ja": "前髪",
+      "zh_TW": "Fringe / bangs",
+      "zh_CN": "Fringe / bangs",
+      "ko": "Fringe / bangs",
+      "zh_HK": "Fringe / bangs",
+      "fr": "Fringe / bangs"
+    },
+    "example": {
+      "ja": "A: <ruby>前髪<rt>まえがみ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"前髪\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"前髪\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"前髪\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"前髪\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"前髪\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"前髪\".<br/>B: Yes, understood!"
+    },
+    "related": "Fringe / bangs — the section of hair that falls over the forehead."
+  },
+  {
+    "id": "class_word_1791",
+    "word": "おでこ",
+    "reading": "おでこ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Forehead",
+      "ja": "おでこ",
+      "zh_TW": "前额",
+      "zh_CN": "前额",
+      "ko": "Forehead",
+      "zh_HK": "前额",
+      "fr": "front"
+    },
+    "example": {
+      "ja": "A: <ruby>おでこ<rt>おでこ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"おでこ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"おでこ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"おでこ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"おでこ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"おでこ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"おでこ\".<br/>B: Yes, understood!"
+    },
+    "related": "Forehead — the area of the face between the eyebrows and the hairline. Often used casually; the more formal word is 額（ひた"
+  },
+  {
+    "id": "class_word_1792",
+    "word": "パサつく",
+    "reading": "パサつく",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To be dry and rough / to feel coarse and lifeless",
+      "ja": "パサつく",
+      "zh_TW": "To be dry and rough / to feel coarse and lifeless",
+      "zh_CN": "To be dry and rough / to feel coarse and lifeless",
+      "ko": "To be dry and rough / to feel coarse and lifeless",
+      "zh_HK": "To be dry and rough / to feel coarse and lifeless",
+      "fr": "To be dry and rough / to feel coarse and lifeless"
+    },
+    "example": {
+      "ja": "A: <ruby>パサつく<rt>パサつく</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"パサつく\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"パサつく\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"パサつく\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"パサつく\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"パサつく\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"パサつく\".<br/>B: Yes, understood!"
+    },
+    "related": "To be dry and rough / to feel coarse and lifeless — describes the texture of hair (or skin, food) that lacks moisture an"
+  },
+  {
+    "id": "class_word_1793",
+    "word": "ボサボサ",
+    "reading": "ボサボサ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Messy and dishevelled / unkempt",
+      "ja": "ボサボサ",
+      "zh_TW": "Messy and dishevelled / unkempt",
+      "zh_CN": "Messy and dishevelled / unkempt",
+      "ko": "Messy and dishevelled / unkempt",
+      "zh_HK": "Messy and dishevelled / unkempt",
+      "fr": "Messy and dishevelled / unkempt"
+    },
+    "example": {
+      "ja": "A: <ruby>ボサボサ<rt>ボサボサ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"ボサボサ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"ボサボサ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"ボサボサ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"ボサボサ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"ボサボサ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"ボサボサ\".<br/>B: Yes, understood!"
+    },
+    "related": "Messy and dishevelled / unkempt — describes hair (or fur, or surfaces) that is untidy, sticking out in all directions, a"
+  },
+  {
+    "id": "class_word_1794",
+    "word": "お化け屋敷",
+    "reading": "おばけやしき",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Haunted house",
+      "ja": "お化け屋敷",
+      "zh_TW": "Haunted house",
+      "zh_CN": "Haunted house",
+      "ko": "Haunted house",
+      "zh_HK": "Haunted house",
+      "fr": "Haunted house"
+    },
+    "example": {
+      "ja": "A: <ruby>お化け屋敷<rt>おばけやしき</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"お化け屋敷\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"お化け屋敷\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"お化け屋敷\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"お化け屋敷\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"お化け屋敷\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"お化け屋敷\".<br/>B: Yes, understood!"
+    },
+    "related": "Haunted house — a type of attraction, usually at amusement parks or summer festivals, designed to scare visitors with gh"
+  },
+  {
+    "id": "class_word_1795",
+    "word": "交代で",
+    "reading": "こうたいで",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Taking turns / in rotation",
+      "ja": "交代で",
+      "zh_TW": "Taking turns / in rotation",
+      "zh_CN": "Taking turns / in rotation",
+      "ko": "Taking turns / in rotation",
+      "zh_HK": "Taking turns / in rotation",
+      "fr": "Taking turns / in rotation"
+    },
+    "example": {
+      "ja": "A: <ruby>交代で<rt>こうたいで</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"交代で\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"交代で\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"交代で\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"交代で\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"交代で\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"交代で\".<br/>B: Yes, understood!"
+    },
+    "related": "Taking turns / in rotation — describes people alternating doing a task or role, so each person does it for a period befo"
+  },
+  {
+    "id": "class_word_1796",
+    "word": "考えが変わりました",
+    "reading": "かんがえがかわりました",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "My thinking has changed / I've changed my mind",
+      "ja": "考えが変わりました",
+      "zh_TW": "My thinking has changed / I've changed my mind",
+      "zh_CN": "My thinking has changed / I've changed my mind",
+      "ko": "My thinking has changed / I've changed my mind",
+      "zh_HK": "My thinking has changed / I've changed my mind",
+      "fr": "My thinking has changed / I've changed my mind"
+    },
+    "example": {
+      "ja": "A: <ruby>考えが変わりました<rt>かんがえがかわりました</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"考えが変わりました\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"考えが変わりました\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"考えが変わりました\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"考えが変わりました\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"考えが変わりました\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"考えが変わりました\".<br/>B: Yes, understood!"
+    },
+    "related": "My thinking has changed / I've changed my mind — expresses that one's opinion, perspective, or plan has shifted from wha"
+  },
+  {
+    "id": "class_word_1797",
+    "word": "癖",
+    "reading": "くせ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Habit / quirk / tendency",
+      "ja": "癖",
+      "zh_TW": "Habit / quirk / tendency",
+      "zh_CN": "Habit / quirk / tendency",
+      "ko": "Habit / quirk / tendency",
+      "zh_HK": "Habit / quirk / tendency",
+      "fr": "(mauvaise) habitude"
+    },
+    "example": {
+      "ja": "<ruby>癖<rt>くせ</rt></ruby>になった。",
+      "en": "It has become habit.",
+      "zh_TW": "It has become habit.",
+      "zh_CN": "It has become habit.",
+      "ko": "It has become habit.",
+      "zh_HK": "It has become habit.",
+      "fr": "It has become habit."
+    },
+    "related": "Habit / quirk / tendency — a habitual behaviour or characteristic, whether conscious or not. Can refer to personal manne"
+  },
+  {
+    "id": "class_word_1798",
+    "word": "宣伝",
+    "reading": "せんでん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Advertisement / promotion / publicity",
+      "ja": "宣伝",
+      "zh_TW": "Advertisement / promotion / publicity",
+      "zh_CN": "Advertisement / promotion / publicity",
+      "ko": "Advertisement / promotion / publicity",
+      "zh_HK": "Advertisement / promotion / publicity",
+      "fr": "propagande"
+    },
+    "example": {
+      "ja": "さあ、<ruby>宣伝<rt>せんでん</rt></ruby>だ。",
+      "en": "Now let's talk it up.",
+      "zh_TW": "Now let's talk it up.",
+      "zh_CN": "Now let's talk it up.",
+      "ko": "Now let's talk it up.",
+      "zh_HK": "Now let's talk it up.",
+      "fr": "Now let's talk it up."
+    },
+    "related": "Advertisement / promotion / publicity — making something widely known, usually for commercial purposes."
+  },
+  {
+    "id": "class_word_1799",
+    "word": "〜で育った",
+    "reading": "そだった",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"Grew up in/at ~\"",
+      "ja": "〜で育った",
+      "zh_TW": "\"Grew up in/at ~\"",
+      "zh_CN": "\"Grew up in/at ~\"",
+      "ko": "\"Grew up in/at ~\"",
+      "zh_HK": "\"Grew up in/at ~\"",
+      "fr": "\"Grew up in/at ~\""
+    },
+    "example": {
+      "ja": "A: <ruby>〜で育った<rt>そだった</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜で育った\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜で育った\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜で育った\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜で育った\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜で育った\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜で育った\".<br/>B: Yes, understood!"
+    },
+    "related": "\"Grew up in/at ~\" — expresses where or in what environment someone was raised."
+  },
+  {
+    "id": "class_word_1800",
+    "word": "〜しかしません",
+    "reading": "しかしません",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"Only do ~\"",
+      "ja": "〜しかしません",
+      "zh_TW": "\"Only do ~\"",
+      "zh_CN": "\"Only do ~\"",
+      "ko": "\"Only do ~\"",
+      "zh_HK": "\"Only do ~\"",
+      "fr": "\"Only do ~\""
+    },
+    "example": {
+      "ja": "A: <ruby>〜しかしません<rt>しかしません</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜しかしません\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜しかしません\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜しかしません\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜しかしません\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜しかしません\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜しかしません\".<br/>B: Yes, understood!"
+    },
+    "related": "\"Only do ~\" — しか + negative verb, emphasizing limitation, often with a nuance of insufficiency."
+  },
+  {
+    "id": "class_word_1801",
+    "word": "前もって",
+    "reading": "まえもって",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"In advance / beforehand\"",
+      "ja": "前もって",
+      "zh_TW": "\"In advance / beforehand\"",
+      "zh_CN": "\"In advance / beforehand\"",
+      "ko": "\"In advance / beforehand\"",
+      "zh_HK": "\"In advance / beforehand\"",
+      "fr": "à l'avance"
+    },
+    "example": {
+      "ja": "<ruby>前<rt>まえ</rt></ruby>もって<ruby>準備<rt>じゅんび</rt></ruby>しておけよ。",
+      "en": "Get ready in advance.",
+      "zh_TW": "Get ready in advance.",
+      "zh_CN": "Get ready in advance.",
+      "ko": "Get ready in advance.",
+      "zh_HK": "Get ready in advance.",
+      "fr": "Get ready in advance."
+    },
+    "related": "\"In advance / beforehand\" — doing something ahead of time, before it's needed."
+  },
+  {
+    "id": "class_word_1802",
+    "word": "腐る",
+    "reading": "くさる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To rot / to spoil / to go bad",
+      "ja": "腐る",
+      "zh_TW": "To rot / to spoil / to go bad",
+      "zh_CN": "To rot / to spoil / to go bad",
+      "ko": "To rot / to spoil / to go bad",
+      "zh_HK": "To rot / to spoil / to go bad",
+      "fr": "devenir mauvais"
+    },
+    "example": {
+      "ja": "<ruby>金<rt>きん</rt></ruby>が<ruby>腐<rt>くさ</rt></ruby>るほどある。",
+      "en": "He is rolling in riches.",
+      "zh_TW": "He is rolling in riches.",
+      "zh_CN": "He is rolling in riches.",
+      "ko": "He is rolling in riches.",
+      "zh_HK": "He is rolling in riches.",
+      "fr": "He is rolling in riches."
+    },
+    "related": "To rot / to spoil / to go bad — food or organic matter decaying. Can also be used figuratively (spirit \"rotting,\" feelin"
+  },
+  {
+    "id": "class_word_1803",
+    "word": "腐らせる",
+    "reading": "くさらせる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To let/make something rot",
+      "ja": "腐らせる",
+      "zh_TW": "To let/make something rot",
+      "zh_CN": "To let/make something rot",
+      "ko": "To let/make something rot",
+      "zh_HK": "To let/make something rot",
+      "fr": "To let/make something rot"
+    },
+    "example": {
+      "ja": "A: <ruby>腐らせる<rt>くさらせる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"腐らせる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"腐らせる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"腐らせる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"腐らせる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"腐らせる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"腐らせる\".<br/>B: Yes, understood!"
+    },
+    "related": "To let/make something rot — the causative form of 腐る, meaning to cause or allow food (or other matter) to spoil, often t"
+  },
+  {
+    "id": "class_word_1804",
+    "word": "作り置き",
+    "reading": "つくりおき",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Pre-made meals / meal prep",
+      "ja": "作り置き",
+      "zh_TW": "Pre-made meals / meal prep",
+      "zh_CN": "Pre-made meals / meal prep",
+      "ko": "Pre-made meals / meal prep",
+      "zh_HK": "Pre-made meals / meal prep",
+      "fr": "Pre-made meals / meal prep"
+    },
+    "example": {
+      "ja": "A: <ruby>作り置き<rt>つくりおき</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"作り置き\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"作り置き\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"作り置き\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"作り置き\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"作り置き\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"作り置き\".<br/>B: Yes, understood!"
+    },
+    "related": "Pre-made meals / meal prep — food made ahead of time and stored to eat later."
+  },
+  {
+    "id": "class_word_1805",
+    "word": "人口",
+    "reading": "じんこう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Population",
+      "ja": "人口",
+      "zh_TW": "Population",
+      "zh_CN": "Population",
+      "ko": "Population",
+      "zh_HK": "Population",
+      "fr": "population"
+    },
+    "example": {
+      "ja": "その<ruby>町<rt>まち</rt></ruby>は<ruby>人口<rt>じんこう</rt></ruby>が<ruby>多<rt>おお</rt></ruby>い。",
+      "en": "The city has a large population.",
+      "zh_TW": "The city has a large population.",
+      "zh_CN": "The city has a large population.",
+      "ko": "The city has a large population.",
+      "zh_HK": "The city has a large population.",
+      "fr": "The city has a large population."
+    },
+    "related": "Population — the number of people in a country, region, or area."
+  },
+  {
+    "id": "class_word_1806",
+    "word": "修理",
+    "reading": "しゅうり",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Repair",
+      "ja": "修理",
+      "zh_TW": "Repair",
+      "zh_CN": "Repair",
+      "ko": "Repair",
+      "zh_HK": "Repair",
+      "fr": "dépannage"
+    },
+    "example": {
+      "ja": "<ruby>修理<rt>しゅうり</rt></ruby>が<ruby>必要<rt>ひつよう</rt></ruby>だ。",
+      "en": "I think it needs a tune-up.",
+      "zh_TW": "I think it needs a tune-up.",
+      "zh_CN": "I think it needs a tune-up.",
+      "ko": "I think it needs a tune-up.",
+      "zh_HK": "I think it needs a tune-up.",
+      "fr": "I think it needs a tune-up."
+    },
+    "related": "Repair — fixing something broken, typically machines, vehicles, or appliances."
+  },
+  {
+    "id": "class_word_1807",
+    "word": "早めに",
+    "reading": "はやめに",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Early / ahead of time",
+      "ja": "早めに",
+      "zh_TW": "Early / ahead of time",
+      "zh_CN": "Early / ahead of time",
+      "ko": "Early / ahead of time",
+      "zh_HK": "Early / ahead of time",
+      "fr": "Early / ahead of time"
+    },
+    "example": {
+      "ja": "A: <ruby>早めに<rt>はやめに</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"早めに\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"早めに\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"早めに\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"早めに\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"早めに\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"早めに\".<br/>B: Yes, understood!"
+    },
+    "related": "Early / ahead of time — doing something a bit sooner than the standard time, often as a precaution."
+  },
+  {
+    "id": "class_word_1808",
+    "word": "増減",
+    "reading": "ぞうげん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Increase and decrease / fluctuation",
+      "ja": "増減",
+      "zh_TW": "Increase and decrease / fluctuation",
+      "zh_CN": "Increase and decrease / fluctuation",
+      "ko": "Increase and decrease / fluctuation",
+      "zh_HK": "Increase and decrease / fluctuation",
+      "fr": "fluctuation"
+    },
+    "example": {
+      "ja": "この<ruby>数年<rt>すうねん</rt></ruby>、<ruby>体重<rt>たいじゅう</rt></ruby>は<ruby>増減<rt>ぞうげん</rt></ruby>していません。",
+      "en": "My weight has not increased or decreased for several years.",
+      "zh_TW": "My weight has not increased or decreased for several years.",
+      "zh_CN": "My weight has not increased or decreased for several years.",
+      "ko": "My weight has not increased or decreased for several years.",
+      "zh_HK": "My weight has not increased or decreased for several years.",
+      "fr": "My weight has not increased or decreased for several years."
+    },
+    "related": "Increase and decrease / fluctuation — the rise and fall of a quantity, like a number, weight, or price."
+  },
+  {
+    "id": "class_word_1809",
+    "word": "悪循環",
+    "reading": "あくじゅんかん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Vicious cycle",
+      "ja": "悪循環",
+      "zh_TW": "Vicious cycle",
+      "zh_CN": "Vicious cycle",
+      "ko": "Vicious cycle",
+      "zh_HK": "Vicious cycle",
+      "fr": "cercle vicieux"
+    },
+    "example": {
+      "ja": "A: <ruby>悪循環<rt>あくじゅんかん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"悪循環\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"悪循環\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"悪循環\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"悪循環\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"悪循環\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"悪循環\".<br/>B: Yes, understood!"
+    },
+    "related": "Vicious cycle — a repeating negative pattern where one problem feeds into another that leads right back to the first."
+  },
+  {
+    "id": "class_word_1810",
+    "word": "炭水化物",
+    "reading": "たんすいかぶつ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Carbohydrates",
+      "ja": "炭水化物",
+      "zh_TW": "Carbohydrates",
+      "zh_CN": "Carbohydrates",
+      "ko": "Carbohydrates",
+      "zh_HK": "Carbohydrates",
+      "fr": "Carbohydrates"
+    },
+    "example": {
+      "ja": "A: <ruby>炭水化物<rt>たんすいかぶつ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"炭水化物\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"炭水化物\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"炭水化物\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"炭水化物\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"炭水化物\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"炭水化物\".<br/>B: Yes, understood!"
+    },
+    "related": "Carbohydrates — a major nutrient group (starches and sugars), often mentioned in the context of diet."
+  },
+  {
+    "id": "class_word_1811",
+    "word": "タンパク質",
+    "reading": "たんぱくしつ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Protein",
+      "ja": "タンパク質",
+      "zh_TW": "Protein",
+      "zh_CN": "Protein",
+      "ko": "Protein",
+      "zh_HK": "Protein",
+      "fr": "proteine"
+    },
+    "example": {
+      "ja": "A: <ruby>タンパク質<rt>たんぱくしつ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"タンパク質\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"タンパク質\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"タンパク質\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"タンパク質\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"タンパク質\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"タンパク質\".<br/>B: Yes, understood!"
+    },
+    "related": "Protein — a key nutrient found in meat, fish, eggs, and beans, important for building and maintaining the body."
+  },
+  {
+    "id": "class_word_1812",
+    "word": "知識",
+    "reading": "ちしき",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Knowledge",
+      "ja": "知識",
+      "zh_TW": "Knowledge",
+      "zh_CN": "Knowledge",
+      "ko": "Knowledge",
+      "zh_HK": "Knowledge",
+      "fr": "connaissance"
+    },
+    "example": {
+      "ja": "<ruby>知識<rt>ちしき</rt></ruby>は<ruby>力<rt>ちから</rt></ruby>なり。",
+      "en": "Knowledge is power.",
+      "zh_TW": "Knowledge is power.",
+      "zh_CN": "Knowledge is power.",
+      "ko": "Knowledge is power.",
+      "zh_HK": "Knowledge is power.",
+      "fr": "Knowledge is power."
+    },
+    "related": "Knowledge — information or understanding gained through learning or experience."
+  },
+  {
+    "id": "class_word_1813",
+    "word": "割り勘",
+    "reading": "わりかん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Splitting the bill",
+      "ja": "割り勘",
+      "zh_TW": "Splitting the bill",
+      "zh_CN": "Splitting the bill",
+      "ko": "Splitting the bill",
+      "zh_HK": "Splitting the bill",
+      "fr": "payer chacun la même chose"
+    },
+    "example": {
+      "ja": "A: <ruby>割り勘<rt>わりかん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"割り勘\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"割り勘\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"割り勘\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"割り勘\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"割り勘\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"割り勘\".<br/>B: Yes, understood!"
+    },
+    "related": "Splitting the bill — dividing a cost, usually for a meal, equally among everyone present."
+  },
+  {
+    "id": "class_word_1814",
+    "word": "邪魔をする",
+    "reading": "じゃまをする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To get in the way / to disturb",
+      "ja": "邪魔をする",
+      "zh_TW": "To get in the way / to disturb",
+      "zh_CN": "To get in the way / to disturb",
+      "ko": "To get in the way / to disturb",
+      "zh_HK": "To get in the way / to disturb",
+      "fr": "To get in the way / to disturb"
+    },
+    "example": {
+      "ja": "A: <ruby>邪魔をする<rt>じゃまをする</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"邪魔をする\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"邪魔をする\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"邪魔をする\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"邪魔をする\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"邪魔をする\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"邪魔をする\".<br/>B: Yes, understood!"
+    },
+    "related": "To get in the way / to disturb — interfering with someone's work, plans, or space."
+  },
+  {
+    "id": "class_word_1815",
+    "word": "すっぴん",
+    "reading": "すっぴん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Bare face / no makeup",
+      "ja": "すっぴん",
+      "zh_TW": "Bare face / no makeup",
+      "zh_CN": "Bare face / no makeup",
+      "ko": "Bare face / no makeup",
+      "zh_HK": "Bare face / no makeup",
+      "fr": "Bare face / no makeup"
+    },
+    "example": {
+      "ja": "A: <ruby>すっぴん<rt>すっぴん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"すっぴん\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"すっぴん\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"すっぴん\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"すっぴん\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"すっぴん\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"すっぴん\".<br/>B: Yes, understood!"
+    },
+    "related": "Bare face / no makeup — a face without any makeup on."
+  },
+  {
+    "id": "class_word_1816",
+    "word": "オシャレする",
+    "reading": "オシャレする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To dress up / to make an effort with your look",
+      "ja": "オシャレする",
+      "zh_TW": "To dress up / to make an effort with your look",
+      "zh_CN": "To dress up / to make an effort with your look",
+      "ko": "To dress up / to make an effort with your look",
+      "zh_HK": "To dress up / to make an effort with your look",
+      "fr": "To dress up / to make an effort with your look"
+    },
+    "example": {
+      "ja": "A: <ruby>オシャレする<rt>オシャレする</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"オシャレする\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"オシャレする\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"オシャレする\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"オシャレする\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"オシャレする\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"オシャレする\".<br/>B: Yes, understood!"
+    },
+    "related": "To dress up / to make an effort with your look — putting effort into fashion or styling."
+  },
+  {
+    "id": "class_word_1817",
+    "word": "継続",
+    "reading": "けいぞく",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Continuation / persistence",
+      "ja": "継続",
+      "zh_TW": "Continuation / persistence",
+      "zh_CN": "Continuation / persistence",
+      "ko": "Continuation / persistence",
+      "zh_HK": "Continuation / persistence",
+      "fr": "continuation"
+    },
+    "example": {
+      "ja": "<ruby>継続<rt>けいぞく</rt></ruby>は<ruby>力<rt>ちから</rt></ruby>なり。",
+      "en": "Slow but steady wins the race.",
+      "zh_TW": "Slow but steady wins the race.",
+      "zh_CN": "Slow but steady wins the race.",
+      "ko": "Slow but steady wins the race.",
+      "zh_HK": "Slow but steady wins the race.",
+      "fr": "Slow but steady wins the race."
+    },
+    "related": "Continuation / persistence — keeping something going over time without stopping, often used for habits or ongoing effort"
+  },
+  {
+    "id": "class_word_1818",
+    "word": "１週間に〜回",
+    "reading": "いっしゅうかんに〜かい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"~ times per week\"",
+      "ja": "１週間に〜回",
+      "zh_TW": "\"~ times per week\"",
+      "zh_CN": "\"~ times per week\"",
+      "ko": "\"~ times per week\"",
+      "zh_HK": "\"~ times per week\"",
+      "fr": "\"~ times per week\""
+    },
+    "example": {
+      "ja": "A: <ruby>１週間に〜回<rt>いっしゅうかんに〜かい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"１週間に〜回\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"１週間に〜回\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"１週間に〜回\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"１週間に〜回\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"１週間に〜回\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"１週間に〜回\".<br/>B: Yes, understood!"
+    },
+    "related": "\"~ times per week\" — same meaning as 週に〜回, but spelling out 一週間 (\"one week\") explicitly rather than using the shorter 週."
+  },
+  {
+    "id": "class_word_1819",
+    "word": "モチベ→上がる、下がる",
+    "reading": "モチベーション",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Motivation goes up / goes down",
+      "ja": "モチベ→上がる、下がる",
+      "zh_TW": "Motivation goes up / goes down",
+      "zh_CN": "Motivation goes up / goes down",
+      "ko": "Motivation goes up / goes down",
+      "zh_HK": "Motivation goes up / goes down",
+      "fr": "Motivation goes up / goes down"
+    },
+    "example": {
+      "ja": "A: <ruby>モチベ→上がる、下がる<rt>モチベーション</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"モチベ→上がる、下がる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"モチベ→上がる、下がる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"モチベ→上がる、下がる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"モチベ→上がる、下がる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"モチベ→上がる、下がる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"モチベ→上がる、下がる\".<br/>B: Yes, understood!"
+    },
+    "related": "Motivation goes up / goes down — モチベ is a casual shortened form of モチベーション (motivation), very common in everyday speech."
+  },
+  {
+    "id": "class_word_1820",
+    "word": "報告する",
+    "reading": "ほうこくする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To report",
+      "ja": "報告する",
+      "zh_TW": "To report",
+      "zh_CN": "To report",
+      "ko": "To report",
+      "zh_HK": "To report",
+      "fr": "To report"
+    },
+    "example": {
+      "ja": "A: <ruby>報告する<rt>ほうこくする</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"報告する\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"報告する\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"報告する\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"報告する\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"報告する\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"報告する\".<br/>B: Yes, understood!"
+    },
+    "related": "To report — to formally inform someone of results, progress, or information, often at work or school."
+  },
+  {
+    "id": "class_word_1821",
+    "word": "誤差",
+    "reading": "ごさ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Margin of error / discrepancy",
+      "ja": "誤差",
+      "zh_TW": "Margin of error / discrepancy",
+      "zh_CN": "Margin of error / discrepancy",
+      "ko": "Margin of error / discrepancy",
+      "zh_HK": "Margin of error / discrepancy",
+      "fr": "erreur"
+    },
+    "example": {
+      "ja": "<ruby>我々<rt>われわれ</rt></ruby>は<ruby>誤差<rt>ごさ</rt></ruby>を<ruby>見込<rt>みこ</rt></ruby>んで<ruby>余裕<rt>よゆう</rt></ruby>をとっておいた。",
+      "en": "We left a margin for error in our estimates.",
+      "zh_TW": "We left a margin for error in our estimates.",
+      "zh_CN": "We left a margin for error in our estimates.",
+      "ko": "We left a margin for error in our estimates.",
+      "zh_HK": "We left a margin for error in our estimates.",
+      "fr": "We left a margin for error in our estimates."
+    },
+    "related": "Margin of error / discrepancy — a small gap between a measured or expected value and the actual, true value."
+  },
+  {
+    "id": "class_word_1822",
+    "word": "花火大会",
+    "reading": "はなびたいかい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Fireworks festival",
+      "ja": "花火大会",
+      "zh_TW": "Fireworks festival",
+      "zh_CN": "Fireworks festival",
+      "ko": "Fireworks festival",
+      "zh_HK": "Fireworks festival",
+      "fr": "Fireworks festival"
+    },
+    "example": {
+      "ja": "A: <ruby>花火大会<rt>はなびたいかい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"花火大会\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"花火大会\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"花火大会\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"花火大会\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"花火大会\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"花火大会\".<br/>B: Yes, understood!"
+    },
+    "related": "Fireworks festival — a large public event, especially in summer, featuring a fireworks display."
+  },
+  {
+    "id": "class_word_1823",
+    "word": "お祭り",
+    "reading": "おまつり",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Festival",
+      "ja": "お祭り",
+      "zh_TW": "Festival",
+      "zh_CN": "Festival",
+      "ko": "Festival",
+      "zh_HK": "Festival",
+      "fr": "festival"
+    },
+    "example": {
+      "ja": "<ruby>彼<rt>かれ</rt></ruby>らはお<ruby>祭<rt>まつ</rt></ruby>りを<ruby>中止<rt>ちゅうし</rt></ruby>した。",
+      "en": "They cancelled the festival.",
+      "zh_TW": "They cancelled the festival.",
+      "zh_CN": "They cancelled the festival.",
+      "ko": "They cancelled the festival.",
+      "zh_HK": "They cancelled the festival.",
+      "fr": "They cancelled the festival."
+    },
+    "related": "Festival — a traditional or community celebration, often with food stalls, music, dancing, and sometimes religious or se"
+  },
+  {
+    "id": "class_word_1824",
+    "word": "茹でる",
+    "reading": "ゆでる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To boil",
+      "ja": "茹でる",
+      "zh_TW": "To boil",
+      "zh_CN": "To boil",
+      "ko": "To boil",
+      "zh_HK": "To boil",
+      "fr": "faire bouillir"
+    },
+    "example": {
+      "ja": "<ruby>茹<rt>ゆ</rt></ruby>でるのとぐつぐつ<ruby>煮<rt>に</rt></ruby>るのって<ruby>何<rt>なに</rt></ruby>が<ruby>違<rt>ちが</rt></ruby>うの？",
+      "en": "What's the difference between boiling and simmering?",
+      "zh_TW": "What's the difference between boiling and simmering?",
+      "zh_CN": "What's the difference between boiling and simmering?",
+      "ko": "What's the difference between boiling and simmering?",
+      "zh_HK": "What's the difference between boiling and simmering?",
+      "fr": "What's the difference between boiling and simmering?"
+    },
+    "related": "To boil — to cook something (vegetables, eggs, noodles, etc.) by submerging it in boiling water."
+  },
+  {
+    "id": "class_word_1825",
+    "word": "パリパリ",
+    "reading": "パリパリ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Crispy / crunchy",
+      "ja": "パリパリ",
+      "zh_TW": "Crispy / crunchy",
+      "zh_CN": "Crispy / crunchy",
+      "ko": "Crispy / crunchy",
+      "zh_HK": "Crispy / crunchy",
+      "fr": "Crispy / crunchy"
+    },
+    "example": {
+      "ja": "A: <ruby>パリパリ<rt>パリパリ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"パリパリ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"パリパリ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"パリパリ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"パリパリ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"パリパリ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"パリパリ\".<br/>B: Yes, understood!"
+    },
+    "related": "Crispy / crunchy — an onomatopoeic word for a crisp, brittle texture, often used for fried foods, chips, or crackers."
+  },
+  {
+    "id": "class_word_1826",
+    "word": "伝統的",
+    "reading": "でんとうてき",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Traditional",
+      "ja": "伝統的",
+      "zh_TW": "Traditional",
+      "zh_CN": "Traditional",
+      "ko": "Traditional",
+      "zh_HK": "Traditional",
+      "fr": "Traditional"
+    },
+    "example": {
+      "ja": "A: <ruby>伝統的<rt>でんとうてき</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"伝統的\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"伝統的\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"伝統的\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"伝統的\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"伝統的\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"伝統的\".<br/>B: Yes, understood!"
+    },
+    "related": "Traditional — relating to customs, practices, or styles passed down over a long time."
+  },
+  {
+    "id": "class_word_1827",
+    "word": "焦る",
+    "reading": "あせる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To panic / to feel rushed or anxious",
+      "ja": "焦る",
+      "zh_TW": "To panic / to feel rushed or anxious",
+      "zh_CN": "To panic / to feel rushed or anxious",
+      "ko": "To panic / to feel rushed or anxious",
+      "zh_HK": "To panic / to feel rushed or anxious",
+      "fr": "être impatient"
+    },
+    "example": {
+      "ja": "そんなに<ruby>焦<rt>あせ</rt></ruby>るな。",
+      "en": "Don't be so impatient.",
+      "zh_TW": "Don't be so impatient.",
+      "zh_CN": "Don't be so impatient.",
+      "ko": "Don't be so impatient.",
+      "zh_HK": "Don't be so impatient.",
+      "fr": "Don't be so impatient."
+    },
+    "related": "To panic / to feel rushed or anxious — feeling flustered or impatient under time pressure or in an unexpected situation."
+  },
+  {
+    "id": "class_word_1828",
+    "word": "恥ずかしい",
+    "reading": "はずかしい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Embarrassed / shy / ashamed",
+      "ja": "恥ずかしい",
+      "zh_TW": "Embarrassed / shy / ashamed",
+      "zh_CN": "Embarrassed / shy / ashamed",
+      "ko": "Embarrassed / shy / ashamed",
+      "zh_HK": "Embarrassed / shy / ashamed",
+      "fr": "déshonorant"
+    },
+    "example": {
+      "ja": "<ruby>恥<rt>は</rt></ruby>ずかしいなぁ！",
+      "en": "How embarrassing!",
+      "zh_TW": "How embarrassing!",
+      "zh_CN": "How embarrassing!",
+      "ko": "How embarrassing!",
+      "zh_HK": "How embarrassing!",
+      "fr": "How embarrassing!"
+    },
+    "related": "Embarrassed / shy / ashamed — feeling self-conscious or awkward in front of others."
+  },
+  {
+    "id": "class_word_1829",
+    "word": "余裕",
+    "reading": "よゆう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Margin / room to spare / composure",
+      "ja": "余裕",
+      "zh_TW": "Margin / room to spare / composure",
+      "zh_CN": "Margin / room to spare / composure",
+      "ko": "Margin / room to spare / composure",
+      "zh_HK": "Margin / room to spare / composure",
+      "fr": "marge"
+    },
+    "example": {
+      "ja": "<ruby>買<rt>か</rt></ruby>える<ruby>余裕<rt>よゆう</rt></ruby>あるの？",
+      "en": "Can you afford that?",
+      "zh_TW": "Can you afford that?",
+      "zh_CN": "Can you afford that?",
+      "ko": "Can you afford that?",
+      "zh_HK": "Can you afford that?",
+      "fr": "Can you afford that?"
+    },
+    "related": "Margin / room to spare / composure — extra capacity in time, money, or emotional bandwidth; being unhurried and having e"
+  },
+  {
+    "id": "class_word_1830",
+    "word": "お姫様抱っこ",
+    "reading": "おひめさまだっこ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Princess carry",
+      "ja": "お姫様抱っこ",
+      "zh_TW": "Princess carry",
+      "zh_CN": "Princess carry",
+      "ko": "Princess carry",
+      "zh_HK": "Princess carry",
+      "fr": "Princess carry"
+    },
+    "example": {
+      "ja": "A: <ruby>お姫様抱っこ<rt>おひめさまだっこ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"お姫様抱っこ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"お姫様抱っこ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"お姫様抱っこ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"お姫様抱っこ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"お姫様抱っこ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"お姫様抱っこ\".<br/>B: Yes, understood!"
+    },
+    "related": "Princess carry — carrying someone bridal-style, one arm under the knees and one supporting the back, a romantic gesture "
+  },
+  {
+    "id": "class_word_1831",
+    "word": "腕相撲",
+    "reading": "うでずもう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Arm wrestling",
+      "ja": "腕相撲",
+      "zh_TW": "Arm wrestling",
+      "zh_CN": "Arm wrestling",
+      "ko": "Arm wrestling",
+      "zh_HK": "Arm wrestling",
+      "fr": "Arm wrestling"
+    },
+    "example": {
+      "ja": "A: <ruby>腕相撲<rt>うでずもう</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"腕相撲\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"腕相撲\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"腕相撲\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"腕相撲\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"腕相撲\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"腕相撲\".<br/>B: Yes, understood!"
+    },
+    "related": "Arm wrestling — a contest where two people grip hands and try to force the other's arm down."
+  },
+  {
+    "id": "class_word_1832",
+    "word": "聞かれる",
+    "reading": "きかれる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To be asked",
+      "ja": "聞かれる",
+      "zh_TW": "To be asked",
+      "zh_CN": "To be asked",
+      "ko": "To be asked",
+      "zh_HK": "To be asked",
+      "fr": "To be asked"
+    },
+    "example": {
+      "ja": "A: <ruby>聞かれる<rt>きかれる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"聞かれる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"聞かれる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"聞かれる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"聞かれる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"聞かれる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"聞かれる\".<br/>B: Yes, understood!"
+    },
+    "related": "To be asked — the passive form of 聞く (to ask/hear), used when someone asks you a question."
+  },
+  {
+    "id": "class_word_1833",
+    "word": "関係を築く",
+    "reading": "かんけいをきずく",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To build a relationship",
+      "ja": "関係を築く",
+      "zh_TW": "To build a relationship",
+      "zh_CN": "To build a relationship",
+      "ko": "To build a relationship",
+      "zh_HK": "To build a relationship",
+      "fr": "To build a relationship"
+    },
+    "example": {
+      "ja": "A: <ruby>関係を築く<rt>かんけいをきずく</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"関係を築く\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"関係を築く\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"関係を築く\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"関係を築く\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"関係を築く\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"関係を築く\".<br/>B: Yes, understood!"
+    },
+    "related": "To build a relationship — to develop and establish a connection or rapport with someone over time."
+  },
+  {
+    "id": "class_word_1834",
+    "word": "欠点",
+    "reading": "けってん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Flaw / shortcoming",
+      "ja": "欠点",
+      "zh_TW": "Flaw / shortcoming",
+      "zh_CN": "Flaw / shortcoming",
+      "ko": "Flaw / shortcoming",
+      "zh_HK": "Flaw / shortcoming",
+      "fr": "défauts"
+    },
+    "example": {
+      "ja": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>欠点<rt>けってん</rt></ruby>だらけだ。",
+      "en": "He is a mass of faults.",
+      "zh_TW": "He is a mass of faults.",
+      "zh_CN": "He is a mass of faults.",
+      "ko": "He is a mass of faults.",
+      "zh_HK": "He is a mass of faults.",
+      "fr": "He is a mass of faults."
+    },
+    "related": "Flaw / shortcoming — a weakness or negative trait in a person, object, or plan."
+  },
+  {
+    "id": "class_word_1835",
+    "word": "起こされる",
+    "reading": "おこされる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To be woken up",
+      "ja": "起こされる",
+      "zh_TW": "To be woken up",
+      "zh_CN": "To be woken up",
+      "ko": "To be woken up",
+      "zh_HK": "To be woken up",
+      "fr": "To be woken up"
+    },
+    "example": {
+      "ja": "A: <ruby>起こされる<rt>おこされる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"起こされる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"起こされる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"起こされる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"起こされる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"起こされる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"起こされる\".<br/>B: Yes, understood!"
+    },
+    "related": "To be woken up — the passive form of 起こす (to wake someone up), used when someone else wakes you."
+  },
+  {
+    "id": "class_word_1836",
+    "word": "チラシ",
+    "reading": "チラシ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Flyer / leaflet",
+      "ja": "チラシ",
+      "zh_TW": "Flyer / leaflet",
+      "zh_CN": "Flyer / leaflet",
+      "ko": "Flyer / leaflet",
+      "zh_HK": "Flyer / leaflet",
+      "fr": "Flyer / leaflet"
+    },
+    "example": {
+      "ja": "A: <ruby>チラシ<rt>チラシ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"チラシ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"チラシ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"チラシ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"チラシ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"チラシ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"チラシ\".<br/>B: Yes, understood!"
+    },
+    "related": "Flyer / leaflet — a printed advertisement or informational sheet, often handed out or put in mailboxes."
+  },
+  {
+    "id": "class_word_1837",
+    "word": "気がする",
+    "reading": "きがする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To have a feeling that / to feel like",
+      "ja": "気がする",
+      "zh_TW": "To have a feeling that / to feel like",
+      "zh_CN": "To have a feeling that / to feel like",
+      "ko": "To have a feeling that / to feel like",
+      "zh_HK": "To have a feeling that / to feel like",
+      "fr": "To have a feeling that / to feel like"
+    },
+    "example": {
+      "ja": "A: <ruby>気がする<rt>きがする</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"気がする\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"気がする\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"気がする\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"気がする\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"気がする\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"気がする\".<br/>B: Yes, understood!"
+    },
+    "related": "To have a feeling that / to feel like — expressing a vague sense or intuition, without full certainty."
+  },
+  {
+    "id": "class_word_1838",
+    "word": "時間の使い方",
+    "reading": "じかんのつかいかた",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "How one uses time / time management",
+      "ja": "時間の使い方",
+      "zh_TW": "How one uses time / time management",
+      "zh_CN": "How one uses time / time management",
+      "ko": "How one uses time / time management",
+      "zh_HK": "How one uses time / time management",
+      "fr": "How one uses time / time management"
+    },
+    "example": {
+      "ja": "A: <ruby>時間の使い方<rt>じかんのつかいかた</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"時間の使い方\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"時間の使い方\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"時間の使い方\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"時間の使い方\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"時間の使い方\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"時間の使い方\".<br/>B: Yes, understood!"
+    },
+    "related": "How one uses time / time management — the way a person allocates or spends their time."
+  },
+  {
+    "id": "class_word_1839",
+    "word": "ひねくれる",
+    "reading": "ひねくれる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To become twisted / warped in personality",
+      "ja": "ひねくれる",
+      "zh_TW": "To become twisted / warped in personality",
+      "zh_CN": "To become twisted / warped in personality",
+      "ko": "To become twisted / warped in personality",
+      "zh_HK": "To become twisted / warped in personality",
+      "fr": "To become twisted / warped in personality"
+    },
+    "example": {
+      "ja": "A: <ruby>ひねくれる<rt>ひねくれる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"ひねくれる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"ひねくれる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"ひねくれる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"ひねくれる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"ひねくれる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"ひねくれる\".<br/>B: Yes, understood!"
+    },
+    "related": "To become twisted / warped in personality — to develop a cynical, contrarian, or distrustful attitude, often from past h"
+  },
+  {
+    "id": "class_word_1840",
+    "word": "ひねくれた性格",
+    "reading": "ひねくれたせいかく",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "A twisted / cynical personality",
+      "ja": "ひねくれた性格",
+      "zh_TW": "A twisted / cynical personality",
+      "zh_CN": "A twisted / cynical personality",
+      "ko": "A twisted / cynical personality",
+      "zh_HK": "A twisted / cynical personality",
+      "fr": "A twisted / cynical personality"
+    },
+    "example": {
+      "ja": "A: <ruby>ひねくれた性格<rt>ひねくれたせいかく</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"ひねくれた性格\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"ひねくれた性格\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"ひねくれた性格\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"ひねくれた性格\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"ひねくれた性格\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"ひねくれた性格\".<br/>B: Yes, understood!"
+    },
+    "related": "A twisted / cynical personality — describes someone whose character has become distrustful, contrarian, or overly critic"
+  },
+  {
+    "id": "class_word_1841",
+    "word": "頭が堅い",
+    "reading": "あたまがかたい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Stubborn / inflexible / hard-headed",
+      "ja": "頭が堅い",
+      "zh_TW": "Stubborn / inflexible / hard-headed",
+      "zh_CN": "Stubborn / inflexible / hard-headed",
+      "ko": "Stubborn / inflexible / hard-headed",
+      "zh_HK": "Stubborn / inflexible / hard-headed",
+      "fr": "Stubborn / inflexible / hard-headed"
+    },
+    "example": {
+      "ja": "A: <ruby>頭が堅い<rt>あたまがかたい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"頭が堅い\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"頭が堅い\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"頭が堅い\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"頭が堅い\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"頭が堅い\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"頭が堅い\".<br/>B: Yes, understood!"
+    },
+    "related": "Stubborn / inflexible / hard-headed — literally \"hard-headed,\" describing someone unwilling to change their thinking or "
+  },
+  {
+    "id": "class_word_1842",
+    "word": "〜年後",
+    "reading": "〜ねんご",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"~ years later / ~ years from now\"",
+      "ja": "〜年後",
+      "zh_TW": "\"~ years later / ~ years from now\"",
+      "zh_CN": "\"~ years later / ~ years from now\"",
+      "ko": "\"~ years later / ~ years from now\"",
+      "zh_HK": "\"~ years later / ~ years from now\"",
+      "fr": "\"~ years later / ~ years from now\""
+    },
+    "example": {
+      "ja": "A: <ruby>〜年後<rt>〜ねんご</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜年後\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜年後\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜年後\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜年後\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜年後\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜年後\".<br/>B: Yes, understood!"
+    },
+    "related": "\"~ years later / ~ years from now\" — a time expression for a point in the future measured in years."
+  },
+  {
+    "id": "class_word_1843",
+    "word": "将来",
+    "reading": "しょうらい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Future vs. future",
+      "ja": "将来",
+      "zh_TW": "Future vs. future",
+      "zh_CN": "Future vs. future",
+      "ko": "Future vs. future",
+      "zh_HK": "Future vs. future",
+      "fr": "futur"
+    },
+    "example": {
+      "ja": "<ruby>将来<rt>しょうらい</rt></ruby>に<ruby>備<rt>そな</rt></ruby>えよ。",
+      "en": "Prepare yourself for the future.",
+      "zh_TW": "Prepare yourself for the future.",
+      "zh_CN": "Prepare yourself for the future.",
+      "ko": "Prepare yourself for the future.",
+      "zh_HK": "Prepare yourself for the future.",
+      "fr": "Prepare yourself for the future."
+    },
+    "related": "Future vs. future — both mean \"future,\" but 将来 usually refers to one's own personal or near-term future (career, life pa"
+  },
+  {
+    "id": "class_word_1844",
+    "word": "あっという間",
+    "reading": "あっというま",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"In the blink of an eye\" / \"in no time\"",
+      "ja": "あっという間",
+      "zh_TW": "\"In the blink of an eye\" / \"in no time\"",
+      "zh_CN": "\"In the blink of an eye\" / \"in no time\"",
+      "ko": "\"In the blink of an eye\" / \"in no time\"",
+      "zh_HK": "\"In the blink of an eye\" / \"in no time\"",
+      "fr": "\"In the blink of an eye\" / \"in no time\""
+    },
+    "example": {
+      "ja": "A: <ruby>あっという間<rt>あっというま</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"あっという間\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"あっという間\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"あっという間\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"あっという間\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"あっという間\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"あっという間\".<br/>B: Yes, understood!"
+    },
+    "related": "\"In the blink of an eye\" / \"in no time\" — expresses how quickly time passes, often used to show surprise at how fast som"
+  },
+  {
+    "id": "class_word_1845",
+    "word": "無理しないでね",
+    "reading": "むりしないでね",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"Don't overdo it / take care of yourself\"",
+      "ja": "無理しないでね",
+      "zh_TW": "\"Don't overdo it / take care of yourself\"",
+      "zh_CN": "\"Don't overdo it / take care of yourself\"",
+      "ko": "\"Don't overdo it / take care of yourself\"",
+      "zh_HK": "\"Don't overdo it / take care of yourself\"",
+      "fr": "\"Don't overdo it / take care of yourself\""
+    },
+    "example": {
+      "ja": "A: <ruby>無理しないでね<rt>むりしないでね</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"無理しないでね\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"無理しないでね\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"無理しないでね\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"無理しないでね\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"無理しないでね\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"無理しないでね\".<br/>B: Yes, understood!"
+    },
+    "related": "\"Don't overdo it / take care of yourself\" — a caring expression telling someone not to push themselves too hard."
+  },
+  {
+    "id": "class_word_1846",
+    "word": "気をつけていってらっしゃい",
+    "reading": "きをつけていってらっしゃい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"Take care, see you later\"",
+      "ja": "気をつけていってらっしゃい",
+      "zh_TW": "\"Take care, see you later\"",
+      "zh_CN": "\"Take care, see you later\"",
+      "ko": "\"Take care, see you later\"",
+      "zh_HK": "\"Take care, see you later\"",
+      "fr": "\"Take care, see you later\""
+    },
+    "example": {
+      "ja": "A: <ruby>気をつけていってらっしゃい<rt>きをつけていってらっしゃい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"気をつけていってらっしゃい\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"気をつけていってらっしゃい\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"気をつけていってらっしゃい\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"気をつけていってらっしゃい\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"気をつけていってらっしゃい\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"気をつけていってらっしゃい\".<br/>B: Yes, understood!"
+    },
+    "related": "\"Take care, see you later\" — said to someone (usually a family member or housemate) as they leave the house for the day."
+  },
+  {
+    "id": "class_word_1847",
+    "word": "気をつけて帰ってね",
+    "reading": "きをつけてかえってね",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"Get home safe\" / \"take care on your way home\"",
+      "ja": "気をつけて帰ってね",
+      "zh_TW": "\"Get home safe\" / \"take care on your way home\"",
+      "zh_CN": "\"Get home safe\" / \"take care on your way home\"",
+      "ko": "\"Get home safe\" / \"take care on your way home\"",
+      "zh_HK": "\"Get home safe\" / \"take care on your way home\"",
+      "fr": "\"Get home safe\" / \"take care on your way home\""
+    },
+    "example": {
+      "ja": "A: <ruby>気をつけて帰ってね<rt>きをつけてかえってね</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"気をつけて帰ってね\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"気をつけて帰ってね\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"気をつけて帰ってね\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"気をつけて帰ってね\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"気をつけて帰ってね\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"気をつけて帰ってね\".<br/>B: Yes, understood!"
+    },
+    "related": "\"Get home safe\" / \"take care on your way home\" — said to someone leaving your location to head to their own home; the fo"
+  },
+  {
+    "id": "class_word_1848",
+    "word": "気をつけて帰ってきてね",
+    "reading": "きをつけてかえってきてね",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"Take care and come back safely\"",
+      "ja": "気をつけて帰ってきてね",
+      "zh_TW": "\"Take care and come back safely\"",
+      "zh_CN": "\"Take care and come back safely\"",
+      "ko": "\"Take care and come back safely\"",
+      "zh_HK": "\"Take care and come back safely\"",
+      "fr": "\"Take care and come back safely\""
+    },
+    "example": {
+      "ja": "A: <ruby>気をつけて帰ってきてね<rt>きをつけてかえってきてね</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"気をつけて帰ってきてね\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"気をつけて帰ってきてね\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"気をつけて帰ってきてね\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"気をつけて帰ってきてね\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"気をつけて帰ってきてね\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"気をつけて帰ってきてね\".<br/>B: Yes, understood!"
+    },
+    "related": "\"Take care and come back safely\" — said to someone heading out but who will be returning to the speaker's location (e.g."
+  },
+  {
+    "id": "class_word_1849",
+    "word": "重さ",
+    "reading": "おもさ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Weight",
+      "ja": "重さ",
+      "zh_TW": "Weight",
+      "zh_CN": "Weight",
+      "ko": "Weight",
+      "zh_HK": "Weight",
+      "fr": "le poids (que pèse un objet)"
+    },
+    "example": {
+      "ja": "A: <ruby>重さ<rt>おもさ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"重さ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"重さ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"重さ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"重さ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"重さ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"重さ\".<br/>B: Yes, understood!"
+    },
+    "related": "Weight — the general measure of how heavy something is (objects, not just body weight)."
+  },
+  {
+    "id": "class_word_1850",
+    "word": "錘",
+    "reading": "おもり",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "A weight",
+      "ja": "錘",
+      "zh_TW": "A weight",
+      "zh_CN": "A weight",
+      "ko": "A weight",
+      "zh_HK": "A weight",
+      "fr": "A weight"
+    },
+    "example": {
+      "ja": "A: <ruby>錘<rt>おもり</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"錘\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"錘\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"錘\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"錘\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"錘\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"錘\".<br/>B: Yes, understood!"
+    },
+    "related": "A weight — a physical object used to add heaviness, such as for scales, fishing, or exercise (also written 重り)."
+  },
+  {
+    "id": "class_word_1851",
+    "word": "イライラする",
+    "reading": "イライラする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To feel irritated / to be on edge",
+      "ja": "イライラする",
+      "zh_TW": "To feel irritated / to be on edge",
+      "zh_CN": "To feel irritated / to be on edge",
+      "ko": "To feel irritated / to be on edge",
+      "zh_HK": "To feel irritated / to be on edge",
+      "fr": "To feel irritated / to be on edge"
+    },
+    "example": {
+      "ja": "A: <ruby>イライラする<rt>イライラする</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"イライラする\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"イライラする\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"イライラする\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"イライラする\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"イライラする\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"イライラする\".<br/>B: Yes, understood!"
+    },
+    "related": "To feel irritated / to be on edge — frustration or annoyance, often from stress or waiting."
+  },
+  {
+    "id": "class_word_1852",
+    "word": "〜にとって",
+    "reading": "にとって",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"For ~ / from ~'s perspective\" vs. \"according to ~\"",
+      "ja": "〜にとって",
+      "zh_TW": "\"For ~ / from ~'s perspective\" vs. \"according to ~\"",
+      "zh_CN": "\"For ~ / from ~'s perspective\" vs. \"according to ~\"",
+      "ko": "\"For ~ / from ~'s perspective\" vs. \"according to ~\"",
+      "zh_HK": "\"For ~ / from ~'s perspective\" vs. \"according to ~\"",
+      "fr": "\"For ~ / from ~'s perspective\" vs. \"according to ~\""
+    },
+    "example": {
+      "ja": "A: <ruby>〜にとって<rt>にとって</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜にとって\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜にとって\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜にとって\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜にとって\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜にとって\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜にとって\".<br/>B: Yes, understood!"
+    },
+    "related": "\"For ~ / from ~'s perspective\" vs. \"according to ~\" — 〜にとって expresses a standpoint, meaning \"from the perspective of ~\" "
+  },
+  {
+    "id": "class_word_1853",
+    "word": "優先する",
+    "reading": "ゆうせんする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To prioritize.",
+      "ja": "優先する",
+      "zh_TW": "To prioritize.",
+      "zh_CN": "To prioritize.",
+      "ko": "To prioritize.",
+      "zh_HK": "To prioritize.",
+      "fr": "To prioritize."
+    },
+    "example": {
+      "ja": "A: <ruby>優先する<rt>ゆうせんする</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"優先する\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"優先する\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"優先する\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"優先する\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"優先する\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"優先する\".<br/>B: Yes, understood!"
+    },
+    "related": "To prioritize."
+  },
+  {
+    "id": "class_word_1854",
+    "word": "放任主義",
+    "reading": "ほうにんしゅぎ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "A hands-off / laissez-faire approach",
+      "ja": "放任主義",
+      "zh_TW": "A hands-off / laissez-faire approach",
+      "zh_CN": "A hands-off / laissez-faire approach",
+      "ko": "A hands-off / laissez-faire approach",
+      "zh_HK": "A hands-off / laissez-faire approach",
+      "fr": "A hands-off / laissez-faire approach"
+    },
+    "example": {
+      "ja": "A: <ruby>放任主義<rt>ほうにんしゅぎ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"放任主義\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"放任主義\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"放任主義\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"放任主義\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"放任主義\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"放任主義\".<br/>B: Yes, understood!"
+    },
+    "related": "A hands-off / laissez-faire approach — especially in parenting or management, giving someone freedom and not interfering"
+  },
+  {
+    "id": "class_word_1855",
+    "word": "完璧主義",
+    "reading": "かんぺきしゅぎ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Perfectionism.",
+      "ja": "完璧主義",
+      "zh_TW": "Perfectionism.",
+      "zh_CN": "Perfectionism.",
+      "ko": "Perfectionism.",
+      "zh_HK": "Perfectionism.",
+      "fr": "Perfectionism."
+    },
+    "example": {
+      "ja": "A: <ruby>完璧主義<rt>かんぺきしゅぎ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"完璧主義\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"完璧主義\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"完璧主義\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"完璧主義\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"完璧主義\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"完璧主義\".<br/>B: Yes, understood!"
+    },
+    "related": "Perfectionism."
+  },
+  {
+    "id": "class_word_1856",
+    "word": "二重人格",
+    "reading": "にじゅうじんかく",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Dual/split personality",
+      "ja": "二重人格",
+      "zh_TW": "Dual/split personality",
+      "zh_CN": "Dual/split personality",
+      "ko": "Dual/split personality",
+      "zh_HK": "Dual/split personality",
+      "fr": "Dual/split personality"
+    },
+    "example": {
+      "ja": "A: <ruby>二重人格<rt>にじゅうじんかく</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"二重人格\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"二重人格\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"二重人格\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"二重人格\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"二重人格\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"二重人格\".<br/>B: Yes, understood!"
+    },
+    "related": "Dual/split personality — sometimes used casually for someone whose behavior changes drastically by situation, not just i"
+  },
+  {
+    "id": "class_word_1857",
+    "word": "現地",
+    "reading": "げんち",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Local / on-site",
+      "ja": "現地",
+      "zh_TW": "Local / on-site",
+      "zh_CN": "Local / on-site",
+      "ko": "Local / on-site",
+      "zh_HK": "Local / on-site",
+      "fr": "lieu actuel"
+    },
+    "example": {
+      "ja": "<ruby>現地時間<rt>げんちじかん</rt></ruby>で１０<ruby>時<rt>とき</rt></ruby>だ。",
+      "en": "The local time is 10:00.",
+      "zh_TW": "The local time is 10:00.",
+      "zh_CN": "The local time is 10:00.",
+      "ko": "The local time is 10:00.",
+      "zh_HK": "The local time is 10:00.",
+      "fr": "The local time is 10:00."
+    },
+    "related": "Local / on-site — the actual place something is happening, as opposed to remotely or elsewhere."
+  },
+  {
+    "id": "class_word_1858",
+    "word": "絵",
+    "reading": "え",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Picture / drawing",
+      "ja": "絵",
+      "zh_TW": "Picture / drawing",
+      "zh_CN": "Picture / drawing",
+      "ko": "Picture / drawing",
+      "zh_HK": "Picture / drawing",
+      "fr": "dessin"
+    },
+    "example": {
+      "ja": "<ruby>壁<rt>かべ</rt></ruby>の<ruby>絵<rt>え</rt></ruby>を<ruby>見<rt>み</rt></ruby>て。",
+      "en": "Look at the picture on the wall.",
+      "zh_TW": "Look at the picture on the wall.",
+      "zh_CN": "Look at the picture on the wall.",
+      "ko": "Look at the picture on the wall.",
+      "zh_HK": "Look at the picture on the wall.",
+      "fr": "Look at the picture on the wall."
+    },
+    "related": "Picture / drawing — the general, everyday word for any drawn or painted image."
+  },
+  {
+    "id": "class_word_1859",
+    "word": "憎む",
+    "reading": "にくむ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To hate / detest.",
+      "ja": "憎む",
+      "zh_TW": "To hate / detest.",
+      "zh_CN": "To hate / detest.",
+      "ko": "To hate / detest.",
+      "zh_HK": "To hate / detest.",
+      "fr": "détester"
+    },
+    "example": {
+      "ja": "<ruby>私<rt>わたし</rt></ruby>を<ruby>憎<rt>にく</rt></ruby>むな！",
+      "en": "Don't hate me!",
+      "zh_TW": "Don't hate me!",
+      "zh_CN": "Don't hate me!",
+      "ko": "Don't hate me!",
+      "zh_HK": "Don't hate me!",
+      "fr": "Don't hate me!"
+    },
+    "related": "To hate / detest."
+  },
+  {
+    "id": "class_word_1860",
+    "word": "〜感じがする",
+    "reading": "〜かんじがする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"It feels like ~ / I get the sense that ~\"",
+      "ja": "〜感じがする",
+      "zh_TW": "\"It feels like ~ / I get the sense that ~\"",
+      "zh_CN": "\"It feels like ~ / I get the sense that ~\"",
+      "ko": "\"It feels like ~ / I get the sense that ~\"",
+      "zh_HK": "\"It feels like ~ / I get the sense that ~\"",
+      "fr": "\"It feels like ~ / I get the sense that ~\""
+    },
+    "example": {
+      "ja": "A: <ruby>〜感じがする<rt>〜かんじがする</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜感じがする\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜感じがする\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜感じがする\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜感じがする\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜感じがする\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜感じがする\".<br/>B: Yes, understood!"
+    },
+    "related": "\"It feels like ~ / I get the sense that ~\""
+  },
+  {
+    "id": "class_word_1861",
+    "word": "勝手に〜する",
+    "reading": "かってに〜する",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"To do ~ without permission / on one's own accord\"",
+      "ja": "勝手に〜する",
+      "zh_TW": "\"To do ~ without permission / on one's own accord\"",
+      "zh_CN": "\"To do ~ without permission / on one's own accord\"",
+      "ko": "\"To do ~ without permission / on one's own accord\"",
+      "zh_HK": "\"To do ~ without permission / on one's own accord\"",
+      "fr": "\"To do ~ without permission / on one's own accord\""
+    },
+    "example": {
+      "ja": "A: <ruby>勝手に〜する<rt>かってに〜する</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"勝手に〜する\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"勝手に〜する\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"勝手に〜する\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"勝手に〜する\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"勝手に〜する\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"勝手に〜する\".<br/>B: Yes, understood!"
+    },
+    "related": "\"To do ~ without permission / on one's own accord\" — often with a nuance of selfishness or rudeness."
+  },
+  {
+    "id": "class_word_1862",
+    "word": "申し訳ない",
+    "reading": "もうしわけない",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"I'm terribly sorry\"",
+      "ja": "申し訳ない",
+      "zh_TW": "\"I'm terribly sorry\"",
+      "zh_CN": "\"I'm terribly sorry\"",
+      "ko": "\"I'm terribly sorry\"",
+      "zh_HK": "\"I'm terribly sorry\"",
+      "fr": "inexcusable"
+    },
+    "example": {
+      "ja": "<ruby>遅<rt>おく</rt></ruby>れて<ruby>申し訳<rt>もうしわけ</rt></ruby>ない。",
+      "en": "I'm sorry I'm late.",
+      "zh_TW": "I'm sorry I'm late.",
+      "zh_CN": "I'm sorry I'm late.",
+      "ko": "I'm sorry I'm late.",
+      "zh_HK": "I'm sorry I'm late.",
+      "fr": "I'm sorry I'm late."
+    },
+    "related": "\"I'm terribly sorry\" — formal, more solemn than casual すみません."
+  },
+  {
+    "id": "class_word_1863",
+    "word": "もったいない",
+    "reading": "もったいない",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"What a waste\"",
+      "ja": "もったいない",
+      "zh_TW": "浪费的",
+      "zh_CN": "浪费的",
+      "ko": "\"What a waste\"",
+      "zh_HK": "浪费的",
+      "fr": "gaspilleur"
+    },
+    "example": {
+      "ja": "<ruby>時間<rt>じかん</rt></ruby>がもったいない。",
+      "en": "Time is wasting.",
+      "zh_TW": "Time is wasting.",
+      "zh_CN": "Time is wasting.",
+      "ko": "Time is wasting.",
+      "zh_HK": "Time is wasting.",
+      "fr": "Time is wasting."
+    },
+    "related": "\"What a waste\" — regret that something valuable isn't used to its full potential, or is being wasted/discarded/lost."
+  },
+  {
+    "id": "class_word_1864",
+    "word": "〜枚",
+    "reading": "〜まい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Counter for flat, thin objects",
+      "ja": "〜枚",
+      "zh_TW": "Counter for flat, thin objects",
+      "zh_CN": "Counter for flat, thin objects",
+      "ko": "Counter for flat, thin objects",
+      "zh_HK": "Counter for flat, thin objects",
+      "fr": "(compteur des objets plats, comme des feuilles)"
+    },
+    "example": {
+      "ja": "A: <ruby>〜枚<rt>〜まい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜枚\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜枚\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜枚\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜枚\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜枚\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜枚\".<br/>B: Yes, understood!"
+    },
+    "related": "Counter for flat, thin objects — used for paper, tickets, plates, shirts, photos, and similar items."
+  },
+  {
+    "id": "class_word_1865",
+    "word": "個室",
+    "reading": "こしつ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Private room",
+      "ja": "個室",
+      "zh_TW": "Private room",
+      "zh_CN": "Private room",
+      "ko": "Private room",
+      "zh_HK": "Private room",
+      "fr": "Private room"
+    },
+    "example": {
+      "ja": "A: <ruby>個室<rt>こしつ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"個室\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"個室\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"個室\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"個室\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"個室\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"個室\".<br/>B: Yes, understood!"
+    },
+    "related": "Private room — a separate, enclosed room for individual/exclusive use, as opposed to a shared or open space."
+  },
+  {
+    "id": "class_word_1866",
+    "word": "飲み放題",
+    "reading": "のみほうだい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "All-you-can-drink",
+      "ja": "飲み放題",
+      "zh_TW": "All-you-can-drink",
+      "zh_CN": "All-you-can-drink",
+      "ko": "All-you-can-drink",
+      "zh_HK": "All-you-can-drink",
+      "fr": "All-you-can-drink"
+    },
+    "example": {
+      "ja": "A: <ruby>飲み放題<rt>のみほうだい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"飲み放題\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"飲み放題\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"飲み放題\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"飲み放題\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"飲み放題\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"飲み放題\".<br/>B: Yes, understood!"
+    },
+    "related": "All-you-can-drink — a set plan letting customers drink as much as they like within a set time for a fixed price."
+  },
+  {
+    "id": "class_word_1867",
+    "word": "食べ放題",
+    "reading": "たべほうだい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "All-you-can-eat.",
+      "ja": "食べ放題",
+      "zh_TW": "All-you-can-eat.",
+      "zh_CN": "All-you-can-eat.",
+      "ko": "All-you-can-eat.",
+      "zh_HK": "All-you-can-eat.",
+      "fr": "All-you-can-eat."
+    },
+    "example": {
+      "ja": "A: <ruby>食べ放題<rt>たべほうだい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"食べ放題\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"食べ放題\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"食べ放題\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"食べ放題\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"食べ放題\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"食べ放題\".<br/>B: Yes, understood!"
+    },
+    "related": "All-you-can-eat."
+  },
+  {
+    "id": "class_word_1868",
+    "word": "はちみつ",
+    "reading": "はちみつ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Honey.",
+      "ja": "はちみつ",
+      "zh_TW": "蜂蜜",
+      "zh_CN": "蜂蜜",
+      "ko": "Honey.",
+      "zh_HK": "蜂蜜",
+      "fr": "miel"
+    },
+    "example": {
+      "ja": "それね、<ruby>蜂蜜<rt>はちみつ</rt></ruby>よ。",
+      "en": "That's honey.",
+      "zh_TW": "That's honey.",
+      "zh_CN": "That's honey.",
+      "ko": "That's honey.",
+      "zh_HK": "That's honey.",
+      "fr": "That's honey."
+    },
+    "related": "Honey."
+  },
+  {
+    "id": "class_word_1869",
+    "word": "豆乳",
+    "reading": "とうにゅう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Soy milk.",
+      "ja": "豆乳",
+      "zh_TW": "Soy milk.",
+      "zh_CN": "Soy milk.",
+      "ko": "Soy milk.",
+      "zh_HK": "Soy milk.",
+      "fr": "Soy milk."
+    },
+    "example": {
+      "ja": "<ruby>敵<rt>てき</rt></ruby>は<ruby>新兵<rt>しんぺい</rt></ruby><ruby>力<rt>ちから</rt></ruby>を<ruby>投入<rt>とうにゅう</rt></ruby>した。",
+      "en": "The enemy flung fresh troops into the battle.",
+      "zh_TW": "The enemy flung fresh troops into the battle.",
+      "zh_CN": "The enemy flung fresh troops into the battle.",
+      "ko": "The enemy flung fresh troops into the battle.",
+      "zh_HK": "The enemy flung fresh troops into the battle.",
+      "fr": "The enemy flung fresh troops into the battle."
+    },
+    "related": "Soy milk."
+  },
+  {
+    "id": "class_word_1870",
+    "word": "予約",
+    "reading": "よやく",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Reservation / booking.",
+      "ja": "予約",
+      "zh_TW": "Reservation / booking.",
+      "zh_CN": "Reservation / booking.",
+      "ko": "Reservation / booking.",
+      "zh_HK": "Reservation / booking.",
+      "fr": "contrat"
+    },
+    "example": {
+      "ja": "<ruby>予約<rt>よやく</rt></ruby>してある。",
+      "en": "I have a reservation.",
+      "zh_TW": "I have a reservation.",
+      "zh_CN": "I have a reservation.",
+      "ko": "I have a reservation.",
+      "zh_HK": "I have a reservation.",
+      "fr": "I have a reservation."
+    },
+    "related": "Reservation / booking."
+  },
+  {
+    "id": "class_word_1871",
+    "word": "予約を取る",
+    "reading": "よやくをとる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To make/secure a reservation",
+      "ja": "予約を取る",
+      "zh_TW": "To make/secure a reservation",
+      "zh_CN": "To make/secure a reservation",
+      "ko": "To make/secure a reservation",
+      "zh_HK": "To make/secure a reservation",
+      "fr": "To make/secure a reservation"
+    },
+    "example": {
+      "ja": "A: <ruby>予約を取る<rt>よやくをとる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"予約を取る\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"予約を取る\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"予約を取る\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"予約を取る\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"予約を取る\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"予約を取る\".<br/>B: Yes, understood!"
+    },
+    "related": "To make/secure a reservation — emphasizes successfully obtaining one, sometimes with effort."
+  },
+  {
+    "id": "class_word_1872",
+    "word": "予約が埋まっている",
+    "reading": "よやくがうまっている",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"The reservations are (fully) booked.\"",
+      "ja": "予約が埋まっている",
+      "zh_TW": "\"The reservations are (fully) booked.\"",
+      "zh_CN": "\"The reservations are (fully) booked.\"",
+      "ko": "\"The reservations are (fully) booked.\"",
+      "zh_HK": "\"The reservations are (fully) booked.\"",
+      "fr": "\"The reservations are (fully) booked.\""
+    },
+    "example": {
+      "ja": "A: <ruby>予約が埋まっている<rt>よやくがうまっている</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"予約が埋まっている\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"予約が埋まっている\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"予約が埋まっている\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"予約が埋まっている\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"予約が埋まっている\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"予約が埋まっている\".<br/>B: Yes, understood!"
+    },
+    "related": "\"The reservations are (fully) booked.\""
+  },
+  {
+    "id": "class_word_1873",
+    "word": "飼い主",
+    "reading": "かいぬし",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Pet owner.",
+      "ja": "飼い主",
+      "zh_TW": "Pet owner.",
+      "zh_CN": "Pet owner.",
+      "ko": "Pet owner.",
+      "zh_HK": "Pet owner.",
+      "fr": "berger"
+    },
+    "example": {
+      "ja": "A: <ruby>飼い主<rt>かいぬし</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"飼い主\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"飼い主\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"飼い主\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"飼い主\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"飼い主\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"飼い主\".<br/>B: Yes, understood!"
+    },
+    "related": "Pet owner."
+  },
+  {
+    "id": "class_word_1874",
+    "word": "色褪せる",
+    "reading": "いろあせる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To fade (in color)",
+      "ja": "色褪せる",
+      "zh_TW": "To fade (in color)",
+      "zh_CN": "To fade (in color)",
+      "ko": "To fade (in color)",
+      "zh_HK": "To fade (in color)",
+      "fr": "To fade (in color)"
+    },
+    "example": {
+      "ja": "A: <ruby>色褪せる<rt>いろあせる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"色褪せる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"色褪せる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"色褪せる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"色褪せる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"色褪せる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"色褪せる\".<br/>B: Yes, understood!"
+    },
+    "related": "To fade (in color) — colors losing vividness over time from sunlight, washing, or age; also used figuratively for memori"
+  },
+  {
+    "id": "class_word_1875",
+    "word": "禁煙",
+    "reading": "きんえん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "No smoking / quitting smoking",
+      "ja": "禁煙",
+      "zh_TW": "No smoking / quitting smoking",
+      "zh_CN": "No smoking / quitting smoking",
+      "ko": "No smoking / quitting smoking",
+      "zh_HK": "No smoking / quitting smoking",
+      "fr": "Défense de fumer!"
+    },
+    "example": {
+      "ja": "<ruby>劇場内<rt>げきじょうない</rt></ruby><ruby>禁煙<rt>きんえん</rt></ruby>。",
+      "en": "No smoking in the theater.",
+      "zh_TW": "No smoking in the theater.",
+      "zh_CN": "No smoking in the theater.",
+      "ko": "No smoking in the theater.",
+      "zh_HK": "No smoking in the theater.",
+      "fr": "No smoking in the theater."
+    },
+    "related": "No smoking / quitting smoking — either a prohibition on smoking somewhere, or the act of quitting."
+  },
+  {
+    "id": "class_word_1876",
+    "word": "念の為に",
+    "reading": "ねんのために",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Just in case / to be safe",
+      "ja": "念の為に",
+      "zh_TW": "Just in case / to be safe",
+      "zh_CN": "Just in case / to be safe",
+      "ko": "Just in case / to be safe",
+      "zh_HK": "Just in case / to be safe",
+      "fr": "Just in case / to be safe"
+    },
+    "example": {
+      "ja": "A: <ruby>念の為に<rt>ねんのために</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"念の為に\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"念の為に\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"念の為に\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"念の為に\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"念の為に\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"念の為に\".<br/>B: Yes, understood!"
+    },
+    "related": "Just in case / to be safe — doing something as a precaution."
+  },
+  {
+    "id": "class_word_1877",
+    "word": "早くても",
+    "reading": "はやくても",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"Even at the earliest\"",
+      "ja": "早くても",
+      "zh_TW": "\"Even at the earliest\"",
+      "zh_CN": "\"Even at the earliest\"",
+      "ko": "\"Even at the earliest\"",
+      "zh_HK": "\"Even at the earliest\"",
+      "fr": "\"Even at the earliest\""
+    },
+    "example": {
+      "ja": "A: <ruby>早くても<rt>はやくても</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"早くても\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"早くても\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"早くても\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"早くても\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"早くても\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"早くても\".<br/>B: Yes, understood!"
+    },
+    "related": "\"Even at the earliest\" — sets the earliest possible time something can happen."
+  },
+  {
+    "id": "class_word_1878",
+    "word": "遅くても",
+    "reading": "おそくても",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"At the latest\"",
+      "ja": "遅くても",
+      "zh_TW": "\"At the latest\"",
+      "zh_CN": "\"At the latest\"",
+      "ko": "\"At the latest\"",
+      "zh_HK": "\"At the latest\"",
+      "fr": "\"At the latest\""
+    },
+    "example": {
+      "ja": "A: <ruby>遅くても<rt>おそくても</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"遅くても\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"遅くても\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"遅くても\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"遅くても\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"遅くても\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"遅くても\".<br/>B: Yes, understood!"
+    },
+    "related": "\"At the latest\" — sets the latest possible time something will happen."
+  },
+  {
+    "id": "class_word_1879",
+    "word": "政治",
+    "reading": "せいじ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Politics.",
+      "ja": "政治",
+      "zh_TW": "Politics.",
+      "zh_CN": "Politics.",
+      "ko": "Politics.",
+      "zh_HK": "Politics.",
+      "fr": "gouvernement"
+    },
+    "example": {
+      "ja": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>全<rt>まった</rt></ruby>く<ruby>政治家<rt>せいじか</rt></ruby>だ。",
+      "en": "He is every bit a politician.",
+      "zh_TW": "He is every bit a politician.",
+      "zh_CN": "He is every bit a politician.",
+      "ko": "He is every bit a politician.",
+      "zh_HK": "He is every bit a politician.",
+      "fr": "He is every bit a politician."
+    },
+    "related": "Politics."
+  },
+  {
+    "id": "class_word_1880",
+    "word": "手当",
+    "reading": "てあて",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Allowance / benefit",
+      "ja": "手当",
+      "zh_TW": "Allowance / benefit",
+      "zh_CN": "Allowance / benefit",
+      "ko": "Allowance / benefit",
+      "zh_HK": "Allowance / benefit",
+      "fr": "aide"
+    },
+    "example": {
+      "ja": "<ruby>田中<rt>たなか</rt></ruby>さんは<ruby>怪我<rt>けが</rt></ruby>した<ruby>人<rt>にん</rt></ruby>の<ruby>手当<rt>てあ</rt></ruby>てをしたり、<ruby>病気<rt>びょうき</rt></ruby>になった<ruby>人<rt>にん</rt></ruby>の<ruby>介抱<rt>かいほう</rt></ruby>をしたりすることが<ruby>好<rt>す</rt></ruby>きでした。",
+      "en": "Mrs Tanaka liked to carry out first aid on the injured and take care of the sick.",
+      "zh_TW": "Mrs Tanaka liked to carry out first aid on the injured and take care of the sick.",
+      "zh_CN": "Mrs Tanaka liked to carry out first aid on the injured and take care of the sick.",
+      "ko": "Mrs Tanaka liked to carry out first aid on the injured and take care of the sick.",
+      "zh_HK": "Mrs Tanaka liked to carry out first aid on the injured and take care of the sick.",
+      "fr": "Mrs Tanaka liked to carry out first aid on the injured and take care of the sick."
+    },
+    "related": "Allowance / benefit — extra pay given for a specific purpose beyond base salary (commuting, housing, overtime, etc.)."
+  },
+  {
+    "id": "class_word_1881",
+    "word": "十分です",
+    "reading": "じゅうぶんです",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"That's enough / that's sufficient.\"",
+      "ja": "十分です",
+      "zh_TW": "\"That's enough / that's sufficient.\"",
+      "zh_CN": "\"That's enough / that's sufficient.\"",
+      "ko": "\"That's enough / that's sufficient.\"",
+      "zh_HK": "\"That's enough / that's sufficient.\"",
+      "fr": "\"That's enough / that's sufficient.\""
+    },
+    "example": {
+      "ja": "A: <ruby>十分です<rt>じゅうぶんです</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"十分です\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"十分です\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"十分です\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"十分です\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"十分です\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"十分です\".<br/>B: Yes, understood!"
+    },
+    "related": "\"That's enough / that's sufficient.\""
+  },
+  {
+    "id": "class_word_1882",
+    "word": "地震",
+    "reading": "じしん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Earthquake.",
+      "ja": "地震",
+      "zh_TW": "Earthquake.",
+      "zh_CN": "Earthquake.",
+      "ko": "Earthquake.",
+      "zh_HK": "Earthquake.",
+      "fr": "séisme"
+    },
+    "example": {
+      "ja": "<ruby>地震<rt>じしん</rt></ruby>だった？",
+      "en": "Was it an earthquake?",
+      "zh_TW": "Was it an earthquake?",
+      "zh_CN": "Was it an earthquake?",
+      "ko": "Was it an earthquake?",
+      "zh_HK": "Was it an earthquake?",
+      "fr": "Was it an earthquake?"
+    },
+    "related": "Earthquake."
+  },
+  {
+    "id": "class_word_1883",
+    "word": "震度",
+    "reading": "しんど",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Seismic intensity",
+      "ja": "震度",
+      "zh_TW": "Seismic intensity",
+      "zh_CN": "Seismic intensity",
+      "ko": "Seismic intensity",
+      "zh_HK": "Seismic intensity",
+      "fr": "degré d'un tremblement de terre sur l'échelle japonaise (de 1 à 7)"
+    },
+    "example": {
+      "ja": "A: <ruby>震度<rt>しんど</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"震度\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"震度\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"震度\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"震度\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"震度\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"震度\".<br/>B: Yes, understood!"
+    },
+    "related": "Seismic intensity — a Japanese scale (0–7) measuring how strongly an earthquake is felt at a specific location, distinct"
+  },
+  {
+    "id": "class_word_1884",
+    "word": "めまい",
+    "reading": "めまい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Dizziness.",
+      "ja": "めまい",
+      "zh_TW": "目眩",
+      "zh_CN": "目眩",
+      "ko": "Dizziness.",
+      "zh_HK": "目眩",
+      "fr": "étourdissement"
+    },
+    "example": {
+      "ja": "めまいがします。",
+      "en": "I feel dizzy.",
+      "zh_TW": "I feel dizzy.",
+      "zh_CN": "I feel dizzy.",
+      "ko": "I feel dizzy.",
+      "zh_HK": "I feel dizzy.",
+      "fr": "I feel dizzy."
+    },
+    "related": "Dizziness."
+  },
+  {
+    "id": "class_word_1885",
+    "word": "禁断",
+    "reading": "きんだん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Forbidden / strictly prohibited",
+      "ja": "禁断",
+      "zh_TW": "Forbidden / strictly prohibited",
+      "zh_CN": "Forbidden / strictly prohibited",
+      "ko": "Forbidden / strictly prohibited",
+      "zh_HK": "Forbidden / strictly prohibited",
+      "fr": "Forbidden / strictly prohibited"
+    },
+    "example": {
+      "ja": "A: <ruby>禁断<rt>きんだん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"禁断\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"禁断\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"禁断\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"禁断\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"禁断\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"禁断\".<br/>B: Yes, understood!"
+    },
+    "related": "Forbidden / strictly prohibited — a strong, often literary term for something absolutely off-limits, frequently used for"
+  },
+  {
+    "id": "class_word_1886",
+    "word": "症状",
+    "reading": "しょうじょう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Symptom(s).",
+      "ja": "症状",
+      "zh_TW": "Symptom(s).",
+      "zh_CN": "Symptom(s).",
+      "ko": "Symptom(s).",
+      "zh_HK": "Symptom(s).",
+      "fr": "symptôme"
+    },
+    "example": {
+      "ja": "<ruby>症状<rt>しょうじょう</rt></ruby>は<ruby>軽<rt>かる</rt></ruby>いですよ。",
+      "en": "Your condition isn't serious.",
+      "zh_TW": "Your condition isn't serious.",
+      "zh_CN": "Your condition isn't serious.",
+      "ko": "Your condition isn't serious.",
+      "zh_HK": "Your condition isn't serious.",
+      "fr": "Your condition isn't serious."
+    },
+    "related": "Symptom(s)."
+  },
+  {
+    "id": "class_word_1887",
+    "word": "パンパン",
+    "reading": "パンパン",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Bursting/packed full",
+      "ja": "パンパン",
+      "zh_TW": "二战之后的日本街妓",
+      "zh_CN": "二战之后的日本街妓",
+      "ko": "Bursting/packed full",
+      "zh_HK": "二战之后的日本街妓",
+      "fr": "Bursting/packed full"
+    },
+    "example": {
+      "ja": "A: <ruby>パンパン<rt>パンパン</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"パンパン\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"パンパン\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"パンパン\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"パンパン\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"パンパン\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"パンパン\".<br/>B: Yes, understood!"
+    },
+    "related": "Bursting/packed full — describing something swollen or tightly full; also an onomatopoeia for a sharp, repeated slapping"
+  },
+  {
+    "id": "class_word_1888",
+    "word": "出張",
+    "reading": "しゅっちょう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Business trip.",
+      "ja": "出張",
+      "zh_TW": "Business trip.",
+      "zh_CN": "Business trip.",
+      "ko": "Business trip.",
+      "zh_HK": "Business trip.",
+      "fr": "mission officielle"
+    },
+    "example": {
+      "ja": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>出張中<rt>しゅっちょうちゅう</rt></ruby>です。",
+      "en": "He's out of town on business.",
+      "zh_TW": "He's out of town on business.",
+      "zh_CN": "He's out of town on business.",
+      "ko": "He's out of town on business.",
+      "zh_HK": "He's out of town on business.",
+      "fr": "He's out of town on business."
+    },
+    "related": "Business trip."
+  },
+  {
+    "id": "class_word_1889",
+    "word": "本社",
+    "reading": "ほんしゃ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Head office / headquarters.",
+      "ja": "本社",
+      "zh_TW": "Head office / headquarters.",
+      "zh_CN": "Head office / headquarters.",
+      "ko": "Head office / headquarters.",
+      "zh_HK": "Head office / headquarters.",
+      "fr": "siège principal"
+    },
+    "example": {
+      "ja": "A: <ruby>本社<rt>ほんしゃ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"本社\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"本社\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"本社\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"本社\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"本社\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"本社\".<br/>B: Yes, understood!"
+    },
+    "related": "Head office / headquarters."
+  },
+  {
+    "id": "class_word_1890",
+    "word": "外資系",
+    "reading": "がいしけい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Foreign-affiliated (company)",
+      "ja": "外資系",
+      "zh_TW": "Foreign-affiliated (company)",
+      "zh_CN": "Foreign-affiliated (company)",
+      "ko": "Foreign-affiliated (company)",
+      "zh_HK": "Foreign-affiliated (company)",
+      "fr": "Foreign-affiliated (company)"
+    },
+    "example": {
+      "ja": "A: <ruby>外資系<rt>がいしけい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"外資系\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"外資系\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"外資系\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"外資系\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"外資系\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"外資系\".<br/>B: Yes, understood!"
+    },
+    "related": "Foreign-affiliated (company) — owned by or a subsidiary of a foreign corporation, as opposed to a purely domestic Japane"
+  },
+  {
+    "id": "class_word_1891",
+    "word": "利点",
+    "reading": "りてん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Advantage / merit.",
+      "ja": "利点",
+      "zh_TW": "Advantage / merit.",
+      "zh_CN": "Advantage / merit.",
+      "ko": "Advantage / merit.",
+      "zh_HK": "Advantage / merit.",
+      "fr": "Advantage / merit."
+    },
+    "example": {
+      "ja": "<ruby>若<rt>わか</rt></ruby>さにはそれなりの<ruby>利点<rt>りてん</rt></ruby>がある。",
+      "en": "Youth has its advantages.",
+      "zh_TW": "Youth has its advantages.",
+      "zh_CN": "Youth has its advantages.",
+      "ko": "Youth has its advantages.",
+      "zh_HK": "Youth has its advantages.",
+      "fr": "Youth has its advantages."
+    },
+    "related": "Advantage / merit."
+  },
+  {
+    "id": "class_word_1892",
+    "word": "飽きた",
+    "reading": "あきた",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Got tired of / bored with (something)",
+      "ja": "飽きた",
+      "zh_TW": "Got tired of / bored with (something)",
+      "zh_CN": "Got tired of / bored with (something)",
+      "ko": "Got tired of / bored with (something)",
+      "zh_HK": "Got tired of / bored with (something)",
+      "fr": "Got tired of / bored with (something)"
+    },
+    "example": {
+      "ja": "A: <ruby>飽きた<rt>あきた</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"飽きた\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"飽きた\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"飽きた\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"飽きた\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"飽きた\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"飽きた\".<br/>B: Yes, understood!"
+    },
+    "related": "Got tired of / bored with (something) — past tense of 飽きる, from overexposure or repetition."
+  },
+  {
+    "id": "class_word_1893",
+    "word": "偏食",
+    "reading": "へんしょく",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Picky eating / an unbalanced diet.",
+      "ja": "偏食",
+      "zh_TW": "Picky eating / an unbalanced diet.",
+      "zh_CN": "Picky eating / an unbalanced diet.",
+      "ko": "Picky eating / an unbalanced diet.",
+      "zh_HK": "Picky eating / an unbalanced diet.",
+      "fr": "s'alimenter selon son bon plaisir"
+    },
+    "example": {
+      "ja": "A: <ruby>偏食<rt>へんしょく</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"偏食\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"偏食\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"偏食\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"偏食\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"偏食\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"偏食\".<br/>B: Yes, understood!"
+    },
+    "related": "Picky eating / an unbalanced diet."
+  },
+  {
+    "id": "class_word_1894",
+    "word": "騙す",
+    "reading": "だます",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To deceive / trick.",
+      "ja": "騙す",
+      "zh_TW": "To deceive / trick.",
+      "zh_CN": "To deceive / trick.",
+      "ko": "To deceive / trick.",
+      "zh_HK": "To deceive / trick.",
+      "fr": "abuser"
+    },
+    "example": {
+      "ja": "<ruby>同僚<rt>どうりょう</rt></ruby>を<ruby>騙<rt>だま</rt></ruby>すのは<ruby>良<rt>よ</rt></ruby>くないよ。",
+      "en": "It is not good of you to take advantage of your colleagues.",
+      "zh_TW": "It is not good of you to take advantage of your colleagues.",
+      "zh_CN": "It is not good of you to take advantage of your colleagues.",
+      "ko": "It is not good of you to take advantage of your colleagues.",
+      "zh_HK": "It is not good of you to take advantage of your colleagues.",
+      "fr": "It is not good of you to take advantage of your colleagues."
+    },
+    "related": "To deceive / trick."
+  },
+  {
+    "id": "class_word_1895",
+    "word": "責任を取る",
+    "reading": "せきにんをとる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To take responsibility.",
+      "ja": "責任を取る",
+      "zh_TW": "To take responsibility.",
+      "zh_CN": "To take responsibility.",
+      "ko": "To take responsibility.",
+      "zh_HK": "To take responsibility.",
+      "fr": "To take responsibility."
+    },
+    "example": {
+      "ja": "A: <ruby>責任を取る<rt>せきにんをとる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"責任を取る\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"責任を取る\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"責任を取る\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"責任を取る\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"責任を取る\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"責任を取る\".<br/>B: Yes, understood!"
+    },
+    "related": "To take responsibility."
+  },
+  {
+    "id": "class_word_1896",
+    "word": "おいで",
+    "reading": "おいで",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"Come (here)\" / \"go\" / \"be (there)\"",
+      "ja": "おいで",
+      "zh_TW": "出去（でる的尊敬语）",
+      "zh_CN": "出去（でる的尊敬语）",
+      "ko": "\"Come (here)\" / \"go\" / \"be (there)\"",
+      "zh_HK": "出去（でる的尊敬语）",
+      "fr": "\"Come (here)\" / \"go\" / \"be (there)\""
+    },
+    "example": {
+      "ja": "A: <ruby>おいで<rt>おいで</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"おいで\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"おいで\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"おいで\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"おいで\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"おいで\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"おいで\".<br/>B: Yes, understood!"
+    },
+    "related": "\"Come (here)\" / \"go\" / \"be (there)\" — a respectful or affectionate way of saying \"come/go/be,\" depending on context; use"
+  },
+  {
+    "id": "class_word_1897",
+    "word": "ご褒美",
+    "reading": "ごほうび",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "A reward / treat.",
+      "ja": "ご褒美",
+      "zh_TW": "A reward / treat.",
+      "zh_CN": "A reward / treat.",
+      "ko": "A reward / treat.",
+      "zh_HK": "A reward / treat.",
+      "fr": "A reward / treat."
+    },
+    "example": {
+      "ja": "A: <ruby>ご褒美<rt>ごほうび</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"ご褒美\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"ご褒美\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"ご褒美\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"ご褒美\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"ご褒美\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"ご褒美\".<br/>B: Yes, understood!"
+    },
+    "related": "A reward / treat."
+  },
+  {
+    "id": "class_word_1898",
+    "word": "気軽に",
+    "reading": "きがるに",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Casually / without hesitation.",
+      "ja": "気軽に",
+      "zh_TW": "Casually / without hesitation.",
+      "zh_CN": "Casually / without hesitation.",
+      "ko": "Casually / without hesitation.",
+      "zh_HK": "Casually / without hesitation.",
+      "fr": "Casually / without hesitation."
+    },
+    "example": {
+      "ja": "A: <ruby>気軽に<rt>きがるに</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"気軽に\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"気軽に\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"気軽に\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"気軽に\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"気軽に\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"気軽に\".<br/>B: Yes, understood!"
+    },
+    "related": "Casually / without hesitation."
+  },
+  {
+    "id": "class_word_1899",
+    "word": "平穏",
+    "reading": "へいおん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Peaceful / calm / tranquil",
+      "ja": "平穏",
+      "zh_TW": "Peaceful / calm / tranquil",
+      "zh_CN": "Peaceful / calm / tranquil",
+      "ko": "Peaceful / calm / tranquil",
+      "zh_HK": "Peaceful / calm / tranquil",
+      "fr": "calme"
+    },
+    "example": {
+      "ja": "A: <ruby>平穏<rt>へいおん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"平穏\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"平穏\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"平穏\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"平穏\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"平穏\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"平穏\".<br/>B: Yes, understood!"
+    },
+    "related": "Peaceful / calm / tranquil — an undisturbed state, often referring to daily life or a period free from trouble."
+  },
+  {
+    "id": "class_word_1900",
+    "word": "象",
+    "reading": "ぞう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Elephant.",
+      "ja": "象",
+      "zh_TW": "Elephant.",
+      "zh_CN": "Elephant.",
+      "ko": "Elephant.",
+      "zh_HK": "Elephant.",
+      "fr": "phénomène"
+    },
+    "example": {
+      "ja": "<ruby>象<rt>ぞう</rt></ruby>は<ruby>鼻<rt>はな</rt></ruby>が<ruby>長<rt>なが</rt></ruby>い。",
+      "en": "An elephant has a long nose.",
+      "zh_TW": "An elephant has a long nose.",
+      "zh_CN": "An elephant has a long nose.",
+      "ko": "An elephant has a long nose.",
+      "zh_HK": "An elephant has a long nose.",
+      "fr": "An elephant has a long nose."
+    },
+    "related": "Elephant."
+  },
+  {
+    "id": "class_word_1901",
+    "word": "はしゃぐ",
+    "reading": "はしゃぐ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To frolic / be boisterous",
+      "ja": "はしゃぐ",
+      "zh_TW": "欢闹",
+      "zh_CN": "欢闹",
+      "ko": "To frolic / be boisterous",
+      "zh_HK": "欢闹",
+      "fr": "être joyeux"
+    },
+    "example": {
+      "ja": "A: <ruby>はしゃぐ<rt>はしゃぐ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"はしゃぐ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"はしゃぐ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"はしゃぐ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"はしゃぐ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"はしゃぐ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"はしゃぐ\".<br/>B: Yes, understood!"
+    },
+    "related": "To frolic / be boisterous — getting excited and acting playfully loud or lively, from happiness or excitement; used for "
+  },
+  {
+    "id": "class_word_1902",
+    "word": "見守る",
+    "reading": "みまもる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To watch over / keep an eye on",
+      "ja": "見守る",
+      "zh_TW": "To watch over / keep an eye on",
+      "zh_CN": "To watch over / keep an eye on",
+      "ko": "To watch over / keep an eye on",
+      "zh_HK": "To watch over / keep an eye on",
+      "fr": "garder"
+    },
+    "example": {
+      "ja": "A: <ruby>見守る<rt>みまもる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"見守る\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"見守る\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"見守る\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"見守る\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"見守る\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"見守る\".<br/>B: Yes, understood!"
+    },
+    "related": "To watch over / keep an eye on — observing someone with care and attention, often protectively, without directly interve"
+  },
+  {
+    "id": "class_word_1903",
+    "word": "水筒",
+    "reading": "すいとう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Water bottle / thermos",
+      "ja": "水筒",
+      "zh_TW": "Water bottle / thermos",
+      "zh_CN": "Water bottle / thermos",
+      "ko": "Water bottle / thermos",
+      "zh_HK": "Water bottle / thermos",
+      "fr": "bidon"
+    },
+    "example": {
+      "ja": "<ruby>僕<rt>ぼく</rt></ruby>の<ruby>水筒<rt>すいとう</rt></ruby>、どこかな？",
+      "en": "Where's my water bottle?",
+      "zh_TW": "Where's my water bottle?",
+      "zh_CN": "Where's my water bottle?",
+      "ko": "Where's my water bottle?",
+      "zh_HK": "Where's my water bottle?",
+      "fr": "Where's my water bottle?"
+    },
+    "related": "Water bottle / thermos — a reusable container for carrying drinks."
+  },
+  {
+    "id": "class_word_1904",
+    "word": "整骨院",
+    "reading": "せいこついん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "An osteopathic/chiropractic clinic",
+      "ja": "整骨院",
+      "zh_TW": "An osteopathic/chiropractic clinic",
+      "zh_CN": "An osteopathic/chiropractic clinic",
+      "ko": "An osteopathic/chiropractic clinic",
+      "zh_HK": "An osteopathic/chiropractic clinic",
+      "fr": "An osteopathic/chiropractic clinic"
+    },
+    "example": {
+      "ja": "A: <ruby>整骨院<rt>せいこついん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"整骨院\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"整骨院\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"整骨院\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"整骨院\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"整骨院\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"整骨院\".<br/>B: Yes, understood!"
+    },
+    "related": "An osteopathic/chiropractic clinic — for musculoskeletal issues (joints, muscles, bones), typically run by a judo therap"
+  },
+  {
+    "id": "class_word_1905",
+    "word": "反応する",
+    "reading": "はんのうする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To react / respond.",
+      "ja": "反応する",
+      "zh_TW": "To react / respond.",
+      "zh_CN": "To react / respond.",
+      "ko": "To react / respond.",
+      "zh_HK": "To react / respond.",
+      "fr": "To react / respond."
+    },
+    "example": {
+      "ja": "A: <ruby>反応する<rt>はんのうする</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"反応する\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"反応する\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"反応する\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"反応する\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"反応する\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"反応する\".<br/>B: Yes, understood!"
+    },
+    "related": "To react / respond."
+  },
+  {
+    "id": "class_word_1906",
+    "word": "賛否両論",
+    "reading": "さんぴりょうろん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Both support and opposition / mixed reactions",
+      "ja": "賛否両論",
+      "zh_TW": "Both support and opposition / mixed reactions",
+      "zh_CN": "Both support and opposition / mixed reactions",
+      "ko": "Both support and opposition / mixed reactions",
+      "zh_HK": "Both support and opposition / mixed reactions",
+      "fr": "Both support and opposition / mixed reactions"
+    },
+    "example": {
+      "ja": "A: <ruby>賛否両論<rt>さんぴりょうろん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"賛否両論\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"賛否両論\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"賛否両論\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"賛否両論\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"賛否両論\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"賛否両論\".<br/>B: Yes, understood!"
+    },
+    "related": "Both support and opposition / mixed reactions — opinions divided, with people both for and against."
+  },
+  {
+    "id": "class_word_1907",
+    "word": "遺骨",
+    "reading": "いこつ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Cremated remains / the bones of the deceased",
+      "ja": "遺骨",
+      "zh_TW": "Cremated remains / the bones of the deceased",
+      "zh_CN": "Cremated remains / the bones of the deceased",
+      "ko": "Cremated remains / the bones of the deceased",
+      "zh_HK": "Cremated remains / the bones of the deceased",
+      "fr": "Cremated remains / the bones of the deceased"
+    },
+    "example": {
+      "ja": "A: <ruby>遺骨<rt>いこつ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"遺骨\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"遺骨\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"遺骨\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"遺骨\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"遺骨\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"遺骨\".<br/>B: Yes, understood!"
+    },
+    "related": "Cremated remains / the bones of the deceased — treated with reverence in Japanese funeral customs."
+  },
+  {
+    "id": "class_word_1908",
+    "word": "毛",
+    "reading": "け",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Hair / fur",
+      "ja": "毛",
+      "zh_TW": "Hair / fur",
+      "zh_CN": "Hair / fur",
+      "ko": "Hair / fur",
+      "zh_HK": "Hair / fur",
+      "fr": "cheveu"
+    },
+    "example": {
+      "ja": "はい、<ruby>毛布<rt>もうふ</rt></ruby>。",
+      "en": "Here is a blanket.",
+      "zh_TW": "Here is a blanket.",
+      "zh_CN": "Here is a blanket.",
+      "ko": "Here is a blanket.",
+      "zh_HK": "Here is a blanket.",
+      "fr": "Here is a blanket."
+    },
+    "related": "Hair / fur — a general term, broader than the more specific 髪 (head hair)."
+  },
+  {
+    "id": "class_word_1909",
+    "word": "折りたたみ",
+    "reading": "おりたたみ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Foldable / collapsible.",
+      "ja": "折りたたみ",
+      "zh_TW": "Foldable / collapsible.",
+      "zh_CN": "Foldable / collapsible.",
+      "ko": "Foldable / collapsible.",
+      "zh_HK": "Foldable / collapsible.",
+      "fr": "pliant (table, chaise)"
+    },
+    "example": {
+      "ja": "A: <ruby>折りたたみ<rt>おりたたみ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"折りたたみ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"折りたたみ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"折りたたみ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"折りたたみ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"折りたたみ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"折りたたみ\".<br/>B: Yes, understood!"
+    },
+    "related": "Foldable / collapsible."
+  },
+  {
+    "id": "class_word_1910",
+    "word": "財布",
+    "reading": "さいふ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Wallet / purse.",
+      "ja": "財布",
+      "zh_TW": "Wallet / purse.",
+      "zh_CN": "Wallet / purse.",
+      "ko": "Wallet / purse.",
+      "zh_HK": "Wallet / purse.",
+      "fr": "bourse"
+    },
+    "example": {
+      "ja": "ほら<ruby>財布<rt>さいふ</rt></ruby>だ。",
+      "en": "Here's my wallet.",
+      "zh_TW": "Here's my wallet.",
+      "zh_CN": "Here's my wallet.",
+      "ko": "Here's my wallet.",
+      "zh_HK": "Here's my wallet.",
+      "fr": "Here's my wallet."
+    },
+    "related": "Wallet / purse."
+  },
+  {
+    "id": "class_word_1911",
+    "word": "小銭",
+    "reading": "こぜに",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Small change / coins.",
+      "ja": "小銭",
+      "zh_TW": "Small change / coins.",
+      "zh_CN": "Small change / coins.",
+      "ko": "Small change / coins.",
+      "zh_HK": "Small change / coins.",
+      "fr": "petite monnaie"
+    },
+    "example": {
+      "ja": "<ruby>小銭<rt>こぜに</rt></ruby><ruby>持<rt>も</rt></ruby>ってないわ。",
+      "en": "I don't have any change.",
+      "zh_TW": "I don't have any change.",
+      "zh_CN": "I don't have any change.",
+      "ko": "I don't have any change.",
+      "zh_HK": "I don't have any change.",
+      "fr": "I don't have any change."
+    },
+    "related": "Small change / coins."
+  },
+  {
+    "id": "class_word_1912",
+    "word": "目がさめる",
+    "reading": "めがさめる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To wake up (naturally)",
+      "ja": "目がさめる",
+      "zh_TW": "To wake up (naturally)",
+      "zh_CN": "To wake up (naturally)",
+      "ko": "To wake up (naturally)",
+      "zh_HK": "To wake up (naturally)",
+      "fr": "To wake up (naturally)"
+    },
+    "example": {
+      "ja": "A: <ruby>目がさめる<rt>めがさめる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"目がさめる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"目がさめる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"目がさめる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"目がさめる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"目がさめる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"目がさめる\".<br/>B: Yes, understood!"
+    },
+    "related": "To wake up (naturally) — becoming conscious/awake on one's own, as opposed to being roused by someone else."
+  },
+  {
+    "id": "class_word_1913",
+    "word": "交互に見る",
+    "reading": "こうごにみる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To look at (things) alternately / back and forth.",
+      "ja": "交互に見る",
+      "zh_TW": "To look at (things) alternately / back and forth.",
+      "zh_CN": "To look at (things) alternately / back and forth.",
+      "ko": "To look at (things) alternately / back and forth.",
+      "zh_HK": "To look at (things) alternately / back and forth.",
+      "fr": "To look at (things) alternately / back and forth."
+    },
+    "example": {
+      "ja": "A: <ruby>交互に見る<rt>こうごにみる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"交互に見る\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"交互に見る\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"交互に見る\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"交互に見る\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"交互に見る\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"交互に見る\".<br/>B: Yes, understood!"
+    },
+    "related": "To look at (things) alternately / back and forth."
+  },
+  {
+    "id": "class_word_1914",
+    "word": "関西弁",
+    "reading": "かんさいべん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "The Kansai dialect",
+      "ja": "関西弁",
+      "zh_TW": "The Kansai dialect",
+      "zh_CN": "The Kansai dialect",
+      "ko": "The Kansai dialect",
+      "zh_HK": "The Kansai dialect",
+      "fr": "dialecte du Kansai"
+    },
+    "example": {
+      "ja": "A: <ruby>関西弁<rt>かんさいべん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"関西弁\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"関西弁\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"関西弁\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"関西弁\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"関西弁\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"関西弁\".<br/>B: Yes, understood!"
+    },
+    "related": "The Kansai dialect — spoken in Osaka, Kyoto, Kobe, etc., known for distinct intonation and expressions."
+  },
+  {
+    "id": "class_word_1915",
+    "word": "博多弁",
+    "reading": "はかたべん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "The Hakata dialect",
+      "ja": "博多弁",
+      "zh_TW": "The Hakata dialect",
+      "zh_CN": "The Hakata dialect",
+      "ko": "The Hakata dialect",
+      "zh_HK": "The Hakata dialect",
+      "fr": "The Hakata dialect"
+    },
+    "example": {
+      "ja": "A: <ruby>博多弁<rt>はかたべん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"博多弁\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"博多弁\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"博多弁\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"博多弁\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"博多弁\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"博多弁\".<br/>B: Yes, understood!"
+    },
+    "related": "The Hakata dialect — spoken in Hakata/Fukuoka (Kyushu), known for gentle, friendly-sounding sentence endings."
+  },
+  {
+    "id": "class_word_1916",
+    "word": "〜だけ",
+    "reading": "だけ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"Only ~\"",
+      "ja": "〜だけ",
+      "zh_TW": "只有",
+      "zh_CN": "只有",
+      "ko": "\"Only ~\"",
+      "zh_HK": "只有",
+      "fr": "seulement"
+    },
+    "example": {
+      "ja": "A: <ruby>〜だけ<rt>だけ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜だけ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜だけ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜だけ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜だけ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜だけ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜だけ\".<br/>B: Yes, understood!"
+    },
+    "related": "\"Only ~\" — だけ is neutral and works with affirmative or negative sentences, while しか always pairs with a negative verb an"
+  },
+  {
+    "id": "class_word_1917",
+    "word": "恵まれている",
+    "reading": "めぐまれている",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To be blessed / fortunate",
+      "ja": "恵まれている",
+      "zh_TW": "To be blessed / fortunate",
+      "zh_CN": "To be blessed / fortunate",
+      "ko": "To be blessed / fortunate",
+      "zh_HK": "To be blessed / fortunate",
+      "fr": "To be blessed / fortunate"
+    },
+    "example": {
+      "ja": "A: <ruby>恵まれている<rt>めぐまれている</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"恵まれている\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"恵まれている\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"恵まれている\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"恵まれている\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"恵まれている\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"恵まれている\".<br/>B: Yes, understood!"
+    },
+    "related": "To be blessed / fortunate — a favorable, privileged situation, often about circumstances one didn't necessarily earn."
+  },
+  {
+    "id": "class_word_1918",
+    "word": "お金を使う",
+    "reading": "おかねをつかう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To spend money.",
+      "ja": "お金を使う",
+      "zh_TW": "To spend money.",
+      "zh_CN": "To spend money.",
+      "ko": "To spend money.",
+      "zh_HK": "To spend money.",
+      "fr": "To spend money."
+    },
+    "example": {
+      "ja": "A: <ruby>お金を使う<rt>おかねをつかう</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"お金を使う\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"お金を使う\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"お金を使う\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"お金を使う\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"お金を使う\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"お金を使う\".<br/>B: Yes, understood!"
+    },
+    "related": "To spend money."
+  },
+  {
+    "id": "class_word_1919",
+    "word": "移る",
+    "reading": "うつる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"To move / transfer\"",
+      "ja": "移る",
+      "zh_TW": "\"To move / transfer\"",
+      "zh_CN": "\"To move / transfer\"",
+      "ko": "\"To move / transfer\"",
+      "zh_HK": "\"To move / transfer\"",
+      "fr": "être déménagér"
+    },
+    "example": {
+      "ja": "<ruby>熱意<rt>ねつい</rt></ruby>は<ruby>移<rt>うつ</rt></ruby>る。",
+      "en": "Enthusiasm is contagious.",
+      "zh_TW": "Enthusiasm is contagious.",
+      "zh_CN": "Enthusiasm is contagious.",
+      "ko": "Enthusiasm is contagious.",
+      "zh_HK": "Enthusiasm is contagious.",
+      "fr": "Enthusiasm is contagious."
+    },
+    "related": "\"To move / transfer\" — 移る is intransitive (something moves on its own, or the focus is on the result, not the agent), wh"
+  },
+  {
+    "id": "class_word_1920",
+    "word": "風邪が移る",
+    "reading": "かぜがうつる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"A cold gets transmitted / spreads\"",
+      "ja": "風邪が移る",
+      "zh_TW": "\"A cold gets transmitted / spreads\"",
+      "zh_CN": "\"A cold gets transmitted / spreads\"",
+      "ko": "\"A cold gets transmitted / spreads\"",
+      "zh_HK": "\"A cold gets transmitted / spreads\"",
+      "fr": "\"A cold gets transmitted / spreads\""
+    },
+    "example": {
+      "ja": "A: <ruby>風邪が移る<rt>かぜがうつる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"風邪が移る\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"風邪が移る\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"風邪が移る\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"風邪が移る\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"風邪が移る\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"風邪が移る\".<br/>B: Yes, understood!"
+    },
+    "related": "\"A cold gets transmitted / spreads\" — using the intransitive 移る, no focus on who caused it."
+  },
+  {
+    "id": "class_word_1921",
+    "word": "古いものから新しいものに移した",
+    "reading": "ふるいものからあたらしいものにうつした",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"Moved/switched from the old thing to the new thing\"",
+      "ja": "古いものから新しいものに移した",
+      "zh_TW": "\"Moved/switched from the old thing to the new thing\"",
+      "zh_CN": "\"Moved/switched from the old thing to the new thing\"",
+      "ko": "\"Moved/switched from the old thing to the new thing\"",
+      "zh_HK": "\"Moved/switched from the old thing to the new thing\"",
+      "fr": "\"Moved/switched from the old thing to the new thing\""
+    },
+    "example": {
+      "ja": "A: <ruby>古いものから新しいものに移した<rt>ふるいものからあたらしいものにうつした</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"古いものから新しいものに移した\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"古いものから新しいものに移した\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"古いものから新しいものに移した\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"古いものから新しいものに移した\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"古いものから新しいものに移した\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"古いものから新しいものに移した\".<br/>B: Yes, understood!"
+    },
+    "related": "\"Moved/switched from the old thing to the new thing\" — using the transitive 移す, a deliberate transfer."
+  },
+  {
+    "id": "class_word_1922",
+    "word": "言って",
+    "reading": "いって",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"Saying ~ / having said\"",
+      "ja": "言って",
+      "zh_TW": "\"Saying ~ / having said\"",
+      "zh_CN": "\"Saying ~ / having said\"",
+      "ko": "\"Saying ~ / having said\"",
+      "zh_HK": "\"Saying ~ / having said\"",
+      "fr": "\"Saying ~ / having said\""
+    },
+    "example": {
+      "ja": "A: <ruby>言って<rt>いって</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"言って\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"言って\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"言って\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"言って\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"言って\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"言って\".<br/>B: Yes, understood!"
+    },
+    "related": "\"Saying ~ / having said\" — the te-form of 言う, connecting a statement to a following action, or quoting."
+  },
+  {
+    "id": "class_word_1923",
+    "word": "食べてくる",
+    "reading": "たべてくる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"To go eat and come back\" / \"I'll eat (before coming)\"",
+      "ja": "食べてくる",
+      "zh_TW": "\"To go eat and come back\" / \"I'll eat (before coming)\"",
+      "zh_CN": "\"To go eat and come back\" / \"I'll eat (before coming)\"",
+      "ko": "\"To go eat and come back\" / \"I'll eat (before coming)\"",
+      "zh_HK": "\"To go eat and come back\" / \"I'll eat (before coming)\"",
+      "fr": "\"To go eat and come back\" / \"I'll eat (before coming)\""
+    },
+    "example": {
+      "ja": "A: <ruby>食べてくる<rt>たべてくる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"食べてくる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"食べてくる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"食べてくる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"食べてくる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"食べてくる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"食べてくる\".<br/>B: Yes, understood!"
+    },
+    "related": "\"To go eat and come back\" / \"I'll eat (before coming)\" — て+くる, indicating an action done elsewhere before returning, or "
+  },
+  {
+    "id": "class_word_1924",
+    "word": "合併",
+    "reading": "がっぺい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Merger.",
+      "ja": "合併",
+      "zh_TW": "Merger.",
+      "zh_CN": "Merger.",
+      "ko": "Merger.",
+      "zh_HK": "Merger.",
+      "fr": "affiliation"
+    },
+    "example": {
+      "ja": "２<ruby>社<rt>しゃ</rt></ruby>は<ruby>合併<rt>がっぺい</rt></ruby>を<ruby>計画<rt>けいかく</rt></ruby>している。",
+      "en": "The two companies plan to unite.",
+      "zh_TW": "The two companies plan to unite.",
+      "zh_CN": "The two companies plan to unite.",
+      "ko": "The two companies plan to unite.",
+      "zh_HK": "The two companies plan to unite.",
+      "fr": "The two companies plan to unite."
+    },
+    "related": "Merger."
+  },
+  {
+    "id": "class_word_1925",
+    "word": "親会社",
+    "reading": "おやがいしゃ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Parent company.",
+      "ja": "親会社",
+      "zh_TW": "Parent company.",
+      "zh_CN": "Parent company.",
+      "ko": "Parent company.",
+      "zh_HK": "Parent company.",
+      "fr": "Parent company."
+    },
+    "example": {
+      "ja": "A: <ruby>親会社<rt>おやがいしゃ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"親会社\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"親会社\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"親会社\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"親会社\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"親会社\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"親会社\".<br/>B: Yes, understood!"
+    },
+    "related": "Parent company."
+  },
+  {
+    "id": "class_word_1926",
+    "word": "子会社",
+    "reading": "こがいしゃ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Subsidiary company",
+      "ja": "子会社",
+      "zh_TW": "Subsidiary company",
+      "zh_CN": "Subsidiary company",
+      "ko": "Subsidiary company",
+      "zh_HK": "Subsidiary company",
+      "fr": "Subsidiary company"
+    },
+    "example": {
+      "ja": "A: <ruby>子会社<rt>こがいしゃ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"子会社\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"子会社\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"子会社\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"子会社\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"子会社\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"子会社\".<br/>B: Yes, understood!"
+    },
+    "related": "Subsidiary company — owned/controlled by a parent, while keeping its own legal identity."
+  },
+  {
+    "id": "class_word_1927",
+    "word": "化粧",
+    "reading": "けしょう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Makeup.",
+      "ja": "化粧",
+      "zh_TW": "Makeup.",
+      "zh_CN": "Makeup.",
+      "ko": "Makeup.",
+      "zh_HK": "Makeup.",
+      "fr": "grimage"
+    },
+    "example": {
+      "ja": "<ruby>化粧<rt>けしょう</rt></ruby>してるの？",
+      "en": "Are you wearing makeup?",
+      "zh_TW": "Are you wearing makeup?",
+      "zh_CN": "Are you wearing makeup?",
+      "ko": "Are you wearing makeup?",
+      "zh_HK": "Are you wearing makeup?",
+      "fr": "Are you wearing makeup?"
+    },
+    "related": "Makeup."
+  },
+  {
+    "id": "class_word_1928",
+    "word": "バーコード決済",
+    "reading": "バーコードけっさい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Barcode/QR code payment",
+      "ja": "バーコード決済",
+      "zh_TW": "Barcode/QR code payment",
+      "zh_CN": "Barcode/QR code payment",
+      "ko": "Barcode/QR code payment",
+      "zh_HK": "Barcode/QR code payment",
+      "fr": "Barcode/QR code payment"
+    },
+    "example": {
+      "ja": "A: <ruby>バーコード決済<rt>バーコードけっさい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"バーコード決済\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"バーコード決済\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"バーコード決済\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"バーコード決済\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"バーコード決済\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"バーコード決済\".<br/>B: Yes, understood!"
+    },
+    "related": "Barcode/QR code payment — a mobile payment method scanned via smartphone app (e.g. PayPay, LINE Pay)."
+  },
+  {
+    "id": "class_word_1929",
+    "word": "お札",
+    "reading": "おさつ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Paper money / bills.",
+      "ja": "お札",
+      "zh_TW": "Paper money / bills.",
+      "zh_CN": "Paper money / bills.",
+      "ko": "Paper money / bills.",
+      "zh_HK": "Paper money / bills.",
+      "fr": "Paper money / bills."
+    },
+    "example": {
+      "ja": "A: <ruby>お札<rt>おさつ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"お札\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"お札\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"お札\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"お札\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"お札\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"お札\".<br/>B: Yes, understood!"
+    },
+    "related": "Paper money / bills."
+  },
+  {
+    "id": "class_word_1930",
+    "word": "使いやすい",
+    "reading": "つかいやすい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Easy to use / user-friendly.",
+      "ja": "使いやすい",
+      "zh_TW": "Easy to use / user-friendly.",
+      "zh_CN": "Easy to use / user-friendly.",
+      "ko": "Easy to use / user-friendly.",
+      "zh_HK": "Easy to use / user-friendly.",
+      "fr": "Easy to use / user-friendly."
+    },
+    "example": {
+      "ja": "A: <ruby>使いやすい<rt>つかいやすい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"使いやすい\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"使いやすい\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"使いやすい\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"使いやすい\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"使いやすい\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"使いやすい\".<br/>B: Yes, understood!"
+    },
+    "related": "Easy to use / user-friendly."
+  },
+  {
+    "id": "class_word_1931",
+    "word": "使いすぎてしまう",
+    "reading": "つかいすぎてしまう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To end up using/spending too much",
+      "ja": "使いすぎてしまう",
+      "zh_TW": "To end up using/spending too much",
+      "zh_CN": "To end up using/spending too much",
+      "ko": "To end up using/spending too much",
+      "zh_HK": "To end up using/spending too much",
+      "fr": "To end up using/spending too much"
+    },
+    "example": {
+      "ja": "A: <ruby>使いすぎてしまう<rt>つかいすぎてしまう</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"使いすぎてしまう\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"使いすぎてしまう\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"使いすぎてしまう\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"使いすぎてしまう\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"使いすぎてしまう\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"使いすぎてしまう\".<br/>B: Yes, understood!"
+    },
+    "related": "To end up using/spending too much — 使いすぎる + てしまう, adding regret/unintentionality."
+  },
+  {
+    "id": "class_word_1932",
+    "word": "社割",
+    "reading": "しゃわり",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Employee discount",
+      "ja": "社割",
+      "zh_TW": "Employee discount",
+      "zh_CN": "Employee discount",
+      "ko": "Employee discount",
+      "zh_HK": "Employee discount",
+      "fr": "Employee discount"
+    },
+    "example": {
+      "ja": "A: <ruby>社割<rt>しゃわり</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"社割\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"社割\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"社割\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"社割\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"社割\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"社割\".<br/>B: Yes, understood!"
+    },
+    "related": "Employee discount — short for 社員割引."
+  },
+  {
+    "id": "class_word_1933",
+    "word": "こだわり",
+    "reading": "こだわり",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "A particular commitment / attention to detail",
+      "ja": "こだわり",
+      "zh_TW": "A particular commitment / attention to detail",
+      "zh_CN": "A particular commitment / attention to detail",
+      "ko": "A particular commitment / attention to detail",
+      "zh_HK": "A particular commitment / attention to detail",
+      "fr": "A particular commitment / attention to detail"
+    },
+    "example": {
+      "ja": "A: <ruby>こだわり<rt>こだわり</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"こだわり\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"こだわり\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"こだわり\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"こだわり\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"こだわり\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"こだわり\".<br/>B: Yes, understood!"
+    },
+    "related": "A particular commitment / attention to detail — a strong, deliberate preference or standard."
+  },
+  {
+    "id": "class_word_1934",
+    "word": "充電",
+    "reading": "じゅうでん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Charging (a battery).",
+      "ja": "充電",
+      "zh_TW": "Charging (a battery).",
+      "zh_CN": "Charging (a battery).",
+      "ko": "Charging (a battery).",
+      "zh_HK": "Charging (a battery).",
+      "fr": "Charging (a battery)."
+    },
+    "example": {
+      "ja": "A: <ruby>充電<rt>じゅうでん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"充電\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"充電\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"充電\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"充電\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"充電\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"充電\".<br/>B: Yes, understood!"
+    },
+    "related": "Charging (a battery)."
+  },
+  {
+    "id": "class_word_1935",
+    "word": "髪を伸ばす",
+    "reading": "かみをのばす",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To grow one's hair.",
+      "ja": "髪を伸ばす",
+      "zh_TW": "To grow one's hair.",
+      "zh_CN": "To grow one's hair.",
+      "ko": "To grow one's hair.",
+      "zh_HK": "To grow one's hair.",
+      "fr": "To grow one's hair."
+    },
+    "example": {
+      "ja": "A: <ruby>髪を伸ばす<rt>かみをのばす</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"髪を伸ばす\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"髪を伸ばす\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"髪を伸ばす\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"髪を伸ばす\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"髪を伸ばす\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"髪を伸ばす\".<br/>B: Yes, understood!"
+    },
+    "related": "To grow one's hair."
+  },
+  {
+    "id": "class_word_1936",
+    "word": "癖毛",
+    "reading": "くせげ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Naturally curly/wavy hair.",
+      "ja": "癖毛",
+      "zh_TW": "Naturally curly/wavy hair.",
+      "zh_CN": "Naturally curly/wavy hair.",
+      "ko": "Naturally curly/wavy hair.",
+      "zh_HK": "Naturally curly/wavy hair.",
+      "fr": "Naturally curly/wavy hair."
+    },
+    "example": {
+      "ja": "A: <ruby>癖毛<rt>くせげ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"癖毛\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"癖毛\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"癖毛\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"癖毛\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"癖毛\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"癖毛\".<br/>B: Yes, understood!"
+    },
+    "related": "Naturally curly/wavy hair."
+  },
+  {
+    "id": "class_word_1937",
+    "word": "ハゲ",
+    "reading": "ハゲ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Baldness / a bald person (casual/blunt).",
+      "ja": "ハゲ",
+      "zh_TW": "Baldness / a bald person (casual/blunt).",
+      "zh_CN": "Baldness / a bald person (casual/blunt).",
+      "ko": "Baldness / a bald person (casual/blunt).",
+      "zh_HK": "Baldness / a bald person (casual/blunt).",
+      "fr": "Baldness / a bald person (casual/blunt)."
+    },
+    "example": {
+      "ja": "A: <ruby>ハゲ<rt>ハゲ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"ハゲ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"ハゲ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"ハゲ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"ハゲ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"ハゲ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"ハゲ\".<br/>B: Yes, understood!"
+    },
+    "related": "Baldness / a bald person (casual/blunt)."
+  },
+  {
+    "id": "class_word_1938",
+    "word": "彼氏/彼女に冷める",
+    "reading": "かれし／かのじょにさめる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To fall out of love / lose romantic feelings for a boyfriend/girlfriend",
+      "ja": "彼氏/彼女に冷める",
+      "zh_TW": "To fall out of love / lose romantic feelings for a boyfriend/girlfriend",
+      "zh_CN": "To fall out of love / lose romantic feelings for a boyfriend/girlfriend",
+      "ko": "To fall out of love / lose romantic feelings for a boyfriend/girlfriend",
+      "zh_HK": "To fall out of love / lose romantic feelings for a boyfriend/girlfriend",
+      "fr": "To fall out of love / lose romantic feelings for a boyfriend/girlfriend"
+    },
+    "example": {
+      "ja": "A: <ruby>彼氏/彼女に冷める<rt>かれし／かのじょにさめる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"彼氏/彼女に冷める\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"彼氏/彼女に冷める\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"彼氏/彼女に冷める\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"彼氏/彼女に冷める\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"彼氏/彼女に冷める\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"彼氏/彼女に冷める\".<br/>B: Yes, understood!"
+    },
+    "related": "To fall out of love / lose romantic feelings for a boyfriend/girlfriend — the same verb 冷める used figuratively, describin"
+  },
+  {
+    "id": "class_word_1939",
+    "word": "固くなる",
+    "reading": "かたくなる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To become hard/stiff.",
+      "ja": "固くなる",
+      "zh_TW": "To become hard/stiff.",
+      "zh_CN": "To become hard/stiff.",
+      "ko": "To become hard/stiff.",
+      "zh_HK": "To become hard/stiff.",
+      "fr": "To become hard/stiff."
+    },
+    "example": {
+      "ja": "A: <ruby>固くなる<rt>かたくなる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"固くなる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"固くなる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"固くなる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"固くなる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"固くなる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"固くなる\".<br/>B: Yes, understood!"
+    },
+    "related": "To become hard/stiff."
+  },
+  {
+    "id": "class_word_1940",
+    "word": "草",
+    "reading": "くさ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Grass / plant",
+      "ja": "草",
+      "zh_TW": "Grass / plant",
+      "zh_CN": "Grass / plant",
+      "ko": "Grass / plant",
+      "zh_HK": "Grass / plant",
+      "fr": "herbe"
+    },
+    "example": {
+      "ja": "<ruby>草草<rt>そうそう</rt></ruby>の<ruby>草<rt>くさ</rt></ruby>ァ！",
+      "en": "LOLOLOLOL!",
+      "zh_TW": "LOLOLOLOL!",
+      "zh_CN": "LOLOLOLOL!",
+      "ko": "LOLOLOLOL!",
+      "zh_HK": "LOLOLOLOL!",
+      "fr": "LOLOLOLOL!"
+    },
+    "related": "Grass / plant — but also a very common internet slang term meaning \"lol\" or \"haha,\" used to indicate something is funny."
+  },
+  {
+    "id": "class_word_1941",
+    "word": "手続き",
+    "reading": "てつづき",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "A procedure / paperwork process.",
+      "ja": "手続き",
+      "zh_TW": "A procedure / paperwork process.",
+      "zh_CN": "A procedure / paperwork process.",
+      "ko": "A procedure / paperwork process.",
+      "zh_HK": "A procedure / paperwork process.",
+      "fr": "formalité"
+    },
+    "example": {
+      "ja": "<ruby>彼<rt>かれ</rt></ruby>に<ruby>手続<rt>てつづ</rt></ruby>きを<ruby>説明<rt>せつめい</rt></ruby>した。",
+      "en": "I explained him the procedures.",
+      "zh_TW": "I explained him the procedures.",
+      "zh_CN": "I explained him the procedures.",
+      "ko": "I explained him the procedures.",
+      "zh_HK": "I explained him the procedures.",
+      "fr": "I explained him the procedures."
+    },
+    "related": "A procedure / paperwork process."
+  },
+  {
+    "id": "class_word_1942",
+    "word": "永住権",
+    "reading": "えいじゅうけん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Permanent residency.",
+      "ja": "永住権",
+      "zh_TW": "Permanent residency.",
+      "zh_CN": "Permanent residency.",
+      "ko": "Permanent residency.",
+      "zh_HK": "Permanent residency.",
+      "fr": "Permanent residency."
+    },
+    "example": {
+      "ja": "A: <ruby>永住権<rt>えいじゅうけん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"永住権\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"永住権\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"永住権\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"永住権\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"永住権\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"永住権\".<br/>B: Yes, understood!"
+    },
+    "related": "Permanent residency."
+  },
+  {
+    "id": "class_word_1943",
+    "word": "実家",
+    "reading": "じっか",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "One's parents' house / hometown home",
+      "ja": "実家",
+      "zh_TW": "One's parents' house / hometown home",
+      "zh_CN": "One's parents' house / hometown home",
+      "ko": "One's parents' house / hometown home",
+      "zh_HK": "One's parents' house / hometown home",
+      "fr": "maison (de ses parents)"
+    },
+    "example": {
+      "ja": "A: <ruby>実家<rt>じっか</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"実家\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"実家\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"実家\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"実家\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"実家\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"実家\".<br/>B: Yes, understood!"
+    },
+    "related": "One's parents' house / hometown home — the home where one grew up, as distinct from where one currently lives."
+  },
+  {
+    "id": "class_word_1944",
+    "word": "偶然",
+    "reading": "ぐうぜん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"By chance / coincidentally\"",
+      "ja": "偶然",
+      "zh_TW": "\"By chance / coincidentally\"",
+      "zh_CN": "\"By chance / coincidentally\"",
+      "ko": "\"By chance / coincidentally\"",
+      "zh_HK": "\"By chance / coincidentally\"",
+      "fr": "fortuitement (ni)"
+    },
+    "example": {
+      "ja": "<ruby>偶然<rt>ぐうぜん</rt></ruby>に<ruby>頼<rt>たよ</rt></ruby>るな。",
+      "en": "Don't leave it up to chance.",
+      "zh_TW": "Don't leave it up to chance.",
+      "zh_CN": "Don't leave it up to chance.",
+      "ko": "Don't leave it up to chance.",
+      "zh_HK": "Don't leave it up to chance.",
+      "fr": "Don't leave it up to chance."
+    },
+    "related": "\"By chance / coincidentally\" — both express something happening unexpectedly, but 偶然 is more formal/objective (often des"
+  },
+  {
+    "id": "class_word_1945",
+    "word": "治る",
+    "reading": "なおる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To heal / recover (from an illness or injury)",
+      "ja": "治る",
+      "zh_TW": "To heal / recover (from an illness or injury)",
+      "zh_CN": "To heal / recover (from an illness or injury)",
+      "ko": "To heal / recover (from an illness or injury)",
+      "zh_HK": "To heal / recover (from an illness or injury)",
+      "fr": "être corrigé"
+    },
+    "example": {
+      "ja": "<ruby>早<rt>はや</rt></ruby>く<ruby>治<rt>なお</rt></ruby>るといいですね。",
+      "en": "I hope you'll recover quickly.",
+      "zh_TW": "I hope you'll recover quickly.",
+      "zh_CN": "I hope you'll recover quickly.",
+      "ko": "I hope you'll recover quickly.",
+      "zh_HK": "I hope you'll recover quickly.",
+      "fr": "I hope you'll recover quickly."
+    },
+    "related": "To heal / recover (from an illness or injury) — intransitive, used specifically for living things getting better from si"
+  },
+  {
+    "id": "class_word_1946",
+    "word": "直す",
+    "reading": "なおす",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To fix / repair (an object)",
+      "ja": "直す",
+      "zh_TW": "To fix / repair (an object)",
+      "zh_CN": "To fix / repair (an object)",
+      "ko": "To fix / repair (an object)",
+      "zh_HK": "To fix / repair (an object)",
+      "fr": "corriger"
+    },
+    "example": {
+      "ja": "かけ<ruby>直<rt>なお</rt></ruby>すよ。",
+      "en": "I'll ring you back.",
+      "zh_TW": "I'll ring you back.",
+      "zh_CN": "I'll ring you back.",
+      "ko": "I'll ring you back.",
+      "zh_HK": "I'll ring you back.",
+      "fr": "I'll ring you back."
+    },
+    "related": "To fix / repair (an object) — transitive, used for non-living things like machines, objects, or abstract things like mis"
+  },
+  {
+    "id": "class_word_1947",
+    "word": "一時的に",
+    "reading": "いちじてきに",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Temporarily.",
+      "ja": "一時的に",
+      "zh_TW": "Temporarily.",
+      "zh_CN": "Temporarily.",
+      "ko": "Temporarily.",
+      "zh_HK": "Temporarily.",
+      "fr": "Temporarily."
+    },
+    "example": {
+      "ja": "A: <ruby>一時的に<rt>いちじてきに</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"一時的に\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"一時的に\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"一時的に\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"一時的に\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"一時的に\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"一時的に\".<br/>B: Yes, understood!"
+    },
+    "related": "Temporarily."
+  },
+  {
+    "id": "class_word_1948",
+    "word": "大使館",
+    "reading": "たいしかん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "An embassy.",
+      "ja": "大使館",
+      "zh_TW": "An embassy.",
+      "zh_CN": "An embassy.",
+      "ko": "An embassy.",
+      "zh_HK": "An embassy.",
+      "fr": "ambassade"
+    },
+    "example": {
+      "ja": "<ruby>私<rt>わたし</rt></ruby>は<ruby>明日<rt>あした</rt></ruby><ruby>大使館<rt>たいしかん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。",
+      "en": "I'll go to the embassy tomorrow.",
+      "zh_TW": "I'll go to the embassy tomorrow.",
+      "zh_CN": "I'll go to the embassy tomorrow.",
+      "ko": "I'll go to the embassy tomorrow.",
+      "zh_HK": "I'll go to the embassy tomorrow.",
+      "fr": "I'll go to the embassy tomorrow."
+    },
+    "related": "An embassy."
+  },
+  {
+    "id": "class_word_1949",
+    "word": "現地集合",
+    "reading": "げんちしゅうごう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Meeting on-site / meeting at the location",
+      "ja": "現地集合",
+      "zh_TW": "Meeting on-site / meeting at the location",
+      "zh_CN": "Meeting on-site / meeting at the location",
+      "ko": "Meeting on-site / meeting at the location",
+      "zh_HK": "Meeting on-site / meeting at the location",
+      "fr": "Meeting on-site / meeting at the location"
+    },
+    "example": {
+      "ja": "A: <ruby>現地集合<rt>げんちしゅうごう</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"現地集合\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"現地集合\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"現地集合\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"現地集合\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"現地集合\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"現地集合\".<br/>B: Yes, understood!"
+    },
+    "related": "Meeting on-site / meeting at the location — gathering directly at a destination rather than departing together from a si"
+  },
+  {
+    "id": "class_word_1950",
+    "word": "拒否された",
+    "reading": "きょひされた",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"Was rejected/denied\"",
+      "ja": "拒否された",
+      "zh_TW": "\"Was rejected/denied\"",
+      "zh_CN": "\"Was rejected/denied\"",
+      "ko": "\"Was rejected/denied\"",
+      "zh_HK": "\"Was rejected/denied\"",
+      "fr": "\"Was rejected/denied\""
+    },
+    "example": {
+      "ja": "A: <ruby>拒否された<rt>きょひされた</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"拒否された\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"拒否された\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"拒否された\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"拒否された\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"拒否された\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"拒否された\".<br/>B: Yes, understood!"
+    },
+    "related": "\"Was rejected/denied\" — the passive form of 拒否する (\"to refuse/reject\"), describing having a request, application, or prop"
+  },
+  {
+    "id": "class_word_1951",
+    "word": "承認されない",
+    "reading": "しょうにんされない",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"Is not approved\"",
+      "ja": "承認されない",
+      "zh_TW": "\"Is not approved\"",
+      "zh_CN": "\"Is not approved\"",
+      "ko": "\"Is not approved\"",
+      "zh_HK": "\"Is not approved\"",
+      "fr": "\"Is not approved\""
+    },
+    "example": {
+      "ja": "A: <ruby>承認されない<rt>しょうにんされない</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"承認されない\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"承認されない\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"承認されない\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"承認されない\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"承認されない\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"承認されない\".<br/>B: Yes, understood!"
+    },
+    "related": "\"Is not approved\" — the negative passive form of 承認する (\"to approve/authorize\"), describing a request or application fail"
+  },
+  {
+    "id": "class_word_1952",
+    "word": "宗教",
+    "reading": "しゅうきょう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Religion.",
+      "ja": "宗教",
+      "zh_TW": "Religion.",
+      "zh_CN": "Religion.",
+      "ko": "Religion.",
+      "zh_HK": "Religion.",
+      "fr": "religion"
+    },
+    "example": {
+      "ja": "<ruby>宗教<rt>しゅうきょう</rt></ruby>は<ruby>信<rt>しん</rt></ruby>じない。",
+      "en": "I don't believe in religion.",
+      "zh_TW": "I don't believe in religion.",
+      "zh_CN": "I don't believe in religion.",
+      "ko": "I don't believe in religion.",
+      "zh_HK": "I don't believe in religion.",
+      "fr": "I don't believe in religion."
+    },
+    "related": "Religion."
+  },
+  {
+    "id": "class_word_1953",
+    "word": "問題が起きる",
+    "reading": "もんだいがおきる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "A problem arises/occurs.",
+      "ja": "問題が起きる",
+      "zh_TW": "A problem arises/occurs.",
+      "zh_CN": "A problem arises/occurs.",
+      "ko": "A problem arises/occurs.",
+      "zh_HK": "A problem arises/occurs.",
+      "fr": "A problem arises/occurs."
+    },
+    "example": {
+      "ja": "A: <ruby>問題が起きる<rt>もんだいがおきる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"問題が起きる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"問題が起きる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"問題が起きる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"問題が起きる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"問題が起きる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"問題が起きる\".<br/>B: Yes, understood!"
+    },
+    "related": "A problem arises/occurs."
+  },
+  {
+    "id": "class_word_1954",
+    "word": "奪う",
+    "reading": "うばう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To steal / to take (something) away by force",
+      "ja": "奪う",
+      "zh_TW": "To steal / to take (something) away by force",
+      "zh_CN": "To steal / to take (something) away by force",
+      "ko": "To steal / to take (something) away by force",
+      "zh_HK": "To steal / to take (something) away by force",
+      "fr": "dérober"
+    },
+    "example": {
+      "ja": "<ruby>機械<rt>きかい</rt></ruby>は<ruby>仕事<rt>しごと</rt></ruby>から<ruby>創造的<rt>そうぞうてき</rt></ruby>な<ruby>興味<rt>きょうみ</rt></ruby>を<ruby>奪<rt>うば</rt></ruby>う。",
+      "en": "Machinery robs work of creative interest.",
+      "zh_TW": "Machinery robs work of creative interest.",
+      "zh_CN": "Machinery robs work of creative interest.",
+      "ko": "Machinery robs work of creative interest.",
+      "zh_HK": "Machinery robs work of creative interest.",
+      "fr": "Machinery robs work of creative interest."
+    },
+    "related": "To steal / to take (something) away by force — implies taking something from someone against their will, often forcefull"
+  },
+  {
+    "id": "class_word_1955",
+    "word": "奪われる",
+    "reading": "うばわれる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To have (something) taken away / to be robbed of (something)",
+      "ja": "奪われる",
+      "zh_TW": "To have (something) taken away / to be robbed of (something)",
+      "zh_CN": "To have (something) taken away / to be robbed of (something)",
+      "ko": "To have (something) taken away / to be robbed of (something)",
+      "zh_HK": "To have (something) taken away / to be robbed of (something)",
+      "fr": "To have (something) taken away / to be robbed of (something)"
+    },
+    "example": {
+      "ja": "A: <ruby>奪われる<rt>うばわれる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"奪われる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"奪われる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"奪われる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"奪われる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"奪われる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"奪われる\".<br/>B: Yes, understood!"
+    },
+    "related": "To have (something) taken away / to be robbed of (something) — the passive form of 奪う, describing the experience of losi"
+  },
+  {
+    "id": "class_word_1956",
+    "word": "証明書",
+    "reading": "しょうめいしょ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "A certificate / proof document.",
+      "ja": "証明書",
+      "zh_TW": "A certificate / proof document.",
+      "zh_CN": "A certificate / proof document.",
+      "ko": "A certificate / proof document.",
+      "zh_HK": "A certificate / proof document.",
+      "fr": "A certificate / proof document."
+    },
+    "example": {
+      "ja": "A: <ruby>証明書<rt>しょうめいしょ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"証明書\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"証明書\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"証明書\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"証明書\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"証明書\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"証明書\".<br/>B: Yes, understood!"
+    },
+    "related": "A certificate / proof document."
+  },
+  {
+    "id": "class_word_1957",
+    "word": "協定",
+    "reading": "きょうてい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "An agreement / pact (typically formal, often between governments, organizations, or companies).",
+      "ja": "協定",
+      "zh_TW": "An agreement / pact (typically formal, often between governments, organizations, or companies).",
+      "zh_CN": "An agreement / pact (typically formal, often between governments, organizations, or companies).",
+      "ko": "An agreement / pact (typically formal, often between governments, organizations, or companies).",
+      "zh_HK": "An agreement / pact (typically formal, often between governments, organizations, or companies).",
+      "fr": "accord"
+    },
+    "example": {
+      "ja": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>協定<rt>きょうてい</rt></ruby>を<ruby>破<rt>やぶ</rt></ruby>ることがよくある。",
+      "en": "He often offends against our agreement.",
+      "zh_TW": "He often offends against our agreement.",
+      "zh_CN": "He often offends against our agreement.",
+      "ko": "He often offends against our agreement.",
+      "zh_HK": "He often offends against our agreement.",
+      "fr": "He often offends against our agreement."
+    },
+    "related": "An agreement / pact (typically formal, often between governments, organizations, or companies)."
+  },
+  {
+    "id": "class_word_1958",
+    "word": "確実ではない",
+    "reading": "かくじつではない",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"It's not certain\"",
+      "ja": "確実ではない",
+      "zh_TW": "\"It's not certain\"",
+      "zh_CN": "\"It's not certain\"",
+      "ko": "\"It's not certain\"",
+      "zh_HK": "\"It's not certain\"",
+      "fr": "\"It's not certain\""
+    },
+    "example": {
+      "ja": "A: <ruby>確実ではない<rt>かくじつではない</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"確実ではない\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"確実ではない\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"確実ではない\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"確実ではない\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"確実ではない\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"確実ではない\".<br/>B: Yes, understood!"
+    },
+    "related": "\"It's not certain\" — the negative form of 確実だ (\"to be certain/sure\"), describing something whose outcome or truth is unc"
+  },
+  {
+    "id": "class_word_1959",
+    "word": "世界一周",
+    "reading": "せかいいっしゅう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "A trip around the world.",
+      "ja": "世界一周",
+      "zh_TW": "A trip around the world.",
+      "zh_CN": "A trip around the world.",
+      "ko": "A trip around the world.",
+      "zh_HK": "A trip around the world.",
+      "fr": "A trip around the world."
+    },
+    "example": {
+      "ja": "A: <ruby>世界一周<rt>せかいいっしゅう</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"世界一周\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"世界一周\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"世界一周\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"世界一周\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"世界一周\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"世界一周\".<br/>B: Yes, understood!"
+    },
+    "related": "A trip around the world."
+  },
+  {
+    "id": "class_word_1960",
+    "word": "返済",
+    "reading": "へんさい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Repayment (of a debt/loan).",
+      "ja": "返済",
+      "zh_TW": "Repayment (of a debt/loan).",
+      "zh_CN": "Repayment (of a debt/loan).",
+      "ko": "Repayment (of a debt/loan).",
+      "zh_HK": "Repayment (of a debt/loan).",
+      "fr": "remboursement"
+    },
+    "example": {
+      "ja": "<ruby>私<rt>わたし</rt></ruby>は<ruby>父<rt>ちち</rt></ruby>の<ruby>借金<rt>しゃっきん</rt></ruby><ruby>返済<rt>へんさい</rt></ruby>を<ruby>免除<rt>めんじょ</rt></ruby>された。",
+      "en": "I was absolved from paying my father's debt.",
+      "zh_TW": "I was absolved from paying my father's debt.",
+      "zh_CN": "I was absolved from paying my father's debt.",
+      "ko": "I was absolved from paying my father's debt.",
+      "zh_HK": "I was absolved from paying my father's debt.",
+      "fr": "I was absolved from paying my father's debt."
+    },
+    "related": "Repayment (of a debt/loan)."
+  },
+  {
+    "id": "class_word_1961",
+    "word": "一か八か",
+    "reading": "いちかばちか",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"All or nothing\" / \"sink or swim\"",
+      "ja": "一か八か",
+      "zh_TW": "\"All or nothing\" / \"sink or swim\"",
+      "zh_CN": "\"All or nothing\" / \"sink or swim\"",
+      "ko": "\"All or nothing\" / \"sink or swim\"",
+      "zh_HK": "\"All or nothing\" / \"sink or swim\"",
+      "fr": "\"All or nothing\" / \"sink or swim\""
+    },
+    "example": {
+      "ja": "A: <ruby>一か八か<rt>いちかばちか</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"一か八か\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"一か八か\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"一か八か\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"一か八か\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"一か八か\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"一か八か\".<br/>B: Yes, understood!"
+    },
+    "related": "\"All or nothing\" / \"sink or swim\" — an idiom describing taking a big risk without knowing the outcome, betting everythin"
+  },
+  {
+    "id": "class_word_1962",
+    "word": "人質",
+    "reading": "ひとじち",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "A hostage.",
+      "ja": "人質",
+      "zh_TW": "A hostage.",
+      "zh_CN": "A hostage.",
+      "ko": "A hostage.",
+      "zh_HK": "A hostage.",
+      "fr": "otage"
+    },
+    "example": {
+      "ja": "<ruby>人質<rt>ひとじち</rt></ruby>は<ruby>解放<rt>かいほう</rt></ruby>されるだろう。",
+      "en": "The hostages will be released.",
+      "zh_TW": "The hostages will be released.",
+      "zh_CN": "The hostages will be released.",
+      "ko": "The hostages will be released.",
+      "zh_HK": "The hostages will be released.",
+      "fr": "The hostages will be released."
+    },
+    "related": "A hostage."
+  },
+  {
+    "id": "class_word_1963",
+    "word": "やろう！",
+    "reading": "やろう！",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"Let's do it!\"",
+      "ja": "やろう！",
+      "zh_TW": "\"Let's do it!\"",
+      "zh_CN": "\"Let's do it!\"",
+      "ko": "\"Let's do it!\"",
+      "zh_HK": "\"Let's do it!\"",
+      "fr": "\"Let's do it!\""
+    },
+    "example": {
+      "ja": "A: <ruby>やろう！<rt>やろう！</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"やろう！\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"やろう！\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"やろう！\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"やろう！\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"やろう！\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"やろう！\".<br/>B: Yes, understood!"
+    },
+    "related": "\"Let's do it!\" — the plain/casual volitional form of やる (\"to do\"), used to enthusiastically rally oneself or others into"
+  },
+  {
+    "id": "class_word_1964",
+    "word": "迷子",
+    "reading": "まいご",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "A lost child",
+      "ja": "迷子",
+      "zh_TW": "A lost child",
+      "zh_CN": "A lost child",
+      "ko": "A lost child",
+      "zh_HK": "A lost child",
+      "fr": "enfant perdu (abandonné)"
+    },
+    "example": {
+      "ja": "<ruby>簡単<rt>かんたん</rt></ruby>に<ruby>迷子<rt>まいご</rt></ruby>になる。",
+      "en": "It's easy to get lost.",
+      "zh_TW": "It's easy to get lost.",
+      "zh_CN": "It's easy to get lost.",
+      "ko": "It's easy to get lost.",
+      "zh_HK": "It's easy to get lost.",
+      "fr": "It's easy to get lost."
+    },
+    "related": "A lost child — though colloquially can also refer to any person (or even a pet) who has become lost/separated from their"
+  },
+  {
+    "id": "class_word_1965",
+    "word": "起業",
+    "reading": "きぎょう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Starting a business / entrepreneurship.",
+      "ja": "起業",
+      "zh_TW": "Starting a business / entrepreneurship.",
+      "zh_CN": "Starting a business / entrepreneurship.",
+      "ko": "Starting a business / entrepreneurship.",
+      "zh_HK": "Starting a business / entrepreneurship.",
+      "fr": "Starting a business / entrepreneurship."
+    },
+    "example": {
+      "ja": "<ruby>商法<rt>しょうほう</rt></ruby>は<ruby>企業<rt>きぎょう</rt></ruby><ruby>法<rt>ほう</rt></ruby>といえる。",
+      "en": "Commercial Code can be called an enterprise method.",
+      "zh_TW": "Commercial Code can be called an enterprise method.",
+      "zh_CN": "Commercial Code can be called an enterprise method.",
+      "ko": "Commercial Code can be called an enterprise method.",
+      "zh_HK": "Commercial Code can be called an enterprise method.",
+      "fr": "Commercial Code can be called an enterprise method."
+    },
+    "related": "Starting a business / entrepreneurship."
+  },
+  {
+    "id": "class_word_1966",
+    "word": "〜っぽい",
+    "reading": "っぽい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"-ish / seems like / has the quality of ~\"",
+      "ja": "〜っぽい",
+      "zh_TW": "具有某种倾向",
+      "zh_CN": "具有某种倾向",
+      "ko": "\"-ish / seems like / has the quality of ~\"",
+      "zh_HK": "具有某种倾向",
+      "fr": "\"-ish / seems like / has the quality of ~\""
+    },
+    "example": {
+      "ja": "A: <ruby>〜っぽい<rt>っぽい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜っぽい\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜っぽい\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜っぽい\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜っぽい\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜っぽい\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜っぽい\".<br/>B: Yes, understood!"
+    },
+    "related": "\"-ish / seems like / has the quality of ~\" — a casual suffix attached to nouns or adjective stems to describe something "
+  },
+  {
+    "id": "class_word_1967",
+    "word": "言われてみれば...",
+    "reading": "いわれてみれば",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"Now that you mention it... / come to think of it...\"",
+      "ja": "言われてみれば...",
+      "zh_TW": "\"Now that you mention it... / come to think of it...\"",
+      "zh_CN": "\"Now that you mention it... / come to think of it...\"",
+      "ko": "\"Now that you mention it... / come to think of it...\"",
+      "zh_HK": "\"Now that you mention it... / come to think of it...\"",
+      "fr": "\"Now that you mention it... / come to think of it...\""
+    },
+    "example": {
+      "ja": "A: <ruby>言われてみれば...<rt>いわれてみれば</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"言われてみれば...\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"言われてみれば...\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"言われてみれば...\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"言われてみれば...\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"言われてみれば...\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"言われてみれば...\".<br/>B: Yes, understood!"
+    },
+    "related": "\"Now that you mention it... / come to think of it...\" — a set phrase used when someone's comment makes you suddenly real"
+  },
+  {
+    "id": "class_word_1968",
+    "word": "肝心な",
+    "reading": "かんじんな",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Crucial / essential / most important",
+      "ja": "肝心な",
+      "zh_TW": "Crucial / essential / most important",
+      "zh_CN": "Crucial / essential / most important",
+      "ko": "Crucial / essential / most important",
+      "zh_HK": "Crucial / essential / most important",
+      "fr": "Crucial / essential / most important"
+    },
+    "example": {
+      "ja": "A: <ruby>肝心な<rt>かんじんな</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"肝心な\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"肝心な\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"肝心な\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"肝心な\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"肝心な\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"肝心な\".<br/>B: Yes, understood!"
+    },
+    "related": "Crucial / essential / most important — a na-adjective emphasizing that something is the key, indispensable point."
+  },
+  {
+    "id": "class_word_1969",
+    "word": "対処する",
+    "reading": "たいしょする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To deal with / handle / cope with (a problem or situation).",
+      "ja": "対処する",
+      "zh_TW": "To deal with / handle / cope with (a problem or situation).",
+      "zh_CN": "To deal with / handle / cope with (a problem or situation).",
+      "ko": "To deal with / handle / cope with (a problem or situation).",
+      "zh_HK": "To deal with / handle / cope with (a problem or situation).",
+      "fr": "To deal with / handle / cope with (a problem or situation)."
+    },
+    "example": {
+      "ja": "A: <ruby>対処する<rt>たいしょする</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"対処する\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"対処する\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"対処する\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"対処する\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"対処する\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"対処する\".<br/>B: Yes, understood!"
+    },
+    "related": "To deal with / handle / cope with (a problem or situation)."
+  },
+  {
+    "id": "class_word_1970",
+    "word": "油断する",
+    "reading": "ゆだんする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To let one's guard down / become careless (due to overconfidence or complacency).",
+      "ja": "油断する",
+      "zh_TW": "To let one's guard down / become careless (due to overconfidence or complacency).",
+      "zh_CN": "To let one's guard down / become careless (due to overconfidence or complacency).",
+      "ko": "To let one's guard down / become careless (due to overconfidence or complacency).",
+      "zh_HK": "To let one's guard down / become careless (due to overconfidence or complacency).",
+      "fr": "To let one's guard down / become careless (due to overconfidence or complacency)."
+    },
+    "example": {
+      "ja": "A: <ruby>油断する<rt>ゆだんする</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"油断する\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"油断する\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"油断する\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"油断する\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"油断する\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"油断する\".<br/>B: Yes, understood!"
+    },
+    "related": "To let one's guard down / become careless (due to overconfidence or complacency)."
+  },
+  {
+    "id": "class_word_1971",
+    "word": "抜け毛",
+    "reading": "ぬけげ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Hair loss / fallen-out hair.",
+      "ja": "抜け毛",
+      "zh_TW": "Hair loss / fallen-out hair.",
+      "zh_CN": "Hair loss / fallen-out hair.",
+      "ko": "Hair loss / fallen-out hair.",
+      "zh_HK": "Hair loss / fallen-out hair.",
+      "fr": "Hair loss / fallen-out hair."
+    },
+    "example": {
+      "ja": "A: <ruby>抜け毛<rt>ぬけげ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"抜け毛\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"抜け毛\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"抜け毛\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"抜け毛\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"抜け毛\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"抜け毛\".<br/>B: Yes, understood!"
+    },
+    "related": "Hair loss / fallen-out hair."
+  },
+  {
+    "id": "class_word_1972",
+    "word": "応援する",
+    "reading": "おうえんする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To cheer on / support (a person, team, or cause).",
+      "ja": "応援する",
+      "zh_TW": "To cheer on / support (a person, team, or cause).",
+      "zh_CN": "To cheer on / support (a person, team, or cause).",
+      "ko": "To cheer on / support (a person, team, or cause).",
+      "zh_HK": "To cheer on / support (a person, team, or cause).",
+      "fr": "To cheer on / support (a person, team, or cause)."
+    },
+    "example": {
+      "ja": "A: <ruby>応援する<rt>おうえんする</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"応援する\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"応援する\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"応援する\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"応援する\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"応援する\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"応援する\".<br/>B: Yes, understood!"
+    },
+    "related": "To cheer on / support (a person, team, or cause)."
+  },
+  {
+    "id": "class_word_1973",
+    "word": "私にはどうすることもできない",
+    "reading": "わたしにはどうすることもできない",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"There's nothing I can do about it\" vs. \"there's nothing that can be done\"",
+      "ja": "私にはどうすることもできない",
+      "zh_TW": "\"There's nothing I can do about it\" vs. \"there's nothing that can be done\"",
+      "zh_CN": "\"There's nothing I can do about it\" vs. \"there's nothing that can be done\"",
+      "ko": "\"There's nothing I can do about it\" vs. \"there's nothing that can be done\"",
+      "zh_HK": "\"There's nothing I can do about it\" vs. \"there's nothing that can be done\"",
+      "fr": "\"There's nothing I can do about it\" vs. \"there's nothing that can be done\""
+    },
+    "example": {
+      "ja": "A: <ruby>私にはどうすることもできない<rt>わたしにはどうすることもできない</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"私にはどうすることもできない\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"私にはどうすることもできない\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"私にはどうすることもできない\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"私にはどうすることもできない\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"私にはどうすることもできない\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"私にはどうすることもできない\".<br/>B: Yes, understood!"
+    },
+    "related": "\"There's nothing I can do about it\" vs. \"there's nothing that can be done\" — both express helplessness, but 私にはどうすることもでき"
+  },
+  {
+    "id": "class_word_1974",
+    "word": "見れなかった",
+    "reading": "みれなかった",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"Couldn't watch/see (it)\" (missed the opportunity/ability) vs. \"couldn't see (it)\" (it wasn't visible)",
+      "ja": "見れなかった",
+      "zh_TW": "\"Couldn't watch/see (it)\" (missed the opportunity/ability) vs. \"couldn't see (it)\" (it wasn't visible)",
+      "zh_CN": "\"Couldn't watch/see (it)\" (missed the opportunity/ability) vs. \"couldn't see (it)\" (it wasn't visible)",
+      "ko": "\"Couldn't watch/see (it)\" (missed the opportunity/ability) vs. \"couldn't see (it)\" (it wasn't visible)",
+      "zh_HK": "\"Couldn't watch/see (it)\" (missed the opportunity/ability) vs. \"couldn't see (it)\" (it wasn't visible)",
+      "fr": "\"Couldn't watch/see (it)\" (missed the opportunity/ability) vs. \"couldn't see (it)\" (it wasn't visible)"
+    },
+    "example": {
+      "ja": "A: <ruby>見れなかった<rt>みれなかった</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"見れなかった\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"見れなかった\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"見れなかった\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"見れなかった\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"見れなかった\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"見れなかった\".<br/>B: Yes, understood!"
+    },
+    "related": "\"Couldn't watch/see (it)\" (missed the opportunity/ability) vs. \"couldn't see (it)\" (it wasn't visible) — 見れなかった is the n"
+  },
+  {
+    "id": "class_word_1975",
+    "word": "有名人",
+    "reading": "ゆうめいじん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "A famous person / celebrity",
+      "ja": "有名人",
+      "zh_TW": "A famous person / celebrity",
+      "zh_CN": "A famous person / celebrity",
+      "ko": "A famous person / celebrity",
+      "zh_HK": "A famous person / celebrity",
+      "fr": "A famous person / celebrity"
+    },
+    "example": {
+      "ja": "A: <ruby>有名人<rt>ゆうめいじん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"有名人\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"有名人\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"有名人\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"有名人\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"有名人\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"有名人\".<br/>B: Yes, understood!"
+    },
+    "related": "A famous person / celebrity — broader than 芸能人, covering anyone well-known, not just people in entertainment (e.g. athle"
+  },
+  {
+    "id": "class_word_1976",
+    "word": "歌詞",
+    "reading": "かし",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Lyrics.",
+      "ja": "歌詞",
+      "zh_TW": "Lyrics.",
+      "zh_CN": "Lyrics.",
+      "ko": "Lyrics.",
+      "zh_HK": "Lyrics.",
+      "fr": "paroles d'une chanson"
+    },
+    "example": {
+      "ja": "お<ruby>菓子<rt>かし</rt></ruby><ruby>買<rt>か</rt></ruby>ってよ。",
+      "en": "Buy me a snack.",
+      "zh_TW": "Buy me a snack.",
+      "zh_CN": "Buy me a snack.",
+      "ko": "Buy me a snack.",
+      "zh_HK": "Buy me a snack.",
+      "fr": "Buy me a snack."
+    },
+    "related": "Lyrics."
+  },
+  {
+    "id": "class_word_1977",
+    "word": "洋楽",
+    "reading": "ようがく",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Western/foreign music",
+      "ja": "洋楽",
+      "zh_TW": "Western/foreign music",
+      "zh_CN": "Western/foreign music",
+      "ko": "Western/foreign music",
+      "zh_HK": "Western/foreign music",
+      "fr": "Western/foreign music"
+    },
+    "example": {
+      "ja": "A: <ruby>洋楽<rt>ようがく</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"洋楽\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"洋楽\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"洋楽\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"洋楽\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"洋楽\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"洋楽\".<br/>B: Yes, understood!"
+    },
+    "related": "Western/foreign music — a Japanese term specifically referring to non-Japanese (typically Western, especially English-la"
+  },
+  {
+    "id": "class_word_1978",
+    "word": "〜のうちにはいらない",
+    "reading": "のうちにはいらない",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"Doesn't count as / isn't included among ~\"",
+      "ja": "〜のうちにはいらない",
+      "zh_TW": "\"Doesn't count as / isn't included among ~\"",
+      "zh_CN": "\"Doesn't count as / isn't included among ~\"",
+      "ko": "\"Doesn't count as / isn't included among ~\"",
+      "zh_HK": "\"Doesn't count as / isn't included among ~\"",
+      "fr": "\"Doesn't count as / isn't included among ~\""
+    },
+    "example": {
+      "ja": "A: <ruby>〜のうちにはいらない<rt>のうちにはいらない</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜のうちにはいらない\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜のうちにはいらない\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜のうちにはいらない\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜のうちにはいらない\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜のうちにはいらない\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜のうちにはいらない\".<br/>B: Yes, understood!"
+    },
+    "related": "\"Doesn't count as / isn't included among ~\" — a phrase used to say something falls outside a particular category, often "
+  },
+  {
+    "id": "class_word_1979",
+    "word": "気のせい",
+    "reading": "きのせい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"It's just your imagination\" / \"it's all in your head\"",
+      "ja": "気のせい",
+      "zh_TW": "\"It's just your imagination\" / \"it's all in your head\"",
+      "zh_CN": "\"It's just your imagination\" / \"it's all in your head\"",
+      "ko": "\"It's just your imagination\" / \"it's all in your head\"",
+      "zh_HK": "\"It's just your imagination\" / \"it's all in your head\"",
+      "fr": "\"It's just your imagination\" / \"it's all in your head\""
+    },
+    "example": {
+      "ja": "A: <ruby>気のせい<rt>きのせい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"気のせい\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"気のせい\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"気のせい\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"気のせい\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"気のせい\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"気のせい\".<br/>B: Yes, understood!"
+    },
+    "related": "\"It's just your imagination\" / \"it's all in your head\" — used to dismiss a feeling, sensation, or perception as not base"
+  },
+  {
+    "id": "class_word_1980",
+    "word": "一つのもの",
+    "reading": "ひとつのもの",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"One thing\" (a tangible object) vs. \"one thing\" (an abstract matter/event)",
+      "ja": "一つのもの",
+      "zh_TW": "\"One thing\" (a tangible object) vs. \"one thing\" (an abstract matter/event)",
+      "zh_CN": "\"One thing\" (a tangible object) vs. \"one thing\" (an abstract matter/event)",
+      "ko": "\"One thing\" (a tangible object) vs. \"one thing\" (an abstract matter/event)",
+      "zh_HK": "\"One thing\" (a tangible object) vs. \"one thing\" (an abstract matter/event)",
+      "fr": "\"One thing\" (a tangible object) vs. \"one thing\" (an abstract matter/event)"
+    },
+    "example": {
+      "ja": "A: <ruby>一つのもの<rt>ひとつのもの</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"一つのもの\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"一つのもの\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"一つのもの\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"一つのもの\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"一つのもの\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"一つのもの\".<br/>B: Yes, understood!"
+    },
+    "related": "\"One thing\" (a tangible object) vs. \"one thing\" (an abstract matter/event) — もの refers to concrete, physical things, whi"
+  },
+  {
+    "id": "class_word_1981",
+    "word": "デブ",
+    "reading": "デブ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"Fatty\" / \"fat person\"",
+      "ja": "デブ",
+      "zh_TW": "\"Fatty\" / \"fat person\"",
+      "zh_CN": "\"Fatty\" / \"fat person\"",
+      "ko": "\"Fatty\" / \"fat person\"",
+      "zh_HK": "\"Fatty\" / \"fat person\"",
+      "fr": "\"Fatty\" / \"fat person\""
+    },
+    "example": {
+      "ja": "A: <ruby>デブ<rt>デブ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"デブ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"デブ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"デブ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"デブ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"デブ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"デブ\".<br/>B: Yes, understood!"
+    },
+    "related": "\"Fatty\" / \"fat person\" — a blunt, casual, and often rude/insulting slang term for someone overweight; not polite or neut"
+  },
+  {
+    "id": "class_word_1982",
+    "word": "釣った魚に餌をやらない",
+    "reading": "つったさかなにえさをやらない",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"Doesn't feed the fish they've already caught\"",
+      "ja": "釣った魚に餌をやらない",
+      "zh_TW": "\"Doesn't feed the fish they've already caught\"",
+      "zh_CN": "\"Doesn't feed the fish they've already caught\"",
+      "ko": "\"Doesn't feed the fish they've already caught\"",
+      "zh_HK": "\"Doesn't feed the fish they've already caught\"",
+      "fr": "\"Doesn't feed the fish they've already caught\""
+    },
+    "example": {
+      "ja": "A: <ruby>釣った魚に餌をやらない<rt>つったさかなにえさをやらない</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"釣った魚に餌をやらない\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"釣った魚に餌をやらない\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"釣った魚に餌をやらない\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"釣った魚に餌をやらない\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"釣った魚に餌をやらない\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"釣った魚に餌をやらない\".<br/>B: Yes, understood!"
+    },
+    "related": "\"Doesn't feed the fish they've already caught\" — an idiom describing someone (often in a romantic relationship) who stop"
+  },
+  {
+    "id": "class_word_1983",
+    "word": "想像する",
+    "reading": "そうぞうする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To imagine.",
+      "ja": "想像する",
+      "zh_TW": "To imagine.",
+      "zh_CN": "To imagine.",
+      "ko": "To imagine.",
+      "zh_HK": "To imagine.",
+      "fr": "To imagine."
+    },
+    "example": {
+      "ja": "A: <ruby>想像する<rt>そうぞうする</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"想像する\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"想像する\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"想像する\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"想像する\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"想像する\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"想像する\".<br/>B: Yes, understood!"
+    },
+    "related": "To imagine."
+  },
+  {
+    "id": "class_word_1984",
+    "word": "お祈りする",
+    "reading": "おいのりする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To pray",
+      "ja": "お祈りする",
+      "zh_TW": "To pray",
+      "zh_CN": "To pray",
+      "ko": "To pray",
+      "zh_HK": "To pray",
+      "fr": "To pray"
+    },
+    "example": {
+      "ja": "A: <ruby>お祈りする<rt>おいのりする</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"お祈りする\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"お祈りする\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"お祈りする\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"お祈りする\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"お祈りする\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"お祈りする\".<br/>B: Yes, understood!"
+    },
+    "related": "To pray — but in the context of job hunting (就活), colloquially refers to receiving a rejection notice, named after the p"
+  },
+  {
+    "id": "class_word_1985",
+    "word": "感覚",
+    "reading": "かんかく",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "A sense / feeling / sensation",
+      "ja": "感覚",
+      "zh_TW": "A sense / feeling / sensation",
+      "zh_CN": "A sense / feeling / sensation",
+      "ko": "A sense / feeling / sensation",
+      "zh_HK": "A sense / feeling / sensation",
+      "fr": "sens"
+    },
+    "example": {
+      "ja": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>感覚<rt>かんかく</rt></ruby>が<ruby>鈍<rt>にぶ</rt></ruby>い。",
+      "en": "He has dull senses.",
+      "zh_TW": "He has dull senses.",
+      "zh_CN": "He has dull senses.",
+      "ko": "He has dull senses.",
+      "zh_HK": "He has dull senses.",
+      "fr": "He has dull senses."
+    },
+    "related": "A sense / feeling / sensation — can refer to physical senses (touch, taste) or a more abstract intuitive feeling/sensibi"
+  },
+  {
+    "id": "class_word_1986",
+    "word": "整理する",
+    "reading": "せいりする",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"To organize/sort out\" vs. \"organizing and tidying\"",
+      "ja": "整理する",
+      "zh_TW": "\"To organize/sort out\" vs. \"organizing and tidying\"",
+      "zh_CN": "\"To organize/sort out\" vs. \"organizing and tidying\"",
+      "ko": "\"To organize/sort out\" vs. \"organizing and tidying\"",
+      "zh_HK": "\"To organize/sort out\" vs. \"organizing and tidying\"",
+      "fr": "\"To organize/sort out\" vs. \"organizing and tidying\""
+    },
+    "example": {
+      "ja": "A: <ruby>整理する<rt>せいりする</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"整理する\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"整理する\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"整理する\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"整理する\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"整理する\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"整理する\".<br/>B: Yes, understood!"
+    },
+    "related": "\"To organize/sort out\" vs. \"organizing and tidying\" — 整理する is the general verb for sorting, organizing, or decluttering "
+  },
+  {
+    "id": "class_word_1987",
+    "word": "〜のためじゃない",
+    "reading": "のためじゃない",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"It's not for the sake of ~ / it's not because of ~\"",
+      "ja": "〜のためじゃない",
+      "zh_TW": "\"It's not for the sake of ~ / it's not because of ~\"",
+      "zh_CN": "\"It's not for the sake of ~ / it's not because of ~\"",
+      "ko": "\"It's not for the sake of ~ / it's not because of ~\"",
+      "zh_HK": "\"It's not for the sake of ~ / it's not because of ~\"",
+      "fr": "\"It's not for the sake of ~ / it's not because of ~\""
+    },
+    "example": {
+      "ja": "A: <ruby>〜のためじゃない<rt>のためじゃない</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"〜のためじゃない\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"〜のためじゃない\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"〜のためじゃない\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"〜のためじゃない\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"〜のためじゃない\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"〜のためじゃない\".<br/>B: Yes, understood!"
+    },
+    "related": "\"It's not for the sake of ~ / it's not because of ~\" — the negative form of 〜のため (\"for the sake of / because of\"), used "
+  },
+  {
+    "id": "class_word_1988",
+    "word": "花をつむ",
+    "reading": "はなをつむ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To pick flowers.",
+      "ja": "花をつむ",
+      "zh_TW": "To pick flowers.",
+      "zh_CN": "To pick flowers.",
+      "ko": "To pick flowers.",
+      "zh_HK": "To pick flowers.",
+      "fr": "To pick flowers."
+    },
+    "example": {
+      "ja": "A: <ruby>花をつむ<rt>はなをつむ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"花をつむ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"花をつむ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"花をつむ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"花をつむ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"花をつむ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"花をつむ\".<br/>B: Yes, understood!"
+    },
+    "related": "To pick flowers."
+  },
+  {
+    "id": "class_word_1989",
+    "word": "偉いね",
+    "reading": "えらいね",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"That's admirable/well done\" vs. \"great/admirable/high-ranking\" vs. \"acting high and mighty\"",
+      "ja": "偉いね",
+      "zh_TW": "\"That's admirable/well done\" vs. \"great/admirable/high-ranking\" vs. \"acting high and mighty\"",
+      "zh_CN": "\"That's admirable/well done\" vs. \"great/admirable/high-ranking\" vs. \"acting high and mighty\"",
+      "ko": "\"That's admirable/well done\" vs. \"great/admirable/high-ranking\" vs. \"acting high and mighty\"",
+      "zh_HK": "\"That's admirable/well done\" vs. \"great/admirable/high-ranking\" vs. \"acting high and mighty\"",
+      "fr": "\"That's admirable/well done\" vs. \"great/admirable/high-ranking\" vs. \"acting high and mighty\""
+    },
+    "example": {
+      "ja": "A: <ruby>偉いね<rt>えらいね</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"偉いね\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"偉いね\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"偉いね\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"偉いね\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"偉いね\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"偉いね\".<br/>B: Yes, understood!"
+    },
+    "related": "\"That's admirable/well done\" vs. \"great/admirable/high-ranking\" vs. \"acting high and mighty\" — 偉いね is a warm, casual com"
+  },
+  {
+    "id": "class_word_1990",
+    "word": "税金",
+    "reading": "ぜいきん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Tax.",
+      "ja": "税金",
+      "zh_TW": "Tax.",
+      "zh_CN": "Tax.",
+      "ko": "Tax.",
+      "zh_HK": "Tax.",
+      "fr": "impôt"
+    },
+    "example": {
+      "ja": "<ruby>税金<rt>ぜいきん</rt></ruby>は<ruby>収入<rt>しゅうにゅう</rt></ruby>に<ruby>基<rt>もと</rt></ruby>づく。",
+      "en": "Taxation is based on income.",
+      "zh_TW": "Taxation is based on income.",
+      "zh_CN": "Taxation is based on income.",
+      "ko": "Taxation is based on income.",
+      "zh_HK": "Taxation is based on income.",
+      "fr": "Taxation is based on income."
+    },
+    "related": "Tax."
+  },
+  {
+    "id": "class_word_1991",
+    "word": "拒否される",
+    "reading": "きょひされる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"To be rejected/refused\" (formal, often for applications/requests) vs. \"to be turned down\" (more casual, often for personal requests/invitations)",
+      "ja": "拒否される",
+      "zh_TW": "\"To be rejected/refused\" (formal, often for applications/requests) vs. \"to be turned down\" (more casual, often for personal requests/invitations)",
+      "zh_CN": "\"To be rejected/refused\" (formal, often for applications/requests) vs. \"to be turned down\" (more casual, often for personal requests/invitations)",
+      "ko": "\"To be rejected/refused\" (formal, often for applications/requests) vs. \"to be turned down\" (more casual, often for personal requests/invitations)",
+      "zh_HK": "\"To be rejected/refused\" (formal, often for applications/requests) vs. \"to be turned down\" (more casual, often for personal requests/invitations)",
+      "fr": "\"To be rejected/refused\" (formal, often for applications/requests) vs. \"to be turned down\" (more casual, often for personal requests/invitations)"
+    },
+    "example": {
+      "ja": "A: <ruby>拒否される<rt>きょひされる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"拒否される\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"拒否される\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"拒否される\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"拒否される\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"拒否される\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"拒否される\".<br/>B: Yes, understood!"
+    },
+    "related": "\"To be rejected/refused\" (formal, often for applications/requests) vs. \"to be turned down\" (more casual, often for perso"
+  },
+  {
+    "id": "class_word_1992",
+    "word": "目を閉じる",
+    "reading": "めをとじる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To close one's eyes.",
+      "ja": "目を閉じる",
+      "zh_TW": "To close one's eyes.",
+      "zh_CN": "To close one's eyes.",
+      "ko": "To close one's eyes.",
+      "zh_HK": "To close one's eyes.",
+      "fr": "To close one's eyes."
+    },
+    "example": {
+      "ja": "A: <ruby>目を閉じる<rt>めをとじる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"目を閉じる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"目を閉じる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"目を閉じる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"目を閉じる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"目を閉じる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"目を閉じる\".<br/>B: Yes, understood!"
+    },
+    "related": "To close one's eyes."
+  },
+  {
+    "id": "class_word_1993",
+    "word": "想像",
+    "reading": "そうぞう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Imagination.",
+      "ja": "想像",
+      "zh_TW": "Imagination.",
+      "zh_CN": "Imagination.",
+      "ko": "Imagination.",
+      "zh_HK": "Imagination.",
+      "fr": "imagination"
+    },
+    "example": {
+      "ja": "<ruby>想像<rt>そうぞう</rt></ruby>つくよ。",
+      "en": "I can imagine.",
+      "zh_TW": "I can imagine.",
+      "zh_CN": "I can imagine.",
+      "ko": "I can imagine.",
+      "zh_HK": "I can imagine.",
+      "fr": "I can imagine."
+    },
+    "related": "Imagination."
+  },
+  {
+    "id": "class_word_1994",
+    "word": "理想の",
+    "reading": "りそうの",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Ideal",
+      "ja": "理想の",
+      "zh_TW": "Ideal",
+      "zh_CN": "Ideal",
+      "ko": "Ideal",
+      "zh_HK": "Ideal",
+      "fr": "Ideal"
+    },
+    "example": {
+      "ja": "A: <ruby>理想の<rt>りそうの</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"理想の\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"理想の\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"理想の\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"理想の\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"理想の\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"理想の\".<br/>B: Yes, understood!"
+    },
+    "related": "Ideal — describing something as the perfect, most desirable version of its kind."
+  },
+  {
+    "id": "class_word_1995",
+    "word": "姿",
+    "reading": "すがた",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "A figure / form / appearance",
+      "ja": "姿",
+      "zh_TW": "A figure / form / appearance",
+      "zh_CN": "A figure / form / appearance",
+      "ko": "A figure / form / appearance",
+      "zh_HK": "A figure / form / appearance",
+      "fr": "apparence"
+    },
+    "example": {
+      "ja": "<ruby>姿<rt>すがた</rt></ruby>をあらわせ！",
+      "en": "Show yourself.",
+      "zh_TW": "Show yourself.",
+      "zh_CN": "Show yourself.",
+      "ko": "Show yourself.",
+      "zh_HK": "Show yourself.",
+      "fr": "Show yourself."
+    },
+    "related": "A figure / form / appearance — often used for the visible shape or image of a person, sometimes with a poetic or formal "
+  },
+  {
+    "id": "class_word_1996",
+    "word": "効果的な",
+    "reading": "こうかてきな",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Effective.",
+      "ja": "効果的な",
+      "zh_TW": "Effective.",
+      "zh_CN": "Effective.",
+      "ko": "Effective.",
+      "zh_HK": "Effective.",
+      "fr": "Effective."
+    },
+    "example": {
+      "ja": "A: <ruby>効果的な<rt>こうかてきな</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"効果的な\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"効果的な\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"効果的な\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"効果的な\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"効果的な\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"効果的な\".<br/>B: Yes, understood!"
+    },
+    "related": "Effective."
+  },
+  {
+    "id": "class_word_1997",
+    "word": "実践的な",
+    "reading": "じっせんてきな",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Practical / hands-on",
+      "ja": "実践的な",
+      "zh_TW": "Practical / hands-on",
+      "zh_CN": "Practical / hands-on",
+      "ko": "Practical / hands-on",
+      "zh_HK": "Practical / hands-on",
+      "fr": "Practical / hands-on"
+    },
+    "example": {
+      "ja": "A: <ruby>実践的な<rt>じっせんてきな</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"実践的な\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"実践的な\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"実践的な\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"実践的な\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"実践的な\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"実践的な\".<br/>B: Yes, understood!"
+    },
+    "related": "Practical / hands-on — describing something grounded in real, actionable application rather than pure theory."
+  },
+  {
+    "id": "class_word_1998",
+    "word": "体力",
+    "reading": "たいりょく",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Physical strength / stamina / physical fitness.",
+      "ja": "体力",
+      "zh_TW": "Physical strength / stamina / physical fitness.",
+      "zh_CN": "Physical strength / stamina / physical fitness.",
+      "ko": "Physical strength / stamina / physical fitness.",
+      "zh_HK": "Physical strength / stamina / physical fitness.",
+      "fr": "force physique"
+    },
+    "example": {
+      "ja": "<ruby>体力<rt>たいりょく</rt></ruby>が<ruby>尽<rt>ことごと</rt></ruby>きた。",
+      "en": "I am exhausted.",
+      "zh_TW": "I am exhausted.",
+      "zh_CN": "I am exhausted.",
+      "ko": "I am exhausted.",
+      "zh_HK": "I am exhausted.",
+      "fr": "I am exhausted."
+    },
+    "related": "Physical strength / stamina / physical fitness."
+  },
+  {
+    "id": "class_word_1999",
+    "word": "憂鬱な",
+    "reading": "ゆううつな",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Depressed / gloomy / melancholic",
+      "ja": "憂鬱な",
+      "zh_TW": "Depressed / gloomy / melancholic",
+      "zh_CN": "Depressed / gloomy / melancholic",
+      "ko": "Depressed / gloomy / melancholic",
+      "zh_HK": "Depressed / gloomy / melancholic",
+      "fr": "Depressed / gloomy / melancholic"
+    },
+    "example": {
+      "ja": "A: <ruby>憂鬱な<rt>ゆううつな</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"憂鬱な\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"憂鬱な\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"憂鬱な\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"憂鬱な\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"憂鬱な\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"憂鬱な\".<br/>B: Yes, understood!"
+    },
+    "related": "Depressed / gloomy / melancholic — describing a heavy, low mood or a dispiriting situation/atmosphere."
+  },
+  {
+    "id": "class_word_2000",
+    "word": "裸足",
+    "reading": "はだし",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Barefoot.",
+      "ja": "裸足",
+      "zh_TW": "Barefoot.",
+      "zh_CN": "Barefoot.",
+      "ko": "Barefoot.",
+      "zh_HK": "Barefoot.",
+      "fr": "nu-pieds"
+    },
+    "example": {
+      "ja": "どうして<ruby>裸足<rt>はだし</rt></ruby>なの？",
+      "en": "Why are you barefoot?",
+      "zh_TW": "Why are you barefoot?",
+      "zh_CN": "Why are you barefoot?",
+      "ko": "Why are you barefoot?",
+      "zh_HK": "Why are you barefoot?",
+      "fr": "Why are you barefoot?"
+    },
+    "related": "Barefoot."
+  },
+  {
+    "id": "class_word_2001",
+    "word": "役に立ちます",
+    "reading": "やくにたちます",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"To be useful / helpful\"",
+      "ja": "役に立ちます",
+      "zh_TW": "\"To be useful / helpful\"",
+      "zh_CN": "\"To be useful / helpful\"",
+      "ko": "\"To be useful / helpful\"",
+      "zh_HK": "\"To be useful / helpful\"",
+      "fr": "\"To be useful / helpful\""
+    },
+    "example": {
+      "ja": "A: <ruby>役に立ちます<rt>やくにたちます</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"役に立ちます\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"役に立ちます\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"役に立ちます\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"役に立ちます\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"役に立ちます\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"役に立ちます\".<br/>B: Yes, understood!"
+    },
+    "related": "\"To be useful / helpful\" — describes something (an item, piece of information, skill) that serves a practical, beneficia"
+  },
+  {
+    "id": "class_word_2002",
+    "word": "理由",
+    "reading": "りゆう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "A reason.",
+      "ja": "理由",
+      "zh_TW": "A reason.",
+      "zh_CN": "A reason.",
+      "ko": "A reason.",
+      "zh_HK": "A reason.",
+      "fr": "cause"
+    },
+    "example": {
+      "ja": "<ruby>理由<rt>りゆう</rt></ruby>は<ruby>簡単<rt>かんたん</rt></ruby>だよ。",
+      "en": "The reason is simple.",
+      "zh_TW": "The reason is simple.",
+      "zh_CN": "The reason is simple.",
+      "ko": "The reason is simple.",
+      "zh_HK": "The reason is simple.",
+      "fr": "The reason is simple."
+    },
+    "related": "A reason."
+  },
+  {
+    "id": "class_word_2003",
+    "word": "花が枯れる",
+    "reading": "はながかれる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"The flower withers/dies\"",
+      "ja": "花が枯れる",
+      "zh_TW": "\"The flower withers/dies\"",
+      "zh_CN": "\"The flower withers/dies\"",
+      "ko": "\"The flower withers/dies\"",
+      "zh_HK": "\"The flower withers/dies\"",
+      "fr": "\"The flower withers/dies\""
+    },
+    "example": {
+      "ja": "A: <ruby>花が枯れる<rt>はながかれる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"花が枯れる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"花が枯れる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"花が枯れる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"花が枯れる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"花が枯れる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"花が枯れる\".<br/>B: Yes, understood!"
+    },
+    "related": "\"The flower withers/dies\" — 枯れる describes a plant drying up and dying, typically from lack of water or the natural end o"
+  },
+  {
+    "id": "class_word_2004",
+    "word": "負担",
+    "reading": "ふたん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "A burden / load",
+      "ja": "負担",
+      "zh_TW": "A burden / load",
+      "zh_CN": "A burden / load",
+      "ko": "A burden / load",
+      "zh_HK": "A burden / load",
+      "fr": "charge"
+    },
+    "example": {
+      "ja": "その<ruby>責任<rt>せきにん</rt></ruby>は<ruby>彼<rt>かれ</rt></ruby>には<ruby>負担<rt>ふたん</rt></ruby>だ。",
+      "en": "That responsibility is a burden to him.",
+      "zh_TW": "That responsibility is a burden to him.",
+      "zh_CN": "That responsibility is a burden to him.",
+      "ko": "That responsibility is a burden to him.",
+      "zh_HK": "That responsibility is a burden to him.",
+      "fr": "That responsibility is a burden to him."
+    },
+    "related": "A burden / load — a responsibility, cost, or strain placed on someone, whether financial, physical, or emotional."
+  },
+  {
+    "id": "class_word_2005",
+    "word": "グミ",
+    "reading": "グミ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Gummy candy.",
+      "ja": "グミ",
+      "zh_TW": "Gummy candy.",
+      "zh_CN": "Gummy candy.",
+      "ko": "Gummy candy.",
+      "zh_HK": "Gummy candy.",
+      "fr": "Gummy candy."
+    },
+    "example": {
+      "ja": "A: <ruby>グミ<rt>グミ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"グミ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"グミ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"グミ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"グミ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"グミ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"グミ\".<br/>B: Yes, understood!"
+    },
+    "related": "Gummy candy."
+  },
+  {
+    "id": "class_word_2006",
+    "word": "練乳",
+    "reading": "れんにゅう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Condensed milk.",
+      "ja": "練乳",
+      "zh_TW": "Condensed milk.",
+      "zh_CN": "Condensed milk.",
+      "ko": "Condensed milk.",
+      "zh_HK": "Condensed milk.",
+      "fr": "Condensed milk."
+    },
+    "example": {
+      "ja": "A: <ruby>練乳<rt>れんにゅう</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"練乳\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"練乳\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"練乳\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"練乳\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"練乳\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"練乳\".<br/>B: Yes, understood!"
+    },
+    "related": "Condensed milk."
+  },
+  {
+    "id": "class_word_2007",
+    "word": "ドン引き",
+    "reading": "どんびき",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Being utterly put off / recoiling in shock or disgust",
+      "ja": "ドン引き",
+      "zh_TW": "Being utterly put off / recoiling in shock or disgust",
+      "zh_CN": "Being utterly put off / recoiling in shock or disgust",
+      "ko": "Being utterly put off / recoiling in shock or disgust",
+      "zh_HK": "Being utterly put off / recoiling in shock or disgust",
+      "fr": "Being utterly put off / recoiling in shock or disgust"
+    },
+    "example": {
+      "ja": "A: <ruby>ドン引き<rt>どんびき</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"ドン引き\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"ドン引き\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"ドン引き\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"ドン引き\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"ドン引き\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"ドン引き\".<br/>B: Yes, understood!"
+    },
+    "related": "Being utterly put off / recoiling in shock or disgust — a casual, expressive word for a strong negative reaction to some"
+  },
+  {
+    "id": "class_word_2008",
+    "word": "スパルタ",
+    "reading": "スパルタ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Spartan (strict/harsh)",
+      "ja": "スパルタ",
+      "zh_TW": "斯巴达（希腊）",
+      "zh_CN": "斯巴达（希腊）",
+      "ko": "Spartan (strict/harsh)",
+      "zh_HK": "斯巴达（希腊）",
+      "fr": "Spartan (strict/harsh)"
+    },
+    "example": {
+      "ja": "A: <ruby>スパルタ<rt>スパルタ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"スパルタ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"スパルタ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"スパルタ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"スパルタ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"スパルタ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"スパルタ\".<br/>B: Yes, understood!"
+    },
+    "related": "Spartan (strict/harsh) — used as an adjective-like loanword in Japanese (often with な or 式) to describe an extremely str"
+  },
+  {
+    "id": "class_word_2009",
+    "word": "お金を貯める",
+    "reading": "おかねをためる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To save (up) money.",
+      "ja": "お金を貯める",
+      "zh_TW": "To save (up) money.",
+      "zh_CN": "To save (up) money.",
+      "ko": "To save (up) money.",
+      "zh_HK": "To save (up) money.",
+      "fr": "To save (up) money."
+    },
+    "example": {
+      "ja": "A: <ruby>お金を貯める<rt>おかねをためる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"お金を貯める\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"お金を貯める\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"お金を貯める\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"お金を貯める\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"お金を貯める\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"お金を貯める\".<br/>B: Yes, understood!"
+    },
+    "related": "To save (up) money."
+  },
+  {
+    "id": "class_word_2010",
+    "word": "ぴったり",
+    "reading": "ぴったり",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Perfectly / exactly / just right",
+      "ja": "ぴったり",
+      "zh_TW": "紧贴",
+      "zh_CN": "紧贴",
+      "ko": "Perfectly / exactly / just right",
+      "zh_HK": "紧贴",
+      "fr": "d'une manière soignée"
+    },
+    "example": {
+      "ja": "<ruby>服<rt>ふく</rt></ruby>がぴったり<ruby>合<rt>あ</rt></ruby>っていた。",
+      "en": "It was a perfect fit.",
+      "zh_TW": "It was a perfect fit.",
+      "zh_CN": "It was a perfect fit.",
+      "ko": "It was a perfect fit.",
+      "zh_HK": "It was a perfect fit.",
+      "fr": "It was a perfect fit."
+    },
+    "related": "Perfectly / exactly / just right — describes something fitting, matching, or aligning precisely, whether in size, timing"
+  },
+  {
+    "id": "class_word_2011",
+    "word": "失恋",
+    "reading": "しつれん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Heartbreak / a broken heart (from a failed romantic relationship)",
+      "ja": "失恋",
+      "zh_TW": "Heartbreak / a broken heart (from a failed romantic relationship)",
+      "zh_CN": "Heartbreak / a broken heart (from a failed romantic relationship)",
+      "ko": "Heartbreak / a broken heart (from a failed romantic relationship)",
+      "zh_HK": "Heartbreak / a broken heart (from a failed romantic relationship)",
+      "fr": "cœur brisé"
+    },
+    "example": {
+      "ja": "<ruby>青年<rt>せいねん</rt></ruby>は<ruby>失恋<rt>しつれん</rt></ruby>した。",
+      "en": "The young man was disappointed in love.",
+      "zh_TW": "The young man was disappointed in love.",
+      "zh_CN": "The young man was disappointed in love.",
+      "ko": "The young man was disappointed in love.",
+      "zh_HK": "The young man was disappointed in love.",
+      "fr": "The young man was disappointed in love."
+    },
+    "related": "Heartbreak / a broken heart (from a failed romantic relationship) — the experience of being rejected by or losing someon"
+  },
+  {
+    "id": "class_word_2012",
+    "word": "定番",
+    "reading": "ていばん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "A classic / standard / staple",
+      "ja": "定番",
+      "zh_TW": "A classic / standard / staple",
+      "zh_CN": "A classic / standard / staple",
+      "ko": "A classic / standard / staple",
+      "zh_HK": "A classic / standard / staple",
+      "fr": "A classic / standard / staple"
+    },
+    "example": {
+      "ja": "A: <ruby>定番<rt>ていばん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"定番\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"定番\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"定番\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"定番\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"定番\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"定番\".<br/>B: Yes, understood!"
+    },
+    "related": "A classic / standard / staple — something so commonly used, chosen, or relied upon that it's considered the default, go-"
+  },
+  {
+    "id": "class_word_2013",
+    "word": "運がいい",
+    "reading": "うんがいい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "\"To be lucky\"",
+      "ja": "運がいい",
+      "zh_TW": "\"To be lucky\"",
+      "zh_CN": "\"To be lucky\"",
+      "ko": "\"To be lucky\"",
+      "zh_HK": "\"To be lucky\"",
+      "fr": "\"To be lucky\""
+    },
+    "example": {
+      "ja": "A: <ruby>運がいい<rt>うんがいい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"運がいい\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"運がいい\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"運がいい\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"運がいい\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"運がいい\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"運がいい\".<br/>B: Yes, understood!"
+    },
+    "related": "\"To be lucky\" — having good fortune, especially in situations determined by chance rather than effort or skill."
+  },
+  {
+    "id": "class_word_2014",
+    "word": "話しかける",
+    "reading": "はなしかける",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Both mean \"to approach and speak to someone,\" but 話しかける emphasizes starting a conversation/engaging someone in talk, while 声をかける is broader and can also mean simply \"to call out to\" someone to get their attention, offer help, or check in",
+      "ja": "話しかける",
+      "zh_TW": "Both mean \"to approach and speak to someone,\" but 話しかける emphasizes starting a conversation/engaging someone in talk, while 声をかける is broader and can also mean simply \"to call out to\" someone to get their attention, offer help, or check in",
+      "zh_CN": "Both mean \"to approach and speak to someone,\" but 話しかける emphasizes starting a conversation/engaging someone in talk, while 声をかける is broader and can also mean simply \"to call out to\" someone to get their attention, offer help, or check in",
+      "ko": "Both mean \"to approach and speak to someone,\" but 話しかける emphasizes starting a conversation/engaging someone in talk, while 声をかける is broader and can also mean simply \"to call out to\" someone to get their attention, offer help, or check in",
+      "zh_HK": "Both mean \"to approach and speak to someone,\" but 話しかける emphasizes starting a conversation/engaging someone in talk, while 声をかける is broader and can also mean simply \"to call out to\" someone to get their attention, offer help, or check in",
+      "fr": "aborder"
+    },
+    "example": {
+      "ja": "<ruby>彼女<rt>かのじょ</rt></ruby>に<ruby>話<rt>はな</rt></ruby>し<ruby>掛<rt>か</rt></ruby>けるのはよそう。",
+      "en": "Let's not talk to her.",
+      "zh_TW": "Let's not talk to her.",
+      "zh_CN": "Let's not talk to her.",
+      "ko": "Let's not talk to her.",
+      "zh_HK": "Let's not talk to her.",
+      "fr": "Let's not talk to her."
+    },
+    "related": "Both mean \"to approach and speak to someone,\" but 話しかける emphasizes starting a conversation/engaging someone in talk, whi"
+  },
+  {
+    "id": "class_word_2015",
+    "word": "募集",
+    "reading": "ぼしゅう",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Recruitment / soliciting applicants",
+      "ja": "募集",
+      "zh_TW": "Recruitment / soliciting applicants",
+      "zh_CN": "Recruitment / soliciting applicants",
+      "ko": "Recruitment / soliciting applicants",
+      "zh_HK": "Recruitment / soliciting applicants",
+      "fr": "embauche"
+    },
+    "example": {
+      "ja": "その<ruby>会<rt>かい</rt></ruby>の<ruby>会員募集<rt>かいいんぼしゅう</rt></ruby>に<ruby>応募<rt>おうぼ</rt></ruby>した。",
+      "en": "I applied for membership in the association.",
+      "zh_TW": "I applied for membership in the association.",
+      "zh_CN": "I applied for membership in the association.",
+      "ko": "I applied for membership in the association.",
+      "zh_HK": "I applied for membership in the association.",
+      "fr": "I applied for membership in the association."
+    },
+    "related": "Recruitment / soliciting applicants — the act of calling for people (employees, participants, volunteers) to apply or si"
+  },
+  {
+    "id": "class_word_2016",
+    "word": "考え事",
+    "reading": "かんがえごと",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Something on one's mind / a matter one is thinking/mulling over",
+      "ja": "考え事",
+      "zh_TW": "Something on one's mind / a matter one is thinking/mulling over",
+      "zh_CN": "Something on one's mind / a matter one is thinking/mulling over",
+      "ko": "Something on one's mind / a matter one is thinking/mulling over",
+      "zh_HK": "Something on one's mind / a matter one is thinking/mulling over",
+      "fr": "Something on one's mind / a matter one is thinking/mulling over"
+    },
+    "example": {
+      "ja": "A: <ruby>考え事<rt>かんがえごと</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"考え事\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"考え事\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"考え事\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"考え事\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"考え事\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"考え事\".<br/>B: Yes, understood!"
+    },
+    "related": "Something on one's mind / a matter one is thinking/mulling over — a thought, concern, or topic that occupies someone's m"
+  },
+  {
+    "id": "class_word_2017",
+    "word": "独り言",
+    "reading": "ひとりごと",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Talking to oneself / muttering to oneself",
+      "ja": "独り言",
+      "zh_TW": "Talking to oneself / muttering to oneself",
+      "zh_CN": "Talking to oneself / muttering to oneself",
+      "ko": "Talking to oneself / muttering to oneself",
+      "zh_HK": "Talking to oneself / muttering to oneself",
+      "fr": "monologue"
+    },
+    "example": {
+      "ja": "<ruby>独り言<rt>ひとりごと</rt></ruby>をいいます。",
+      "en": "I talk to myself.",
+      "zh_TW": "I talk to myself.",
+      "zh_CN": "I talk to myself.",
+      "ko": "I talk to myself.",
+      "zh_HK": "I talk to myself.",
+      "fr": "I talk to myself."
+    },
+    "related": "Talking to oneself / muttering to oneself — words spoken aloud to no one in particular, often unconsciously, when alone "
+  },
+  {
+    "id": "class_word_2018",
+    "word": "語順",
+    "reading": "ごじゅん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "語順 specifically means \"word order\"",
+      "ja": "語順",
+      "zh_TW": "語順 specifically means \"word order\"",
+      "zh_CN": "語順 specifically means \"word order\"",
+      "ko": "語順 specifically means \"word order\"",
+      "zh_HK": "語順 specifically means \"word order\"",
+      "fr": "語順 specifically means \"word order\""
+    },
+    "example": {
+      "ja": "A: <ruby>語順<rt>ごじゅん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"語順\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"語順\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"語順\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"語順\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"語順\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"語順\".<br/>B: Yes, understood!"
+    },
+    "related": "語順 specifically means \"word order\" — the sequence in which words are arranged in a sentence, a grammar-specific term. 順番"
+  },
+  {
+    "id": "class_word_2019",
+    "word": "住所",
+    "reading": "じゅうしょ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "An address.",
+      "ja": "住所",
+      "zh_TW": "An address.",
+      "zh_CN": "An address.",
+      "ko": "An address.",
+      "zh_HK": "An address.",
+      "fr": "adresse"
+    },
+    "example": {
+      "ja": "これが<ruby>住所<rt>じゅうしょ</rt></ruby>です。",
+      "en": "Here's the address.",
+      "zh_TW": "Here's the address.",
+      "zh_CN": "Here's the address.",
+      "ko": "Here's the address.",
+      "zh_HK": "Here's the address.",
+      "fr": "Here's the address."
+    },
+    "related": "An address."
+  },
+  {
+    "id": "class_word_2020",
+    "word": "信頼",
+    "reading": "しんらい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Trust / confidence (in someone or something)",
+      "ja": "信頼",
+      "zh_TW": "Trust / confidence (in someone or something)",
+      "zh_CN": "Trust / confidence (in someone or something)",
+      "ko": "Trust / confidence (in someone or something)",
+      "zh_HK": "Trust / confidence (in someone or something)",
+      "fr": "confiance"
+    },
+    "example": {
+      "ja": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>信頼<rt>しんらい</rt></ruby>できる。",
+      "en": "He can be trusted.",
+      "zh_TW": "He can be trusted.",
+      "zh_CN": "He can be trusted.",
+      "ko": "He can be trusted.",
+      "zh_HK": "He can be trusted.",
+      "fr": "He can be trusted."
+    },
+    "related": "Trust / confidence (in someone or something) — a firm belief in the reliability, honesty, or ability of a person or thin"
+  },
+  {
+    "id": "class_word_2021",
+    "word": "根に持つ",
+    "reading": "ねにもつ",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To hold a grudge",
+      "ja": "根に持つ",
+      "zh_TW": "To hold a grudge",
+      "zh_CN": "To hold a grudge",
+      "ko": "To hold a grudge",
+      "zh_HK": "To hold a grudge",
+      "fr": "To hold a grudge"
+    },
+    "example": {
+      "ja": "A: <ruby>根に持つ<rt>ねにもつ</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"根に持つ\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"根に持つ\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"根に持つ\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"根に持つ\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"根に持つ\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"根に持つ\".<br/>B: Yes, understood!"
+    },
+    "related": "To hold a grudge — to continue harboring resentment or ill feelings about something long after it happened, rather than "
+  },
+  {
+    "id": "class_word_2022",
+    "word": "引っ掛かる",
+    "reading": "ひっかかる",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "To get caught/hooked (on something), or (figuratively) to fall for/be deceived by something",
+      "ja": "引っ掛かる",
+      "zh_TW": "To get caught/hooked (on something), or (figuratively) to fall for/be deceived by something",
+      "zh_CN": "To get caught/hooked (on something), or (figuratively) to fall for/be deceived by something",
+      "ko": "To get caught/hooked (on something), or (figuratively) to fall for/be deceived by something",
+      "zh_HK": "To get caught/hooked (on something), or (figuratively) to fall for/be deceived by something",
+      "fr": "avoir des doutes"
+    },
+    "example": {
+      "ja": "A: <ruby>引っ掛かる<rt>ひっかかる</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"引っ掛かる\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"引っ掛かる\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"引っ掛かる\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"引っ掛かる\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"引っ掛かる\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"引っ掛かる\".<br/>B: Yes, understood!"
+    },
+    "related": "To get caught/hooked (on something), or (figuratively) to fall for/be deceived by something — literally describes someth"
+  },
+  {
+    "id": "class_word_2023",
+    "word": "本番",
+    "reading": "ほんばん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "The real/actual performance/event (as opposed to a rehearsal or practice)",
+      "ja": "本番",
+      "zh_TW": "The real/actual performance/event (as opposed to a rehearsal or practice)",
+      "zh_CN": "The real/actual performance/event (as opposed to a rehearsal or practice)",
+      "ko": "The real/actual performance/event (as opposed to a rehearsal or practice)",
+      "zh_HK": "The real/actual performance/event (as opposed to a rehearsal or practice)",
+      "fr": "représentation (sans répétition)"
+    },
+    "example": {
+      "ja": "A: <ruby>本番<rt>ほんばん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"本番\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"本番\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"本番\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"本番\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"本番\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"本番\".<br/>B: Yes, understood!"
+    },
+    "related": "The real/actual performance/event (as opposed to a rehearsal or practice) — the moment when something happens for real, "
+  },
+  {
+    "id": "class_word_2024",
+    "word": "柔軟剤",
+    "reading": "じゅうなんざい",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "Fabric softener.",
+      "ja": "柔軟剤",
+      "zh_TW": "Fabric softener.",
+      "zh_CN": "Fabric softener.",
+      "ko": "Fabric softener.",
+      "zh_HK": "Fabric softener.",
+      "fr": "Fabric softener."
+    },
+    "example": {
+      "ja": "A: <ruby>柔軟剤<rt>じゅうなんざい</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"柔軟剤\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"柔軟剤\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"柔軟剤\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"柔軟剤\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"柔軟剤\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"柔軟剤\".<br/>B: Yes, understood!"
+    },
+    "related": "Fabric softener."
+  },
+  {
+    "id": "class_word_2025",
+    "word": "正社員",
+    "reading": "せいしゃいん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "regular employee / permanent employee / full-time permanent staff",
+      "ja": "正社員",
+      "zh_TW": "regular employee / permanent employee / full-time permanent staff",
+      "zh_CN": "regular employee / permanent employee / full-time permanent staff",
+      "ko": "regular employee / permanent employee / full-time permanent staff",
+      "zh_HK": "regular employee / permanent employee / full-time permanent staff",
+      "fr": "regular employee / permanent employee / full-time permanent staff"
+    },
+    "example": {
+      "ja": "A: <ruby>正社員<rt>せいしゃいん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"正社員\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"正社員\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"正社員\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"正社員\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"正社員\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"正社員\".<br/>B: Yes, understood!"
+    },
+    "related": "regular employee / permanent employee / full-time permanent staff"
+  },
+  {
+    "id": "class_word_2026",
+    "word": "派遣社員",
+    "reading": "はけんしゃいん",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "dispatched worker / temporary agency worker",
+      "ja": "派遣社員",
+      "zh_TW": "dispatched worker / temporary agency worker",
+      "zh_CN": "dispatched worker / temporary agency worker",
+      "ko": "dispatched worker / temporary agency worker",
+      "zh_HK": "dispatched worker / temporary agency worker",
+      "fr": "dispatched worker / temporary agency worker"
+    },
+    "example": {
+      "ja": "A: <ruby>派遣社員<rt>はけんしゃいん</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"派遣社員\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"派遣社員\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"派遣社員\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"派遣社員\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"派遣社員\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"派遣社員\".<br/>B: Yes, understood!"
+    },
+    "related": "dispatched worker / temporary agency worker"
+  },
+  {
+    "id": "class_word_2027",
+    "word": "寛大な",
+    "reading": "かんだいな",
+    "category": "授業で習った言葉",
+    "meaning": {
+      "en": "generous / tolerant / lenient / magnanimous",
+      "ja": "寛大な",
+      "zh_TW": "generous / tolerant / lenient / magnanimous",
+      "zh_CN": "generous / tolerant / lenient / magnanimous",
+      "ko": "generous / tolerant / lenient / magnanimous",
+      "zh_HK": "generous / tolerant / lenient / magnanimous",
+      "fr": "generous / tolerant / lenient / magnanimous"
+    },
+    "example": {
+      "ja": "A: <ruby>寛大な<rt>かんだいな</rt></ruby>について<ruby>話<rt>はな</rt></ruby>しましょう。<br/>B: はい、わかりました！",
+      "en": "A: Let's talk about \"寛大な\".<br/>B: Yes, understood!",
+      "zh_TW": "A: Let's talk about \"寛大な\".<br/>B: Yes, understood!",
+      "zh_CN": "A: Let's talk about \"寛大な\".<br/>B: Yes, understood!",
+      "ko": "A: Let's talk about \"寛大な\".<br/>B: Yes, understood!",
+      "zh_HK": "A: Let's talk about \"寛大な\".<br/>B: Yes, understood!",
+      "fr": "A: Let's talk about \"寛大な\".<br/>B: Yes, understood!"
+    },
+    "related": "generous / tolerant / lenient / magnanimous"
   }
 ];
+
+window.CLASS_ARUN_IDS = ["class_word_1603", "class_word_1181", "class_word_0387", "class_word_1604", "class_word_1605", "class_word_1606", "class_word_1607", "class_word_0112", "class_word_1608", "class_word_1609", "class_word_1610", "class_word_1611", "class_word_1612", "class_word_1613", "class_word_1614", "class_word_1615", "class_word_1616", "class_word_1617", "class_word_1598", "class_word_1618", "class_word_1619", "class_word_1281", "class_word_1620", "class_word_1621", "class_word_1622", "class_word_1623", "class_word_1624", "class_word_1432", "class_word_1335", "class_word_1625", "class_word_1626", "class_word_1627", "class_word_1628", "class_word_1629", "class_word_1630", "class_word_1631", "class_word_1632", "class_word_1633", "class_word_1369", "class_word_1634", "class_word_1635", "class_word_1636", "class_word_1637", "class_word_1638", "class_word_0003", "class_word_1639", "class_word_1640", "class_word_1641", "class_word_0336", "class_word_1642", "class_word_0155", "class_word_1643", "class_word_1644", "class_word_1645", "class_word_1646", "class_word_1647", "class_word_1648", "class_word_1649", "class_word_1650", "class_word_1651", "class_word_1652", "class_word_1653", "class_word_1654", "class_word_1131", "class_word_1655", "class_word_0291", "class_word_1252", "class_word_1656", "class_word_1657", "class_word_1459", "class_word_1658", "class_word_1659", "class_word_0476", "class_word_1660", "class_word_1661", "class_word_1329", "class_word_1662", "class_word_1663", "class_word_1664", "class_word_1665", "class_word_0526", "class_word_1585", "class_word_1666", "class_word_1667", "class_word_1668", "class_word_1669", "class_word_1345", "class_word_1066", "class_word_0172", "class_word_1670", "class_word_1671", "class_word_1186", "class_word_1672", "class_word_0417", "class_word_1673", "class_word_1674", "class_word_1675", "class_word_1676", "class_word_1677", "class_word_0474", "class_word_1678", "class_word_1679", "class_word_0912", "class_word_1680", "class_word_1681", "class_word_1682", "class_word_1683", "class_word_1684", "class_word_1685", "class_word_1686", "class_word_1687", "class_word_1688", "class_word_1689", "class_word_1690", "class_word_1691", "class_word_1692", "class_word_0227", "class_word_1693", "class_word_1694", "class_word_1439", "class_word_1695", "class_word_1696", "class_word_1697", "class_word_1698", "class_word_1699", "class_word_1700", "class_word_0401", "class_word_1701", "class_word_0114", "class_word_1702", "class_word_1703", "class_word_0462", "class_word_0403", "class_word_1704", "class_word_1705", "class_word_1706", "class_word_1707", "class_word_1708", "class_word_1709", "class_word_1412", "class_word_1710", "class_word_1711", "class_word_0266", "class_word_1055", "class_word_0555", "class_word_0029", "class_word_1464", "class_word_1712", "class_word_0012", "class_word_1115", "class_word_0376", "class_word_1713", "class_word_1714", "class_word_1715", "class_word_1716", "class_word_1717", "class_word_1718", "class_word_1719", "class_word_1720", "class_word_1721", "class_word_1434", "class_word_0557", "class_word_1722", "class_word_1723", "class_word_1724", "class_word_1725", "class_word_1726", "class_word_1497", "class_word_1498", "class_word_1727", "class_word_1728", "class_word_1729", "class_word_1730", "class_word_1513", "class_word_1731", "class_word_1732", "class_word_1733", "class_word_1734", "class_word_1349", "class_word_0081", "class_word_1735", "class_word_1736", "class_word_1737", "class_word_1241", "class_word_1738", "class_word_0702", "class_word_1739", "class_word_1740", "class_word_1741", "class_word_1742", "class_word_1743", "class_word_1744", "class_word_1745", "class_word_1428", "class_word_1430", "class_word_1746", "class_word_1747", "class_word_1748", "class_word_1749", "class_word_1750", "class_word_1751", "class_word_0247", "class_word_1468", "class_word_1752", "class_word_1753", "class_word_0929", "class_word_0014", "class_word_1754", "class_word_0303", "class_word_1755", "class_word_1756", "class_word_0636", "class_word_1757", "class_word_1758", "class_word_0672", "class_word_1759", "class_word_1760", "class_word_1761", "class_word_1762", "class_word_1763", "class_word_1764", "class_word_1765", "class_word_1766", "class_word_1767", "class_word_1768", "class_word_1769", "class_word_1770", "class_word_1771", "class_word_1772", "class_word_1773", "class_word_1774", "class_word_1337", "class_word_1775", "class_word_1776", "class_word_1777", "class_word_1778", "class_word_1779", "class_word_1780", "class_word_1781", "class_word_1782", "class_word_1783", "class_word_1784", "class_word_1785", "class_word_1786", "class_word_0385", "class_word_1787", "class_word_1788", "class_word_1105", "class_word_1789", "class_word_1790", "class_word_1791", "class_word_0845", "class_word_1792", "class_word_1793", "class_word_1794", "class_word_1795", "class_word_1796", "class_word_1797", "class_word_1798", "class_word_1572", "class_word_1799", "class_word_1800", "class_word_1144", "class_word_1801", "class_word_1802", "class_word_1803", "class_word_1804", "class_word_1805", "class_word_1806", "class_word_1807", "class_word_1489", "class_word_1808", "class_word_1809", "class_word_1810", "class_word_1811", "class_word_1812", "class_word_1813", "class_word_0217", "class_word_1814", "class_word_1815", "class_word_1816", "class_word_1817", "class_word_0055", "class_word_1069", "class_word_1818", "class_word_1819", "class_word_1820", "class_word_1821", "class_word_1209", "class_word_1822", "class_word_1823", "class_word_0170", "class_word_1824", "class_word_1825", "class_word_1826", "class_word_1827", "class_word_1828", "class_word_1829", "class_word_1830", "class_word_1831", "class_word_1832", "class_word_1833", "class_word_1834", "class_word_1835", "class_word_1836", "class_word_1837", "class_word_1838", "class_word_1839", "class_word_1840", "class_word_1841", "class_word_1842", "class_word_1843", "class_word_0116", "class_word_1844", "class_word_1845", "class_word_1846", "class_word_1847", "class_word_1848", "class_word_1849", "class_word_1850", "class_word_1851", "class_word_1852", "class_word_1853", "class_word_1854", "class_word_1855", "class_word_1856", "class_word_0591", "class_word_1857", "class_word_0886", "class_word_1858", "class_word_1859", "class_word_1860", "class_word_1861", "class_word_1862", "class_word_1202", "class_word_0425", "class_word_1863", "class_word_1327", "class_word_1864", "class_word_1865", "class_word_1866", "class_word_1867", "class_word_1868", "class_word_1869", "class_word_1870", "class_word_1871", "class_word_1872", "class_word_0335", "class_word_1873", "class_word_1874", "class_word_0841", "class_word_1875", "class_word_1876", "class_word_1877", "class_word_1878", "class_word_1879", "class_word_1880", "class_word_1881", "class_word_1882", "class_word_1883", "class_word_1884", "class_word_1885", "class_word_1886", "class_word_1887", "class_word_1888", "class_word_1889", "class_word_1426", "class_word_1890", "class_word_1891", "class_word_1892", "class_word_1893", "class_word_1894", "class_word_1895", "class_word_1896", "class_word_1897", "class_word_1898", "class_word_1899", "class_word_1900", "class_word_1901", "class_word_1902", "class_word_1903", "class_word_1904", "class_word_1905", "class_word_1906", "class_word_1907", "class_word_1908", "class_word_1909", "class_word_1910", "class_word_1911", "class_word_1912", "class_word_1913", "class_word_0693", "class_word_1914", "class_word_1915", "class_word_1916", "class_word_0883", "class_word_1917", "class_word_1918", "class_word_1919", "class_word_1920", "class_word_1921", "class_word_1922", "class_word_1923", "class_word_1924", "class_word_1925", "class_word_1926", "class_word_1927", "class_word_1928", "class_word_1180", "class_word_1929", "class_word_1930", "class_word_1931", "class_word_1932", "class_word_1933", "class_word_1934", "class_word_1935", "class_word_1936", "class_word_1937", "class_word_0769", "class_word_1938", "class_word_1939", "class_word_1503", "class_word_1940", "class_word_1941", "class_word_1942", "class_word_1943", "class_word_1944", "class_word_0289", "class_word_1945", "class_word_1946", "class_word_1947", "class_word_1948", "class_word_1949", "class_word_1950", "class_word_1951", "class_word_1952", "class_word_1521", "class_word_1953", "class_word_1954", "class_word_1955", "class_word_1956", "class_word_1957", "class_word_1958", "class_word_1959", "class_word_1960", "class_word_1961", "class_word_1962", "class_word_1963", "class_word_1964", "class_word_1965", "class_word_1966", "class_word_1967", "class_word_1968", "class_word_1969", "class_word_1970", "class_word_1971", "class_word_1972", "class_word_1973", "class_word_1974", "class_word_1975", "class_word_1976", "class_word_1977", "class_word_1978", "class_word_1979", "class_word_1980", "class_word_1981", "class_word_1982", "class_word_0429", "class_word_1983", "class_word_0898", "class_word_1984", "class_word_1985", "class_word_1986", "class_word_1987", "class_word_1988", "class_word_1989", "class_word_0465", "class_word_0459", "class_word_1990", "class_word_1991", "class_word_1992", "class_word_1993", "class_word_1994", "class_word_1995", "class_word_0471", "class_word_1996", "class_word_0242", "class_word_0729", "class_word_1997", "class_word_1998", "class_word_1130", "class_word_0621", "class_word_1999", "class_word_2000", "class_word_2001", "class_word_2002", "class_word_2003", "class_word_2004", "class_word_2005", "class_word_2006", "class_word_2007", "class_word_2008", "class_word_2009", "class_word_2010", "class_word_2011", "class_word_2012", "class_word_2013", "class_word_2014", "class_word_2015", "class_word_2016", "class_word_2017", "class_word_2018", "class_word_2019", "class_word_1482", "class_word_0797", "class_word_2020", "class_word_2021", "class_word_2022", "class_word_2023", "class_word_2024", "class_word_2025", "class_word_2026", "class_word_2027"];
