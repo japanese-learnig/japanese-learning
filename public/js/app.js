@@ -247,6 +247,8 @@
     if (backMeaningLabel) backMeaningLabel.textContent = isJa ? '意味・翻訳' : 'Meaning / Translation';
     const backExampleLabel = document.getElementById('backExampleLabel');
     if (backExampleLabel) backExampleLabel.textContent = isJa ? '例文・会話' : 'Example';
+    const exampleWordChipsLabel = document.getElementById('exampleWordChipsLabel');
+    if (exampleWordChipsLabel) exampleWordChipsLabel.textContent = isJa ? '単語辞書:' : 'Dictionary:';
     const backRelatedLabel = document.getElementById('backRelatedLabel');
     if (backRelatedLabel) backRelatedLabel.textContent = isJa ? '関連語・活用形' : 'Related / Conjugations';
     const backFlipPrompt = document.getElementById('backFlipPrompt');
@@ -403,7 +405,7 @@
   // --- Data Loading & Persistence ---
   function initData() {
     // Master data version check to ensure newly added cards & furigana updates are immediately visible
-    const CURRENT_DATA_VERSION = 'v38_authentic_dialogues_verified_final';
+    const CURRENT_DATA_VERSION = 'v39_interactive_example_selection_and_dict_mylist';
     const savedVersion = localStorage.getItem('haku_vocab_version');
 
     const seedCards = window.INITIAL_VOCAB_DATA || [];
@@ -2054,8 +2056,14 @@
       document.getElementById('backExampleJa').innerHTML = card.example.ja;
       document.getElementById('backExampleTranslation').innerHTML = targetExTrans;
       document.getElementById('backExampleJa').parentElement.classList.remove('hidden');
+      // ★ 例文から単語辞書ボタンチップを自動抽出して描画
+      if (typeof renderExampleWordChips === 'function') {
+        renderExampleWordChips(card.example.ja);
+      }
     } else {
       document.getElementById('backExampleJa').parentElement.classList.add('hidden');
+      const chipsCont = document.getElementById('exampleWordChipsContainer');
+      if (chipsCont) chipsCont.classList.add('hidden');
     }
 
     // Related Words / Verb Conjugations (関連する言葉は日本語、説明は母国語)
@@ -3048,8 +3056,11 @@
 
     // Flip card click
     document.getElementById('flashcardElement').addEventListener('click', (e) => {
-      // Prevent flipping if clicked on audio button
+      // Prevent flipping if clicked on button or if user is selecting text in example
       if (e.target.closest('button')) return;
+      const sel = window.getSelection();
+      if (sel && !sel.isCollapsed && sel.toString().trim().length > 0) return;
+      if (e.target.closest('#exampleTextContainer')) return;
       flipCard();
     });
 
@@ -3489,10 +3500,559 @@
     }
   }
 
+
+  // =========================================================================
+  // ★ 写真完全再現: 例文の文字選択 ＆ 辞書で調べる / マイリスト保存ポップアップ
+  // =========================================================================
+
+  let currentSelectedExampleWord = '';
+  let currentSelectedExampleReading = '';
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  function sanitizeSelectedWordText(raw) {
+    if (!raw) return '';
+    let t = raw.replace(/<rt>.*?<\/rt>/gi, '')
+               .replace(/<[^>]+>/g, '')
+               .trim();
+    // 句読点、記号、かっこなどを除去
+    t = t.replace(/^[、。！？!?「」『』（）()[\]\s…・:：;；〜~\-\—]+|[、。！？!?「」『』（）()[\]\s…・:：;；〜~\-\—]+$/g, '');
+    return t;
+  }
+
+  // 例文から重要単語チップ（ボタン）を自動抽出して表示
+  function extractKeywordsFromExampleHtml(htmlText) {
+    if (!htmlText) return [];
+    const candidates = [];
+    const seen = new Set();
+
+    // 1. <ruby>漢字<rt>読み</rt></ruby> から漢字単語と読みを抽出
+    const rubyRegex = /<ruby>([^<]+)<rt>([^<]+)<\/rt><\/ruby>/g;
+    let m;
+    while ((m = rubyRegex.exec(htmlText)) !== null) {
+      const k = m[1].trim();
+      const r = m[2].trim();
+      if (k && !seen.has(k)) {
+        seen.add(k);
+        candidates.push({ word: k, reading: r });
+      }
+    }
+
+    // 2. 漢字熟語（2文字以上）やカタカナ単語（2文字以上）を抽出
+    const plain = htmlText.replace(/<rt>.*?<\/rt>/g, '').replace(/<[^>]+>/g, '');
+    const kanjiMatches = plain.match(/[一-龥]{2,}/g) || [];
+    const katakanaMatches = plain.match(/[゠-ヿ]{2,}/g) || [];
+
+    [...kanjiMatches, ...katakanaMatches].forEach(w => {
+      const clean = w.trim();
+      if (clean && !seen.has(clean) && clean.length >= 2) {
+        seen.add(clean);
+        candidates.push({ word: clean, reading: '' });
+      }
+    });
+
+    return candidates.slice(0, 6);
+  }
+
+  function renderExampleWordChips(exampleHtml) {
+    const container = document.getElementById('exampleWordChipsContainer');
+    const list = document.getElementById('exampleWordChipsList');
+    if (!container || !list) return;
+
+    const chips = extractKeywordsFromExampleHtml(exampleHtml);
+    if (!chips || chips.length === 0) {
+      container.classList.add('hidden');
+      list.innerHTML = '';
+      return;
+    }
+
+    container.classList.remove('hidden');
+    list.innerHTML = chips.map(c => {
+      return `
+        <button class="btn-example-word-chip px-2 py-0.5 rounded-lg border border-sky-300 bg-sky-50 hover:bg-sky-100 text-sky-800 text-[11px] font-bold cursor-pointer transition shadow-2xs active:scale-95" 
+          data-word="${escapeHtml(c.word)}" 
+          data-reading="${escapeHtml(c.reading || '')}"
+          title="タップして辞書で調べる">
+          ${escapeHtml(c.word)}
+        </button>
+      `;
+    }).join('');
+
+    list.querySelectorAll('.btn-example-word-chip').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation(); // カード反転を防止
+        const w = btn.getAttribute('data-word');
+        const r = btn.getAttribute('data-reading') || '';
+        openDictLookupModal(w, r);
+      });
+    });
+  }
+
+  // 例文のテキスト選択ツールバー（なぞった文字の真上に浮き出る黒い操作バー）
+  function initExampleSelectionToolbar() {
+    const area = document.getElementById('exampleTextContainer');
+    const toolbar = document.getElementById('textSelectionToolbar');
+    const previewEl = document.getElementById('selectionTextPreview');
+    const btnDict = document.getElementById('btnToolbarDict');
+    const btnSave = document.getElementById('btnToolbarMylist');
+
+    if (!area || !toolbar) return;
+
+    function updateToolbar() {
+      const sel = window.getSelection();
+      if (!sel || sel.isCollapsed || !sel.rangeCount) {
+        toolbar.classList.add('hidden');
+        toolbar.classList.remove('flex');
+        return;
+      }
+
+      const range = sel.getRangeAt(0);
+      if (!area.contains(range.commonAncestorContainer)) {
+        toolbar.classList.add('hidden');
+        toolbar.classList.remove('flex');
+        return;
+      }
+
+      const rawText = sel.toString();
+      const cleaned = sanitizeSelectedWordText(rawText);
+      if (!cleaned || cleaned.length > 30) {
+        toolbar.classList.add('hidden');
+        toolbar.classList.remove('flex');
+        return;
+      }
+
+      // ルビ付き要素なら読み仮名も自動取得
+      let hintReading = '';
+      try {
+        let node = range.commonAncestorContainer;
+        if (node.nodeType === 3) node = node.parentElement;
+        const rubyEl = node ? node.closest('ruby') : null;
+        if (rubyEl) {
+          const rt = rubyEl.querySelector('rt');
+          if (rt) hintReading = rt.innerText.trim();
+        }
+      } catch (e) {}
+
+      const rect = range.getBoundingClientRect();
+      if (rect.width === 0 && rect.height === 0) {
+        toolbar.classList.add('hidden');
+        toolbar.classList.remove('flex');
+        return;
+      }
+
+      currentSelectedExampleWord = cleaned;
+      currentSelectedExampleReading = hintReading;
+
+      if (previewEl) previewEl.textContent = cleaned;
+
+      toolbar.classList.remove('hidden');
+      toolbar.classList.add('flex');
+
+      // 画面上部や左右にはみ出さないよう座標を補正
+      const top = Math.max(10, rect.top - 50);
+      const left = Math.min(window.innerWidth - 260, Math.max(10, rect.left + rect.width / 2 - 125));
+      toolbar.style.top = `${top}px`;
+      toolbar.style.left = `${left}px`;
+    }
+
+    area.addEventListener('mouseup', () => setTimeout(updateToolbar, 50));
+    area.addEventListener('touchend', () => setTimeout(updateToolbar, 100));
+
+    document.addEventListener('selectionchange', () => {
+      const sel = window.getSelection();
+      if (!sel || sel.isCollapsed) {
+        if (!toolbar.classList.contains('hidden')) {
+          toolbar.classList.add('hidden');
+          toolbar.classList.remove('flex');
+        }
+      }
+    });
+
+    if (btnDict) {
+      btnDict.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (currentSelectedExampleWord) {
+          openDictLookupModal(currentSelectedExampleWord, currentSelectedExampleReading);
+          toolbar.classList.add('hidden');
+          toolbar.classList.remove('flex');
+        }
+      });
+    }
+
+    if (btnSave) {
+      btnSave.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (currentSelectedExampleWord) {
+          quickSaveExampleWordToMylist(currentSelectedExampleWord, currentSelectedExampleReading);
+          toolbar.classList.add('hidden');
+          toolbar.classList.remove('flex');
+        }
+      });
+    }
+  }
+
+  // なぞった単語をワンタップでマイリストに追加（またはフォルダ選択）
+  function quickSaveExampleWordToMylist(word, hintReading) {
+    const cleanWord = sanitizeSelectedWordText(word);
+    if (!cleanWord) return;
+
+    // 既存カードを探索、なければカスタム辞書カードを作成
+    let card = vocabList.find(c => c.word === cleanWord || c.id === cleanWord);
+    if (!card && window.CLASS_VOCAB_DATA) {
+      card = window.CLASS_VOCAB_DATA.find(c => c.word === cleanWord);
+    }
+    if (!card && window.DICT_DATA) {
+      const entry = window.DICT_DATA.find(d => d.w === cleanWord);
+      if (entry) {
+        card = {
+          id: `dict_${entry.w}_${Date.now()}`,
+          word: entry.w,
+          reading: entry.r || hintReading || entry.w,
+          category: entry.l ? `JLPT ${entry.l}` : '例文から保存',
+          section_title: '例文から保存した単語',
+          meaning: {
+            en: (entry.m && entry.m.join(', ')) || '—',
+            zh_TW: (entry.zh && entry.zh.join(', ')) || (entry.m && entry.m.join(', ')) || '—',
+            zh_CN: (entry.zh && entry.zh.join(', ')) || (entry.m && entry.m.join(', ')) || '—',
+            ko: (entry.m && entry.m.join(', ')) || '—',
+            fr: (entry.fr && entry.fr.join(', ')) || (entry.m && entry.m.join(', ')) || '—'
+          }
+        };
+      }
+    }
+
+    // 辞書にもなければ即座に新規単語として構成
+    if (!card) {
+      card = {
+        id: `custom_ex_${cleanWord}_${Date.now()}`,
+        word: cleanWord,
+        reading: hintReading || cleanWord,
+        category: '例文から保存',
+        section_title: '例文から保存した単語',
+        meaning: {
+          en: cleanWord,
+          zh_TW: cleanWord,
+          zh_CN: cleanWord,
+          ko: cleanWord,
+          fr: cleanWord
+        }
+      };
+    }
+
+    // フォルダ選択モーダルを開いて保存
+    promptFolderSelectAndAdd(card, () => {
+      updateMylistBadge();
+      renderCurrentCard();
+    });
+  }
+
+  // 単語辞書検索 ＆ 詳細モーダル
+  function openDictLookupModal(queryWord, hintReading) {
+    if (!queryWord) return;
+    const cleanWord = sanitizeSelectedWordText(queryWord);
+    if (!cleanWord) return;
+
+    const modal = document.getElementById('dictPopupModal');
+    const content = document.getElementById('dictPopupModalContent');
+    if (!modal || !content) return;
+
+    // 活用語尾・語幹の自動復元リスト
+    const searchCandidates = [cleanWord];
+    const suffixes = ['とか', 'など', 'かった', 'くない', 'くなかった', 'くて', 'な', 'だ', 'に', 'を', 'の', 'が', 'は', 'で', 'と', 'へ', 'も', 'より', 'から', 'まで', 'して', 'した', 'する', 'され', 'ます', 'ました', 'ません', 'たい', 'たく', 'ない', 'て', 'た', 'い', 'く', 'お', 'ご'];
+    for (const sfx of suffixes) {
+      if (cleanWord.endsWith(sfx) && cleanWord.length > sfx.length) {
+        const stem = cleanWord.slice(0, -sfx.length);
+        if (stem && !searchCandidates.includes(stem)) searchCandidates.push(stem);
+      }
+    }
+    // 活用動詞の辞書形復元（例: 呼んだ→呼ぶ、行った→行く）
+    if (cleanWord.endsWith('んだ') && cleanWord.length >= 2) {
+      const stem = cleanWord.slice(0, -2);
+      ['ぶ', 'む', 'ぬ'].forEach(v => {
+        if (!searchCandidates.includes(stem + v)) searchCandidates.push(stem + v);
+      });
+    }
+    if (cleanWord.endsWith('った') && cleanWord.length >= 2) {
+      const stem = cleanWord.slice(0, -2);
+      ['う', 'つ', 'る', 'く'].forEach(v => {
+        if (!searchCandidates.includes(stem + v)) searchCandidates.push(stem + v);
+      });
+    }
+
+    // 複合語から漢字熟語（2文字以上）を抽出
+    const kanjis = cleanWord.match(/[一-龥]{2,}/g) || [];
+    kanjis.forEach(k => {
+      if (!searchCandidates.includes(k)) searchCandidates.push(k);
+    });
+
+    // 1. カリキュラム単語（vocabList / CLASS_VOCAB_DATA）から探索
+    let matchedCurriculumCards = [];
+    for (const target of searchCandidates) {
+      const foundList = vocabList.filter(c => c.word === target || (c.reading && c.reading === target));
+      foundList.forEach(c => {
+        if (!matchedCurriculumCards.some(m => m.id === c.id)) {
+          matchedCurriculumCards.push(c);
+        }
+      });
+    }
+
+    // 2. JLPT単語集（JLPT_VOCAB）から探索
+    let jlptMatches = [];
+    if (typeof JLPT_VOCAB !== 'undefined') {
+      for (const target of searchCandidates) {
+        for (const lvl of ['N5', 'N4', 'N3', 'N2', 'N1']) {
+          const list = JLPT_VOCAB[lvl] || [];
+          for (const item of list) {
+            if (item.word === target || item.reading === target) {
+              if (!jlptMatches.some(m => m.word === item.word && m.reading === item.reading)) {
+                jlptMatches.push(Object.assign({}, item, { level: lvl }));
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // 文中のふりがな(hintReading)との一致を最優先ソート
+    jlptMatches.sort((a, b) => {
+      let scoreA = 0;
+      let scoreB = 0;
+      if (hintReading) {
+        if (a.reading === hintReading) scoreA += 1000;
+        if (b.reading === hintReading) scoreB += 1000;
+      }
+      const lvlScore = { 'N5': 50, 'N4': 40, 'N3': 30, 'N2': 20, 'N1': 10 };
+      scoreA += (lvlScore[a.level] || 0);
+      scoreB += (lvlScore[b.level] || 0);
+      return scoreB - scoreA;
+    });
+
+    // 3. DICT_DATA (日本語大辞書 68,000語) から探索
+    let dictMatches = [];
+    if (window.DICT_DATA) {
+      for (const target of searchCandidates) {
+        const found = window.DICT_DATA.filter(d => d.w === target || d.r === target);
+        found.forEach(d => {
+          if (!dictMatches.some(m => m.w === d.w && m.r === d.r)) {
+            dictMatches.push(d);
+          }
+        });
+        if (dictMatches.length >= 3) break;
+      }
+    }
+
+    // トップに表示する最も一致度の高い単語を決定
+    let topWord = cleanWord;
+    let topReading = hintReading || '';
+    let topCategory = '一般';
+    let topMeaningText = '';
+    let topCardForSave = null;
+
+    if (matchedCurriculumCards.length > 0) {
+      const topC = matchedCurriculumCards[0];
+      topWord = topC.word;
+      topReading = topC.reading || hintReading || '';
+      topCategory = topC.category || '授業で習った言葉';
+      topMeaningText = getBilingualMeaning(topC.meaning, currentLang);
+      topCardForSave = topC;
+    } else if (jlptMatches.length > 0) {
+      const topJ = jlptMatches[0];
+      topWord = topJ.word;
+      topReading = topJ.reading || hintReading || '';
+      topCategory = `JLPT ${topJ.level}`;
+      topMeaningText = (topJ.meanings || []).join(', ');
+      topCardForSave = {
+        id: `jlpt_${topJ.word}_${topJ.level}`,
+        word: topJ.word,
+        reading: topReading,
+        category: `JLPT ${topJ.level}`,
+        meaning: {
+          en: topMeaningText,
+          zh_TW: topMeaningText,
+          zh_CN: topMeaningText,
+          ko: topMeaningText,
+          fr: topMeaningText
+        }
+      };
+    } else if (dictMatches.length > 0) {
+      const topD = dictMatches[0];
+      topWord = topD.w;
+      topReading = topD.r || hintReading || '';
+      topCategory = topD.l ? `JLPT ${topD.l}` : '辞書';
+      const mList = (topD.m || []).join(', ');
+      const zhList = (topD.zh || []).join(', ');
+      const frList = (topD.fr || []).join(', ');
+      if (currentLang === 'zh_TW' || currentLang === 'zh_HK') topMeaningText = zhList || mList;
+      else if (currentLang === 'zh_CN') topMeaningText = zhList || mList;
+      else if (currentLang === 'fr') topMeaningText = frList || mList;
+      else topMeaningText = mList;
+
+      topCardForSave = {
+        id: `dict_${topD.w}_${Date.now()}`,
+        word: topD.w,
+        reading: topReading,
+        category: topCategory,
+        meaning: {
+          en: mList || '—',
+          zh_TW: zhList || mList || '—',
+          zh_CN: zhList || mList || '—',
+          ko: mList || '—',
+          fr: frList || mList || '—'
+        }
+      };
+    } else {
+      topMeaningText = '日本語表現・単語';
+      topCardForSave = {
+        id: `custom_dict_${cleanWord}_${Date.now()}`,
+        word: cleanWord,
+        reading: topReading || cleanWord,
+        category: '例文から保存',
+        meaning: {
+          en: cleanWord,
+          zh_TW: cleanWord,
+          zh_CN: cleanWord,
+          ko: cleanWord,
+          fr: cleanWord
+        }
+      };
+    }
+
+    const isAlreadySaved = mylistSet.has(topCardForSave.id) || mylistSet.has(topWord);
+
+    // モーダルHTMLの生成
+    let modalHtml = `
+      <!-- メインヒット単語カード -->
+      <div class="p-4 rounded-2xl bg-sky-50 border border-sky-200 space-y-3">
+        <div class="flex items-baseline justify-between flex-wrap gap-2">
+          <div>
+            <span class="text-[10px] font-extrabold bg-sky-600 text-white px-2 py-0.5 rounded-full mr-1.5">${topCategory}</span>
+            <span class="text-2xl font-black text-slate-900">${escapeHtml(topWord)}</span>
+            ${topReading && topReading !== topWord ? `<span class="text-sm font-bold text-sky-700 ml-1.5">【${escapeHtml(topReading)}】</span>` : ''}
+          </div>
+          <div class="flex items-center space-x-1.5">
+            <button id="btnModalSpeakWord" class="p-2 rounded-xl bg-white border border-sky-200 text-sky-700 hover:bg-sky-100 transition shadow-2xs font-bold text-xs flex items-center space-x-1" title="発音を聞く">
+              <span>🔊</span>
+              <span>発音</span>
+            </button>
+            <button id="btnModalSaveWord" class="px-3 py-1.5 rounded-xl font-bold text-xs transition shadow-2xs flex items-center space-x-1 text-white ${isAlreadySaved ? 'bg-emerald-700 hover:bg-emerald-800' : 'bg-emerald-600 hover:bg-emerald-500'}" title="マイリストに保存">
+              <span>${isAlreadySaved ? '✅' : '🔖'}</span>
+              <span>${isAlreadySaved ? 'マイリスト保存中' : 'マイリストに追加'}</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="pt-2 border-t border-sky-200/60 text-xs sm:text-sm text-slate-700 leading-relaxed">
+          <strong class="text-slate-900 block mb-0.5">意味・訳:</strong>
+          <p class="font-bold text-slate-800">${escapeHtml(topMeaningText)}</p>
+        </div>
+      </div>
+    `;
+
+    // 関連するJLPT単語一覧
+    if (jlptMatches.length > 1) {
+      modalHtml += `
+        <div class="space-y-2 pt-1">
+          <h4 class="text-xs font-bold text-slate-500 flex items-center space-x-1">
+            <span>📚</span>
+            <span>関連するJLPT語彙</span>
+          </h4>
+          <div class="space-y-1.5">
+            ${jlptMatches.slice(1, 4).map(jm => `
+              <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between text-xs hover:bg-slate-100 transition">
+                <div class="flex items-baseline space-x-1.5">
+                  <span class="font-bold text-slate-900">${escapeHtml(jm.word)}</span>
+                  ${jm.reading ? `<span class="text-[11px] text-slate-400">（${escapeHtml(jm.reading)}）</span>` : ''}
+                  <span class="text-[9px] px-1.5 py-0.2 rounded font-bold bg-sky-100 text-sky-800">${jm.level}</span>
+                  <span class="text-[11px] text-slate-600 ml-1">${escapeHtml((jm.meanings || []).slice(0, 2).join(', '))}</span>
+                </div>
+                <button class="btn-sub-save-word px-2 py-1 rounded-lg bg-white border border-emerald-300 text-emerald-700 font-bold text-[10px] hover:bg-emerald-50 transition"
+                  data-word="${escapeHtml(jm.word)}"
+                  data-reading="${escapeHtml(jm.reading || '')}"
+                  data-meaning="${escapeHtml((jm.meanings || []).join(', '))}"
+                  data-level="${jm.level}">
+                  🔖 保存
+                </button>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    content.innerHTML = modalHtml;
+
+    // イベントリスナーの接続
+    const btnSpeak = content.querySelector('#btnModalSpeakWord');
+    if (btnSpeak) {
+      btnSpeak.addEventListener('click', () => {
+        speakJapanese(topWord);
+      });
+    }
+
+    const btnSave = content.querySelector('#btnModalSaveWord');
+    if (btnSave) {
+      btnSave.addEventListener('click', () => {
+        promptFolderSelectAndAdd(topCardForSave, () => {
+          updateMylistBadge();
+          renderCurrentCard();
+          openDictLookupModal(queryWord, hintReading); // モーダル内のボタン表示を更新
+        });
+      });
+    }
+
+    content.querySelectorAll('.btn-sub-save-word').forEach(subBtn => {
+      subBtn.addEventListener('click', () => {
+        const sw = subBtn.getAttribute('data-word');
+        const sr = subBtn.getAttribute('data-reading') || '';
+        const sm = subBtn.getAttribute('data-meaning') || '';
+        const sl = subBtn.getAttribute('data-level') || '一般';
+        const subCard = {
+          id: `jlpt_${sw}_${sl}`,
+          word: sw,
+          reading: sr,
+          category: `JLPT ${sl}`,
+          meaning: { en: sm, zh_TW: sm, zh_CN: sm, ko: sm, fr: sm }
+        };
+        promptFolderSelectAndAdd(subCard, () => {
+          updateMylistBadge();
+          renderCurrentCard();
+          openDictLookupModal(queryWord, hintReading);
+        });
+      });
+    });
+
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeDictPopupModal() {
+    const modal = document.getElementById('dictPopupModal');
+    if (modal) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  }
+
+  // グローバル露出（インラインイベント等からの呼出用）
+  window.closeDictPopupModal = closeDictPopupModal;
+  window.openDictLookupModal = openDictLookupModal;
+
   // --- App Startup ---
   function startup() {
     initData();
     setupListeners();
+    // ★ 例文のテキスト選択ツールバー（辞書で調べる / マイリスト保存）初期化
+    if (typeof initExampleSelectionToolbar === 'function') {
+      initExampleSelectionToolbar();
+    }
     if ('speechSynthesis' in window) {
       window.speechSynthesis.onvoiceschanged = () => {
         window.speechSynthesis.getVoices();

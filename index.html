@@ -289,8 +289,18 @@
                     <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
                   </button>
                 </div>
-                <p id="backExampleJa" class="text-xs font-semibold text-slate-800 leading-relaxed whitespace-pre-line mb-1">日本語の会話</p>
-                <p id="backExampleTranslation" class="text-[10px] text-slate-500 leading-snug whitespace-pre-line">Example dialogue translation</p>
+                <div id="exampleTextContainer" class="select-text">
+                  <p id="backExampleJa" class="text-xs font-semibold text-slate-800 leading-relaxed whitespace-pre-line mb-1 select-text">日本語の会話</p>
+                  <!-- 例文内から抽出された単語のクイック辞書ボタンチップ -->
+                  <div id="exampleWordChipsContainer" class="mt-2 flex flex-wrap gap-1.5 items-center hidden">
+                    <span class="text-[10px] text-slate-400 font-bold flex items-center space-x-0.5">
+                      <span>🔍</span>
+                      <span id="exampleWordChipsLabel">単語辞書:</span>
+                    </span>
+                    <div id="exampleWordChipsList" class="flex flex-wrap gap-1"></div>
+                  </div>
+                </div>
+                <p id="backExampleTranslation" class="text-[10px] text-slate-500 leading-snug whitespace-pre-line mt-1.5 pt-1.5 border-t border-slate-100">Example dialogue translation</p>
               </div>
 
               <!-- Related / Conjugation / Variations -->
@@ -746,5 +756,43 @@
   <script>
     lucide.createIcons();
   </script>
+
+  <!-- 写真完全再現: なぞった文字の真上に浮き出る黒い操作ツールバー (辞書で調べる ＆ マイリスト保存) -->
+  <div id="textSelectionToolbar" class="fixed z-9999 hidden bg-slate-900 text-white rounded-xl py-1.5 px-2.5 shadow-2xl items-center gap-2 text-xs border border-slate-700 animate-fade-in pointer-events-auto" style="box-shadow: 0 10px 28px rgba(15, 23, 42, 0.5);">
+    <!-- なぞった文字プレビューバッジ -->
+    <span id="selectionTextPreview" class="font-extrabold max-w-[110px] overflow-hidden text-ellipsis whitespace-nowrap text-sky-400 text-xs px-1.5 py-0.5 rounded bg-slate-800 border border-slate-700"></span>
+    <!-- 辞書で調べるボタン -->
+    <button id="btnToolbarDict" class="bg-sky-600 hover:bg-sky-500 text-white font-bold py-1 px-2.5 rounded-lg text-xs cursor-pointer inline-flex items-center gap-1 transition shadow-xs active:scale-95">
+      <span>🔍</span>
+      <span>辞書で調べる</span>
+    </button>
+    <!-- マイリスト保存ボタン -->
+    <button id="btnToolbarMylist" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-1 px-2.5 rounded-lg text-xs cursor-pointer inline-flex items-center gap-1 transition shadow-xs active:scale-95">
+      <span>🔖</span>
+      <span>マイリスト保存</span>
+    </button>
+    <!-- 下向き三角吹き出しインジケーター -->
+    <div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-0 h-0 border-x-6 border-x-transparent border-t-6 border-t-slate-900"></div>
+  </div>
+
+  <!-- 単語辞書 ＆ マイリスト詳細ポップアップモーダル -->
+  <div id="dictPopupModal" class="fixed inset-0 z-9999 hidden items-center justify-center bg-slate-900/60 backdrop-blur-xs p-4 animate-fade-in" onclick="if(event.target===this) closeDictPopupModal()">
+    <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-slate-200 animate-scale-up flex flex-col max-h-[85vh]">
+      <!-- ヘッダー -->
+      <div class="bg-linear-to-r from-sky-600 to-sky-700 text-white px-5 py-3.5 flex items-center justify-between shrink-0">
+        <div class="font-extrabold text-sm sm:text-base flex items-center space-x-2">
+          <span>📖</span>
+          <span>単語辞書 ＆ マイリスト</span>
+        </div>
+        <button onclick="closeDictPopupModal()" class="text-white/80 hover:text-white p-1 rounded-full hover:bg-white/10 transition text-lg font-bold" title="閉じる">✕</button>
+      </div>
+
+      <!-- モーダル本体 -->
+      <div id="dictPopupModalContent" class="p-5 overflow-y-auto space-y-4 flex-1">
+        <!-- 動的レンダリング -->
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
