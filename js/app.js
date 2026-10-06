@@ -17,6 +17,33 @@
   let mylistSet = new Set(); // store card IDs in mylist
   let knownSet = new Set(); // store cards marked as learned
 
+  // --- Firebase Cloud Sync Configuration ---
+  const firebaseConfig = {
+    apiKey: "AIzaSyBNsrBL1xRErsuOHgvI7xNs15cai-auoSE",
+    authDomain: "japanese-learning-e8a53.firebaseapp.com",
+    projectId: "japanese-learning-e8a53",
+    storageBucket: "japanese-learning-e8a53.firebasestorage.app",
+    messagingSenderId: "1052063287116",
+    appId: "1:1052063287116:web:7ccf89640419c489a3f1e9"
+  };
+
+  let fbApp = null;
+  let fbAuth = null;
+  let fbDb = null;
+  let isFirebaseReady = false;
+
+  try {
+    if (window.firebase) {
+      fbApp = firebase.initializeApp(firebaseConfig);
+      fbAuth = firebase.auth();
+      fbDb = firebase.firestore();
+      isFirebaseReady = true;
+      console.log('Firebase Cloud Database initialized successfully! ☁️✨');
+    }
+  } catch (err) {
+    console.warn('Firebase init warning:', err);
+  }
+
   // --- Quiz State ---
   let quizPool = [];
   let quizIndex = 0;
@@ -1033,6 +1060,11 @@
       if (drawerLangSelect) drawerLangSelect.value = currentLang;
 
       showToast(`Logged in as ${student.name}`);
+
+      // Authenticate with Firebase in background & sync latest cloud data
+      ensureStudentCloudAuth(student.id, student.passcode).then(() => {
+        syncStudentFromCloud(student.id);
+      });
     } else {
       localStorage.removeItem('haku_current_student_id');
       document.getElementById('headerStudentBadge').textContent = 'Student: Guest';
@@ -1042,6 +1074,9 @@
       if (drawerName) drawerName.textContent = 'Guest';
       if (drawerStatus) drawerStatus.textContent = 'Not logged in';
       if (drawerBtnLogin) drawerBtnLogin.textContent = 'Log In';
+      if (fbAuth && fbAuth.currentUser) {
+        fbAuth.signOut().catch(() => {});
+      }
     }
     loadMylistForCurrentStudent();
     applyUiLanguage(currentLang);
@@ -1127,6 +1162,110 @@
     updateMylistBadge();
   }
 
+  // --- Firebase Cloud Sync Core ---
+  // Authenticates student behind the scenes using internal virtual email (e.g. 0001@haku.local)
+  // This satisfies Gemini's security rule: request.auth.token.email == studentId + '@haku.local'
+  async function ensureStudentCloudAuth(studentId, passcode) {
+    if (!isFirebaseReady || !fbAuth || !studentId || studentId === 'guest') return false;
+    const virtualEmail = `${studentId.toLowerCase()}@haku.local`;
+    const passwordStr = `haku_${passcode}_sec`;
+
+    try {
+      if (fbAuth.currentUser && fbAuth.currentUser.email === virtualEmail) {
+        return true;
+      }
+      // Try sign in
+      try {
+        await fbAuth.signInWithEmailAndPassword(virtualEmail, passwordStr);
+        return true;
+      } catch (signInErr) {
+        if (signInErr.code === 'auth/user-not-found' || signInErr.code === 'auth/invalid-credential' || signInErr.code === 'auth/wrong-password') {
+          // Create user account if not exists
+          try {
+            await fbAuth.createUserWithEmailAndPassword(virtualEmail, passwordStr);
+            return true;
+          } catch (createErr) {
+            // If already exists or error, try sign in once more
+            console.warn('Firebase user creation note:', createErr.message);
+          }
+        }
+      }
+    } catch (err) {
+      console.warn('Firebase student auth note:', err.message);
+    }
+    return !!fbAuth.currentUser;
+  }
+
+  // Push student's mylist, folders, and mapping to Cloud Firestore
+  async function syncStudentToCloud(studentId) {
+    if (!isFirebaseReady || !fbDb || !studentId || studentId === 'guest') return;
+    try {
+      const docRef = fbDb.collection('students').doc(studentId);
+      await docRef.set({
+        mylist: Array.from(mylistSet),
+        folders: mylistFolders,
+        cardFolderMap: mylistCardFolderMap,
+        updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+      }, { merge: true });
+      console.log(`Cloud sync pushed for student ${studentId} ☁️`);
+    } catch (err) {
+      console.warn('Cloud sync push note:', err.message);
+    }
+  }
+
+  // Pull student's mylist, folders, and mapping from Cloud Firestore
+  async function syncStudentFromCloud(studentId) {
+    if (!isFirebaseReady || !fbDb || !studentId || studentId === 'guest') return false;
+    try {
+      const docRef = fbDb.collection('students').doc(studentId);
+      const snap = await docRef.get();
+      if (snap.exists) {
+        const data = snap.data();
+        let changed = false;
+        if (Array.isArray(data.mylist)) {
+          data.mylist.forEach(id => {
+            if (!mylistSet.has(id)) {
+              mylistSet.add(id);
+              changed = true;
+            }
+          });
+        }
+        if (Array.isArray(data.folders) && data.folders.length > 0) {
+          // Merge custom folders
+          data.folders.forEach(f => {
+            if (!mylistFolders.find(ex => ex.id === f.id)) {
+              mylistFolders.push(f);
+              changed = true;
+            }
+          });
+        }
+        if (data.cardFolderMap && typeof data.cardFolderMap === 'object') {
+          Object.assign(mylistCardFolderMap, data.cardFolderMap);
+          changed = true;
+        }
+
+        if (changed) {
+          // Update local cache
+          const key = `haku_mylist_${studentId}`;
+          const foldersKey = `haku_mylist_folders_${studentId}`;
+          const mapKey = `haku_mylist_card_map_${studentId}`;
+          localStorage.setItem(key, JSON.stringify(Array.from(mylistSet)));
+          localStorage.setItem(foldersKey, JSON.stringify(mylistFolders));
+          localStorage.setItem(mapKey, JSON.stringify(mylistCardFolderMap));
+          updateMylistBadge();
+          if (document.getElementById('viewMylist') && !document.getElementById('viewMylist').classList.contains('hidden')) {
+            renderMylistView();
+          }
+          console.log(`Cloud data successfully synced down for ${studentId}! ☁️✨`);
+          return true;
+        }
+      }
+    } catch (err) {
+      console.warn('Cloud sync pull note:', err.message);
+    }
+    return false;
+  }
+
   function saveMylistForCurrentStudent() {
     const studentPrefix = currentStudent ? currentStudent.id : 'guest';
     const key = `haku_mylist_${studentPrefix}`;
@@ -1138,6 +1277,11 @@
     localStorage.setItem(mapKey, JSON.stringify(mylistCardFolderMap));
 
     updateMylistBadge();
+
+    // Trigger asynchronous cloud sync to persist on all devices!
+    if (currentStudent && currentStudent.id !== 'guest') {
+      syncStudentToCloud(currentStudent.id);
+    }
   }
 
   // --- Folder Picker Modal for Adding Cards to My List ---
@@ -2300,6 +2444,16 @@
           try { stSet = JSON.parse(localStorage.getItem(key) || '[]'); } catch (e) { stSet = []; }
           const setObj = new Set([...stSet, ...addedCardIds]);
           localStorage.setItem(key, JSON.stringify(Array.from(setObj)));
+
+          // Synchronize to Cloud for this student so their devices receive the new words
+          if (isFirebaseReady && fbDb && stId !== 'guest') {
+            fbDb.collection('students').doc(stId).set({
+              mylist: Array.from(setObj),
+              folders: stFolders,
+              cardFolderMap: stMap,
+              updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+            }, { merge: true }).catch(e => console.warn('Cloud broadcast note:', e.message));
+          }
         });
 
         // If the current logged in student is one of the recipients, reload their mylist state immediately
