@@ -3100,50 +3100,32 @@
 
     // --- Furigana & Auto Audio Toggle Controls (Top Header) ---
     function updateFuriganaUi() {
-      const label = document.getElementById('labelToggleFurigana');
       const btn = document.getElementById('btnToggleFurigana');
       if (document.body) {
         document.body.classList.toggle('furigana-off', !isFuriganaEnabled);
       }
-      if (label) {
-        label.textContent = isFuriganaEnabled ? 'ふりがな ON' : 'ふりがな OFF';
-      }
       if (btn) {
+        btn.setAttribute('aria-checked', isFuriganaEnabled ? 'true' : 'false');
         if (isFuriganaEnabled) {
-          btn.classList.add('bg-white/20');
-          btn.classList.remove('bg-white/5', 'opacity-60');
+          btn.classList.add('is-on');
+          btn.classList.remove('is-off');
         } else {
-          btn.classList.remove('bg-white/20');
-          btn.classList.add('bg-white/5', 'opacity-60');
+          btn.classList.remove('is-on');
+          btn.classList.add('is-off');
         }
       }
     }
 
     function updateAutoAudioUi() {
-      const label = document.getElementById('labelToggleAutoAudio');
-      const icon = document.getElementById('iconToggleAutoAudio');
       const btn = document.getElementById('btnToggleAutoAudio');
-      if (label) {
-        label.textContent = isAutoAudioEnabled ? '音声自動 ON' : '音声自動 OFF';
-      }
-      if (icon) {
-        icon.setAttribute('data-lucide', isAutoAudioEnabled ? 'volume-2' : 'volume-x');
-        if (isAutoAudioEnabled) {
-          icon.classList.remove('text-blue-200');
-          icon.classList.add('text-emerald-300');
-        } else {
-          icon.classList.remove('text-emerald-300');
-          icon.classList.add('text-blue-200');
-        }
-        if (window.lucide && btn) lucide.createIcons({ root: btn });
-      }
       if (btn) {
+        btn.setAttribute('aria-checked', isAutoAudioEnabled ? 'true' : 'false');
         if (isAutoAudioEnabled) {
-          btn.classList.add('bg-emerald-600/80', 'border-emerald-400');
-          btn.classList.remove('bg-white/10', 'bg-white/5', 'opacity-60');
+          btn.classList.add('is-on');
+          btn.classList.remove('is-off');
         } else {
-          btn.classList.remove('bg-emerald-600/80', 'border-emerald-400');
-          btn.classList.add('bg-white/10');
+          btn.classList.remove('is-on');
+          btn.classList.add('is-off');
         }
       }
     }
@@ -3152,32 +3134,51 @@
     updateFuriganaUi();
     updateAutoAudioUi();
 
+    function handleToggleFurigana() {
+      isFuriganaEnabled = !isFuriganaEnabled;
+      localStorage.setItem('haku_furigana_enabled', isFuriganaEnabled ? 'true' : 'false');
+      updateFuriganaUi();
+      showToast(isFuriganaEnabled ? 'ふりがなを表示します（ON）' : 'ふりがなを非表示にしました（OFF）');
+    }
+
     const btnToggleFuri = document.getElementById('btnToggleFurigana');
     if (btnToggleFuri) {
-      btnToggleFuri.addEventListener('click', () => {
-        isFuriganaEnabled = !isFuriganaEnabled;
-        localStorage.setItem('haku_furigana_enabled', isFuriganaEnabled ? 'true' : 'false');
-        updateFuriganaUi();
-        showToast(isFuriganaEnabled ? 'ふりがなを表示します（ON）' : 'ふりがなを非表示にしました（OFF）');
+      btnToggleFuri.addEventListener('click', handleToggleFurigana);
+    }
+    const containerToggleFuri = document.getElementById('containerToggleFurigana');
+    if (containerToggleFuri) {
+      containerToggleFuri.addEventListener('click', (e) => {
+        if (!e.target.closest('#btnToggleFurigana')) {
+          handleToggleFurigana();
+        }
       });
+    }
+
+    function handleToggleAutoAudio() {
+      isAutoAudioEnabled = !isAutoAudioEnabled;
+      localStorage.setItem('haku_auto_audio_enabled', isAutoAudioEnabled ? 'true' : 'false');
+      updateAutoAudioUi();
+      showToast(isAutoAudioEnabled ? '音声自動再生を有効にしました（ON 🔊）' : '音声自動再生を解除しました（OFF 🔇）');
+      if (isAutoAudioEnabled && activeDeck[currentIndex]) {
+        const card = activeDeck[currentIndex];
+        if (!isCardFlipped) {
+          speakJapanese(card);
+        } else {
+          const exampleJa = (card.example && card.example.ja) ? card.example.ja : null;
+          speakJapaneseSequence(card, exampleJa);
+        }
+      }
     }
 
     const btnToggleAudio = document.getElementById('btnToggleAutoAudio');
     if (btnToggleAudio) {
-      btnToggleAudio.addEventListener('click', () => {
-        isAutoAudioEnabled = !isAutoAudioEnabled;
-        localStorage.setItem('haku_auto_audio_enabled', isAutoAudioEnabled ? 'true' : 'false');
-        updateAutoAudioUi();
-        showToast(isAutoAudioEnabled ? '音声自動再生を有効にしました（ON 🔊）' : '音声自動再生を解除しました（OFF 🔇）');
-        // もしONにした瞬間、カードが開いていれば発音
-        if (isAutoAudioEnabled && activeDeck[currentIndex]) {
-          const card = activeDeck[currentIndex];
-          if (!isCardFlipped) {
-            speakJapanese(card);
-          } else {
-            const exampleJa = (card.example && card.example.ja) ? card.example.ja : null;
-            speakJapaneseSequence(card, exampleJa);
-          }
+      btnToggleAudio.addEventListener('click', handleToggleAutoAudio);
+    }
+    const containerToggleAudio = document.getElementById('containerToggleAutoAudio');
+    if (containerToggleAudio) {
+      containerToggleAudio.addEventListener('click', (e) => {
+        if (!e.target.closest('#btnToggleAutoAudio')) {
+          handleToggleAutoAudio();
         }
       });
     }
