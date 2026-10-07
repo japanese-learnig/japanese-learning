@@ -1029,46 +1029,42 @@
     </div>
   </div>
 
-  <!-- 使い方ガイド (Help Guide) モーダル (プレースホルダー / 今後充実予定) -->
-  <div id="helpGuideModal" class="fixed inset-0 z-9999 hidden items-center justify-center bg-slate-900/60 backdrop-blur-xs p-4 animate-fade-in" onclick="if(event.target===this) closeHelpGuideModal()">
-    <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-softBorder animate-scale-up flex flex-col max-h-[85vh]">
+  <!-- 使い方ガイド (Help Guide) モーダル (イラスト図解付きスライド式) -->
+  <div id="helpGuideModal" class="fixed inset-0 z-9999 hidden items-center justify-center bg-slate-900/60 backdrop-blur-xs p-3 sm:p-4 animate-fade-in" onclick="if(event.target===this) closeHelpGuideModal()">
+    <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-softBorder animate-scale-up flex flex-col max-h-[92vh] sm:max-h-[88vh]">
       <!-- ヘッダー -->
-      <div class="bg-deepNavy text-white px-5 py-3.5 flex items-center justify-between shrink-0">
+      <div class="bg-deepNavy text-white px-4 sm:px-5 py-3 sm:py-3.5 flex items-center justify-between shrink-0 shadow-sm">
         <div class="font-bold text-sm sm:text-base flex items-center space-x-2">
           <span class="w-6 h-6 rounded-full bg-coralPink text-white font-extrabold text-xs flex items-center justify-center shadow-xs">?</span>
           <span id="helpGuideTitle">使い方ガイド (Guide)</span>
         </div>
-        <button onclick="closeHelpGuideModal()" class="text-white/80 hover:text-white p-1 rounded-full hover:bg-white/10 transition text-lg font-bold" title="閉じる">✕</button>
+        <div class="flex items-center space-x-2">
+          <span id="helpGuideStepBadge" class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-white/15 text-white/90">1 / 6</span>
+          <button onclick="closeHelpGuideModal()" class="text-white/80 hover:text-white p-1 rounded-full hover:bg-white/10 transition text-lg font-bold leading-none" title="閉じる">✕</button>
+        </div>
       </div>
 
-      <!-- モーダル本体 -->
-      <div class="p-6 overflow-y-auto space-y-4 text-slate-700 text-sm">
-        <div class="p-4 rounded-2xl bg-lightBlueBg/40 border border-softBorder">
-          <h4 class="font-bold text-deepNavy text-sm mb-1">📖 フラッシュカードの使い方</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            カードをタップすると日本語と意味がひっくり返ります。右上のスピーカーボタンを押すと、自然な発音で音声を聴くことができます。
-          </p>
+      <!-- スライド表示領域 (動的レンダリング) -->
+      <div id="helpGuideSlideContainer" class="p-4 sm:p-6 overflow-y-auto flex-1 flex flex-col justify-between">
+        <!-- JSで各スライドの内容が挿入されます -->
+      </div>
+
+      <!-- フッターナビゲーション (戻る / インジケーター / 次へ) -->
+      <div class="px-4 sm:px-6 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between shrink-0">
+        <button id="btnHelpGuidePrev" class="px-3.5 py-1.5 rounded-full border border-slate-300 text-slate-600 font-bold hover:bg-white transition text-xs flex items-center space-x-1 shadow-2xs disabled:opacity-30 disabled:pointer-events-none">
+          <i data-lucide="chevron-left" class="w-4 h-4"></i>
+          <span id="helpGuidePrevText">前へ</span>
+        </button>
+
+        <!-- ステップ ドット インジケーター -->
+        <div id="helpGuideDotsContainer" class="flex items-center space-x-1.5">
+          <!-- JSでドットをレンダリング -->
         </div>
 
-        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200">
-          <h4 class="font-bold text-amber-800 text-sm mb-1">🔄 「もう一度！」と「覚えた！」</h4>
-          <p class="text-xs text-amber-700 leading-relaxed">
-            カードの下にあるボタンを押すと、自分の理解度に合わせて自動的にマイリストへ仕分けされます。
-          </p>
-        </div>
-
-        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
-          <h4 class="font-bold text-slate-800 text-sm mb-1">💡 辞書機能＆ふりがな切り替え</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            上部のスイッチで「自動再生」や「ふりがな」のON/OFFができます。例文中の気になる単語をなぞると、すぐに辞書で検索できます。
-          </p>
-        </div>
-
-        <div class="pt-2 text-center">
-          <button onclick="closeHelpGuideModal()" class="px-6 py-2.5 rounded-full bg-deepNavy text-white font-bold hover:opacity-90 transition shadow-xs text-xs">
-            閉じる (Close)
-          </button>
-        </div>
+        <button id="btnHelpGuideNext" class="px-4 py-1.5 rounded-full bg-deepNavy hover:bg-slate-800 text-white font-bold transition text-xs flex items-center space-x-1 shadow-xs active:scale-95">
+          <span id="helpGuideNextText">次へ</span>
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </button>
       </div>
     </div>
   </div>

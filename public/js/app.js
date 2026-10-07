@@ -3883,10 +3883,18 @@
     // Admin execute import
     document.getElementById('btnExecuteImport').addEventListener('click', executeImport);
 
-    // Help guide modal toggle
+    // Help guide modal toggle & slide controls
     const btnHelpGuide = document.getElementById('btnHelpGuide');
     if (btnHelpGuide) {
       btnHelpGuide.addEventListener('click', openHelpGuideModal);
+    }
+    const btnHelpGuidePrev = document.getElementById('btnHelpGuidePrev');
+    if (btnHelpGuidePrev) {
+      btnHelpGuidePrev.addEventListener('click', prevHelpGuideSlide);
+    }
+    const btnHelpGuideNext = document.getElementById('btnHelpGuideNext');
+    if (btnHelpGuideNext) {
+      btnHelpGuideNext.addEventListener('click', nextHelpGuideSlide);
     }
 
     // Mobile shuffle all button
@@ -4827,9 +4835,371 @@
     modal.classList.add('flex');
   }
 
+  // ==========================================
+  // --- 使い方ガイド (Help Guide) スライド式コントローラー ---
+  // ==========================================
+  let currentHelpGuideSlideIndex = 0;
+
+  const HELP_GUIDE_SLIDES = [
+    {
+      id: 'search',
+      badge: { ja: 'ステップ 1 / 検索', en: 'Step 1 / Search' },
+      title: { ja: '🔍 検索窓で探してマイリストへ追加', en: 'Search & Add to My List' },
+      subtitle: {
+        ja: '上部の検索バーに日本語（漢字・ひらがな・ローマ字）や母国語を入力するだけで、瞬時に目的の単語が見つかります。',
+        en: 'Type Japanese (kanji, hiragana, romaji) or your native language in the top search bar to find words instantly.'
+      },
+      diagramHtml: `
+        <div class="rounded-2xl bg-gradient-to-br from-slate-50 to-sky-50 border border-sky-100 p-3 shadow-inner space-y-2.5">
+          <!-- 検索バーのイラスト風UI -->
+          <div class="flex items-center space-x-2 bg-deepNavy text-white px-3 py-2 rounded-full shadow-sm">
+            <span class="text-xs">🔍</span>
+            <span class="text-[11px] font-mono text-white/90 bg-white/20 px-2 py-0.5 rounded-full font-bold">ねこ / cat / 猫</span>
+            <span class="text-[10px] text-white/60 ml-auto">母国語・日本語OK</span>
+          </div>
+          <!-- 検索結果のカード例 -->
+          <div class="bg-white rounded-xl p-2.5 border border-slate-200 shadow-2xs flex items-center justify-between">
+            <div>
+              <div class="flex items-baseline space-x-1.5">
+                <span class="text-sm font-black text-slate-800">猫</span>
+                <span class="text-[11px] font-bold text-deepNavy">（ねこ）</span>
+              </div>
+              <p class="text-[10px] text-slate-500 font-medium">cat / 猫咪 / 고양이</p>
+            </div>
+            <!-- アクションボタン -->
+            <div class="flex items-center space-x-1">
+              <span class="text-[10px] font-bold px-2 py-1 rounded-lg bg-amber-50 border border-amber-300 text-amber-700 flex items-center space-x-0.5 shadow-2xs">
+                <span>⭐</span>
+                <span>マイリスト追加</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      `,
+      tips: {
+        ja: '💡 漢字一文字や「〜の時」のような語句でも、関連する単語を自動的に探してくれます！',
+        en: '💡 Search works with single kanji, phrases, or grammar patterns too!'
+      }
+    },
+    {
+      id: 'swipe_marking',
+      badge: { ja: 'ステップ 2 / 復習管理', en: 'Step 2 / Review & Learn' },
+      title: { ja: '🔄 「覚えた！」と「もう一回」に仕分け', en: 'Sort into "Learned" & "Review"' },
+      subtitle: {
+        ja: 'カードをめくって学習したら、理解度に合わせて仕分け。スマホ版は左右のスワイプ操作で直感的に仕分けできます！',
+        en: 'After flipping the card, sort it. On smartphones, easily swipe left or right!'
+      },
+      diagramHtml: `
+        <div class="rounded-2xl bg-gradient-to-br from-rose-50/50 via-white to-emerald-50/50 border border-slate-200 p-3 shadow-inner space-y-3">
+          <!-- スマホスワイプジェスチャーの図解 -->
+          <div class="relative bg-white rounded-2xl border-2 border-dashed border-slate-300 p-3 text-center shadow-xs overflow-hidden">
+            <div class="text-[11px] font-extrabold text-slate-400 mb-1">📱 スマホ版スワイプ操作</div>
+            <div class="flex items-center justify-between px-2">
+              <!-- 左スワイプ -->
+              <div class="flex flex-col items-center">
+                <span class="text-lg">👈</span>
+                <span class="text-[10px] font-black px-2 py-0.5 rounded-full bg-rose-100 text-coralPink border border-rose-200 mt-0.5">左: もう一回！</span>
+              </div>
+              <!-- 中央カード -->
+              <div class="w-20 py-2 rounded-xl bg-deepNavy text-white text-[11px] font-bold shadow-md">
+                単語カード
+              </div>
+              <!-- 右スワイプ -->
+              <div class="flex flex-col items-center">
+                <span class="text-lg">👉</span>
+                <span class="text-[10px] font-black px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200 mt-0.5">右: 覚えた！</span>
+              </div>
+            </div>
+          </div>
+          <!-- PC版ボタンの図解 -->
+          <div class="flex items-center justify-center space-x-3 text-xs">
+            <span class="px-3 py-1 rounded-xl bg-white border border-rose-200 text-coralPink font-extrabold shadow-2xs">
+              🔁 もう一度！
+            </span>
+            <span class="text-[10px] text-slate-400 font-bold">PC版はボタンをクリック</span>
+            <span class="px-3 py-1 rounded-xl bg-deepNavy text-white font-extrabold shadow-2xs">
+              ✨ 覚えた！
+            </span>
+          </div>
+        </div>
+      `,
+      tips: {
+        ja: '💡 仕分けた単語はマイリストの『覚えた！』『もう一度！』フォルダに自動保存されます。',
+        en: '💡 Words are automatically saved to your "Learned" and "Review" folders.'
+      }
+    },
+    {
+      id: 'custom_folders',
+      badge: { ja: 'ステップ 3 / 整理', en: 'Step 3 / Folders' },
+      title: { ja: '📁 フォルダを自由に作成して整理', en: 'Create Custom Folders' },
+      subtitle: {
+        ja: '「旅行用」「苦手な漢字」「第5課復習」など、自分で好きなフォルダを作って単語を自由にまとめられます。',
+        en: 'Organize words into your own custom folders like "Travel", "Tricky Kanji", or "Lesson 5".'
+      },
+      diagramHtml: `
+        <div class="rounded-2xl bg-gradient-to-br from-amber-50/60 to-orange-50/60 border border-amber-200 p-3 shadow-inner space-y-2">
+          <!-- フォルダ作成ヘッダー -->
+          <div class="flex items-center justify-between bg-white px-3 py-1.5 rounded-xl border border-amber-200 shadow-2xs">
+            <span class="text-xs font-bold text-amber-900 flex items-center space-x-1">
+              <span>📁</span>
+              <span>マイリストのフォルダ</span>
+            </span>
+            <span class="text-[10px] font-black px-2 py-0.5 rounded-full bg-deepNavy text-white shadow-2xs">
+              ＋ フォルダ作成
+            </span>
+          </div>
+          <!-- フォルダタグ一覧例 -->
+          <div class="grid grid-cols-3 gap-1.5 pt-1">
+            <div class="bg-white p-2 rounded-xl border border-slate-200 text-center shadow-2xs">
+              <span class="text-sm block">🌸</span>
+              <span class="text-[10px] font-bold text-slate-700">日常会話</span>
+            </div>
+            <div class="bg-white p-2 rounded-xl border border-slate-200 text-center shadow-2xs">
+              <span class="text-sm block">✈️</span>
+              <span class="text-[10px] font-bold text-slate-700">旅行・買い物</span>
+            </div>
+            <div class="bg-white p-2 rounded-xl border border-slate-200 text-center shadow-2xs">
+              <span class="text-sm block">📝</span>
+              <span class="text-[10px] font-bold text-slate-700">苦手な動詞</span>
+            </div>
+          </div>
+        </div>
+      `,
+      tips: {
+        ja: '💡 単語の保存時に保存先フォルダを選べるほか、フォルダごとの集中テストもできます！',
+        en: '💡 Choose which folder to save each word to, and take quizzes by folder!'
+      }
+    },
+    {
+      id: 'auto_audio',
+      badge: { ja: 'ステップ 4 / 音声機能', en: 'Step 4 / Audio & Voice' },
+      title: { ja: '🔊 音声自動再生で耳から覚える', en: 'Auto Audio Playback' },
+      subtitle: {
+        ja: '画面上部の「自動再生」をONにすると、カードを表示した時やめくった時に単語と例文が自動で流れます。',
+        en: 'Turn on "Auto Audio" in the top bar to automatically hear words and example sentences.'
+      },
+      diagramHtml: `
+        <div class="rounded-2xl bg-gradient-to-br from-rose-50/60 to-sky-50/60 border border-softBorder p-3 shadow-inner space-y-2.5">
+          <!-- スイッチUIの図解 -->
+          <div class="flex items-center justify-between bg-deepNavy text-white px-3 py-2 rounded-xl shadow-xs">
+            <div class="flex items-center space-x-1.5">
+              <span class="text-xs">🔊</span>
+              <span class="text-xs font-bold">自動再生スイッチ</span>
+            </div>
+            <div class="flex items-center space-x-1 bg-coralPink px-2.5 py-0.5 rounded-full border border-white text-[10px] font-black text-white shadow-2xs">
+              <span>ON</span>
+              <span class="w-3 h-3 rounded-full bg-white ml-1 inline-block"></span>
+            </div>
+          </div>
+          <!-- 音声ストップ機能の図解 -->
+          <div class="bg-white rounded-xl p-2.5 border border-slate-200 shadow-2xs space-y-1">
+            <div class="flex items-center space-x-1.5 text-[11px] font-bold text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-coralPink text-white flex items-center justify-center text-[10px] shadow-2xs">🔊</span>
+              <span>音声ボタンをもう一度押すと停止（Stop）</span>
+            </div>
+            <p class="text-[10px] text-slate-500 leading-relaxed pl-6">
+              再生中に音声ボタンをもう一度タップすると、いつでもすぐにストップできます。
+            </p>
+          </div>
+        </div>
+      `,
+      tips: {
+        ja: '💡 例文も自然な日本語イントネーションで発音されます。シャドーイングの練習に最適です！',
+        en: '💡 Plays natural Japanese intonation, perfect for shadowing practice!'
+      }
+    },
+    {
+      id: 'furigana',
+      badge: { ja: 'ステップ 5 / 漢字練習', en: 'Step 5 / Furigana OFF' },
+      title: { ja: '✍️ ふりがなOFFで漢字テスト', en: 'Practice Reading Kanji' },
+      subtitle: {
+        ja: '「ふりがな」をOFFに切り替えると、漢字の上の読みが隠れるので、漢字を自力で読めるか確認・特訓できます。',
+        en: 'Turn Furigana OFF to hide hiragana readings above kanji and test your memory.'
+      },
+      diagramHtml: `
+        <div class="rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200 border border-slate-300 p-3 shadow-inner space-y-2.5">
+          <!-- スイッチUI -->
+          <div class="flex items-center justify-between bg-deepNavy text-white px-3 py-2 rounded-xl shadow-xs">
+            <div class="flex items-center space-x-1.5">
+              <span class="text-xs">あ/A</span>
+              <span class="text-xs font-bold">ふりがなスイッチ</span>
+            </div>
+            <div class="flex items-center space-x-1 bg-slate-600 px-2.5 py-0.5 rounded-full border border-white text-[10px] font-black text-white shadow-2xs">
+              <span class="w-3 h-3 rounded-full bg-white mr-1 inline-block"></span>
+              <span>OFF</span>
+            </div>
+          </div>
+          <!-- 比較イラスト -->
+          <div class="grid grid-cols-2 gap-2 text-center text-xs">
+            <div class="bg-white p-2.5 rounded-xl border border-slate-200 shadow-2xs">
+              <span class="text-[10px] font-bold text-slate-400 block mb-1">【ON】 読みつき</span>
+              <ruby class="text-sm font-bold text-slate-800">朝ご飯<rt class="text-deepNavy">あさごはん</rt></ruby>
+            </div>
+            <div class="bg-white p-2.5 rounded-xl border-2 border-coralPink shadow-2xs">
+              <span class="text-[10px] font-bold text-coralPink block mb-1">【OFF】 漢字チャレンジ</span>
+              <span class="text-sm font-black text-slate-900">朝ご飯</span>
+            </div>
+          </div>
+        </div>
+      `,
+      tips: {
+        ja: '💡 辞書を開いたときは、OFF時でも常に正確なふりがなが表示されるので安心です！',
+        en: '💡 Furigana is always available inside the dictionary lookup modal!'
+      }
+    },
+    {
+      id: 'dict_lookup',
+      badge: { ja: 'ステップ 6 / 辞書検索', en: 'Step 6 / Built-in Dictionary' },
+      title: { ja: '📖 わからない言葉はなぞって辞書へ', en: 'Lookup & Save from Sentences' },
+      subtitle: {
+        ja: '例文の中で知らない単語や漢字があったら、指やマウスで選択（なぞる）だけですぐにポップアップが出現！',
+        en: 'Highlight any unknown word or kanji in the example sentence to lookup and save instantly!'
+      },
+      diagramHtml: `
+        <div class="rounded-2xl bg-gradient-to-br from-sky-50 to-indigo-50 border border-sky-200 p-3 shadow-inner space-y-2.5">
+          <!-- 選択ツールバーのイラスト風再現 -->
+          <div class="bg-white rounded-xl p-2.5 border border-slate-200 shadow-2xs">
+            <p class="text-[11px] text-slate-700 leading-relaxed">
+              明日、友達と<span class="bg-sky-200 text-sky-900 font-bold px-1 rounded">図書館</span>へ行きます。
+            </p>
+          </div>
+          <!-- ツールバーの吹き出し -->
+          <div class="flex items-center justify-center space-x-1.5 bg-slate-900 text-white px-3 py-1.5 rounded-xl shadow-lg border border-slate-700 text-xs">
+            <span class="font-extrabold text-sky-400 text-[11px]">図書館</span>
+            <span class="px-2 py-0.5 rounded-lg bg-sky-600 font-bold text-[10px] flex items-center space-x-0.5 shadow-2xs">
+              <span>🔍</span>
+              <span>辞書で調べる</span>
+            </span>
+            <span class="px-2 py-0.5 rounded-lg bg-emerald-600 font-bold text-[10px] flex items-center space-x-0.5 shadow-2xs">
+              <span>🔖</span>
+              <span>保存</span>
+            </span>
+          </div>
+        </div>
+      `,
+      tips: {
+        ja: '💡 辞書モーダルでは意味・例文・関連語を一度に確認でき、その場でマイリストへワンタップ保存できます！',
+        en: '💡 Check meanings, examples, and related words, and add them to My List in one tap!'
+      }
+    }
+  ];
+
+  function renderHelpGuideSlide(index) {
+    if (index < 0) index = 0;
+    if (index >= HELP_GUIDE_SLIDES.length) index = HELP_GUIDE_SLIDES.length - 1;
+    currentHelpGuideSlideIndex = index;
+
+    const slide = HELP_GUIDE_SLIDES[currentHelpGuideSlideIndex];
+    const isJa = (currentLang === 'ja');
+    const total = HELP_GUIDE_SLIDES.length;
+
+    // ステップバッジ更新
+    const stepBadge = document.getElementById('helpGuideStepBadge');
+    if (stepBadge) {
+      stepBadge.textContent = `${currentHelpGuideSlideIndex + 1} / ${total}`;
+    }
+
+    // スライド本体更新
+    const container = document.getElementById('helpGuideSlideContainer');
+    if (container) {
+      const badgeText = isJa ? slide.badge.ja : slide.badge.en;
+      const titleText = isJa ? slide.title.ja : slide.title.en;
+      const subtitleText = isJa ? slide.subtitle.ja : slide.subtitle.en;
+      const tipText = isJa ? slide.tips.ja : slide.tips.en;
+
+      container.innerHTML = `
+        <div class="space-y-3.5">
+          <!-- 上部バッジ & タイトル -->
+          <div>
+            <span class="inline-block px-2.5 py-0.5 rounded-full bg-deepNavy/10 text-deepNavy text-[11px] font-extrabold mb-1">
+              ${badgeText}
+            </span>
+            <h3 class="text-base sm:text-lg font-black text-slate-800 leading-snug">
+              ${titleText}
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed mt-1">
+              ${subtitleText}
+            </p>
+          </div>
+
+          <!-- イラスト・図解カード -->
+          <div>
+            ${slide.diagramHtml}
+          </div>
+
+          <!-- ヒント・アドバイス -->
+          <div class="p-2.5 rounded-xl bg-amber-50/70 border border-amber-200/80 text-[11px] text-amber-900 font-medium leading-relaxed">
+            ${tipText}
+          </div>
+        </div>
+      `;
+    }
+
+    // ドット インジケーター更新
+    const dotsContainer = document.getElementById('helpGuideDotsContainer');
+    if (dotsContainer) {
+      dotsContainer.innerHTML = HELP_GUIDE_SLIDES.map((_, i) => {
+        const isActive = (i === currentHelpGuideSlideIndex);
+        return `
+          <button onclick="goToHelpGuideSlide(${i})" class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-200 ${isActive ? 'bg-deepNavy w-5 sm:w-6' : 'bg-slate-300 hover:bg-slate-400'}" title="Slide ${i + 1}"></button>
+        `;
+      }).join('');
+    }
+
+    // ナビゲーションボタン更新
+    const btnPrev = document.getElementById('btnHelpGuidePrev');
+    const btnNext = document.getElementById('btnHelpGuideNext');
+    const prevText = document.getElementById('helpGuidePrevText');
+    const nextText = document.getElementById('helpGuideNextText');
+
+    if (btnPrev) {
+      btnPrev.disabled = (currentHelpGuideSlideIndex === 0);
+    }
+    if (prevText) {
+      prevText.textContent = isJa ? '前へ' : 'Prev';
+    }
+
+    if (btnNext && nextText) {
+      const isLast = (currentHelpGuideSlideIndex === total - 1);
+      if (isLast) {
+        nextText.textContent = isJa ? '完了 (閉じる)' : 'Done (Close)';
+        btnNext.className = 'px-4 py-1.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold transition text-xs flex items-center space-x-1 shadow-xs active:scale-95';
+      } else {
+        nextText.textContent = isJa ? '次へ' : 'Next';
+        btnNext.className = 'px-4 py-1.5 rounded-full bg-deepNavy hover:bg-slate-800 text-white font-bold transition text-xs flex items-center space-x-1 shadow-xs active:scale-95';
+      }
+    }
+
+    // Lucide アイコン再初期化
+    if (window.lucide) {
+      const modalEl = document.getElementById('helpGuideModal');
+      if (modalEl) lucide.createIcons({ root: modalEl });
+    }
+  }
+
+  function goToHelpGuideSlide(index) {
+    renderHelpGuideSlide(index);
+  }
+
+  function nextHelpGuideSlide() {
+    if (currentHelpGuideSlideIndex < HELP_GUIDE_SLIDES.length - 1) {
+      renderHelpGuideSlide(currentHelpGuideSlideIndex + 1);
+    } else {
+      closeHelpGuideModal();
+    }
+  }
+
+  function prevHelpGuideSlide() {
+    if (currentHelpGuideSlideIndex > 0) {
+      renderHelpGuideSlide(currentHelpGuideSlideIndex - 1);
+    }
+  }
+
   function openHelpGuideModal() {
     const modal = document.getElementById('helpGuideModal');
     if (modal) {
+      currentHelpGuideSlideIndex = 0;
+      renderHelpGuideSlide(0);
       modal.classList.remove('hidden');
       modal.classList.add('flex');
     }
@@ -4848,6 +5218,9 @@
   window.openDictLookupModal = openDictLookupModal;
   window.openHelpGuideModal = openHelpGuideModal;
   window.closeHelpGuideModal = closeHelpGuideModal;
+  window.goToHelpGuideSlide = goToHelpGuideSlide;
+  window.nextHelpGuideSlide = nextHelpGuideSlide;
+  window.prevHelpGuideSlide = prevHelpGuideSlide;
 
   // --- App Startup ---
   function startup() {
