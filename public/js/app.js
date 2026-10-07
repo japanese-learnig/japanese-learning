@@ -1350,14 +1350,20 @@
     }
   }
 
-  // --- PC / Mobile Layout (Unified Centered Single-Column Layout) ---
+  // --- PC / Mobile Layout (Responsive 2-Column on Desktop, Centered on Mobile) ---
   function initLayoutMode() {
     const sidebar = document.getElementById('vocabSidebar');
     const mainContainer = document.getElementById('mainContainer');
 
     function applyLayout() {
-      if (sidebar) sidebar.classList.add('hidden');
-      if (mainContainer) mainContainer.className = 'flex-1 w-full max-w-md mx-auto p-3 sm:p-4 transition-all';
+      const isDesktop = window.innerWidth >= 768;
+      if (isDesktop) {
+        if (sidebar) sidebar.classList.remove('hidden');
+        if (mainContainer) mainContainer.className = 'flex-1 w-full max-w-5xl mx-auto p-3 sm:p-4 transition-all';
+      } else {
+        if (sidebar) sidebar.classList.add('hidden');
+        if (mainContainer) mainContainer.className = 'flex-1 w-full max-w-md mx-auto p-3 sm:p-4 transition-all';
+      }
     }
 
     applyLayout();
@@ -1920,15 +1926,21 @@
           const secCards = vocabList.filter(c => c.section_num === secNum);
           const numDisplay = secNum === 0 ? '★' : `${secNum}`;
 
+          const isCurrentActive = (currentSection == secNum && currentFolder === fc.id);
+
           const unitItem = document.createElement('div');
-          unitItem.className = 'group flex items-center justify-between px-3 py-2 rounded-xl cursor-pointer transition text-xs bg-white border border-slate-200/80 hover:border-deepNavy hover:bg-blue-50/30';
+          unitItem.className = `group flex items-center justify-between px-3 py-2 rounded-xl cursor-pointer transition text-xs ${
+            isCurrentActive
+              ? 'bg-lightBlueBg/80 border-2 border-deepNavy text-deepNavy font-bold shadow-xs'
+              : 'bg-white border border-slate-200/80 hover:border-deepNavy hover:bg-blue-50/30 text-slate-800'
+          }`;
           unitItem.innerHTML = `
             <div class="flex items-center space-x-2 truncate pr-2">
-              <span class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 font-bold text-[10px] flex items-center justify-center shrink-0">${numDisplay}</span>
-              <span class="truncate font-semibold text-slate-800 text-xs">${bilingualTitle}</span>
+              <span class="w-5 h-5 rounded-md ${isCurrentActive ? 'bg-deepNavy text-white' : 'bg-slate-100 text-slate-700'} font-bold text-[10px] flex items-center justify-center shrink-0">${numDisplay}</span>
+              <span class="truncate font-semibold text-xs">${bilingualTitle}</span>
             </div>
             <div class="flex items-center space-x-1 shrink-0 text-slate-400">
-              <span class="text-[10px] px-1.5 py-0.5 rounded font-medium bg-slate-100 text-slate-600">${secCards.length}語</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded font-medium ${isCurrentActive ? 'bg-deepNavy text-white' : 'bg-slate-100 text-slate-600'}">${secCards.length}語</span>
               <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-300 group-hover:text-deepNavy transition"></i>
             </div>
           `;
@@ -1948,7 +1960,14 @@
       container.appendChild(folderWrapper);
     });
 
+    // Also populate mobile container if present
+    const mobileContainer = document.getElementById('folderButtonsContainerMobile');
+    if (mobileContainer && container !== mobileContainer) {
+      mobileContainer.innerHTML = container.innerHTML;
+    }
+
     lucide.createIcons({ root: container });
+    if (mobileContainer) lucide.createIcons({ root: mobileContainer });
   }
 
   function openFolderUnits(folderId) {
@@ -2027,6 +2046,7 @@
     document.getElementById('activeStudyHeader').classList.remove('hidden');
 
     updateActiveDeck();
+    renderFolderOverview();
     showToast(`「${sectionTitle}」の学習を開始します`);
   }
 
@@ -3676,6 +3696,20 @@
     // Admin execute import
     document.getElementById('btnExecuteImport').addEventListener('click', executeImport);
 
+    // Help guide modal toggle
+    const btnHelpGuide = document.getElementById('btnHelpGuide');
+    if (btnHelpGuide) {
+      btnHelpGuide.addEventListener('click', openHelpGuideModal);
+    }
+
+    // Mobile shuffle all button
+    const btnShuffleAllMobile = document.getElementById('btnShuffleAllMobile');
+    if (btnShuffleAllMobile) {
+      btnShuffleAllMobile.addEventListener('click', () => {
+        document.getElementById('btnShuffleAll')?.click();
+      });
+    }
+
     // Login modal toggles
     document.getElementById('userBtn').addEventListener('click', () => {
       document.getElementById('loginModal').classList.remove('hidden');
@@ -4477,8 +4511,16 @@
     modal.classList.add('flex');
   }
 
-  function closeDictPopupModal() {
-    const modal = document.getElementById('dictPopupModal');
+  function openHelpGuideModal() {
+    const modal = document.getElementById('helpGuideModal');
+    if (modal) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+  }
+
+  function closeHelpGuideModal() {
+    const modal = document.getElementById('helpGuideModal');
     if (modal) {
       modal.classList.add('hidden');
       modal.classList.remove('flex');
@@ -4488,6 +4530,8 @@
   // グローバル露出（インラインイベント等からの呼出用）
   window.closeDictPopupModal = closeDictPopupModal;
   window.openDictLookupModal = openDictLookupModal;
+  window.openHelpGuideModal = openHelpGuideModal;
+  window.closeHelpGuideModal = closeHelpGuideModal;
 
   // --- App Startup ---
   function startup() {

@@ -158,22 +158,34 @@
 <body class="bg-lightBlueBg text-slate-800 min-h-screen flex flex-col antialiased select-none">
 
   <!-- Top Navigation Header -->
-  <header class="sticky top-0 z-40 bg-deepNavy text-white px-4 py-2.5 shadow-sm flex items-center justify-between">
-    <div class="flex items-center space-x-2.5">
-      <!-- Hamburger Menu Button to open Portal Drawer -->
+  <header class="sticky top-0 z-40 bg-deepNavy text-white px-3 sm:px-4 py-2 shadow-sm flex items-center justify-between gap-2 sm:gap-3">
+    <!-- Left Section: Hamburger Menu -->
+    <div class="flex items-center space-x-2 shrink-0">
       <button id="btnOpenMenuDrawer" class="p-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition active:scale-95" title="Menu">
         <i data-lucide="menu" class="w-5 h-5"></i>
       </button>
-      <div>
-        <h1 class="text-sm font-bold text-white tracking-wide">Japanese Vocab Cards</h1>
-        <p id="headerStudentBadge" class="text-[10px] text-blue-100 font-medium">Student: Guest</p>
+      <span id="headerStudentBadge" class="hidden sm:inline-block text-[10px] text-blue-100 font-medium bg-white/10 px-2 py-0.5 rounded-full">Guest</span>
+    </div>
+
+    <!-- Center Section: Integrated Search Bar -->
+    <div class="flex-1 max-w-md relative flex items-center">
+      <input type="text" id="globalTopSearchInput" placeholder="Search words (Kanji, Hiragana, Romaji, English, Meaning)..." class="w-full text-xs sm:text-sm py-1.5 sm:py-2 pl-8 sm:pl-9 pr-7 sm:pr-8 rounded-full border border-white/20 bg-white/15 focus:bg-white text-white focus:text-slate-800 placeholder-white/70 focus:placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-coralPink shadow-inner transition">
+      <i data-lucide="search" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white/70 absolute left-2.5 sm:left-3 top-2 sm:top-2.5 pointer-events-none"></i>
+      <button id="btnClearTopSearch" class="absolute right-2.5 sm:right-3 top-2 sm:top-2.5 text-white/70 hover:text-white hidden" title="Clear">
+        <i data-lucide="x" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+      </button>
+
+      <!-- Search Results Floating Dropdown -->
+      <div id="searchDropdownContainer" class="hidden absolute top-full left-0 right-0 mt-1.5 bg-white rounded-2xl border border-softBorder shadow-2xl max-h-[75vh] overflow-y-auto z-50 p-2 space-y-2">
+        <!-- Dynamically rendered search results -->
       </div>
     </div>
 
-    <!-- Center / Right Controls -->
+    <!-- Right Section: Auto Audio, Furigana, Help Guide, User Profile, Admin Lock -->
+    <div class="flex items-center space-x-2 sm:space-x-3 shrink-0">
       <!-- 自動再生 (Auto Audio) Toggle Switch -->
       <div class="flex items-center space-x-1 cursor-pointer select-none" id="containerToggleAutoAudio" title="自動再生 (ON / OFF)">
-        <span class="text-[11px] font-bold text-white tracking-tight">自動再生</span>
+        <span class="text-[11px] font-bold text-white tracking-tight hidden sm:inline">自動再生</span>
         <div id="btnToggleAutoAudio" class="toggle-pill-track is-off" role="switch" aria-checked="false">
           <span class="toggle-pill-text toggle-pill-text-on">ON</span>
           <span class="toggle-pill-text toggle-pill-text-off">OFF</span>
@@ -183,7 +195,7 @@
 
       <!-- ふりがな (Furigana) Toggle Switch -->
       <div class="flex items-center space-x-1 cursor-pointer select-none" id="containerToggleFurigana" title="ふりがな (ON / OFF)">
-        <span class="text-[11px] font-bold text-white tracking-tight">ふりがな</span>
+        <span class="text-[11px] font-bold text-white tracking-tight hidden sm:inline">ふりがな</span>
         <div id="btnToggleFurigana" class="toggle-pill-track is-on" role="switch" aria-checked="true">
           <span class="toggle-pill-text toggle-pill-text-on">ON</span>
           <span class="toggle-pill-text toggle-pill-text-off">OFF</span>
@@ -191,77 +203,63 @@
         </div>
       </div>
 
+      <!-- ? 使い方ガイド (Help Guide) Button -->
+      <button id="btnHelpGuide" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-coralPink hover:bg-coralPinkHover text-white font-extrabold flex items-center justify-center shadow-sm transition active:scale-95 text-xs sm:text-sm" title="使い方ガイド">
+        ?
+      </button>
+
       <!-- Quick Action: Student Login/Profile Icon -->
       <button id="userBtn" class="p-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition" title="Student Login">
         <i data-lucide="user" class="w-4 h-4"></i>
       </button>
 
       <!-- Discreet Teacher Lock -->
-      <button id="navAdmin" class="p-1.5 rounded-full text-white/50 hover:text-white transition" title="Teacher Admin">
+      <button id="navAdmin" class="p-1.5 rounded-full text-white/40 hover:text-white transition" title="Teacher Admin">
         <i data-lucide="lock" class="w-3.5 h-3.5"></i>
       </button>
     </div>
   </header>
 
-  <!-- Top Search Bar Container -->
-  <div class="bg-white/90 backdrop-blur-sm border-b border-softBorder py-2 px-4 shadow-2xs relative z-30">
-    <div class="max-w-xl mx-auto relative flex items-center">
-      <input type="text" id="globalTopSearchInput" placeholder="Search words (Kanji, Hiragana, Romaji, English, Meaning)..." class="w-full text-xs sm:text-sm py-2 pl-9 pr-8 rounded-full border border-softBorder focus:outline-none focus:ring-2 focus:ring-deepNavy bg-slate-50 focus:bg-white text-slate-800 shadow-inner">
-      <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-2.5"></i>
-      <button id="btnClearTopSearch" class="absolute right-3 top-2.5 text-slate-400 hover:text-slate-600 hidden" title="Clear">
-        <i data-lucide="x" class="w-4 h-4"></i>
-      </button>
-
-      <!-- Search Results Floating Dropdown (スマホ・PC共通で入力直下に即座に表示) -->
-      <div id="searchDropdownContainer" class="hidden absolute top-full left-0 right-0 mt-1.5 bg-white rounded-2xl border border-softBorder shadow-2xl max-h-[75vh] overflow-y-auto z-50 p-2 space-y-2">
-        <!-- Dynamically rendered search results -->
-      </div>
-    </div>
-  </div>
-
-  <!-- Navigation Tabs (Only for Student: Flashcards, Quiz, My List) -->
-  <nav class="bg-white/80 backdrop-blur-sm border-b border-softBorder px-3 py-1.5 flex justify-center text-xs font-bold text-slate-600 gap-2 max-w-xl mx-auto w-full">
-    <button id="navStudy" class="flex-1 py-1 px-3 rounded-full text-white bg-deepNavy flex items-center justify-center space-x-1 transition shadow-xs">
+  <!-- Navigation Tabs (Flashcards, Quiz, My List) -->
+  <nav class="bg-white/80 backdrop-blur-sm border-b border-softBorder px-3 py-1.5 flex justify-center text-xs font-bold text-slate-600 gap-2 sm:gap-3 max-w-5xl mx-auto w-full">
+    <button id="navStudy" class="flex-1 max-w-[200px] py-1.5 px-3 rounded-full text-white bg-deepNavy flex items-center justify-center space-x-1.5 transition shadow-xs">
       <i data-lucide="layers" class="w-3.5 h-3.5"></i>
       <span id="navStudyLabel">Flashcards</span>
     </button>
-    <button id="navQuiz" class="flex-1 py-1 px-3 rounded-full border border-softBorder hover:border-deepNavy bg-white text-slate-700 flex items-center justify-center space-x-1 transition">
+    <button id="navQuiz" class="flex-1 max-w-[200px] py-1.5 px-3 rounded-full border border-softBorder hover:border-deepNavy bg-white text-slate-700 flex items-center justify-center space-x-1.5 transition">
       <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
       <span id="navQuizLabel">Quiz / Test</span>
     </button>
-    <button id="navMylist" class="flex-1 py-1 px-3 rounded-full border border-softBorder hover:border-deepNavy bg-white text-slate-700 flex items-center justify-center space-x-1 transition">
+    <button id="navMylist" class="flex-1 max-w-[200px] py-1.5 px-3 rounded-full border border-softBorder hover:border-deepNavy bg-white text-slate-700 flex items-center justify-center space-x-1.5 transition">
       <i data-lucide="star" class="w-3.5 h-3.5 text-coralPink"></i>
       <span><span id="navMylistLabel">My List</span> (<span id="mylistCountBadge">0</span>)</span>
     </button>
   </nav>
 
-  <!-- MAIN APP CONTAINER (Centered Single-Column Layout across PC & Mobile) -->
-  <main id="mainContainer" class="flex-1 w-full max-w-md mx-auto p-3 sm:p-4 transition-all">
+  <!-- MAIN APP CONTAINER (PC: 2-Column Responsive Layout / Mobile: 1-Column) -->
+  <main id="mainContainer" class="flex-1 w-full max-w-5xl mx-auto p-3 sm:p-4 transition-all">
 
     <!-- ==================== VIEW 1: FLASHCARDS + VOCAB DICTIONARY ==================== -->
-    <div id="viewFlashcards" class="w-full flex flex-col items-center justify-center">
+    <div id="viewFlashcards" class="w-full flex flex-col md:flex-row md:items-start gap-4">
 
-      <!-- LEFT COLUMN: SIDEBAR FOLDERS & UNITS (Hidden completely for clean 1-column layout) -->
-      <aside id="vocabSidebar" class="hidden">
-        <div class="pb-2 border-b border-slate-100 flex items-center justify-between">
-          <div>
-            <h3 id="sidebarCurriculumTitle" class="text-xs font-bold text-darkNavyText">Curriculum</h3>
-            <p id="sidebarCurriculumSub" class="text-[10px] text-slate-400">4 Stages / 44 Units</p>
+      <!-- LEFT COLUMN: SIDEBAR FOLDERS & UNITS (Hidden on Mobile by default, Visible on PC md:) -->
+      <aside id="vocabSidebar" class="w-full md:w-80 lg:w-96 shrink-0 space-y-2">
+        <div class="bg-white rounded-2xl p-3 border border-softBorder shadow-sm space-y-2">
+          <div class="flex items-center justify-between pb-1">
+            <span id="folderOverviewTitle" class="text-xs font-bold text-darkNavyText">Select Folder</span>
+            <button id="btnShuffleAll" class="px-2 py-0.5 text-[10px] font-bold rounded-full bg-coralPink text-white hover:bg-coralPinkHover flex items-center space-x-1 transition shadow-xs">
+              <i data-lucide="shuffle" class="w-3 h-3"></i>
+              <span id="btnShuffleAllLabel">Shuffle All Units</span>
+            </button>
           </div>
-          <button id="btnShuffleAllSidebar" class="px-2 py-0.5 text-[10px] font-bold rounded-full bg-coralPink text-white hover:bg-coralPinkHover flex items-center space-x-1 transition shadow-xs">
-            <i data-lucide="shuffle" class="w-3 h-3"></i>
-            <span id="btnShuffleAllSidebarLabel">Shuffle All</span>
-          </button>
-        </div>
-
-        <!-- Vertical list of all folders & units -->
-        <div id="sidebarFolderListContainer" class="flex-1 overflow-y-auto space-y-2 pr-1 text-xs mt-2 no-scrollbar">
-          <!-- Populated dynamically with folders & collapsible units -->
+          <div class="flex flex-col space-y-2 max-h-[calc(100vh-180px)] overflow-y-auto no-scrollbar pr-0.5" id="folderButtonsContainer">
+            <!-- Dynamically populated vertical accordion folders -->
+          </div>
         </div>
       </aside>
 
       <!-- RIGHT COLUMN: INTERACTIVE FLASHCARD CORE -->
-      <section class="flex-1 w-full max-w-md mx-auto flex flex-col justify-between min-h-[540px]">
+      <section class="flex-1 w-full min-w-0 max-w-md mx-auto md:max-w-none flex flex-col justify-between min-h-[540px]">
         
         <!-- Filter & Header Bar -->
         <div class="mb-2 space-y-2">
@@ -277,17 +275,17 @@
             </button>
           </div>
 
-          <!-- LEVEL 1: Folder Card Grid -->
-          <div id="folderOverviewPanel" class="bg-white rounded-2xl p-3 border border-softBorder shadow-sm space-y-2">
+          <!-- LEVEL 1: Folder Card Grid (Mobile only fallback when sidebar is hidden on small screens) -->
+          <div id="folderOverviewPanel" class="md:hidden bg-white rounded-2xl p-3 border border-softBorder shadow-sm space-y-2">
             <div class="flex items-center justify-between pb-1">
-              <span id="folderOverviewTitle" class="text-xs font-bold text-darkNavyText">Select Folder</span>
-              <button id="btnShuffleAll" class="px-2 py-0.5 text-[10px] font-bold rounded-full bg-coralPink text-white hover:bg-coralPinkHover flex items-center space-x-1 transition shadow-xs">
+              <span id="folderOverviewTitleMobile" class="text-xs font-bold text-darkNavyText">Select Folder</span>
+              <button id="btnShuffleAllMobile" class="px-2 py-0.5 text-[10px] font-bold rounded-full bg-coralPink text-white hover:bg-coralPinkHover flex items-center space-x-1 transition shadow-xs">
                 <i data-lucide="shuffle" class="w-3 h-3"></i>
-                <span id="btnShuffleAllLabel">Shuffle All Units</span>
+                <span>Shuffle All Units</span>
               </button>
             </div>
-            <div class="flex flex-col space-y-2" id="folderButtonsContainer">
-              <!-- Dynamically populated vertical accordion folders -->
+            <div class="flex flex-col space-y-2" id="folderButtonsContainerMobile">
+              <!-- Dynamically populated vertical accordion folders on mobile -->
             </div>
           </div>
 
@@ -969,6 +967,50 @@
       <!-- モーダル本体 -->
       <div id="dictPopupModalContent" class="p-5 overflow-y-auto space-y-4 flex-1">
         <!-- 動的レンダリング -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 使い方ガイド (Help Guide) モーダル (プレースホルダー / 今後充実予定) -->
+  <div id="helpGuideModal" class="fixed inset-0 z-9999 hidden items-center justify-center bg-slate-900/60 backdrop-blur-xs p-4 animate-fade-in" onclick="if(event.target===this) closeHelpGuideModal()">
+    <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-softBorder animate-scale-up flex flex-col max-h-[85vh]">
+      <!-- ヘッダー -->
+      <div class="bg-deepNavy text-white px-5 py-3.5 flex items-center justify-between shrink-0">
+        <div class="font-bold text-sm sm:text-base flex items-center space-x-2">
+          <span class="w-6 h-6 rounded-full bg-coralPink text-white font-extrabold text-xs flex items-center justify-center shadow-xs">?</span>
+          <span id="helpGuideTitle">使い方ガイド (Guide)</span>
+        </div>
+        <button onclick="closeHelpGuideModal()" class="text-white/80 hover:text-white p-1 rounded-full hover:bg-white/10 transition text-lg font-bold" title="閉じる">✕</button>
+      </div>
+
+      <!-- モーダル本体 -->
+      <div class="p-6 overflow-y-auto space-y-4 text-slate-700 text-sm">
+        <div class="p-4 rounded-2xl bg-lightBlueBg/40 border border-softBorder">
+          <h4 class="font-bold text-deepNavy text-sm mb-1">📖 フラッシュカードの使い方</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            カードをタップすると日本語と意味がひっくり返ります。右上のスピーカーボタンを押すと、自然な発音で音声を聴くことができます。
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200">
+          <h4 class="font-bold text-amber-800 text-sm mb-1">🔄 「もう一度！」と「覚えた！」</h4>
+          <p class="text-xs text-amber-700 leading-relaxed">
+            カードの下にあるボタンを押すと、自分の理解度に合わせて自動的にマイリストへ仕分けされます。
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+          <h4 class="font-bold text-slate-800 text-sm mb-1">💡 辞書機能＆ふりがな切り替え</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            上部のスイッチで「自動再生」や「ふりがな」のON/OFFができます。例文中の気になる単語をなぞると、すぐに辞書で検索できます。
+          </p>
+        </div>
+
+        <div class="pt-2 text-center">
+          <button onclick="closeHelpGuideModal()" class="px-6 py-2.5 rounded-full bg-deepNavy text-white font-bold hover:opacity-90 transition shadow-xs text-xs">
+            閉じる (Close)
+          </button>
+        </div>
       </div>
     </div>
   </div>
