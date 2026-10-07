@@ -77,6 +77,20 @@
     return s.replace(/\s+/g, ' ').trim();
   }
 
+  let isSpeaking = false;
+  let speechSequenceTimer = null;
+
+  function stopJapaneseSpeech() {
+    if (speechSequenceTimer) {
+      clearTimeout(speechSequenceTimer);
+      speechSequenceTimer = null;
+    }
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+    isSpeaking = false;
+  }
+
   // Accepts either a string OR a card object { word, reading, example }
   // When given a card, prefers card.reading (e.g. にじゅうかかく) so kanji is read 100% accurately!
   function speakJapanese(target, onEnd = null) {
@@ -84,7 +98,7 @@
       if (onEnd) onEnd();
       return;
     }
-    window.speechSynthesis.cancel(); // Stop any pending speech
+    stopJapaneseSpeech();
 
     let textToSpeak = '';
     if (target && typeof target === 'object') {
@@ -115,15 +129,19 @@
       utterance.voice = jaVoice;
     }
 
-    if (onEnd) {
-      utterance.onend = () => {
-        onEnd();
-      };
-      utterance.onerror = () => {
-        onEnd();
-      };
-    }
+    utterance.onstart = () => {
+      isSpeaking = true;
+    };
+    utterance.onend = () => {
+      isSpeaking = false;
+      if (onEnd) onEnd();
+    };
+    utterance.onerror = () => {
+      isSpeaking = false;
+      if (onEnd) onEnd();
+    };
 
+    isSpeaking = true;
     window.speechSynthesis.speak(utterance);
   }
 
@@ -139,9 +157,12 @@
       return;
     }
 
+    stopJapaneseSpeech();
+
     speakJapanese(firstTarget, () => {
       // 単語読み上げ後に少し間を空けて例文を発話
-      setTimeout(() => {
+      speechSequenceTimer = setTimeout(() => {
+        speechSequenceTimer = null;
         // カードが途中で閉じられたり切り替わっていないか確認しつつ発音
         if (!('speechSynthesis' in window)) return;
         let textToSpeak = '';
@@ -162,9 +183,30 @@
                         voices.find(v => (v.lang === 'ja-JP' || v.lang === 'ja_JP') && (v.name.includes('Kyoko') || v.name.includes('Otoya') || v.name.includes('Siri') || v.name.includes('Nanami') || v.name.includes('Keita'))) ||
                         voices.find(v => v.lang === 'ja-JP' || v.lang === 'ja_JP');
         if (jaVoice) utterance.voice = jaVoice;
+
+        utterance.onstart = () => {
+          isSpeaking = true;
+        };
+        utterance.onend = () => {
+          isSpeaking = false;
+        };
+        utterance.onerror = () => {
+          isSpeaking = false;
+        };
+
+        isSpeaking = true;
         window.speechSynthesis.speak(utterance);
       }, 350);
     });
+  }
+
+  // 音声ボタンクリック時に再生中なら即座に停止（トグル動作）するヘルパー
+  function toggleJapaneseSpeech(target) {
+    if (isSpeaking || ('speechSynthesis' in window && window.speechSynthesis.speaking)) {
+      stopJapaneseSpeech();
+      return;
+    }
+    speakJapanese(target);
   }
 
   // --- Bilingual Translation Formatters (必ず母国語 & 英語) ---
@@ -1288,14 +1330,14 @@
         if (audioWordBtn) {
           audioWordBtn.addEventListener('click', (e) => {
             e.stopPropagation();
-            speakJapanese(card);
+            toggleJapaneseSpeech(card);
           });
         }
         const audioExBtn = itemCard.querySelector('.btn-audio-example');
         if (audioExBtn && card.example && card.example.ja) {
           audioExBtn.addEventListener('click', (e) => {
             e.stopPropagation();
-            speakJapanese(card.example.ja);
+            toggleJapaneseSpeech(card.example.ja);
           });
         }
 
@@ -2690,7 +2732,10 @@
       if (btnStudySingle) btnStudySingle.addEventListener('click', studySingleHandler);
 
       // Voice
-      item.querySelector('.btn-voice').addEventListener('click', () => speakJapanese(card));
+      item.querySelector('.btn-voice').addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleJapaneseSpeech(card);
+      });
 
       // Remove from star
       item.querySelector('.btn-remove-star').addEventListener('click', () => {
@@ -3645,21 +3690,21 @@
     document.getElementById('btnSpeakFront').addEventListener('click', (e) => {
       e.stopPropagation();
       if (activeDeck[currentIndex]) {
-        speakJapanese(activeDeck[currentIndex]);
+        toggleJapaneseSpeech(activeDeck[currentIndex]);
       }
     });
 
     document.getElementById('btnSpeakBack').addEventListener('click', (e) => {
       e.stopPropagation();
       if (activeDeck[currentIndex]) {
-        speakJapanese(activeDeck[currentIndex]);
+        toggleJapaneseSpeech(activeDeck[currentIndex]);
       }
     });
 
     document.getElementById('btnSpeakExample').addEventListener('click', (e) => {
       e.stopPropagation();
       if (activeDeck[currentIndex] && activeDeck[currentIndex].example) {
-        speakJapanese(activeDeck[currentIndex].example.ja);
+        toggleJapaneseSpeech(activeDeck[currentIndex].example.ja);
       }
     });
 
@@ -4726,7 +4771,7 @@
     const btnSpeak = content.querySelector('#btnModalSpeakWord');
     if (btnSpeak) {
       btnSpeak.addEventListener('click', () => {
-        speakJapanese(topWord);
+        toggleJapaneseSpeech(topWord);
       });
     }
 
@@ -4758,7 +4803,7 @@
       spkBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         const sw = spkBtn.getAttribute('data-word');
-        if (sw) speakJapanese(sw);
+        if (sw) toggleJapaneseSpeech(sw);
       });
     });
 
