@@ -191,6 +191,78 @@
       opacity: 0;
       transition: opacity 0.15s ease;
     }
+
+    /* JLPT View Specific Styles (忠実再現) */
+    .jlpt-level-tab {
+      padding: 10px 18px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      background: none;
+      white-space: nowrap;
+      border-bottom: 3px solid transparent;
+      color: #64748b;
+      transition: all 0.18s;
+    }
+    .jlpt-level-tab:hover { color: #1E557E; }
+    .jlpt-level-tab.n5.active { color: #2E7D32; border-bottom-color: #4CAF50; }
+    .jlpt-level-tab.n4.active { color: #1565C0; border-bottom-color: #2196F3; }
+    .jlpt-level-tab.n3.active { color: #E65100; border-bottom-color: #FF9800; }
+    .jlpt-level-tab.n2.active { color: #880E4F; border-bottom-color: #E91E63; }
+    .jlpt-level-tab.n1.active { color: #6A1B9A; border-bottom-color: #9C27B0; }
+
+    .jlpt-gojuon-btn {
+      border: 1px solid #cbd5e1;
+      background: white;
+      color: #1e293b;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.76rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s;
+    }
+    .jlpt-gojuon-btn:hover { border-color: #1E557E; color: #1E557E; }
+    .jlpt-gojuon-btn.active { background: #1E557E; color: white; border-color: #1E557E; }
+
+    .banner-n5 { background: #E8F5E9; color: #2E7D32; border: 1.5px solid #A5D6A7; }
+    .banner-n4 { background: #E3F2FD; color: #1565C0; border: 1.5px solid #90CAF9; }
+    .banner-n3 { background: #FFF3E0; color: #E65100; border: 1.5px solid #FFCC80; }
+    .banner-n2 { background: #FCE4EC; color: #880E4F; border: 1.5px solid #F48FB1; }
+    .banner-n1 { background: #F3E5F5; color: #6A1B9A; border: 1.5px solid #CE93D8; }
+
+    .jlpt-word-card {
+      background: white;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 12px 14px;
+      cursor: pointer;
+      transition: all 0.18s;
+      position: relative;
+    }
+    .jlpt-word-card:hover {
+      border-color: #82CBD3;
+      box-shadow: 0 4px 16px rgba(79, 179, 190, 0.15);
+      transform: translateY(-1px);
+    }
+    .jlpt-save-btn {
+      background: #F8FAFC;
+      border: 1px solid #CBD5E1;
+      color: #64748B;
+      border-radius: 8px;
+      padding: 3px 8px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      transition: all 0.18s ease;
+    }
+    .jlpt-save-btn:hover { background: #F1F5F9; border-color: #94A3B8; color: #1E293B; }
+    .jlpt-save-btn.saved { background: #EFF6FF; border-color: #93C5FD; color: #1D4ED8; font-weight: 800; }
   </style>
 </head>
 <body class="bg-lightBlueBg text-slate-800 min-h-screen flex flex-col antialiased select-none">
@@ -258,19 +330,23 @@
     </div>
   </header>
 
-  <!-- Navigation Tabs (Flashcards, Quiz, My List) -->
-  <nav class="bg-white/80 backdrop-blur-sm border-b border-softBorder px-3 py-1.5 flex justify-center text-xs font-bold text-slate-600 gap-2 sm:gap-3 max-w-5xl mx-auto w-full">
-    <button id="navStudy" class="flex-1 max-w-[200px] py-1.5 px-3 rounded-full text-white bg-deepNavy flex items-center justify-center space-x-1.5 transition shadow-xs">
+  <!-- Navigation Tabs (Flashcards, Quiz, My List, JLPT) -->
+  <nav class="bg-white/80 backdrop-blur-sm border-b border-softBorder px-3 py-1.5 flex justify-center text-xs font-bold text-slate-600 gap-1.5 sm:gap-2.5 max-w-5xl mx-auto w-full">
+    <button id="navStudy" class="flex-1 max-w-[160px] py-1.5 px-2.5 rounded-full text-white bg-deepNavy flex items-center justify-center space-x-1 transition shadow-xs">
       <i data-lucide="layers" class="w-3.5 h-3.5"></i>
       <span id="navStudyLabel">Flashcards</span>
     </button>
-    <button id="navQuiz" class="flex-1 max-w-[200px] py-1.5 px-3 rounded-full border border-softBorder hover:border-deepNavy bg-white text-slate-700 flex items-center justify-center space-x-1.5 transition">
+    <button id="navQuiz" class="flex-1 max-w-[160px] py-1.5 px-2.5 rounded-full border border-softBorder hover:border-deepNavy bg-white text-slate-700 flex items-center justify-center space-x-1 transition">
       <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
       <span id="navQuizLabel">Quiz / Test</span>
     </button>
-    <button id="navMylist" class="flex-1 max-w-[200px] py-1.5 px-3 rounded-full border border-softBorder hover:border-deepNavy bg-white text-slate-700 flex items-center justify-center space-x-1.5 transition">
+    <button id="navMylist" class="flex-1 max-w-[160px] py-1.5 px-2.5 rounded-full border border-softBorder hover:border-deepNavy bg-white text-slate-700 flex items-center justify-center space-x-1 transition">
       <i data-lucide="star" class="w-3.5 h-3.5 text-coralPink"></i>
       <span><span id="navMylistLabel">My List</span> (<span id="mylistCountBadge">0</span>)</span>
+    </button>
+    <button id="navJlpt" class="flex-1 max-w-[160px] py-1.5 px-2.5 rounded-full border border-softBorder hover:border-deepNavy bg-white text-slate-700 flex items-center justify-center space-x-1 transition">
+      <i data-lucide="book-open" class="w-3.5 h-3.5 text-teal-600"></i>
+      <span id="navJlptLabel">JLPT</span>
     </button>
   </nav>
 
@@ -305,6 +381,7 @@
             <div class="inline-flex p-0.5 bg-white rounded-full border border-softBorder shadow-2xs">
               <button id="filterAllDeck" class="px-2.5 py-0.5 rounded-full bg-deepNavy text-white font-bold transition text-[11px]">Shared Deck</button>
               <button id="filterMyDeck" class="px-2.5 py-0.5 rounded-full text-slate-600 font-semibold transition text-[11px]">My Deck</button>
+              <button id="filterJlptDeck" class="px-2.5 py-0.5 rounded-full text-slate-600 font-semibold transition text-[11px]">JLPT</button>
             </div>
             <!-- Reverse Mode -->
             <button id="btnToggleReverse" class="flex items-center space-x-1 px-2.5 py-0.5 rounded-full border border-softBorder bg-white text-slate-700 font-semibold hover:border-deepNavy transition shadow-2xs text-[11px]">
@@ -632,6 +709,175 @@
     </div>
 
 
+    <!-- ==================== VIEW 3B: JLPT VOCABULARY LIST (2枚目画像完全再現) ==================== -->
+    <div id="viewJlpt" class="w-full hidden flex-col space-y-3 pb-10">
+      <!-- 1. JLPT 上部ヘッダーバー (戻る / マイリスト語数 / 全体語数) -->
+      <div class="bg-deepNavy text-white rounded-2xl px-4 py-3 shadow-md flex items-center justify-between flex-wrap gap-2.5">
+        <div class="flex items-center space-x-2">
+          <button id="btnJlptBackHome" class="px-3 py-1.5 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold text-xs flex items-center space-x-1 transition active:scale-95">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+            <span>ホームに戻る</span>
+          </button>
+          <button id="btnJlptPracticeCards" class="px-3 py-1.5 rounded-xl bg-coralPink hover:bg-coralPinkHover text-white font-bold text-xs flex items-center space-x-1 transition shadow-xs active:scale-95">
+            <i data-lucide="play" class="w-3.5 h-3.5 fill-white"></i>
+            <span>このレベルをカードで練習</span>
+          </button>
+        </div>
+
+        <div class="text-center hidden sm:block">
+          <div class="text-sm font-black tracking-wide">JLPT 単語リスト（五十音順）</div>
+          <div class="text-[10px] text-white/70">Japanese Vocabulary by Level in Gojuon Order</div>
+        </div>
+
+        <div class="flex items-center space-x-2 text-xs">
+          <span id="jlptHeaderMylistBadge" class="px-2.5 py-1 rounded-xl bg-white/15 text-white font-bold text-[11px]">
+            🔖 マイリスト: <span id="jlptSavedCount">0</span>語
+          </span>
+          <span class="px-2.5 py-1 rounded-xl bg-white/15 text-white font-bold text-[11px]">
+            8,910 words
+          </span>
+        </div>
+      </div>
+
+      <!-- 2. JLPT レベルタブ (N5, N4, N3, N2, N1) -->
+      <div class="bg-white rounded-2xl border border-softBorder shadow-2xs overflow-hidden">
+        <div class="flex overflow-x-auto no-scrollbar border-b border-slate-100">
+          <button class="jlpt-level-tab n5 active flex-1 py-2.5 text-center" onclick="switchJlptLevel('N5')">
+            <span class="block text-sm font-black">N5</span>
+            <span class="text-[10px] font-semibold opacity-70">702 words</span>
+          </button>
+          <button class="jlpt-level-tab n4 flex-1 py-2.5 text-center" onclick="switchJlptLevel('N4')">
+            <span class="block text-sm font-black">N4</span>
+            <span class="text-[10px] font-semibold opacity-70">668 words</span>
+          </button>
+          <button class="jlpt-level-tab n3 flex-1 py-2.5 text-center" onclick="switchJlptLevel('N3')">
+            <span class="block text-sm font-black">N3</span>
+            <span class="text-[10px] font-semibold opacity-70">1,843 words</span>
+          </button>
+          <button class="jlpt-level-tab n2 flex-1 py-2.5 text-center" onclick="switchJlptLevel('N2')">
+            <span class="block text-sm font-black">N2</span>
+            <span class="text-[10px] font-semibold opacity-70">1,949 words</span>
+          </button>
+          <button class="jlpt-level-tab n1 flex-1 py-2.5 text-center" onclick="switchJlptLevel('N1')">
+            <span class="block text-sm font-black">N1</span>
+            <span class="text-[10px] font-semibold opacity-70">3,748 words</span>
+          </button>
+        </div>
+
+        <!-- 3. 五十音行 ナビゲーションバー (全行, あ行, か行, さ行...) -->
+        <div class="bg-slate-50 px-3 py-2 flex items-center space-x-1.5 overflow-x-auto no-scrollbar border-b border-slate-100">
+          <span class="text-[11px] font-extrabold text-slate-500 whitespace-nowrap mr-1">五十音行:</span>
+          <button class="jlpt-gojuon-btn active" id="jlptRow-all" onclick="filterJlptRow('all')">全行 (All)</button>
+          <button class="jlpt-gojuon-btn" id="jlptRow-あ行" onclick="filterJlptRow('あ行')">あ行</button>
+          <button class="jlpt-gojuon-btn" id="jlptRow-か行" onclick="filterJlptRow('か行')">か行</button>
+          <button class="jlpt-gojuon-btn" id="jlptRow-さ行" onclick="filterJlptRow('さ行')">さ行</button>
+          <button class="jlpt-gojuon-btn" id="jlptRow-た行" onclick="filterJlptRow('た行')">た行</button>
+          <button class="jlpt-gojuon-btn" id="jlptRow-な行" onclick="filterJlptRow('な行')">な行</button>
+          <button class="jlpt-gojuon-btn" id="jlptRow-は行" onclick="filterJlptRow('は行')">は行</button>
+          <button class="jlpt-gojuon-btn" id="jlptRow-ま行" onclick="filterJlptRow('ま行')">ま行</button>
+          <button class="jlpt-gojuon-btn" id="jlptRow-や行" onclick="filterJlptRow('や行')">や行</button>
+          <button class="jlpt-gojuon-btn" id="jlptRow-ら行" onclick="filterJlptRow('ら行')">ら行</button>
+          <button class="jlpt-gojuon-btn" id="jlptRow-わ行" onclick="filterJlptRow('わ行')">わ行</button>
+        </div>
+
+        <!-- 4. レベル紹介バナー (2枚目画像完全再現: N5 JLPT N5 — 初級 (Beginner) ...) -->
+        <div class="p-3 sm:p-4">
+          <div id="jlptBannerBox" class="banner-n5 rounded-2xl p-3 sm:p-4 flex items-center justify-between flex-wrap gap-2 shadow-2xs">
+            <div class="flex items-center space-x-3">
+              <span id="jlptBannerLevelBadge" class="text-2xl sm:text-3xl font-black">N5</span>
+              <div>
+                <h4 id="jlptBannerTitle" class="text-sm sm:text-base font-extrabold leading-tight">JLPT N5 — 初級 (Beginner)</h4>
+                <p id="jlptBannerSub" class="text-xs opacity-80 mt-0.5">基本の日常生活単語。日本語学習のスタートライン。</p>
+              </div>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-white/80 border border-black/5 text-[11px] font-extrabold shadow-2xs">
+              あいうえお順 (五十音順)
+            </span>
+          </div>
+
+          <!-- 5. 検索バー & グリッド/リスト切り替え & 件数表示 -->
+          <div class="mt-3 flex items-center justify-between flex-wrap gap-2">
+            <div class="relative flex-1 min-w-[200px]">
+              <input type="text" id="jlptSearchInput" placeholder="このレベル内で検索… (例: 食べる / eat / たべる)"
+                class="w-full text-xs sm:text-sm py-2 pl-9 pr-3 rounded-xl border border-sky-200 bg-sky-50/30 focus:bg-white focus:outline-none focus:ring-2 focus:ring-deepNavy shadow-2xs">
+              <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-2.5 top-2.5 pointer-events-none"></i>
+            </div>
+
+            <div class="flex items-center space-x-2 text-xs text-slate-500 font-semibold">
+              <span>表示中: <strong id="jlptShownRange" class="text-deepNavy font-bold">1-60</strong> / <strong id="jlptTotalLevelCount" class="text-deepNavy font-bold">702</strong> 語</span>
+              <div class="inline-flex rounded-lg border border-slate-200 bg-white p-0.5 shadow-2xs">
+                <button id="btnJlptViewCard" class="p-1 rounded-md bg-deepNavy text-white transition" title="カード表示">
+                  <i data-lucide="layout-grid" class="w-3.5 h-3.5"></i>
+                </button>
+                <button id="btnJlptViewList" class="p-1 rounded-md text-slate-500 hover:text-slate-800 transition" title="リスト表示">
+                  <i data-lucide="list" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. 単語一覧レンダリング領域 (カード / リスト) -->
+      <div id="jlptWordsContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5">
+        <!-- 動的レンダリング -->
+      </div>
+
+      <!-- 空状態 -->
+      <div id="jlptEmptyState" class="hidden text-center py-12 bg-white rounded-2xl border border-slate-200 text-slate-400 text-xs">
+        <i data-lucide="search-x" class="w-8 h-8 mx-auto text-slate-300 mb-2"></i>
+        <p class="font-bold text-slate-600">一致する単語が見つかりませんでした</p>
+      </div>
+
+      <!-- 7. ページネーション -->
+      <div id="jlptPaginationContainer" class="flex items-center justify-center space-x-1.5 pt-2">
+        <!-- 動的レンダリング -->
+      </div>
+    </div>
+
+    <!-- JLPT 単語詳細ポップアップモーダル -->
+    <div id="jlptDetailModal" class="fixed inset-0 z-9999 hidden items-center justify-center bg-slate-900/60 backdrop-blur-xs p-4 animate-fade-in" onclick="if(event.target===this) closeJlptModal()">
+      <div class="bg-white rounded-3xl max-w-md w-full overflow-hidden shadow-2xl border border-slate-200 animate-scale-up flex flex-col max-h-[85vh]">
+        <!-- ヘッダー -->
+        <div class="bg-deepNavy text-white px-5 py-3.5 flex items-center justify-between shrink-0">
+          <div class="font-bold text-sm flex items-center space-x-2">
+            <span class="px-2 py-0.5 rounded-full bg-white/20 text-xs font-black" id="jlptModalBadgeLevel">N5</span>
+            <span>単語の詳細</span>
+          </div>
+          <button onclick="closeJlptModal()" class="text-white/80 hover:text-white p-1 rounded-full hover:bg-white/10 transition text-lg font-bold">✕</button>
+        </div>
+
+        <div class="p-5 overflow-y-auto space-y-3.5 text-slate-800 flex-1">
+          <div>
+            <div class="text-3xl font-black text-deepNavy" id="jlptModalWord"></div>
+            <div class="text-sm font-bold text-coralPink mt-0.5" id="jlptModalReading"></div>
+          </div>
+
+          <div class="pt-1">
+            <span class="text-[11px] font-extrabold text-slate-400 uppercase tracking-wider block mb-1">Meanings / 意味</span>
+            <div id="jlptModalMeanings" class="space-y-1 text-sm font-medium"></div>
+          </div>
+
+          <div id="jlptModalExamplesSection" class="pt-1">
+            <span class="text-[11px] font-extrabold text-slate-400 uppercase tracking-wider block mb-1">Example Sentences / 例文</span>
+            <div id="jlptModalExamplesList" class="space-y-2 text-xs"></div>
+          </div>
+        </div>
+
+        <div class="p-3 bg-slate-50 border-t border-slate-100 flex items-center space-x-2 shrink-0">
+          <button id="btnJlptModalSpeak" class="flex-1 py-2 px-3 rounded-full bg-deepNavy hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center space-x-1 shadow-xs transition">
+            <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+            <span>発音を聴く</span>
+          </button>
+          <button id="btnJlptModalSave" class="flex-1 py-2 px-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center space-x-1 shadow-xs transition">
+            <i data-lucide="bookmark" class="w-3.5 h-3.5"></i>
+            <span id="btnJlptModalSaveText">マイリストに保存</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
     <!-- ==================== VIEW 4: TEACHER ADMIN (先生用・非公開インポート) ==================== -->
     <div id="viewAdmin" class="max-w-md mx-auto hidden flex-col">
       <div class="bg-white rounded-3xl p-5 border border-softBorder shadow-sm flex flex-col justify-between overflow-y-auto min-h-[480px]">
@@ -754,6 +1000,17 @@
               <div class="flex-1 flex items-center justify-between">
                 <span id="drawerMylistLabel" class="text-xs">My List</span>
                 <span id="drawerMylistBadge" class="text-[10px] px-2 py-0.2 bg-coralPink text-white rounded-full font-bold">0</span>
+              </div>
+            </button>
+
+            <!-- JLPT 単語リスト (ユーザー指示: mylistの下にjlptを入れてください) -->
+            <button id="drawerBtnJlpt" class="w-full px-3 py-2.5 rounded-2xl text-slate-700 hover:bg-slate-50 border border-transparent font-semibold flex items-center space-x-3 text-left transition">
+              <div class="w-7 h-7 rounded-lg bg-teal-50 text-teal-600 flex items-center justify-center">
+                <i data-lucide="book-open" class="w-4 h-4"></i>
+              </div>
+              <div class="flex-1 flex items-center justify-between">
+                <span id="drawerJlptLabel" class="text-xs font-bold">JLPT 単語リスト</span>
+                <span class="text-[10px] px-2 py-0.2 bg-teal-600 text-white rounded-full font-bold">N5-N1</span>
               </div>
             </button>
 
@@ -1026,6 +1283,63 @@
       <div id="dictPopupModalContent" class="p-5 overflow-y-auto space-y-4 flex-1">
         <!-- 動的レンダリング -->
       </div>
+    </div>
+  </div>
+
+  <!-- JLPT レベル選択モーダル (フラッシュカードで練習するレベルを選択) -->
+  <div id="jlptLevelSelectModal" class="fixed inset-0 z-9999 hidden items-center justify-center bg-slate-900/60 backdrop-blur-xs p-4 animate-fade-in" onclick="if(event.target===this) closeJlptLevelSelectModal()">
+    <div class="bg-white rounded-3xl max-w-sm w-full overflow-hidden shadow-2xl border border-softBorder animate-scale-up text-center p-5">
+      <div class="w-12 h-12 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center mx-auto mb-3 shadow-2xs">
+        <i data-lucide="book-open" class="w-6 h-6"></i>
+      </div>
+      <h3 class="font-black text-slate-800 text-base mb-1">JLPT レベルを選択</h3>
+      <p class="text-xs text-slate-500 mb-4">練習したいJLPTレベルを選んでください。<br/>該当レベルの全単語がフラッシュカードに読み込まれます。</p>
+      
+      <div class="space-y-2 mb-4">
+        <button onclick="selectJlptLevelForCards('N5')" class="w-full py-2.5 px-4 rounded-2xl border-2 border-emerald-300 hover:border-emerald-500 bg-emerald-50/50 hover:bg-emerald-50 font-bold text-xs sm:text-sm text-emerald-800 flex items-center justify-between transition group">
+          <span class="flex items-center space-x-2">
+            <span class="w-7 h-7 rounded-lg bg-emerald-500 text-white font-black text-xs flex items-center justify-center shadow-2xs">N5</span>
+            <span class="text-left"><strong class="block">初級 (Beginner)</strong><span class="text-[10px] font-medium text-emerald-600">日常基本語彙</span></span>
+          </span>
+          <span class="text-[11px] font-extrabold text-emerald-700 bg-white/80 px-2 py-0.5 rounded-full border border-emerald-200">702語 →</span>
+        </button>
+
+        <button onclick="selectJlptLevelForCards('N4')" class="w-full py-2.5 px-4 rounded-2xl border-2 border-sky-300 hover:border-sky-500 bg-sky-50/50 hover:bg-sky-50 font-bold text-xs sm:text-sm text-sky-800 flex items-center justify-between transition group">
+          <span class="flex items-center space-x-2">
+            <span class="w-7 h-7 rounded-lg bg-sky-500 text-white font-black text-xs flex items-center justify-center shadow-2xs">N4</span>
+            <span class="text-left"><strong class="block">初中級 (Elementary)</strong><span class="text-[10px] font-medium text-sky-600">基本会話語彙</span></span>
+          </span>
+          <span class="text-[11px] font-extrabold text-sky-700 bg-white/80 px-2 py-0.5 rounded-full border border-sky-200">668語 →</span>
+        </button>
+
+        <button onclick="selectJlptLevelForCards('N3')" class="w-full py-2.5 px-4 rounded-2xl border-2 border-amber-300 hover:border-amber-500 bg-amber-50/50 hover:bg-amber-50 font-bold text-xs sm:text-sm text-amber-800 flex items-center justify-between transition group">
+          <span class="flex items-center space-x-2">
+            <span class="w-7 h-7 rounded-lg bg-amber-500 text-white font-black text-xs flex items-center justify-center shadow-2xs">N3</span>
+            <span class="text-left"><strong class="block">中級 (Intermediate)</strong><span class="text-[10px] font-medium text-amber-600">重要日常語彙</span></span>
+          </span>
+          <span class="text-[11px] font-extrabold text-amber-700 bg-white/80 px-2 py-0.5 rounded-full border border-amber-200">1,843語 →</span>
+        </button>
+
+        <button onclick="selectJlptLevelForCards('N2')" class="w-full py-2.5 px-4 rounded-2xl border-2 border-rose-300 hover:border-rose-500 bg-rose-50/50 hover:bg-rose-50 font-bold text-xs sm:text-sm text-rose-800 flex items-center justify-between transition group">
+          <span class="flex items-center space-x-2">
+            <span class="w-7 h-7 rounded-lg bg-rose-500 text-white font-black text-xs flex items-center justify-center shadow-2xs">N2</span>
+            <span class="text-left"><strong class="block">上級 (Upper Intermediate)</strong><span class="text-[10px] font-medium text-rose-600">新聞・ビジネス語彙</span></span>
+          </span>
+          <span class="text-[11px] font-extrabold text-rose-700 bg-white/80 px-2 py-0.5 rounded-full border border-rose-200">1,949語 →</span>
+        </button>
+
+        <button onclick="selectJlptLevelForCards('N1')" class="w-full py-2.5 px-4 rounded-2xl border-2 border-purple-300 hover:border-purple-500 bg-purple-50/50 hover:bg-purple-50 font-bold text-xs sm:text-sm text-purple-800 flex items-center justify-between transition group">
+          <span class="flex items-center space-x-2">
+            <span class="w-7 h-7 rounded-lg bg-purple-500 text-white font-black text-xs flex items-center justify-center shadow-2xs">N1</span>
+            <span class="text-left"><strong class="block">最上級 (Advanced)</strong><span class="text-[10px] font-medium text-purple-600">高度総合語彙</span></span>
+          </span>
+          <span class="text-[11px] font-extrabold text-purple-700 bg-white/80 px-2 py-0.5 rounded-full border border-purple-200">3,748語 →</span>
+        </button>
+      </div>
+
+      <button onclick="closeJlptLevelSelectModal()" class="w-full py-2 rounded-full text-slate-400 hover:text-slate-600 font-bold text-xs transition">
+        キャンセル
+      </button>
     </div>
   </div>
 

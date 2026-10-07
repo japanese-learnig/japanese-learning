@@ -12,6 +12,7 @@
   let isReverseMode = false; // false: Front is Japanese, true: Front is Native Language
   let isCardFlipped = false;
   let currentIndex = 0;
+  let currentJlptDeckLevel = 'N5'; // Selected JLPT level when playing JLPT deck
   let activeDeck = [];
   let isSearchStudyMode = false; // true when studying a specific word clicked from search results
   let mylistSet = new Set(); // store card IDs in mylist
@@ -290,6 +291,10 @@
     if (navQuizLabel) navQuizLabel.textContent = isJa ? 'テスト' : 'Quiz / Test';
     const navMylistLabel = document.getElementById('navMylistLabel');
     if (navMylistLabel) navMylistLabel.textContent = isJa ? 'マイリスト' : 'My List';
+    const navJlptLabel = document.getElementById('navJlptLabel');
+    if (navJlptLabel) navJlptLabel.textContent = isJa ? 'JLPT' : 'JLPT';
+    const drawerJlptLabel = document.getElementById('drawerJlptLabel');
+    if (drawerJlptLabel) drawerJlptLabel.textContent = isJa ? 'JLPT 単語リスト' : 'JLPT Vocab List';
 
     // 3. Left Sidebar Curriculum Header
     const sideCurricTitle = document.getElementById('sidebarCurriculumTitle');
@@ -2123,6 +2128,42 @@
   }
 
   function updateActiveDeck() {
+    if (currentDeckFilter === 'jlpt') {
+      const lvl = currentJlptDeckLevel || 'N5';
+      const jlptList = (window.JLPT_VOCAB && window.JLPT_VOCAB[lvl]) || [];
+      activeDeck = jlptList.map((entry, idx) => {
+        const ex = (entry.examples && entry.examples[0]) ? entry.examples[0] : null;
+        const meaningText = (entry.meanings || []).join(', ') || '—';
+        return {
+          id: `jlpt_${entry.level || lvl}_${idx}_${entry.word}`,
+          word: entry.word,
+          reading: entry.reading || entry.k || entry.word,
+          category: `JLPT ${entry.level || lvl}`,
+          section_title: `JLPT ${entry.level || lvl} 単語`,
+          folder_id: `jlpt_${lvl}`,
+          meaning: {
+            en: meaningText,
+            ja: entry.word,
+            zh_TW: meaningText,
+            zh_CN: meaningText,
+            ko: meaningText,
+            zh_HK: meaningText,
+            fr: meaningText
+          },
+          example: {
+            ja: ex ? ex.ja : `A: <ruby>${entry.word}<rt>${entry.reading || entry.word}</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>します。<br/>B: 頑張りましょう！`,
+            en: ex ? (ex.en || '') : `A: Let's study "${entry.word}".<br/>B: Let's do our best!`
+          },
+          related: `【JLPT】${entry.level || lvl} / 【行】${entry.row || '—'}`,
+          isJlpt: true
+        };
+      });
+      currentIndex = 0;
+      isCardFlipped = false;
+      renderCurrentCard();
+      return;
+    }
+
     let pool = vocabList.filter(card => {
       // Shared vs Student dedicated
       if (currentDeckFilter === 'mine') {
@@ -2565,7 +2606,48 @@
       }
     }
 
-    // 5. Fallback stub so word card always renders instead of being hidden
+    // 5. Check JLPT_VOCAB
+    if (window.JLPT_VOCAB) {
+      let jlptWordToFind = cardId;
+      if (cardId.startsWith('jlpt_')) {
+        const parts = cardId.split('_');
+        if (parts.length >= 3) {
+          jlptWordToFind = parts.slice(1, parts.length - 1).join('_');
+        }
+      }
+      for (const lvl of ['N5', 'N4', 'N3', 'N2', 'N1']) {
+        const list = window.JLPT_VOCAB[lvl] || [];
+        const entry = list.find(w => w.word === jlptWordToFind || w.word === cardId);
+        if (entry) {
+          const ex = (entry.examples && entry.examples[0]) ? entry.examples[0] : null;
+          const meaningText = (entry.meanings || []).join(', ') || '—';
+          return {
+            id: cardId,
+            word: entry.word,
+            reading: entry.reading || entry.k || entry.word,
+            category: `JLPT ${entry.level || lvl}`,
+            section_title: `JLPT ${entry.level || lvl} 単語`,
+            meaning: {
+              en: meaningText,
+              ja: entry.word,
+              zh_TW: meaningText,
+              zh_CN: meaningText,
+              ko: meaningText,
+              zh_HK: meaningText,
+              fr: meaningText
+            },
+            example: {
+              ja: ex ? ex.ja : `A: <ruby>${entry.word}<rt>${entry.reading || entry.word}</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>します。<br/>B: 頑張りましょう！`,
+              en: ex ? (ex.en || '') : `A: Let's study "${entry.word}".<br/>B: Let's do our best!`
+            },
+            related: `【JLPT】${entry.level || lvl} / 【行】${entry.row || '—'}`,
+            isJlpt: true
+          };
+        }
+      }
+    }
+
+    // 6. Fallback stub so word card always renders instead of being hidden
     return {
       id: cardId,
       word: cardId.replace(/^card_\d+_/, '').replace(/^dict_/, '').replace(/_\d+$/, '') || cardId,
@@ -3127,18 +3209,22 @@
     document.getElementById('viewFlashcards').classList.add('hidden');
     document.getElementById('viewQuiz').classList.add('hidden');
     document.getElementById('viewMylist').classList.add('hidden');
+    const viewJlptEl = document.getElementById('viewJlpt');
+    if (viewJlptEl) viewJlptEl.classList.add('hidden');
     document.getElementById('viewAdmin').classList.add('hidden');
 
     const navStudy = document.getElementById('navStudy');
     const navQuiz = document.getElementById('navQuiz');
     const navMylist = document.getElementById('navMylist');
+    const navJlpt = document.getElementById('navJlpt');
 
-    const inactiveClass = 'flex-1 py-1 px-3 rounded-full border border-softBorder hover:border-deepNavy bg-white text-slate-700 flex items-center justify-center space-x-1 transition';
-    const activeClass = 'flex-1 py-1 px-3 rounded-full text-white bg-deepNavy flex items-center justify-center space-x-1 transition shadow-xs';
+    const inactiveClass = 'flex-1 max-w-[160px] py-1.5 px-2.5 rounded-full border border-softBorder hover:border-deepNavy bg-white text-slate-700 flex items-center justify-center space-x-1 transition';
+    const activeClass = 'flex-1 max-w-[160px] py-1.5 px-2.5 rounded-full text-white bg-deepNavy flex items-center justify-center space-x-1 transition shadow-xs';
 
     if (navStudy) navStudy.className = (viewName === 'flashcards') ? activeClass : inactiveClass;
     if (navQuiz) navQuiz.className = (viewName === 'quiz') ? activeClass : inactiveClass;
     if (navMylist) navMylist.className = (viewName === 'mylist') ? activeClass : inactiveClass;
+    if (navJlpt) navJlpt.className = (viewName === 'jlpt') ? activeClass : inactiveClass;
 
     if (viewName === 'flashcards') {
       document.getElementById('viewFlashcards').classList.remove('hidden');
@@ -3155,6 +3241,11 @@
             renderMylistView();
           }
         });
+      }
+    } else if (viewName === 'jlpt') {
+      if (viewJlptEl) {
+        viewJlptEl.classList.remove('hidden');
+        initJlptView();
       }
     } else if (viewName === 'admin') {
       document.getElementById('viewAdmin').classList.remove('hidden');
@@ -3182,6 +3273,10 @@
     });
     document.getElementById('navQuiz').addEventListener('click', () => switchView('quiz'));
     document.getElementById('navMylist').addEventListener('click', () => switchView('mylist'));
+    const navJlptEl = document.getElementById('navJlpt');
+    if (navJlptEl) {
+      navJlptEl.addEventListener('click', () => switchView('jlpt'));
+    }
     // Discreet Teacher Admin Modal Trigger (生徒に見せない暗証番号保護)
     document.getElementById('navAdmin').addEventListener('click', () => {
       document.getElementById('adminAuthModal').classList.remove('hidden');
@@ -3331,6 +3426,14 @@
       });
     }
 
+    const drawerBtnJlpt = document.getElementById('drawerBtnJlpt');
+    if (drawerBtnJlpt) {
+      drawerBtnJlpt.addEventListener('click', () => {
+        closeMenuDrawer();
+        switchView('jlpt');
+      });
+    }
+
     const drawerBtnQuiz = document.getElementById('drawerBtnQuiz');
     if (drawerBtnQuiz) {
       drawerBtnQuiz.addEventListener('click', () => {
@@ -3376,25 +3479,55 @@
       });
     }
 
-    // Deck toggle: Shared vs Student Dedicated
-    document.getElementById('filterAllDeck').addEventListener('click', (e) => {
-      currentDeckFilter = 'all';
-      e.target.className = 'px-2.5 py-1 rounded-md bg-white text-slate-800 font-bold shadow-xs';
-      document.getElementById('filterMyDeck').className = 'px-2.5 py-1 rounded-md text-slate-600 font-medium';
-      updateActiveDeck();
-    });
+    // Deck toggle: Shared vs Student Dedicated vs JLPT
+    const filterAllBtn = document.getElementById('filterAllDeck');
+    const filterMyBtn = document.getElementById('filterMyDeck');
+    const filterJlptBtn = document.getElementById('filterJlptDeck');
 
-    document.getElementById('filterMyDeck').addEventListener('click', (e) => {
-      if (!currentStudent) {
-        showToast('Please log in with student credentials');
-        document.getElementById('loginModal').classList.remove('hidden');
-        return;
+    function updateDeckFilterPillUi() {
+      const activeClass = 'px-2.5 py-0.5 rounded-full bg-deepNavy text-white font-bold transition text-[11px] shadow-xs';
+      const inactiveClass = 'px-2.5 py-0.5 rounded-full text-slate-600 font-semibold transition text-[11px] hover:text-slate-900';
+
+      if (filterAllBtn) filterAllBtn.className = (currentDeckFilter === 'all') ? activeClass : inactiveClass;
+      if (filterMyBtn) filterMyBtn.className = (currentDeckFilter === 'mine') ? activeClass : inactiveClass;
+      if (filterJlptBtn) {
+        if (currentDeckFilter === 'jlpt') {
+          filterJlptBtn.className = 'px-2.5 py-0.5 rounded-full bg-teal-600 text-white font-bold transition text-[11px] shadow-xs';
+          filterJlptBtn.textContent = `JLPT (${currentJlptDeckLevel})`;
+        } else {
+          filterJlptBtn.className = inactiveClass;
+          filterJlptBtn.textContent = 'JLPT';
+        }
       }
-      currentDeckFilter = 'mine';
-      e.target.className = 'px-2.5 py-1 rounded-md bg-white text-slate-800 font-bold shadow-xs';
-      document.getElementById('filterAllDeck').className = 'px-2.5 py-1 rounded-md text-slate-600 font-medium';
-      updateActiveDeck();
-    });
+    }
+
+    if (filterAllBtn) {
+      filterAllBtn.addEventListener('click', () => {
+        currentDeckFilter = 'all';
+        updateDeckFilterPillUi();
+        updateActiveDeck();
+      });
+    }
+
+    if (filterMyBtn) {
+      filterMyBtn.addEventListener('click', () => {
+        if (!currentStudent) {
+          showToast('Please log in with student credentials');
+          document.getElementById('loginModal').classList.remove('hidden');
+          return;
+        }
+        currentDeckFilter = 'mine';
+        updateDeckFilterPillUi();
+        updateActiveDeck();
+      });
+    }
+
+    if (filterJlptBtn) {
+      filterJlptBtn.addEventListener('click', () => {
+        // Show JLPT Level Select modal first so user can pick N5..N1
+        openJlptLevelSelectModal();
+      });
+    }
 
     // Flip card click
     document.getElementById('flashcardElement').addEventListener('click', (e) => {
@@ -4170,6 +4303,60 @@
         editStudentModal.classList.add('hidden');
         showToast(`生徒「${newName}」（ID: ${studentId}）の情報を更新しました！✏️✨`);
       });
+    }
+
+    // --- JLPT View Controls ---
+    const btnJlptBackHome = document.getElementById('btnJlptBackHome');
+    if (btnJlptBackHome) {
+      btnJlptBackHome.addEventListener('click', () => {
+        switchView('flashcards');
+      });
+    }
+
+    const btnJlptPracticeCards = document.getElementById('btnJlptPracticeCards');
+    if (btnJlptPracticeCards) {
+      btnJlptPracticeCards.addEventListener('click', () => {
+        selectJlptLevelForCards(currentJlptLevel || 'N5');
+      });
+    }
+
+    const btnJlptViewCard = document.getElementById('btnJlptViewCard');
+    const btnJlptViewList = document.getElementById('btnJlptViewList');
+    if (btnJlptViewCard && btnJlptViewList) {
+      btnJlptViewCard.addEventListener('click', () => {
+        currentJlptViewMode = 'card';
+        btnJlptViewCard.className = 'p-1 rounded-md bg-deepNavy text-white transition';
+        btnJlptViewList.className = 'p-1 rounded-md text-slate-500 hover:text-slate-800 transition';
+        renderJlptPage();
+      });
+      btnJlptViewList.addEventListener('click', () => {
+        currentJlptViewMode = 'list';
+        btnJlptViewList.className = 'p-1 rounded-md bg-deepNavy text-white transition';
+        btnJlptViewCard.className = 'p-1 rounded-md text-slate-500 hover:text-slate-800 transition';
+        renderJlptPage();
+      });
+    }
+
+    const jlptSearchInput = document.getElementById('jlptSearchInput');
+    if (jlptSearchInput) {
+      jlptSearchInput.addEventListener('input', () => {
+        currentJlptPage = 1;
+        filterJlptWords();
+      });
+    }
+
+    const btnJlptModalSpeak = document.getElementById('btnJlptModalSpeak');
+    if (btnJlptModalSpeak) {
+      btnJlptModalSpeak.addEventListener('click', () => {
+        if (currentJlptModalWord) {
+          speakJapanese(currentJlptModalWord.word);
+        }
+      });
+    }
+
+    const btnJlptModalSave = document.getElementById('btnJlptModalSave');
+    if (btnJlptModalSave) {
+      btnJlptModalSave.addEventListener('click', toggleJlptModalSave);
     }
   }
 
@@ -5213,7 +5400,439 @@
     }
   }
 
+  // ==================== JLPT CONTROLLER & LEVEL PICKER ====================
+  const JLPT_LEVEL_INFO = {
+    N5: { title: 'JLPT N5 — 初級 (Beginner)', sub: '基本の日常生活単語。日本語学習のスタートライン。', cls: 'banner-n5', count: '702' },
+    N4: { title: 'JLPT N4 — 初中級 (Elementary)', sub: '身近な日常会話・よく使われる表現。', cls: 'banner-n4', count: '668' },
+    N3: { title: 'JLPT N3 — 中級 (Intermediate)', sub: '日常の幅広い場面で使われる重要単語。', cls: 'banner-n3', count: '1,843' },
+    N2: { title: 'JLPT N2 — 上級 (Upper Intermediate)', sub: '新聞・ビジネス・幅広いトピックの語彙。', cls: 'banner-n2', count: '1,949' },
+    N1: { title: 'JLPT N1 — 最上級 (Advanced)', sub: '論理的・専門的で高度な表現を含む総合語彙。', cls: 'banner-n1', count: '3,748' },
+  };
+
+  const JLPT_PAGE_SIZE = 60;
+  let currentJlptLevel = 'N5';
+  let currentJlptRow = 'all';
+  let currentJlptViewMode = 'card'; // 'card' or 'list'
+  let filteredJlptWords = [];
+  let currentJlptPage = 1;
+  let currentJlptModalWord = null;
+
+  function initJlptView() {
+    updateJlptHeaderSavedCount();
+    switchJlptLevel(currentJlptLevel || 'N5');
+  }
+
+  function updateJlptHeaderSavedCount() {
+    const el = document.getElementById('jlptSavedCount');
+    if (el) {
+      el.textContent = mylistSet.size;
+    }
+  }
+
+  function switchJlptLevel(level) {
+    currentJlptLevel = level;
+    currentJlptRow = 'all';
+    currentJlptPage = 1;
+
+    const searchInput = document.getElementById('jlptSearchInput');
+    if (searchInput) searchInput.value = '';
+
+    ['N5', 'N4', 'N3', 'N2', 'N1'].forEach(lvl => {
+      const tabs = document.querySelectorAll(`.jlpt-level-tab.${lvl.toLowerCase()}`);
+      tabs.forEach(tab => {
+        tab.classList.toggle('active', lvl === level);
+      });
+    });
+
+    // Reset Gojuon buttons
+    document.querySelectorAll('.jlpt-gojuon-btn').forEach(btn => btn.classList.remove('active'));
+    const allBtn = document.getElementById('jlptRow-all');
+    if (allBtn) allBtn.classList.add('active');
+
+    // Update banner
+    const info = JLPT_LEVEL_INFO[level] || JLPT_LEVEL_INFO['N5'];
+    const bannerBox = document.getElementById('jlptBannerBox');
+    if (bannerBox) {
+      bannerBox.className = 'rounded-2xl p-3 sm:p-4 flex items-center justify-between flex-wrap gap-2 shadow-2xs ' + info.cls;
+    }
+    const badge = document.getElementById('jlptBannerLevelBadge');
+    if (badge) badge.textContent = level;
+    const title = document.getElementById('jlptBannerTitle');
+    if (title) title.textContent = info.title;
+    const sub = document.getElementById('jlptBannerSub');
+    if (sub) sub.textContent = info.sub;
+
+    filterJlptWords();
+  }
+
+  function filterJlptRow(row) {
+    currentJlptRow = row;
+    currentJlptPage = 1;
+    document.querySelectorAll('.jlpt-gojuon-btn').forEach(btn => btn.classList.remove('active'));
+    const target = document.getElementById('jlptRow-' + row);
+    if (target) target.classList.add('active');
+    filterJlptWords();
+  }
+
+  function filterJlptWords() {
+    const searchInput = document.getElementById('jlptSearchInput');
+    const q = searchInput ? searchInput.value.trim().toLowerCase() : '';
+    const allWords = (window.JLPT_VOCAB && window.JLPT_VOCAB[currentJlptLevel]) || [];
+
+    filteredJlptWords = allWords.filter(w => {
+      if (currentJlptRow !== 'all' && w.row !== currentJlptRow) {
+        return false;
+      }
+      if (q.length > 0) {
+        const wordMatch = (w.word || '').toLowerCase().includes(q);
+        const readingMatch = (w.reading || '').toLowerCase().includes(q) || (w.k || '').toLowerCase().includes(q);
+        const meaningMatch = (w.meanings || []).some(m => String(m).toLowerCase().includes(q));
+        return wordMatch || readingMatch || meaningMatch;
+      }
+      return true;
+    });
+
+    renderJlptPage();
+  }
+
+  function isJlptWordInMylist(word) {
+    if (!word) return false;
+    for (const id of mylistSet) {
+      if (id === word) return true;
+      if (id.startsWith('jlpt_') && id.endsWith(`_${word}`)) return true;
+      const card = getCardById(id);
+      if (card && card.word === word) return true;
+    }
+    return false;
+  }
+
+  function toggleJlptWordMylist(event, idx) {
+    if (event) event.stopPropagation();
+    const w = filteredJlptWords[idx];
+    if (!w) return;
+
+    const cardId = `jlpt_${currentJlptLevel}_${idx}_${w.word}`;
+    let existingId = null;
+    for (const id of mylistSet) {
+      if (id === w.word || (id.startsWith('jlpt_') && id.endsWith(`_${w.word}`))) {
+        existingId = id;
+        break;
+      }
+    }
+
+    if (existingId) {
+      mylistSet.delete(existingId);
+      delete mylistCardFolderMap[existingId];
+      saveMylistForCurrentStudent();
+      showToast(currentLang === 'ja' ? `「${w.word}」をマイリストから解除しました` : `Removed "${w.word}" from My List`);
+    } else {
+      mylistSet.add(cardId);
+      saveMylistForCurrentStudent();
+      showToast(currentLang === 'ja' ? `「${w.word}」をマイリストに追加しました ⭐` : `Added "${w.word}" to My List ⭐`);
+    }
+
+    updateJlptHeaderSavedCount();
+    renderJlptPage();
+  }
+
+  function renderJlptPage() {
+    const totalWords = filteredJlptWords.length;
+    const totalPages = Math.ceil(totalWords / JLPT_PAGE_SIZE);
+    const start = (currentJlptPage - 1) * JLPT_PAGE_SIZE;
+    const end = Math.min(start + JLPT_PAGE_SIZE, totalWords);
+    const pageWords = filteredJlptWords.slice(start, end);
+
+    const totalCountEl = document.getElementById('jlptTotalLevelCount');
+    if (totalCountEl) totalCountEl.textContent = totalWords.toLocaleString();
+
+    const rangeEl = document.getElementById('jlptShownRange');
+    if (rangeEl) {
+      rangeEl.textContent = totalWords > 0 ? `${(start + 1)}-${end}` : '0';
+    }
+
+    const container = document.getElementById('jlptWordsContainer');
+    const empty = document.getElementById('jlptEmptyState');
+    if (!container) return;
+
+    if (totalWords === 0) {
+      container.innerHTML = '';
+      if (empty) empty.classList.remove('hidden');
+      renderJlptPagination(0);
+      return;
+    }
+    if (empty) empty.classList.add('hidden');
+
+    if (currentJlptViewMode === 'card') {
+      container.className = 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5';
+      container.innerHTML = pageWords.map((w, i) => buildJlptCardHtml(w, start + i)).join('');
+    } else {
+      container.className = 'flex flex-col space-y-2';
+      container.innerHTML = pageWords.map((w, i) => buildJlptListItemHtml(w, start + i)).join('');
+    }
+
+    renderJlptPagination(totalPages);
+
+    if (window.lucide) {
+      lucide.createIcons({ root: container });
+    }
+  }
+
+  function buildJlptCardHtml(w, globalIdx) {
+    const reading = (w.reading && w.reading !== w.word) ? w.reading : (w.k || '');
+    const meaningsText = (w.meanings || []).slice(0, 3).join('; ');
+    const rowBadge = w.row ? `<span class="text-[10px] px-1.5 py-0.5 rounded-md bg-slate-100 text-slate-600 font-bold ml-1">${escapeHtml(w.row)}</span>` : '';
+    const isSaved = isJlptWordInMylist(w.word);
+
+    return `
+      <div class="jlpt-word-card bg-white rounded-2xl border border-softBorder p-3.5 hover:border-sky-300 transition shadow-2xs cursor-pointer flex flex-col justify-between" onclick="openJlptModal(${globalIdx})">
+        <div>
+          <div class="flex items-center justify-between mb-1.5">
+            <div class="flex items-center">
+              <span class="text-[10px] font-extrabold text-slate-400 font-mono">#${globalIdx + 1}</span>
+              ${rowBadge}
+            </div>
+            <div class="flex items-center space-x-1.5" onclick="event.stopPropagation()">
+              <button class="jlpt-save-btn ${isSaved ? 'saved' : ''}" onclick="toggleJlptWordMylist(event, ${globalIdx})" title="${isSaved ? 'マイリストから解除' : 'マイリストに保存'}">
+                ${isSaved ? '★ 保存中' : '☆ 保存'}
+              </button>
+              <button class="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition" onclick="event.stopPropagation(); speakJapanese('${escapeHtml(w.word)}')" title="発音を聴く">
+                <i data-lucide="volume-2" class="w-3 h-3"></i>
+              </button>
+            </div>
+          </div>
+          <div class="text-xl font-black text-slate-900 leading-tight">${escapeHtml(w.word)}</div>
+          ${reading ? `<div class="text-xs font-bold text-coralPink mt-0.5">${escapeHtml(reading)}</div>` : ''}
+          <div class="text-xs text-slate-600 mt-2 line-clamp-2">${escapeHtml(meaningsText)}</div>
+        </div>
+      </div>`;
+  }
+
+  function buildJlptListItemHtml(w, globalIdx) {
+    const reading = (w.reading && w.reading !== w.word) ? w.reading : (w.k || '');
+    const meaningsText = (w.meanings || []).slice(0, 2).join('; ');
+    const isSaved = isJlptWordInMylist(w.word);
+
+    return `
+      <div class="bg-white rounded-xl border border-softBorder px-3.5 py-2.5 flex items-center justify-between gap-3 hover:border-sky-300 transition shadow-2xs cursor-pointer" onclick="openJlptModal(${globalIdx})">
+        <div class="flex items-center space-x-3 min-w-0">
+          <span class="text-[10px] font-bold text-slate-400 font-mono w-7 shrink-0">${globalIdx + 1}</span>
+          <div class="truncate">
+            <div class="flex items-baseline space-x-2">
+              <span class="font-extrabold text-sm text-slate-900">${escapeHtml(w.word)}</span>
+              ${reading ? `<span class="text-xs font-bold text-coralPink">${escapeHtml(reading)}</span>` : ''}
+              ${w.row ? `<span class="text-[10px] text-slate-400 font-semibold">(${escapeHtml(w.row)})</span>` : ''}
+            </div>
+            <div class="text-xs text-slate-500 truncate">${escapeHtml(meaningsText)}</div>
+          </div>
+        </div>
+        <div class="flex items-center space-x-1.5 shrink-0" onclick="event.stopPropagation()">
+          <button class="jlpt-save-btn ${isSaved ? 'saved' : ''}" onclick="toggleJlptWordMylist(event, ${globalIdx})">
+            ${isSaved ? '★' : '☆'}
+          </button>
+          <button class="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition" onclick="event.stopPropagation(); speakJapanese('${escapeHtml(w.word)}')">
+            <i data-lucide="volume-2" class="w-3 h-3"></i>
+          </button>
+        </div>
+      </div>`;
+  }
+
+  function renderJlptPagination(totalPages) {
+    const container = document.getElementById('jlptPaginationContainer');
+    if (!container) return;
+
+    if (totalPages <= 1) {
+      container.innerHTML = '';
+      return;
+    }
+
+    let html = '';
+    if (currentJlptPage > 1) {
+      html += `<button class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 text-xs font-bold text-slate-700 hover:bg-slate-50 shadow-2xs" onclick="goJlptPage(${currentJlptPage - 1})">← 前へ</button>`;
+    }
+
+    const start = Math.max(1, currentJlptPage - 2);
+    const end = Math.min(totalPages, currentJlptPage + 2);
+
+    if (start > 1) {
+      html += `<button class="w-7 h-7 rounded-lg bg-white border border-slate-200 text-xs font-bold text-slate-700 hover:bg-slate-50 shadow-2xs" onclick="goJlptPage(1)">1</button>`;
+      if (start > 2) html += `<span class="text-xs text-slate-400">…</span>`;
+    }
+
+    for (let p = start; p <= end; p++) {
+      const active = (p === currentJlptPage);
+      html += `<button class="w-7 h-7 rounded-lg text-xs font-black shadow-2xs transition ${active ? 'bg-deepNavy text-white' : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50'}" onclick="goJlptPage(${p})">${p}</button>`;
+    }
+
+    if (end < totalPages) {
+      if (end < totalPages - 1) html += `<span class="text-xs text-slate-400">…</span>`;
+      html += `<button class="w-7 h-7 rounded-lg bg-white border border-slate-200 text-xs font-bold text-slate-700 hover:bg-slate-50 shadow-2xs" onclick="goJlptPage(${totalPages})">${totalPages}</button>`;
+    }
+
+    if (currentJlptPage < totalPages) {
+      html += `<button class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 text-xs font-bold text-slate-700 hover:bg-slate-50 shadow-2xs" onclick="goJlptPage(${currentJlptPage + 1})">次へ →</button>`;
+    }
+
+    container.innerHTML = html;
+  }
+
+  function goJlptPage(p) {
+    currentJlptPage = p;
+    renderJlptPage();
+    const container = document.getElementById('viewJlpt');
+    if (container) {
+      container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function openJlptModal(idx) {
+    const w = filteredJlptWords[idx];
+    if (!w) return;
+    currentJlptModalWord = w;
+
+    const modal = document.getElementById('jlptDetailModal');
+    if (!modal) return;
+
+    document.getElementById('jlptModalBadgeLevel').textContent = currentJlptLevel;
+    document.getElementById('jlptModalWord').textContent = w.word;
+    document.getElementById('jlptModalReading').textContent = (w.reading && w.reading !== w.word) ? w.reading : (w.k || '');
+
+    const meaningsList = document.getElementById('jlptModalMeanings');
+    meaningsList.innerHTML = (w.meanings || []).map((m, i) =>
+      `<div class="flex items-start space-x-2"><span class="w-4 h-4 rounded-full bg-slate-100 text-[10px] font-black text-slate-600 flex items-center justify-center shrink-0 mt-0.5">${i + 1}</span><span>${escapeHtml(m)}</span></div>`
+    ).join('');
+
+    const exSec = document.getElementById('jlptModalExamplesSection');
+    const exList = document.getElementById('jlptModalExamplesList');
+    if (w.examples && w.examples.length > 0) {
+      exSec.style.display = 'block';
+      exList.innerHTML = w.examples.map(ex => `
+        <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-100 space-y-1">
+          <div class="flex items-start justify-between gap-2">
+            <div class="font-medium text-slate-900">${escapeHtml(ex.ja)}</div>
+            <button class="w-6 h-6 rounded-full bg-white text-slate-700 flex items-center justify-center shrink-0 border border-slate-200 shadow-2xs hover:bg-slate-100" onclick="speakJapanese('${escapeHtml(ex.ja)}')">
+              ▶
+            </button>
+          </div>
+          <div class="text-[11px] text-slate-500">${escapeHtml(ex.en || '')}</div>
+        </div>`).join('');
+    } else {
+      exSec.style.display = 'none';
+      exList.innerHTML = '';
+    }
+
+    updateJlptModalSaveBtn();
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+
+    if (window.lucide) lucide.createIcons({ root: modal });
+  }
+
+  function closeJlptModal() {
+    const modal = document.getElementById('jlptDetailModal');
+    if (modal) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  }
+
+  function updateJlptModalSaveBtn() {
+    const btn = document.getElementById('btnJlptModalSave');
+    const textEl = document.getElementById('btnJlptModalSaveText');
+    if (!btn || !textEl || !currentJlptModalWord) return;
+
+    const isSaved = isJlptWordInMylist(currentJlptModalWord.word);
+    if (isSaved) {
+      btn.className = 'flex-1 py-2 px-3 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold text-xs flex items-center justify-center space-x-1 shadow-xs transition';
+      textEl.textContent = '★ マイリストから解除';
+    } else {
+      btn.className = 'flex-1 py-2 px-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center space-x-1 shadow-xs transition';
+      textEl.textContent = '🔖 マイリストに保存';
+    }
+  }
+
+  function toggleJlptModalSave() {
+    if (!currentJlptModalWord) return;
+    const word = currentJlptModalWord.word;
+    const cardId = `jlpt_${currentJlptLevel}_0_${word}`;
+
+    let existingId = null;
+    for (const id of mylistSet) {
+      if (id === word || (id.startsWith('jlpt_') && id.endsWith(`_${word}`))) {
+        existingId = id;
+        break;
+      }
+    }
+
+    if (existingId) {
+      mylistSet.delete(existingId);
+      delete mylistCardFolderMap[existingId];
+      saveMylistForCurrentStudent();
+      showToast(currentLang === 'ja' ? `「${word}」をマイリストから解除しました` : `Removed "${word}" from My List`);
+    } else {
+      mylistSet.add(cardId);
+      saveMylistForCurrentStudent();
+      showToast(currentLang === 'ja' ? `「${word}」をマイリストに追加しました ⭐` : `Added "${word}" to My List ⭐`);
+    }
+
+    updateJlptModalSaveBtn();
+    updateJlptHeaderSavedCount();
+    renderJlptPage();
+  }
+
+  // --- JLPT Flashcards Level Selector Modal ---
+  function openJlptLevelSelectModal() {
+    const modal = document.getElementById('jlptLevelSelectModal');
+    if (modal) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      if (window.lucide) lucide.createIcons({ root: modal });
+    }
+  }
+
+  function closeJlptLevelSelectModal() {
+    const modal = document.getElementById('jlptLevelSelectModal');
+    if (modal) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  }
+
+  function selectJlptLevelForCards(level) {
+    currentJlptDeckLevel = level;
+    currentDeckFilter = 'jlpt';
+    closeJlptLevelSelectModal();
+
+    // Update pill UI
+    const filterAllBtn = document.getElementById('filterAllDeck');
+    const filterMyBtn = document.getElementById('filterMyDeck');
+    const filterJlptBtn = document.getElementById('filterJlptDeck');
+    const inactiveClass = 'px-2.5 py-0.5 rounded-full text-slate-600 font-semibold transition text-[11px] hover:text-slate-900';
+
+    if (filterAllBtn) filterAllBtn.className = inactiveClass;
+    if (filterMyBtn) filterMyBtn.className = inactiveClass;
+    if (filterJlptBtn) {
+      filterJlptBtn.className = 'px-2.5 py-0.5 rounded-full bg-teal-600 text-white font-bold transition text-[11px] shadow-xs';
+      filterJlptBtn.textContent = `JLPT (${level})`;
+    }
+
+    switchView('flashcards');
+    updateActiveDeck();
+    showToast(currentLang === 'ja' ? `JLPT ${level} の単語（${activeDeck.length}語）を読み込みました！` : `Loaded JLPT ${level} words (${activeDeck.length} words)!`);
+  }
+
   // グローバル露出（インラインイベント等からの呼出用）
+  window.switchJlptLevel = switchJlptLevel;
+  window.filterJlptRow = filterJlptRow;
+  window.filterJlptWords = filterJlptWords;
+  window.goJlptPage = goJlptPage;
+  window.openJlptModal = openJlptModal;
+  window.closeJlptModal = closeJlptModal;
+  window.toggleJlptWordMylist = toggleJlptWordMylist;
+  window.toggleJlptModalSave = toggleJlptModalSave;
+  window.openJlptLevelSelectModal = openJlptLevelSelectModal;
+  window.closeJlptLevelSelectModal = closeJlptLevelSelectModal;
+  window.selectJlptLevelForCards = selectJlptLevelForCards;
+
   window.closeDictPopupModal = closeDictPopupModal;
   window.openDictLookupModal = openDictLookupModal;
   window.openHelpGuideModal = openHelpGuideModal;
