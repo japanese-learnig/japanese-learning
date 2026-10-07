@@ -38677,13 +38677,13 @@ window.CLASS_VOCAB_DATA = [
     "reading": "とき",
     "category": "授業で習った言葉",
     "meaning": {
-      "en": "Both mean 'when' but 時 refers to a specific moment or condition, while 頃 refers to a broader, vaguer period.",
+      "en": "when 〜 / at the time of 〜",
       "ja": "〜の時",
-      "zh_TW": "Both mean 'when' but 時 refers to a specific moment or condition, while 頃 refers to a broader, vaguer period.",
-      "zh_CN": "Both mean 'when' but 時 refers to a specific moment or condition, while 頃 refers to a broader, vaguer period.",
-      "ko": "Both mean 'when' but 時 refers to a specific moment or condition, while 頃 refers to a broader, vaguer period.",
-      "zh_HK": "Both mean 'when' but 時 refers to a specific moment or condition, while 頃 refers to a broader, vaguer period.",
-      "fr": "Both mean 'when' but 時 refers to a specific moment or condition, while 頃 refers to a broader, vaguer period."
+      "zh_TW": "〜的時候",
+      "zh_CN": "〜的时候",
+      "ko": "〜 때",
+      "zh_HK": "〜嗰陣",
+      "fr": "au moment de 〜 / quand 〜"
     },
     "example": {
       "ja": "A: <ruby>子供<rt>こども</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、よくこの<ruby>公園<rt>こうえん</rt></ruby>で<ruby>遊<rt>あそ</rt></ruby>びました。<br/>B: <ruby>懐<rt>なつ</rt></ruby>かしい<ruby>思<rt>おも</rt></ruby>い<ruby>出<rt>で</rt></ruby>ですね。",
@@ -38694,7 +38694,7 @@ window.CLASS_VOCAB_DATA = [
       "zh_HK": "A: 細個嗰陣，我成日喺呢個公園玩。<br/>B: 真係令人懷念嘅回憶呀。",
       "fr": "A: Quand j'étais enfant, je jouais souvent dans ce parc.<br/>B: C'est un souvenir nostalgique."
     },
-    "related": "Both mean 'when' but 時 refers to a specific moment or condition, while 頃 refers to a broader, vaguer period."
+    "related": "〜の頃（〜のころ）"
   },
   {
     "id": "class_word_1606",
@@ -39102,13 +39102,13 @@ window.CLASS_VOCAB_DATA = [
     "reading": "さんさく",
     "category": "授業で習った言葉",
     "meaning": {
-      "en": "Both mean walking around, but the atmosphere is different.",
+      "en": "stroll / walk around",
       "ja": "散策",
-      "zh_TW": "Both mean walking around, but the atmosphere is different.",
-      "zh_CN": "Both mean walking around, but the atmosphere is different.",
-      "ko": "Both mean walking around, but the atmosphere is different.",
-      "zh_HK": "Both mean walking around, but the atmosphere is different.",
-      "fr": "Both mean walking around, but the atmosphere is different."
+      "zh_TW": "散步 / 漫步",
+      "zh_CN": "散步 / 漫步",
+      "ko": "산책",
+      "zh_HK": "散步",
+      "fr": "promenade / balade"
     },
     "example": {
       "ja": "A: <ruby>天気<rt>てんき</rt></ruby>が<ruby>良<rt>よ</rt></ruby>いので、<ruby>古<rt>ふる</rt></ruby>い<ruby>城下町<rt>じょうかまち</rt></ruby>をのんびり<ruby>散策<rt>さんさく</rt></ruby>しましょう。<br/>B: <ruby>歴史<rt>れきし</rt></ruby>ある<ruby>路地<rt>ろじ</rt></ruby>を<ruby>散策<rt>さんさく</rt></ruby>するのは<ruby>風情<rt>ふぜい</rt></ruby>があって<ruby>楽<rt>たの</rt></ruby>しいですね。",
@@ -39119,7 +39119,7 @@ window.CLASS_VOCAB_DATA = [
       "zh_HK": "A: The weather is fine, so let's leisurely stroll through the old castle town.<br/>B: Strolling historic alleys has great charm and is so fun.",
       "fr": "A: The weather is fine, so let's leisurely stroll through the old castle town.<br/>B: Strolling historic alleys has great charm and is so fun."
     },
-    "related": "Both mean walking around, but the atmosphere is different."
+    "related": "散歩（さんぽ）"
   },
   {
     "id": "class_word_1623",
@@ -39527,13 +39527,13 @@ window.CLASS_VOCAB_DATA = [
     "reading": "みらい",
     "category": "授業で習った言葉",
     "meaning": {
-      "en": "Both mean 'future' but are used in different contexts.",
+      "en": "future (distant / global)",
       "ja": "未来",
-      "zh_TW": "Both mean 'future' but are used in different contexts.",
-      "zh_CN": "Both mean 'future' but are used in different contexts.",
-      "ko": "Both mean 'future' but are used in different contexts.",
-      "zh_HK": "Both mean 'future' but are used in different contexts.",
-      "fr": "futur"
+      "zh_TW": "未來",
+      "zh_CN": "未来",
+      "ko": "미래",
+      "zh_HK": "未來",
+      "fr": "futur / avenir"
     },
     "example": {
       "ja": "<ruby>未来<rt>みらい</rt></ruby>から<ruby>来<rt>き</rt></ruby>ました。",
@@ -39544,7 +39544,7 @@ window.CLASS_VOCAB_DATA = [
       "zh_HK": "I come from the future.",
       "fr": "I come from the future."
     },
-    "related": "Both mean 'future' but are used in different contexts."
+    "related": "将来（しょうらい） ⇄ 未来（みらい）"
   },
   {
     "id": "class_word_1640",
@@ -39877,12 +39877,12 @@ window.CLASS_VOCAB_DATA = [
     "reading": "ゆにゅう",
     "category": "授業で習った言葉",
     "meaning": {
-      "en": "Two opposite trade terms.",
+      "en": "import",
       "ja": "輸入",
-      "zh_TW": "Two opposite trade terms.",
-      "zh_CN": "Two opposite trade terms.",
-      "ko": "Two opposite trade terms.",
-      "zh_HK": "Two opposite trade terms.",
+      "zh_TW": "進口 / 輸入",
+      "zh_CN": "进口 / 输入",
+      "ko": "수입",
+      "zh_HK": "入口 / 輸入",
       "fr": "importation"
     },
     "example": {
@@ -39894,7 +39894,7 @@ window.CLASS_VOCAB_DATA = [
       "zh_HK": "Imported cars are in strong demand.",
       "fr": "Imported cars are in strong demand."
     },
-    "related": "Two opposite trade terms."
+    "related": "輸出（ゆしゅつ） ⇄ 輸入（ゆにゅう）"
   },
   {
     "id": "class_word_1654",
@@ -39952,13 +39952,13 @@ window.CLASS_VOCAB_DATA = [
     "reading": "どこらへん",
     "category": "授業で習った言葉",
     "meaning": {
-      "en": "Both ask roughly where/which part, but differ slightly in casualness.",
+      "en": "roughly where / which part",
       "ja": "どこらへん",
-      "zh_TW": "Both ask roughly where/which part, but differ slightly in casualness.",
-      "zh_CN": "Both ask roughly where/which part, but differ slightly in casualness.",
-      "ko": "Both ask roughly where/which part, but differ slightly in casualness.",
-      "zh_HK": "Both ask roughly where/which part, but differ slightly in casualness.",
-      "fr": "Both ask roughly where/which part, but differ slightly in casualness."
+      "zh_TW": "大約哪裡 / 哪一帶",
+      "zh_CN": "大约哪里 / 哪一带",
+      "ko": "어느 쯤 / 어디 근처",
+      "zh_HK": "大約邊度 / 邊頭",
+      "fr": "vers où / dans quel coin"
     },
     "example": {
       "ja": "A: <ruby>観光<rt>かんこう</rt></ruby><ruby>名所<rt>めいしょ</rt></ruby>の<ruby>浅草寺<rt>せんそうじ</rt></ruby>は、ここからどこらへんにありますか？<br/>B: この<ruby>大通<rt>おおどお</rt></ruby>りをまっすぐ5<ruby>分<rt>ふん</rt></ruby>ほど<ruby>歩<rt>ある</rt></ruby>いた<ruby>左手<rt>ひだりて</rt></ruby>あたりですよ。",
@@ -39969,7 +39969,7 @@ window.CLASS_VOCAB_DATA = [
       "zh_HK": "A: Roughly where from here is the sightseeing spot Senso-ji Temple?<br/>B: Walk straight along this main avenue for about 5 minutes, on the left.",
       "fr": "A: Roughly where from here is the sightseeing spot Senso-ji Temple?<br/>B: Walk straight along this main avenue for about 5 minutes, on the left."
     },
-    "related": "Both ask roughly where/which part, but differ slightly in casualness."
+    "related": "どのへん / どこらあたり"
   },
   {
     "id": "class_word_1657",
@@ -40052,13 +40052,13 @@ window.CLASS_VOCAB_DATA = [
     "reading": "あし",
     "category": "授業で習った言葉",
     "meaning": {
-      "en": "Body part vocabulary",
+      "en": "foot / leg",
       "ja": "足",
-      "zh_TW": "Body part vocabulary",
-      "zh_CN": "Body part vocabulary",
-      "ko": "Body part vocabulary",
-      "zh_HK": "Body part vocabulary",
-      "fr": "allure (de la marche)"
+      "zh_TW": "腳 / 腿",
+      "zh_CN": "脚 / 腿",
+      "ko": "발 / 다리",
+      "zh_HK": "腳",
+      "fr": "pied / jambe"
     },
     "example": {
       "ja": "A: たくさん<ruby>歩<rt>ある</rt></ruby>いたので、<ruby>足<rt>あし</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです。<br/>B: <ruby>少<rt>すこ</rt></ruby>し<ruby>座<rt>すわ</rt></ruby>って<ruby>休憩<rt>きゅうけい</rt></ruby>しましょう。",
@@ -40069,7 +40069,7 @@ window.CLASS_VOCAB_DATA = [
       "zh_HK": "A: 行咗好多路，對腳好痛呀。<br/>B: 我哋坐低休息一陣啦。",
       "fr": "A: J'ai beaucoup marché, donc j'ai mal aux pieds.<br/>B: Asseyons-nous et reposons-nous un peu."
     },
-    "related": "Body part vocabulary — each is specific and not interchangeable."
+    "related": "手（て） ⇄ 足（あし）"
   },
   {
     "id": "class_word_1661",
@@ -40077,13 +40077,13 @@ window.CLASS_VOCAB_DATA = [
     "reading": "ハマる",
     "category": "授業で習った言葉",
     "meaning": {
-      "en": "To get hooked on / to become obsessed with",
+      "en": "to get hooked on / to be obsessed with / to fit into",
       "ja": "ハマる",
-      "zh_TW": "To get hooked on / to become obsessed with",
-      "zh_CN": "To get hooked on / to become obsessed with",
-      "ko": "To get hooked on / to become obsessed with",
-      "zh_HK": "To get hooked on / to become obsessed with",
-      "fr": "To get hooked on / to become obsessed with"
+      "zh_TW": "著迷 / 沉迷 / 入坑",
+      "zh_CN": "着迷 / 沉迷 / 入坑",
+      "ko": "푹 빠지다 / 열중하다 / 들어맞다",
+      "zh_HK": "迷上 / 沉迷 / 入坑",
+      "fr": "être accro à / se passionner pour"
     },
     "example": {
       "ja": "A: <ruby>最近<rt>さいきん</rt></ruby>、<ruby>韓国<rt>かんこく</rt></ruby>ドラマにハマっているんです。<br/>B: <ruby>面白<rt>おもしろ</rt></ruby>い<ruby>作品<rt>さくひん</rt></ruby>がたくさんありますよね。",
@@ -40094,7 +40094,7 @@ window.CLASS_VOCAB_DATA = [
       "zh_HK": "A: 最近我迷上咗睇韓劇。<br/>B: 有好多好睇嘅劇集吖嘛。",
       "fr": "A: Dernièrement, je suis vraiment accro aux drames coréens.<br/>B: Il y a tellement d'œuvres intéressantes, n'est-ce pas ?"
     },
-    "related": "To get hooked on / to become obsessed with — to be deeply absorbed in a hobby, show, food, or activity"
+    "related": "夢中になる（むちゅうになる） / 沼る（ぬまる）"
   },
   {
     "id": "class_word_1662",
@@ -41552,13 +41552,13 @@ window.CLASS_VOCAB_DATA = [
     "reading": "〜しかたべない",
     "category": "授業で習った言葉",
     "meaning": {
-      "en": "Both mean \"only eat ~\" but with different nuances.",
+      "en": "only eat 〜",
       "ja": "〜しか食べない",
-      "zh_TW": "Both mean \"only eat ~\" but with different nuances.",
-      "zh_CN": "Both mean \"only eat ~\" but with different nuances.",
-      "ko": "Both mean \"only eat ~\" but with different nuances.",
-      "zh_HK": "Both mean \"only eat ~\" but with different nuances.",
-      "fr": "Both mean \"only eat ~\" but with different nuances."
+      "zh_TW": "只吃〜",
+      "zh_CN": "只吃〜",
+      "ko": "〜밖에 안 먹다",
+      "zh_HK": "淨係食〜",
+      "fr": "ne manger que 〜"
     },
     "example": {
       "ja": "A: <ruby>彼<rt>かれ</rt></ruby>は<ruby>野菜<rt>やさい</rt></ruby>が<ruby>苦手<rt>にがて</rt></ruby>で、お<ruby>肉<rt>にく</rt></ruby>しか<ruby>食<rt>た</rt></ruby>べないそうですよ。<br/>B: <ruby>栄養<rt>えいよう</rt></ruby>バランスが<ruby>偏<rt>かたよ</rt></ruby>らないか<ruby>少<rt>すこ</rt></ruby>し<ruby>心配<rt>しんぱい</rt></ruby>になりますね。",
@@ -41569,7 +41569,7 @@ window.CLASS_VOCAB_DATA = [
       "zh_HK": "A: He dislikes vegetables and reportedly only eats meat.<br/>B: You worry slightly whether his nutrition balance gets skewed.",
       "fr": "A: He dislikes vegetables and reportedly only eats meat.<br/>B: You worry slightly whether his nutrition balance gets skewed."
     },
-    "related": "Both mean \"only eat ~\" but with different nuances."
+    "related": "〜だけ食べる"
   },
   {
     "id": "class_word_1721",
