@@ -1886,139 +1886,141 @@
     }, 300);
   }
 
-  let expandedOverviewFolderIds = new Set(); // tracks which folders are open in Level 1 overview
+  let expandedOverviewFolderIds = new Set(['folder_1']); // tracks which folders are open in Level 1 overview
 
-  function renderFolderOverview() {
-    const container = document.getElementById('folderButtonsContainer');
-    if (!container) return;
-    container.innerHTML = '';
+  function createFolderElement(fc) {
+    const isExpanded = expandedOverviewFolderIds.has(fc.id);
+    const folderCards = vocabList.filter(c => c.folder_id === fc.id);
+    const bilingualFolderTitle = getBilingualFolderTitle(fc, currentLang);
 
-    const sectionsCatalog = window.SECTIONS_DATA || [];
-    const sectionsMap = window.SECTIONS || {};
+    // Wrapper matching Image 2: rounded-2xl border bg-white
+    const folderWrapper = document.createElement('div');
+    folderWrapper.className = 'border border-softBorder rounded-2xl bg-white shadow-2xs overflow-hidden transition-all';
 
-    FOLDER_CONFIGS.forEach(fc => {
-      const isExpanded = expandedOverviewFolderIds.has(fc.id);
-      const folderCards = vocabList.filter(c => c.folder_id === fc.id);
-      const bilingualFolderTitle = getBilingualFolderTitle(fc, currentLang);
+    // Header row: [Folder icon] [初級 1-10 (262語)] ... [Play] [Check/Test] [Chevron]
+    const headerDiv = document.createElement('div');
+    headerDiv.className = 'px-3.5 py-3 hover:bg-slate-50 cursor-pointer flex items-center justify-between select-none transition';
+    headerDiv.innerHTML = `
+      <div class="flex items-center space-x-2.5 truncate pr-2">
+        <i data-lucide="${isExpanded ? 'folder-open' : 'folder'}" class="w-5 h-5 text-deepNavy shrink-0"></i>
+        <span class="text-sm font-bold text-darkNavyText truncate">${bilingualFolderTitle}</span>
+        <span class="text-xs text-slate-400 font-medium shrink-0">(${folderCards.length}語)</span>
+      </div>
+      <div class="flex items-center space-x-2 shrink-0">
+        <button class="btn-overview-play p-1 text-deepNavy hover:bg-slate-100 rounded-lg transition" title="このフォルダの全単語を学習">
+          <i data-lucide="play" class="w-4 h-4 fill-deepNavy text-deepNavy"></i>
+        </button>
+        <button class="btn-overview-test p-1 text-emerald-600 hover:bg-slate-100 rounded-lg transition" title="このフォルダのテストを開始">
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
+        </button>
+        <button class="btn-overview-toggle p-0.5 text-slate-400 hover:text-deepNavy transition" title="${isExpanded ? '閉じる' : '開く'}">
+          <i data-lucide="${isExpanded ? 'chevron-up' : 'chevron-down'}" class="w-4 h-4"></i>
+        </button>
+      </div>
+    `;
 
-      // Wrapper matching Image 2: rounded-2xl border bg-white
-      const folderWrapper = document.createElement('div');
-      folderWrapper.className = 'border border-softBorder rounded-2xl bg-white shadow-2xs overflow-hidden transition-all';
-
-      // Header row: [Folder icon] [初級 1-10 (262語)] ... [Play] [Check/Test] [Chevron]
-      const headerDiv = document.createElement('div');
-      headerDiv.className = 'px-3.5 py-3 hover:bg-slate-50 cursor-pointer flex items-center justify-between select-none transition';
-      headerDiv.innerHTML = `
-        <div class="flex items-center space-x-2.5 truncate pr-2">
-          <i data-lucide="${isExpanded ? 'folder-open' : 'folder'}" class="w-5 h-5 text-deepNavy shrink-0"></i>
-          <span class="text-sm font-bold text-darkNavyText truncate">${bilingualFolderTitle}</span>
-          <span class="text-xs text-slate-400 font-medium shrink-0">(${folderCards.length}語)</span>
-        </div>
-        <div class="flex items-center space-x-2 shrink-0">
-          <button class="btn-overview-play p-1 text-deepNavy hover:bg-slate-100 rounded-lg transition" title="このフォルダの全単語を学習">
-            <i data-lucide="play" class="w-4 h-4 fill-deepNavy text-deepNavy"></i>
-          </button>
-          <button class="btn-overview-test p-1 text-emerald-600 hover:bg-slate-100 rounded-lg transition" title="このフォルダのテストを開始">
-            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
-          </button>
-          <button class="btn-overview-toggle p-0.5 text-slate-400 hover:text-deepNavy transition" title="${isExpanded ? '閉じる' : '開く'}">
-            <i data-lucide="${isExpanded ? 'chevron-up' : 'chevron-down'}" class="w-4 h-4"></i>
-          </button>
-        </div>
-      `;
-
-      // Header click toggles open/close
-      headerDiv.addEventListener('click', (e) => {
-        if (e.target.closest('.btn-overview-play')) {
-          e.stopPropagation();
-          currentFolder = fc.id;
-          startStudyingEntireFolder();
-          return;
-        }
-        if (e.target.closest('.btn-overview-test')) {
-          e.stopPropagation();
-          currentFolder = fc.id;
-          startQuizWithScope('folder', fc.id, fc.title);
-          return;
-        }
-
-        // Toggle open/collapse
-        if (expandedOverviewFolderIds.has(fc.id)) {
-          expandedOverviewFolderIds.delete(fc.id);
-        } else {
-          expandedOverviewFolderIds.add(fc.id);
-        }
-        renderFolderOverview();
-      });
-
-      folderWrapper.appendChild(headerDiv);
-
-      // Collapsible units list inside this folder
-      if (isExpanded) {
-        const unitsContainer = document.createElement('div');
-        unitsContainer.className = 'py-1 px-2 space-y-1 border-t border-slate-100 bg-slate-50/50';
-
-        const [minSec, maxSec] = fc.range;
-        const secNumsToRender = [];
-        if (fc.id === 'folder_1') {
-          secNumsToRender.push(0);
-        }
-        for (let s = minSec; s <= maxSec; s++) {
-          secNumsToRender.push(s);
-        }
-
-        secNumsToRender.forEach(secNum => {
-          const catalogItem = sectionsCatalog.find(s => s.num === secNum);
-          if (!catalogItem && !sectionsMap[secNum] && vocabList.filter(c => c.section_num === secNum).length === 0) {
-            return;
-          }
-          const rawSecTitle = (catalogItem && catalogItem.title) || sectionsMap[secNum] || `${secNum}. 単元${secNum}`;
-          const bilingualTitle = getBilingualSectionTitle(secNum, rawSecTitle, currentLang);
-          const secCards = vocabList.filter(c => c.section_num === secNum);
-          const numDisplay = secNum === 0 ? '★' : `${secNum}`;
-
-          const isCurrentActive = (currentSection == secNum && currentFolder === fc.id);
-
-          const unitItem = document.createElement('div');
-          unitItem.className = `group flex items-center justify-between px-3 py-2 rounded-xl cursor-pointer transition text-xs ${
-            isCurrentActive
-              ? 'bg-lightBlueBg/80 border-2 border-deepNavy text-deepNavy font-bold shadow-xs'
-              : 'bg-white border border-slate-200/80 hover:border-deepNavy hover:bg-blue-50/30 text-slate-800'
-          }`;
-          unitItem.innerHTML = `
-            <div class="flex items-center space-x-2 truncate pr-2">
-              <span class="w-5 h-5 rounded-md ${isCurrentActive ? 'bg-deepNavy text-white' : 'bg-slate-100 text-slate-700'} font-bold text-[10px] flex items-center justify-center shrink-0">${numDisplay}</span>
-              <span class="truncate font-semibold text-xs">${bilingualTitle}</span>
-            </div>
-            <div class="flex items-center space-x-1 shrink-0 text-slate-400">
-              <span class="text-[10px] px-1.5 py-0.5 rounded font-medium ${isCurrentActive ? 'bg-deepNavy text-white' : 'bg-slate-100 text-slate-600'}">${secCards.length}語</span>
-              <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-300 group-hover:text-deepNavy transition"></i>
-            </div>
-          `;
-
-          unitItem.addEventListener('click', (e) => {
-            e.stopPropagation();
-            currentFolder = fc.id;
-            startStudyingSection(secNum, rawSecTitle);
-          });
-
-          unitsContainer.appendChild(unitItem);
-        });
-
-        folderWrapper.appendChild(unitsContainer);
+    // Header click toggles open/close
+    headerDiv.addEventListener('click', (e) => {
+      if (e.target.closest('.btn-overview-play')) {
+        e.stopPropagation();
+        currentFolder = fc.id;
+        startStudyingEntireFolder();
+        return;
+      }
+      if (e.target.closest('.btn-overview-test')) {
+        e.stopPropagation();
+        currentFolder = fc.id;
+        startQuizWithScope('folder', fc.id, fc.title);
+        return;
       }
 
-      container.appendChild(folderWrapper);
+      // Toggle open/collapse
+      if (expandedOverviewFolderIds.has(fc.id)) {
+        expandedOverviewFolderIds.delete(fc.id);
+      } else {
+        expandedOverviewFolderIds.add(fc.id);
+      }
+      renderFolderOverview();
     });
 
-    // Also populate mobile container if present
-    const mobileContainer = document.getElementById('folderButtonsContainerMobile');
-    if (mobileContainer && container !== mobileContainer) {
-      mobileContainer.innerHTML = container.innerHTML;
+    folderWrapper.appendChild(headerDiv);
+
+    // Collapsible units list inside this folder
+    if (isExpanded) {
+      const unitsContainer = document.createElement('div');
+      unitsContainer.className = 'py-1 px-2 space-y-1 border-t border-slate-100 bg-slate-50/50';
+
+      const [minSec, maxSec] = fc.range;
+      const secNumsToRender = [];
+      if (fc.id === 'folder_1') {
+        secNumsToRender.push(0);
+      }
+      for (let s = minSec; s <= maxSec; s++) {
+        secNumsToRender.push(s);
+      }
+
+      const sectionsCatalog = window.SECTIONS_DATA || [];
+      const sectionsMap = window.SECTIONS || {};
+
+      secNumsToRender.forEach(secNum => {
+        const catalogItem = sectionsCatalog.find(s => s.num === secNum);
+        if (!catalogItem && !sectionsMap[secNum] && vocabList.filter(c => c.section_num === secNum).length === 0) {
+          return;
+        }
+        const rawSecTitle = (catalogItem && catalogItem.title) || sectionsMap[secNum] || `${secNum}. 単元${secNum}`;
+        const bilingualTitle = getBilingualSectionTitle(secNum, rawSecTitle, currentLang);
+        const secCards = vocabList.filter(c => c.section_num === secNum);
+        const numDisplay = secNum === 0 ? '★' : `${secNum}`;
+
+        const isCurrentActive = (currentSection == secNum && currentFolder === fc.id);
+
+        const unitItem = document.createElement('div');
+        unitItem.className = `group flex items-center justify-between px-3 py-2 rounded-xl cursor-pointer transition text-xs ${
+          isCurrentActive
+            ? 'bg-lightBlueBg/80 border-2 border-deepNavy text-deepNavy font-bold shadow-xs'
+            : 'bg-white border border-slate-200/80 hover:border-deepNavy hover:bg-blue-50/30 text-slate-800'
+        }`;
+        unitItem.innerHTML = `
+          <div class="flex items-center space-x-2 truncate pr-2">
+            <span class="w-5 h-5 rounded-md ${isCurrentActive ? 'bg-deepNavy text-white' : 'bg-slate-100 text-slate-700'} font-bold text-[10px] flex items-center justify-center shrink-0">${numDisplay}</span>
+            <span class="truncate font-semibold text-xs">${bilingualTitle}</span>
+          </div>
+          <div class="flex items-center space-x-1 shrink-0 text-slate-400">
+            <span class="text-[10px] px-1.5 py-0.5 rounded font-medium ${isCurrentActive ? 'bg-deepNavy text-white' : 'bg-slate-100 text-slate-600'}">${secCards.length}語</span>
+            <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-300 group-hover:text-deepNavy transition"></i>
+          </div>
+        `;
+
+        unitItem.addEventListener('click', (e) => {
+          e.stopPropagation();
+          currentFolder = fc.id;
+          startStudyingSection(secNum, rawSecTitle);
+        });
+
+        unitsContainer.appendChild(unitItem);
+      });
+
+      folderWrapper.appendChild(unitsContainer);
     }
 
-    lucide.createIcons({ root: container });
-    if (mobileContainer) lucide.createIcons({ root: mobileContainer });
+    return folderWrapper;
+  }
+
+  function renderFolderOverview() {
+    const pcContainer = document.getElementById('folderButtonsContainer');
+    const mobileContainer = document.getElementById('folderButtonsContainerMobile');
+
+    const containers = [pcContainer, mobileContainer].filter(Boolean);
+    containers.forEach(c => { c.innerHTML = ''; });
+
+    FOLDER_CONFIGS.forEach(fc => {
+      if (pcContainer) pcContainer.appendChild(createFolderElement(fc));
+      if (mobileContainer) mobileContainer.appendChild(createFolderElement(fc));
+    });
+
+    containers.forEach(c => {
+      lucide.createIcons({ root: c });
+    });
   }
 
   function openFolderUnits(folderId) {

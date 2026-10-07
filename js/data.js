@@ -15954,7 +15954,7 @@ window.INITIAL_VOCAB_DATA = [
       "fr": "disliked / not liked"
     },
     "example": {
-      "ja": "<ruby>子供<rt>こども</rt></ruby>の<ruby>頃<rt>ころ</rt></ruby>はピーマンが<ruby>嫌<rt>きら</rt></ruby>いでしたが、<ruby>大人<rt>おとな</rt></ruby>になって食<ruby>べられるようになりました。",
+      "ja": "<ruby>子供<rt>こども</rt></ruby>の<ruby>頃<rt>ころ</rt></ruby>はピーマンが<ruby>嫌<rt>きら</rt></ruby>いでしたが、<ruby>大人<rt>おとな</rt></ruby>になって<ruby>食<rt>た</rt></ruby>べられるようになりました。",
       "en": "I disliked bell peppers when I was a child, but now as an adult I can eat them.",
       "zh_TW": "小時候我很討厭青椒，但長大後就能吃了。",
       "zh_CN": "小时候我很讨厌青椒，但长大后就能吃了。",
