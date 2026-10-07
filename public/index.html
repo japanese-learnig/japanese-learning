@@ -153,6 +153,44 @@
     .toggle-pill-track.is-off .toggle-pill-text-off {
       opacity: 1;
     }
+
+    /* Swipe Badge / Feedback Styles */
+    .swipe-badge-learned {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      padding: 6px 14px;
+      border: 3px solid #10b981;
+      color: #059669;
+      background: rgba(236, 253, 245, 0.95);
+      font-size: 16px;
+      font-weight: 900;
+      border-radius: 9999px;
+      transform: rotate(-12deg);
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+      pointer-events: none;
+      z-index: 30;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+    }
+    .swipe-badge-review {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      padding: 6px 14px;
+      border: 3px solid #f59e0b;
+      color: #d97706;
+      background: rgba(254, 243, 199, 0.95);
+      font-size: 16px;
+      font-weight: 900;
+      border-radius: 9999px;
+      transform: rotate(12deg);
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+      pointer-events: none;
+      z-index: 30;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+    }
   </style>
 </head>
 <body class="bg-lightBlueBg text-slate-800 min-h-screen flex flex-col antialiased select-none">
@@ -352,8 +390,12 @@
 
         <!-- 3D FLIP CARD CONTAINER -->
         <div class="perspective-1000 flex-1 min-h-[350px] flex items-center justify-center my-1 cursor-pointer">
-          <div id="flashcardElement" class="relative w-full h-[370px] rounded-3xl transition-transform duration-500 transform-style-3d shadow-md border-2 border-coralPink bg-white">
+          <div id="flashcardElement" class="relative w-full h-[370px] rounded-3xl transition-transform duration-500 transform-style-3d shadow-md border-2 border-coralPink bg-white select-none">
             
+            <!-- Dynamic Swipe Feedback Badges -->
+            <div id="swipeBadgeLearned" class="swipe-badge-learned">覚えた！ ✓</div>
+            <div id="swipeBadgeReview" class="swipe-badge-review">もう一回！ ⟲</div>
+
             <!-- FRONT FACE -->
             <div id="cardFront" class="absolute inset-0 w-full h-full rounded-3xl p-5 bg-white flex flex-col justify-between backface-hidden">
               <div class="flex items-center justify-between">

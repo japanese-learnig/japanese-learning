@@ -3114,6 +3114,8 @@
 
   // --- Setup Event Listeners ---
   function setupListeners() {
+    let hasMovedBeyondTapThreshold = false;
+
     // Navigation tabs
     document.getElementById('navStudy').addEventListener('click', () => {
       // Clear search query and close dropdown
@@ -3341,6 +3343,11 @@
     document.getElementById('flashcardElement').addEventListener('click', (e) => {
       // Prevent flipping if clicked on button or if user is selecting text in example
       if (e.target.closest('button')) return;
+      // If user performed a drag / swipe gesture, do not flip
+      if (hasMovedBeyondTapThreshold) {
+        hasMovedBeyondTapThreshold = false;
+        return;
+      }
       const sel = window.getSelection();
       if (sel && !sel.isCollapsed && sel.toString().trim().length > 0) return;
       if (e.target.closest('#exampleTextContainer')) return;
@@ -3433,70 +3440,193 @@
       });
     });
 
+    // --- Card Marking Helpers (覚えた！ & もう一度！) ---
+    function markCardLearned(cardToMark = null) {
+      const card = cardToMark || activeDeck[currentIndex];
+      if (!card) return;
+      const LEARNED_FOLDER_ID = 'folder_learned';
+      const LEARNED_FOLDER_NAME = '覚えた！';
+
+      // フォルダ存在確認
+      if (!mylistFolders.find(f => f.id === LEARNED_FOLDER_ID || f.name === LEARNED_FOLDER_NAME)) {
+        mylistFolders.push({ id: LEARNED_FOLDER_ID, name: LEARNED_FOLDER_NAME });
+      }
+
+      // マイリストに追加＆フォルダ割り当て
+      mylistSet.add(card.id);
+      mylistCardFolderMap[card.id] = LEARNED_FOLDER_ID;
+      knownSet.add(card.id);
+      saveMylistForCurrentStudent();
+
+      showToast(currentLang === 'ja' ? `「${card.word}」を『覚えた！』に保存しました ✨` : `Saved "${card.word}" to Learned! ✨`);
+
+      // 自動的に次のカードへ進む
+      if (currentIndex < activeDeck.length - 1) {
+        currentIndex++;
+        renderCurrentCard();
+      } else {
+        renderCurrentCard();
+        showToast(currentLang === 'ja' ? '最後のカードです！お疲れ様でした 🎉' : 'Last card! Great job 🎉');
+      }
+    }
+
+    function markCardReview(cardToMark = null) {
+      const card = cardToMark || activeDeck[currentIndex];
+      if (!card) return;
+      const REVIEW_FOLDER_ID = 'folder_review';
+      const REVIEW_FOLDER_NAME = 'もう一度！';
+
+      // フォルダ存在確認
+      if (!mylistFolders.find(f => f.id === REVIEW_FOLDER_ID || f.name === REVIEW_FOLDER_NAME)) {
+        mylistFolders.push({ id: REVIEW_FOLDER_ID, name: REVIEW_FOLDER_NAME });
+      }
+
+      // マイリストに追加＆フォルダ割り当て
+      mylistSet.add(card.id);
+      mylistCardFolderMap[card.id] = REVIEW_FOLDER_ID;
+      knownSet.delete(card.id); // まだ覚えていないので既習フラグを外す
+      saveMylistForCurrentStudent();
+
+      showToast(currentLang === 'ja' ? `「${card.word}」を『もう一度！』に保存しました 🔁` : `Saved "${card.word}" to Review again! 🔁`);
+
+      // 自動的に次のカードへ進む
+      if (currentIndex < activeDeck.length - 1) {
+        currentIndex++;
+        renderCurrentCard();
+      } else {
+        renderCurrentCard();
+        showToast(currentLang === 'ja' ? '最後のカードです！もう一度復習しましょう 🔁' : 'Last card! Review again 🔁');
+      }
+    }
+
     // 「覚えた！」ボタン (右側): マイリストに追加し「覚えた！」フォルダに保存して次のカードへ進む
     const btnMarkKnown = document.getElementById('btnMarkKnown');
     if (btnMarkKnown) {
-      btnMarkKnown.addEventListener('click', () => {
-        if (!activeDeck[currentIndex]) return;
-        const card = activeDeck[currentIndex];
-        const LEARNED_FOLDER_ID = 'folder_learned';
-        const LEARNED_FOLDER_NAME = '覚えた！';
-
-        // フォルダ存在確認
-        if (!mylistFolders.find(f => f.id === LEARNED_FOLDER_ID || f.name === LEARNED_FOLDER_NAME)) {
-          mylistFolders.push({ id: LEARNED_FOLDER_ID, name: LEARNED_FOLDER_NAME });
-        }
-
-        // マイリストに追加＆フォルダ割り当て
-        mylistSet.add(card.id);
-        mylistCardFolderMap[card.id] = LEARNED_FOLDER_ID;
-        knownSet.add(card.id);
-        saveMylistForCurrentStudent();
-
-        showToast(currentLang === 'ja' ? `「${card.word}」を『覚えた！』に保存しました ✨` : `Saved "${card.word}" to Learned! ✨`);
-
-        // 自動的に次のカードへ進む
-        if (currentIndex < activeDeck.length - 1) {
-          currentIndex++;
-          renderCurrentCard();
-        } else {
-          renderCurrentCard();
-          showToast(currentLang === 'ja' ? '最後のカードです！お疲れ様でした 🎉' : 'Last card! Great job 🎉');
-        }
-      });
+      btnMarkKnown.addEventListener('click', () => markCardLearned());
     }
 
     // 「もう一度！」ボタン (左側): マイリストに追加し「もう一度！」フォルダに保存して次のカードへ進む
     const btnMarkReview = document.getElementById('btnMarkReview');
     if (btnMarkReview) {
-      btnMarkReview.addEventListener('click', () => {
-        if (!activeDeck[currentIndex]) return;
-        const card = activeDeck[currentIndex];
-        const REVIEW_FOLDER_ID = 'folder_review';
-        const REVIEW_FOLDER_NAME = 'もう一度！';
+      btnMarkReview.addEventListener('click', () => markCardReview());
+    }
 
-        // フォルダ存在確認
-        if (!mylistFolders.find(f => f.id === REVIEW_FOLDER_ID || f.name === REVIEW_FOLDER_NAME)) {
-          mylistFolders.push({ id: REVIEW_FOLDER_ID, name: REVIEW_FOLDER_NAME });
+    // --- スマホ版スワイプ操作 (右スワイプ: 覚えた！ / 左スワイプ: もう一回！) ---
+    const flashcardEl = document.getElementById('flashcardElement');
+    const badgeLearned = document.getElementById('swipeBadgeLearned');
+    const badgeReview = document.getElementById('swipeBadgeReview');
+
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchCurrentX = 0;
+    let touchCurrentY = 0;
+    let isSwiping = false;
+    hasMovedBeyondTapThreshold = false;
+
+    if (flashcardEl) {
+      flashcardEl.addEventListener('touchstart', (e) => {
+        // ボタンやテキスト選択エリアでのタッチは無視
+        if (e.target.closest('button') || e.target.closest('#exampleTextContainer')) return;
+        const touch = e.touches[0];
+        touchStartX = touch.clientX;
+        touchStartY = touch.clientY;
+        touchCurrentX = touch.clientX;
+        touchCurrentY = touch.clientY;
+        isSwiping = true;
+        hasMovedBeyondTapThreshold = false;
+      }, { passive: true });
+
+      flashcardEl.addEventListener('touchmove', (e) => {
+        if (!isSwiping || !activeDeck[currentIndex]) return;
+        const touch = e.touches[0];
+        touchCurrentX = touch.clientX;
+        touchCurrentY = touch.clientY;
+
+        const deltaX = touchCurrentX - touchStartX;
+        const deltaY = touchCurrentY - touchStartY;
+
+        // タップ判定の閾値（8px以上動いたらスワイプ動作とみなす）
+        if (Math.abs(deltaX) > 8 || Math.abs(deltaY) > 8) {
+          hasMovedBeyondTapThreshold = true;
         }
 
-        // マイリストに追加＆フォルダ割り当て
-        mylistSet.add(card.id);
-        mylistCardFolderMap[card.id] = REVIEW_FOLDER_ID;
-        knownSet.delete(card.id); // まだ覚えていないので既習フラグを外す
-        saveMylistForCurrentStudent();
+        // 横スワイプが縦スクロールより優勢な場合にカードを物理的に追従
+        if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 12) {
+          // 水平スクロールをキャンセル
+          if (e.cancelable) e.preventDefault();
 
-        showToast(currentLang === 'ja' ? `「${card.word}」を『もう一度！』に保存しました 🔁` : `Saved "${card.word}" to Review again! 🔁`);
+          const rotation = (deltaX / 18); // 傾き効果
+          const baseRotateY = isCardFlipped ? 180 : 0;
+          flashcardEl.style.transition = 'none';
+          flashcardEl.style.transform = `translateX(${deltaX}px) rotate(${rotation}deg) rotateY(${baseRotateY}deg)`;
 
-        // 自動的に次のカードへ進む
-        if (currentIndex < activeDeck.length - 1) {
-          currentIndex++;
-          renderCurrentCard();
+          // バッジの透明度調整 (50px〜120pxでフェードイン)
+          if (deltaX > 25) {
+            // 右スワイプ: 覚えた！
+            const opacity = Math.min(1, (deltaX - 25) / 60);
+            if (badgeLearned) badgeLearned.style.opacity = opacity;
+            if (badgeReview) badgeReview.style.opacity = '0';
+          } else if (deltaX < -25) {
+            // 左スワイプ: もう一回！
+            const opacity = Math.min(1, (Math.abs(deltaX) - 25) / 60);
+            if (badgeReview) badgeReview.style.opacity = opacity;
+            if (badgeLearned) badgeLearned.style.opacity = '0';
+          } else {
+            if (badgeLearned) badgeLearned.style.opacity = '0';
+            if (badgeReview) badgeReview.style.opacity = '0';
+          }
+        }
+      }, { passive: false });
+
+      const handleTouchEnd = (e) => {
+        if (!isSwiping) return;
+        isSwiping = false;
+
+        const deltaX = touchCurrentX - touchStartX;
+        const deltaY = touchCurrentY - touchStartY;
+        const SWIPE_THRESHOLD = 75; // スワイプ成立とみなす移動距離 (px)
+        const baseRotateY = isCardFlipped ? 180 : 0;
+
+        // バッジリセット
+        if (badgeLearned) badgeLearned.style.opacity = '0';
+        if (badgeReview) badgeReview.style.opacity = '0';
+
+        // スワイプ成立判定 (横方向が優勢かつ閾値超え)
+        if (Math.abs(deltaX) > SWIPE_THRESHOLD && Math.abs(deltaX) > Math.abs(deltaY)) {
+          if (deltaX > 0) {
+            // ★ 右スワイプ: 「覚えた！」
+            flashcardEl.style.transition = 'transform 0.25s cubic-bezier(0.2, 0.8, 0.4, 1), opacity 0.25s ease';
+            flashcardEl.style.transform = `translateX(120%) rotate(25deg) rotateY(${baseRotateY}deg)`;
+            flashcardEl.style.opacity = '0';
+
+            setTimeout(() => {
+              flashcardEl.style.transition = 'none';
+              flashcardEl.style.transform = `rotateY(${baseRotateY}deg)`;
+              flashcardEl.style.opacity = '1';
+              markCardLearned();
+            }, 250);
+          } else {
+            // ★ 左スワイプ: 「もう一回！」
+            flashcardEl.style.transition = 'transform 0.25s cubic-bezier(0.2, 0.8, 0.4, 1), opacity 0.25s ease';
+            flashcardEl.style.transform = `translateX(-120%) rotate(-25deg) rotateY(${baseRotateY}deg)`;
+            flashcardEl.style.opacity = '0';
+
+            setTimeout(() => {
+              flashcardEl.style.transition = 'none';
+              flashcardEl.style.transform = `rotateY(${baseRotateY}deg)`;
+              flashcardEl.style.opacity = '1';
+              markCardReview();
+            }, 250);
+          }
         } else {
-          renderCurrentCard();
-          showToast(currentLang === 'ja' ? '最後のカードです！もう一度復習しましょう 🔁' : 'Last card! Review again 🔁');
+          // スワイプキャンセル: 元の位置にスムーズに戻す
+          flashcardEl.style.transition = 'transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+          flashcardEl.style.transform = `translateX(0px) rotate(0deg) rotateY(${baseRotateY}deg)`;
         }
-      });
+      };
+
+      flashcardEl.addEventListener('touchend', handleTouchEnd);
+      flashcardEl.addEventListener('touchcancel', handleTouchEnd);
     }
 
     // Speech Audio buttons
