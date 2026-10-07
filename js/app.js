@@ -1191,15 +1191,15 @@
       targetDom.innerHTML = '';
 
       const summaryHeader = document.createElement('div');
-      summaryHeader.className = 'px-2 py-1 text-[11px] font-bold text-slate-500 flex items-center justify-between border-b border-slate-100 pb-1.5';
+      summaryHeader.className = 'px-3 py-1.5 text-xs sm:text-sm font-bold text-slate-600 flex items-center justify-between border-b border-slate-200 pb-2';
       summaryHeader.innerHTML = `
-        <div class="flex items-center space-x-1">
-          <span>${currentLang === 'ja' ? '検索結果' : 'Search Results'}: <strong class="text-coralPink font-extrabold">${results.length}</strong> ${currentLang === 'ja' ? '件' : 'words'}</span>
+        <div class="flex items-center space-x-1.5">
+          <span>${currentLang === 'ja' ? '検索結果' : 'Search Results'}: <strong class="text-coralPink font-black text-sm sm:text-base">${results.length}</strong> ${currentLang === 'ja' ? '件' : 'words'}</span>
         </div>
         <div class="flex items-center space-x-2">
-          <span class="text-[10px] text-slate-400 hidden sm:inline">${currentLang === 'ja' ? 'タップで詳細・学習' : 'Tap to study'}</span>
-          <button class="btn-close-dropdown px-2 py-0.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 text-[10px] font-bold flex items-center space-x-1 transition">
-            <i data-lucide="x" class="w-3 h-3"></i>
+          <span class="text-[11px] sm:text-xs text-slate-400 hidden sm:inline">${currentLang === 'ja' ? 'タップで詳細・例文・学習' : 'Tap for details'}</span>
+          <button class="btn-close-dropdown px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold flex items-center space-x-1 transition">
+            <i data-lucide="x" class="w-3.5 h-3.5"></i>
             <span>${currentLang === 'ja' ? '閉じる' : 'Close'}</span>
           </button>
         </div>
@@ -1224,10 +1224,10 @@
 
       if (results.length === 0) {
         const emptyDiv = document.createElement('div');
-        emptyDiv.className = 'text-center py-8 text-slate-400 text-xs';
+        emptyDiv.className = 'text-center py-10 text-slate-400 text-sm';
         emptyDiv.innerHTML = `
-          <i data-lucide="search-x" class="w-6 h-6 mx-auto mb-1 text-slate-300"></i>
-          <p>${currentLang === 'ja' ? '一致する単語が見つかりませんでした' : 'No matching words found'}</p>
+          <i data-lucide="search-x" class="w-8 h-8 mx-auto mb-2 text-slate-300"></i>
+          <p class="font-bold">${currentLang === 'ja' ? '一致する単語が見つかりませんでした' : 'No matching words found'}</p>
         `;
         targetDom.appendChild(emptyDiv);
         lucide.createIcons({ root: targetDom });
@@ -1241,73 +1241,73 @@
         const itemCard = document.createElement('div');
         itemCard.className = `rounded-2xl border transition-all overflow-hidden ${
           isExpanded
-            ? 'bg-blue-50/50 border-deepNavy shadow-xs'
-            : 'bg-white border-slate-100 hover:border-softBorder hover:bg-slate-50'
+            ? 'bg-blue-50/60 border-deepNavy shadow-md'
+            : 'bg-white border-slate-200 hover:border-softBorder hover:bg-slate-50'
         }`;
 
         const targetMeaning = getBilingualMeaning(card.meaning, currentLang);
         const targetExTrans = getBilingualExampleTrans(card.example, currentLang);
 
         itemCard.innerHTML = `
-          <div class="search-item-header p-2.5 flex items-center justify-between cursor-pointer select-none">
+          <div class="search-item-header p-3 sm:p-3.5 flex items-center justify-between cursor-pointer select-none">
             <div class="flex-1 min-w-0 pr-2 pointer-events-none">
-              <div class="flex items-baseline space-x-1.5">
-                <span class="text-xs sm:text-sm font-bold text-darkNavyText">${card.word}</span>
-                ${card.reading && card.reading !== card.word ? `<span class="text-[11px] text-slate-400">（${card.reading}）</span>` : ''}
-                ${card.category ? `<span class="text-[9px] px-1.5 py-0.2 rounded-full font-bold ${card.isDict ? 'bg-slate-100 text-slate-600' : 'bg-lightBlueBg text-deepNavy'}">${card.category}</span>` : ''}
+              <div class="flex items-baseline flex-wrap gap-x-2 gap-y-0.5">
+                <span class="text-base sm:text-lg font-black text-darkNavyText font-jp leading-tight">${card.word}</span>
+                ${card.reading && card.reading !== card.word ? `<span class="text-xs sm:text-sm font-bold text-coralPink font-jp">（${card.reading}）</span>` : ''}
+                ${card.category ? `<span class="text-[10px] sm:text-xs px-2 py-0.5 rounded-full font-bold ${card.isDict ? 'bg-slate-100 text-slate-600' : 'bg-lightBlueBg text-deepNavy'}">${card.category}</span>` : ''}
               </div>
-              <p class="text-[11px] text-slate-600 font-medium truncate mt-0.5">${targetMeaning}</p>
+              <p class="text-xs sm:text-sm text-slate-700 font-medium leading-snug truncate mt-1">${targetMeaning}</p>
             </div>
-            <div class="flex items-center space-x-1 shrink-0">
-              <button class="btn-play-card p-1.5 rounded-full hover:bg-slate-100 text-deepNavy transition" title="${currentLang === 'ja' ? 'カードで学習' : 'Study Card'}">
-                <i data-lucide="play" class="w-3.5 h-3.5 fill-deepNavy"></i>
+            <div class="flex items-center space-x-1 sm:space-x-1.5 shrink-0">
+              <button class="btn-play-card p-2 rounded-full hover:bg-slate-100 text-deepNavy transition active:scale-95" title="${currentLang === 'ja' ? 'カードで学習' : 'Study Card'}">
+                <i data-lucide="play" class="w-4 h-4 fill-deepNavy"></i>
               </button>
-              <button class="btn-search-star p-1.5 rounded-full hover:bg-slate-100 text-slate-300 hover:text-amber-400 transition" title="マイリスト">
-                <i data-lucide="star" class="w-3.5 h-3.5 ${isStarred ? 'fill-amber-400 text-amber-400' : ''}"></i>
+              <button class="btn-search-star p-2 rounded-full hover:bg-slate-100 text-slate-300 hover:text-amber-400 transition active:scale-95" title="マイリスト">
+                <i data-lucide="star" class="w-4 h-4 ${isStarred ? 'fill-amber-400 text-amber-400' : ''}"></i>
               </button>
-              <div class="p-1 rounded-full text-slate-400">
-                <i data-lucide="${isExpanded ? 'chevron-up' : 'chevron-down'}" class="w-3.5 h-3.5"></i>
+              <div class="p-1.5 rounded-full text-slate-400">
+                <i data-lucide="${isExpanded ? 'chevron-up' : 'chevron-down'}" class="w-4 h-4"></i>
               </div>
             </div>
           </div>
 
-          <div class="${isExpanded ? 'block' : 'hidden'} px-3 pb-3 pt-1 border-t border-softBorder/60 bg-white/80 space-y-2">
-            <div class="rounded-xl p-2 bg-lightBlueBg/30 border border-softBorder/50 flex items-center justify-between">
+          <div class="${isExpanded ? 'block' : 'hidden'} px-3.5 pb-3.5 pt-2 border-t border-softBorder/60 bg-white/90 space-y-2.5">
+            <div class="rounded-xl p-3 bg-lightBlueBg/40 border border-softBorder/60 flex items-center justify-between">
               <div>
-                <span class="text-[10px] font-bold text-deepNavy uppercase block mb-0.5">${currentLang === 'ja' ? '意味・訳' : 'Meaning / Translation'}</span>
-                <p class="text-xs sm:text-sm font-bold text-darkNavyText">${targetMeaning}</p>
+                <span class="text-xs font-bold text-deepNavy uppercase block mb-0.5">${currentLang === 'ja' ? '意味・訳' : 'Meaning / Translation'}</span>
+                <p class="text-sm sm:text-base font-black text-darkNavyText leading-snug">${targetMeaning}</p>
               </div>
-              <button class="btn-audio-word p-1 rounded-full bg-deepNavy text-white hover:opacity-90 shadow-2xs" title="音声">
-                <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+              <button class="btn-audio-word p-1.5 rounded-full bg-deepNavy text-white hover:opacity-90 shadow-2xs active:scale-95 transition" title="音声">
+                <i data-lucide="volume-2" class="w-4 h-4"></i>
               </button>
             </div>
 
             ${card.example && card.example.ja ? `
-              <div class="rounded-xl p-2 bg-slate-50 border border-slate-200">
-                <div class="flex items-center justify-between mb-1">
-                  <span class="text-[10px] font-bold text-slate-600 flex items-center space-x-1">
-                    <i data-lucide="message-square" class="w-3 h-3 text-deepNavy"></i>
+              <div class="rounded-xl p-3 bg-slate-50 border border-slate-200">
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="text-xs font-bold text-slate-700 flex items-center space-x-1">
+                    <i data-lucide="message-square" class="w-3.5 h-3.5 text-deepNavy"></i>
                     <span>${currentLang === 'ja' ? '例文' : 'Example'}</span>
                   </span>
-                  <button class="btn-audio-example text-deepNavy hover:opacity-80 p-0.5" title="例文音声">
-                    <i data-lucide="volume-2" class="w-3 h-3"></i>
+                  <button class="btn-audio-example text-deepNavy hover:opacity-80 p-1 active:scale-95 transition" title="例文音声">
+                    <i data-lucide="volume-2" class="w-4 h-4"></i>
                   </button>
                 </div>
-                <p class="text-xs font-semibold text-slate-800 leading-relaxed mb-1">${card.example.ja}</p>
-                ${targetExTrans ? `<p class="text-[10px] text-slate-500 leading-snug">${targetExTrans}</p>` : ''}
+                <p class="text-sm sm:text-base font-bold text-slate-800 leading-relaxed font-jp mb-1.5">${card.example.ja}</p>
+                ${targetExTrans ? `<p class="text-xs sm:text-sm text-slate-600 leading-relaxed">${targetExTrans}</p>` : ''}
               </div>
             ` : ''}
 
             ${card.related ? `
-              <div class="rounded-xl p-2 bg-slate-50 border border-slate-200 text-[10px] text-slate-700 leading-relaxed font-medium">
-                <span class="font-bold text-slate-600 block mb-0.5">${currentLang === 'ja' ? '活用形・情報' : 'Related / Conjugations'}</span>
+              <div class="rounded-xl p-3 bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
+                <span class="font-bold text-slate-700 block mb-1">${currentLang === 'ja' ? '活用形・情報' : 'Related / Conjugations'}</span>
                 ${card.related.replace(/\n/g, '<br/>')}
               </div>
             ` : ''}
 
-            <div class="pt-1 flex items-center justify-end">
-              <button class="btn-study-this-card px-3 py-1 rounded-full bg-deepNavy text-white font-bold text-[11px] shadow-2xs hover:opacity-90 flex items-center space-x-1 transition">
-                <i data-lucide="play" class="w-3 h-3 fill-white"></i>
+            <div class="pt-1.5 flex items-center justify-end">
+              <button class="btn-study-this-card px-4 py-2 rounded-full bg-deepNavy text-white font-bold text-xs sm:text-sm shadow-sm hover:opacity-90 flex items-center space-x-1.5 transition active:scale-95">
+                <i data-lucide="play" class="w-3.5 h-3.5 fill-white"></i>
                 <span>${currentLang === 'ja' ? 'この単語をカードで練習する' : 'Study this card'}</span>
               </button>
             </div>
@@ -3317,6 +3317,19 @@
           btn.classList.add('is-off');
         }
       }
+
+      // スマホ版「あ」ボタンのUI更新（人型アイコンと同じ半透明ホワイト系デザイン）
+      const btnMobile = document.getElementById('btnToggleFuriganaMobile');
+      const labelMobile = document.getElementById('labelToggleFuriganaMobile');
+      if (btnMobile && labelMobile) {
+        if (isFuriganaEnabled) {
+          btnMobile.className = 'md:hidden w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/25 hover:bg-white/35 text-white ring-1 ring-white/30 flex items-center justify-center transition active:scale-95';
+          labelMobile.className = 'text-xs sm:text-sm font-black leading-none font-jp text-white';
+        } else {
+          btnMobile.className = 'md:hidden w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/10 hover:bg-white/20 text-white/40 flex items-center justify-center transition active:scale-95';
+          labelMobile.className = 'text-xs sm:text-sm font-bold leading-none font-jp text-white/40 line-through';
+        }
+      }
     }
 
     function updateAutoAudioUi() {
@@ -3329,6 +3342,21 @@
         } else {
           btn.classList.remove('is-on');
           btn.classList.add('is-off');
+        }
+      }
+
+      // スマホ版「音のマーク」ボタンのUI更新（人型アイコンと同じ半透明ホワイト系デザイン）
+      const btnMobile = document.getElementById('btnToggleAutoAudioMobile');
+      if (btnMobile) {
+        if (isAutoAudioEnabled) {
+          btnMobile.className = 'md:hidden w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/25 hover:bg-white/35 text-white ring-1 ring-white/30 flex items-center justify-center transition active:scale-95';
+          btnMobile.innerHTML = '<i data-lucide="volume-2" class="w-4 h-4 text-white"></i>';
+        } else {
+          btnMobile.className = 'md:hidden w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/10 hover:bg-white/20 text-white/40 flex items-center justify-center transition active:scale-95';
+          btnMobile.innerHTML = '<i data-lucide="volume-x" class="w-4 h-4 text-white/40"></i>';
+        }
+        if (window.lucide) {
+          lucide.createIcons({ root: btnMobile });
         }
       }
     }
@@ -3347,6 +3375,10 @@
     const btnToggleFuri = document.getElementById('btnToggleFurigana');
     if (btnToggleFuri) {
       btnToggleFuri.addEventListener('click', handleToggleFurigana);
+    }
+    const btnToggleFuriMobile = document.getElementById('btnToggleFuriganaMobile');
+    if (btnToggleFuriMobile) {
+      btnToggleFuriMobile.addEventListener('click', handleToggleFurigana);
     }
     const containerToggleFuri = document.getElementById('containerToggleFurigana');
     if (containerToggleFuri) {
@@ -3376,6 +3408,10 @@
     const btnToggleAudio = document.getElementById('btnToggleAutoAudio');
     if (btnToggleAudio) {
       btnToggleAudio.addEventListener('click', handleToggleAutoAudio);
+    }
+    const btnToggleAudioMobile = document.getElementById('btnToggleAutoAudioMobile');
+    if (btnToggleAudioMobile) {
+      btnToggleAudioMobile.addEventListener('click', handleToggleAutoAudio);
     }
     const containerToggleAudio = document.getElementById('containerToggleAutoAudio');
     if (containerToggleAudio) {
@@ -4897,28 +4933,28 @@
       ` : ''}
 
       <!-- メインヒット単語カード -->
-      <div class="p-4 rounded-2xl bg-sky-50 border border-sky-200 space-y-3">
+      <div class="p-4 sm:p-5 rounded-2xl bg-sky-50 border border-sky-200 space-y-3">
         <div class="flex items-baseline justify-between flex-wrap gap-2">
           <div>
-            <span class="text-[10px] font-extrabold bg-sky-600 text-white px-2 py-0.5 rounded-full mr-1.5">${topCategory}</span>
-            <span class="text-2xl font-black text-slate-900">${escapeHtml(topWord)}</span>
-            ${topReading && topReading !== topWord ? `<span class="text-sm font-bold text-sky-700 ml-1.5">【${escapeHtml(topReading)}】</span>` : ''}
+            <span class="text-[10px] sm:text-xs font-extrabold bg-sky-600 text-white px-2.5 py-0.5 rounded-full mr-1.5">${topCategory}</span>
+            <span class="text-2xl sm:text-3xl font-black text-slate-900 font-jp">${escapeHtml(topWord)}</span>
+            ${topReading && topReading !== topWord ? `<span class="text-sm sm:text-base font-bold text-coralPink ml-1.5 font-jp">【${escapeHtml(topReading)}】</span>` : ''}
           </div>
           <div class="flex items-center space-x-1.5">
-            <button id="btnModalSpeakWord" class="p-2 rounded-xl bg-white border border-sky-200 text-sky-700 hover:bg-sky-100 transition shadow-2xs font-bold text-xs flex items-center space-x-1" title="発音を聞く">
+            <button id="btnModalSpeakWord" class="p-2 sm:px-3 sm:py-2 rounded-xl bg-white border border-sky-200 text-sky-700 hover:bg-sky-100 transition shadow-2xs font-bold text-xs sm:text-sm flex items-center space-x-1" title="発音を聞く">
               <span>🔊</span>
               <span>発音</span>
             </button>
-            <button id="btnModalSaveWord" class="px-3 py-1.5 rounded-xl font-bold text-xs transition shadow-2xs flex items-center space-x-1 text-white ${isAlreadySaved ? 'bg-emerald-700 hover:bg-emerald-800' : 'bg-emerald-600 hover:bg-emerald-500'}" title="マイリストに保存">
+            <button id="btnModalSaveWord" class="px-3 py-2 rounded-xl font-bold text-xs sm:text-sm transition shadow-2xs flex items-center space-x-1 text-white ${isAlreadySaved ? 'bg-emerald-700 hover:bg-emerald-800' : 'bg-emerald-600 hover:bg-emerald-500'}" title="マイリストに保存">
               <span>${isAlreadySaved ? '✅' : '🔖'}</span>
               <span>${isAlreadySaved ? 'マイリスト保存中' : 'マイリストに追加'}</span>
             </button>
           </div>
         </div>
 
-        <div class="pt-2 border-t border-sky-200/60 text-xs sm:text-sm text-slate-700 leading-relaxed">
-          <strong class="text-slate-900 block mb-0.5">意味・訳:</strong>
-          <p class="font-bold text-slate-800">${escapeHtml(topMeaningText)}</p>
+        <div class="pt-2 border-t border-sky-200/60 text-sm sm:text-base text-slate-700 leading-relaxed">
+          <strong class="text-slate-900 block mb-0.5 text-xs sm:text-sm font-bold">意味・訳:</strong>
+          <p class="font-bold text-slate-900 text-sm sm:text-base">${escapeHtml(topMeaningText)}</p>
         </div>
       </div>
     `;
@@ -4927,29 +4963,29 @@
     if (relatedList.length > 0) {
       modalHtml += `
         <div class="space-y-2 pt-1">
-          <h4 class="text-xs font-bold text-slate-600 flex items-center justify-between">
+          <h4 class="text-xs sm:text-sm font-bold text-slate-700 flex items-center justify-between">
             <span class="flex items-center space-x-1">
               <span>📚</span>
               <span>「${escapeHtml(cleanWord)}」を含む関連単語 (${relatedList.length}件)</span>
             </span>
-            <span class="text-[10px] text-slate-400 font-normal">タップで詳細表示</span>
+            <span class="text-[10px] sm:text-xs text-slate-400 font-normal">タップで詳細表示</span>
           </h4>
-          <div class="space-y-1.5 max-h-[42vh] overflow-y-auto pr-1">
+          <div class="space-y-2 max-h-[42vh] overflow-y-auto pr-1">
             ${relatedList.map((rel, idx) => {
               const isRelSaved = mylistSet.has(rel.cardObj.id) || mylistSet.has(rel.word);
               return `
-                <div class="rel-word-item p-2.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between text-xs hover:bg-blue-50/50 hover:border-sky-300 transition cursor-pointer" data-idx="${idx}">
-                  <div class="flex items-baseline space-x-1.5 truncate pr-2">
-                    <span class="font-bold text-slate-900">${escapeHtml(rel.word)}</span>
-                    ${rel.reading ? `<span class="text-[11px] text-slate-400">（${escapeHtml(rel.reading)}）</span>` : ''}
-                    <span class="text-[9px] px-1.5 py-0.2 rounded font-bold ${rel.badgeClass} shrink-0">${rel.category}</span>
-                    <span class="text-[11px] text-slate-600 ml-1 truncate">${escapeHtml(rel.meaning)}</span>
+                <div class="rel-word-item p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between text-xs sm:text-sm hover:bg-blue-50/50 hover:border-sky-300 transition cursor-pointer" data-idx="${idx}">
+                  <div class="flex items-baseline space-x-2 truncate pr-2">
+                    <span class="font-bold text-slate-900 text-sm sm:text-base font-jp">${escapeHtml(rel.word)}</span>
+                    ${rel.reading ? `<span class="text-xs sm:text-sm text-coralPink font-bold font-jp">（${escapeHtml(rel.reading)}）</span>` : ''}
+                    <span class="text-[9px] sm:text-[10px] px-1.5 py-0.5 rounded font-bold ${rel.badgeClass} shrink-0">${rel.category}</span>
+                    <span class="text-xs sm:text-sm text-slate-600 ml-1 truncate font-medium">${escapeHtml(rel.meaning)}</span>
                   </div>
                   <div class="flex items-center space-x-1 shrink-0">
-                    <button class="btn-sub-speak-word p-1 text-slate-400 hover:text-sky-600 rounded transition" title="発音を聞く" data-word="${escapeHtml(rel.word)}">
+                    <button class="btn-sub-speak-word p-1.5 text-slate-400 hover:text-sky-600 rounded transition" title="発音を聞く" data-word="${escapeHtml(rel.word)}">
                       <span>🔊</span>
                     </button>
-                    <button class="btn-sub-save-word px-2 py-1 rounded-lg border font-bold text-[10px] transition ${isRelSaved ? 'bg-emerald-100 border-emerald-400 text-emerald-800' : 'bg-white border-emerald-300 text-emerald-700 hover:bg-emerald-50'}"
+                    <button class="btn-sub-save-word px-2.5 py-1 rounded-lg border font-bold text-xs transition ${isRelSaved ? 'bg-emerald-100 border-emerald-400 text-emerald-800' : 'bg-white border-emerald-300 text-emerald-700 hover:bg-emerald-50'}"
                       data-idx="${idx}">
                       ${isRelSaved ? '✓ 保存中' : '🔖 保存'}
                     </button>

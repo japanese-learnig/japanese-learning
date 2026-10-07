@@ -165,6 +165,29 @@
       opacity: 1;
     }
 
+    /* レスポンシブヘッダートグル表示制御（端末・回線速度問わず100%確実に適用） */
+    @media (max-width: 767px) {
+      #containerToggleAutoAudio,
+      #containerToggleFurigana {
+        display: none !important;
+      }
+      #searchDropdownContainer {
+        position: fixed !important;
+        left: 8px !important;
+        right: 8px !important;
+        top: 52px !important;
+        width: auto !important;
+        max-height: 72vh !important;
+        z-index: 9999 !important;
+      }
+    }
+    @media (min-width: 768px) {
+      #btnToggleAutoAudioMobile,
+      #btnToggleFuriganaMobile {
+        display: none !important;
+      }
+    }
+
     /* Swipe Badge / Feedback Styles */
     .swipe-badge-learned {
       position: absolute;
@@ -297,9 +320,9 @@
 <body class="bg-lightBlueBg text-slate-800 min-h-screen flex flex-col antialiased select-none">
 
   <!-- Top Navigation Header -->
-  <header class="sticky top-0 z-40 bg-deepNavy text-white px-3 sm:px-4 py-2 shadow-sm flex items-center justify-between gap-2 sm:gap-3">
+  <header class="sticky top-0 z-40 bg-deepNavy text-white px-2.5 sm:px-4 py-2 shadow-sm flex items-center justify-between gap-1.5 sm:gap-3">
     <!-- Left Section: Hamburger Menu -->
-    <div class="flex items-center space-x-2 shrink-0">
+    <div class="flex items-center space-x-1.5 sm:space-x-2 shrink-0">
       <button id="btnOpenMenuDrawer" class="p-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition active:scale-95" title="Menu">
         <i data-lucide="menu" class="w-5 h-5"></i>
       </button>
@@ -307,23 +330,23 @@
     </div>
 
     <!-- Center Section: Integrated Search Bar -->
-    <div class="flex-1 max-w-md relative flex items-center">
-      <input type="text" id="globalTopSearchInput" placeholder="Search words (Kanji, Hiragana, Romaji, English, Meaning)..." class="w-full text-xs sm:text-sm py-1.5 sm:py-2 pl-8 sm:pl-9 pr-7 sm:pr-8 rounded-full border border-white/20 bg-white/15 focus:bg-white text-white focus:text-slate-800 placeholder-white/70 focus:placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-coralPink shadow-inner transition">
+    <div class="flex-1 min-w-0 max-w-md relative flex items-center">
+      <input type="text" id="globalTopSearchInput" placeholder="検索 / Search..." class="w-full min-w-0 text-xs sm:text-sm py-1.5 sm:py-2 pl-7.5 sm:pl-9 pr-6 sm:pr-8 rounded-full border border-white/20 bg-white/15 focus:bg-white text-white focus:text-slate-800 placeholder-white/70 focus:placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-coralPink shadow-inner transition">
       <i data-lucide="search" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white/70 absolute left-2.5 sm:left-3 top-2 sm:top-2.5 pointer-events-none"></i>
       <button id="btnClearTopSearch" class="absolute right-2.5 sm:right-3 top-2 sm:top-2.5 text-white/70 hover:text-white hidden" title="Clear">
         <i data-lucide="x" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
       </button>
 
-      <!-- Search Results Floating Dropdown -->
-      <div id="searchDropdownContainer" class="hidden absolute top-full left-0 right-0 mt-1.5 bg-white rounded-2xl border border-softBorder shadow-2xl max-h-[75vh] overflow-y-auto z-50 p-2 space-y-2">
+      <!-- Search Results Floating Dropdown (スマホ画面では全幅で大きく表示し、PCでは検索窓真下に表示) -->
+      <div id="searchDropdownContainer" class="hidden fixed left-2 right-2 sm:left-4 sm:right-4 top-[52px] sm:top-[56px] md:absolute md:left-0 md:right-0 md:top-full mt-1.5 bg-white rounded-2xl border-2 border-softBorder shadow-2xl max-h-[72vh] overflow-y-auto z-50 p-2.5 sm:p-4 space-y-2.5">
         <!-- Dynamically rendered search results -->
       </div>
     </div>
 
     <!-- Right Section: Auto Audio, Furigana, Help Guide, User Profile, Admin Lock -->
-    <div class="flex items-center space-x-2 sm:space-x-3 shrink-0">
-      <!-- 自動再生 (Auto Audio) Toggle Switch -->
-      <div class="flex items-center space-x-1 cursor-pointer select-none" id="containerToggleAutoAudio" title="自動再生 (ON / OFF)">
+    <div class="flex items-center space-x-1 sm:space-x-2 shrink-0">
+      <!-- 【PC版】自動再生 (Auto Audio) Toggle Switch -->
+      <div class="hidden md:flex items-center space-x-1 cursor-pointer select-none" id="containerToggleAutoAudio" title="自動再生 (ON / OFF)">
         <span class="text-[11px] font-bold text-white tracking-tight hidden sm:inline">自動再生</span>
         <div id="btnToggleAutoAudio" class="toggle-pill-track is-off" role="switch" aria-checked="false">
           <span class="toggle-pill-text toggle-pill-text-on">ON</span>
@@ -332,8 +355,8 @@
         </div>
       </div>
 
-      <!-- ふりがな (Furigana) Toggle Switch -->
-      <div class="flex items-center space-x-1 cursor-pointer select-none" id="containerToggleFurigana" title="ふりがな (ON / OFF)">
+      <!-- 【PC版】ふりがな (Furigana) Toggle Switch -->
+      <div class="hidden md:flex items-center space-x-1 cursor-pointer select-none" id="containerToggleFurigana" title="ふりがな (ON / OFF)">
         <span class="text-[11px] font-bold text-white tracking-tight hidden sm:inline">ふりがな</span>
         <div id="btnToggleFurigana" class="toggle-pill-track is-on" role="switch" aria-checked="true">
           <span class="toggle-pill-text toggle-pill-text-on">ON</span>
@@ -342,13 +365,23 @@
         </div>
       </div>
 
+      <!-- 【スマホ版】自動音声ボタン（音のマーク・人型アイコンと同トーン） -->
+      <button id="btnToggleAutoAudioMobile" class="md:hidden w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition active:scale-95" title="自動音声 (ON / OFF)">
+        <i id="iconToggleAutoAudioMobile" data-lucide="volume-x" class="w-4 h-4 text-white/50"></i>
+      </button>
+
+      <!-- 【スマホ版】ふりがなボタン（「あ」・人型アイコンと同トーン） -->
+      <button id="btnToggleFuriganaMobile" class="md:hidden w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition active:scale-95" title="ふりがな (ON / OFF)">
+        <span id="labelToggleFuriganaMobile" class="text-xs font-black leading-none font-jp">あ</span>
+      </button>
+
       <!-- ? 使い方ガイド (Help Guide) Button -->
       <button id="btnHelpGuide" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-coralPink hover:bg-coralPinkHover text-white font-extrabold flex items-center justify-center shadow-sm transition active:scale-95 text-xs sm:text-sm" title="使い方ガイド">
         ?
       </button>
 
       <!-- Quick Action: Student Login/Profile Icon -->
-      <button id="userBtn" class="p-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition" title="Student Login">
+      <button id="userBtn" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition active:scale-95" title="Student Login">
         <i data-lucide="user" class="w-4 h-4"></i>
       </button>
 
@@ -1403,12 +1436,12 @@
   <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
 
   <!-- Database & App Scripts -->
-  <script src="database/jlpt_vocab_all.js?v=20261008_0410"></script>
-  <script src="database/dictionary_data.js?v=20261008_0410"></script>
-  <script src="database/dict_examples_map.js?v=20261008_0410"></script>
-  <script src="database/class_vocab_data.js?v=20261008_0410"></script>
-  <script src="js/data.js?v=20261008_0410"></script>
-  <script src="js/app.js?v=20261008_0410"></script>
+  <script src="database/jlpt_vocab_all.js?v=20261008_0430"></script>
+  <script src="database/dictionary_data.js?v=20261008_0430"></script>
+  <script src="database/dict_examples_map.js?v=20261008_0430"></script>
+  <script src="database/class_vocab_data.js?v=20261008_0430"></script>
+  <script src="js/data.js?v=20261008_0430"></script>
+  <script src="js/app.js?v=20261008_0430"></script>
   <script>
     if (window.lucide) {
       lucide.createIcons();
