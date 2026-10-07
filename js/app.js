@@ -2717,19 +2717,27 @@
     students.forEach(st => {
       // Don't show admin entries in normal student list or mark specially
       const isTeacher = (st.id === 'haku' || st.id === 'admin');
+      const isCurrentLoggedIn = currentStudent && currentStudent.id === st.id;
       const row = document.createElement('div');
-      row.className = 'flex items-center justify-between p-2 rounded-xl bg-white border border-slate-200 shadow-2xs text-xs';
+      row.className = `flex items-center justify-between p-2 rounded-xl bg-white border transition ${
+        isCurrentLoggedIn ? 'border-coralPink bg-rose-50/30 ring-1 ring-coralPink/30' : 'border-slate-200 hover:border-slate-300'
+      } shadow-2xs text-xs`;
       row.innerHTML = `
-        <div class="flex items-center space-x-1.5 truncate">
+        <div class="btn-select-student flex items-center space-x-1.5 truncate cursor-pointer hover:opacity-80 py-0.5" title="クリックしてこの生徒としてログイン">
           <span class="font-mono text-[10px] font-bold px-1.5 py-0.5 rounded bg-slate-100 text-slate-700">${st.id}</span>
           <span class="font-bold text-slate-800 truncate">${st.name}</span>
           <span class="text-[9px] px-1.5 py-0.2 rounded font-semibold bg-lightBlueBg text-deepNavy">${st.lang}</span>
+          ${isCurrentLoggedIn ? '<span class="text-[9px] px-1 py-0.2 rounded font-bold bg-coralPink text-white">ログイン中</span>' : ''}
         </div>
-        <div class="flex items-center space-x-2 shrink-0">
+        <div class="flex items-center space-x-1.5 shrink-0">
           <span class="font-mono text-xs text-rose-600 font-bold bg-rose-50 px-2 py-0.5 rounded-lg border border-rose-100">
             PIN: ${st.passcode}
           </span>
           ${!isTeacher ? `
+            <button class="btn-login-as-student px-2 py-0.5 rounded-lg ${isCurrentLoggedIn ? 'bg-coralPink text-white' : 'bg-slate-100 hover:bg-deepNavy hover:text-white text-slate-700'} font-bold text-[10px] transition flex items-center space-x-1" title="この生徒としてログイン">
+              <i data-lucide="log-in" class="w-3 h-3"></i>
+              <span>${isCurrentLoggedIn ? '利用中' : 'ログイン'}</span>
+            </button>
             <button class="btn-edit-student p-1 text-slate-400 hover:text-sky-600 transition" title="生徒情報を編集">
               <i data-lucide="edit-3" class="w-3.5 h-3.5"></i>
             </button>
@@ -2742,16 +2750,38 @@
       lucide.createIcons({ root: row });
 
       if (!isTeacher) {
+        const handleLoginAs = () => {
+          setStudent(st);
+          renderAdminStudentList();
+          switchView('mylist');
+          showToast(`生徒「${st.name}」としてログインしました！🎓`);
+        };
+
+        const selectStudentBtn = row.querySelector('.btn-select-student');
+        if (selectStudentBtn) {
+          selectStudentBtn.addEventListener('click', handleLoginAs);
+        }
+
+        const loginBtn = row.querySelector('.btn-login-as-student');
+        if (loginBtn) {
+          loginBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            handleLoginAs();
+          });
+        }
+
         const editBtn = row.querySelector('.btn-edit-student');
         if (editBtn) {
-          editBtn.addEventListener('click', () => {
+          editBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             openEditStudentModal(st);
           });
         }
 
         const delBtn = row.querySelector('.btn-delete-student');
         if (delBtn) {
-          delBtn.addEventListener('click', () => {
+          delBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             if (!confirm(`生徒「${st.name}」（ID: ${st.id}）を削除しますか？`)) return;
             students = students.filter(s => s.id !== st.id);
             localStorage.setItem('haku_students', JSON.stringify(students));
