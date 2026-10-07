@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Japanese Vocab Cards</title>
+  <!-- Google Fonts: Inter & Noto Sans JP (Exact typography matching reference photo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Lucide Icons -->
@@ -12,6 +16,10 @@
     tailwind.config = {
       theme: {
         extend: {
+          fontFamily: {
+            sans: ["'Inter'", '"Yu Gothic"', 'YuGothic', '"Hiragino Kaku Gothic ProN"', '"Noto Sans JP"', 'sans-serif'],
+            jp: ['"Yu Gothic"', 'YuGothic', '"Hiragino Kaku Gothic ProN"', '"Noto Sans JP"', 'sans-serif']
+          },
           colors: {
             deepNavy: '#1E557E',      /* Reference top bar / main button */
             lightBlueBg: '#D5EDF8',   /* Reference light blue background */
@@ -47,7 +55,10 @@
     }
     body {
       -webkit-tap-highlight-color: transparent;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", Meiryo, sans-serif;
+      font-family: 'Inter', "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+    }
+    .jp-font {
+      font-family: "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
     }
     /* Furigana OFF Mode (全共有, マイリスト, 練習カード, 例文は非表示。辞書は必ず表示！) */
     body.furigana-off #viewFlashcards rt,
@@ -235,11 +246,11 @@
 
     .jlpt-word-card {
       background: white;
-      border: 1.5px solid #e2e8f0;
+      border: 1.5px solid #E2E8F0;
       border-radius: 14px;
-      padding: 12px 14px;
+      padding: 14px 16px;
       cursor: pointer;
-      transition: all 0.18s;
+      transition: all 0.18s ease;
       position: relative;
     }
     .jlpt-word-card:hover {
@@ -253,16 +264,34 @@
       color: #64748B;
       border-radius: 8px;
       padding: 3px 8px;
-      font-size: 0.72rem;
-      font-weight: 700;
+      font-size: 0.74rem;
+      font-weight: 600;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 3px;
       transition: all 0.18s ease;
+      font-family: 'Inter', "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
     }
     .jlpt-save-btn:hover { background: #F1F5F9; border-color: #94A3B8; color: #1E293B; }
-    .jlpt-save-btn.saved { background: #EFF6FF; border-color: #93C5FD; color: #1D4ED8; font-weight: 800; }
+    .jlpt-save-btn.saved { background: #EFF6FF; border-color: #93C5FD; color: #1D4ED8; font-weight: 700; }
+    .jlpt-tts-btn {
+      background: #F0FAFA;
+      border: 1px solid #82CBD3;
+      color: #196168;
+      border-radius: 8px;
+      padding: 3.5px 7px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.18s ease;
+      flex-shrink: 0;
+    }
+    .jlpt-tts-btn:hover {
+      background: #196168;
+      color: white;
+    }
   </style>
 </head>
 <body class="bg-lightBlueBg text-slate-800 min-h-screen flex flex-col antialiased select-none">
@@ -1374,12 +1403,12 @@
   <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
 
   <!-- Database & App Scripts -->
-  <script src="database/jlpt_vocab_all.js?v=20261008_0400"></script>
-  <script src="database/dictionary_data.js?v=20261008_0400"></script>
-  <script src="database/dict_examples_map.js?v=20261008_0400"></script>
-  <script src="database/class_vocab_data.js?v=20261008_0400"></script>
-  <script src="js/data.js?v=20261008_0400"></script>
-  <script src="js/app.js?v=20261008_0400"></script>
+  <script src="database/jlpt_vocab_all.js?v=20261008_0410"></script>
+  <script src="database/dictionary_data.js?v=20261008_0410"></script>
+  <script src="database/dict_examples_map.js?v=20261008_0410"></script>
+  <script src="database/class_vocab_data.js?v=20261008_0410"></script>
+  <script src="js/data.js?v=20261008_0410"></script>
+  <script src="js/app.js?v=20261008_0410"></script>
   <script>
     if (window.lucide) {
       lucide.createIcons();
