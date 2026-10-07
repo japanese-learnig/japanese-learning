@@ -422,6 +422,10 @@
     if (drawerLangLabel) drawerLangLabel.textContent = isJa ? '母国語設定' : 'Native Language';
     const drawerStudentLabel = document.getElementById('drawerStudentLabel');
     if (drawerStudentLabel) drawerStudentLabel.textContent = isJa ? '生徒アカウント' : 'Student Account';
+    const drawerHelpLabel = document.getElementById('drawerHelpLabel');
+    if (drawerHelpLabel) drawerHelpLabel.textContent = isJa ? 'ヘルプ・ガイド' : 'Help & Guide';
+    const drawerHelpBtnText = document.getElementById('drawerHelpBtnText');
+    if (drawerHelpBtnText) drawerHelpBtnText.textContent = isJa ? '使い方ガイド' : 'Help Guide';
 
     // Update student badge in top header
     const headerStudentBadge = document.getElementById('headerStudentBadge');
@@ -3304,6 +3308,14 @@
         closeMenuDrawer();
         setStudent(null);
         showToast('Logged out / ログアウトしました');
+      });
+    }
+
+    const drawerBtnHelpGuide = document.getElementById('drawerBtnHelpGuide');
+    if (drawerBtnHelpGuide) {
+      drawerBtnHelpGuide.addEventListener('click', () => {
+        closeMenuDrawer();
+        openHelpGuideModal();
       });
     }
 
