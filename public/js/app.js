@@ -5022,6 +5022,14 @@
     modal.classList.add('flex');
   }
 
+  function closeDictPopupModal() {
+    const modal = document.getElementById('dictPopupModal');
+    if (modal) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  }
+
   // ==========================================
   // --- 使い方ガイド (Help Guide) スライド式コントローラー ---
   // ==========================================

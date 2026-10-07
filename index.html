@@ -1233,21 +1233,6 @@
     メッセージ
   </div>
 
-  <!-- Firebase SDK (Compat version for reliable, clean browser execution) -->
-  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
-
-  <!-- Scripts -->
-  <script src="database/jlpt_vocab_all.js"></script>
-  <script src="database/dictionary_data.js"></script>
-  <script src="database/dict_examples_map.js"></script>
-  <script src="database/class_vocab_data.js"></script>
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
-  <script>
-    lucide.createIcons();
-  </script>
 
   <!-- 写真完全再現: なぞった文字の真上に浮き出る黒い操作ツールバー (辞書で調べる ＆ マイリスト保存) -->
   <div id="textSelectionToolbar" class="fixed z-9999 hidden bg-slate-900 text-white rounded-xl py-1.5 px-2.5 shadow-2xl items-center gap-2 text-xs border border-slate-700 animate-fade-in pointer-events-auto" style="box-shadow: 0 10px 28px rgba(15, 23, 42, 0.5);">
@@ -1383,5 +1368,22 @@
     </div>
   </div>
 
+  <!-- Firebase SDK (Compat version for reliable, clean browser execution) -->
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+
+  <!-- Database & App Scripts -->
+  <script src="database/jlpt_vocab_all.js"></script>
+  <script src="database/dictionary_data.js"></script>
+  <script src="database/dict_examples_map.js"></script>
+  <script src="database/class_vocab_data.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  </script>
 </body>
 </html>
