@@ -462,18 +462,16 @@
   // --- Data Loading & Persistence ---
   function initData() {
     // Master data version check to ensure newly added cards & furigana updates are immediately visible
-    const CURRENT_DATA_VERSION = 'v44_flashcard_learned_review_folders';
+    const CURRENT_DATA_VERSION = 'v45_master_vocab_refresh';
     const savedVersion = localStorage.getItem('haku_vocab_version');
 
     const seedCards = window.INITIAL_VOCAB_DATA || [];
     const classCards = window.CLASS_VOCAB_DATA || [];
     const combinedMasterCards = [...seedCards, ...classCards];
+    const masterCardMap = new Map();
+    combinedMasterCards.forEach(c => masterCardMap.set(c.id, c));
 
     if (savedVersion !== CURRENT_DATA_VERSION) {
-      // Build lookup map for latest master definitions
-      const masterCardMap = new Map();
-      combinedMasterCards.forEach(c => masterCardMap.set(c.id, c));
-
       // Refresh with latest master data while keeping genuinely custom created cards
       const savedVocab = localStorage.getItem('haku_vocab_data');
       if (savedVocab) {
@@ -587,7 +585,9 @@
       const savedVocab = localStorage.getItem('haku_vocab_data');
       if (savedVocab) {
         try {
-          vocabList = JSON.parse(savedVocab);
+          const oldList = JSON.parse(savedVocab);
+          const customCards = oldList.filter(c => c.isCustom && !masterCardMap.has(c.id));
+          vocabList = [...combinedMasterCards, ...customCards];
         } catch (e) {
           vocabList = combinedMasterCards;
         }
@@ -1567,11 +1567,12 @@
       if (currentStudent && currentStudent.id === studentId) {
         await ensureStudentCloudAuth(studentId, currentStudent.passcode);
       }
-      // Gather any card objects that this student has in their mylist and aren't in INITIAL_VOCAB_DATA
+      // Gather any card objects that this student has in their mylist and aren't in INITIAL_VOCAB_DATA or CLASS_VOCAB_DATA
       const seedIds = new Set((window.INITIAL_VOCAB_DATA || []).map(c => c.id));
+      const classIds = new Set((window.CLASS_VOCAB_DATA || []).map(c => c.id));
       const customCardsToSync = [];
       mylistSet.forEach(cId => {
-        if (!seedIds.has(cId)) {
+        if (!seedIds.has(cId) && !classIds.has(cId) && !cId.startsWith('class_word_')) {
           const resolvedCard = getCardById(cId);
           if (resolvedCard) customCardsToSync.push(resolvedCard);
         }
@@ -1608,12 +1609,16 @@
         // 1. Sync custom card definitions (e.g. newly imported cards from PC)
         if (Array.isArray(data.customCards) && data.customCards.length > 0) {
           let vocabChanged = false;
+          const classIds = new Set((window.CLASS_VOCAB_DATA || []).map(c => c.id));
+          const seedIds = new Set((window.INITIAL_VOCAB_DATA || []).map(c => c.id));
           data.customCards.forEach(card => {
-            const exists = vocabList.find(c => c.id === card.id);
-            if (!exists) {
-              card.isCustom = true;
-              vocabList.push(card);
-              vocabChanged = true;
+            if (card && card.id && !classIds.has(card.id) && !seedIds.has(card.id) && !card.id.startsWith('class_word_')) {
+              const exists = vocabList.find(c => c.id === card.id);
+              if (!exists) {
+                card.isCustom = true;
+                vocabList.push(card);
+                vocabChanged = true;
+              }
             }
           });
           if (vocabChanged) {
