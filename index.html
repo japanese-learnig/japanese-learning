@@ -180,6 +180,21 @@
         max-height: 72vh !important;
         z-index: 9999 !important;
       }
+      /* スマホ版: 覚えた！・もう一度！ボタンを非表示にし、戻る・次のボタンを特大化 */
+      #btnMarkReview,
+      #btnMarkKnown {
+        display: none !important;
+      }
+      #btnPrev,
+      #btnNext {
+        flex: 1 1 0% !important;
+        min-height: 50px !important;
+        padding-top: 13px !important;
+        padding-bottom: 13px !important;
+        font-size: 15px !important;
+        font-weight: 800 !important;
+        border-radius: 9999px !important;
+      }
     }
     @media (min-width: 768px) {
       #btnToggleAutoAudioMobile,
@@ -622,30 +637,30 @@
           </div>
         </div>
 
-        <!-- Bottom Controls (写真再現 ＆ 覚えた！・もう一度！大型ボタン) -->
-        <div class="mt-3 flex items-center justify-between gap-2 sm:gap-2.5">
-          <!-- 前へ (Prev) -->
-          <button id="btnPrev" class="py-3 px-3.5 rounded-full bg-white border border-softBorder hover:border-deepNavy text-darkNavyText font-bold flex items-center justify-center space-x-1 transition shadow-xs active:scale-95 text-xs sm:text-sm shrink-0" title="Prev">
-            <i data-lucide="chevron-left" class="w-4 h-4"></i>
-            <span id="btnPrevLabel">Prev</span>
+        <!-- Bottom Controls (スマホ: 戻る・次への特大2ボタン / PC: 4ボタン配置) -->
+        <div class="mt-3 flex items-center justify-between gap-2.5 sm:gap-2.5">
+          <!-- 前へ (Prev / 戻る) -->
+          <button id="btnPrev" class="flex-1 md:flex-none py-3.5 md:py-3 px-4 md:px-3.5 rounded-full bg-white border-2 md:border border-softBorder hover:border-deepNavy text-darkNavyText font-black md:font-bold flex items-center justify-center space-x-1.5 md:space-x-1 transition shadow-sm md:shadow-xs active:scale-95 text-sm md:text-xs shrink-0 md:shrink" title="戻る (Prev)">
+            <i data-lucide="chevron-left" class="w-5 h-5 md:w-4 md:h-4 stroke-[2.5]"></i>
+            <span id="btnPrevLabel">戻る (Prev)</span>
           </button>
 
-          <!-- もう一度！ (左側: オレンジ系またはアクセントカラー) -->
-          <button id="btnMarkReview" class="flex-1 py-3 px-3 rounded-full bg-amber-50 hover:bg-amber-100 border-2 border-amber-400 text-amber-800 font-extrabold flex items-center justify-center space-x-1.5 transition shadow-sm active:scale-95 text-xs sm:text-sm" title="もう一度復習する">
+          <!-- 【PC版専用】もう一度！ (左側: オレンジ系) -->
+          <button id="btnMarkReview" class="hidden md:flex flex-1 py-3 px-3 rounded-full bg-amber-50 hover:bg-amber-100 border-2 border-amber-400 text-amber-800 font-extrabold items-center justify-center space-x-1.5 transition shadow-sm active:scale-95 text-xs sm:text-sm" title="もう一度復習する">
             <i data-lucide="rotate-ccw" class="w-4 h-4 text-amber-600 stroke-[2.5]"></i>
             <span id="btnMarkReviewLabel">もう一度！</span>
           </button>
 
-          <!-- 覚えた！ (右側: エメラルドグリーン系) -->
-          <button id="btnMarkKnown" class="flex-1 py-3 px-3 rounded-full bg-emerald-50 hover:bg-emerald-100 border-2 border-emerald-500 text-emerald-800 font-extrabold flex items-center justify-center space-x-1.5 transition shadow-sm active:scale-95 text-xs sm:text-sm" title="覚えた！">
+          <!-- 【PC版専用】覚えた！ (右側: エメラルドグリーン系) -->
+          <button id="btnMarkKnown" class="hidden md:flex flex-1 py-3 px-3 rounded-full bg-emerald-50 hover:bg-emerald-100 border-2 border-emerald-500 text-emerald-800 font-extrabold items-center justify-center space-x-1.5 transition shadow-sm active:scale-95 text-xs sm:text-sm" title="覚えた！">
             <i data-lucide="check" class="w-4 h-4 text-emerald-600 stroke-[3]"></i>
             <span id="btnMarkKnownLabel">覚えた！</span>
           </button>
 
           <!-- 次へ (Next) -->
-          <button id="btnNext" class="py-3 px-3.5 rounded-full bg-coralPink hover:bg-coralPinkHover text-white font-bold flex items-center justify-center space-x-1 transition shadow-xs active:scale-95 text-xs sm:text-sm shrink-0" title="Next">
-            <span id="btnNextLabel">Next</span>
-            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          <button id="btnNext" class="flex-1 md:flex-none py-3.5 md:py-3 px-4 md:px-3.5 rounded-full bg-coralPink hover:bg-coralPinkHover text-white font-black md:font-bold flex items-center justify-center space-x-1.5 md:space-x-1 transition shadow-sm md:shadow-xs active:scale-95 text-sm md:text-xs shrink-0 md:shrink" title="次へ (Next)">
+            <span id="btnNextLabel">次へ (Next)</span>
+            <i data-lucide="chevron-right" class="w-5 h-5 md:w-4 md:h-4 stroke-[2.5]"></i>
           </button>
         </div>
 
@@ -1314,6 +1329,53 @@
     <div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-0 h-0 border-x-6 border-x-transparent border-t-6 border-t-slate-900"></div>
   </div>
 
+  <!-- スワイプ操作ガイド ポップアップ（スマホ版・フラッシュカード開始時に案内） -->
+  <div id="swipeGuideModal" class="fixed inset-0 z-9999 hidden items-center justify-center bg-slate-900/60 backdrop-blur-xs p-4 animate-fade-in" onclick="if(event.target===this) closeSwipeGuideModal()">
+    <div class="bg-white rounded-3xl max-w-xs w-full overflow-hidden shadow-2xl border-2 border-softBorder p-5 text-center animate-scale-up space-y-4">
+      <!-- アニメーション付きハンドアイコン -->
+      <div class="w-16 h-16 mx-auto rounded-3xl bg-amber-50 border border-amber-200 text-amber-500 flex items-center justify-center text-3xl shadow-inner">
+        👆
+      </div>
+      
+      <div>
+        <h3 class="text-base font-black text-darkNavyText mb-1">スワイプでカード仕分け</h3>
+        <p class="text-xs text-slate-500 font-medium leading-relaxed">スマホ版ではカードを左右にスワイプ（スラッシュ）して簡単に仕分けできます！</p>
+      </div>
+
+      <!-- 左右のスワイプ案内ボックス -->
+      <div class="grid grid-cols-2 gap-2 text-left">
+        <!-- わかった（右スワイプ） -->
+        <div class="p-3 rounded-2xl bg-emerald-50 border-2 border-emerald-300 flex flex-col justify-between space-y-1">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-emerald-800">わかった！</span>
+            <span class="text-base">👉</span>
+          </div>
+          <p class="text-[11px] font-bold text-emerald-700 leading-snug">
+            右にスワイプ<br>
+            <span class="text-[9px] font-semibold text-emerald-600">『覚えた！』へ</span>
+          </p>
+        </div>
+
+        <!-- 覚えてない（左スワイプ） -->
+        <div class="p-3 rounded-2xl bg-amber-50 border-2 border-amber-300 flex flex-col justify-between space-y-1">
+          <div class="flex items-center justify-between">
+            <span class="text-base">👈</span>
+            <span class="text-xs font-black text-amber-800">覚えてない</span>
+          </div>
+          <p class="text-[11px] font-bold text-amber-700 leading-snug">
+            左にスワイプ<br>
+            <span class="text-[9px] font-semibold text-amber-600">『もう一回！』へ</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- OK ボタン -->
+      <button onclick="closeSwipeGuideModal()" class="w-full py-3.5 rounded-full bg-deepNavy hover:bg-slate-800 text-white font-extrabold text-sm shadow-md transition active:scale-95 flex items-center justify-center space-x-1">
+        <span>わかった（はじめる）✨</span>
+      </button>
+    </div>
+  </div>
+
   <!-- 単語辞書 ＆ マイリスト詳細ポップアップモーダル -->
   <div id="dictPopupModal" class="fixed inset-0 z-9999 hidden items-center justify-center bg-slate-900/60 backdrop-blur-xs p-4 animate-fade-in" onclick="if(event.target===this) closeDictPopupModal()">
     <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-slate-200 animate-scale-up flex flex-col max-h-[85vh]">
@@ -1436,12 +1498,12 @@
   <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
 
   <!-- Database & App Scripts -->
-  <script src="database/jlpt_vocab_all.js?v=20261008_0430"></script>
-  <script src="database/dictionary_data.js?v=20261008_0430"></script>
-  <script src="database/dict_examples_map.js?v=20261008_0430"></script>
-  <script src="database/class_vocab_data.js?v=20261008_0430"></script>
-  <script src="js/data.js?v=20261008_0430"></script>
-  <script src="js/app.js?v=20261008_0430"></script>
+  <script src="database/jlpt_vocab_all.js?v=20261008_0440"></script>
+  <script src="database/dictionary_data.js?v=20261008_0440"></script>
+  <script src="database/dict_examples_map.js?v=20261008_0440"></script>
+  <script src="database/class_vocab_data.js?v=20261008_0440"></script>
+  <script src="js/data.js?v=20261008_0440"></script>
+  <script src="js/app.js?v=20261008_0440"></script>
   <script>
     if (window.lucide) {
       lucide.createIcons();

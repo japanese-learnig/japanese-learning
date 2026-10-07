@@ -2101,6 +2101,9 @@
     updateActiveDeck();
     renderFolderOverview();
     showToast(`「${sectionTitle}」の学習を開始します`);
+
+    // スマホ版ならスワイプ操作ガイドポップアップを表示
+    checkAndShowSwipeGuide();
   }
 
   function startStudyingEntireFolder() {
@@ -2117,6 +2120,9 @@
 
     updateActiveDeck();
     showToast(`${fc ? fc.title : 'このフォルダ'}の全単語を学習します`);
+
+    // スマホ版ならスワイプ操作ガイドポップアップを表示
+    checkAndShowSwipeGuide();
   }
 
   function backToFolderOverview() {
@@ -3230,6 +3236,7 @@
 
     if (viewName === 'flashcards') {
       document.getElementById('viewFlashcards').classList.remove('hidden');
+      checkAndShowSwipeGuide();
     } else if (viewName === 'quiz') {
       document.getElementById('viewQuiz').classList.remove('hidden');
       startQuiz();
@@ -3421,6 +3428,12 @@
         }
       });
     }
+
+    // PC版 / スマホ版の自動切り替え連動（画面リサイズ・回転時）
+    window.addEventListener('resize', () => {
+      updateAutoAudioUi();
+      updateFuriganaUi();
+    });
 
     // Portal Drawer Open/Close controls (2枚目写真仕様)
     const btnOpenDrawer = document.getElementById('btnOpenMenuDrawer');
@@ -5067,6 +5080,37 @@
       modal.classList.remove('flex');
     }
   }
+
+  // --- スワイプ操作ガイド ポップアップ (スマホ版案内) ---
+  function openSwipeGuideModal() {
+    const modal = document.getElementById('swipeGuideModal');
+    if (modal) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+  }
+
+  function closeSwipeGuideModal() {
+    const modal = document.getElementById('swipeGuideModal');
+    if (modal) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+    sessionStorage.setItem('haku_swipe_guide_shown', 'true');
+  }
+
+  function checkAndShowSwipeGuide(force = false) {
+    if (window.innerWidth < 768) {
+      const alreadyShown = sessionStorage.getItem('haku_swipe_guide_shown');
+      if (!alreadyShown || force) {
+        openSwipeGuideModal();
+      }
+    }
+  }
+
+  window.openSwipeGuideModal = openSwipeGuideModal;
+  window.closeSwipeGuideModal = closeSwipeGuideModal;
+  window.checkAndShowSwipeGuide = checkAndShowSwipeGuide;
 
   // ==========================================
   // --- 使い方ガイド (Help Guide) スライド式コントローラー ---
