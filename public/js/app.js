@@ -4362,7 +4362,7 @@
     });
   }
 
-  // 単語辞書検索 ＆ 詳細モーダル
+  // 単語辞書検索 ＆ 詳細モーダル (漢字1文字や部分選択でも関連順に単語を自動提示)
   function openDictLookupModal(queryWord, hintReading) {
     if (!queryWord) return;
     const cleanWord = sanitizeSelectedWordText(queryWord);
@@ -4395,127 +4395,175 @@
       });
     }
 
-    // 複合語から漢字熟語（2文字以上）を抽出
-    const kanjis = cleanWord.match(/[一-龥]{2,}/g) || [];
-    kanjis.forEach(k => {
-      if (!searchCandidates.includes(k)) searchCandidates.push(k);
-    });
+    // 選択文字列から2文字以上の部分文字列（例: 「分以上」→「以上」）を抽出
+    const subWords = [];
+    if (cleanWord.length >= 2) {
+      for (let len = cleanWord.length - 1; len >= 2; len--) {
+        for (let i = 0; i <= cleanWord.length - len; i++) {
+          const sub = cleanWord.substring(i, i + len);
+          if (!subWords.includes(sub) && !searchCandidates.includes(sub)) {
+            subWords.push(sub);
+            searchCandidates.push(sub);
+          }
+        }
+      }
+    }
 
-    // 1. カリキュラム単語（vocabList / CLASS_VOCAB_DATA）から探索
+    // 漢字1文字ずつのリスト（例: 「待」や「分以上」の「分」「以」「上」）
+    const kanjiChars = Array.from(new Set(cleanWord.match(/[\u4e00-\u9fff]/g) || []));
+
+    // --- 1. カリキュラム単語（vocabList）からスコアリング検索 ---
     let matchedCurriculumCards = [];
-    for (const target of searchCandidates) {
-      const foundList = vocabList.filter(c => c.word === target || (c.reading && c.reading === target));
-      foundList.forEach(c => {
-        if (!matchedCurriculumCards.some(m => m.id === c.id)) {
-          matchedCurriculumCards.push(c);
+    vocabList.forEach(c => {
+      let score = 0;
+      if (c.word === cleanWord || (c.reading && c.reading === cleanWord)) score = 10000;
+      else if (searchCandidates.includes(c.word)) score = 8000;
+      else if (c.word.startsWith(cleanWord)) score = 5000 - c.word.length * 10;
+      else if (c.word.includes(cleanWord)) score = 3000 - c.word.length * 10;
+      else {
+        for (const sub of subWords) {
+          if (c.word === sub) { score = Math.max(score, 2000 - c.word.length * 5); break; }
+          else if (c.word.startsWith(sub)) { score = Math.max(score, 1500 - c.word.length * 5); break; }
+          else if (c.word.includes(sub)) { score = Math.max(score, 1000 - c.word.length * 5); break; }
         }
-      });
-    }
-
-    // 2. JLPT単語集（JLPT_VOCAB）から探索
-    let jlptMatches = [];
-    if (typeof JLPT_VOCAB !== 'undefined') {
-      for (const target of searchCandidates) {
-        for (const lvl of ['N5', 'N4', 'N3', 'N2', 'N1']) {
-          const list = JLPT_VOCAB[lvl] || [];
-          for (const item of list) {
-            if (item.word === target || item.reading === target) {
-              if (!jlptMatches.some(m => m.word === item.word && m.reading === item.reading)) {
-                jlptMatches.push(Object.assign({}, item, { level: lvl }));
-              }
-            }
-          }
+        for (const k of kanjiChars) {
+          if (c.word.startsWith(k)) score = Math.max(score, 600 - c.word.length * 5);
+          else if (c.word.includes(k)) score = Math.max(score, 400 - c.word.length * 5);
         }
       }
-    }
-
-    // 文中のふりがな(hintReading)との一致を最優先ソート
-    jlptMatches.sort((a, b) => {
-      let scoreA = 0;
-      let scoreB = 0;
-      if (hintReading) {
-        if (a.reading === hintReading) scoreA += 1000;
-        if (b.reading === hintReading) scoreB += 1000;
+      if (score > 0) {
+        matchedCurriculumCards.push({ card: c, score });
       }
-      const lvlScore = { 'N5': 50, 'N4': 40, 'N3': 30, 'N2': 20, 'N1': 10 };
-      scoreA += (lvlScore[a.level] || 0);
-      scoreB += (lvlScore[b.level] || 0);
-      return scoreB - scoreA;
     });
+    matchedCurriculumCards.sort((a, b) => b.score - a.score);
 
-    // 3. DICT_DATA (日本語大辞書 68,000語) から探索
-    let dictMatches = [];
-    if (window.DICT_DATA) {
-      for (const target of searchCandidates) {
-        const found = window.DICT_DATA.filter(d => d.w === target || d.r === target);
-        found.forEach(d => {
-          if (!dictMatches.some(m => m.w === d.w && m.r === d.r)) {
-            dictMatches.push(d);
+    // --- 2. DICT_DATA (日本語大辞書 68,000語) からスコアリング検索 ---
+    let dictScoredMatches = [];
+    const seenDictKeys = new Set();
+    const lvlScoreMap = { 'N5': 80, 'N4': 60, 'N3': 40, 'N2': 20, 'N1': 10 };
+
+    if (window.DICT_DATA && Array.isArray(window.DICT_DATA)) {
+      for (const d of window.DICT_DATA) {
+        const w = d.w || '';
+        const r = d.r || '';
+        const key = `${w}_${r}`;
+        if (seenDictKeys.has(key)) continue;
+
+        let score = 0;
+        if (w === cleanWord) {
+          score = 10000;
+        } else if (r === cleanWord) {
+          score = 9000;
+        } else if (searchCandidates.includes(w)) {
+          score = 8000;
+        } else if (w.startsWith(cleanWord)) {
+          score = 5000 - w.length * 10;
+        } else if (w.includes(cleanWord)) {
+          score = 3000 - w.length * 10;
+        } else {
+          for (const sub of subWords) {
+            if (w === sub) { score = Math.max(score, 2000 - w.length * 5); break; }
+            else if (w.startsWith(sub)) { score = Math.max(score, 1500 - w.length * 5); break; }
+            else if (w.includes(sub)) { score = Math.max(score, 1000 - w.length * 5); break; }
           }
-        });
-        if (dictMatches.length >= 3) break;
+          for (const k of kanjiChars) {
+            if (w.startsWith(k)) score = Math.max(score, 600 - w.length * 5);
+            else if (w.includes(k)) score = Math.max(score, 400 - w.length * 5);
+          }
+        }
+
+        if (score > 0) {
+          score += (lvlScoreMap[d.l] || 0);
+          if (hintReading && r === hintReading) score += 500;
+          seenDictKeys.add(key);
+          dictScoredMatches.push({ item: d, score });
+        }
       }
+      dictScoredMatches.sort((a, b) => b.score - a.score);
     }
 
-    // トップに表示する最も一致度の高い単語を決定
+    // --- 3. 訳文取得用ヘルパー ---
+    function formatDictMeaning(d) {
+      const mList = (d.m || []).join(', ');
+      const zhList = (d.zh || []).join(', ');
+      const frList = (d.fr || []).join(', ');
+      if (currentLang === 'zh_TW' || currentLang === 'zh_HK' || currentLang === 'zh_CN') {
+        return zhList || mList || '—';
+      }
+      if (currentLang === 'fr') {
+        return frList || mList || '—';
+      }
+      return mList || '—';
+    }
+
+    // --- 4. トップ表示する単語（完全一致、または最高スコアの代表単語）の決定 ---
     let topWord = cleanWord;
     let topReading = hintReading || '';
     let topCategory = '一般';
     let topMeaningText = '';
     let topCardForSave = null;
+    let isTopFromRelated = false;
 
-    if (matchedCurriculumCards.length > 0) {
-      const topC = matchedCurriculumCards[0];
-      topWord = topC.word;
-      topReading = topC.reading || hintReading || '';
-      topCategory = topC.category || '授業で習った言葉';
-      topMeaningText = getBilingualMeaning(topC.meaning, currentLang);
-      topCardForSave = topC;
-    } else if (jlptMatches.length > 0) {
-      const topJ = jlptMatches[0];
-      topWord = topJ.word;
-      topReading = topJ.reading || hintReading || '';
-      topCategory = `JLPT ${topJ.level}`;
-      topMeaningText = (topJ.meanings || []).join(', ');
-      topCardForSave = {
-        id: `jlpt_${topJ.word}_${topJ.level}`,
-        word: topJ.word,
-        reading: topReading,
-        category: `JLPT ${topJ.level}`,
-        meaning: {
-          en: topMeaningText,
-          zh_TW: topMeaningText,
-          zh_CN: topMeaningText,
-          ko: topMeaningText,
-          fr: topMeaningText
-        }
-      };
-    } else if (dictMatches.length > 0) {
-      const topD = dictMatches[0];
-      topWord = topD.w;
-      topReading = topD.r || hintReading || '';
-      topCategory = topD.l ? `JLPT ${topD.l}` : '辞書';
-      const mList = (topD.m || []).join(', ');
-      const zhList = (topD.zh || []).join(', ');
-      const frList = (topD.fr || []).join(', ');
-      if (currentLang === 'zh_TW' || currentLang === 'zh_HK') topMeaningText = zhList || mList;
-      else if (currentLang === 'zh_CN') topMeaningText = zhList || mList;
-      else if (currentLang === 'fr') topMeaningText = frList || mList;
-      else topMeaningText = mList;
+    // 完全一致または最高スコアの選定
+    const bestCurriculum = matchedCurriculumCards[0];
+    const bestDict = dictScoredMatches[0];
 
+    if (bestCurriculum && bestCurriculum.score >= 8000) {
+      const c = bestCurriculum.card;
+      topWord = c.word;
+      topReading = c.reading || hintReading || '';
+      topCategory = c.category || '授業で習った言葉';
+      topMeaningText = getBilingualMeaning(c.meaning, currentLang);
+      topCardForSave = c;
+    } else if (bestDict && bestDict.score >= 8000) {
+      const d = bestDict.item;
+      topWord = d.w;
+      topReading = d.r || hintReading || '';
+      topCategory = d.l ? `JLPT ${d.l}` : '辞書';
+      topMeaningText = formatDictMeaning(d);
       topCardForSave = {
-        id: `dict_${topD.w}_${Date.now()}`,
-        word: topD.w,
+        id: `dict_${d.w}_${d.r || ''}`,
+        word: d.w,
         reading: topReading,
         category: topCategory,
         meaning: {
-          en: mList || '—',
-          zh_TW: zhList || mList || '—',
-          zh_CN: zhList || mList || '—',
-          ko: mList || '—',
-          fr: frList || mList || '—'
+          en: (d.m || []).join(', ') || '—',
+          zh_TW: (d.zh || d.m || []).join(', ') || '—',
+          zh_CN: (d.zh || d.m || []).join(', ') || '—',
+          ko: (d.m || []).join(', ') || '—',
+          fr: (d.fr || d.m || []).join(', ') || '—'
         }
       };
+    } else if (bestCurriculum) {
+      // 関連する単語としてカリキュラムの語彙がトップ
+      const c = bestCurriculum.card;
+      topWord = c.word;
+      topReading = c.reading || hintReading || '';
+      topCategory = c.category || '授業で習った言葉';
+      topMeaningText = getBilingualMeaning(c.meaning, currentLang);
+      topCardForSave = c;
+      isTopFromRelated = true;
+    } else if (bestDict) {
+      // 関連する単語として辞書の最重要語（例: 「待」→「待つ」N5）がトップ
+      const d = bestDict.item;
+      topWord = d.w;
+      topReading = d.r || hintReading || '';
+      topCategory = d.l ? `JLPT ${d.l}` : '辞書';
+      topMeaningText = formatDictMeaning(d);
+      topCardForSave = {
+        id: `dict_${d.w}_${d.r || ''}`,
+        word: d.w,
+        reading: topReading,
+        category: topCategory,
+        meaning: {
+          en: (d.m || []).join(', ') || '—',
+          zh_TW: (d.zh || d.m || []).join(', ') || '—',
+          zh_CN: (d.zh || d.m || []).join(', ') || '—',
+          ko: (d.m || []).join(', ') || '—',
+          fr: (d.fr || d.m || []).join(', ') || '—'
+        }
+      };
+      isTopFromRelated = true;
     } else {
       topMeaningText = '日本語表現・単語';
       topCardForSave = {
@@ -4535,8 +4583,65 @@
 
     const isAlreadySaved = mylistSet.has(topCardForSave.id) || mylistSet.has(topWord);
 
-    // モーダルHTMLの生成
+    // --- 5. 関連単語リスト（2番目以降のヒット）の構築 ---
+    const relatedList = [];
+    const usedWordKeys = new Set([topWord]);
+
+    // カリキュラム内の関連語を優先追加
+    matchedCurriculumCards.forEach(mc => {
+      if (!usedWordKeys.has(mc.card.word)) {
+        usedWordKeys.add(mc.card.word);
+        relatedList.push({
+          word: mc.card.word,
+          reading: mc.card.reading || '',
+          category: mc.card.category || '授業で習った言葉',
+          badgeClass: 'bg-rose-100 text-rose-800',
+          meaning: getBilingualMeaning(mc.card.meaning, currentLang),
+          cardObj: mc.card
+        });
+      }
+    });
+
+    // 辞書内の関連語を追加
+    dictScoredMatches.forEach(dm => {
+      if (!usedWordKeys.has(dm.item.w) && relatedList.length < 12) {
+        usedWordKeys.add(dm.item.w);
+        const d = dm.item;
+        const meaning = formatDictMeaning(d);
+        const cardObj = {
+          id: `dict_${d.w}_${d.r || ''}`,
+          word: d.w,
+          reading: d.r || '',
+          category: d.l ? `JLPT ${d.l}` : '辞書',
+          meaning: {
+            en: (d.m || []).join(', ') || '—',
+            zh_TW: (d.zh || d.m || []).join(', ') || '—',
+            zh_CN: (d.zh || d.m || []).join(', ') || '—',
+            ko: (d.m || []).join(', ') || '—',
+            fr: (d.fr || d.m || []).join(', ') || '—'
+          }
+        };
+        relatedList.push({
+          word: d.w,
+          reading: d.r || '',
+          category: d.l ? `JLPT ${d.l}` : '辞書',
+          badgeClass: d.l ? 'bg-sky-100 text-sky-800' : 'bg-slate-100 text-slate-700',
+          meaning: meaning,
+          cardObj: cardObj
+        });
+      }
+    });
+
+    // --- 6. モーダルHTML生成 ---
     let modalHtml = `
+      <!-- 選択文字列インジケーター (漢字1文字や部分選択の場合にわかりやすく案内) -->
+      ${isTopFromRelated || topWord !== cleanWord ? `
+        <div class="px-3 py-1.5 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs flex items-center justify-between">
+          <span>選択: <strong class="text-amber-900">「${escapeHtml(cleanWord)}」</strong> を使った最も関連性の高い単語:</span>
+          <span class="text-[10px] font-bold bg-amber-200/80 px-2 py-0.5 rounded-md">関連検索</span>
+        </div>
+      ` : ''}
+
       <!-- メインヒット単語カード -->
       <div class="p-4 rounded-2xl bg-sky-50 border border-sky-200 space-y-3">
         <div class="flex items-baseline justify-between flex-wrap gap-2">
@@ -4564,32 +4669,40 @@
       </div>
     `;
 
-    // 関連するJLPT単語一覧
-    if (jlptMatches.length > 1) {
+    // 関連単語リストのレンダリング
+    if (relatedList.length > 0) {
       modalHtml += `
         <div class="space-y-2 pt-1">
-          <h4 class="text-xs font-bold text-slate-500 flex items-center space-x-1">
-            <span>📚</span>
-            <span>関連するJLPT語彙</span>
+          <h4 class="text-xs font-bold text-slate-600 flex items-center justify-between">
+            <span class="flex items-center space-x-1">
+              <span>📚</span>
+              <span>「${escapeHtml(cleanWord)}」を含む関連単語 (${relatedList.length}件)</span>
+            </span>
+            <span class="text-[10px] text-slate-400 font-normal">タップで詳細表示</span>
           </h4>
-          <div class="space-y-1.5">
-            ${jlptMatches.slice(1, 4).map(jm => `
-              <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between text-xs hover:bg-slate-100 transition">
-                <div class="flex items-baseline space-x-1.5">
-                  <span class="font-bold text-slate-900">${escapeHtml(jm.word)}</span>
-                  ${jm.reading ? `<span class="text-[11px] text-slate-400">（${escapeHtml(jm.reading)}）</span>` : ''}
-                  <span class="text-[9px] px-1.5 py-0.2 rounded font-bold bg-sky-100 text-sky-800">${jm.level}</span>
-                  <span class="text-[11px] text-slate-600 ml-1">${escapeHtml((jm.meanings || []).slice(0, 2).join(', '))}</span>
+          <div class="space-y-1.5 max-h-[42vh] overflow-y-auto pr-1">
+            ${relatedList.map((rel, idx) => {
+              const isRelSaved = mylistSet.has(rel.cardObj.id) || mylistSet.has(rel.word);
+              return `
+                <div class="rel-word-item p-2.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between text-xs hover:bg-blue-50/50 hover:border-sky-300 transition cursor-pointer" data-idx="${idx}">
+                  <div class="flex items-baseline space-x-1.5 truncate pr-2">
+                    <span class="font-bold text-slate-900">${escapeHtml(rel.word)}</span>
+                    ${rel.reading ? `<span class="text-[11px] text-slate-400">（${escapeHtml(rel.reading)}）</span>` : ''}
+                    <span class="text-[9px] px-1.5 py-0.2 rounded font-bold ${rel.badgeClass} shrink-0">${rel.category}</span>
+                    <span class="text-[11px] text-slate-600 ml-1 truncate">${escapeHtml(rel.meaning)}</span>
+                  </div>
+                  <div class="flex items-center space-x-1 shrink-0">
+                    <button class="btn-sub-speak-word p-1 text-slate-400 hover:text-sky-600 rounded transition" title="発音を聞く" data-word="${escapeHtml(rel.word)}">
+                      <span>🔊</span>
+                    </button>
+                    <button class="btn-sub-save-word px-2 py-1 rounded-lg border font-bold text-[10px] transition ${isRelSaved ? 'bg-emerald-100 border-emerald-400 text-emerald-800' : 'bg-white border-emerald-300 text-emerald-700 hover:bg-emerald-50'}"
+                      data-idx="${idx}">
+                      ${isRelSaved ? '✓ 保存中' : '🔖 保存'}
+                    </button>
+                  </div>
                 </div>
-                <button class="btn-sub-save-word px-2 py-1 rounded-lg bg-white border border-emerald-300 text-emerald-700 font-bold text-[10px] hover:bg-emerald-50 transition"
-                  data-word="${escapeHtml(jm.word)}"
-                  data-reading="${escapeHtml(jm.reading || '')}"
-                  data-meaning="${escapeHtml((jm.meanings || []).join(', '))}"
-                  data-level="${jm.level}">
-                  🔖 保存
-                </button>
-              </div>
-            `).join('')}
+              `;
+            }).join('')}
           </div>
         </div>
       `;
@@ -4597,7 +4710,7 @@
 
     content.innerHTML = modalHtml;
 
-    // イベントリスナーの接続
+    // --- 7. イベントリスナーの接続 ---
     const btnSpeak = content.querySelector('#btnModalSpeakWord');
     if (btnSpeak) {
       btnSpeak.addEventListener('click', () => {
@@ -4616,20 +4729,36 @@
       });
     }
 
+    // 関連単語クリックでその単語の詳細をモーダルで開く
+    content.querySelectorAll('.rel-word-item').forEach(item => {
+      item.addEventListener('click', (e) => {
+        if (e.target.closest('button')) return;
+        const idx = parseInt(item.getAttribute('data-idx'), 10);
+        const targetRel = relatedList[idx];
+        if (targetRel) {
+          openDictLookupModal(targetRel.word, targetRel.reading);
+        }
+      });
+    });
+
+    // 関連単語の発音ボタン
+    content.querySelectorAll('.btn-sub-speak-word').forEach(spkBtn => {
+      spkBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const sw = spkBtn.getAttribute('data-word');
+        if (sw) speakJapanese(sw);
+      });
+    });
+
+    // 関連単語の保存ボタン
     content.querySelectorAll('.btn-sub-save-word').forEach(subBtn => {
-      subBtn.addEventListener('click', () => {
-        const sw = subBtn.getAttribute('data-word');
-        const sr = subBtn.getAttribute('data-reading') || '';
-        const sm = subBtn.getAttribute('data-meaning') || '';
-        const sl = subBtn.getAttribute('data-level') || '一般';
-        const subCard = {
-          id: `jlpt_${sw}_${sl}`,
-          word: sw,
-          reading: sr,
-          category: `JLPT ${sl}`,
-          meaning: { en: sm, zh_TW: sm, zh_CN: sm, ko: sm, fr: sm }
-        };
-        promptFolderSelectAndAdd(subCard, () => {
+      subBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const idx = parseInt(subBtn.getAttribute('data-idx'), 10);
+        const targetRel = relatedList[idx];
+        if (!targetRel) return;
+
+        promptFolderSelectAndAdd(targetRel.cardObj, () => {
           updateMylistBadge();
           renderCurrentCard();
           openDictLookupModal(queryWord, hintReading);
