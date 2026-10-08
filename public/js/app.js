@@ -767,16 +767,15 @@
       vocabList = [...seedCards, ...allCustomCards];
     }
 
-      const savedStudents = localStorage.getItem('haku_students');
-      if (savedStudents) {
-        try {
-          students = JSON.parse(savedStudents);
-        } catch (e) {
-          students = window.INITIAL_STUDENTS || [];
-        }
-      } else {
+    const savedStudents = localStorage.getItem('haku_students');
+    if (savedStudents) {
+      try {
+        students = JSON.parse(savedStudents);
+      } catch (e) {
         students = window.INITIAL_STUDENTS || [];
       }
+    } else {
+      students = window.INITIAL_STUDENTS || [];
     }
 
     // Load active student session if stored
