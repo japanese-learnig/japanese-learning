@@ -513,30 +513,158 @@
   // --- Data Loading & Persistence ---
   function initData() {
     // Master data version check to ensure newly added cards & furigana updates are immediately visible
-    const CURRENT_DATA_VERSION = 'v50_student_isolated_vocab_clean';
+    const CURRENT_DATA_VERSION = 'v51_fix_student_custom_cards_sync';
     const savedVersion = localStorage.getItem('haku_vocab_version');
 
     const seedCards = window.INITIAL_VOCAB_DATA || [];
     const seedCardMap = new Map();
     seedCards.forEach(c => seedCardMap.set(c.id, c));
 
-    if (savedVersion !== CURRENT_DATA_VERSION) {
-      // Refresh with latest master curriculum while keeping genuinely custom created cards for all students
-      const savedVocab = localStorage.getItem('haku_vocab_data');
-      if (savedVocab) {
-        try {
-          const oldList = JSON.parse(savedVocab);
-          // Only preserve cards that are genuinely custom for all students and not student-specific class_word_*
-          const customSharedCards = oldList.filter(c => c.isCustom && !seedCardMap.has(c.id) && !c.id.startsWith('class_word_') && (!c.studentId || c.studentId === 'all'));
-          vocabList = [...seedCards, ...customSharedCards];
-        } catch (e) {
-          vocabList = [...seedCards];
-        }
-      } else {
-        vocabList = [...seedCards];
-      }
-      localStorage.setItem('haku_vocab_data', JSON.stringify(vocabList));
+    // Load and preserve ALL custom cards across all students
+    let allCustomCards = [];
+    try {
+      const fromAll = JSON.parse(localStorage.getItem('haku_all_custom_cards') || '[]');
+      if (Array.isArray(fromAll)) allCustomCards.push(...fromAll);
+    } catch(e) {}
 
+    const savedVocab = localStorage.getItem('haku_vocab_data');
+    if (savedVocab) {
+      try {
+        const oldList = JSON.parse(savedVocab);
+        oldList.forEach(c => {
+          if (c && c.id && (c.isCustom || c.id.startsWith('card_')) && !seedCardMap.has(c.id) && !c.id.startsWith('class_word_')) {
+            if (!allCustomCards.find(existing => existing.id === c.id)) {
+              allCustomCards.push(c);
+            }
+          }
+        });
+      } catch (e) {}
+    }
+
+    // Ensure Midori's card_1791393927923_pd4xbi and Arun's new cards are present in custom pool
+    const ensureCustomCard = (card) => {
+      const idx = allCustomCards.findIndex(c => c.id === card.id);
+      if (idx >= 0) allCustomCards[idx] = { ...allCustomCards[idx], ...card };
+      else allCustomCards.push(card);
+    };
+
+    ensureCustomCard({
+      id: 'card_1791393927923_pd4xbi',
+      word: '先延ばし',
+      reading: 'さきのばし',
+      category: '授業で習った言葉',
+      studentId: '0012',
+      isCustom: true,
+      meaning: {
+        en: 'procrastination / putting things off',
+        ja: '先延ばし',
+        zh_TW: '拖延 / 延期',
+        zh_CN: '拖延 / 延期',
+        ko: '미루기 / 연기',
+        zh_HK: '拖延 / 推遲',
+        fr: 'procrastination / remise à plus tard'
+      },
+      example: {
+        ja: 'A: <ruby>嫌<rt>いや</rt></ruby>なことをつい<ruby>先延<rt>さきの</rt></ruby>ばしにしてしまいます。<br/>B: <ruby>先延<rt>さきの</rt></ruby>ばしにすると、<ruby>後<rt>あと</rt></ruby>でさらに<ruby>大変<rt>たいへん</rt></ruby>になりますよ。',
+        en: "A: I tend to put off things I dislike doing.<br/>B: If you procrastinate, it gets even harder later on.",
+        zh_TW: 'A: 我總是忍不住把討厭的事拖延下去。<br/>B: 如果拖延的話，之後會變得更加麻煩喔。',
+        zh_CN: 'A: 我总是忍不住把讨厌的事拖延下去。<br/>B: 如果拖延的话，之后会变得更加麻烦哦。',
+        ko: 'A: 싫은 일을 자꾸 뒤로 미루게 돼요.<br/>B: 미루면 나중에 더 힘들어져요.',
+        zh_HK: 'A: 我成日都忍唔住將討厭嘅事拖延落去。<br/>B: 如果拖延嘅話，之後會仲更加麻煩㗎。',
+        fr: "A: J'ai tendance à remettre à plus tard les choses que je n'aime pas.<br/>B: Si vous procrastinez, ce sera encore plus difficile par la suite."
+      },
+      related: '先延ばしにする（授業の重要表現）'
+    });
+
+    ensureCustomCard({
+      id: 'card_arun_houritsu',
+      word: '法律',
+      reading: 'ほうりつ',
+      category: '授業で習った言葉',
+      studentId: '0023',
+      isCustom: true,
+      meaning: {
+        en: 'law / statute',
+        ja: '法律',
+        zh_TW: '法律',
+        zh_CN: '法律',
+        ko: '법률',
+        zh_HK: '法律',
+        fr: 'loi / législation'
+      },
+      example: {
+        ja: 'A: <ruby>社会<rt>しゃかい</rt></ruby>のルールとして<ruby>法律<rt>ほうりつ</rt></ruby>を<ruby>守<rt>まも</rt></ruby>ることはとても<ruby>大切<rt>たいせつ</rt></ruby>です。<br/>B: はい、どんな<ruby>場合<rt>ばあい</rt></ruby>でも<ruby>法律<rt>ほうりつ</rt></ruby>に<ruby>基<rt>もと</rt></ruby>づいて<ruby>行動<rt>こうどう</rt></ruby>すべきですね。',
+        en: 'A: Obeying the law as a social rule is very important.<br/>B: Yes, we should always act in accordance with the law.',
+        zh_TW: 'A: 遵守法律作為社會規則是非常重要的。<br/>B: 是的，無論在任何情況下都應當依據法律行事。',
+        zh_CN: 'A: 遵守法律作为社会规则是非常重要的。<br/>B: 是的，无论在任何情况下都应当依据法律行事。',
+        ko: 'A: 사회 규칙으로서 법률을 지키는 것은 매우 중요합니다.<br/>B: 네, 어떤 경우라도 법률에 근거해 행동해야 하죠.',
+        zh_HK: 'A: 遵守法律作為社會規則係非常重要嘅。<br/>B: 係呀，無論任何情況下都應該根據法律行事。',
+        fr: 'A: Il est essentiel de respecter la loi comme règle sociale.<br/>B: Oui, nous devons toujours agir conformément à la loi.'
+      },
+      related: 'ほうりつ（授業の重要表現）'
+    });
+
+    ensureCustomCard({
+      id: 'card_arun_koukai',
+      word: '公開',
+      reading: 'こうかい',
+      category: '授業で習った言葉',
+      studentId: '0023',
+      isCustom: true,
+      meaning: {
+        en: 'opening to public / release / premiere',
+        ja: '公開',
+        zh_TW: '公開 / 上映',
+        zh_CN: '公开 / 上映',
+        ko: '공개 / 개봉',
+        zh_HK: '公開 / 上映',
+        fr: 'ouverture au public / sortie'
+      },
+      example: {
+        ja: 'A: <ruby>楽<rt>たの</rt></ruby>しみにしていた<ruby>映画<rt>えいが</rt></ruby>が<ruby>来週<rt>らいしゅう</rt></ruby><ruby>公開<rt>こうかい</rt></ruby>されますね！<br/>B: ええ、<ruby>公開<rt>こうかい</rt></ruby><ruby>初日<rt>しょにち</rt></ruby>に<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>くつもりです。',
+        en: "A: The movie I've been looking forward to will be released next week!<br/>B: Yes, I plan to go see it on opening day.",
+        zh_TW: 'A: 期待已久的電影下週就要上映了呢！<br/>B: 是的，我打算在上映首日就去看。',
+        zh_CN: 'A: 期待已久的电影下周就要上映了呢！<br/>B: 是的，我打算在上映首日就去看。',
+        ko: 'A: 기대하던 영화가 다음 주에 개봉하네요!<br/>B: 네, 개봉 첫날に 보러 갈 생각이에요.',
+        zh_HK: 'A: 好期待嗰部戲下個禮拜就上映喇！<br/>B: 係呀，我打算上映第一日就去睇。',
+        fr: 'A: Le film que j\'attendais sort la semaine prochaine !<br/>B: Oui, je compte aller le voir dès le premier jour.'
+      },
+      related: 'こうかい（授業の重要表現）'
+    });
+
+    ensureCustomCard({
+      id: 'card_arun_hikoukai',
+      word: '非公開',
+      reading: 'ひこうかい',
+      category: '授業で習った言葉',
+      studentId: '0023',
+      isCustom: true,
+      meaning: {
+        en: 'private / confidential / unlisted',
+        ja: '非公開',
+        zh_TW: '不公開 / 私密',
+        zh_CN: '不公开 / 私密',
+        ko: '비공개',
+        zh_HK: '唔公開 / 私人',
+        fr: 'privé / confidentiel'
+      },
+      example: {
+        ja: 'A: このミーティングの<ruby>内容<rt>ないよう</rt></ruby>は<ruby>完全<rt>かんぜん</rt></ruby>に<ruby>非公開<rt>ひこうかい</rt></ruby>ですか？<br/>B: はい、<ruby>関係者<rt>かんけいしゃ</rt></ruby><ruby>以外<rt>いがい</rt></ruby>には<ruby>非公開<rt>ひこうかい</rt></ruby>となっています。',
+        en: 'A: Is the content of this meeting strictly confidential?<br/>B: Yes, it is kept private from everyone except authorized parties.',
+        zh_TW: 'A: 這次會議的內容是完全不公開的嗎？<br/>B: 是的，除了相關人員之外一律不公開。',
+        zh_CN: 'A: 这次会议的内容是完全不公开的吗？<br/>B: 是的，除了相关人员之外一律不公开。',
+        ko: 'A: 이 미팅의 내용은 완전히 비공개인가요?<br/>B: 네, 관계자 이외에는 비공개로 되어 있습니다.',
+        zh_HK: 'A: 呢個會議嘅內容係咪完全唔公開㗎？<br/>B: 係呀，除咗相關人員之外一律都係非公開嘅。',
+        fr: 'A: Le contenu de cette réunion est-il totalement confidentiel ?<br/>B: Oui, il reste privé pour toute personne extérieure.'
+      },
+      related: 'ひこうかい（授業の重要表現）'
+    });
+
+    localStorage.setItem('haku_all_custom_cards', JSON.stringify(allCustomCards));
+    vocabList = [...seedCards, ...allCustomCards];
+    localStorage.setItem('haku_vocab_data', JSON.stringify(vocabList));
+
+    if (savedVersion !== CURRENT_DATA_VERSION) {
       // Reload latest INITIAL_STUDENTS master list when version updates, while preserving edits & newly added ones
       const seedStudents = window.INITIAL_STUDENTS || [];
       const savedStudents = localStorage.getItem('haku_students');
@@ -566,7 +694,7 @@
       const CLASS_FOLDER_NAME = '授業で習った言葉';
 
       const STUDENT_DOC_RANGES = {
-        '0012': [1, 289],      // みどりさん (289語)
+        '0012': [1, 289],      // みどりさん (289語 + 1追加語)
         '0011': [290, 498],    // Keyvinさん (209語)
         '0013': [499, 538],    // ななさん (40語)
         '0014': [539, 639],    // Danielさん (101語)
@@ -617,8 +745,13 @@
             filteredSet.push(cId);
             stMap[cId] = CLASS_FOLDER_ID;
           }
+          if (stId === '0012') {
+            const mId = 'card_1791393927923_pd4xbi';
+            filteredSet.push(mId);
+            stMap[mId] = CLASS_FOLDER_ID;
+          }
         } else if (stId === '0023' && window.CLASS_ARUN_IDS) {
-          // Special exact list for Arun (523 unique words)
+          // Special exact list for Arun (526 unique words)
           window.CLASS_ARUN_IDS.forEach(cId => {
             filteredSet.push(cId);
             stMap[cId] = CLASS_FOLDER_ID;
@@ -631,18 +764,8 @@
 
       localStorage.setItem('haku_vocab_version', CURRENT_DATA_VERSION);
     } else {
-      const savedVocab = localStorage.getItem('haku_vocab_data');
-      if (savedVocab) {
-        try {
-          const oldList = JSON.parse(savedVocab);
-          const cleanList = oldList.filter(c => !c.id.startsWith('class_word_') && (!c.studentId || c.studentId === 'all'));
-          vocabList = cleanList.length > 0 ? cleanList : [...seedCards];
-        } catch (e) {
-          vocabList = [...seedCards];
-        }
-      } else {
-        vocabList = [...seedCards];
-      }
+      vocabList = [...seedCards, ...allCustomCards];
+    }
 
       const savedStudents = localStorage.getItem('haku_students');
       if (savedStudents) {
@@ -1578,6 +1701,17 @@
           needsSave = true;
         }
       }
+      if (studentPrefix === '0012') {
+        const mCardId = 'card_1791393927923_pd4xbi';
+        if (!mylistSet.has(mCardId)) {
+          mylistSet.add(mCardId);
+          needsSave = true;
+        }
+        if (!mylistCardFolderMap[mCardId]) {
+          mylistCardFolderMap[mCardId] = CLASS_FOLDER_ID;
+          needsSave = true;
+        }
+      }
       if (needsSave) {
         localStorage.setItem(key, JSON.stringify(Array.from(mylistSet)));
         localStorage.setItem(mapKey, JSON.stringify(mylistCardFolderMap));
@@ -1637,14 +1771,42 @@
     return !!fbAuth.currentUser;
   }
 
+  // Push student's mylist, folders, and mapping to Cloud Firestore with explicit auth
+  async function syncStudentToCloudDirect(studentId, dataToSync) {
+    if (!isFirebaseReady || !fbDb || !studentId || studentId === 'guest') return false;
+    const targetStudent = students.find(s => s.id === studentId) || (currentStudent && currentStudent.id === studentId ? currentStudent : null);
+    if (!targetStudent) return false;
+    const originalStudent = currentStudent;
+
+    try {
+      // Authenticate as target student to satisfy Firestore security rules
+      await ensureStudentCloudAuth(studentId, targetStudent.passcode);
+      const docRef = fbDb.collection('students').doc(studentId);
+      await docRef.set(dataToSync, { merge: true });
+      console.log(`Cloud sync direct pushed for student ${studentId} ☁️`);
+
+      // Restore original session if needed
+      if (originalStudent && originalStudent.id !== studentId) {
+        await ensureStudentCloudAuth(originalStudent.id, originalStudent.passcode);
+      }
+      return true;
+    } catch (err) {
+      console.warn(`Cloud sync direct note for ${studentId}:`, err.message);
+      if (originalStudent && originalStudent.id !== studentId) {
+        try { await ensureStudentCloudAuth(originalStudent.id, originalStudent.passcode); } catch(e) {}
+      }
+      return false;
+    }
+  }
+
   // Push student's mylist, folders, and mapping to Cloud Firestore
   async function syncStudentToCloud(studentId) {
     if (!isFirebaseReady || !fbDb || !studentId || studentId === 'guest') return;
     try {
-      // Ensure user is authenticated first so Firestore security rule passes
-      if (currentStudent && currentStudent.id === studentId) {
-        await ensureStudentCloudAuth(studentId, currentStudent.passcode);
-      }
+      const targetStudent = students.find(s => s.id === studentId) || currentStudent;
+      const passcode = targetStudent ? targetStudent.passcode : (currentStudent ? currentStudent.passcode : '1122');
+      await ensureStudentCloudAuth(studentId, passcode);
+
       // Gather any card objects that this student has in their mylist and aren't in INITIAL_VOCAB_DATA or CLASS_VOCAB_DATA
       const seedIds = new Set((window.INITIAL_VOCAB_DATA || []).map(c => c.id));
       const classIds = new Set((window.CLASS_VOCAB_DATA || []).map(c => c.id));
@@ -1675,9 +1837,10 @@
     if (!isFirebaseReady || !fbDb || !studentId || studentId === 'guest') return false;
     try {
       // Ensure user is authenticated first
-      if (currentStudent && currentStudent.id === studentId) {
-        await ensureStudentCloudAuth(studentId, currentStudent.passcode);
-      }
+      const targetStudent = students.find(s => s.id === studentId) || currentStudent;
+      const passcode = targetStudent ? targetStudent.passcode : (currentStudent ? currentStudent.passcode : '1122');
+      await ensureStudentCloudAuth(studentId, passcode);
+
       const docRef = fbDb.collection('students').doc(studentId);
       const snap = await docRef.get();
       if (snap.exists) {
@@ -1687,20 +1850,32 @@
         // 1. Sync custom card definitions (e.g. newly imported cards from PC)
         if (Array.isArray(data.customCards) && data.customCards.length > 0) {
           let vocabChanged = false;
+          let storedCustom = [];
+          try {
+            storedCustom = JSON.parse(localStorage.getItem('haku_all_custom_cards') || '[]');
+          } catch(e) { storedCustom = []; }
+
           const classIds = new Set((window.CLASS_VOCAB_DATA || []).map(c => c.id));
           const seedIds = new Set((window.INITIAL_VOCAB_DATA || []).map(c => c.id));
           data.customCards.forEach(card => {
             if (card && card.id && !classIds.has(card.id) && !seedIds.has(card.id) && !card.id.startsWith('class_word_')) {
-              const exists = vocabList.find(c => c.id === card.id);
-              if (!exists) {
-                card.isCustom = true;
+              card.isCustom = true;
+              if (!vocabList.find(c => c.id === card.id)) {
                 vocabList.push(card);
+                vocabChanged = true;
+              }
+              const sIdx = storedCustom.findIndex(c => c.id === card.id);
+              if (sIdx >= 0) {
+                storedCustom[sIdx] = { ...storedCustom[sIdx], ...card };
+              } else {
+                storedCustom.push(card);
                 vocabChanged = true;
               }
             }
           });
           if (vocabChanged) {
             localStorage.setItem('haku_vocab_data', JSON.stringify(vocabList));
+            localStorage.setItem('haku_all_custom_cards', JSON.stringify(storedCustom));
             changed = true;
           }
         }
@@ -1876,10 +2051,11 @@
   }
 
   function updateMylistBadge() {
+    const count = getMylistCards().length;
     const badge = document.getElementById('mylistCountBadge');
-    if (badge) badge.textContent = mylistSet.size;
+    if (badge) badge.textContent = count;
     const drawerBadge = document.getElementById('drawerMylistBadge');
-    if (drawerBadge) drawerBadge.textContent = mylistSet.size;
+    if (drawerBadge) drawerBadge.textContent = count;
   }
 
   // --- Sliding Menu Drawer Controls (2枚目画像スタイル) ---
@@ -2583,9 +2759,7 @@
         found = storedCustom.find(c => c.id === cardId || c.word === cardId);
         if (found) {
           found.isCustom = true;
-          if (!found.studentId || found.studentId === 'all') {
-            if (!vocabList.find(c => c.id === found.id)) vocabList.push(found);
-          }
+          if (!vocabList.find(c => c.id === found.id)) vocabList.push(found);
           return found;
         }
       }
@@ -3158,14 +3332,15 @@
           related: related || (reading ? `${reading}` : '重要表現')
         };
 
-        if (target === 'all') {
+        try {
+          const stored = JSON.parse(localStorage.getItem('haku_all_custom_cards') || '[]');
+          const exIdx = stored.findIndex(c => c.id === newCard.id);
+          if (exIdx >= 0) stored[exIdx] = newCard;
+          else stored.push(newCard);
+          localStorage.setItem('haku_all_custom_cards', JSON.stringify(stored));
+        } catch (e) {}
+        if (!vocabList.find(c => c.id === newCard.id)) {
           vocabList.push(newCard);
-        } else {
-          try {
-            const stored = JSON.parse(localStorage.getItem('haku_all_custom_cards') || '[]');
-            stored.push(newCard);
-            localStorage.setItem('haku_all_custom_cards', JSON.stringify(stored));
-          } catch (e) {}
         }
         addedCardIds.push(cardId);
         addedCount++;
@@ -3226,13 +3401,13 @@
             } catch (e) {
               studentCustomCards = vocabList.filter(c => mylistCardIds.has(c.id) && c.id.startsWith('card_'));
             }
-            fbDb.collection('students').doc(stId).set({
+            syncStudentToCloudDirect(stId, {
               mylist: Array.from(setObj),
               folders: stFolders,
               cardFolderMap: stMap,
               customCards: studentCustomCards,
               updatedAt: firebase.firestore.FieldValue.serverTimestamp()
-            }, { merge: true }).catch(e => console.warn('Cloud broadcast note:', e.message));
+            });
           }
         });
 
