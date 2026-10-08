@@ -400,8 +400,8 @@
         <i data-lucide="user" class="w-4 h-4"></i>
       </button>
 
-      <!-- Discreet Teacher Lock -->
-      <button id="navAdmin" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition active:scale-95" title="Teacher Admin">
+      <!-- Discreet Teacher Lock (先生でログイン中のみ表示・生徒には非表示) -->
+      <button id="navAdmin" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-amber-400 text-deepNavy flex items-center justify-center transition active:scale-95 shadow-xs hidden" title="Teacher Admin">
         <i data-lucide="lock" class="w-3.5 h-3.5"></i>
       </button>
     </div>
@@ -959,14 +959,20 @@
     <div id="viewAdmin" class="max-w-md mx-auto hidden flex-col">
       <div class="bg-white rounded-3xl p-3 sm:p-5 border border-softBorder shadow-sm flex flex-col justify-between overflow-y-auto min-h-[480px]">
         <div>
-          <div class="flex items-center space-x-2 pb-3 border-b border-slate-100 mb-3">
-            <div class="p-1.5 rounded-lg bg-lightBlueBg text-deepNavy">
-              <i data-lucide="lock" class="w-4 h-4"></i>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-3">
+            <div class="flex items-center space-x-2">
+              <div class="p-1.5 rounded-lg bg-amber-100 text-amber-800">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-darkNavyText text-sm">ハク先生専用・管理画面</h3>
+                <p class="text-[11px] text-slate-400">（生徒には非公開）</p>
+              </div>
             </div>
-            <div>
-              <h3 class="font-bold text-darkNavyText text-sm">ハク先生専用・単語一括追加</h3>
-              <p class="text-[11px] text-slate-400">（生徒には見えません）</p>
-            </div>
+            <button id="btnAdminBackToCards" class="px-3 py-1.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition flex items-center space-x-1 shadow-2xs">
+              <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+              <span>アプリに戻る</span>
+            </button>
           </div>
 
           <!-- Target Student Selector -->
@@ -1493,12 +1499,12 @@
   <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
 
   <!-- Database & App Scripts -->
-  <script src="database/jlpt_vocab_all.js?v=20261008_1420"></script>
-  <script src="database/dictionary_data.js?v=20261008_1420"></script>
-  <script src="database/dict_examples_map.js?v=20261008_1420"></script>
-  <script src="database/class_vocab_data.js?v=20261008_1420"></script>
-  <script src="js/data.js?v=20261008_1420"></script>
-  <script src="js/app.js?v=20261008_1420"></script>
+  <script src="database/jlpt_vocab_all.js?v=20261008_1430"></script>
+  <script src="database/dictionary_data.js?v=20261008_1430"></script>
+  <script src="database/dict_examples_map.js?v=20261008_1430"></script>
+  <script src="database/class_vocab_data.js?v=20261008_1430"></script>
+  <script src="js/data.js?v=20261008_1430"></script>
+  <script src="js/app.js?v=20261008_1430"></script>
   <script>
     if (window.lucide) {
       lucide.createIcons();

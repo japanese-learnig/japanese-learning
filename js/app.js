@@ -499,7 +499,12 @@
     const headerStudentBadge = document.getElementById('headerStudentBadge');
     if (headerStudentBadge) {
       if (currentStudent) {
-        headerStudentBadge.textContent = isJa ? `生徒: ${currentStudent.name}` : `Student: ${currentStudent.name}`;
+        const isTeacher = (currentStudent.id === 'haku' || currentStudent.id === 'admin');
+        if (isTeacher) {
+          headerStudentBadge.textContent = 'ハク先生 🌸';
+        } else {
+          headerStudentBadge.textContent = isJa ? `生徒: ${currentStudent.name}` : `Student: ${currentStudent.name}`;
+        }
       } else {
         headerStudentBadge.textContent = isJa ? '生徒: ゲスト' : 'Student: Guest';
       }
@@ -1682,6 +1687,16 @@
 
   function setStudent(student) {
     currentStudent = student;
+    const isTeacher = !!(student && (student.id === 'haku' || student.id === 'admin'));
+    const navAdmin = document.getElementById('navAdmin');
+    if (navAdmin) {
+      if (isTeacher) {
+        navAdmin.classList.remove('hidden');
+      } else {
+        navAdmin.classList.add('hidden');
+      }
+    }
+
     const drawerName = document.getElementById('drawerStudentName');
     const drawerStatus = document.getElementById('drawerStudentStatus');
     const drawerBtnLogin = document.getElementById('drawerBtnLogin');
@@ -1690,10 +1705,10 @@
 
     if (student) {
       localStorage.setItem('haku_current_student_id', student.id);
-      document.getElementById('headerStudentBadge').textContent = `Student: ${student.name}`;
+      document.getElementById('headerStudentBadge').textContent = isTeacher ? 'ハク先生 🌸' : `Student: ${student.name}`;
       // Update drawer student display
       if (drawerName) drawerName.textContent = student.name;
-      if (drawerStatus) drawerStatus.textContent = 'Logged In';
+      if (drawerStatus) drawerStatus.textContent = isTeacher ? 'Teacher Mode 🌸' : 'Logged In';
       if (drawerBtnLogin) drawerBtnLogin.textContent = 'Switch ID';
       if (drawerBtnLogout) drawerBtnLogout.classList.remove('hidden');
       if (btnLoginLogout) btnLoginLogout.classList.remove('hidden');
@@ -1703,7 +1718,9 @@
       const drawerLangSelect = document.getElementById('drawerLangSelect');
       if (drawerLangSelect) drawerLangSelect.value = currentLang;
 
-      showToast(`Logged in as ${student.name}`);
+      if (!isTeacher) {
+        showToast(`Logged in as ${student.name}`);
+      }
 
       // Authenticate with Firebase in background & sync latest cloud data
       ensureStudentCloudAuth(student.id, student.passcode).then(() => {
@@ -1717,6 +1734,7 @@
       if (drawerBtnLogin) drawerBtnLogin.textContent = 'Log In';
       if (drawerBtnLogout) drawerBtnLogout.classList.add('hidden');
       if (btnLoginLogout) btnLoginLogout.classList.add('hidden');
+      if (navAdmin) navAdmin.classList.add('hidden');
       if (fbAuth && fbAuth.currentUser) {
         fbAuth.signOut().catch(() => {});
       }
@@ -3593,7 +3611,11 @@
         initJlptView();
       }
     } else if (viewName === 'admin') {
-      document.getElementById('viewAdmin').classList.remove('hidden');
+      const viewAdmin = document.getElementById('viewAdmin');
+      if (viewAdmin) viewAdmin.classList.remove('hidden');
+      if (typeof renderAdminStudentList === 'function') {
+        renderAdminStudentList();
+      }
     }
   }
 
@@ -3622,27 +3644,55 @@
     if (navJlptEl) {
       navJlptEl.addEventListener('click', () => switchView('jlpt'));
     }
-    // Discreet Teacher Admin Modal Trigger (生徒に見せない暗証番号保護)
-    document.getElementById('navAdmin').addEventListener('click', () => {
-      document.getElementById('adminAuthModal').classList.remove('hidden');
-      document.getElementById('adminPassInput').value = '';
-    });
+    // Discreet Teacher Admin Modal Trigger (先生でログイン中のみ利用可能)
+    const navAdminBtn = document.getElementById('navAdmin');
+    if (navAdminBtn) {
+      navAdminBtn.addEventListener('click', () => {
+        if (currentStudent && (currentStudent.id === 'haku' || currentStudent.id === 'admin')) {
+          switchView('admin');
+          showToast('ハク先生・管理画面を開きました ✨');
+          return;
+        }
+        document.getElementById('adminAuthModal').classList.remove('hidden');
+        document.getElementById('adminPassInput').value = '';
+      });
+    }
 
-    document.getElementById('btnAdminAuthCancel').addEventListener('click', () => {
-      document.getElementById('adminAuthModal').classList.add('hidden');
-    });
-
-    document.getElementById('btnAdminAuthSubmit').addEventListener('click', () => {
-      const pin = document.getElementById('adminPassInput').value.trim();
-      // Allow user requested passcode 'ppooii0099' or legacy PINs
-      if (pin === 'ppooii0099' || pin === '0000' || pin === '1234') {
+    const btnAdminAuthCancel = document.getElementById('btnAdminAuthCancel');
+    if (btnAdminAuthCancel) {
+      btnAdminAuthCancel.addEventListener('click', () => {
         document.getElementById('adminAuthModal').classList.add('hidden');
-        switchView('admin');
-        showToast('ハク先生・管理者モードを開きました ✨');
-      } else {
-        showToast('パスワードが違います');
-      }
-    });
+      });
+    }
+
+    const btnAdminAuthSubmit = document.getElementById('btnAdminAuthSubmit');
+    if (btnAdminAuthSubmit) {
+      btnAdminAuthSubmit.addEventListener('click', () => {
+        const pin = document.getElementById('adminPassInput').value.trim();
+        // ONLY allow official passcode 'ppooii0099' (0000 and 1234 completely eliminated)
+        if (pin === 'ppooii0099') {
+          let teacherUser = students.find(s => s.id === 'haku');
+          if (!teacherUser) {
+            teacherUser = { id: 'haku', name: 'ハク先生', lang: 'ja', passcode: 'ppooii0099' };
+            students.unshift(teacherUser);
+            localStorage.setItem('haku_students', JSON.stringify(students));
+          }
+          setStudent(teacherUser);
+          document.getElementById('adminAuthModal').classList.add('hidden');
+          switchView('admin');
+          showToast('ハク先生・管理者モードを開きました ✨');
+        } else {
+          showToast('パスワードが違います');
+        }
+      });
+    }
+
+    const btnAdminBackToCards = document.getElementById('btnAdminBackToCards');
+    if (btnAdminBackToCards) {
+      btnAdminBackToCards.addEventListener('click', () => {
+        switchView('flashcards');
+      });
+    }
 
     // --- Furigana & Auto Audio Toggle Controls (Top Header) ---
     function updateFuriganaUi() {
@@ -4438,8 +4488,9 @@
       const studentIdInput = document.getElementById('loginStudentId').value.trim();
       const passcodeInput = document.getElementById('loginPasscode').value.trim();
 
-      // Check if user is logging in as Haku-sensei / Admin using the new passcode ppooii0099
-      if (passcodeInput === 'ppooii0099' && (!studentIdInput || studentIdInput === 'haku' || studentIdInput === 'ハク' || studentIdInput === 'admin' || studentIdInput === '先生')) {
+      // Check if user is logging in as Haku-sensei / Admin using the passcode ppooii0099
+      const isTeacherId = (!studentIdInput || studentIdInput.toLowerCase() === 'haku' || studentIdInput === 'ハク' || studentIdInput.toLowerCase() === 'admin' || studentIdInput === '先生');
+      if (passcodeInput === 'ppooii0099' && isTeacherId) {
         let teacherUser = students.find(s => s.id === 'haku');
         if (!teacherUser) {
           teacherUser = { id: 'haku', name: 'ハク先生', lang: 'ja', passcode: 'ppooii0099' };
@@ -4448,7 +4499,9 @@
         }
         setStudent(teacherUser);
         document.getElementById('loginModal').classList.add('hidden');
-        showToast('ハク先生としてログインしました！🌸');
+        if (typeof closeMenuDrawer === 'function') closeMenuDrawer();
+        switchView('admin');
+        showToast('ハク先生・管理者モードを開きました！🌸');
         return;
       }
 
