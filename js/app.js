@@ -538,7 +538,7 @@
   // --- Data Loading & Persistence ---
   function initData() {
     // Master data version check to ensure newly added cards & furigana updates are immediately visible
-    const CURRENT_DATA_VERSION = 'v52_guarantee_all_sections_1_43';
+    const CURRENT_DATA_VERSION = 'v53_smooth_index_scroll_and_unshrunk_folders';
     const savedVersion = localStorage.getItem('haku_vocab_version');
 
     const seedCards = window.INITIAL_VOCAB_DATA || [];
@@ -1126,7 +1126,7 @@
 
       // Folder Item Container
       const folderWrapper = document.createElement('div');
-      folderWrapper.className = 'border border-softBorder rounded-2xl bg-white shadow-2xs overflow-hidden transition-all';
+      folderWrapper.className = 'border border-softBorder rounded-2xl bg-white shadow-2xs overflow-hidden transition-all shrink-0';
 
       // Folder Header
       const headerDiv = document.createElement('div');
@@ -1178,7 +1178,7 @@
       // Units Bullet List inside Folder
       if (isExpanded) {
         const unitsContainer = document.createElement('div');
-        unitsContainer.className = 'py-1 px-1.5 space-y-0.5 border-t border-slate-100 bg-white';
+        unitsContainer.className = 'py-1 px-1.5 space-y-0.5 border-t border-slate-100 bg-white max-h-[340px] sm:max-h-[400px] overflow-y-auto overscroll-contain units-scroll-container';
 
         const [minSec, maxSec] = fc.range;
         // For folder_1, also check for Section 0 (まずは授業で使う単語を覚えよう！)
@@ -2288,7 +2288,7 @@
 
     // Wrapper matching Image 2: rounded-2xl border bg-white
     const folderWrapper = document.createElement('div');
-    folderWrapper.className = 'border border-softBorder rounded-2xl bg-white shadow-2xs overflow-hidden transition-all';
+    folderWrapper.className = 'border border-softBorder rounded-2xl bg-white shadow-2xs overflow-hidden transition-all shrink-0';
 
     // Header row: [Folder icon] [初級 1-10 (262語)] ... [Play] [Check/Test] [Chevron]
     const headerDiv = document.createElement('div');
@@ -2341,7 +2341,7 @@
     // Collapsible units list inside this folder
     if (isExpanded) {
       const unitsContainer = document.createElement('div');
-      unitsContainer.className = 'py-1 px-2 space-y-1 border-t border-slate-100 bg-slate-50/50';
+      unitsContainer.className = 'py-1 px-2 space-y-1 border-t border-slate-100 bg-slate-50/50 max-h-[340px] sm:max-h-[400px] overflow-y-auto overscroll-contain units-scroll-container';
 
       const [minSec, maxSec] = fc.range;
       const secNumsToRender = [];

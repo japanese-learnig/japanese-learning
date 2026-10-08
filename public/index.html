@@ -90,6 +90,29 @@
       display: ruby-text !important;
     }
 
+    /* Sleek custom scrollbars for folder list & unit indexes */
+    #folderButtonsContainer::-webkit-scrollbar,
+    #folderButtonsContainerMobile::-webkit-scrollbar,
+    .units-scroll-container::-webkit-scrollbar {
+      width: 5px;
+    }
+    #folderButtonsContainer::-webkit-scrollbar-track,
+    #folderButtonsContainerMobile::-webkit-scrollbar-track,
+    .units-scroll-container::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    #folderButtonsContainer::-webkit-scrollbar-thumb,
+    #folderButtonsContainerMobile::-webkit-scrollbar-thumb,
+    .units-scroll-container::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    #folderButtonsContainer::-webkit-scrollbar-thumb:hover,
+    #folderButtonsContainerMobile::-webkit-scrollbar-thumb:hover,
+    .units-scroll-container::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+
     /* 3D Skeuomorphic Toggle Switch (中ピンク & ぷっくり立体感) */
     .toggle-pill-track {
       position: relative;
@@ -447,7 +470,7 @@
               <span id="btnShuffleAllLabel">Shuffle All Units</span>
             </button>
           </div>
-          <div class="flex flex-col space-y-2 max-h-[calc(100vh-180px)] overflow-y-auto no-scrollbar pr-0.5 pb-24" id="folderButtonsContainer">
+          <div class="flex flex-col space-y-2 max-h-[calc(100vh-180px)] overflow-y-auto pr-1 pb-24" id="folderButtonsContainer">
             <!-- Dynamically populated vertical accordion folders -->
           </div>
         </div>
@@ -1509,8 +1532,8 @@
   <script src="database/dictionary_data.js?v=20261008_1440"></script>
   <script src="database/dict_examples_map.js?v=20261008_1440"></script>
   <script src="database/class_vocab_data.js?v=20261008_1440"></script>
-  <script src="js/data.js?v=20261008_1600"></script>
-  <script src="js/app.js?v=20261008_1600"></script>
+  <script src="js/data.js?v=20261008_1645"></script>
+  <script src="js/app.js?v=20261008_1645"></script>
   <script>
     if (window.lucide) {
       lucide.createIcons();
