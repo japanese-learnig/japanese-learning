@@ -513,29 +513,27 @@
   // --- Data Loading & Persistence ---
   function initData() {
     // Master data version check to ensure newly added cards & furigana updates are immediately visible
-    const CURRENT_DATA_VERSION = 'v46_natural_furigana_all';
+    const CURRENT_DATA_VERSION = 'v50_student_isolated_vocab_clean';
     const savedVersion = localStorage.getItem('haku_vocab_version');
 
     const seedCards = window.INITIAL_VOCAB_DATA || [];
-    const classCards = window.CLASS_VOCAB_DATA || [];
-    const combinedMasterCards = [...seedCards, ...classCards];
-    const masterCardMap = new Map();
-    combinedMasterCards.forEach(c => masterCardMap.set(c.id, c));
+    const seedCardMap = new Map();
+    seedCards.forEach(c => seedCardMap.set(c.id, c));
 
     if (savedVersion !== CURRENT_DATA_VERSION) {
-      // Refresh with latest master data while keeping genuinely custom created cards
+      // Refresh with latest master curriculum while keeping genuinely custom created cards for all students
       const savedVocab = localStorage.getItem('haku_vocab_data');
       if (savedVocab) {
         try {
           const oldList = JSON.parse(savedVocab);
-          // Only preserve cards that are genuinely custom (user added) and not part of master class_word or seed
-          const customCards = oldList.filter(c => c.isCustom && !masterCardMap.has(c.id));
-          vocabList = [...combinedMasterCards, ...customCards];
+          // Only preserve cards that are genuinely custom for all students and not student-specific class_word_*
+          const customSharedCards = oldList.filter(c => c.isCustom && !seedCardMap.has(c.id) && !c.id.startsWith('class_word_') && (!c.studentId || c.studentId === 'all'));
+          vocabList = [...seedCards, ...customSharedCards];
         } catch (e) {
-          vocabList = combinedMasterCards;
+          vocabList = [...seedCards];
         }
       } else {
-        vocabList = combinedMasterCards;
+        vocabList = [...seedCards];
       }
       localStorage.setItem('haku_vocab_data', JSON.stringify(vocabList));
 
@@ -637,13 +635,13 @@
       if (savedVocab) {
         try {
           const oldList = JSON.parse(savedVocab);
-          const customCards = oldList.filter(c => c.isCustom && !masterCardMap.has(c.id));
-          vocabList = [...combinedMasterCards, ...customCards];
+          const cleanList = oldList.filter(c => !c.id.startsWith('class_word_') && (!c.studentId || c.studentId === 'all'));
+          vocabList = cleanList.length > 0 ? cleanList : [...seedCards];
         } catch (e) {
-          vocabList = combinedMasterCards;
+          vocabList = [...seedCards];
         }
       } else {
-        vocabList = combinedMasterCards;
+        vocabList = [...seedCards];
       }
 
       const savedStudents = localStorage.getItem('haku_students');
@@ -1117,16 +1115,33 @@
 
     const hiraQuery = toHiragana(rawQuery);
 
-    // Search Curriculum Words
+    // 1. Search Curriculum Words (shared by everyone)
     let curFiltered = vocabList.map(c => {
       const score = calculateSearchRelevance(c, rawQuery, hiraQuery);
       return { card: c, score };
     }).filter(item => item.score > 0);
 
-    // Search Dictionary Words
+    // 2. Search Current Student's Personal My List ONLY
+    const studentMylistCards = getMylistCards();
+    const curriculumIds = new Set(vocabList.map(c => c.id));
+    const curriculumWords = new Set(vocabList.map(c => c.word));
+    let mylistFiltered = [];
+    studentMylistCards.forEach(c => {
+      if (!c || curriculumIds.has(c.id) || curriculumWords.has(c.word)) return;
+      const score = calculateSearchRelevance(c, rawQuery, hiraQuery);
+      if (score > 0) {
+        // Boost relevance so the student's own learned words appear prominently
+        mylistFiltered.push({ card: c, score: score + 120 });
+      }
+    });
+
+    // 3. Search Dictionary Words
     const dictSource = window.DICT_DATA || [];
     const exMap = window.DICT_EXAMPLES_MAP || {};
-    const knownWords = new Set(vocabList.map(c => c.word));
+    const knownWords = new Set([
+      ...vocabList.map(c => c.word),
+      ...studentMylistCards.map(c => c.word)
+    ]);
 
     let dictFiltered = [];
     for (let idx = 0; idx < dictSource.length; idx++) {
@@ -1177,7 +1192,7 @@
     }
 
     // Combine and sort strictly by relevance score descending
-    const allScored = [...curFiltered, ...dictFiltered];
+    const allScored = [...curFiltered, ...mylistFiltered, ...dictFiltered];
     allScored.sort((a, b) => b.score - a.score);
 
     const results = allScored.map(item => item.card);
@@ -1238,6 +1253,11 @@
         const isStarred = mylistSet.has(card.id) || mylistSet.has(card.word);
         const isExpanded = expandedWordId === card.id;
 
+        let displayCategory = card.category || (card.isDict ? '辞書' : '一般');
+        if (displayCategory === '授業で習った言葉' && !isStarred) {
+          displayCategory = card.isDict ? '辞書' : '一般';
+        }
+
         const itemCard = document.createElement('div');
         itemCard.className = `rounded-2xl border transition-all overflow-hidden ${
           isExpanded
@@ -1254,7 +1274,7 @@
               <div class="flex items-baseline flex-wrap gap-x-2 gap-y-0.5">
                 <span class="text-base sm:text-lg font-black text-darkNavyText font-jp leading-tight">${card.word}</span>
                 ${card.reading && card.reading !== card.word ? `<span class="text-xs sm:text-sm font-bold text-coralPink font-jp">（${card.reading}）</span>` : ''}
-                ${card.category ? `<span class="text-[10px] sm:text-xs px-2 py-0.5 rounded-full font-bold ${card.isDict ? 'bg-slate-100 text-slate-600' : 'bg-lightBlueBg text-deepNavy'}">${card.category}</span>` : ''}
+                ${displayCategory ? `<span class="text-[10px] sm:text-xs px-2 py-0.5 rounded-full font-bold ${card.isDict ? 'bg-slate-100 text-slate-600' : 'bg-lightBlueBg text-deepNavy'}">${displayCategory}</span>` : ''}
               </div>
               <p class="text-xs sm:text-sm text-slate-700 font-medium leading-snug truncate mt-1">${targetMeaning}</p>
             </div>
@@ -1360,7 +1380,8 @@
           document.getElementById('unitListPanel').classList.add('hidden');
           document.getElementById('activeStudyHeader').classList.remove('hidden');
           document.getElementById('activeStudySectionName').textContent = card.word;
-          document.getElementById('activeStudyFolderName').textContent = card.category || (currentLang === 'ja' ? '検索単語' : 'Search Word');
+          let studyCat = displayCategory || (currentLang === 'ja' ? '検索単語' : 'Search Word');
+          document.getElementById('activeStudyFolderName').textContent = studyCat;
           renderCurrentCard();
           showToast(currentLang === 'ja' ? `「${card.word}」のカードを表示しました（←で一覧に戻れます）` : `Loaded "${card.word}" flashcard (Tap ← to go back)`);
         };
@@ -2250,8 +2271,12 @@
       document.getElementById('backMeaning').textContent = `${card.word} (${card.reading || ''})`;
     }
 
-    document.getElementById('frontCategoryBadge').textContent = card.category || '一般';
-    document.getElementById('backCategoryBadge').textContent = card.category || '一般';
+    let currentCardCategory = card.category || '一般';
+    if (currentCardCategory === '授業で習った言葉' && !mylistSet.has(card.id) && !mylistSet.has(card.word)) {
+      currentCardCategory = card.isDict ? '辞書' : '一般';
+    }
+    document.getElementById('frontCategoryBadge').textContent = currentCardCategory;
+    document.getElementById('backCategoryBadge').textContent = currentCardCategory;
     document.getElementById('backWordHeader').textContent = card.word;
     document.getElementById('backReadingHeader').textContent = card.reading ? `（${card.reading}）` : '';
 
@@ -2558,7 +2583,9 @@
         found = storedCustom.find(c => c.id === cardId || c.word === cardId);
         if (found) {
           found.isCustom = true;
-          vocabList.push(found);
+          if (!found.studentId || found.studentId === 'all') {
+            if (!vocabList.find(c => c.id === found.id)) vocabList.push(found);
+          }
           return found;
         }
       }
@@ -3131,14 +3158,24 @@
           related: related || (reading ? `${reading}` : '重要表現')
         };
 
-        vocabList.push(newCard);
+        if (target === 'all') {
+          vocabList.push(newCard);
+        } else {
+          try {
+            const stored = JSON.parse(localStorage.getItem('haku_all_custom_cards') || '[]');
+            stored.push(newCard);
+            localStorage.setItem('haku_all_custom_cards', JSON.stringify(stored));
+          } catch (e) {}
+        }
         addedCardIds.push(cardId);
         addedCount++;
       }
     });
 
     if (addedCount > 0) {
-      localStorage.setItem('haku_vocab_data', JSON.stringify(vocabList));
+      if (target === 'all') {
+        localStorage.setItem('haku_vocab_data', JSON.stringify(vocabList));
+      }
 
       // Auto-add to My List and assign to requested folder!
       if (targetFolderSelect !== 'none') {
@@ -3182,7 +3219,13 @@
           // Synchronize to Cloud for this student so their devices receive the new words AND the card definitions
           if (isFirebaseReady && fbDb && stId !== 'guest') {
             const mylistCardIds = new Set(setObj);
-            const studentCustomCards = vocabList.filter(c => mylistCardIds.has(c.id) && c.id.startsWith('card_'));
+            let studentCustomCards = [];
+            try {
+              const storedCustom = JSON.parse(localStorage.getItem('haku_all_custom_cards') || '[]');
+              studentCustomCards = [...vocabList, ...storedCustom].filter(c => mylistCardIds.has(c.id) && c.id.startsWith('card_'));
+            } catch (e) {
+              studentCustomCards = vocabList.filter(c => mylistCardIds.has(c.id) && c.id.startsWith('card_'));
+            }
             fbDb.collection('students').doc(stId).set({
               mylist: Array.from(setObj),
               folders: stFolders,
@@ -4616,8 +4659,19 @@
 
     // 既存カードを探索、なければカスタム辞書カードを作成
     let card = vocabList.find(c => c.word === cleanWord || c.id === cleanWord);
+    if (!card) {
+      card = getMylistCards().find(c => c.word === cleanWord || c.id === cleanWord);
+    }
     if (!card && window.CLASS_VOCAB_DATA) {
-      card = window.CLASS_VOCAB_DATA.find(c => c.word === cleanWord);
+      const classCard = window.CLASS_VOCAB_DATA.find(c => c.word === cleanWord);
+      if (classCard) {
+        card = {
+          ...classCard,
+          id: `custom_ex_${cleanWord}_${Date.now()}`,
+          category: '例文から保存',
+          section_title: '例文から保存した単語'
+        };
+      }
     }
     if (!card && window.DICT_DATA) {
       const entry = window.DICT_DATA.find(d => d.w === cleanWord);
@@ -4714,9 +4768,18 @@
     // 漢字1文字ずつのリスト（例: 「待」や「分以上」の「分」「以」「上」）
     const kanjiChars = Array.from(new Set(cleanWord.match(/[\u4e00-\u9fff]/g) || []));
 
-    // --- 1. カリキュラム単語（vocabList）からスコアリング検索 ---
+    // --- 1. カリキュラム単語（vocabList）＋ 生徒のマイリスト単語からスコアリング検索 ---
     let matchedCurriculumCards = [];
-    vocabList.forEach(c => {
+    const lookupPool = [...vocabList];
+    const poolIds = new Set(vocabList.map(c => c.id));
+    getMylistCards().forEach(mc => {
+      if (mc && !poolIds.has(mc.id)) {
+        lookupPool.push(mc);
+        poolIds.add(mc.id);
+      }
+    });
+
+    lookupPool.forEach(c => {
       let score = 0;
       if (c.word === cleanWord || (c.reading && c.reading === cleanWord)) score = 10000;
       else if (searchCandidates.includes(c.word)) score = 8000;
@@ -4812,9 +4875,12 @@
 
     if (bestCurriculum && bestCurriculum.score >= 8000) {
       const c = bestCurriculum.card;
+      const isStarred = mylistSet.has(c.id) || mylistSet.has(c.word);
       topWord = c.word;
       topReading = c.reading || hintReading || '';
-      topCategory = c.category || '授業で習った言葉';
+      let cat = c.category || '一般';
+      if (cat === '授業で習った言葉' && !isStarred) cat = '辞書';
+      topCategory = cat;
       topMeaningText = getBilingualMeaning(c.meaning, currentLang);
       topCardForSave = c;
     } else if (bestDict && bestDict.score >= 8000) {
@@ -4839,9 +4905,12 @@
     } else if (bestCurriculum) {
       // 関連する単語としてカリキュラムの語彙がトップ
       const c = bestCurriculum.card;
+      const isStarred = mylistSet.has(c.id) || mylistSet.has(c.word);
       topWord = c.word;
       topReading = c.reading || hintReading || '';
-      topCategory = c.category || '授業で習った言葉';
+      let cat = c.category || '一般';
+      if (cat === '授業で習った言葉' && !isStarred) cat = '辞書';
+      topCategory = cat;
       topMeaningText = getBilingualMeaning(c.meaning, currentLang);
       topCardForSave = c;
       isTopFromRelated = true;
@@ -4893,11 +4962,14 @@
     matchedCurriculumCards.forEach(mc => {
       if (!usedWordKeys.has(mc.card.word)) {
         usedWordKeys.add(mc.card.word);
+        const isStarred = mylistSet.has(mc.card.id) || mylistSet.has(mc.card.word);
+        let cat = mc.card.category || '一般';
+        if (cat === '授業で習った言葉' && !isStarred) cat = '辞書';
         relatedList.push({
           word: mc.card.word,
           reading: mc.card.reading || '',
-          category: mc.card.category || '授業で習った言葉',
-          badgeClass: 'bg-rose-100 text-rose-800',
+          category: cat,
+          badgeClass: (cat === '授業で習った言葉') ? 'bg-lightBlueBg text-deepNavy' : 'bg-rose-100 text-rose-800',
           meaning: getBilingualMeaning(mc.card.meaning, currentLang),
           cardObj: mc.card
         });
