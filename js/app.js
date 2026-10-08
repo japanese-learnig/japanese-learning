@@ -522,9 +522,8 @@
     if (activeHeader && !activeHeader.classList.contains('hidden') && typeof FOLDER_CONFIGS !== 'undefined') {
       const fc = FOLDER_CONFIGS.find(f => f.id === currentFolder);
       if (currentSection !== 'all') {
-        const sectionsCatalog = window.SECTIONS_DATA || [];
-        const catalogItem = sectionsCatalog.find(s => s.num === currentSection);
-        const rawSecTitle = catalogItem ? catalogItem.title : (window.SECTIONS && window.SECTIONS[currentSection]) || `単元${currentSection}`;
+        const secInfo = getCatalogSection(currentSection);
+        const rawSecTitle = secInfo ? secInfo.title : `単元${currentSection}`;
         document.getElementById('activeStudySectionName').textContent = getBilingualSectionTitle(currentSection, rawSecTitle, lang);
       } else if (fc) {
         document.getElementById('activeStudySectionName').textContent = `${getBilingualFolderTitle(fc, lang)} (${isJa ? '全単元' : 'All Units'})`;
@@ -539,7 +538,7 @@
   // --- Data Loading & Persistence ---
   function initData() {
     // Master data version check to ensure newly added cards & furigana updates are immediately visible
-    const CURRENT_DATA_VERSION = 'v51_fix_student_custom_cards_sync';
+    const CURRENT_DATA_VERSION = 'v52_guarantee_all_sections_1_43';
     const savedVersion = localStorage.getItem('haku_vocab_version');
 
     const seedCards = window.INITIAL_VOCAB_DATA || [];
@@ -979,12 +978,74 @@
     }
   ];
 
+  // Master Catalog of all 44 curriculum units (0 to 43) to guarantee 100% availability
+  const MASTER_SECTIONS_CATALOG = [
+    { num: 0, title: 'まずは授業で使う単語を覚えよう！', folder_id: 'folder_1' },
+    { num: 1, title: 'simple phrase', folder_id: 'folder_1' },
+    { num: 2, title: '身の回りのもの', folder_id: 'folder_1' },
+    { num: 3, title: '代名詞/家族', folder_id: 'folder_1' },
+    { num: 4, title: '場所', folder_id: 'folder_1' },
+    { num: 5, title: '動物', folder_id: 'folder_1' },
+    { num: 6, title: '職業/身分', folder_id: 'folder_1' },
+    { num: 7, title: '国/地名', folder_id: 'folder_1' },
+    { num: 8, title: '体の名前', folder_id: 'folder_1' },
+    { num: 9, title: '位置', folder_id: 'folder_1' },
+    { num: 10, title: '基本の数字', folder_id: 'folder_1' },
+    { num: 11, title: '日付（月/日）', folder_id: 'folder_2' },
+    { num: 12, title: '時間/時間帯', folder_id: 'folder_2' },
+    { num: 13, title: 'もの/人の数え方', folder_id: 'folder_2' },
+    { num: 14, title: '時間/時制表現', folder_id: 'folder_2' },
+    { num: 15, title: '基本動詞(1)', folder_id: 'folder_2' },
+    { num: 16, title: '乗り物', folder_id: 'folder_2' },
+    { num: 17, title: '時間/頻度', folder_id: 'folder_2' },
+    { num: 18, title: '食べ物', folder_id: 'folder_2' },
+    { num: 19, title: '基本動詞(2)', folder_id: 'folder_2' },
+    { num: 20, title: 'する動詞（名詞）', folder_id: 'folder_2' },
+    { num: 21, title: 'あいづち/接続し', folder_id: 'folder_3' },
+    { num: 22, title: 'い形容詞(1)', folder_id: 'folder_3' },
+    { num: 23, title: 'な形容詞', folder_id: 'folder_3' },
+    { num: 24, title: '色/味', folder_id: 'folder_3' },
+    { num: 25, title: '予定/映画/スポーツ', folder_id: 'folder_3' },
+    { num: 26, title: '季節/天気', folder_id: 'folder_3' },
+    { num: 27, title: '基本動詞(3)', folder_id: 'folder_3' },
+    { num: 28, title: 'お出掛け', folder_id: 'folder_3' },
+    { num: 29, title: '電車', folder_id: 'folder_3' },
+    { num: 30, title: '基本動詞(1) てform', folder_id: 'folder_3' },
+    { num: 31, title: '基本動詞(2) てform', folder_id: 'folder_4' },
+    { num: 32, title: '基本動詞(3) てform', folder_id: 'folder_4' },
+    { num: 33, title: '基本動詞(4)', folder_id: 'folder_4' },
+    { num: 34, title: '基本動詞(5)', folder_id: 'folder_4' },
+    { num: 35, title: 'い形容詞(2)', folder_id: 'folder_4' },
+    { num: 36, title: '病気/症状', folder_id: 'folder_4' },
+    { num: 37, title: '基本動詞 ないform (1)', folder_id: 'folder_4' },
+    { num: 38, title: '基本動詞 ないform (2)', folder_id: 'folder_4' },
+    { num: 39, title: '基本動詞 ないform (3)', folder_id: 'folder_4' },
+    { num: 40, title: '基本動詞 ないform (4)', folder_id: 'folder_4' },
+    { num: 41, title: '基本動詞 ないform (5)', folder_id: 'folder_4' },
+    { num: 42, title: '基本動詞 可能形 (1)', folder_id: 'folder_4' },
+    { num: 43, title: '基本動詞 可能形 (2)', folder_id: 'folder_4' }
+  ];
+
+  function getCatalogSection(secNum) {
+    const n = Number(secNum);
+    const item = MASTER_SECTIONS_CATALOG.find(s => s.num === n);
+    if (item) return item;
+    if (window.SECTIONS_DATA && Array.isArray(window.SECTIONS_DATA)) {
+      const fromWin = window.SECTIONS_DATA.find(s => Number(s.num) === n);
+      if (fromWin) return fromWin;
+    }
+    if (window.SECTIONS && window.SECTIONS[secNum]) {
+      return { num: n, title: window.SECTIONS[secNum] };
+    }
+    return { num: n, title: `単元${secNum}` };
+  }
+
   // Multilingual translations for all 44 curriculum unit titles
   const SECTION_TRANSLATIONS = {
     0: { en: 'Classroom Phrases', zh_TW: '課堂常用句', zh_CN: '课堂常用句', ko: '수업 필수 표현', zh_HK: '課堂常用句', fr: 'Phrases de classe' },
     1: { en: 'Simple Phrases', zh_TW: '簡易短句', zh_CN: '简易短句', ko: '간단한 표현', zh_HK: '簡易短句', fr: 'Phrases simples' },
     2: { en: 'Everyday Objects', zh_TW: '隨身物品', zh_CN: '随身物品', ko: '주변 사물', zh_HK: '隨身物品', fr: 'Objets du quotidien' },
-    3: { en: 'Pronouns & Family', zh_TW: '代名詞與家族', zh_CN: '代名词与家族', ko: '대명사 및 가족', zh_HK: '代名詞與家族', fr: 'Pronoms et Famille' },
+    3: { en: 'Pronouns & Family', zh_TW: '代名詞與家族', zh_CN: '代名词与家族', ko: '대명사 및家族', zh_HK: '代名詞與家族', fr: 'Pronoms et Famille' },
     4: { en: 'Places', zh_TW: '場所', zh_CN: '场所', ko: '장소', zh_HK: '場所', fr: 'Lieux' },
     5: { en: 'Animals', zh_TW: '動物', zh_CN: '动物', ko: '동물', zh_HK: '動物', fr: 'Animaux' },
     6: { en: 'Occupations & Status', zh_TW: '職業與身分', zh_CN: '职业与身分', ko: '직업 및 신분', zh_HK: '職業與身分', fr: 'Métiers et Statut' },
@@ -1029,7 +1090,8 @@
 
   // Helper to format bilingual title: 日本語 (各言語訳)
   function getBilingualSectionTitle(secNum, rawJapaneseTitle, lang) {
-    const jpTitle = rawJapaneseTitle || (SECTION_TRANSLATIONS[secNum] ? SECTION_TRANSLATIONS[secNum].ja : `単元${secNum}`);
+    const sInfo = getCatalogSection(secNum);
+    const jpTitle = rawJapaneseTitle || (sInfo ? sInfo.title : `単元${secNum}`);
     if (lang === 'ja' || !lang) {
       return jpTitle;
     }
@@ -1129,14 +1191,11 @@
         }
 
         secNumsToRender.forEach(secNum => {
-          const catalogItem = sectionsCatalog.find(s => s.num === secNum);
-          if (!catalogItem && !sectionsMap[secNum] && vocabList.filter(c => c.section_num === secNum).length === 0) {
-            return;
-          }
-          const rawSecTitle = (catalogItem && catalogItem.title) || sectionsMap[secNum] || `${secNum}. 単元${secNum}`;
+          const secInfo = getCatalogSection(secNum);
+          const rawSecTitle = (secInfo && secInfo.title) || `${secNum}. 単元${secNum}`;
           const bilingualTitle = getBilingualSectionTitle(secNum, rawSecTitle, currentLang);
-          const count = vocabList.filter(c => c.section_num === secNum).length;
-          const isCurrentActive = (currentSection == secNum && currentFolder === fc.id);
+          const count = vocabList.filter(c => Number(c.section_num) === Number(secNum)).length;
+          const isCurrentActive = (Number(currentSection) === Number(secNum) && currentFolder === fc.id);
           const numDisplay = secNum === 0 ? '★' : `${secNum}`;
 
           const unitItem = document.createElement('div');
@@ -2293,20 +2352,14 @@
         secNumsToRender.push(s);
       }
 
-      const sectionsCatalog = window.SECTIONS_DATA || [];
-      const sectionsMap = window.SECTIONS || {};
-
       secNumsToRender.forEach(secNum => {
-        const catalogItem = sectionsCatalog.find(s => s.num === secNum);
-        if (!catalogItem && !sectionsMap[secNum] && vocabList.filter(c => c.section_num === secNum).length === 0) {
-          return;
-        }
-        const rawSecTitle = (catalogItem && catalogItem.title) || sectionsMap[secNum] || `${secNum}. 単元${secNum}`;
+        const secInfo = getCatalogSection(secNum);
+        const rawSecTitle = (secInfo && secInfo.title) || `${secNum}. 単元${secNum}`;
         const bilingualTitle = getBilingualSectionTitle(secNum, rawSecTitle, currentLang);
-        const secCards = vocabList.filter(c => c.section_num === secNum);
+        const secCards = vocabList.filter(c => Number(c.section_num) === Number(secNum));
         const numDisplay = secNum === 0 ? '★' : `${secNum}`;
 
-        const isCurrentActive = (currentSection == secNum && currentFolder === fc.id);
+        const isCurrentActive = (Number(currentSection) === Number(secNum) && currentFolder === fc.id);
 
         const unitItem = document.createElement('div');
         unitItem.className = `group flex items-center justify-between px-3 py-2 rounded-xl cursor-pointer transition text-xs ${
@@ -2369,8 +2422,6 @@
     container.innerHTML = '';
 
     const [minSec, maxSec] = fc.range;
-    const sectionsCatalog = window.SECTIONS_DATA || [];
-    const sectionsMap = window.SECTIONS || {};
 
     const secNumsToRender = [];
     if (folderId === 'folder_1') {
@@ -2381,13 +2432,10 @@
     }
 
     secNumsToRender.forEach(secNum => {
-      const catalogItem = sectionsCatalog.find(s => s.num === secNum);
-      if (!catalogItem && !sectionsMap[secNum] && vocabList.filter(c => c.section_num === secNum).length === 0) {
-        return;
-      }
-      const rawSecTitle = (catalogItem && catalogItem.title) || sectionsMap[secNum] || `${secNum}. 単元${secNum}`;
+      const secInfo = getCatalogSection(secNum);
+      const rawSecTitle = (secInfo && secInfo.title) || `${secNum}. 単元${secNum}`;
       const bilingualTitle = getBilingualSectionTitle(secNum, rawSecTitle, currentLang);
-      const secCards = vocabList.filter(c => c.section_num === secNum);
+      const secCards = vocabList.filter(c => Number(c.section_num) === Number(secNum));
       const numDisplay = secNum === 0 ? '★' : `${secNum}`;
 
       const unitBtn = document.createElement('button');
@@ -2523,7 +2571,7 @@
 
     // Filter by Section
     if (currentSection !== 'all') {
-      pool = pool.filter(card => card.section_num == currentSection);
+      pool = pool.filter(card => Number(card.section_num) === Number(currentSection));
     }
 
     activeDeck = pool;
