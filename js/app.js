@@ -1544,24 +1544,119 @@
     }
   }
 
-  // --- PC / Mobile Layout (Responsive 2-Column on Desktop, Centered on Mobile) ---
+  // --- PC / Tablet / Mobile Layout (Responsive 2-Column on Desktop & Tablet, Centered on Mobile) ---
+  function isTabletOrDesktop() {
+    const ua = navigator.userAgent || '';
+    const touchPoints = navigator.maxTouchPoints || 0;
+    // iPad (including iPadOS 13+ which presents as MacIntel with touch points)
+    const isIpad = (/iPad/i.test(ua)) || (/Macintosh/i.test(ua) && touchPoints > 1);
+    // Android tablet: Android UA without Mobile, or containing Tablet
+    const isAndroidTablet = (/Android/i.test(ua) && !/Mobile/i.test(ua)) || (/Tablet/i.test(ua));
+    // Screen width: tablets / PC screens (>= 768px)
+    const isWide = (window.innerWidth || 0) >= 768;
+    return isIpad || isAndroidTablet || isWide;
+  }
+
   function initLayoutMode() {
     const sidebar = document.getElementById('vocabSidebar');
     const mainContainer = document.getElementById('mainContainer');
+    const viewFlashcards = document.getElementById('viewFlashcards');
+    const btnMarkReview = document.getElementById('btnMarkReview');
+    const btnMarkKnown = document.getElementById('btnMarkKnown');
+    const containerToggleAutoAudio = document.getElementById('containerToggleAutoAudio');
+    const containerToggleFurigana = document.getElementById('containerToggleFurigana');
+    const btnToggleAutoAudioMobile = document.getElementById('btnToggleAutoAudioMobile');
+    const btnToggleFuriganaMobile = document.getElementById('btnToggleFuriganaMobile');
+    const folderOverviewPanel = document.getElementById('folderOverviewPanel');
 
     function applyLayout() {
-      const isDesktop = window.innerWidth >= 768;
-      if (isDesktop) {
-        if (sidebar) sidebar.classList.remove('hidden');
-        if (mainContainer) mainContainer.className = 'flex-1 w-full max-w-5xl mx-auto p-3 sm:p-4 transition-all';
-      } else {
-        if (sidebar) sidebar.classList.add('hidden');
-        if (mainContainer) mainContainer.className = 'flex-1 w-full max-w-md mx-auto p-3 sm:p-4 transition-all';
+      const isDesktop = isTabletOrDesktop();
+
+      // 1. Sidebar & Main Container (2-Column on Desktop & Tablet)
+      if (sidebar) {
+        if (isDesktop) {
+          sidebar.classList.remove('hidden');
+          sidebar.classList.add('block');
+        } else {
+          sidebar.classList.add('hidden');
+          sidebar.classList.remove('block');
+        }
+      }
+      if (mainContainer) {
+        mainContainer.className = isDesktop
+          ? 'flex-1 w-full max-w-5xl mx-auto p-3 sm:p-4 transition-all'
+          : 'flex-1 w-full max-w-md mx-auto p-3 sm:p-4 transition-all';
+      }
+
+      // 2. Flashcard side-by-side flex layout on PC & Tablet
+      if (viewFlashcards) {
+        if (isDesktop) {
+          viewFlashcards.classList.remove('flex-col');
+          viewFlashcards.classList.add('flex-row', 'items-start');
+        } else {
+          viewFlashcards.classList.remove('flex-row', 'items-start');
+          viewFlashcards.classList.add('flex-col');
+        }
+      }
+
+      // 3. PC-specific bottom buttons: 「もう一度！」「覚えた！」
+      if (btnMarkReview) {
+        if (isDesktop) {
+          btnMarkReview.classList.remove('hidden');
+          btnMarkReview.classList.add('flex');
+        } else {
+          btnMarkReview.classList.add('hidden');
+          btnMarkReview.classList.remove('flex');
+        }
+      }
+      if (btnMarkKnown) {
+        if (isDesktop) {
+          btnMarkKnown.classList.remove('hidden');
+          btnMarkKnown.classList.add('flex');
+        } else {
+          btnMarkKnown.classList.add('hidden');
+          btnMarkKnown.classList.remove('flex');
+        }
+      }
+
+      // 4. Header Audio & Furigana Switches
+      if (containerToggleAutoAudio) {
+        if (isDesktop) {
+          containerToggleAutoAudio.classList.remove('hidden');
+          containerToggleAutoAudio.classList.add('flex');
+        } else {
+          containerToggleAutoAudio.classList.add('hidden');
+          containerToggleAutoAudio.classList.remove('flex');
+        }
+      }
+      if (containerToggleFurigana) {
+        if (isDesktop) {
+          containerToggleFurigana.classList.remove('hidden');
+          containerToggleFurigana.classList.add('flex');
+        } else {
+          containerToggleFurigana.classList.add('hidden');
+          containerToggleFurigana.classList.remove('flex');
+        }
+      }
+      if (btnToggleAutoAudioMobile) {
+        if (isDesktop) btnToggleAutoAudioMobile.classList.add('hidden');
+        else btnToggleAutoAudioMobile.classList.remove('hidden');
+      }
+      if (btnToggleFuriganaMobile) {
+        if (isDesktop) btnToggleFuriganaMobile.classList.add('hidden');
+        else btnToggleFuriganaMobile.classList.remove('hidden');
+      }
+
+      // 5. Hide mobile folder overview panel when in Desktop/Tablet mode
+      if (folderOverviewPanel) {
+        if (isDesktop) folderOverviewPanel.classList.add('hidden');
+        else if (currentNavLevel === 'folders') folderOverviewPanel.classList.remove('hidden');
       }
     }
 
     applyLayout();
     window.addEventListener('resize', applyLayout);
+    window.addEventListener('orientationchange', () => setTimeout(applyLayout, 100));
   }
 
   function setStudent(student) {
@@ -5345,7 +5440,7 @@
   }
 
   function checkAndShowSwipeGuide(force = false) {
-    if (window.innerWidth < 768) {
+    if (!isTabletOrDesktop()) {
       const alreadyShown = sessionStorage.getItem('haku_swipe_guide_shown');
       if (!alreadyShown || force) {
         openSwipeGuideModal();
