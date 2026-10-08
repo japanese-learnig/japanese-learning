@@ -471,15 +471,29 @@
     const drawerMylistLabel = document.getElementById('drawerMylistLabel');
     if (drawerMylistLabel) drawerMylistLabel.textContent = isJa ? 'マイリスト' : 'My List';
     const drawerQuizLabel = document.getElementById('drawerQuizLabel');
-    if (drawerQuizLabel) drawerQuizLabel.textContent = isJa ? 'テスト' : 'Quiz / Test';
+    if (drawerQuizLabel) {
+      if (lang === 'ja') drawerQuizLabel.textContent = 'テスト';
+      else if (lang === 'zh_TW' || lang === 'zh_HK') drawerQuizLabel.textContent = '測驗 / 考試';
+      else if (lang === 'zh_CN') drawerQuizLabel.textContent = '测验 / 考试';
+      else if (lang === 'ko') drawerQuizLabel.textContent = '퀴즈 / 테스트';
+      else if (lang === 'fr') drawerQuizLabel.textContent = 'Quiz / Test';
+      else drawerQuizLabel.textContent = 'Quiz / Test';
+    }
+    const drawerHelpBtnText = document.getElementById('drawerHelpBtnText');
+    if (drawerHelpBtnText) {
+      if (lang === 'ja') drawerHelpBtnText.textContent = '使い方ガイド';
+      else if (lang === 'zh_TW' || lang === 'zh_HK') drawerHelpBtnText.textContent = '使用指南';
+      else if (lang === 'zh_CN') drawerHelpBtnText.textContent = '使用指南';
+      else if (lang === 'ko') drawerHelpBtnText.textContent = '이용 가이드';
+      else if (lang === 'fr') drawerHelpBtnText.textContent = 'Guide d\'utilisation';
+      else drawerHelpBtnText.textContent = 'Help Guide';
+    }
     const drawerLangLabel = document.getElementById('drawerLangLabel');
     if (drawerLangLabel) drawerLangLabel.textContent = isJa ? '母国語設定' : 'Native Language';
     const drawerStudentLabel = document.getElementById('drawerStudentLabel');
     if (drawerStudentLabel) drawerStudentLabel.textContent = isJa ? '生徒アカウント' : 'Student Account';
     const drawerHelpLabel = document.getElementById('drawerHelpLabel');
     if (drawerHelpLabel) drawerHelpLabel.textContent = isJa ? 'ヘルプ・ガイド' : 'Help & Guide';
-    const drawerHelpBtnText = document.getElementById('drawerHelpBtnText');
-    if (drawerHelpBtnText) drawerHelpBtnText.textContent = isJa ? '使い方ガイド' : 'Help Guide';
 
     // Update student badge in top header
     const headerStudentBadge = document.getElementById('headerStudentBadge');
@@ -2164,6 +2178,10 @@
     const drawer = document.getElementById('portalDrawer');
     const overlay = document.getElementById('portalDrawerOverlay');
     if (!drawer || !overlay) return;
+
+    if (window.lucide) {
+      lucide.createIcons({ root: drawer });
+    }
 
     overlay.classList.remove('hidden');
     // trigger reflow for smooth animation
