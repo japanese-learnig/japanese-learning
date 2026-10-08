@@ -277,11 +277,18 @@
     const isJa = (lang === 'ja');
 
     // 1. Top Header & Search
+    const searchPlaceholders = {
+      ja: '辞書・単語検索...',
+      en: 'Search words...',
+      zh_TW: '搜尋單字...',
+      zh_CN: '搜索单词...',
+      ko: '단어 검색...',
+      zh_HK: '搜尋單字...',
+      fr: 'Chercher un mot...'
+    };
     const topSearch = document.getElementById('globalTopSearchInput');
     if (topSearch) {
-      topSearch.placeholder = isJa 
-        ? '単語を検索...' 
-        : 'Search...';
+      topSearch.placeholder = searchPlaceholders[lang] || 'Search words...';
     }
 
     // 2. Navigation Tabs
