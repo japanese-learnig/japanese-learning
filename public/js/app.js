@@ -5251,30 +5251,60 @@
       badge: { ja: 'ステップ 4 / 音声機能', en: 'Step 4 / Audio & Voice' },
       title: { ja: '🔊 音声自動再生で耳から覚える', en: 'Auto Audio Playback' },
       subtitle: {
-        ja: '画面上部の「自動再生」をONにすると、カードを表示した時やめくった時に単語と例文が自動で流れます。',
-        en: 'Turn on "Auto Audio" in the top bar to automatically hear words and example sentences.'
+        ja: '画面上部の「自動再生」（スマホ版は「？」の左隣にある音のマーク 🔊）をONにすると、カードを表示した時やめくった時に単語と例文が自動で流れます。',
+        en: 'Turn on "Auto Audio" in the top bar (on mobile, tap the speaker icon 🔊 next to "?") to automatically hear words and example sentences.'
       },
-      diagramHtml: `
-        <div class="rounded-2xl bg-gradient-to-br from-rose-50/60 to-sky-50/60 border border-softBorder p-3 shadow-inner space-y-2.5">
-          <!-- スイッチUIの図解 -->
-          <div class="flex items-center justify-between bg-deepNavy text-white px-3 py-2 rounded-xl shadow-xs">
-            <div class="flex items-center space-x-1.5">
-              <span class="text-xs">🔊</span>
-              <span class="text-xs font-bold">自動再生スイッチ</span>
+      diagramHtml: (isJa) => `
+        <div class="rounded-2xl bg-gradient-to-br from-rose-50/60 to-sky-50/60 border border-softBorder p-2.5 sm:p-3 shadow-inner space-y-2.5">
+          <!-- スマホ版 vs PC版のUI比較カード -->
+          <div class="bg-deepNavy text-white p-2.5 rounded-xl shadow-xs space-y-2.5">
+            <!-- 📱 スマホ版: 音マークアイコン -->
+            <div class="flex items-center justify-between pb-2 border-b border-white/10">
+              <div class="flex items-center space-x-1.5">
+                <span class="text-xs">📱</span>
+                <div>
+                  <span class="text-[11px] font-bold block leading-tight">${isJa ? 'スマホ版（ヘッダー上部）' : 'Mobile (Top Header)'}</span>
+                  <span class="text-[9px] text-blue-200">${isJa ? '「？」の左隣の音マーク' : 'Speaker icon next to "?"'}</span>
+                </div>
+              </div>
+              <div class="flex items-center space-x-1.5 shrink-0">
+                <!-- ON -->
+                <div class="flex items-center space-x-1 bg-white/20 px-2 py-0.5 rounded-lg border border-white/30">
+                  <span class="w-6 h-6 rounded-full bg-white/30 text-white flex items-center justify-center text-xs shadow-2xs font-bold ring-1 ring-white/50">🔊</span>
+                  <span class="text-[10px] font-black text-emerald-300">ON</span>
+                </div>
+                <!-- OFF -->
+                <div class="flex items-center space-x-1 bg-white/5 px-2 py-0.5 rounded-lg border border-white/10 opacity-70">
+                  <span class="w-6 h-6 rounded-full bg-white/10 text-white/50 flex items-center justify-center text-xs shadow-2xs">🔇</span>
+                  <span class="text-[10px] font-bold text-slate-300">OFF</span>
+                </div>
+              </div>
             </div>
-            <div class="flex items-center space-x-1 bg-coralPink px-2.5 py-0.5 rounded-full border border-white text-[10px] font-black text-white shadow-2xs">
-              <span>ON</span>
-              <span class="w-3 h-3 rounded-full bg-white ml-1 inline-block"></span>
+
+            <!-- 💻 PC版: スイッチ -->
+            <div class="flex items-center justify-between pt-0.5">
+              <div class="flex items-center space-x-1.5">
+                <span class="text-xs">💻</span>
+                <span class="text-[11px] font-bold">${isJa ? 'PC版（トグルスイッチ）' : 'PC / Desktop (Switch)'}</span>
+              </div>
+              <div class="flex items-center space-x-1.5">
+                <span class="text-[10px] font-bold text-slate-200">${isJa ? '自動再生' : 'Auto Audio'}</span>
+                <div class="flex items-center space-x-1 bg-coralPink px-2.5 py-0.5 rounded-full border border-white text-[10px] font-black text-white shadow-2xs">
+                  <span>ON</span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-white ml-0.5 inline-block"></span>
+                </div>
+              </div>
             </div>
           </div>
+
           <!-- 音声ストップ機能の図解 -->
-          <div class="bg-white rounded-xl p-2.5 border border-slate-200 shadow-2xs space-y-1">
+          <div class="bg-white rounded-xl p-2 sm:p-2.5 border border-slate-200 shadow-2xs space-y-1">
             <div class="flex items-center space-x-1.5 text-[11px] font-bold text-slate-700">
-              <span class="w-5 h-5 rounded-full bg-coralPink text-white flex items-center justify-center text-[10px] shadow-2xs">🔊</span>
-              <span>音声ボタンをもう一度押すと停止（Stop）</span>
+              <span class="w-4 h-4 rounded-full bg-coralPink text-white flex items-center justify-center text-[9px] shadow-2xs">🔊</span>
+              <span>${isJa ? '音声ボタンをもう一度押すと停止（Stop）' : 'Tap voice button again to Stop'}</span>
             </div>
-            <p class="text-[10px] text-slate-500 leading-relaxed pl-6">
-              再生中に音声ボタンをもう一度タップすると、いつでもすぐにストップできます。
+            <p class="text-[10px] text-slate-500 leading-relaxed pl-5.5">
+              ${isJa ? '再生中に音声ボタンをもう一度タップすると、いつでもすぐにストップできます。' : 'Tap the voice button while playing to stop immediately anytime.'}
             </p>
           </div>
         </div>
@@ -5289,30 +5319,60 @@
       badge: { ja: 'ステップ 5 / 漢字練習', en: 'Step 5 / Furigana OFF' },
       title: { ja: '✍️ ふりがなOFFで漢字テスト', en: 'Practice Reading Kanji' },
       subtitle: {
-        ja: '「ふりがな」をOFFに切り替えると、漢字の上の読みが隠れるので、漢字を自力で読めるか確認・特訓できます。',
-        en: 'Turn Furigana OFF to hide hiragana readings above kanji and test your memory.'
+        ja: '「ふりがな」（スマホ版は音マークの左隣にある「あ」マーク）をOFFに切り替えると、漢字の上の読みが隠れるので、漢字を自力で読めるか確認・特訓できます。',
+        en: 'Turn Furigana OFF (on mobile, tap the "あ" icon next to speaker) to hide readings above kanji and test your memory.'
       },
-      diagramHtml: `
-        <div class="rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200 border border-slate-300 p-3 shadow-inner space-y-2.5">
-          <!-- スイッチUI -->
-          <div class="flex items-center justify-between bg-deepNavy text-white px-3 py-2 rounded-xl shadow-xs">
-            <div class="flex items-center space-x-1.5">
-              <span class="text-xs">あ/A</span>
-              <span class="text-xs font-bold">ふりがなスイッチ</span>
+      diagramHtml: (isJa) => `
+        <div class="rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200 border border-slate-300 p-2.5 sm:p-3 shadow-inner space-y-2.5">
+          <!-- スマホ版 vs PC版のUI比較カード -->
+          <div class="bg-deepNavy text-white p-2.5 rounded-xl shadow-xs space-y-2.5">
+            <!-- 📱 スマホ版: 「あ」アイコン -->
+            <div class="flex items-center justify-between pb-2 border-b border-white/10">
+              <div class="flex items-center space-x-1.5">
+                <span class="text-xs">📱</span>
+                <div>
+                  <span class="text-[11px] font-bold block leading-tight">${isJa ? 'スマホ版（ヘッダー上部）' : 'Mobile (Top Header)'}</span>
+                  <span class="text-[9px] text-blue-200">${isJa ? '音マークの左隣の「あ」マーク' : '"あ" icon next to speaker'}</span>
+                </div>
+              </div>
+              <div class="flex items-center space-x-1.5 shrink-0">
+                <!-- ON -->
+                <div class="flex items-center space-x-1 bg-white/20 px-2 py-0.5 rounded-lg border border-white/30">
+                  <span class="w-6 h-6 rounded-full bg-white/30 text-white flex items-center justify-center text-xs shadow-2xs font-black font-jp ring-1 ring-white/50">あ</span>
+                  <span class="text-[10px] font-black text-emerald-300">ON</span>
+                </div>
+                <!-- OFF -->
+                <div class="flex items-center space-x-1 bg-white/5 px-2 py-0.5 rounded-lg border border-white/10 opacity-70">
+                  <span class="w-6 h-6 rounded-full bg-white/10 text-white/50 flex items-center justify-center text-xs shadow-2xs font-bold font-jp line-through">あ</span>
+                  <span class="text-[10px] font-bold text-slate-300">OFF</span>
+                </div>
+              </div>
             </div>
-            <div class="flex items-center space-x-1 bg-slate-600 px-2.5 py-0.5 rounded-full border border-white text-[10px] font-black text-white shadow-2xs">
-              <span class="w-3 h-3 rounded-full bg-white mr-1 inline-block"></span>
-              <span>OFF</span>
+
+            <!-- 💻 PC版: スイッチ -->
+            <div class="flex items-center justify-between pt-0.5">
+              <div class="flex items-center space-x-1.5">
+                <span class="text-xs">💻</span>
+                <span class="text-[11px] font-bold">${isJa ? 'PC版（トグルスイッチ）' : 'PC / Desktop (Switch)'}</span>
+              </div>
+              <div class="flex items-center space-x-1.5">
+                <span class="text-[10px] font-bold text-slate-200">${isJa ? 'ふりがな' : 'Furigana'}</span>
+                <div class="flex items-center space-x-1 bg-slate-600 px-2.5 py-0.5 rounded-full border border-white text-[10px] font-black text-white shadow-2xs">
+                  <span class="w-2.5 h-2.5 rounded-full bg-white mr-0.5 inline-block"></span>
+                  <span>OFF</span>
+                </div>
+              </div>
             </div>
           </div>
+
           <!-- 比較イラスト -->
           <div class="grid grid-cols-2 gap-2 text-center text-xs">
-            <div class="bg-white p-2.5 rounded-xl border border-slate-200 shadow-2xs">
-              <span class="text-[10px] font-bold text-slate-400 block mb-1">【ON】 読みつき</span>
+            <div class="bg-white p-2 rounded-xl border border-slate-200 shadow-2xs">
+              <span class="text-[10px] font-bold text-slate-400 block mb-0.5">${isJa ? '【ON】 読みつき' : '【ON】 With Furigana'}</span>
               <ruby class="text-sm font-bold text-slate-800">朝ご飯<rt class="text-deepNavy">あさごはん</rt></ruby>
             </div>
-            <div class="bg-white p-2.5 rounded-xl border-2 border-coralPink shadow-2xs">
-              <span class="text-[10px] font-bold text-coralPink block mb-1">【OFF】 漢字チャレンジ</span>
+            <div class="bg-white p-2 rounded-xl border-2 border-coralPink shadow-2xs">
+              <span class="text-[10px] font-bold text-coralPink block mb-0.5">${isJa ? '【OFF】 漢字チャレンジ' : '【OFF】 Kanji Quiz'}</span>
               <span class="text-sm font-black text-slate-900">朝ご飯</span>
             </div>
           </div>
@@ -5400,7 +5460,7 @@
 
           <!-- イラスト・図解カード -->
           <div>
-            ${slide.diagramHtml}
+            ${typeof slide.diagramHtml === 'function' ? slide.diagramHtml(isJa) : slide.diagramHtml}
           </div>
 
           <!-- ヒント・アドバイス -->
