@@ -203,29 +203,11 @@
       }
     }
 
-    /* Swipe Badge / Feedback Styles */
-    .swipe-badge-learned {
-      position: absolute;
-      top: 16px;
-      left: 16px;
-      padding: 6px 14px;
-      border: 3px solid #10b981;
-      color: #059669;
-      background: rgba(236, 253, 245, 0.95);
-      font-size: 16px;
-      font-weight: 900;
-      border-radius: 9999px;
-      transform: rotate(-12deg);
-      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
-      pointer-events: none;
-      z-index: 30;
-      opacity: 0;
-      transition: opacity 0.15s ease;
-    }
+    /* Swipe Badge / Feedback Styles (左: もう一回！ / 右: 覚えた！) */
     .swipe-badge-review {
       position: absolute;
       top: 16px;
-      right: 16px;
+      left: 16px;
       padding: 6px 14px;
       border: 3px solid #f59e0b;
       color: #d97706;
@@ -233,10 +215,28 @@
       font-size: 16px;
       font-weight: 900;
       border-radius: 9999px;
-      transform: rotate(12deg);
+      transform: rotate(-12deg);
       box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
       pointer-events: none;
-      z-index: 30;
+      z-index: 50;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+    }
+    .swipe-badge-learned {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      padding: 6px 14px;
+      border: 3px solid #10b981;
+      color: #059669;
+      background: rgba(236, 253, 245, 0.95);
+      font-size: 16px;
+      font-weight: 900;
+      border-radius: 9999px;
+      transform: rotate(12deg);
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+      pointer-events: none;
+      z-index: 50;
       opacity: 0;
       transition: opacity 0.15s ease;
     }
@@ -543,12 +543,12 @@
         </div>
 
         <!-- 3D FLIP CARD CONTAINER -->
-        <div class="perspective-1000 flex-1 min-h-[350px] flex items-center justify-center my-1 cursor-pointer">
+        <div class="perspective-1000 flex-1 min-h-[350px] flex items-center justify-center my-1 cursor-pointer relative overflow-visible">
+          <!-- Dynamic Swipe Feedback Badges (左: もう一回！ / 右: 覚えた！) -->
+          <div id="swipeBadgeReview" class="swipe-badge-review">もう一回！ ⟲</div>
+          <div id="swipeBadgeLearned" class="swipe-badge-learned">覚えた！ ✓</div>
+
           <div id="flashcardElement" class="relative w-full h-[370px] rounded-3xl transition-transform duration-500 transform-style-3d shadow-md border-2 border-coralPink bg-white select-none">
-            
-            <!-- Dynamic Swipe Feedback Badges -->
-            <div id="swipeBadgeLearned" class="swipe-badge-learned">覚えた！ ✓</div>
-            <div id="swipeBadgeReview" class="swipe-badge-review">もう一回！ ⟲</div>
 
             <!-- FRONT FACE -->
             <div id="cardFront" class="absolute inset-0 w-full h-full rounded-3xl p-5 bg-white flex flex-col justify-between backface-hidden">
@@ -1333,9 +1333,11 @@
   <!-- スワイプ操作ガイド ポップアップ（スマホ版・フラッシュカード開始時に案内） -->
   <div id="swipeGuideModal" class="fixed inset-0 z-9999 hidden items-center justify-center bg-slate-900/60 backdrop-blur-xs p-4 animate-fade-in" onclick="if(event.target===this) closeSwipeGuideModal()">
     <div class="bg-white rounded-3xl max-w-xs w-full overflow-hidden shadow-2xl border-2 border-softBorder p-5 text-center animate-scale-up space-y-4">
-      <!-- アニメーション付きハンドアイコン -->
-      <div class="w-16 h-16 mx-auto rounded-3xl bg-amber-50 border border-amber-200 text-amber-500 flex items-center justify-center text-3xl shadow-inner">
-        👆
+      <!-- アニメーション付きハンドアイコン (左右スワイプ案内) -->
+      <div class="w-20 h-16 mx-auto rounded-3xl bg-amber-50 border border-amber-200 text-amber-500 flex items-center justify-center text-xl shadow-inner space-x-1">
+        <span>👈</span>
+        <span class="text-2xl">👆</span>
+        <span>👉</span>
       </div>
       
       <div>
@@ -1343,21 +1345,9 @@
         <p class="text-xs text-slate-500 font-medium leading-relaxed">スマホ版ではカードを左右にスワイプ（スラッシュ）して簡単に仕分けできます！</p>
       </div>
 
-      <!-- 左右のスワイプ案内ボックス -->
+      <!-- 左右のスワイプ案内ボックス (PC版と同じ配置: 左=もう一回！ / 右=覚えた！) -->
       <div class="grid grid-cols-2 gap-2 text-left">
-        <!-- わかった（右スワイプ） -->
-        <div class="p-3 rounded-2xl bg-emerald-50 border-2 border-emerald-300 flex flex-col justify-between space-y-1">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-black text-emerald-800">わかった！</span>
-            <span class="text-base">👉</span>
-          </div>
-          <p class="text-[11px] font-bold text-emerald-700 leading-snug">
-            右にスワイプ<br>
-            <span class="text-[9px] font-semibold text-emerald-600">『覚えた！』へ</span>
-          </p>
-        </div>
-
-        <!-- 覚えてない（左スワイプ） -->
+        <!-- 左: 覚えてない（左スワイプ / もう一回！） -->
         <div class="p-3 rounded-2xl bg-amber-50 border-2 border-amber-300 flex flex-col justify-between space-y-1">
           <div class="flex items-center justify-between">
             <span class="text-base">👈</span>
@@ -1366,6 +1356,18 @@
           <p class="text-[11px] font-bold text-amber-700 leading-snug">
             左にスワイプ<br>
             <span class="text-[9px] font-semibold text-amber-600">『もう一回！』へ</span>
+          </p>
+        </div>
+
+        <!-- 右: わかった！（右スワイプ / 覚えた！） -->
+        <div class="p-3 rounded-2xl bg-emerald-50 border-2 border-emerald-300 flex flex-col justify-between space-y-1">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-emerald-800">わかった！</span>
+            <span class="text-base">👉</span>
+          </div>
+          <p class="text-[11px] font-bold text-emerald-700 leading-snug">
+            右にスワイプ<br>
+            <span class="text-[9px] font-semibold text-emerald-600">『覚えた！』へ</span>
           </p>
         </div>
       </div>
