@@ -957,7 +957,7 @@
 
     <!-- ==================== VIEW 4: TEACHER ADMIN (先生用・非公開インポート) ==================== -->
     <div id="viewAdmin" class="max-w-md mx-auto hidden flex-col">
-      <div class="bg-white rounded-3xl p-5 border border-softBorder shadow-sm flex flex-col justify-between overflow-y-auto min-h-[480px]">
+      <div class="bg-white rounded-3xl p-3 sm:p-5 border border-softBorder shadow-sm flex flex-col justify-between overflow-y-auto min-h-[480px]">
         <div>
           <div class="flex items-center space-x-2 pb-3 border-b border-slate-100 mb-3">
             <div class="p-1.5 rounded-lg bg-lightBlueBg text-deepNavy">
@@ -1019,17 +1019,18 @@
           </div>
 
           <!-- Student PIN management -->
-          <div class="p-2.5 rounded-2xl bg-lightBlueBg/30 border border-softBorder mb-3">
+          <div class="p-2 sm:p-2.5 rounded-2xl bg-lightBlueBg/30 border border-softBorder mb-3">
+            <div class="flex items-center justify-between pb-2 mb-1.5 border-b border-softBorder/60">
               <div>
                 <span class="text-xs font-bold text-darkNavyText">登録生徒一覧（クリックで即時ログイン）</span>
-                <p class="text-[9px] text-slate-400">※名前または「ログイン」を押すとその生徒の画面に切り替わります</p>
+                <p class="text-[9px] text-slate-400">※名前またはアイコンを押すと生徒画面に切り替わります</p>
               </div>
-              <button id="btnAddNewStudent" class="px-2 py-0.5 rounded-full bg-deepNavy text-white text-[11px] font-bold shadow-2xs hover:opacity-90 flex items-center space-x-1">
-                <i data-lucide="user-plus" class="w-3 h-3"></i>
+              <button id="btnAddNewStudent" class="px-2 py-1 rounded-full bg-deepNavy text-white text-[11px] font-bold shadow-2xs hover:opacity-90 flex items-center space-x-1 shrink-0">
+                <i data-lucide="user-plus" class="w-3.5 h-3.5"></i>
                 <span>+ 生徒を追加</span>
               </button>
             </div>
-            <div id="adminStudentList" class="space-y-1.5 text-xs text-slate-600 max-h-[220px] overflow-y-auto pr-1">
+            <div id="adminStudentList" class="space-y-1.5 text-xs text-slate-600 max-h-[250px] overflow-y-auto pr-0.5">
               <!-- Render student logins -->
             </div>
           </div>
@@ -1498,12 +1499,12 @@
   <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
 
   <!-- Database & App Scripts -->
-  <script src="database/jlpt_vocab_all.js?v=20261008_0440"></script>
-  <script src="database/dictionary_data.js?v=20261008_0440"></script>
-  <script src="database/dict_examples_map.js?v=20261008_0440"></script>
-  <script src="database/class_vocab_data.js?v=20261008_0440"></script>
-  <script src="js/data.js?v=20261008_0440"></script>
-  <script src="js/app.js?v=20261008_0440"></script>
+  <script src="database/jlpt_vocab_all.js?v=20261008_1140"></script>
+  <script src="database/dictionary_data.js?v=20261008_1140"></script>
+  <script src="database/dict_examples_map.js?v=20261008_1140"></script>
+  <script src="database/class_vocab_data.js?v=20261008_1140"></script>
+  <script src="js/data.js?v=20261008_1140"></script>
+  <script src="js/app.js?v=20261008_1140"></script>
   <script>
     if (window.lucide) {
       lucide.createIcons();

@@ -2878,29 +2878,28 @@
       const isTeacher = (st.id === 'haku' || st.id === 'admin');
       const isCurrentLoggedIn = currentStudent && currentStudent.id === st.id;
       const row = document.createElement('div');
-      row.className = `flex items-center justify-between p-2 rounded-xl bg-white border transition ${
+      row.className = `flex items-center justify-between p-1.5 sm:p-2 rounded-xl bg-white border transition ${
         isCurrentLoggedIn ? 'border-coralPink bg-rose-50/30 ring-1 ring-coralPink/30' : 'border-slate-200 hover:border-slate-300'
-      } shadow-2xs text-xs`;
+      } shadow-2xs text-xs gap-1`;
       row.innerHTML = `
-        <div class="btn-select-student flex items-center space-x-1.5 truncate cursor-pointer hover:opacity-80 py-0.5" title="クリックしてこの生徒としてログイン">
-          <span class="font-mono text-[10px] font-bold px-1.5 py-0.5 rounded bg-slate-100 text-slate-700">${st.id}</span>
-          <span class="font-bold text-slate-800 truncate">${st.name}</span>
-          <span class="text-[9px] px-1.5 py-0.2 rounded font-semibold bg-lightBlueBg text-deepNavy">${st.lang}</span>
-          ${isCurrentLoggedIn ? '<span class="text-[9px] px-1 py-0.2 rounded font-bold bg-coralPink text-white">ログイン中</span>' : ''}
+        <div class="btn-select-student flex-1 min-w-0 flex items-center space-x-1 sm:space-x-1.5 cursor-pointer hover:opacity-80 py-0.5" title="クリックしてこの生徒としてログイン">
+          <span class="font-mono text-[9px] font-bold px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 shrink-0">${st.id}</span>
+          <span class="font-bold text-slate-800 truncate text-xs sm:text-sm font-jp">${st.name}</span>
+          <span class="text-[9px] px-1.5 py-0.2 rounded font-semibold bg-lightBlueBg text-deepNavy shrink-0">${st.lang}</span>
+          ${isCurrentLoggedIn ? '<span class="text-[9px] px-1.5 py-0.2 rounded font-bold bg-coralPink text-white shrink-0">利用中</span>' : ''}
         </div>
-        <div class="flex items-center space-x-1.5 shrink-0">
-          <span class="font-mono text-xs text-rose-600 font-bold bg-rose-50 px-2 py-0.5 rounded-lg border border-rose-100">
+        <div class="flex items-center space-x-0.5 shrink-0">
+          <span class="font-mono text-[10px] text-rose-600 font-bold bg-rose-50 px-1.5 py-0.5 rounded-md border border-rose-100 whitespace-nowrap" title="パスコード">
             PIN: ${st.passcode}
           </span>
           ${!isTeacher ? `
-            <button class="btn-login-as-student px-2 py-0.5 rounded-lg ${isCurrentLoggedIn ? 'bg-coralPink text-white' : 'bg-slate-100 hover:bg-deepNavy hover:text-white text-slate-700'} font-bold text-[10px] transition flex items-center space-x-1" title="この生徒としてログイン">
-              <i data-lucide="log-in" class="w-3 h-3"></i>
-              <span>${isCurrentLoggedIn ? '利用中' : 'ログイン'}</span>
+            <button class="btn-login-as-student p-1 sm:p-1.5 rounded-lg ${isCurrentLoggedIn ? 'bg-coralPink text-white shadow-2xs' : 'bg-slate-100 hover:bg-deepNavy hover:text-white text-slate-700'} transition flex items-center justify-center active:scale-95" title="${st.name}としてログイン">
+              <i data-lucide="log-in" class="w-3.5 h-3.5"></i>
             </button>
-            <button class="btn-edit-student p-1 text-slate-400 hover:text-sky-600 transition" title="生徒情報を編集">
+            <button class="btn-edit-student p-1 sm:p-1.5 rounded-lg text-slate-400 hover:text-sky-600 hover:bg-sky-50 transition active:scale-95" title="生徒情報を編集">
               <i data-lucide="edit-3" class="w-3.5 h-3.5"></i>
             </button>
-            <button class="btn-delete-student p-1 text-slate-300 hover:text-rose-500 transition" title="生徒を削除">
+            <button class="btn-delete-student p-1 sm:p-1.5 rounded-lg text-slate-300 hover:text-rose-500 hover:bg-rose-50 transition active:scale-95" title="生徒を削除">
               <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
             </button>
           ` : '<span class="text-[10px] text-slate-400 font-bold px-1">先生</span>'}
@@ -5940,6 +5939,10 @@
       window.speechSynthesis.onvoiceschanged = () => {
         window.speechSynthesis.getVoices();
       };
+    }
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('view')) {
+      switchView(urlParams.get('view'));
     }
   }
 
