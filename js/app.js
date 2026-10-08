@@ -280,8 +280,8 @@
     const topSearch = document.getElementById('globalTopSearchInput');
     if (topSearch) {
       topSearch.placeholder = isJa 
-        ? '単語を検索（漢字・ひらがな・ローマ字・英語・意味）...' 
-        : 'Search words (Kanji, Hiragana, Romaji, English, Meaning)...';
+        ? '単語を検索...' 
+        : 'Search...';
     }
 
     // 2. Navigation Tabs
@@ -5205,8 +5205,108 @@
       }
     },
     {
+      id: 'dict_card',
+      badge: { ja: 'ステップ 3 / 辞書機能', en: 'Step 3 / Dictionary' },
+      title: { ja: '📖 充実の辞書で言葉を深く理解', en: 'Rich Built-in Dictionary' },
+      subtitle: {
+        ja: '検索結果や単語カードをタップすると「辞書カード」が開きます。正確なふりがな・音声・母国語訳・実践的な会話例文・関連語までまとめて学べます！',
+        en: 'Tap any search result or card to open the Dictionary Card. Check accurate furigana, audio playback, native translations, real dialogues, and related words!'
+      },
+      diagramHtml: (isJa) => `
+        <div class="rounded-2xl bg-gradient-to-br from-sky-50/70 via-indigo-50/50 to-purple-50/70 border border-sky-200 p-2.5 sm:p-3 shadow-inner space-y-2">
+          <!-- 辞書カードのモックアップ -->
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-2.5 sm:p-3 space-y-2">
+            <!-- 単語ヘッダー -->
+            <div class="flex items-center justify-between pb-1.5 border-b border-slate-100">
+              <div>
+                <ruby class="text-base sm:text-lg font-black text-slate-900 font-jp">図書館<rt class="text-coralPink font-bold text-[10px]">としょかん</rt></ruby>
+                <span class="text-[9px] font-black px-1.5 py-0.5 rounded bg-teal-50 text-teal-700 border border-teal-200 ml-1.5">N5</span>
+              </div>
+              <!-- 発音ボタン -->
+              <span class="px-2 py-0.5 rounded-full bg-deepNavy text-white text-[10px] font-bold flex items-center space-x-0.5 shadow-2xs">
+                <span>🔊</span>
+                <span>${isJa ? '発音' : 'Audio'}</span>
+              </span>
+            </div>
+
+            <!-- 意味（多言語対応） -->
+            <div class="space-y-0.5">
+              <span class="text-[9px] font-black uppercase tracking-wider text-slate-400 block">${isJa ? '意味・母国語訳' : 'Meaning / Native'}</span>
+              <p class="text-xs font-bold text-slate-800">
+                library / 圖書館 / 图书馆 / 도서관 / bibliothèque
+              </p>
+            </div>
+
+            <!-- 会話例文 -->
+            <div class="bg-slate-50 rounded-xl p-2 border border-slate-200/80 space-y-0.5">
+              <span class="text-[9px] font-bold text-slate-400 block">${isJa ? '会話例文と対訳' : 'Real Dialogue & Translation'}</span>
+              <p class="text-[11px] font-bold text-slate-800 leading-tight font-jp">
+                A: 明日、図書館へ行きませんか？<br/>
+                B: いいですね、一緒に勉強しましょう！
+              </p>
+              <p class="text-[9px] text-slate-500 font-medium leading-tight">
+                A: Shall we go to the library tomorrow? B: Sounds great!
+              </p>
+            </div>
+
+            <!-- 関連語 ＆ マイリスト追加ボタン -->
+            <div class="flex items-center justify-between pt-0.5">
+              <div class="text-[10px] text-slate-600 flex items-center space-x-1">
+                <span class="font-bold text-slate-400">${isJa ? '関連:' : 'Related:'}</span>
+                <span class="bg-slate-100 px-1.5 py-0.2 rounded text-[9px] font-medium text-slate-700">本（ほん）</span>
+                <span class="bg-slate-100 px-1.5 py-0.2 rounded text-[9px] font-medium text-slate-700">読書</span>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-amber-500 text-white font-extrabold text-[10px] shadow-2xs flex items-center space-x-0.5">
+                <span>⭐</span>
+                <span>${isJa ? 'マイリストに保存' : 'Save to List'}</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      `,
+      tips: {
+        ja: '💡 動詞の活用形（「行った」「食べた」「待って」）でも自動で元の辞書形（行く・食べる・待つ）を判定して表示してくれます！',
+        en: '💡 Automatically recognizes conjugated verbs (e.g. 行った, 食べた) and finds their base dictionary forms!'
+      }
+    },
+    {
+      id: 'dict_lookup',
+      badge: { ja: 'ステップ 4 / 例文検索', en: 'Step 4 / Sentence Lookup' },
+      title: { ja: '🔍 例文の言葉をなぞって辞書へ', en: 'Lookup & Save from Sentences' },
+      subtitle: {
+        ja: '例文の中で知らない単語や漢字があったら、指やマウスで選択（なぞる）だけですぐにツールバーが出現！辞書で調べたりマイリストへ即保存できます。',
+        en: 'Highlight any unknown word or kanji in the example sentence to lookup and save instantly!'
+      },
+      diagramHtml: (isJa) => `
+        <div class="rounded-2xl bg-gradient-to-br from-sky-50 to-indigo-50 border border-sky-200 p-2.5 sm:p-3 shadow-inner space-y-2.5">
+          <!-- 選択ツールバーのイラスト風再現 -->
+          <div class="bg-white rounded-xl p-2.5 border border-slate-200 shadow-2xs">
+            <p class="text-xs text-slate-700 leading-relaxed font-jp">
+              明日、友達と<span class="bg-sky-200 text-sky-900 font-bold px-1 rounded shadow-xs">図書館</span>へ行きます。
+            </p>
+          </div>
+          <!-- ツールバーの吹き出し -->
+          <div class="flex items-center justify-center space-x-1.5 bg-slate-900 text-white px-3 py-1.5 rounded-xl shadow-lg border border-slate-700 text-xs">
+            <span class="font-extrabold text-sky-400 text-[11px] font-jp">図書館</span>
+            <span class="px-2 py-0.5 rounded-lg bg-sky-600 font-bold text-[10px] flex items-center space-x-0.5 shadow-2xs">
+              <span>🔍</span>
+              <span>${isJa ? '辞書で調べる' : 'Lookup'}</span>
+            </span>
+            <span class="px-2 py-0.5 rounded-lg bg-emerald-600 font-bold text-[10px] flex items-center space-x-0.5 shadow-2xs">
+              <span>🔖</span>
+              <span>${isJa ? '保存' : 'Save'}</span>
+            </span>
+          </div>
+        </div>
+      `,
+      tips: {
+        ja: '💡 なぞった単語から辞書を開いて詳しい例文を確認でき、例文中の単語も次々と調べられます！',
+        en: '💡 Lookup words from any sentence and add them to your My List in one tap!'
+      }
+    },
+    {
       id: 'custom_folders',
-      badge: { ja: 'ステップ 3 / 整理', en: 'Step 3 / Folders' },
+      badge: { ja: 'ステップ 5 / 整理', en: 'Step 5 / Folders' },
       title: { ja: '📁 フォルダを自由に作成して整理', en: 'Create Custom Folders' },
       subtitle: {
         ja: '「旅行用」「苦手な漢字」「第5課復習」など、自分で好きなフォルダを作って単語を自由にまとめられます。',
@@ -5248,10 +5348,10 @@
     },
     {
       id: 'auto_audio',
-      badge: { ja: 'ステップ 4 / 音声機能', en: 'Step 4 / Audio & Voice' },
+      badge: { ja: 'ステップ 6 / 音声機能', en: 'Step 6 / Audio & Voice' },
       title: { ja: '🔊 音声自動再生で耳から覚える', en: 'Auto Audio Playback' },
       subtitle: {
-        ja: '画面上部の「自動再生」（スマホ版は「？」の左隣にある音のマーク 🔊）をONにすると、カードを表示した時やめくった時に単語と例文が自動で流れます。',
+        ja: '画面上部の「自動再生」（スマホ版は「？」マークの左隣にある音のマーク 🔊）をONにすると、カードを表示した時やめくった時に単語と例文が自動で流れます。',
         en: 'Turn on "Auto Audio" in the top bar (on mobile, tap the speaker icon 🔊 next to "?") to automatically hear words and example sentences.'
       },
       diagramHtml: (isJa) => `
@@ -5316,7 +5416,7 @@
     },
     {
       id: 'furigana',
-      badge: { ja: 'ステップ 5 / 漢字練習', en: 'Step 5 / Furigana OFF' },
+      badge: { ja: 'ステップ 7 / 漢字練習', en: 'Step 7 / Furigana OFF' },
       title: { ja: '✍️ ふりがなOFFで漢字テスト', en: 'Practice Reading Kanji' },
       subtitle: {
         ja: '「ふりがな」（スマホ版は音マークの左隣にある「あ」マーク）をOFFに切り替えると、漢字の上の読みが隠れるので、漢字を自力で読めるか確認・特訓できます。',
@@ -5381,41 +5481,6 @@
       tips: {
         ja: '💡 辞書を開いたときは、OFF時でも常に正確なふりがなが表示されるので安心です！',
         en: '💡 Furigana is always available inside the dictionary lookup modal!'
-      }
-    },
-    {
-      id: 'dict_lookup',
-      badge: { ja: 'ステップ 6 / 辞書検索', en: 'Step 6 / Built-in Dictionary' },
-      title: { ja: '📖 わからない言葉はなぞって辞書へ', en: 'Lookup & Save from Sentences' },
-      subtitle: {
-        ja: '例文の中で知らない単語や漢字があったら、指やマウスで選択（なぞる）だけですぐにポップアップが出現！',
-        en: 'Highlight any unknown word or kanji in the example sentence to lookup and save instantly!'
-      },
-      diagramHtml: `
-        <div class="rounded-2xl bg-gradient-to-br from-sky-50 to-indigo-50 border border-sky-200 p-3 shadow-inner space-y-2.5">
-          <!-- 選択ツールバーのイラスト風再現 -->
-          <div class="bg-white rounded-xl p-2.5 border border-slate-200 shadow-2xs">
-            <p class="text-[11px] text-slate-700 leading-relaxed">
-              明日、友達と<span class="bg-sky-200 text-sky-900 font-bold px-1 rounded">図書館</span>へ行きます。
-            </p>
-          </div>
-          <!-- ツールバーの吹き出し -->
-          <div class="flex items-center justify-center space-x-1.5 bg-slate-900 text-white px-3 py-1.5 rounded-xl shadow-lg border border-slate-700 text-xs">
-            <span class="font-extrabold text-sky-400 text-[11px]">図書館</span>
-            <span class="px-2 py-0.5 rounded-lg bg-sky-600 font-bold text-[10px] flex items-center space-x-0.5 shadow-2xs">
-              <span>🔍</span>
-              <span>辞書で調べる</span>
-            </span>
-            <span class="px-2 py-0.5 rounded-lg bg-emerald-600 font-bold text-[10px] flex items-center space-x-0.5 shadow-2xs">
-              <span>🔖</span>
-              <span>保存</span>
-            </span>
-          </div>
-        </div>
-      `,
-      tips: {
-        ja: '💡 辞書モーダルでは意味・例文・関連語を一度に確認でき、その場でマイリストへワンタップ保存できます！',
-        en: '💡 Check meanings, examples, and related words, and add them to My List in one tap!'
       }
     }
   ];
