@@ -2810,52 +2810,219 @@
 
     const feedbackBox = document.getElementById('quizFeedbackBox');
     feedbackBox.classList.add('hidden');
+    feedbackBox.innerHTML = `
+      <p id="quizFeedbackMessage" class="text-sm font-bold"></p>
+      <div id="quizFeedbackDetail" class="text-xs mt-1 text-slate-600 select-text"></div>
+    `;
     document.getElementById('btnQuizNext').disabled = true;
 
+    let hasAnsweredThisQuestion = false;
+
     choices.forEach(card => {
-      const btn = document.createElement('button');
-      btn.className = 'w-full py-3 px-4 rounded-xl border border-softBorder hover:border-deepNavy bg-white font-bold text-darkNavyText text-left transition flex items-center justify-between shadow-2xs text-sm';
+      const cardMeaningText = getBilingualMeaning(card.meaning, currentLang);
+
+      const btn = document.createElement('div');
+      btn.className = 'quiz-choice-card w-full p-3 sm:p-3.5 rounded-2xl border-2 border-softBorder hover:border-deepNavy bg-white text-darkNavyText text-left transition flex flex-col shadow-2xs text-sm cursor-pointer select-text relative active:scale-[0.99]';
+      btn.setAttribute('data-card-id', card.id);
+
       btn.innerHTML = `
-        <span>${card.word} <span class="text-xs text-slate-400 font-normal">（${card.reading || ''}）</span></span>
-        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-300"></i>
+        <div class="choice-main-row flex items-center justify-between w-full select-text">
+          <div class="flex items-center space-x-2 min-w-0 select-text">
+            <span class="choice-word font-extrabold text-base sm:text-lg text-darkNavyText select-text font-jp">${card.word}</span>
+            <span class="choice-reading text-xs text-slate-400 font-normal select-text">（${card.reading || ''}）</span>
+          </div>
+          <div class="choice-action-row flex items-center space-x-1.5 shrink-0">
+            <button class="btn-choice-tts p-1.5 rounded-full hover:bg-slate-100 text-slate-400 hover:text-deepNavy transition active:scale-95" title="発音を聴く">
+              <i data-lucide="volume-2" class="w-4 h-4"></i>
+            </button>
+            <span class="choice-badge-indicator flex items-center">
+              <i data-lucide="chevron-right" class="w-4 h-4 text-slate-300"></i>
+            </span>
+          </div>
+        </div>
+        <!-- 意味表示パネル（回答後またはタップで表示） -->
+        <div class="choice-meaning-panel mt-2 pt-2 border-t border-slate-100 text-xs text-slate-600 font-medium select-text hidden animate-fade-in">
+          <div class="flex items-center justify-between gap-1.5 flex-wrap">
+            <span class="text-slate-800 select-text font-bold flex-1">
+              <span class="text-[10px] text-slate-400 uppercase font-bold mr-1">意味:</span>${cardMeaningText}
+            </span>
+            <div class="flex items-center space-x-1 shrink-0">
+              <button class="btn-choice-dict text-[10px] px-2 py-0.5 rounded-md bg-sky-50 text-sky-700 hover:bg-sky-100 border border-sky-200 font-bold transition flex items-center space-x-0.5" title="辞書で詳細を見る">
+                <i data-lucide="search" class="w-2.5 h-2.5"></i>
+                <span>辞書</span>
+              </button>
+              <button class="btn-choice-save text-[10px] px-2 py-0.5 rounded-md ${mylistSet.has(card.id) ? 'bg-coralPink text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-600'} font-bold transition flex items-center space-x-0.5" title="マイリストに追加">
+                <i data-lucide="bookmark" class="w-2.5 h-2.5"></i>
+                <span class="choice-save-label">${mylistSet.has(card.id) ? '保存済' : '保存'}</span>
+              </button>
+            </div>
+          </div>
+        </div>
       `;
       lucide.createIcons({ root: btn });
 
+      // TTS Audio
+      const ttsBtn = btn.querySelector('.btn-choice-tts');
+      if (ttsBtn) {
+        ttsBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          speakJapanese(card);
+        });
+      }
+
+      // Dict button
+      const dictBtn = btn.querySelector('.btn-choice-dict');
+      if (dictBtn) {
+        dictBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          openDictLookupModal(card.word, card.reading);
+        });
+      }
+
+      // Save to My List button
+      const saveBtn = btn.querySelector('.btn-choice-save');
+      if (saveBtn) {
+        saveBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const label = saveBtn.querySelector('.choice-save-label');
+          if (mylistSet.has(card.id)) {
+            mylistSet.delete(card.id);
+            saveBtn.className = 'btn-choice-save text-[10px] px-2 py-0.5 rounded-md bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold transition flex items-center space-x-0.5';
+            if (label) label.textContent = '保存';
+            showToast('マイリストから解除しました');
+          } else {
+            promptFolderSelectAndAdd(card, () => {
+              saveBtn.className = 'btn-choice-save text-[10px] px-2 py-0.5 rounded-md bg-coralPink text-white font-bold transition flex items-center space-x-0.5';
+              if (label) label.textContent = '保存済';
+              updateMylistBadge();
+            });
+          }
+          saveMylistForCurrentStudent();
+        });
+      }
+
+      // Card click
       btn.addEventListener('click', () => {
-        handleQuizAnswer(card, btn, container);
+        if (!hasAnsweredThisQuestion) {
+          hasAnsweredThisQuestion = true;
+          handleQuizAnswer(card, btn, container, choices);
+        } else {
+          // If already answered, tapping any card speaks that word and ensures meaning is displayed
+          speakJapanese(card);
+          const panel = btn.querySelector('.choice-meaning-panel');
+          if (panel) {
+            panel.classList.remove('hidden');
+          }
+        }
       });
+
       container.appendChild(btn);
     });
   }
 
-  function handleQuizAnswer(selectedCard, clickedBtn, container) {
-    const allButtons = container.querySelectorAll('button');
-    allButtons.forEach(b => b.disabled = true);
-
+  function handleQuizAnswer(selectedCard, clickedBtn, container, choices) {
     const feedbackBox = document.getElementById('quizFeedbackBox');
-    const feedbackMsg = document.getElementById('quizFeedbackMessage');
-    const feedbackDetail = document.getElementById('quizFeedbackDetail');
     feedbackBox.classList.remove('hidden');
 
     const isCorrect = selectedCard.id === quizCurrentQuestion.id;
+    const allCards = container.querySelectorAll('.quiz-choice-card');
+
+    // Reveal meaning on all choice cards so student sees meaning of all words!
+    allCards.forEach(cardEl => {
+      const cId = cardEl.getAttribute('data-card-id');
+      const isTarget = (cId === quizCurrentQuestion.id);
+      const isChosenWrong = (cardEl === clickedBtn && !isCorrect);
+      
+      const panel = cardEl.querySelector('.choice-meaning-panel');
+      if (panel) panel.classList.remove('hidden');
+
+      const indicator = cardEl.querySelector('.choice-badge-indicator');
+      if (isTarget) {
+        cardEl.classList.remove('border-softBorder', 'hover:border-deepNavy');
+        cardEl.classList.add('border-emerald-500', 'bg-emerald-50/70', 'ring-1', 'ring-emerald-400');
+        if (indicator) {
+          indicator.innerHTML = '<span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-emerald-600 text-white shrink-0 shadow-2xs">✓ 正解</span>';
+        }
+      } else if (isChosenWrong) {
+        cardEl.classList.remove('border-softBorder', 'hover:border-deepNavy');
+        cardEl.classList.add('border-coralPink', 'bg-rose-50/70', 'ring-1', 'ring-rose-400');
+        if (indicator) {
+          indicator.innerHTML = '<span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-coralPink text-white shrink-0 shadow-2xs">✕ あなたの回答</span>';
+        }
+      }
+    });
+
+    const targetMeaning = getBilingualMeaning(quizCurrentQuestion.meaning, currentLang);
+    const selectedMeaning = getBilingualMeaning(selectedCard.meaning, currentLang);
+
     if (isCorrect) {
       quizScore++;
-      clickedBtn.classList.remove('border-softBorder');
-      clickedBtn.classList.add('border-emerald-500', 'bg-emerald-50', 'text-emerald-900');
-      feedbackBox.className = 'p-3 rounded-2xl my-2 text-center bg-emerald-50 border border-emerald-200 text-emerald-800';
-      feedbackMsg.textContent = 'Correct! ✨';
-      feedbackDetail.textContent = `${quizCurrentQuestion.word}（${quizCurrentQuestion.reading || ''}）`;
+      feedbackBox.className = 'p-3.5 rounded-2xl my-3 text-center bg-emerald-50 border border-emerald-200 text-emerald-900 select-text animate-fade-in shadow-2xs';
+      feedbackBox.innerHTML = `
+        <div class="flex items-center justify-center space-x-1.5 font-extrabold text-sm text-emerald-800">
+          <span>✨</span>
+          <span>Correct! 正解です！</span>
+        </div>
+        <div class="mt-2 p-2.5 rounded-xl bg-white/90 border border-emerald-200 text-left select-text shadow-2xs">
+          <div class="flex items-center justify-between">
+            <span class="font-extrabold text-sm text-darkNavyText font-jp select-text">${quizCurrentQuestion.word}（${quizCurrentQuestion.reading || ''}）</span>
+            <button class="btn-feedback-speak p-1.5 rounded-full text-emerald-700 hover:bg-emerald-100 transition" data-word="${escapeHtml(quizCurrentQuestion.word)}" title="発音を聴く">
+              <i data-lucide="volume-2" class="w-4 h-4"></i>
+            </button>
+          </div>
+          <p class="text-xs text-emerald-800 font-semibold mt-0.5 select-text"><span class="text-[10px] text-slate-400 uppercase font-bold mr-1">意味:</span>${targetMeaning}</p>
+        </div>
+      `;
       speakJapanese(quizCurrentQuestion);
     } else {
-      clickedBtn.classList.remove('border-softBorder');
-      clickedBtn.classList.add('border-coralPink', 'bg-rose-50', 'text-rose-900');
-      feedbackBox.className = 'p-3 rounded-2xl my-2 text-center bg-rose-50 border border-rose-200 text-rose-800';
-      feedbackMsg.textContent = 'Not quite! The correct answer is:';
-      feedbackDetail.textContent = `${quizCurrentQuestion.word}（${quizCurrentQuestion.reading || ''}）`;
+      feedbackBox.className = 'p-3.5 rounded-2xl my-3 text-center bg-rose-50 border border-rose-200 text-rose-900 select-text animate-fade-in shadow-2xs';
+      feedbackBox.innerHTML = `
+        <div class="font-extrabold text-sm text-rose-800 flex items-center justify-center space-x-1">
+          <span>Not quite! 不正解</span>
+        </div>
+
+        <!-- 正解の単語 -->
+        <div class="mt-2 p-2.5 rounded-xl bg-white/95 border-2 border-emerald-400 text-left select-text shadow-2xs">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-1.5 select-text">
+              <span class="text-[10px] px-1.5 py-0.2 rounded-full bg-emerald-600 text-white font-bold shrink-0">正解</span>
+              <span class="font-extrabold text-sm text-darkNavyText font-jp select-text">${quizCurrentQuestion.word}（${quizCurrentQuestion.reading || ''}）</span>
+            </div>
+            <button class="btn-feedback-speak p-1.5 rounded-full text-emerald-700 hover:bg-emerald-100 transition" data-word="${escapeHtml(quizCurrentQuestion.word)}" title="発音を聴く">
+              <i data-lucide="volume-2" class="w-4 h-4"></i>
+            </button>
+          </div>
+          <p class="text-xs text-emerald-900 font-bold mt-1 select-text"><span class="text-[10px] text-slate-400 uppercase font-bold mr-1">意味:</span>${targetMeaning}</p>
+        </div>
+
+        <!-- ユーザーが選んだ不正解の単語の意味 -->
+        <div class="mt-1.5 p-2.5 rounded-xl bg-white/95 border-2 border-coralPink text-left select-text shadow-2xs">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-1.5 select-text">
+              <span class="text-[10px] px-1.5 py-0.2 rounded-full bg-coralPink text-white font-bold shrink-0">選んだ言葉</span>
+              <span class="font-extrabold text-sm text-darkNavyText font-jp select-text">${selectedCard.word}（${selectedCard.reading || ''}）</span>
+            </div>
+            <button class="btn-feedback-speak p-1.5 rounded-full text-rose-700 hover:bg-rose-100 transition" data-word="${escapeHtml(selectedCard.word)}" title="発音を聴く">
+              <i data-lucide="volume-2" class="w-4 h-4"></i>
+            </button>
+          </div>
+          <p class="text-xs text-rose-900 font-bold mt-1 select-text"><span class="text-[10px] text-slate-400 uppercase font-bold mr-1">意味:</span>${selectedMeaning}</p>
+        </div>
+
+        <p class="text-[10px] text-slate-500 font-medium mt-2">💡 上の選択肢カードでも全単語の意味や発音が確認でき、保存も可能です。</p>
+      `;
       mylistSet.add(quizCurrentQuestion.id);
       saveMylistForCurrentStudent();
-      showToast('Added missed word to My List ⭐');
+      showToast('間違えた単語をマイリストに追加しました ⭐');
     }
+
+    lucide.createIcons({ root: feedbackBox });
+    feedbackBox.querySelectorAll('.btn-feedback-speak').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const w = btn.getAttribute('data-word');
+        speakJapanese({ word: w });
+      });
+    });
 
     document.getElementById('btnQuizNext').disabled = false;
   }
@@ -4904,7 +5071,7 @@
     const btnDict = document.getElementById('btnToolbarDict');
     const btnSave = document.getElementById('btnToolbarMylist');
 
-    if (!area || !toolbar) return;
+    if (!toolbar) return;
 
     function updateToolbar() {
       const sel = window.getSelection();
@@ -4915,7 +5082,26 @@
       }
 
       const range = sel.getRangeAt(0);
-      if (!area.contains(range.commonAncestorContainer)) {
+      let containerNode = range.commonAncestorContainer;
+      if (containerNode.nodeType === 3) containerNode = containerNode.parentElement;
+      if (!containerNode) return;
+
+      // Don't trigger if inside form input/textarea/select
+      if (containerNode.closest && containerNode.closest('input, textarea, select')) {
+        toolbar.classList.add('hidden');
+        toolbar.classList.remove('flex');
+        return;
+      }
+
+      // Check if selection is within selectable areas (example sentence, quiz view, flashcards, my list, main container)
+      const mainContainer = document.getElementById('mainContainer');
+      const isInsideSelectable = (
+        (area && area.contains(containerNode)) ||
+        (document.getElementById('viewQuiz') && document.getElementById('viewQuiz').contains(containerNode)) ||
+        (mainContainer && mainContainer.contains(containerNode))
+      );
+
+      if (!isInsideSelectable) {
         toolbar.classList.add('hidden');
         toolbar.classList.remove('flex');
         return;
@@ -4932,14 +5118,24 @@
       // ルビ付き要素なら読み仮名も自動取得
       let hintReading = '';
       try {
-        let node = range.commonAncestorContainer;
-        if (node.nodeType === 3) node = node.parentElement;
-        const rubyEl = node ? node.closest('ruby') : null;
+        const rubyEl = containerNode.closest ? containerNode.closest('ruby') : null;
         if (rubyEl) {
           const rt = rubyEl.querySelector('rt');
           if (rt) hintReading = rt.innerText.trim();
         }
       } catch (e) {}
+
+      // もしクイズの選択肢内なら、そのカードの読み仮名を取得
+      try {
+        const choiceCard = containerNode.closest ? containerNode.closest('.quiz-choice-card') : null;
+        if (choiceCard) {
+          const cId = choiceCard.getAttribute('data-card-id');
+          const resolved = getCardById(cId);
+          if (resolved && (resolved.word === cleaned || cleaned.includes(resolved.word) || resolved.word.includes(cleaned))) {
+            hintReading = resolved.reading || '';
+          }
+        }
+      } catch(e) {}
 
       const rect = range.getBoundingClientRect();
       if (rect.width === 0 && rect.height === 0) {
@@ -4957,14 +5153,16 @@
       toolbar.classList.add('flex');
 
       // 画面上部や左右にはみ出さないよう座標を補正
-      const top = Math.max(10, rect.top - 50);
+      const top = Math.max(10, rect.top - 52);
       const left = Math.min(window.innerWidth - 260, Math.max(10, rect.left + rect.width / 2 - 125));
       toolbar.style.top = `${top}px`;
       toolbar.style.left = `${left}px`;
     }
 
-    area.addEventListener('mouseup', () => setTimeout(updateToolbar, 50));
-    area.addEventListener('touchend', () => setTimeout(updateToolbar, 100));
+    // Attach listeners on mouseup, touchend, and copy
+    document.addEventListener('mouseup', () => setTimeout(updateToolbar, 60));
+    document.addEventListener('touchend', () => setTimeout(updateToolbar, 120));
+    document.addEventListener('copy', () => setTimeout(updateToolbar, 80));
 
     document.addEventListener('selectionchange', () => {
       const sel = window.getSelection();
