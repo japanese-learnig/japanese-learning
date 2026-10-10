@@ -5565,23 +5565,37 @@
         return;
       }
 
-      const rawText = sel.toString();
-      const cleaned = sanitizeSelectedWordText(rawText);
+      // レンジのクローンから<rt>（ふりがな）タグを完全除去して本文の漢字・かなのみ抽出
+      let cleaned = '';
+      let hintReading = '';
+      try {
+        const clonedFragment = range.cloneContents();
+        const rts = clonedFragment.querySelectorAll ? clonedFragment.querySelectorAll('rt') : [];
+        if (rts && rts.length > 0) {
+          hintReading = Array.from(rts).map(rt => rt.textContent.trim()).filter(Boolean).join('');
+          rts.forEach(rt => rt.remove());
+        }
+        cleaned = sanitizeSelectedWordText(clonedFragment.textContent);
+      } catch (err) {
+        cleaned = sanitizeSelectedWordText(sel.toString());
+      }
+
       if (!cleaned || cleaned.length > 30) {
         toolbar.classList.add('hidden');
         toolbar.classList.remove('flex');
         return;
       }
 
-      // ルビ付き要素なら読み仮名も自動取得
-      let hintReading = '';
-      try {
-        const rubyEl = containerNode.closest ? containerNode.closest('ruby') : null;
-        if (rubyEl) {
-          const rt = rubyEl.querySelector('rt');
-          if (rt) hintReading = rt.innerText.trim();
-        }
-      } catch (e) {}
+      // ルビ付き要素なら読み仮名も自動取得（もしhintReadingが空の場合）
+      if (!hintReading) {
+        try {
+          const rubyEl = containerNode.closest ? containerNode.closest('ruby') : null;
+          if (rubyEl) {
+            const rt = rubyEl.querySelector('rt');
+            if (rt) hintReading = rt.innerText.trim();
+          }
+        } catch (e) {}
+      }
 
       // もしクイズの選択肢内なら、そのカードの読み仮名を取得
       try {
@@ -5620,7 +5634,26 @@
     // Attach listeners on mouseup, touchend, and copy
     document.addEventListener('mouseup', () => setTimeout(updateToolbar, 60));
     document.addEventListener('touchend', () => setTimeout(updateToolbar, 120));
-    document.addEventListener('copy', () => setTimeout(updateToolbar, 80));
+
+    // クリップボードへのコピー時もルビ（<rt>）を巻き込まず、本文の文字列のみをコピー
+    document.addEventListener('copy', (e) => {
+      const sel = window.getSelection();
+      if (!sel || sel.isCollapsed || !sel.rangeCount) return;
+      try {
+        const range = sel.getRangeAt(0);
+        const clonedFragment = range.cloneContents();
+        const rts = clonedFragment.querySelectorAll ? clonedFragment.querySelectorAll('rt') : [];
+        if (rts && rts.length > 0) {
+          rts.forEach(rt => rt.remove());
+          const cleanText = clonedFragment.textContent;
+          if (e.clipboardData && cleanText) {
+            e.clipboardData.setData('text/plain', cleanText);
+            e.preventDefault();
+          }
+        }
+      } catch (err) {}
+      setTimeout(updateToolbar, 80);
+    });
 
     document.addEventListener('selectionchange', () => {
       const sel = window.getSelection();

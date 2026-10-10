@@ -51,7 +51,10 @@
       font-weight: 700;
       color: #1E557E;
       line-height: 1;
-      user-select: none;
+      user-select: none !important;
+      -webkit-user-select: none !important;
+      -moz-user-select: none !important;
+      -ms-user-select: none !important;
     }
     body {
       -webkit-tap-highlight-color: transparent;
@@ -60,9 +63,17 @@
     .jp-font {
       font-family: "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
     }
-    .select-text, .select-text * {
+    .select-text {
       user-select: text !important;
       -webkit-user-select: text !important;
+    }
+    .select-text rt,
+    ruby rt,
+    rt {
+      user-select: none !important;
+      -webkit-user-select: none !important;
+      -moz-user-select: none !important;
+      -ms-user-select: none !important;
     }
     /* Furigana OFF Mode (全共有, マイリスト, 練習カード, 例文は非表示。辞書は必ず表示！) */
     body.furigana-off #viewFlashcards rt,
