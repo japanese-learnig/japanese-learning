@@ -7498,6 +7498,42 @@
     }
   }
 
+  let currentJlptModalWordExamples = [];
+
+  function formatRubyHtml(str) {
+    if (!str) return '';
+    if (/<ruby\b/i.test(str)) {
+      return str.replace(/<(?!\/?(?:ruby|rt|rp|br)\b)[^>]+>/gi, '');
+    }
+    return escapeHtml(str);
+  }
+
+  function getJlptWordFallbackExample(w) {
+    if (!w) return null;
+    const vocabLists = [window.CLASS_VOCAB_DATA, window.INITIAL_VOCAB_DATA];
+    for (const list of vocabLists) {
+      if (!list) continue;
+      const item = list.find(v => v && (v.word === w.word || (w.reading && v.reading === w.reading)));
+      if (item && item.example && item.example.ja) {
+        return item.example;
+      }
+    }
+    if (window.DICT_EXAMPLES_MAP) {
+      const ex = window.DICT_EXAMPLES_MAP[w.word] || (w.reading && window.DICT_EXAMPLES_MAP[w.reading]);
+      if (ex && ex.ja) {
+        return ex;
+      }
+    }
+    return null;
+  }
+
+  function speakJlptExampleByIndex(idx) {
+    const ex = currentJlptModalWordExamples[idx];
+    if (ex && ex.ja) {
+      speakJapanese(ex.ja);
+    }
+  }
+
   function openJlptModal(idx) {
     const w = filteredJlptWords[idx];
     if (!w) return;
@@ -7517,18 +7553,31 @@
 
     const exSec = document.getElementById('jlptModalExamplesSection');
     const exList = document.getElementById('jlptModalExamplesList');
-    if (w.examples && w.examples.length > 0) {
+    let examples = (w.examples && w.examples.length > 0) ? [...w.examples] : [];
+    if (examples.length === 0) {
+      const fallbackEx = getJlptWordFallbackExample(w);
+      if (fallbackEx) {
+        examples = [fallbackEx];
+      }
+    }
+    currentJlptModalWordExamples = examples;
+
+    if (examples.length > 0) {
       exSec.style.display = 'block';
-      exList.innerHTML = w.examples.map(ex => `
+      exList.innerHTML = examples.map((ex, exIdx) => {
+        const trans = getBilingualExampleTrans(ex, currentLang) || ex.en || '';
+        const jaHtml = formatRubyHtml(ex.ja);
+        return `
         <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-100 space-y-1">
           <div class="flex items-start justify-between gap-2">
-            <div class="font-medium text-slate-900">${escapeHtml(ex.ja)}</div>
-            <button class="w-6 h-6 rounded-full bg-white text-slate-700 flex items-center justify-center shrink-0 border border-slate-200 shadow-2xs hover:bg-slate-100" onclick="speakJapanese('${escapeHtml(ex.ja)}')">
+            <div class="font-medium text-slate-900 font-jp leading-relaxed select-text">${jaHtml}</div>
+            <button class="w-6 h-6 rounded-full bg-white text-slate-700 flex items-center justify-center shrink-0 border border-slate-200 shadow-2xs hover:bg-slate-100 transition active:scale-95" onclick="speakJlptExampleByIndex(${exIdx})" title="発音を聞く">
               ▶
             </button>
           </div>
-          <div class="text-[11px] text-slate-500">${escapeHtml(ex.en || '')}</div>
-        </div>`).join('');
+          ${trans ? `<div class="text-[12px] text-slate-600 font-medium">${trans}</div>` : ''}
+        </div>`;
+      }).join('');
     } else {
       exSec.style.display = 'none';
       exList.innerHTML = '';
@@ -7641,6 +7690,7 @@
   window.goJlptPage = goJlptPage;
   window.openJlptModal = openJlptModal;
   window.closeJlptModal = closeJlptModal;
+  window.speakJlptExampleByIndex = speakJlptExampleByIndex;
   window.toggleJlptWordMylist = toggleJlptWordMylist;
   window.toggleJlptModalSave = toggleJlptModalSave;
   window.openJlptLevelSelectModal = openJlptLevelSelectModal;
