@@ -1804,6 +1804,9 @@
       // Authenticate with Firebase in background & sync latest cloud data
       ensureStudentCloudAuth(student.id, student.passcode).then(() => {
         syncStudentFromCloud(student.id);
+        if (isTeacher) {
+          setTimeout(() => recoverLostCustomCards(), 1500);
+        }
       });
     } else {
       localStorage.removeItem('haku_current_student_id');
@@ -1994,6 +1997,19 @@
       // Authenticate as target student to satisfy Firestore security rules
       await ensureStudentCloudAuth(studentId, targetStudent.passcode);
       const docRef = fbDb.collection('students').doc(studentId);
+      if (Array.isArray(dataToSync.customCards)) {
+        try {
+          const snap = await docRef.get();
+          const cloudCards = (snap.exists && Array.isArray(snap.data().customCards)) ? snap.data().customCards : [];
+          const haveIds = new Set(dataToSync.customCards.map(c => c.id));
+          cloudCards.forEach(c => {
+            if (c && c.id && !isStubCard(c) && !haveIds.has(c.id)) {
+              dataToSync.customCards.push(c);
+              haveIds.add(c.id);
+            }
+          });
+        } catch (e) {}
+      }
       await docRef.set(dataToSync, { merge: true });
       console.log(`Cloud sync direct pushed for student ${studentId} ☁️`);
 
@@ -2026,11 +2042,25 @@
       mylistSet.forEach(cId => {
         if (!seedIds.has(cId) && !classIds.has(cId) && !cId.startsWith('class_word_')) {
           const resolvedCard = getCardById(cId);
-          if (resolvedCard) customCardsToSync.push(resolvedCard);
+          if (resolvedCard && !isStubCard(resolvedCard)) customCardsToSync.push(resolvedCard);
         }
       });
 
       const docRef = fbDb.collection('students').doc(studentId);
+
+      // ★ クラウドに既にある正しいカード定義を消さないよう、必ずマージしてから保存
+      try {
+        const snap = await docRef.get();
+        const cloudCards = (snap.exists && Array.isArray(snap.data().customCards)) ? snap.data().customCards : [];
+        const haveIds = new Set(customCardsToSync.map(c => c.id));
+        cloudCards.forEach(c => {
+          if (c && c.id && !isStubCard(c) && !haveIds.has(c.id) && mylistSet.has(c.id)) {
+            customCardsToSync.push(c);
+            haveIds.add(c.id);
+          }
+        });
+      } catch (e) {}
+
       await docRef.set({
         mylist: Array.from(mylistSet),
         folders: mylistFolders,
@@ -2070,15 +2100,19 @@
           const classIds = new Set((window.CLASS_VOCAB_DATA || []).map(c => c.id));
           const seedIds = new Set((window.INITIAL_VOCAB_DATA || []).map(c => c.id));
           data.customCards.forEach(card => {
-            if (card && card.id && !classIds.has(card.id) && !seedIds.has(card.id) && !card.id.startsWith('class_word_')) {
+            if (card && card.id && !isStubCard(card) && !classIds.has(card.id) && !seedIds.has(card.id) && !card.id.startsWith('class_word_')) {
               card.isCustom = true;
-              if (!vocabList.find(c => c.id === card.id)) {
+              const vIdx = vocabList.findIndex(c => c.id === card.id);
+              if (vIdx >= 0 && isStubCard(vocabList[vIdx])) {
+                vocabList[vIdx] = card;
+                vocabChanged = true;
+              } else if (vIdx < 0) {
                 vocabList.push(card);
                 vocabChanged = true;
               }
               const sIdx = storedCustom.findIndex(c => c.id === card.id);
               if (sIdx >= 0) {
-                storedCustom[sIdx] = { ...storedCustom[sIdx], ...card };
+                storedCustom[sIdx] = isStubCard(storedCustom[sIdx]) ? card : { ...storedCustom[sIdx], ...card };
               } else {
                 storedCustom.push(card);
                 vocabChanged = true;
@@ -2139,6 +2173,78 @@
       console.warn('Cloud sync pull note:', err.message);
     }
     return false;
+  }
+
+  // ★ 先生ログイン時: 失われたカード定義を「先生PCの保存データ＋全生徒のクラウドデータ」から集めて復元し、
+  //    定義が欠けている生徒のクラウドへ配り直す（マイリストのランダムID文字化けの修復）
+  let isRecoveringCards = false;
+  async function recoverLostCustomCards() {
+    if (isRecoveringCards || !isFirebaseReady || !fbDb) return;
+    isRecoveringCards = true;
+    const teacher = currentStudent;
+    try {
+      const pool = new Map();
+      const addToPool = (c) => { if (c && c.id && !isStubCard(c) && !pool.has(c.id)) pool.set(c.id, c); };
+
+      // 1. この端末に保存されている正しい定義
+      let storedCustom = [];
+      try { storedCustom = JSON.parse(localStorage.getItem('haku_all_custom_cards') || '[]'); } catch (e) {}
+      storedCustom.forEach(addToPool);
+      vocabList.forEach(c => { if (c && c.id && c.id.startsWith('card_')) addToPool(c); });
+
+      // 2. 全生徒のクラウドデータ
+      const docsById = {};
+      for (const st of students) {
+        if (!st || !st.id || st.id === 'haku' || st.id === 'admin') continue;
+        try {
+          await ensureStudentCloudAuth(st.id, st.passcode);
+          const snap = await fbDb.collection('students').doc(st.id).get();
+          if (snap.exists) {
+            const d = snap.data();
+            docsById[st.id] = d;
+            (d.customCards || []).forEach(addToPool);
+          }
+        } catch (e) {}
+      }
+
+      // 3. この端末のダミーを削除し、正しい定義で上書き
+      const cleaned = storedCustom.filter(c => !isStubCard(c));
+      pool.forEach(c => { if (!cleaned.find(x => x.id === c.id)) cleaned.push(c); });
+      localStorage.setItem('haku_all_custom_cards', JSON.stringify(cleaned));
+      vocabList = vocabList.filter(c => !isStubCard(c));
+      pool.forEach(c => { if (!vocabList.find(x => x.id === c.id)) vocabList.push({ ...c, isCustom: true }); });
+      localStorage.setItem('haku_vocab_data', JSON.stringify(vocabList));
+
+      // 4. 定義が欠けている／ダミーになっている生徒へ配り直す
+      let repaired = 0;
+      for (const [sid, d] of Object.entries(docsById)) {
+        const ids = Array.isArray(d.mylist) ? d.mylist : [];
+        const current = (d.customCards || []).filter(c => !isStubCard(c));
+        const haveIds = new Set(current.map(c => c.id));
+        const hadStubs = (d.customCards || []).some(c => isStubCard(c));
+        let added = 0;
+        ids.forEach(id => {
+          if (!haveIds.has(id) && pool.has(id)) { current.push(pool.get(id)); haveIds.add(id); added++; }
+        });
+        if (added > 0 || hadStubs) {
+          const st = students.find(s => s.id === sid);
+          try {
+            await ensureStudentCloudAuth(sid, st.passcode);
+            await fbDb.collection('students').doc(sid).set({ customCards: current }, { merge: true });
+            repaired++;
+          } catch (e) {}
+        }
+      }
+      console.log(`Card recovery: pool=${pool.size}, repaired students=${repaired}`);
+    } catch (err) {
+      console.warn('Card recovery note:', err.message);
+    } finally {
+      if (teacher) { try { await ensureStudentCloudAuth(teacher.id, teacher.passcode); } catch (e) {} }
+      isRecoveringCards = false;
+      updateMylistBadge();
+      const mv = document.getElementById('viewMylist');
+      if (mv && !mv.classList.contains('hidden')) renderMylistView();
+    }
   }
 
   function saveMylistForCurrentStudent() {
@@ -3110,14 +3216,14 @@
   function getCardById(cardId) {
     if (!cardId) return null;
     // 1. Check current in-memory vocabList
-    let found = vocabList.find(c => c.id === cardId || c.word === cardId);
+    let found = vocabList.find(c => (c.id === cardId || c.word === cardId) && !isStubCard(c));
     if (found) return found;
 
     // 1b. Check haku_all_custom_cards from localStorage
     try {
       const storedCustom = JSON.parse(localStorage.getItem('haku_all_custom_cards') || '[]');
       if (Array.isArray(storedCustom)) {
-        found = storedCustom.find(c => c.id === cardId || c.word === cardId);
+        found = storedCustom.find(c => (c.id === cardId || c.word === cardId) && !isStubCard(c));
         if (found) {
           found.isCustom = true;
           if (!vocabList.find(c => c.id === found.id)) vocabList.push(found);
@@ -3217,15 +3323,27 @@
       }
     }
 
-    // 6. Fallback stub so word card always renders instead of being hidden
+    // 6. Fallback stub (definition not found on this device). Marked isStub so it is
+    //    never displayed in My List and never uploaded to the cloud (prevents corruption).
     return {
       id: cardId,
       word: cardId.replace(/^card_\d+_/, '').replace(/^dict_/, '').replace(/_\d+$/, '') || cardId,
       reading: '',
       category: 'マイリスト',
       meaning: { en: 'Saved Word', ja: cardId, zh_TW: '單詞', zh_CN: '单词', ko: '단어', zh_HK: '單詞', fr: 'Mot' },
-      example: { ja: '', en: '' }
+      example: { ja: '', en: '' },
+      isStub: true
     };
+  }
+
+  // 定義が失われた「ダミーカード」（ランダムIDが単語として表示される文字化けの原因）を判定
+  function isStubCard(c) {
+    if (!c || typeof c !== 'object') return true;
+    if (c.isStub) return true;
+    const m = c.meaning || {};
+    if (m.en === 'Saved Word' && (!c.example || !c.example.ja)) return true;
+    if (m.ja && m.ja === c.id && !c.reading) return true;
+    return false;
   }
 
   // Returns all resolved card objects currently in My List
@@ -3233,7 +3351,7 @@
     const cards = [];
     mylistSet.forEach(id => {
       const card = getCardById(id);
-      if (card) cards.push(card);
+      if (card && !isStubCard(card)) cards.push(card);
     });
     return cards;
   }
@@ -3758,9 +3876,9 @@
             let studentCustomCards = [];
             try {
               const storedCustom = JSON.parse(localStorage.getItem('haku_all_custom_cards') || '[]');
-              studentCustomCards = [...vocabList, ...storedCustom].filter(c => mylistCardIds.has(c.id) && c.id.startsWith('card_'));
+              studentCustomCards = [...vocabList, ...storedCustom].filter(c => mylistCardIds.has(c.id) && c.id.startsWith('card_') && !isStubCard(c));
             } catch (e) {
-              studentCustomCards = vocabList.filter(c => mylistCardIds.has(c.id) && c.id.startsWith('card_'));
+              studentCustomCards = vocabList.filter(c => mylistCardIds.has(c.id) && c.id.startsWith('card_') && !isStubCard(c));
             }
             syncStudentToCloudDirect(stId, {
               mylist: Array.from(setObj),
@@ -6317,7 +6435,7 @@
   function updateJlptHeaderSavedCount() {
     const el = document.getElementById('jlptSavedCount');
     if (el) {
-      el.textContent = mylistSet.size;
+      el.textContent = getMylistCards().length;
     }
   }
 
