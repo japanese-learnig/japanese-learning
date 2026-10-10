@@ -86,9 +86,17 @@
       clearTimeout(speechSequenceTimer);
       speechSequenceTimer = null;
     }
+    if (autoAudioTimer) {
+      clearTimeout(autoAudioTimer);
+      autoAudioTimer = null;
+    }
     if ('speechSynthesis' in window) {
       window.speechSynthesis.cancel();
+      if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume();
+      }
     }
+    window._activeUtterance = null;
     isSpeaking = false;
   }
 
@@ -98,6 +106,9 @@
     if (!('speechSynthesis' in window)) {
       if (onEnd) onEnd();
       return;
+    }
+    if (window.speechSynthesis.paused) {
+      window.speechSynthesis.resume();
     }
     stopJapaneseSpeech();
 
@@ -135,14 +146,17 @@
     };
     utterance.onend = () => {
       isSpeaking = false;
+      window._activeUtterance = null;
       if (onEnd) onEnd();
     };
     utterance.onerror = () => {
       isSpeaking = false;
+      window._activeUtterance = null;
       if (onEnd) onEnd();
     };
 
     isSpeaking = true;
+    window._activeUtterance = utterance;
     window.speechSynthesis.speak(utterance);
   }
 
@@ -166,6 +180,9 @@
         speechSequenceTimer = null;
         // カードが途中で閉じられたり切り替わっていないか確認しつつ発音
         if (!('speechSynthesis' in window)) return;
+        if (window.speechSynthesis.paused) {
+          window.speechSynthesis.resume();
+        }
         let textToSpeak = '';
         if (typeof secondTarget === 'object') {
           const r = (secondTarget.reading || '').split(/[/／・]/)[0].trim();
@@ -190,12 +207,15 @@
         };
         utterance.onend = () => {
           isSpeaking = false;
+          window._activeUtterance = null;
         };
         utterance.onerror = () => {
           isSpeaking = false;
+          window._activeUtterance = null;
         };
 
         isSpeaking = true;
+        window._activeUtterance = utterance;
         window.speechSynthesis.speak(utterance);
       }, 350);
     });
@@ -538,7 +558,7 @@
   // --- Data Loading & Persistence ---
   function initData() {
     // Master data version check to ensure newly added cards & furigana updates are immediately visible
-    const CURRENT_DATA_VERSION = 'v53_smooth_index_scroll_and_unshrunk_folders';
+    const CURRENT_DATA_VERSION = 'v54_complete_furigana_and_rocksolid_mobile_audio';
     const savedVersion = localStorage.getItem('haku_vocab_version');
 
     const seedCards = window.INITIAL_VOCAB_DATA || [];
@@ -824,7 +844,7 @@
   // --- Left Sidebar Wordbook & Unified Search with Inline Accordion ---
   // --- Left Sidebar Vertical Folders & Curriculum List (PC版: 縦の箇条書き) ---
   let sidebarSearchQuery = '';
-  let expandedFolderIds = new Set(['folder_1', 'folder_2', 'folder_3', 'folder_4']); // all open by default so students see everything
+  let expandedFolderIds = new Set(); // all closed by default; only one open at a time
   let expandedWordId = null; // Track currently expanded accordion item
 
   function initSidebarWordList() {
@@ -1168,7 +1188,7 @@
         if (expandedFolderIds.has(fc.id)) {
           expandedFolderIds.delete(fc.id);
         } else {
-          expandedFolderIds.add(fc.id);
+          expandedFolderIds.clear(); expandedFolderIds.add(fc.id);
         }
         renderSidebarFolderTree();
       });
@@ -2279,7 +2299,7 @@
     }, 300);
   }
 
-  let expandedOverviewFolderIds = new Set(['folder_1']); // tracks which folders are open in Level 1 overview
+  let expandedOverviewFolderIds = new Set(); // tracks which folders are open in Level 1 overview
 
   function createFolderElement(fc) {
     const isExpanded = expandedOverviewFolderIds.has(fc.id);
@@ -2331,7 +2351,7 @@
       if (expandedOverviewFolderIds.has(fc.id)) {
         expandedOverviewFolderIds.delete(fc.id);
       } else {
-        expandedOverviewFolderIds.add(fc.id);
+        expandedOverviewFolderIds.clear(); expandedOverviewFolderIds.add(fc.id);
       }
       renderFolderOverview();
     });
@@ -2621,7 +2641,9 @@
     if (!isReverseMode) {
       // Normal: Front is Japanese, Back is Native & English Meaning
       document.getElementById('frontWord').textContent = card.word;
-      document.getElementById('frontReading').textContent = card.reading || '';
+      const hasKanji = /[\u4e00-\u9faf]/.test(card.word);
+      const showReading = hasKanji || (card.reading && card.reading !== card.word);
+      document.getElementById('frontReading').textContent = showReading ? (card.reading || '') : '';
       document.getElementById('frontReading').classList.remove('hidden');
       document.getElementById('backMeaning').textContent = targetMeaning;
     } else {
@@ -2705,15 +2727,13 @@
       relContainer.classList.add('hidden');
     }
 
-    // ★ 音声自動再生: 表面が表示された瞬間に単語を自動再生
+    // ★ 音声自動再生: 表面が表示された瞬間に単語を即座に自動再生
+    // モバイルのタップ・クリックのユーザー操作コンテキストを即時利用してブロックを完全回避
     if (isAutoAudioEnabled && card) {
       if (autoAudioTimer) clearTimeout(autoAudioTimer);
-      autoAudioTimer = setTimeout(() => {
-        // カードが表面のままであれば再生
-        if (!isCardFlipped) {
-          speakJapanese(card);
-        }
-      }, 200);
+      if (!isCardFlipped) {
+        speakJapanese(card);
+      }
     }
   }
 
@@ -2726,25 +2746,14 @@
       // ★ 音声自動再生: 裏面が表示された瞬間に単語と例文を連続自動再生
       if (isAutoAudioEnabled && activeDeck[currentIndex]) {
         const card = activeDeck[currentIndex];
-        if (autoAudioTimer) clearTimeout(autoAudioTimer);
-        autoAudioTimer = setTimeout(() => {
-          if (isCardFlipped) {
-            const exampleJa = (card.example && card.example.ja) ? card.example.ja : null;
-            speakJapaneseSequence(card, exampleJa);
-          }
-        }, 150);
+        const exampleJa = (card.example && card.example.ja) ? card.example.ja : null;
+        speakJapaneseSequence(card, exampleJa);
       }
     } else {
       cardEl.classList.remove('rotate-y-180');
-      // 表面に戻ったときも自動再生
+      // 表面に戻ったときも即座に自動再生
       if (isAutoAudioEnabled && activeDeck[currentIndex]) {
-        const card = activeDeck[currentIndex];
-        if (autoAudioTimer) clearTimeout(autoAudioTimer);
-        autoAudioTimer = setTimeout(() => {
-          if (!isCardFlipped) {
-            speakJapanese(card);
-          }
-        }, 150);
+        speakJapanese(activeDeck[currentIndex]);
       }
     }
   }
@@ -2877,7 +2886,7 @@
         <div class="choice-main-row flex items-center justify-between w-full select-text">
           <div class="flex items-center space-x-2 min-w-0 select-text">
             <span class="choice-word font-extrabold text-base sm:text-lg text-darkNavyText select-text font-jp">${card.word}</span>
-            <span class="choice-reading text-xs text-slate-400 font-normal select-text">（${card.reading || ''}）</span>
+            <span class="choice-reading card-reading-text text-xs text-slate-400 font-normal select-text">（${card.reading || ''}）</span>
           </div>
           <div class="choice-action-row flex items-center space-x-1.5 shrink-0">
             <button class="btn-choice-tts p-1.5 rounded-full hover:bg-slate-100 text-slate-400 hover:text-deepNavy transition active:scale-95" title="発音を聴く">
@@ -4435,9 +4444,13 @@
 
         // スワイプ成立判定 (横方向が優勢かつ閾値超え)
         if (Math.abs(deltaX) > SWIPE_THRESHOLD && Math.abs(deltaX) > Math.abs(deltaY)) {
+          // モバイルの音声合成エンジンをアクティブに復帰
+          if ('speechSynthesis' in window && window.speechSynthesis.paused) {
+            window.speechSynthesis.resume();
+          }
           if (deltaX > 0) {
             // ★ 右スワイプ: 「覚えた！」
-            flashcardEl.style.transition = 'transform 0.25s cubic-bezier(0.2, 0.8, 0.4, 1), opacity 0.25s ease';
+            flashcardEl.style.transition = 'transform 0.22s cubic-bezier(0.2, 0.8, 0.4, 1), opacity 0.22s ease';
             flashcardEl.style.transform = `translateX(120%) rotate(25deg) rotateY(${baseRotateY}deg)`;
             flashcardEl.style.opacity = '0';
 
@@ -4446,10 +4459,10 @@
               flashcardEl.style.transform = `rotateY(${baseRotateY}deg)`;
               flashcardEl.style.opacity = '1';
               markCardLearned();
-            }, 250);
+            }, 220);
           } else {
             // ★ 左スワイプ: 「もう一回！」
-            flashcardEl.style.transition = 'transform 0.25s cubic-bezier(0.2, 0.8, 0.4, 1), opacity 0.25s ease';
+            flashcardEl.style.transition = 'transform 0.22s cubic-bezier(0.2, 0.8, 0.4, 1), opacity 0.22s ease';
             flashcardEl.style.transform = `translateX(-120%) rotate(-25deg) rotateY(${baseRotateY}deg)`;
             flashcardEl.style.opacity = '0';
 
@@ -4458,7 +4471,7 @@
               flashcardEl.style.transform = `rotateY(${baseRotateY}deg)`;
               flashcardEl.style.opacity = '1';
               markCardReview();
-            }, 250);
+            }, 220);
           }
         } else {
           // スワイプキャンセル: 元の位置にスムーズに戻す
@@ -6729,10 +6742,27 @@
       window.speechSynthesis.onvoiceschanged = () => {
         window.speechSynthesis.getVoices();
       };
+      try { window.speechSynthesis.getVoices(); } catch (e) {}
     }
+    // Mobile WebKit speech audio unlock listeners (prevent iOS pausing)
+    const resumeSpeechAudio = () => {
+      if ('speechSynthesis' in window && window.speechSynthesis.paused) {
+        window.speechSynthesis.resume();
+      }
+    };
+    document.addEventListener('touchstart', resumeSpeechAudio, { passive: true });
+    document.addEventListener('touchend', resumeSpeechAudio, { passive: true });
+    document.addEventListener('click', resumeSpeechAudio, { passive: true });
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('view')) {
       switchView(urlParams.get('view'));
+    }
+    if (urlParams.get('section') !== null) {
+      const secNum = Number(urlParams.get('section'));
+      const secInfo = getCatalogSection(secNum);
+      const title = secInfo ? secInfo.title : `単元${secNum}`;
+      currentFolder = 'folder_1';
+      startStudyingSection(secNum, title);
     }
   }
 

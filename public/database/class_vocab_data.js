@@ -33160,7 +33160,7 @@ window.CLASS_VOCAB_DATA = [
       "fr": "~ est plus ~ que ~"
     },
     "example": {
-      "ja": "A: <ruby>犬<rt>いぬ</rt></ruby>と<ruby>猫<rt>ねこ</rt></ruby>、どちらが<ruby>好<rt>す</rt></ruby>きですか？<br/>B: 私は<ruby>犬<rt>いぬ</rt></ruby>より<ruby>猫<rt>ねこ</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。",
+      "ja": "A: <ruby>犬<rt>いぬ</rt></ruby>と<ruby>猫<rt>ねこ</rt></ruby>、どちらが<ruby>好<rt>す</rt></ruby>きですか？<br/>B: <ruby>私<rt>わたし</rt></ruby>は<ruby>犬<rt>いぬ</rt></ruby>より<ruby>猫<rt>ねこ</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。",
       "en": "A: Which do you like better, dogs or cats?<br/>B: I like cats more than dogs.",
       "zh_TW": "A: 狗和貓，你比較喜歡哪一個？<br/>B:比起狗我比較喜歡貓。",
       "zh_CN": "A: 狗和猫，你比较喜欢哪一个？<br/>B:比起狗我比较喜欢猫。",
@@ -43024,27 +43024,27 @@ window.CLASS_VOCAB_DATA = [
   {
     "id": "class_word_1779",
     "word": "共感",
-    "reading": "きょうかん） / 共感する（きょうかんする",
+    "reading": "きょうかん",
     "category": "授業で習った言葉",
     "meaning": {
       "en": "Empathy / to empathize / to relate",
       "ja": "共感",
-      "zh_TW": "Empathy / to empathize / to relate",
-      "zh_CN": "Empathy / to empathize / to relate",
-      "ko": "Empathy / to empathize / to relate",
-      "zh_HK": "Empathy / to empathize / to relate",
-      "fr": "sympathie"
+      "zh_TW": "共鳴／認同",
+      "zh_CN": "共鸣／认同",
+      "ko": "공감",
+      "zh_HK": "共鳴／認同",
+      "fr": "empathie / sympathie"
     },
     "example": {
       "ja": "あなたの<ruby>考え方<rt>かんがえかた</rt></ruby>には<ruby>共感<rt>きょうかん</rt></ruby>できます。",
       "en": "I really agree with what you're saying.",
-      "zh_TW": "I really agree with what you're saying.",
-      "zh_CN": "I really agree with what you're saying.",
-      "ko": "I really agree with what you're saying.",
-      "zh_HK": "I really agree with what you're saying.",
-      "fr": "I really agree with what you're saying."
+      "zh_TW": "我非常認同你的想法。",
+      "zh_CN": "我非常认同你的想法。",
+      "ko": "당신의 생각에 공감해요.",
+      "zh_HK": "我好認同你嘅諗法。",
+      "fr": "Je suis tout à fait d'accord avec votre façon de penser."
     },
-    "related": "Empathy / to empathize / to relate — to understand and share the feelings, opinions, or experiences of another person."
+    "related": "共感する（きょうかんする）"
   },
   {
     "id": "class_word_1780",
@@ -49246,7 +49246,7 @@ window.CLASS_VOCAB_DATA = [
     },
     "related": "generous / tolerant / lenient / magnanimous"
   },
-{
+  {
     "id": "card_1791393927923_pd4xbi",
     "word": "先延ばし",
     "reading": "さきのばし",
