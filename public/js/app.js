@@ -2001,6 +2001,9 @@
         try {
           const snap = await docRef.get();
           const cloudCards = (snap.exists && Array.isArray(snap.data().customCards)) ? snap.data().customCards : [];
+          if (snap.exists && snap.data().wordNames) {
+            dataToSync.wordNames = { ...snap.data().wordNames, ...(dataToSync.wordNames || {}) };
+          }
           const haveIds = new Set(dataToSync.customCards.map(c => c.id));
           cloudCards.forEach(c => {
             if (c && c.id && !isStubCard(c) && !haveIds.has(c.id)) {
@@ -2042,15 +2045,23 @@
       mylistSet.forEach(cId => {
         if (!seedIds.has(cId) && !classIds.has(cId) && !cId.startsWith('class_word_')) {
           const resolvedCard = getCardById(cId);
-          if (resolvedCard && !isStubCard(resolvedCard)) customCardsToSync.push(resolvedCard);
+          if (resolvedCard && !isStubCard(resolvedCard) && !resolvedCard.isRebuilt) customCardsToSync.push(resolvedCard);
         }
       });
 
       const docRef = fbDb.collection('students').doc(studentId);
 
+      // ★ 単語名レジストリ（定義が消えても単語名から復元できるように）
+      recordWordNames(customCardsToSync);
+      let wordNamesToSync = buildWordNamesFor(Array.from(mylistSet));
+
       // ★ クラウドに既にある正しいカード定義を消さないよう、必ずマージしてから保存
       try {
         const snap = await docRef.get();
+        if (snap.exists && snap.data().wordNames) {
+          mergeWordNames(snap.data().wordNames);
+          wordNamesToSync = buildWordNamesFor(Array.from(mylistSet));
+        }
         const cloudCards = (snap.exists && Array.isArray(snap.data().customCards)) ? snap.data().customCards : [];
         const haveIds = new Set(customCardsToSync.map(c => c.id));
         cloudCards.forEach(c => {
@@ -2066,6 +2077,7 @@
         folders: mylistFolders,
         cardFolderMap: mylistCardFolderMap,
         customCards: customCardsToSync,
+        wordNames: wordNamesToSync,
         updatedAt: firebase.firestore.FieldValue.serverTimestamp()
       }, { merge: true });
       console.log(`Cloud sync pushed for student ${studentId} ☁️`);
@@ -2100,7 +2112,7 @@
           const classIds = new Set((window.CLASS_VOCAB_DATA || []).map(c => c.id));
           const seedIds = new Set((window.INITIAL_VOCAB_DATA || []).map(c => c.id));
           data.customCards.forEach(card => {
-            if (card && card.id && !isStubCard(card) && !classIds.has(card.id) && !seedIds.has(card.id) && !card.id.startsWith('class_word_')) {
+            if (card && card.id && !isStubCard(card) && !card.isRebuilt && !classIds.has(card.id) && !seedIds.has(card.id) && !card.id.startsWith('class_word_')) {
               card.isCustom = true;
               const vIdx = vocabList.findIndex(c => c.id === card.id);
               if (vIdx >= 0 && isStubCard(vocabList[vIdx])) {
@@ -2126,9 +2138,16 @@
           }
         }
 
-        // 2. Sync mylist IDs
+        // 1b. Sync word-name registry
+        if (data.wordNames && typeof data.wordNames === 'object') {
+          if (mergeWordNames(data.wordNames)) changed = true;
+        }
+
+        // 2. Sync mylist IDs（先生が削除した単語は端末からも消す）
+        const removedSet = new Set(Array.isArray(data.removedIds) ? data.removedIds : []);
+        removedSet.forEach(id => { if (mylistSet.has(id)) { mylistSet.delete(id); changed = true; } });
         if (Array.isArray(data.mylist)) {
-          data.mylist.forEach(id => {
+          data.mylist.filter(id => !removedSet.has(id)).forEach(id => {
             if (!mylistSet.has(id)) {
               mylistSet.add(id);
               changed = true;
@@ -2203,6 +2222,7 @@
             const d = snap.data();
             docsById[st.id] = d;
             (d.customCards || []).forEach(addToPool);
+            if (d.wordNames) mergeWordNames(d.wordNames);
           }
         } catch (e) {}
       }
@@ -2215,8 +2235,11 @@
       pool.forEach(c => { if (!vocabList.find(x => x.id === c.id)) vocabList.push({ ...c, isCustom: true }); });
       localStorage.setItem('haku_vocab_data', JSON.stringify(vocabList));
 
-      // 4. 定義が欠けている／ダミーになっている生徒へ配り直す
+      recordWordNames(Array.from(pool.values()));
+
+      // 4. 定義が欠けている／ダミーになっている生徒へ配り直す ＋ 単語名も不明な単語を一覧化
       let repaired = 0;
+      const lostReport = {};
       for (const [sid, d] of Object.entries(docsById)) {
         const ids = Array.isArray(d.mylist) ? d.mylist : [];
         const current = (d.customCards || []).filter(c => !isStubCard(c));
@@ -2226,15 +2249,21 @@
         ids.forEach(id => {
           if (!haveIds.has(id) && pool.has(id)) { current.push(pool.get(id)); haveIds.add(id); added++; }
         });
-        if (added > 0 || hadStubs) {
+        const lost = ids.filter(id => isCustomCardId(id) && id.startsWith('card_') && !haveIds.has(id) && !getKnownWordName(id));
+        if (lost.length) lostReport[sid] = lost;
+        const names = buildWordNamesFor(ids);
+        const needNames = Object.keys(names).some(id => !(d.wordNames && d.wordNames[id]));
+        if (added > 0 || hadStubs || needNames) {
           const st = students.find(s => s.id === sid);
           try {
             await ensureStudentCloudAuth(sid, st.passcode);
-            await fbDb.collection('students').doc(sid).set({ customCards: current }, { merge: true });
+            await fbDb.collection('students').doc(sid).set({ customCards: current, wordNames: names }, { merge: true });
             repaired++;
           } catch (e) {}
         }
       }
+      try { localStorage.setItem('haku_lost_cards_report', JSON.stringify({ at: Date.now(), report: lostReport })); } catch (e) {}
+      renderLostCardsReport();
       console.log(`Card recovery: pool=${pool.size}, repaired students=${repaired}`);
     } catch (err) {
       console.warn('Card recovery note:', err.message);
@@ -2247,6 +2276,81 @@
     }
   }
 
+  // ★ 管理画面: 単語名も不明な単語を「生徒 × 追加日」ごとに一覧表示
+  function renderLostCardsReport() {
+    const box = document.getElementById('lostCardsReport');
+    if (!box) return;
+    let data = null;
+    try { data = JSON.parse(localStorage.getItem('haku_lost_cards_report') || 'null'); } catch (e) {}
+    const report = (data && data.report) || {};
+    const sids = Object.keys(report).filter(sid => report[sid] && report[sid].length);
+    if (!sids.length) { box.classList.add('hidden'); box.innerHTML = ''; return; }
+
+    const fmt = (d) => d ? `${d.getFullYear()}/${d.getMonth() + 1}/${d.getDate()}` : '日付不明';
+    let total = 0;
+    let html = '';
+    sids.forEach(sid => {
+      const st = students.find(s => s.id === sid);
+      const groups = {};
+      report[sid].forEach(id => {
+        const key = fmt(getCardCreatedDate(id));
+        (groups[key] = groups[key] || []).push(id);
+      });
+      total += report[sid].length;
+      html += `<div class="mt-1.5"><p class="text-[11px] font-bold text-slate-700">${st ? st.name : sid}（${sid}）</p>`;
+      Object.entries(groups).forEach(([day, ids]) => {
+        html += `
+          <div class="flex items-center justify-between text-[11px] bg-white rounded-lg border border-amber-200 px-2 py-1 mt-1">
+            <span class="text-slate-700">${day} に追加した単語：<b>${ids.length}件</b></span>
+            <button class="btn-remove-lost text-[10px] px-2 py-0.5 rounded-full bg-slate-100 hover:bg-rose-100 text-slate-600 font-bold" data-sid="${sid}" data-ids="${ids.join(',')}">マイリストから削除</button>
+          </div>`;
+      });
+      html += `</div>`;
+    });
+
+    box.innerHTML = `
+      <div class="rounded-2xl border-2 border-amber-300 bg-amber-50 p-2.5">
+        <p class="text-xs font-bold text-amber-800">⚠️ 中身が見つからない単語：${total}件</p>
+        <p class="text-[10px] text-amber-700 mt-0.5 leading-snug">古い形式で保存され、データも単語名も失われた単語です。授業メモと日付を照らし合わせて、下のインポートからもう一度追加してください（新しく追加した単語は単語名が必ず残るので、今後は自動で復元されます）。</p>
+        ${html}
+      </div>`;
+    box.classList.remove('hidden');
+
+    box.querySelectorAll('.btn-remove-lost').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const sid = btn.getAttribute('data-sid');
+        const ids = (btn.getAttribute('data-ids') || '').split(',').filter(Boolean);
+        if (!ids.length || !confirm(`${ids.length}件をこの生徒のマイリストから削除しますか？`)) return;
+        // ローカル
+        const key = `haku_mylist_${sid}`;
+        try {
+          const arr = JSON.parse(localStorage.getItem(key) || '[]').filter(id => !ids.includes(id));
+          localStorage.setItem(key, JSON.stringify(arr));
+        } catch (e) {}
+        if (currentStudent && currentStudent.id === sid) ids.forEach(id => mylistSet.delete(id));
+        // クラウド
+        const st = students.find(s => s.id === sid);
+        const teacher = currentStudent;
+        if (isFirebaseReady && fbDb && st) {
+          try {
+            await ensureStudentCloudAuth(sid, st.passcode);
+            await fbDb.collection('students').doc(sid).update({ mylist: firebase.firestore.FieldValue.arrayRemove(...ids), removedIds: firebase.firestore.FieldValue.arrayUnion(...ids) });
+          } catch (e) { console.warn('remove lost note:', e.message); }
+          if (teacher && teacher.id !== sid) { try { await ensureStudentCloudAuth(teacher.id, teacher.passcode); } catch (e) {} }
+        }
+        // レポート更新
+        try {
+          const d = JSON.parse(localStorage.getItem('haku_lost_cards_report') || '{}');
+          if (d.report && d.report[sid]) d.report[sid] = d.report[sid].filter(id => !ids.includes(id));
+          localStorage.setItem('haku_lost_cards_report', JSON.stringify(d));
+        } catch (e) {}
+        renderLostCardsReport();
+        updateMylistBadge();
+        showToast(`${ids.length}件を削除しました`);
+      });
+    });
+  }
+
   function saveMylistForCurrentStudent() {
     const studentPrefix = currentStudent ? currentStudent.id : 'guest';
     const key = `haku_mylist_${studentPrefix}`;
@@ -2256,6 +2360,7 @@
     localStorage.setItem(key, JSON.stringify(Array.from(mylistSet)));
     localStorage.setItem(foldersKey, JSON.stringify(mylistFolders));
     localStorage.setItem(mapKey, JSON.stringify(mylistCardFolderMap));
+    try { recordWordNames(getMylistCards()); } catch (e) {}
 
     updateMylistBadge();
 
@@ -3323,8 +3428,32 @@
       }
     }
 
-    // 6. Fallback stub (definition not found on this device). Marked isStub so it is
-    //    never displayed in My List and never uploaded to the cloud (prevents corruption).
+    // 6. 単語名がわかる場合は、辞書・授業の単語・ネット辞書から自動で作り直す
+    const nameInfo = getKnownWordName(cardId);
+    if (nameInfo && nameInfo.w && nameInfo.w !== cardId) {
+      const base = getCardById(nameInfo.w);
+      if (base && !isStubCard(base) && !base.isNameOnly) {
+        return { ...base, id: cardId, word: nameInfo.w, reading: nameInfo.r || base.reading, category: '授業で習った言葉', isRebuilt: true };
+      }
+      const online = getOnlineDictCache()[nameInfo.w];
+      if (online && online.en) {
+        return {
+          id: cardId, word: nameInfo.w, reading: nameInfo.r || '', category: '授業で習った言葉',
+          meaning: { en: online.en, ja: nameInfo.w, zh_TW: online.en, zh_CN: online.en, ko: online.en, zh_HK: online.en, fr: online.en },
+          example: { ja: '', en: '' }, related: '', isRebuilt: true
+        };
+      }
+      scheduleOnlineLookup(nameInfo.w);
+      const looking = onlineLookupFailed.has(nameInfo.w)
+        ? { en: 'Meaning could not be loaded (check connection)', ja: '意味を読み込めませんでした（通信を確認）', zh_TW: '無法載入意思（請檢查網路）', zh_CN: '无法加载意思（请检查网络）', ko: '뜻을 불러오지 못했습니다 (연결 확인)', zh_HK: '載入唔到意思（請檢查網絡）', fr: 'Sens indisponible (vérifiez la connexion)' }
+        : { en: 'Looking up meaning…', ja: '意味を調べています…', zh_TW: '正在查詢意思…', zh_CN: '正在查询意思…', ko: '뜻을 찾는 중…', zh_HK: '正在查意思…', fr: 'Recherche du sens…' };
+      return {
+        id: cardId, word: nameInfo.w, reading: nameInfo.r || '', category: '授業で習った言葉',
+        meaning: looking, example: { ja: '', en: '' }, related: '', isRebuilt: true, isNameOnly: true
+      };
+    }
+
+    // 7. 単語名も不明（古い形式のIDでデータが失われたもの）。isStub を付けてクラウドへは送らない
     return {
       id: cardId,
       word: cardId.replace(/^card_\d+_/, '').replace(/^dict_/, '').replace(/_\d+$/, '') || cardId,
@@ -3334,6 +3463,110 @@
       example: { ja: '', en: '' },
       isStub: true
     };
+  }
+
+  // --- 単語名レジストリ（ID → 単語名・読み）。定義が消えても単語名だけは必ず残す ---
+  function getWordNameRegistry() {
+    try { return JSON.parse(localStorage.getItem('haku_word_names') || '{}') || {}; } catch (e) { return {}; }
+  }
+  function saveWordNameRegistry(reg) {
+    try { localStorage.setItem('haku_word_names', JSON.stringify(reg)); } catch (e) {}
+  }
+  function isCustomCardId(id) {
+    return typeof id === 'string' && !id.startsWith('class_word_') && !/^card_\d{4}$/.test(id);
+  }
+  // 実際のカードから単語名を記録（複数まとめて）
+  function recordWordNames(cards) {
+    const reg = getWordNameRegistry();
+    let changed = false;
+    (cards || []).forEach(c => {
+      if (!c || !c.id || !c.word || isStubCard(c) || c.isNameOnly || !isCustomCardId(c.id)) return;
+      const cur = reg[c.id];
+      if (!cur || cur.w !== c.word || (c.reading && cur.r !== c.reading)) {
+        reg[c.id] = { w: c.word, r: c.reading || '' };
+        changed = true;
+      }
+    });
+    if (changed) saveWordNameRegistry(reg);
+    return reg;
+  }
+  function mergeWordNames(obj) {
+    if (!obj || typeof obj !== 'object') return false;
+    const reg = getWordNameRegistry();
+    let changed = false;
+    Object.entries(obj).forEach(([id, v]) => {
+      if (v && v.w && !reg[id]) { reg[id] = { w: v.w, r: v.r || '' }; changed = true; }
+    });
+    if (changed) saveWordNameRegistry(reg);
+    return changed;
+  }
+  // ID から単語名を取得（レジストリ → ID埋め込みの単語名）
+  function getKnownWordName(id) {
+    if (!id || typeof id !== 'string') return null;
+    const reg = getWordNameRegistry();
+    if (reg[id] && reg[id].w) return reg[id];
+    let m = id.match(/^card_\d+_[a-z0-9]+__(.+)$/);
+    if (m) return { w: m[1], r: '' };
+    m = id.match(/^(?:custom_ex|custom_dict|dict|jlpt)_(.+)_\d+$/);
+    if (m) return { w: m[1], r: '' };
+    return null;
+  }
+  // 指定IDの単語名一覧（クラウド保存用）
+  function buildWordNamesFor(ids) {
+    const reg = getWordNameRegistry();
+    const out = {};
+    (ids || []).forEach(id => { if (reg[id]) out[id] = reg[id]; });
+    return out;
+  }
+  // IDの作成日時（card_<timestamp>_...）
+  function getCardCreatedDate(id) {
+    const m = String(id || '').match(/^card_(\d{12,})_/);
+    if (!m) return null;
+    const d = new Date(Number(m[1]));
+    return isNaN(d.getTime()) ? null : d;
+  }
+
+  // --- ネット辞書（Wiktionary）での意味検索。辞書にない単語用 ---
+  function getOnlineDictCache() {
+    try { return JSON.parse(localStorage.getItem('haku_online_dict_cache') || '{}') || {}; } catch (e) { return {}; }
+  }
+  const onlineLookupPending = new Set();
+  const onlineLookupFailed = new Set(); // 通信失敗した単語はこのセッション中は再検索しない
+  let onlineLookupRerenderTimer = null;
+  function scheduleOnlineLookup(word) {
+    if (!word || onlineLookupPending.has(word) || onlineLookupFailed.has(word) || typeof fetch !== 'function') return;
+    const cache = getOnlineDictCache();
+    if (cache[word]) return;
+    onlineLookupPending.add(word);
+    fetch(`https://en.wiktionary.org/api/rest_v1/page/definition/${encodeURIComponent(word)}`)
+      .then(r => r.ok ? r.json() : null)
+      .then(data => {
+        let en = '';
+        const ja = data && data.ja;
+        if (Array.isArray(ja)) {
+          const defs = [];
+          ja.forEach(sec => (sec.definitions || []).forEach(d => {
+            const txt = String(d.definition || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+            if (txt && defs.length < 2) defs.push(txt);
+          }));
+          en = defs.join(' / ');
+        }
+        const c = getOnlineDictCache();
+        c[word] = { en: en || '(meaning not found — please ask your teacher)', t: Date.now() };
+        try { localStorage.setItem('haku_online_dict_cache', JSON.stringify(c)); } catch (e) {}
+      })
+      .catch(() => { onlineLookupFailed.add(word); })
+      .finally(() => {
+        onlineLookupPending.delete(word);
+        if (onlineLookupRerenderTimer) clearTimeout(onlineLookupRerenderTimer);
+        onlineLookupRerenderTimer = setTimeout(() => {
+          try {
+            updateMylistBadge();
+            const mv = document.getElementById('viewMylist');
+            if (mv && !mv.classList.contains('hidden')) renderMylistView();
+          } catch (e) {}
+        }, 400);
+      });
   }
 
   // 定義が失われた「ダミーカード」（ランダムIDが単語として表示される文字化けの原因）を判定
@@ -3431,7 +3664,15 @@
       displayedCards = displayedCards.filter(c => mylistCardFolderMap[c.id] === activeMylistFolderId);
     }
 
-    if (displayedCards.length === 0) {
+    // 単語名も定義も失われたカード（復元不可）はグレー表示で残す（練習・クイズには入れない）
+    const lostIds = [];
+    mylistSet.forEach(id => {
+      if (activeMylistFolderId !== 'all' && mylistCardFolderMap[id] !== activeMylistFolderId) return;
+      const c = getCardById(id);
+      if (!c || isStubCard(c)) lostIds.push(id);
+    });
+
+    if (displayedCards.length === 0 && lostIds.length === 0) {
       container.innerHTML = `
         <div class="text-center py-12 text-slate-400 text-xs">
           <p>${activeMylistFolderId === 'all' ? 'No words saved to My List yet.' : 'No words in this folder yet.'}</p>
@@ -3532,6 +3773,27 @@
 
       container.appendChild(item);
     });
+
+    if (lostIds.length > 0) {
+      const byDate = {};
+      lostIds.forEach(id => {
+        const dt = getCardCreatedDate(id);
+        const d = dt ? `${dt.getFullYear()}/${String(dt.getMonth() + 1).padStart(2, '0')}/${String(dt.getDate()).padStart(2, '0')}` : '日付不明';
+        (byDate[d] = byDate[d] || []).push(id);
+      });
+      const isJa = currentLang === 'ja';
+      const title = isJa
+        ? `読み込めなかった単語：${lostIds.length}件（先生に確認してください）`
+        : `${lostIds.length} word(s) could not be loaded — please ask your teacher`;
+      const rows = Object.keys(byDate).sort().map(d =>
+        `<div class="flex items-center justify-between py-1 border-b border-slate-200 last:border-0">
+           <span>${d} ${isJa ? '追加' : 'added'}</span><span class="font-bold">${byDate[d].length}${isJa ? '件' : ''}</span>
+         </div>`).join('');
+      const box = document.createElement('details');
+      box.className = 'p-3 rounded-2xl border border-dashed border-slate-300 bg-slate-100 text-slate-500 text-xs';
+      box.innerHTML = `<summary class="cursor-pointer font-bold">⚠️ ${title}</summary><div class="mt-2">${rows}</div>`;
+      container.appendChild(box);
+    }
   }
 
   // --- Admin Student Management Rendering ---
@@ -3791,7 +4053,8 @@
           }
         }
 
-        const cardId = `card_${Date.now()}_${Math.random().toString(36).substr(2, 6)}`;
+        // ★ IDに単語名を埋め込む（データが失われても単語名から必ず復元できるように）
+        const cardId = `card_${Date.now()}_${Math.random().toString(36).substr(2, 6)}__${String(word).replace(/[\/\s]/g, '')}`;
         const newCard = {
           id: cardId,
           word: word,
@@ -3821,6 +4084,7 @@
         if (!vocabList.find(c => c.id === newCard.id)) {
           vocabList.push(newCard);
         }
+        recordWordNames([newCard]);
         addedCardIds.push(cardId);
         addedCount++;
       }
@@ -3876,15 +4140,16 @@
             let studentCustomCards = [];
             try {
               const storedCustom = JSON.parse(localStorage.getItem('haku_all_custom_cards') || '[]');
-              studentCustomCards = [...vocabList, ...storedCustom].filter(c => mylistCardIds.has(c.id) && c.id.startsWith('card_') && !isStubCard(c));
+              studentCustomCards = [...vocabList, ...storedCustom].filter(c => mylistCardIds.has(c.id) && c.id.startsWith('card_') && !isStubCard(c) && !c.isRebuilt);
             } catch (e) {
-              studentCustomCards = vocabList.filter(c => mylistCardIds.has(c.id) && c.id.startsWith('card_') && !isStubCard(c));
+              studentCustomCards = vocabList.filter(c => mylistCardIds.has(c.id) && c.id.startsWith('card_') && !isStubCard(c) && !c.isRebuilt);
             }
             syncStudentToCloudDirect(stId, {
               mylist: Array.from(setObj),
               folders: stFolders,
               cardFolderMap: stMap,
               customCards: studentCustomCards,
+              wordNames: buildWordNamesFor(Array.from(setObj)),
               updatedAt: firebase.firestore.FieldValue.serverTimestamp()
             });
           }
@@ -3958,6 +4223,7 @@
       if (typeof renderAdminStudentList === 'function') {
         renderAdminStudentList();
       }
+      try { renderLostCardsReport(); } catch (e) {}
     }
   }
 
