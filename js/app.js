@@ -4091,9 +4091,8 @@
     });
 
     if (addedCount > 0) {
-      if (target === 'all') {
-        localStorage.setItem('haku_vocab_data', JSON.stringify(vocabList));
-      }
+      // どの生徒向けにインポートした場合でも、常にアプリのカスタム辞書マスターに登録して二度と見失わないようにする
+      localStorage.setItem('haku_vocab_data', JSON.stringify(vocabList));
 
       // Auto-add to My List and assign to requested folder!
       if (targetFolderSelect !== 'none') {
