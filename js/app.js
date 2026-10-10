@@ -558,7 +558,7 @@
   // --- Data Loading & Persistence ---
   function initData() {
     // Master data version check to ensure newly added cards & furigana updates are immediately visible
-    const CURRENT_DATA_VERSION = 'v54_complete_furigana_and_rocksolid_mobile_audio';
+    const CURRENT_DATA_VERSION = 'v55_authentic_conversations_and_safe_natural_examples';
     const savedVersion = localStorage.getItem('haku_vocab_version');
 
     const seedCards = window.INITIAL_VOCAB_DATA || [];

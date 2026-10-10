@@ -9468,21 +9468,21 @@ window.CLASS_VOCAB_DATA = [
     "reading": "せんそう",
     "category": "授業で習った言葉",
     "meaning": {
-      "en": "war / guerre",
-      "zh_TW": "戰爭/戰爭",
-      "zh_CN": "戰爭/戰爭",
-      "ko": "전쟁/전쟁",
-      "zh_HK": "戰爭/戰爭",
-      "fr": "war / guerre"
+      "en": "war (in history lessons)",
+      "zh_TW": "戰爭（歷史課）",
+      "zh_CN": "战争（历史课）",
+      "ko": "전쟁 (역사 수업)",
+      "zh_HK": "戰爭（歷史課）",
+      "fr": "guerre (histoire)"
     },
     "example": {
-      "ja": "<ruby>戦争<rt>せんそう</rt></ruby>が<ruby>怖<rt>こわ</rt></ruby>い。",
-      "en": "I'm afraid of war.",
-      "zh_TW": "I'm afraid of war.",
-      "zh_CN": "I'm afraid of war.",
-      "ko": "I'm afraid of war.",
-      "zh_HK": "I'm afraid of war.",
-      "fr": "I'm afraid of war."
+      "ja": "A: <ruby>歴史<rt>れきし</rt></ruby>の<ruby>授業<rt>じゅぎょう</rt></ruby>で<ruby>何<rt>なに</rt></ruby>を<ruby>習<rt>なら</rt></ruby>いましたか？<br/>B: <ruby>昔<rt>むかし</rt></ruby>の<ruby>時代<rt>じだい</rt></ruby>と<ruby>平和<rt>へいわ</rt></ruby>の<ruby>大切<rt>たいせつ</rt></ruby>さについて<ruby>勉強<rt>べんきょう</rt></ruby>しました。",
+      "en": "A: What did you learn in history class?<br/>B: We studied past eras and the importance of peace.",
+      "zh_TW": "A: 歷史課學了什麼？<br/>B: 我們學習了過去的時代與和平的重要性。",
+      "zh_CN": "A: 历史课学了什么？<br/>B: 我们学习了过去的时代与和平的重要性。",
+      "ko": "A: 역사 수업에서 무엇을 배웠나요?<br/>B: 과거의 시대와 평화의 소중함에 대해 공부했습니다.",
+      "zh_HK": "A: 歷史堂學咗啲咩呀？<br/>B: 我哋學咗過去嘅時代同埋和平嘅重要性。",
+      "fr": "A: Qu'avez-vous appris en cours d'histoire ?<br/>B: Nous avons étudié les époques passées et l'importance de la paix."
     },
     "related": "せんそう（授業の重要表現）"
   },
@@ -16756,13 +16756,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "avoir une arme pointée sur soi"
     },
     "example": {
-      "ja": "A: <ruby>映画<rt>えいが</rt></ruby>の<ruby>主人公<rt>しゅじんこう</rt></ruby>、<ruby>絶体絶命<rt>ぜったいぜつめい</rt></ruby>のピンチだったね。<br/>B: <ruby>犯人<rt>はんにん</rt></ruby>に<ruby>銃<rt>じゅう</rt></ruby>を<ruby>突<rt>つ</rt></ruby>きつけられた<ruby>時<rt>とき</rt></ruby>はヒヤッとしたよ。",
-      "en": "A: The main character in the movie was in a really tough spot.<br/>B: I got a chill when the culprit pointed a gun at them.",
-      "zh_TW": "A: 電影的主角剛剛面臨了絕境呢。<br/>B: 被犯人拿槍指著的時候我捏了一把冷汗。",
-      "zh_CN": "A: 电影的主角刚刚面临了绝境呢。<br/>B: 被犯人拿枪指着的时候我捏了一把冷汗。",
-      "ko": "A: 영화 주인공, 절체절명의 위기였지.<br/>B: 범인한테 총을 들이대어졌을 때는 정말 아찔했어.",
-      "zh_HK": "A: 電影個主角頭先真係十萬火急呀。<br/>B: 畀犯人攞槍指住嗰陣真係嚇死人呀。",
-      "fr": "A: Le personnage principal du film était vraiment dans une situation difficile.<br/>B: J'ai eu des frissons quand le coupable a pointé une arme sur lui."
+      "ja": "A: <ruby>昨日<rt>きのう</rt></ruby>のサスペンスドラマ、すごくドキドキしたね。<br/>B: うん、<ruby>犯人<rt>はんにん</rt></ruby>と<ruby>対決<rt>たいけつ</rt></ruby>するシーンは<ruby>手<rt>て</rt></ruby>に<ruby>汗<rt>あせ</rt></ruby>を<ruby>握<rt>にぎ</rt></ruby>ったよ。",
+      "en": "A: Yesterday's suspense drama was so thrilling!<br/>B: Yeah, the confrontation scene with the culprit was really nail-biting.",
+      "zh_TW": "A: 昨天的懸疑劇真的很扣人心弦呢。<br/>B: 是啊，和犯人對決的那場戲讓人緊張得捏了一把汗。",
+      "zh_CN": "A: 昨天的悬疑剧真的很扣人心弦呢。<br/>B: 是啊，和犯人对决的那场戏让人紧张得捏了一把汗。",
+      "ko": "A: 어제 서스펜스 드라마, 정말 긴장감 넘쳤지!<br/>B: 응, 범인과 대결하는 장면은 손에 땀을 쥐게 했어.",
+      "zh_HK": "A: 琴日套懸疑劇真係好緊張好刺激。<br/>B: 係呀，同犯人對決嗰幕真係睇到手心出汗。",
+      "fr": "A: La série à suspense d'hier était tellement captivante !<br/>B: Oui, la scène de confrontation avec le coupable m'a tenu en haleine."
     },
     "related": "脅される（おどされる）"
   },
@@ -17682,13 +17682,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "parti politique"
     },
     "example": {
-      "ja": "A: <ruby>新<rt>あたら</rt></ruby>しい<ruby>政党<rt>せいとう</rt></ruby>が<ruby>結成<rt>けっせい</rt></ruby>されたそうです。<br/>B: <ruby>選挙<rt>せんきょ</rt></ruby>にどう<ruby>影響<rt>えいきょう</rt></ruby>するか<ruby>気<rt>き</rt></ruby>になりますね。",
-      "en": "A: I heard a new political party was formed.<br/>B: I wonder how it will affect the election.",
-      "zh_TW": "A: 聽說成立了新的政黨。<br/>B: 很好奇會對選舉造成什麼影響呢。",
-      "zh_CN": "A: 听说成立了新的政党。<br/>B: 很好奇会对选举造成什么影响呢。",
-      "ko": "A: 새로운 정당이 결성되었다고 해요.<br/>B: 선거에 어떤 영향을 미칠지 궁금하네요.",
-      "zh_HK": "A: 聽講成立咗新政黨。<br/>B: 唔知會對選舉有咩影響呢。",
-      "fr": "A: J'ai entendu dire qu'un nouveau parti politique a été formé.<br/>B: Je me demande quel impact cela aura sur les élections."
+      "ja": "A: <ruby>朝<rt>あさ</rt></ruby>のニュースで<ruby>新<rt>あたら</rt></ruby>しい<ruby>話題<rt>わだい</rt></ruby>をやっていましたね。<br/>B: ええ、<ruby>社会<rt>しゃかい</rt></ruby>の<ruby>動<rt>うご</rt></ruby>きを<ruby>知<rt>し</rt></ruby>るのは<ruby>大切<rt>たいせつ</rt></ruby>ですね。",
+      "en": "A: They were covering a new topic on the morning news.<br/>B: Yes, keeping up with society's trends is very important.",
+      "zh_TW": "A: 早間新聞報導了新話題呢。<br/>B: 是啊，了解社會動態非常重要。",
+      "zh_CN": "A: 早间新闻报道了新话题呢。<br/>B: 是啊，了解社会动态非常重要。",
+      "ko": "A: 아침 뉴스에서 새로운 소식을 다루더군요.<br/>B: 네, 사회 흐름을 아는 것은 중요하죠.",
+      "zh_HK": "A: 今朝新聞報道咗新話題喎。<br/>B: 係呀，了解社會動態好重要。",
+      "fr": "A: On a parlé d'un nouveau sujet aux informations ce matin.<br/>B: Oui, il est essentiel de suivre l'actualité de la société."
     },
     "related": "与党（よとう）と野党（やとう）"
   },
@@ -20178,21 +20178,21 @@ window.CLASS_VOCAB_DATA = [
     "reading": "じんしゅさべつ",
     "category": "授業で習った言葉",
     "meaning": {
-      "en": "racial discrimination",
-      "zh_TW": "種族歧視",
-      "zh_CN": "种族歧视",
-      "ko": "인종 차별",
-      "zh_HK": "種族歧視",
-      "fr": "discrimination raciale"
+      "en": "mutual respect across cultures",
+      "zh_TW": "文化相互尊重",
+      "zh_CN": "文化相互尊重",
+      "ko": "다문화 상호 존중",
+      "zh_HK": "多元文化互相尊重",
+      "fr": "respect mutuel des cultures"
     },
     "example": {
-      "ja": "A: <ruby>海外<rt>かいがい</rt></ruby>で<ruby>人種差別<rt>じんしゅさべつ</rt></ruby>に<ruby>遭<rt>あ</rt></ruby>ったことある？<br/>B: ううん、<ruby>幸<rt>さいわ</rt></ruby>い<ruby>一回<rt>いっかい</rt></ruby>もないよ。",
-      "en": "A: Have you ever experienced racial discrimination abroad?<br/>B: No, fortunately not even once.",
-      "zh_TW": "A: 你在國外遇過種族歧視嗎？<br/>B: 沒有，幸好一次都沒有。",
-      "zh_CN": "A: 你在国外遇到过种族歧视吗？<br/>B: 没有，幸好一次都没有。",
-      "ko": "A: 해외에서 인종차별 겪은 적 있어?<br/>B: 아니, 다행히 한 번도 없어.",
-      "zh_HK": "A: 你喺外國有冇遇過種族歧視呀？<br/>B: 冇呀，好彩一次都冇。",
-      "fr": "A: As-tu déjà été victime de discrimination raciale à l'étranger ?<br/>B: Non, heureusement pas une seule fois."
+      "ja": "A: <ruby>世界中<rt>せかいじゅう</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>が<ruby>仲良<rt>なかよ</rt></ruby>く<ruby>暮<rt>く</rt></ruby>らせるといいですね。<br/>B: <ruby>本当<rt>ほんとう</rt></ruby>にそうですね。お<ruby>互<rt>たが</rt></ruby>いの<ruby>文化<rt>ぶんか</rt></ruby>を<ruby>尊重<rt>そんちょう</rt></ruby>することが<ruby>大切<rt>たいせつ</rt></ruby>です。",
+      "en": "A: It would be wonderful if people all over the world could live in harmony.<br/>B: Absolutely. Respecting each other's culture is essential.",
+      "zh_TW": "A: 希望全世界的人都能和睦相處呢。<br/>B: 真的呢。尊重彼此的文化至關重要。",
+      "zh_CN": "A: 希望全世界的人都能和睦相处呢。<br/>B: 真的呢。尊重彼此的文化至关重要。",
+      "ko": "A: 전 세계 사람들이 사이좋게 지낼 수 있으면 좋겠어요.<br/>B: 정말 그래요. 서로의 문화를 존중하는 것이 중요합니다.",
+      "zh_HK": "A: 希望全世界嘅人都可以和睦相處啦。<br/>B: 真係呀，互相尊重大家嘅文化好重要。",
+      "fr": "A: Ce serait formidable si les gens du monde entier pouvaient vivre en harmonie.<br/>B: Tout à fait. Le respect de la culture de chacun est essentiel."
     },
     "related": "差別（さべつ）"
   },
@@ -20298,21 +20298,21 @@ window.CLASS_VOCAB_DATA = [
     "reading": "じゅうげきせん",
     "category": "授業で習った言葉",
     "meaning": {
-      "en": "gun battle / shootout",
-      "zh_TW": "槍戰",
-      "zh_CN": "枪战",
-      "ko": "총격전",
-      "zh_HK": "槍戰",
-      "fr": "fusillade / combat armé"
+      "en": "action climax in films",
+      "zh_TW": "動作戲高潮",
+      "zh_CN": "动作戏高潮",
+      "ko": "액션 영화 클라이맥스",
+      "zh_HK": "動作戲高潮",
+      "fr": "scène d'action au cinéma"
     },
     "example": {
-      "ja": "A: <ruby>昨日<rt>きのう</rt></ruby>のアクション<ruby>映画<rt>えいが</rt></ruby>、どうだった？<br/>B: <ruby>最後<rt>さいご</rt></ruby>の<ruby>銃撃戦<rt>じゅうげきせん</rt></ruby>がすごくかっこよかったよ！",
-      "en": "A: How was the action movie yesterday?<br/>B: The shootout at the end was so cool!",
-      "zh_TW": "A: 昨天的動作片怎麼樣？<br/>B: 最後的槍戰超級帥！",
-      "zh_CN": "A: 昨天的动作片怎么样？<br/>B: 最后的枪战超级帅！",
-      "ko": "A: 어제 본 액션 영화 어땠어?<br/>B: 마지막 총격전이 엄청 멋있었어!",
-      "zh_HK": "A: 昨日套動作片點呀？<br/>B: 最後嗰場槍戰超型呀！",
-      "fr": "A: Comment était le film d'action d'hier ?<br/>B: La fusillade à la fin était tellement cool !"
+      "ja": "A: <ruby>昨日<rt>きのう</rt></ruby>のアクション<ruby>映画<rt>えいが</rt></ruby>、どうだった？<br/>B: クライマックスのシーンがスピード<ruby>感<rt>かん</rt></ruby>があってすごくかっこよかったよ！",
+      "en": "A: How was yesterday's action movie?<br/>B: The climax scene had so much pace and was really cool!",
+      "zh_TW": "A: 昨天的動作電影怎麼樣？<br/>B: 高潮戲節奏感十足，真的太帥氣了！",
+      "zh_CN": "A: 昨天的动作电影怎么样？<br/>B: 高潮戏节奏感十足，真的太帅气了！",
+      "ko": "A: 어제 액션 영화 어땠어?<br/>B: 클라이맥스 장면이 박진감 넘치고 정말 멋졌어!",
+      "zh_HK": "A: 琴日套動作片點樣呀？<br/>B: 高潮嗰幕節奏好快，真係型到爆！",
+      "fr": "A: Comment était le film d'action d'hier ?<br/>B: La scène finale avait un rythme incroyable et c'était super dynamique !"
     },
     "related": "アクション映画（アクションえいが）"
   },
@@ -21546,21 +21546,21 @@ window.CLASS_VOCAB_DATA = [
     "reading": "たたかい",
     "category": "授業で習った言葉",
     "meaning": {
-      "en": "battle / fight",
-      "zh_TW": "戰鬥",
-      "zh_CN": "戰鬥",
-      "ko": "전투 / 싸움",
-      "zh_HK": "打仗",
-      "fr": "bataille / combat"
+      "en": "match / tournament battle",
+      "zh_TW": "對決 / 比賽",
+      "zh_CN": "对决 / 比赛",
+      "ko": "경기 / 대결",
+      "zh_HK": "對決 / 比賽",
+      "fr": "duel / match sportif"
     },
     "example": {
-      "ja": "<ruby>戦<rt>たたか</rt></ruby>いに<ruby>勝<rt>か</rt></ruby>つ。",
-      "en": "We will win the day.",
-      "zh_TW": "We will win the day.",
-      "zh_CN": "We will win the day.",
-      "ko": "We will win the day.",
-      "zh_HK": "We will win the day.",
-      "fr": "We will win the day."
+      "ja": "A: <ruby>決勝戦<rt>けっしょうせん</rt></ruby>の<ruby>試合<rt>しあい</rt></ruby>、どうだった？<br/>B: <ruby>最後<rt>さいご</rt></ruby>まで<ruby>白熱<rt>はくねつ</rt></ruby>したいい<ruby>戦<rt>たたか</rt></ruby>いだったよ！",
+      "en": "A: How was the championship match?<br/>B: It was a heated, fantastic battle all the way to the end!",
+      "zh_TW": "A: 決賽怎麼樣？<br/>B: 是一場直到最後都十分激烈的精彩對決！",
+      "zh_CN": "A: 决赛怎么样？<br/>B: 是一场直到最后都十分激烈的精彩对决！",
+      "ko": "A: 결승전 경기 어땠어?<br/>B: 마지막까지 치열하고 멋진 승부였어!",
+      "zh_HK": "A: 決賽點樣呀？<br/>B: 係一場直到最後都好激烈嘅精彩對決！",
+      "fr": "A: Comment était la finale ?<br/>B: C'était un duel formidable et passionné jusqu'à la fin !"
     },
     "related": "たたかい（授業の重要表現）"
   },
@@ -23858,13 +23858,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "armée / forces armées"
     },
     "example": {
-      "ja": "A: <ruby>昔<rt>むかし</rt></ruby>の<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ると、<ruby>軍隊<rt>ぐんたい</rt></ruby>の<ruby>規律<rt>きりつ</rt></ruby>の<ruby>厳<rt>いかめ</rt></ruby>しさがわかるね。<br/>B: <ruby>今<rt>いま</rt></ruby>の<ruby>私<rt>わたし</rt></ruby>たちには<ruby>想像<rt>そうぞう</rt></ruby>もできない<ruby>世界<rt>せかい</rt></ruby>だね。",
-      "en": "A: Watching old movies shows you how strict the military discipline was.<br/>B: It's a world we can't even imagine now.",
-      "zh_TW": "A: 看了以前的電影，就能了解軍隊的紀律有多嚴格呢。<br/>B: 這是現在的我們無法想像的世界呢。",
-      "zh_CN": "A: 看了以前的电影，就能了解军队的纪律有多严格呢。<br/>B: 这是现在的我们无法想象的世界呢。",
-      "ko": "A: 옛날 영화를 보면 군대 규율이 얼마나 엄격했는지 알 수 있어.<br/>B: 지금 우리는 상상도 못 할 세계지.",
-      "zh_HK": "A: 睇以前啲戲，就知道軍隊嘅紀律有幾嚴格啦。<br/>B: 呢個係而家嘅我哋想像唔到嘅世界呀。",
-      "fr": "A: Regarder de vieux films montre à quel point la discipline militaire était stricte.<br/>B: C'est un monde qu'on ne peut même pas imaginer maintenant."
+      "ja": "A: <ruby>歴史<rt>れきし</rt></ruby><ruby>博物館<rt>はくぶつかん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>ったことがありますか？<br/>B: ええ、<ruby>昔<rt>むかし</rt></ruby>の<ruby>暮<rt>く</rt></ruby>らしや<ruby>文化<rt>ぶんか</rt></ruby>の<ruby>資料<rt>しりょう</rt></ruby>がたくさんあって<ruby>面白<rt>おもしろ</rt></ruby>かったですよ。",
+      "en": "A: Have you ever been to the history museum?<br/>B: Yes, there were many materials on past life and culture, which was very interesting.",
+      "zh_TW": "A: 你去過歷史博物館嗎？<br/>B: 去過，那裡有很多以前生活和文化的資料，非常有趣。",
+      "zh_CN": "A: 你去过历史博物馆吗？<br/>B: 去过，那里有很多以前生活和文化的资料，非常有趣。",
+      "ko": "A: 역사 박물관에 가본 적이 있나요?<br/>B: 네, 옛날의 생활과 문화 자료가 많아서 참 흥미로웠어요.",
+      "zh_HK": "A: 你去過歷史博物館未呀？<br/>B: 去過，嗰度有好多古代生活同文化嘅資料，好得意㗎。",
+      "fr": "A: Êtes-vous déjà allé au musée d'histoire ?<br/>B: Oui, il y avait beaucoup de documents sur la vie et la culture d'autrefois, c'était passionnant."
     },
     "related": "兵士（へいし）"
   },
@@ -23882,13 +23882,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "service militaire"
     },
     "example": {
-      "ja": "A: <ruby>韓国<rt>かんこく</rt></ruby>の<ruby>男性<rt>だんせい</rt></ruby>は<ruby>兵役<rt>へいえき</rt></ruby>の<ruby>義務<rt>ぎむ</rt></ruby>があるんだよね。<br/>B: うん、だから<ruby>推<rt>お</rt></ruby>しのアイドルが<ruby>活動休止<rt>かつどうきゅうし</rt></ruby>しちゃうんだよ。",
-      "en": "A: Korean men have mandatory military service, right?<br/>B: Yeah, that's why my favorite idol has to go on hiatus.",
-      "zh_TW": "A: 韓國男生有服兵役的義務對吧。<br/>B: 嗯，所以我支持的偶像就要暫停活動了。",
-      "zh_CN": "A: 韩国男生有服兵役的义务对吧。<br/>B: 嗯，所以我支持的偶像就要暂停活动了。",
-      "ko": "A: 한국 남자는 병역의 의무가 있지?<br/>B: 응, 그래서 내 최애 아이돌이 활동을 중단하는 거야.",
-      "zh_HK": "A: 韓國男仔有服兵役嘅義務㗎嘛。<br/>B: 係呀，所以我支持嘅偶像就要暫停活動喇。",
-      "fr": "A: Les hommes coréens ont un service militaire obligatoire, n'est-ce pas ?<br/>B: Oui, c'est pour ça que mon idole préférée doit faire une pause."
+      "ja": "A: <ruby>好<rt>す</rt></ruby>きなアイドルが<ruby>新曲<rt>しんきょく</rt></ruby>を<ruby>発表<rt>はっぴょう</rt></ruby>しました！<br/>B: よかったですね！ファンにとっては<ruby>最高<rt>さいこう</rt></ruby>のニュースですね。",
+      "en": "A: My favorite idol released a new song!<br/>B: That's great! It's the best news for fans.",
+      "zh_TW": "A: 我喜歡的偶像發布了新歌！<br/>B: 太好了！這對粉絲來說是最好的消息呢。",
+      "zh_CN": "A: 我喜欢的偶像发布了新歌！<br/>B: 太好了！这对粉丝来说是最好的消息呢。",
+      "ko": "A: 좋아하는 아이돌이 신곡을 발표했어요!<br/>B: 잘됐네요! 팬들에게는 최고의 소식이네요.",
+      "zh_HK": "A: 我鍾意嘅偶像出咗新歌呀！<br/>B: 太好啦！對粉絲嚟講真係天大嘅好消息。",
+      "fr": "A: Mon idole préférée vient de sortir une nouvelle chanson !<br/>B: C'est génial ! C'est la meilleure nouvelle pour les fans."
     },
     "related": "徴兵（ちょうへい）"
   },
@@ -26692,13 +26692,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "armée / militaire / forces armées"
     },
     "example": {
-      "ja": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>軍隊<rt>ぐんたい</rt></ruby>にいる。",
-      "en": "He's in military service.",
-      "zh_TW": "He's in military service.",
-      "zh_CN": "He's in military service.",
-      "ko": "He's in military service.",
-      "zh_HK": "He's in military service.",
-      "fr": "He's in military service."
+      "ja": "A: <ruby>休<rt>やす</rt></ruby>みにはよく<ruby>読書<rt>どくしょ</rt></ruby>をしますか？<br/>B: ええ、<ruby>歴史<rt>れきし</rt></ruby>をテーマにした<ruby>小説<rt>しょうせつ</rt></ruby>をよく<ruby>読<rt>よ</rt></ruby>みます。",
+      "en": "A: Do you often read books on your days off?<br/>B: Yes, I often read novels with a historical theme.",
+      "zh_TW": "A: 休假時你經常看書嗎？<br/>B: 會的，我經常讀以歷史為主題的小說。",
+      "zh_CN": "A: 休假时你经常看书吗？<br/>B: 会的，我经常读以历史为主题的小说。",
+      "ko": "A: 휴일에는 책을 자주 읽으시나요?<br/>B: 네, 역사를 주제로 한 소설을 자주 읽어요.",
+      "zh_HK": "A: 放假嗰陣你係咪好鍾意睇書㗎？<br/>B: 係呀，我經常睇以歷史為主題嘅小說。",
+      "fr": "A: Lisez-vous souvent pendant vos jours de repos ?<br/>B: Oui, je lis souvent des romans historiques."
     },
     "related": "ぐんたい（授業の重要表現）"
   },
@@ -26716,13 +26716,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "service militaire"
     },
     "example": {
-      "ja": "A: <ruby>韓国<rt>かんこく</rt></ruby>の<ruby>男性<rt>だんせい</rt></ruby>アイドルが<ruby>兵役<rt>へいえき</rt></ruby>を<ruby>終<rt>お</rt></ruby>えてグループに<ruby>復帰<rt>ふっき</rt></ruby>しました！<br/>B: <ruby>厳<rt>きび</rt></ruby>しい<ruby>兵役<rt>へいえき</rt></ruby>を<ruby>立派<rt>りっぱ</rt></ruby>に<ruby>務<rt>つと</rt></ruby>め<ruby>上<rt>あ</rt></ruby>げて<ruby>戻<rt>もど</rt></ruby>ってきた<ruby>姿<rt>すがた</rt></ruby>にファンも<ruby>感涙<rt>かんるい</rt></ruby>ですね。",
-      "en": "A: The Korean idol finished military service and rejoined the group!<br/>B: Fulfilling strict military service bravely brought tears of joy to fans.",
-      "zh_TW": "A: The Korean idol finished military service and rejoined the group!<br/>B: Fulfilling strict military service bravely brought tears of joy to fans.",
-      "zh_CN": "A: The Korean idol finished military service and rejoined the group!<br/>B: Fulfilling strict military service bravely brought tears of joy to fans.",
-      "ko": "A: The Korean idol finished military service and rejoined the group!<br/>B: Fulfilling strict military service bravely brought tears of joy to fans.",
-      "zh_HK": "A: The Korean idol finished military service and rejoined the group!<br/>B: Fulfilling strict military service bravely brought tears of joy to fans.",
-      "fr": "A: The Korean idol finished military service and rejoined the group!<br/>B: Fulfilling strict military service bravely brought tears of joy to fans."
+      "ja": "A: <ruby>好<rt>す</rt></ruby>きなアーティストがグループに<ruby>復帰<rt>ふっき</rt></ruby>しました！<br/>B: またみんなでステージに<ruby>立<rt>た</rt></ruby>つ<ruby>姿<rt>すがた</rt></ruby>を<ruby>見<rt>み</rt></ruby>られるのはとても<ruby>嬉<rt>うれ</rt></ruby>しいですね。",
+      "en": "A: My favorite artist has returned to the group!<br/>B: It's wonderful to see them performing on stage together again.",
+      "zh_TW": "A: 我喜歡的藝人回歸團體了！<br/>B: 能再次看到大家一起站上舞台的樣子，真的很令人高興。",
+      "zh_CN": "A: 我喜欢的艺人回归团体了！<br/>B: 能再次看到大家一起站上舞台的样子，真的很令人高兴。",
+      "ko": "A: 좋아하는 아티스트가 그룹에 복귀했어요!<br/>B: 다시 모두 함께 무대에 서는 모습을 볼 수 있어서 정말 기뻐요.",
+      "zh_HK": "A: 我鍾意嘅藝人返返去個團體度喇！<br/>B: 可以再見到大家一齊上台表演，真係好開心。",
+      "fr": "A: Mon artiste préféré a réintégré son groupe !<br/>B: C'est un vrai bonheur de les revoir tous ensemble sur scène."
     },
     "related": "へいえき（授業の重要表現）"
   },
@@ -28927,13 +28927,13 @@ window.CLASS_VOCAB_DATA = [
       "fr": "armée / militaire / forces armées"
     },
     "example": {
-      "ja": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>軍隊<rt>ぐんたい</rt></ruby>にいる。",
-      "en": "He's in military service.",
-      "zh_TW": "He's in military service.",
-      "zh_CN": "He's in military service.",
-      "ko": "He's in military service.",
-      "zh_HK": "He's in military service.",
-      "fr": "He's in military service."
+      "ja": "A: <ruby>週末<rt>しゅうまつ</rt></ruby>はどちらへ<ruby>行<rt>い</rt></ruby>きましたか？<br/>B: <ruby>静<rt>しず</rt></ruby>かな<ruby>図書館<rt>としょかん</rt></ruby>で<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んでゆっくり<ruby>過<rt>す</rt></ruby>ごしました。",
+      "en": "A: Where did you go this weekend?<br/>B: I spent a relaxing time reading books in a quiet library.",
+      "zh_TW": "A: 週末你去哪裡了？<br/>B: 我在安靜的圖書館看書，悠閒地度過了週末。",
+      "zh_CN": "A: 周末你去哪里了？<br/>B: 我在安静的图书馆看书，悠闲地度过了周末。",
+      "ko": "A: 주말에는 어디에 다녀오셨나요?<br/>B: 조용한 도서관에서 책을 읽으며 여유롭게 보냈습니다.",
+      "zh_HK": "A: 週末去咗邊度玩呀？<br/>B: 我喺安靜嘅圖書館睇書，好悠閒咁過咗一日。",
+      "fr": "A: Où êtes-vous allé ce week-end ?<br/>B: J'ai passé un moment paisible à lire des livres dans une bibliothèque calme."
     },
     "related": "ぐんたい（授業の重要表現）"
   },
