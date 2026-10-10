@@ -15,6 +15,7 @@
   let currentJlptDeckLevel = 'N5'; // Selected JLPT level when playing JLPT deck
   let activeDeck = [];
   let isSearchStudyMode = false; // true when studying a specific word clicked from search results
+  let isMylistStudyMode = false; // true when studying cards initiated from My List
   let mylistSet = new Set(); // store card IDs in mylist
   let knownSet = new Set(); // store cards marked as learned
   let isFuriganaEnabled = localStorage.getItem('haku_furigana_enabled') !== 'false'; // default true
@@ -558,7 +559,7 @@
   // --- Data Loading & Persistence ---
   function initData() {
     // Master data version check to ensure newly added cards & furigana updates are immediately visible
-    const CURRENT_DATA_VERSION = 'v55_authentic_conversations_and_safe_natural_examples';
+    const CURRENT_DATA_VERSION = 'v56_continuous_mylist_flashcard_study';
     const savedVersion = localStorage.getItem('haku_vocab_version');
 
     const seedCards = window.INITIAL_VOCAB_DATA || [];
@@ -2740,6 +2741,13 @@
 
   function backToFolderOverview() {
     currentNavLevel = 'folders';
+    if (isMylistStudyMode) {
+      isMylistStudyMode = false;
+      isSearchStudyMode = false;
+      document.getElementById('activeStudyHeader').classList.add('hidden');
+      switchView('mylist');
+      return;
+    }
     isSearchStudyMode = false;
     document.getElementById('folderOverviewPanel').classList.remove('hidden');
     document.getElementById('unitListPanel').classList.add('hidden');
@@ -3725,14 +3733,19 @@
       // Click on word or play button opens in interactive 3D flashcard study mode
       const studySingleHandler = (e) => {
         e.stopPropagation();
-        activeDeck = [card];
-        currentIndex = 0;
+        // 現在表示中のマイリスト単語リスト全体をデッキにし、クリックした単語から学習を開始
+        activeDeck = displayedCards.slice();
+        const clickedIdx = activeDeck.findIndex(c => c.id === card.id);
+        currentIndex = clickedIdx >= 0 ? clickedIdx : 0;
         isSearchStudyMode = true;
+        isMylistStudyMode = true;
         switchView('flashcards');
         document.getElementById('folderOverviewPanel').classList.add('hidden');
         document.getElementById('unitListPanel').classList.add('hidden');
         document.getElementById('activeStudyHeader').classList.remove('hidden');
-        document.getElementById('activeStudySectionName').textContent = card.word;
+        const folderObj = mylistFolders.find(f => f.id === activeMylistFolderId);
+        const folderName = folderObj ? folderObj.name : (currentLang === 'ja' ? 'マイリスト全体' : 'My List (All)');
+        document.getElementById('activeStudySectionName').textContent = folderName;
         document.getElementById('activeStudyFolderName').textContent = currentLang === 'ja' ? 'マイリスト' : 'My List';
         renderCurrentCard();
       };
@@ -4606,8 +4619,8 @@
     document.getElementById('btnBackToFolders').addEventListener('click', backToFolderOverview);
     document.getElementById('btnStudyEntireFolder').addEventListener('click', startStudyingEntireFolder);
     document.getElementById('btnChangeUnit').addEventListener('click', () => {
-      if (isSearchStudyMode) {
-        // Return directly to folder overview from a search result card
+      if (isMylistStudyMode || isSearchStudyMode) {
+        // Return directly to My List or folder overview
         backToFolderOverview();
       } else {
         // Return to units list of current folder
@@ -5026,6 +5039,7 @@
       activeDeck = targetCards;
       currentIndex = 0;
       isSearchStudyMode = true; // Allows back button to return gracefully
+      isMylistStudyMode = true;
 
       switchView('flashcards');
 
