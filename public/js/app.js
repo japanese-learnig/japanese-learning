@@ -833,6 +833,16 @@
       }
     }
 
+    // 現代若者言葉・推し活・SNSネットスラング辞書の統合（最優先ヒット）
+    if (window.MODERN_SLANG_DATA && Array.isArray(window.MODERN_SLANG_DATA)) {
+      if (window.DICT_DATA && Array.isArray(window.DICT_DATA)) {
+        const slangKeys = new Set(window.MODERN_SLANG_DATA.map(s => s.w));
+        window.DICT_DATA = [...window.MODERN_SLANG_DATA, ...window.DICT_DATA.filter(d => !slangKeys.has(d.w))];
+      } else {
+        window.DICT_DATA = [...window.MODERN_SLANG_DATA];
+      }
+    }
+
     loadMylistForCurrentStudent();
     applyUiLanguage(currentLang);
     renderFolderOverview();
@@ -6003,13 +6013,13 @@
           id: `dict_${entry.w}_${Date.now()}`,
           word: entry.w,
           reading: entry.r || hintReading || entry.w,
-          category: entry.l ? `JLPT ${entry.l}` : '辞書',
+          category: entry.category || (entry.l ? `JLPT ${entry.l}` : '辞書'),
           section_title: '例文から保存した単語',
           meaning: {
             en: (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—',
             zh_TW: (entry.zh && entry.zh.map(cleanDefinitionText).join(', ')) || (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—',
-            zh_CN: (entry.zh && entry.zh.map(cleanDefinitionText).join(', ')) || (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—',
-            ko: (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—',
+            zh_CN: (entry.zh_CN && entry.zh_CN.map(cleanDefinitionText).join(', ')) || (entry.zh && entry.zh.map(cleanDefinitionText).join(', ')) || (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—',
+            ko: (entry.ko && entry.ko.map(cleanDefinitionText).join(', ')) || (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—',
             fr: (entry.fr && entry.fr.map(cleanDefinitionText).join(', ')) || (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—'
           }
         };
@@ -6045,13 +6055,13 @@
               id: `dict_${entry.w}_${Date.now()}`,
               word: entry.w,
               reading: entry.r || (entry.w === lw ? '' : lw),
-              category: entry.l ? `JLPT ${entry.l}` : '辞書',
+              category: entry.category || (entry.l ? `JLPT ${entry.l}` : '辞書'),
               section_title: '例文から保存した単語',
               meaning: {
                 en: (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—',
                 zh_TW: (entry.zh && entry.zh.map(cleanDefinitionText).join(', ')) || (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—',
-                zh_CN: (entry.zh && entry.zh.map(cleanDefinitionText).join(', ')) || (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—',
-                ko: (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—',
+                zh_CN: (entry.zh_CN && entry.zh_CN.map(cleanDefinitionText).join(', ')) || (entry.zh && entry.zh.map(cleanDefinitionText).join(', ')) || (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—',
+                ko: (entry.ko && entry.ko.map(cleanDefinitionText).join(', ')) || (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—',
                 fr: (entry.fr && entry.fr.map(cleanDefinitionText).join(', ')) || (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—'
               }
             };
@@ -6245,14 +6255,25 @@
       const enriched = enrichDictEntry(d);
       const mList = (enriched.m || []).map(cleanDefinitionText).filter(Boolean).join(', ');
       const zhList = (enriched.zh || []).map(cleanDefinitionText).filter(Boolean).join(', ');
+      const zhCnList = (enriched.zh_CN || enriched.zh || []).map(cleanDefinitionText).filter(Boolean).join(', ');
+      const koList = (enriched.ko || []).map(cleanDefinitionText).filter(Boolean).join(', ');
       const frList = (enriched.fr || []).map(cleanDefinitionText).filter(Boolean).join(', ');
-      if (currentLang === 'zh_TW' || currentLang === 'zh_HK' || currentLang === 'zh_CN') {
-        return zhList || mList || '—';
+
+      let res = mList || '—';
+      if (currentLang === 'zh_TW' || currentLang === 'zh_HK') {
+        res = zhList || mList || '—';
+      } else if (currentLang === 'zh_CN') {
+        res = zhCnList || zhList || mList || '—';
+      } else if (currentLang === 'fr') {
+        res = frList || mList || '—';
+      } else if (currentLang === 'ko') {
+        res = koList || mList || '—';
       }
-      if (currentLang === 'fr') {
-        return frList || mList || '—';
+
+      if (d.note) {
+        res += ` （※ ${d.note}）`;
       }
-      return mList || '—';
+      return res;
     }
 
     // --- 6. トップ表示する単語カードの決定 ---
@@ -6282,7 +6303,7 @@
       const d = bestDict.item;
       topWord = d.w;
       topReading = d.r || hintReading || '';
-      topCategory = d.l ? `JLPT ${d.l}` : '辞書';
+      topCategory = d.category || (d.l ? `JLPT ${d.l}` : '辞書');
       topMeaningText = formatDictMeaning(d);
       topCardForSave = {
         id: `dict_${d.w}_${d.r || ''}`,
@@ -6292,8 +6313,8 @@
         meaning: {
           en: (d.m || []).map(cleanDefinitionText).join(', ') || '—',
           zh_TW: (d.zh || d.m || []).map(cleanDefinitionText).join(', ') || '—',
-          zh_CN: (d.zh || d.m || []).map(cleanDefinitionText).join(', ') || '—',
-          ko: (d.m || []).map(cleanDefinitionText).join(', ') || '—',
+          zh_CN: (d.zh_CN || d.zh || d.m || []).map(cleanDefinitionText).join(', ') || '—',
+          ko: (d.ko || d.m || []).map(cleanDefinitionText).join(', ') || '—',
           fr: (d.fr || d.m || []).map(cleanDefinitionText).join(', ') || '—'
         }
       };
@@ -6310,7 +6331,7 @@
       const d = bestDict.item;
       topWord = d.w;
       topReading = d.r || hintReading || '';
-      topCategory = d.l ? `JLPT ${d.l}` : '辞書';
+      topCategory = d.category || (d.l ? `JLPT ${d.l}` : '辞書');
       topMeaningText = formatDictMeaning(d);
       topCardForSave = {
         id: `dict_${d.w}_${d.r || ''}`,
@@ -6320,8 +6341,8 @@
         meaning: {
           en: (d.m || []).map(cleanDefinitionText).join(', ') || '—',
           zh_TW: (d.zh || d.m || []).map(cleanDefinitionText).join(', ') || '—',
-          zh_CN: (d.zh || d.m || []).map(cleanDefinitionText).join(', ') || '—',
-          ko: (d.m || []).map(cleanDefinitionText).join(', ') || '—',
+          zh_CN: (d.zh_CN || d.zh || d.m || []).map(cleanDefinitionText).join(', ') || '—',
+          ko: (d.ko || d.m || []).map(cleanDefinitionText).join(', ') || '—',
           fr: (d.fr || d.m || []).map(cleanDefinitionText).join(', ') || '—'
         }
       };
@@ -6412,19 +6433,19 @@
         relatedList.push({
           word: d.w,
           reading: d.r || '',
-          category: d.l ? `JLPT ${d.l}` : '辞書',
-          badgeClass: d.l ? 'bg-sky-100 text-sky-800' : 'bg-slate-100 text-slate-700',
+          category: d.category || (d.l ? `JLPT ${d.l}` : '辞書'),
+          badgeClass: d.category ? 'bg-pink-100 text-pink-800 border border-pink-200' : (d.l ? 'bg-sky-100 text-sky-800' : 'bg-slate-100 text-slate-700'),
           meaning: meaning,
           cardObj: {
             id: `dict_${d.w}_${d.r || ''}`,
             word: d.w,
             reading: d.r || '',
-            category: d.l ? `JLPT ${d.l}` : '辞書',
+            category: d.category || (d.l ? `JLPT ${d.l}` : '辞書'),
             meaning: {
               en: (d.m || []).map(cleanDefinitionText).join(', ') || '—',
               zh_TW: (d.zh || d.m || []).map(cleanDefinitionText).join(', ') || '—',
-              zh_CN: (d.zh || d.m || []).map(cleanDefinitionText).join(', ') || '—',
-              ko: (d.m || []).map(cleanDefinitionText).join(', ') || '—',
+              zh_CN: (d.zh_CN || d.zh || d.m || []).map(cleanDefinitionText).join(', ') || '—',
+              ko: (d.ko || d.m || []).map(cleanDefinitionText).join(', ') || '—',
               fr: (d.fr || d.m || []).map(cleanDefinitionText).join(', ') || '—'
             }
           }
