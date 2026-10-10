@@ -559,7 +559,7 @@
   // --- Data Loading & Persistence ---
   function initData() {
     // Master data version check to ensure newly added cards & furigana updates are immediately visible
-    const CURRENT_DATA_VERSION = 'v56_continuous_mylist_flashcard_study';
+    const CURRENT_DATA_VERSION = 'v57_japanese_deinflection_and_online_dict_lookup';
     const savedVersion = localStorage.getItem('haku_vocab_version');
 
     const seedCards = window.INITIAL_VOCAB_DATA || [];
@@ -5655,12 +5655,274 @@
     }
   }
 
+  // ==========================================
+  // 日本語形態素 活用形復元（辞書形・原形）エンジン
+  // ==========================================
+  function deinflectJapaneseWord(word) {
+    if (!word || typeof word !== 'string') return [];
+    const clean = word.trim();
+    if (!clean) return [];
+
+    const candidates = [];
+    const seen = new Set([clean]);
+
+    function addCandidate(w, ruleName) {
+      if (!w || typeof w !== 'string') return;
+      const trimmed = w.trim();
+      if (!trimmed || seen.has(trimmed)) return;
+      seen.add(trimmed);
+      candidates.push({ word: trimmed, rule: ruleName || '辞書形・原形' });
+    }
+
+    // 1. 接頭語の除去 (お・ご)
+    if ((clean.startsWith('お') || clean.startsWith('ご')) && clean.length >= 2) {
+      addCandidate(clean.slice(1), '接頭語除去');
+    }
+
+    // 2. 助詞・付属語の除去
+    const particles = [
+      'とか', 'など', 'より', 'から', 'まで', 'だけ', 'ほど', 'ばかり', 'くらい', 'ぐらい',
+      'な', 'だ', 'に', 'を', 'の', 'が', 'は', 'で', 'と', 'へ', 'も', 'よ', 'ね', 'か'
+    ];
+    for (const p of particles) {
+      if (clean.endsWith(p) && clean.length > p.length) {
+        addCandidate(clean.slice(0, -p.length), '助詞除去');
+      }
+    }
+
+    // 3. い形容詞 (新しく, 新しくて, 新しかった, 新しくない, 新しければ)
+    const adjSuffixes = ['くなかった', 'かった', 'くない', 'くて', 'く', 'ければ'];
+    for (const sfx of adjSuffixes) {
+      if (clean.endsWith(sfx) && clean.length > sfx.length) {
+        const stem = clean.slice(0, -sfx.length);
+        addCandidate(stem + 'い', 'い形容詞・原形');
+      }
+    }
+
+    // 4. な形容詞 (静かだ, 静かで, 静かな, 静かに)
+    const naSuffixes = ['だった', 'ではない', 'じゃない', 'なら', 'だ', 'で', 'な', 'に'];
+    for (const sfx of naSuffixes) {
+      if (clean.endsWith(sfx) && clean.length > sfx.length) {
+        addCandidate(clean.slice(0, -sfx.length), 'な形容詞・語幹');
+      }
+    }
+
+    // 5. ます形 (丁寧語)
+    const masuSuffixes = ['ませんでした', 'ましょう', 'ました', 'ません', 'ます'];
+    for (const sfx of masuSuffixes) {
+      if (clean.endsWith(sfx) && clean.length > sfx.length) {
+        const stem = clean.slice(0, -sfx.length);
+        addCandidate(stem, 'ます形語幹');
+        expandRenyoukei(stem);
+      }
+    }
+
+    // 6. 連用形そのものの判定 (例: はかどり、買い、話し、読み、調べ)
+    const godanRenyouEnding = 'いきぎしちにびみり';
+    const ichidanRenyouEnding = 'えけげせてねべめれいきぎしちにびみり';
+    const lastChar = clean.slice(-1);
+    if (godanRenyouEnding.includes(lastChar) || ichidanRenyouEnding.includes(lastChar)) {
+      expandRenyoukei(clean);
+    }
+
+    function expandRenyoukei(stem) {
+      if (!stem || stem.length < 1) return;
+      const last = stem.slice(-1);
+      const stemBase = stem.slice(0, -1);
+
+      // 五段動詞の連用形 -> 終止形 (う段)
+      const godanMap = {
+        'い': 'う', // 買い -> 買う
+        'き': 'く', // 行き -> 行く, 書き -> 書く
+        'ぎ': 'ぐ', // 泳ぎ -> 泳ぐ, 急ぎ -> 急ぐ
+        'し': 'す', // 話し -> 話す, 落とし -> 落とす
+        'ち': 'つ', // 立ち -> 立つ, 待ち -> 待つ
+        'に': 'ぬ', // 死に -> 死ぬ
+        'び': 'ぶ', // 呼び -> 呼ぶ, 遊び -> 遊ぶ
+        'み': 'む', // 読み -> 読む, 飲み -> 飲む, 進み -> 進む
+        'り': 'る'  // はかどり -> はかどる, 作り -> 作る, 走り -> 走る
+      };
+      if (godanMap[last]) {
+        addCandidate(stemBase + godanMap[last], '五段動詞・辞書形');
+      }
+
+      // 一段動詞の連用形 -> 終止形 (stem + る)
+      addCandidate(stem + 'る', '一段動詞・辞書形');
+
+      // サ変動詞 (stem + する)
+      if (stem.endsWith('し')) {
+        addCandidate(stem.slice(0, -1) + 'する', 'サ変動詞');
+        addCandidate(stem.slice(0, -1), 'サ変名詞');
+      }
+    }
+
+    // 7. て形・た形 (音便の復元)
+    if (clean.endsWith('って') || clean.endsWith('った')) {
+      const stem = clean.slice(0, -2);
+      addCandidate(stem + 'る', '五段動詞(る)');
+      addCandidate(stem + 'つ', '五段動詞(つ)');
+      addCandidate(stem + 'う', '五段動詞(う)');
+      addCandidate(stem + 'く', '五段動詞(く/行く)');
+    } else if (clean.endsWith('いて') || clean.endsWith('いた')) {
+      const stem = clean.slice(0, -2);
+      addCandidate(stem + 'く', '五段動詞(く)');
+    } else if (clean.endsWith('いで') || clean.endsWith('いだ')) {
+      const stem = clean.slice(0, -2);
+      addCandidate(stem + 'ぐ', '五段動詞(ぐ)');
+    } else if (clean.endsWith('して') || clean.endsWith('した')) {
+      const stem = clean.slice(0, -2);
+      addCandidate(stem + 'す', '五段動詞(す)');
+      addCandidate(stem + 'する', 'サ変動詞(する)');
+      addCandidate(stem, 'サ変名詞');
+    } else if (clean.endsWith('んで') || clean.endsWith('んだ')) {
+      const stem = clean.slice(0, -2);
+      addCandidate(stem + 'む', '五段動詞(む)');
+      addCandidate(stem + 'ぶ', '五段動詞(ぶ)');
+      addCandidate(stem + 'ぬ', '五段動詞(ぬ)');
+    } else if (clean.endsWith('て') || clean.endsWith('た')) {
+      const stem = clean.slice(0, -1);
+      addCandidate(stem + 'る', '一段動詞・辞書形');
+    }
+
+    // 8. ない形・否定形 (未然形)
+    const naiSuffixes = ['なかった', 'なくて', 'ない', 'ず', 'ぬ'];
+    for (const sfx of naiSuffixes) {
+      if (clean.endsWith(sfx) && clean.length > sfx.length) {
+        const stem = clean.slice(0, -sfx.length);
+        addCandidate(stem + 'る', '一段動詞(ない形)');
+        const mizenMap = {
+          'わ': 'う', 'か': 'く', 'が': 'ぐ', 'さ': 'す',
+          'た': 'つ', 'な': 'ぬ', 'ば': 'ぶ', 'ま': 'む', 'ら': 'る'
+        };
+        const last = stem.slice(-1);
+        if (mizenMap[last]) {
+          addCandidate(stem.slice(0, -1) + mizenMap[last], '五段動詞(ない形)');
+        }
+      }
+    }
+
+    // 9. サ変動詞
+    if (clean.endsWith('する') && clean.length > 2) {
+      addCandidate(clean.slice(0, -2), 'サ変名詞');
+    }
+    if (clean.endsWith('できる') && clean.length > 3) {
+      addCandidate(clean.slice(0, -3) + 'する', 'サ変動詞');
+      addCandidate(clean.slice(0, -3), 'サ変名詞');
+    }
+
+    // 10. カ変動詞
+    if (['来ます', '来て', '来た', '来ない', 'こない', 'きたり', 'きた'].includes(clean)) {
+      addCandidate('来る', 'カ変動詞');
+    }
+
+    return candidates;
+  }
+
+  // 辞書データベースの品詞コード記号（[vg], [n], [v5r] 等）を除去してきれいに整形
+  function cleanDefinitionText(str) {
+    if (!str || typeof str !== 'string') return '';
+    return str
+      .replace(/\[[a-z0-9|\-]+\]/gi, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  // 辞書データの兄弟エントリ（漢字表記とかな表記のペア）から不足している訳文・レベルを相互補完
+  function enrichDictEntry(d) {
+    if (!d) return d;
+    const w = d.w || '';
+    const r = d.r || '';
+    let zh = (d.zh && d.zh.length) ? [...d.zh] : [];
+    let fr = (d.fr && d.fr.length) ? [...d.fr] : [];
+    let m = (d.m && d.m.length) ? [...d.m] : [];
+    let l = d.l || '';
+
+    if (window.DICT_DATA && Array.isArray(window.DICT_DATA)) {
+      let sibling = null;
+      if (r) {
+        sibling = window.DICT_DATA.find(x => x.w === r && (x.zh?.length || x.fr?.length || x.l));
+      } else if (w) {
+        sibling = window.DICT_DATA.find(x => x.r === w && (x.zh?.length || x.fr?.length || x.l));
+      }
+      if (sibling) {
+        if (!zh.length && sibling.zh?.length) zh = [...sibling.zh];
+        if (!fr.length && sibling.fr?.length) fr = [...sibling.fr];
+        if (!l && sibling.l) l = sibling.l;
+        if (m.length <= 1 && sibling.m?.length > m.length) m = [...sibling.m];
+      }
+    }
+    return { ...d, w, r, zh, fr, m, l };
+  }
+
+  // オンライン辞書（Google翻訳API + ウィクショナリーREST API）から語義を取得
+  async function fetchOnlineDictionaryDefinition(query) {
+    if (!query) return null;
+    const clean = query.trim();
+    if (!clean) return null;
+    const enc = encodeURIComponent(clean);
+
+    try {
+      const tlEnUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=ja&tl=en&dt=t&q=${enc}`;
+      const tlZhUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=ja&tl=zh-TW&dt=t&q=${enc}`;
+      const tlFrUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=ja&tl=fr&dt=t&q=${enc}`;
+      const tlKoUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=ja&tl=ko&dt=t&q=${enc}`;
+      const wikUrl = `https://ja.wiktionary.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=${enc}&format=json&origin=*`;
+
+      const [enRes, zhRes, frRes, koRes, wikRes] = await Promise.allSettled([
+        fetch(tlEnUrl).then(r => r.json()),
+        fetch(tlZhUrl).then(r => r.json()),
+        fetch(tlFrUrl).then(r => r.json()),
+        fetch(tlKoUrl).then(r => r.json()),
+        fetch(wikUrl).then(r => r.json())
+      ]);
+
+      function parseTranslate(res) {
+        if (res.status === 'fulfilled' && res.value && res.value[0] && Array.isArray(res.value[0])) {
+          return res.value[0].map(item => item[0]).filter(Boolean).join(' ').trim();
+        }
+        return '';
+      }
+
+      const enText = parseTranslate(enRes);
+      const zhText = parseTranslate(zhRes);
+      const frText = parseTranslate(frRes);
+      const koText = parseTranslate(koRes);
+
+      let jaExplain = '';
+      if (wikRes.status === 'fulfilled' && wikRes.value?.query?.pages) {
+        const pages = wikRes.value.query.pages;
+        for (const pid in pages) {
+          if (pid !== '-1' && pages[pid].extract) {
+            const rawExt = pages[pid].extract;
+            const lines = rawExt.split('\n')
+              .map(l => l.trim())
+              .filter(l => l && !l.startsWith('=') && !l.includes('青空文庫') && !l.includes('閲覧。'));
+            jaExplain = lines.slice(0, 3).join(' ');
+            break;
+          }
+        }
+      }
+
+      return {
+        en: enText || clean,
+        zh_TW: zhText || enText || clean,
+        zh_CN: zhText || enText || clean,
+        ko: koText || enText || clean,
+        fr: frText || enText || clean,
+        ja: jaExplain || ''
+      };
+    } catch (err) {
+      console.warn('Online dictionary lookup error:', err);
+      return null;
+    }
+  }
+
   // なぞった単語をワンタップでマイリストに追加（またはフォルダ選択）
   function quickSaveExampleWordToMylist(word, hintReading) {
     const cleanWord = sanitizeSelectedWordText(word);
     if (!cleanWord) return;
 
-    // 既存カードを探索、なければカスタム辞書カードを作成
+    // 1. 既存カード・辞書を直接探索
     let card = vocabList.find(c => c.word === cleanWord || c.id === cleanWord);
     if (!card) {
       card = getMylistCards().find(c => c.word === cleanWord || c.id === cleanWord);
@@ -5677,26 +5939,72 @@
       }
     }
     if (!card && window.DICT_DATA) {
-      const entry = window.DICT_DATA.find(d => d.w === cleanWord);
-      if (entry) {
+      const rawEntry = window.DICT_DATA.find(d => d.w === cleanWord || (d.r && d.r === cleanWord));
+      if (rawEntry) {
+        const entry = enrichDictEntry(rawEntry);
         card = {
           id: `dict_${entry.w}_${Date.now()}`,
           word: entry.w,
           reading: entry.r || hintReading || entry.w,
-          category: entry.l ? `JLPT ${entry.l}` : '例文から保存',
+          category: entry.l ? `JLPT ${entry.l}` : '辞書',
           section_title: '例文から保存した単語',
           meaning: {
-            en: (entry.m && entry.m.join(', ')) || '—',
-            zh_TW: (entry.zh && entry.zh.join(', ')) || (entry.m && entry.m.join(', ')) || '—',
-            zh_CN: (entry.zh && entry.zh.join(', ')) || (entry.m && entry.m.join(', ')) || '—',
-            ko: (entry.m && entry.m.join(', ')) || '—',
-            fr: (entry.fr && entry.fr.join(', ')) || (entry.m && entry.m.join(', ')) || '—'
+            en: (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—',
+            zh_TW: (entry.zh && entry.zh.map(cleanDefinitionText).join(', ')) || (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—',
+            zh_CN: (entry.zh && entry.zh.map(cleanDefinitionText).join(', ')) || (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—',
+            ko: (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—',
+            fr: (entry.fr && entry.fr.map(cleanDefinitionText).join(', ')) || (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—'
           }
         };
       }
     }
 
-    // 辞書にもなければ即座に新規単語として構成
+    // 2. 直接見つからなければ活用形（辞書形・語幹）から探索
+    if (!card) {
+      const lemmas = deinflectJapaneseWord(cleanWord);
+      for (const lm of lemmas) {
+        const lw = lm.word;
+        card = vocabList.find(c => c.word === lw || (c.reading && c.reading === lw));
+        if (card) break;
+        card = getMylistCards().find(c => c.word === lw || (c.reading && c.reading === lw));
+        if (card) break;
+        if (window.CLASS_VOCAB_DATA) {
+          const classCard = window.CLASS_VOCAB_DATA.find(c => c.word === lw || (c.reading && c.reading === lw));
+          if (classCard) {
+            card = {
+              ...classCard,
+              id: `custom_ex_${classCard.word}_${Date.now()}`,
+              category: '例文から保存',
+              section_title: '例文から保存した単語'
+            };
+            break;
+          }
+        }
+        if (window.DICT_DATA) {
+          const rawEntry = window.DICT_DATA.find(d => d.w === lw || (d.r && d.r === lw));
+          if (rawEntry) {
+            const entry = enrichDictEntry(rawEntry);
+            card = {
+              id: `dict_${entry.w}_${Date.now()}`,
+              word: entry.w,
+              reading: entry.r || (entry.w === lw ? '' : lw),
+              category: entry.l ? `JLPT ${entry.l}` : '辞書',
+              section_title: '例文から保存した単語',
+              meaning: {
+                en: (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—',
+                zh_TW: (entry.zh && entry.zh.map(cleanDefinitionText).join(', ')) || (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—',
+                zh_CN: (entry.zh && entry.zh.map(cleanDefinitionText).join(', ')) || (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—',
+                ko: (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—',
+                fr: (entry.fr && entry.fr.map(cleanDefinitionText).join(', ')) || (entry.m && entry.m.map(cleanDefinitionText).join(', ')) || '—'
+              }
+            };
+            break;
+          }
+        }
+      }
+    }
+
+    // 3. 辞書にもなければ新規単語として構成
     if (!card) {
       card = {
         id: `custom_ex_${cleanWord}_${Date.now()}`,
@@ -5721,7 +6029,7 @@
     });
   }
 
-  // 単語辞書検索 ＆ 詳細モーダル (漢字1文字や部分選択でも関連順に単語を自動提示)
+  // 単語辞書検索 ＆ 詳細モーダル (活用形復元・形態素優先・オンライン辞書連携)
   function openDictLookupModal(queryWord, hintReading) {
     if (!queryWord) return;
     const cleanWord = sanitizeSelectedWordText(queryWord);
@@ -5731,47 +6039,27 @@
     const content = document.getElementById('dictPopupModalContent');
     if (!modal || !content) return;
 
-    // 活用語尾・語幹の自動復元リスト
-    const searchCandidates = [cleanWord];
-    const suffixes = ['とか', 'など', 'かった', 'くない', 'くなかった', 'くて', 'な', 'だ', 'に', 'を', 'の', 'が', 'は', 'で', 'と', 'へ', 'も', 'より', 'から', 'まで', 'して', 'した', 'する', 'され', 'ます', 'ました', 'ません', 'たい', 'たく', 'ない', 'て', 'た', 'い', 'く', 'お', 'ご'];
-    for (const sfx of suffixes) {
-      if (cleanWord.endsWith(sfx) && cleanWord.length > sfx.length) {
-        const stem = cleanWord.slice(0, -sfx.length);
-        if (stem && !searchCandidates.includes(stem)) searchCandidates.push(stem);
+    // --- 1. 形態素・活用形復元リストの生成 ---
+    const lemmas = deinflectJapaneseWord(cleanWord);
+    const lemmaMap = new Map(); // word -> ruleName
+    lemmas.forEach(l => {
+      if (!lemmaMap.has(l.word)) lemmaMap.set(l.word, l.rule);
+    });
+    const lemmaWords = Array.from(lemmaMap.keys());
+
+    // 漢字部分文字列（例: 「10分以上」→「以上」のように漢字が複数連続する場合のみ）
+    const kanjiSubWords = [];
+    const kanjiMatches = cleanWord.match(/[\u4e00-\u9fff]{2,}/g) || [];
+    kanjiMatches.forEach(km => {
+      if (km !== cleanWord && !kanjiSubWords.includes(km)) {
+        kanjiSubWords.push(km);
       }
-    }
-    // 活用動詞の辞書形復元（例: 呼んだ→呼ぶ、行った→行く）
-    if (cleanWord.endsWith('んだ') && cleanWord.length >= 2) {
-      const stem = cleanWord.slice(0, -2);
-      ['ぶ', 'む', 'ぬ'].forEach(v => {
-        if (!searchCandidates.includes(stem + v)) searchCandidates.push(stem + v);
-      });
-    }
-    if (cleanWord.endsWith('った') && cleanWord.length >= 2) {
-      const stem = cleanWord.slice(0, -2);
-      ['う', 'つ', 'る', 'く'].forEach(v => {
-        if (!searchCandidates.includes(stem + v)) searchCandidates.push(stem + v);
-      });
-    }
+    });
 
-    // 選択文字列から2文字以上の部分文字列（例: 「分以上」→「以上」）を抽出
-    const subWords = [];
-    if (cleanWord.length >= 2) {
-      for (let len = cleanWord.length - 1; len >= 2; len--) {
-        for (let i = 0; i <= cleanWord.length - len; i++) {
-          const sub = cleanWord.substring(i, i + len);
-          if (!subWords.includes(sub) && !searchCandidates.includes(sub)) {
-            subWords.push(sub);
-            searchCandidates.push(sub);
-          }
-        }
-      }
-    }
+    // 漢字1文字リスト
+    const singleKanjiList = Array.from(new Set(cleanWord.match(/[\u4e00-\u9fff]/g) || []));
 
-    // 漢字1文字ずつのリスト（例: 「待」や「分以上」の「分」「以」「上」）
-    const kanjiChars = Array.from(new Set(cleanWord.match(/[\u4e00-\u9fff]/g) || []));
-
-    // --- 1. カリキュラム単語（vocabList）＋ 生徒のマイリスト単語からスコアリング検索 ---
+    // --- 2. カリキュラム単語 ＋ マイリスト単語の検索 ---
     let matchedCurriculumCards = [];
     const lookupPool = [...vocabList];
     const poolIds = new Set(vocabList.map(c => c.id));
@@ -5784,77 +6072,123 @@
 
     lookupPool.forEach(c => {
       let score = 0;
-      if (c.word === cleanWord || (c.reading && c.reading === cleanWord)) score = 10000;
-      else if (searchCandidates.includes(c.word)) score = 8000;
-      else if (c.word.startsWith(cleanWord)) score = 5000 - c.word.length * 10;
-      else if (c.word.includes(cleanWord)) score = 3000 - c.word.length * 10;
-      else {
-        for (const sub of subWords) {
-          if (c.word === sub) { score = Math.max(score, 2000 - c.word.length * 5); break; }
-          else if (c.word.startsWith(sub)) { score = Math.max(score, 1500 - c.word.length * 5); break; }
-          else if (c.word.includes(sub)) { score = Math.max(score, 1000 - c.word.length * 5); break; }
-        }
-        for (const k of kanjiChars) {
-          if (c.word.startsWith(k)) score = Math.max(score, 600 - c.word.length * 5);
-          else if (c.word.includes(k)) score = Math.max(score, 400 - c.word.length * 5);
-        }
+      let matchType = '';
+      const w = c.word || '';
+      const r = c.reading || '';
+
+      if (w === cleanWord) {
+        score = 10000;
+        matchType = '完全一致';
+      } else if (r && r === cleanWord) {
+        score = 9500;
+        matchType = '読み完全一致';
+      } else if (lemmaMap.has(w)) {
+        score = 9000;
+        matchType = lemmaMap.get(w);
+      } else if (r && lemmaMap.has(r)) {
+        score = 8500;
+        matchType = lemmaMap.get(r);
+      } else if (w.startsWith(cleanWord)) {
+        score = 5000 - w.length * 10;
+        matchType = '前方一致';
+      } else if (w.includes(cleanWord)) {
+        score = 3000 - w.length * 10;
+        matchType = '部分一致';
       }
+
       if (score > 0) {
-        matchedCurriculumCards.push({ card: c, score });
+        matchedCurriculumCards.push({ card: c, score, matchType, targetWord: w });
       }
     });
     matchedCurriculumCards.sort((a, b) => b.score - a.score);
 
-    // --- 2. DICT_DATA (日本語大辞書 68,000語) からスコアリング検索 ---
+    // --- 3. DICT_DATA (日本語大辞書 68,000語) からの検索 ---
     let dictScoredMatches = [];
     const seenDictKeys = new Set();
     const lvlScoreMap = { 'N5': 80, 'N4': 60, 'N3': 40, 'N2': 20, 'N1': 10 };
 
     if (window.DICT_DATA && Array.isArray(window.DICT_DATA)) {
-      for (const d of window.DICT_DATA) {
-        const w = d.w || '';
-        const r = d.r || '';
+      for (const rawD of window.DICT_DATA) {
+        const w = rawD.w || '';
+        const r = rawD.r || '';
         const key = `${w}_${r}`;
         if (seenDictKeys.has(key)) continue;
 
         let score = 0;
+        let matchType = '';
+
         if (w === cleanWord) {
           score = 10000;
-        } else if (r === cleanWord) {
+          matchType = '完全一致';
+        } else if (r && r === cleanWord) {
+          score = 9500;
+          matchType = '読み完全一致';
+        } else if (lemmaMap.has(w)) {
           score = 9000;
-        } else if (searchCandidates.includes(w)) {
-          score = 8000;
-        } else if (w.startsWith(cleanWord)) {
+          matchType = lemmaMap.get(w);
+        } else if (r && lemmaMap.has(r)) {
+          score = 8500;
+          matchType = lemmaMap.get(r);
+        } else if (w.startsWith(cleanWord) && cleanWord.length >= 2) {
           score = 5000 - w.length * 10;
-        } else if (w.includes(cleanWord)) {
+          matchType = '前方一致';
+        } else if (w.includes(cleanWord) && cleanWord.length >= 2) {
           score = 3000 - w.length * 10;
-        } else {
-          for (const sub of subWords) {
-            if (w === sub) { score = Math.max(score, 2000 - w.length * 5); break; }
-            else if (w.startsWith(sub)) { score = Math.max(score, 1500 - w.length * 5); break; }
-            else if (w.includes(sub)) { score = Math.max(score, 1000 - w.length * 5); break; }
-          }
-          for (const k of kanjiChars) {
-            if (w.startsWith(k)) score = Math.max(score, 600 - w.length * 5);
-            else if (w.includes(k)) score = Math.max(score, 400 - w.length * 5);
-          }
+          matchType = '部分一致';
         }
 
         if (score > 0) {
-          score += (lvlScoreMap[d.l] || 0);
+          score += (lvlScoreMap[rawD.l] || 0);
           if (hintReading && r === hintReading) score += 500;
           seenDictKeys.add(key);
-          dictScoredMatches.push({ item: d, score });
+          dictScoredMatches.push({ item: enrichDictEntry(rawD), score, matchType, targetWord: w });
         }
       }
       dictScoredMatches.sort((a, b) => b.score - a.score);
     }
 
-    // --- 3. 訳文取得用ヘルパー ---
+    // --- 4. 最高スコアが不十分（未検出）の場合のみ漢字複合語・漢字1文字でフォールバック ---
+    const highestCurriculumScore = matchedCurriculumCards[0]?.score || 0;
+    const highestDictScore = dictScoredMatches[0]?.score || 0;
+    const maxScore = Math.max(highestCurriculumScore, highestDictScore);
+
+    if (maxScore < 7000 && (kanjiSubWords.length > 0 || singleKanjiList.length > 0)) {
+      if (window.DICT_DATA && Array.isArray(window.DICT_DATA)) {
+        for (const rawD of window.DICT_DATA) {
+          const w = rawD.w || '';
+          const r = rawD.r || '';
+          const key = `${w}_${r}`;
+          if (seenDictKeys.has(key)) continue;
+
+          let fbScore = 0;
+          let fbType = '';
+
+          for (const ksw of kanjiSubWords) {
+            if (w === ksw) { fbScore = Math.max(fbScore, 2000 - w.length * 5); fbType = '関連語'; break; }
+            else if (w.startsWith(ksw)) { fbScore = Math.max(fbScore, 1500 - w.length * 5); fbType = '関連語'; break; }
+          }
+          if (fbScore === 0) {
+            for (const sk of singleKanjiList) {
+              if (w.startsWith(sk)) { fbScore = Math.max(fbScore, 500 - w.length * 5); fbType = '関連漢字'; break; }
+            }
+          }
+
+          if (fbScore > 0) {
+            fbScore += (lvlScoreMap[rawD.l] || 0);
+            seenDictKeys.add(key);
+            dictScoredMatches.push({ item: enrichDictEntry(rawD), score: fbScore, matchType: fbType, targetWord: w });
+          }
+        }
+        dictScoredMatches.sort((a, b) => b.score - a.score);
+      }
+    }
+
+    // --- 5. 訳文取得用ヘルパー ---
     function formatDictMeaning(d) {
-      const mList = (d.m || []).join(', ');
-      const zhList = (d.zh || []).join(', ');
-      const frList = (d.fr || []).join(', ');
+      const enriched = enrichDictEntry(d);
+      const mList = (enriched.m || []).map(cleanDefinitionText).filter(Boolean).join(', ');
+      const zhList = (enriched.zh || []).map(cleanDefinitionText).filter(Boolean).join(', ');
+      const frList = (enriched.fr || []).map(cleanDefinitionText).filter(Boolean).join(', ');
       if (currentLang === 'zh_TW' || currentLang === 'zh_HK' || currentLang === 'zh_CN') {
         return zhList || mList || '—';
       }
@@ -5864,15 +6198,15 @@
       return mList || '—';
     }
 
-    // --- 4. トップ表示する単語（完全一致、または最高スコアの代表単語）の決定 ---
+    // --- 6. トップ表示する単語カードの決定 ---
     let topWord = cleanWord;
     let topReading = hintReading || '';
-    let topCategory = '一般';
+    let topCategory = '辞書';
     let topMeaningText = '';
     let topCardForSave = null;
-    let isTopFromRelated = false;
+    let topMatchRule = '';
+    let isNeedOnlineFetch = false;
 
-    // 完全一致または最高スコアの選定
     const bestCurriculum = matchedCurriculumCards[0];
     const bestDict = dictScoredMatches[0];
 
@@ -5886,6 +6220,7 @@
       topCategory = cat;
       topMeaningText = getBilingualMeaning(c.meaning, currentLang);
       topCardForSave = c;
+      topMatchRule = bestCurriculum.matchType;
     } else if (bestDict && bestDict.score >= 8000) {
       const d = bestDict.item;
       topWord = d.w;
@@ -5898,27 +6233,23 @@
         reading: topReading,
         category: topCategory,
         meaning: {
-          en: (d.m || []).join(', ') || '—',
-          zh_TW: (d.zh || d.m || []).join(', ') || '—',
-          zh_CN: (d.zh || d.m || []).join(', ') || '—',
-          ko: (d.m || []).join(', ') || '—',
-          fr: (d.fr || d.m || []).join(', ') || '—'
+          en: (d.m || []).map(cleanDefinitionText).join(', ') || '—',
+          zh_TW: (d.zh || d.m || []).map(cleanDefinitionText).join(', ') || '—',
+          zh_CN: (d.zh || d.m || []).map(cleanDefinitionText).join(', ') || '—',
+          ko: (d.m || []).map(cleanDefinitionText).join(', ') || '—',
+          fr: (d.fr || d.m || []).map(cleanDefinitionText).join(', ') || '—'
         }
       };
+      topMatchRule = bestDict.matchType;
     } else if (bestCurriculum) {
-      // 関連する単語としてカリキュラムの語彙がトップ
       const c = bestCurriculum.card;
-      const isStarred = mylistSet.has(c.id) || mylistSet.has(c.word);
       topWord = c.word;
       topReading = c.reading || hintReading || '';
-      let cat = c.category || '一般';
-      if (cat === '授業で習った言葉' && !isStarred) cat = '辞書';
-      topCategory = cat;
+      topCategory = c.category || '辞書';
       topMeaningText = getBilingualMeaning(c.meaning, currentLang);
       topCardForSave = c;
-      isTopFromRelated = true;
+      topMatchRule = bestCurriculum.matchType || '関連語';
     } else if (bestDict) {
-      // 関連する単語として辞書の最重要語（例: 「待」→「待つ」N5）がトップ
       const d = bestDict.item;
       topWord = d.w;
       topReading = d.r || hintReading || '';
@@ -5930,20 +6261,25 @@
         reading: topReading,
         category: topCategory,
         meaning: {
-          en: (d.m || []).join(', ') || '—',
-          zh_TW: (d.zh || d.m || []).join(', ') || '—',
-          zh_CN: (d.zh || d.m || []).join(', ') || '—',
-          ko: (d.m || []).join(', ') || '—',
-          fr: (d.fr || d.m || []).join(', ') || '—'
+          en: (d.m || []).map(cleanDefinitionText).join(', ') || '—',
+          zh_TW: (d.zh || d.m || []).map(cleanDefinitionText).join(', ') || '—',
+          zh_CN: (d.zh || d.m || []).map(cleanDefinitionText).join(', ') || '—',
+          ko: (d.m || []).map(cleanDefinitionText).join(', ') || '—',
+          fr: (d.fr || d.m || []).map(cleanDefinitionText).join(', ') || '—'
         }
       };
-      isTopFromRelated = true;
+      topMatchRule = bestDict.matchType || '関連語';
     } else {
-      topMeaningText = '日本語表現・単語';
+      // 辞書・カリキュラム未登録の単語 -> オンライン辞書APIで自動取得
+      topWord = cleanWord;
+      topReading = hintReading || cleanWord;
+      topCategory = '辞書 (Web連携)';
+      topMeaningText = 'オンライン辞書・翻訳から検索中...';
+      isNeedOnlineFetch = true;
       topCardForSave = {
         id: `custom_dict_${cleanWord}_${Date.now()}`,
         word: cleanWord,
-        reading: topReading || cleanWord,
+        reading: topReading,
         category: '例文から保存',
         meaning: {
           en: cleanWord,
@@ -5955,15 +6291,46 @@
       };
     }
 
-    const isAlreadySaved = mylistSet.has(topCardForSave.id) || mylistSet.has(topWord);
+    const isAlreadySaved = mylistSet.has(topCardForSave.id) || mylistSet.has(topWord) || (topReading && mylistSet.has(topReading));
 
-    // --- 5. 関連単語リスト（2番目以降のヒット）の構築 ---
+    // --- 7. 関連単語リスト（無関係な音片を排除し、真の派生語・関連語のみ選出） ---
     const relatedList = [];
     const usedWordKeys = new Set([topWord]);
 
-    // カリキュラム内の関連語を優先追加
+    // 形態素・活用形の相方（例: 「はかどる」に対して「捗る」など）を優先追加
+    lemmaWords.forEach(lm => {
+      if (!usedWordKeys.has(lm) && window.DICT_DATA) {
+        const sibling = window.DICT_DATA.find(d => d.w === lm || (d.r && d.r === lm));
+        if (sibling && !usedWordKeys.has(sibling.w)) {
+          usedWordKeys.add(sibling.w);
+          const enr = enrichDictEntry(sibling);
+          relatedList.push({
+            word: enr.w,
+            reading: enr.r || '',
+            category: enr.l ? `JLPT ${enr.l}` : '辞書',
+            badgeClass: enr.l ? 'bg-sky-100 text-sky-800' : 'bg-slate-100 text-slate-700',
+            meaning: formatDictMeaning(enr),
+            cardObj: {
+              id: `dict_${enr.w}_${enr.r || ''}`,
+              word: enr.w,
+              reading: enr.r || '',
+              category: enr.l ? `JLPT ${enr.l}` : '辞書',
+              meaning: {
+                en: (enr.m || []).map(cleanDefinitionText).join(', ') || '—',
+                zh_TW: (enr.zh || enr.m || []).map(cleanDefinitionText).join(', ') || '—',
+                zh_CN: (enr.zh || enr.m || []).map(cleanDefinitionText).join(', ') || '—',
+                ko: (enr.m || []).map(cleanDefinitionText).join(', ') || '—',
+                fr: (enr.fr || enr.m || []).map(cleanDefinitionText).join(', ') || '—'
+              }
+            }
+          });
+        }
+      }
+    });
+
+    // カリキュラム単語のヒットを追加
     matchedCurriculumCards.forEach(mc => {
-      if (!usedWordKeys.has(mc.card.word)) {
+      if (!usedWordKeys.has(mc.card.word) && mc.score >= 3000 && relatedList.length < 8) {
         usedWordKeys.add(mc.card.word);
         const isStarred = mylistSet.has(mc.card.id) || mylistSet.has(mc.card.word);
         let cat = mc.card.category || '一般';
@@ -5979,48 +6346,67 @@
       }
     });
 
-    // 辞書内の関連語を追加
+    // 辞書の高スコア語彙を追加（スコア3000以上＝接頭一致・重要語のみに厳選）
     dictScoredMatches.forEach(dm => {
-      if (!usedWordKeys.has(dm.item.w) && relatedList.length < 12) {
+      if (!usedWordKeys.has(dm.item.w) && dm.score >= 3000 && relatedList.length < 10) {
         usedWordKeys.add(dm.item.w);
         const d = dm.item;
         const meaning = formatDictMeaning(d);
-        const cardObj = {
-          id: `dict_${d.w}_${d.r || ''}`,
-          word: d.w,
-          reading: d.r || '',
-          category: d.l ? `JLPT ${d.l}` : '辞書',
-          meaning: {
-            en: (d.m || []).join(', ') || '—',
-            zh_TW: (d.zh || d.m || []).join(', ') || '—',
-            zh_CN: (d.zh || d.m || []).join(', ') || '—',
-            ko: (d.m || []).join(', ') || '—',
-            fr: (d.fr || d.m || []).join(', ') || '—'
-          }
-        };
         relatedList.push({
           word: d.w,
           reading: d.r || '',
           category: d.l ? `JLPT ${d.l}` : '辞書',
           badgeClass: d.l ? 'bg-sky-100 text-sky-800' : 'bg-slate-100 text-slate-700',
           meaning: meaning,
-          cardObj: cardObj
+          cardObj: {
+            id: `dict_${d.w}_${d.r || ''}`,
+            word: d.w,
+            reading: d.r || '',
+            category: d.l ? `JLPT ${d.l}` : '辞書',
+            meaning: {
+              en: (d.m || []).map(cleanDefinitionText).join(', ') || '—',
+              zh_TW: (d.zh || d.m || []).map(cleanDefinitionText).join(', ') || '—',
+              zh_CN: (d.zh || d.m || []).map(cleanDefinitionText).join(', ') || '—',
+              ko: (d.m || []).map(cleanDefinitionText).join(', ') || '—',
+              fr: (d.fr || d.m || []).map(cleanDefinitionText).join(', ') || '—'
+            }
+          }
         });
       }
     });
 
-    // --- 6. モーダルHTML生成 ---
+    // --- 8. モーダルHTML生成 ---
+    let headerNoticeHtml = '';
+    if (topWord !== cleanWord) {
+      if (topMatchRule && (topMatchRule.includes('辞書形') || topMatchRule.includes('動詞') || topMatchRule.includes('原形'))) {
+        headerNoticeHtml = `
+          <div class="px-3.5 py-2 rounded-xl bg-blue-50 border border-blue-200 text-blue-800 text-xs flex items-center justify-between shadow-2xs">
+            <span>活用形 <strong>「${escapeHtml(cleanWord)}」</strong> の辞書形（原形）: <strong class="text-blue-900 font-bold font-jp">「${escapeHtml(topWord)}」</strong></span>
+            <span class="text-[10px] font-bold bg-blue-600 text-white px-2 py-0.5 rounded-full shrink-0 ml-2">${escapeHtml(topMatchRule)}</span>
+          </div>
+        `;
+      } else if (topMatchRule === '助詞除去') {
+        headerNoticeHtml = `
+          <div class="px-3.5 py-2 rounded-xl bg-blue-50 border border-blue-200 text-blue-800 text-xs flex items-center justify-between shadow-2xs">
+            <span>助詞を除去: <strong>「${escapeHtml(cleanWord)}」</strong> → <strong class="text-blue-900 font-bold font-jp">「${escapeHtml(topWord)}」</strong></span>
+            <span class="text-[10px] font-bold bg-blue-600 text-white px-2 py-0.5 rounded-full shrink-0 ml-2">助詞除去</span>
+          </div>
+        `;
+      } else {
+        headerNoticeHtml = `
+          <div class="px-3.5 py-2 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs flex items-center justify-between shadow-2xs">
+            <span>選択: <strong>「${escapeHtml(cleanWord)}」</strong> に関連する単語: <strong class="text-amber-900 font-bold font-jp">「${escapeHtml(topWord)}」</strong></span>
+            <span class="text-[10px] font-bold bg-amber-200/80 text-amber-900 px-2 py-0.5 rounded-md shrink-0 ml-2">関連検索</span>
+          </div>
+        `;
+      }
+    }
+
     let modalHtml = `
-      <!-- 選択文字列インジケーター (漢字1文字や部分選択の場合にわかりやすく案内) -->
-      ${isTopFromRelated || topWord !== cleanWord ? `
-        <div class="px-3 py-1.5 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs flex items-center justify-between">
-          <span>選択: <strong class="text-amber-900">「${escapeHtml(cleanWord)}」</strong> を使った最も関連性の高い単語:</span>
-          <span class="text-[10px] font-bold bg-amber-200/80 px-2 py-0.5 rounded-md">関連検索</span>
-        </div>
-      ` : ''}
+      ${headerNoticeHtml}
 
       <!-- メインヒット単語カード -->
-      <div class="p-4 sm:p-5 rounded-2xl bg-sky-50 border border-sky-200 space-y-3">
+      <div class="p-4 sm:p-5 rounded-2xl bg-sky-50/80 border border-sky-200 space-y-3 shadow-2xs">
         <div class="flex items-baseline justify-between flex-wrap gap-2">
           <div>
             <span class="text-[10px] sm:text-xs font-extrabold bg-sky-600 text-white px-2.5 py-0.5 rounded-full mr-1.5">${topCategory}</span>
@@ -6041,7 +6427,30 @@
 
         <div class="pt-2 border-t border-sky-200/60 text-sm sm:text-base text-slate-700 leading-relaxed">
           <strong class="text-slate-900 block mb-0.5 text-xs sm:text-sm font-bold">意味・訳:</strong>
-          <p class="font-bold text-slate-900 text-sm sm:text-base">${escapeHtml(topMeaningText)}</p>
+          <p id="dictModalMeaningText" class="font-bold text-slate-900 text-sm sm:text-base">${escapeHtml(topMeaningText)}</p>
+        </div>
+
+        ${isNeedOnlineFetch ? `
+          <div id="dictOnlineStatusBox" class="mt-2 p-2.5 rounded-xl bg-sky-100/70 border border-sky-200 text-sky-800 text-xs flex items-center justify-between">
+            <span id="dictOnlineStatusText" class="flex items-center space-x-1.5">
+              <span class="inline-block animate-spin">⏳</span>
+              <span>オンライン辞書・Web翻訳から解説を取得中...</span>
+            </span>
+            <span class="text-[10px] font-bold bg-sky-200 text-sky-800 px-2 py-0.5 rounded-md shrink-0">Web自動連携</span>
+          </div>
+        ` : ''}
+
+        <!-- 外部辞書クイック検索リンク -->
+        <div class="pt-1 flex items-center flex-wrap gap-2 text-xs">
+          <a href="https://www.google.com/search?q=${encodeURIComponent(topWord + ' 意味')}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 text-slate-600 hover:text-sky-700 hover:border-sky-300 font-bold transition flex items-center space-x-1 shadow-2xs">
+            <span>🔍 Googleで調べる</span>
+          </a>
+          <a href="https://kotobank.jp/word/${encodeURIComponent(topWord)}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 text-slate-600 hover:text-sky-700 hover:border-sky-300 font-bold transition flex items-center space-x-1 shadow-2xs">
+            <span>📖 コトバンク</span>
+          </a>
+          <a href="https://ja.wiktionary.org/wiki/${encodeURIComponent(topWord)}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 text-slate-600 hover:text-sky-700 hover:border-sky-300 font-bold transition flex items-center space-x-1 shadow-2xs">
+            <span>📚 ウィクショナリー</span>
+          </a>
         </div>
       </div>
     `;
@@ -6053,7 +6462,7 @@
           <h4 class="text-xs sm:text-sm font-bold text-slate-700 flex items-center justify-between">
             <span class="flex items-center space-x-1">
               <span>📚</span>
-              <span>「${escapeHtml(cleanWord)}」を含む関連単語 (${relatedList.length}件)</span>
+              <span>「${escapeHtml(cleanWord)}」に関連する単語 (${relatedList.length}件)</span>
             </span>
             <span class="text-[10px] sm:text-xs text-slate-400 font-normal">タップで詳細表示</span>
           </h4>
@@ -6061,7 +6470,7 @@
             ${relatedList.map((rel, idx) => {
               const isRelSaved = mylistSet.has(rel.cardObj.id) || mylistSet.has(rel.word);
               return `
-                <div class="rel-word-item p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between text-xs sm:text-sm hover:bg-blue-50/50 hover:border-sky-300 transition cursor-pointer" data-idx="${idx}">
+                <div class="rel-word-item p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between text-xs sm:text-sm hover:bg-blue-50/50 hover:border-sky-300 transition cursor-pointer shadow-2xs" data-idx="${idx}">
                   <div class="flex items-baseline space-x-2 truncate pr-2">
                     <span class="font-bold text-slate-900 text-sm sm:text-base font-jp">${escapeHtml(rel.word)}</span>
                     ${rel.reading ? `<span class="text-xs sm:text-sm text-coralPink font-bold font-jp">（${escapeHtml(rel.reading)}）</span>` : ''}
@@ -6087,7 +6496,48 @@
 
     content.innerHTML = modalHtml;
 
-    // --- 7. イベントリスナーの接続 ---
+    // --- 9. 未登録単語のオンライン非同期辞書取得 ---
+    if (isNeedOnlineFetch) {
+      fetchOnlineDictionaryDefinition(cleanWord).then(onlineData => {
+        const meaningEl = content.querySelector('#dictModalMeaningText');
+        const statusBox = content.querySelector('#dictOnlineStatusBox');
+        const statusText = content.querySelector('#dictOnlineStatusText');
+
+        if (onlineData) {
+          let displayText = '';
+          if (currentLang === 'zh_TW' || currentLang === 'zh_HK') displayText = onlineData.zh_TW;
+          else if (currentLang === 'zh_CN') displayText = onlineData.zh_CN;
+          else if (currentLang === 'fr') displayText = onlineData.fr;
+          else if (currentLang === 'ko') displayText = onlineData.ko;
+          else displayText = onlineData.en;
+
+          if (onlineData.ja) {
+            displayText = `${displayText} (${onlineData.ja})`;
+          }
+
+          if (meaningEl) meaningEl.textContent = displayText || '日本語表現・単語';
+          topCardForSave.meaning = {
+            en: onlineData.en || cleanWord,
+            zh_TW: onlineData.zh_TW || cleanWord,
+            zh_CN: onlineData.zh_CN || cleanWord,
+            ko: onlineData.ko || cleanWord,
+            fr: onlineData.fr || cleanWord
+          };
+
+          if (statusBox) {
+            statusBox.className = 'mt-2 p-2 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs flex items-center justify-between';
+            if (statusText) statusText.innerHTML = '<span>✅ オンライン辞書から解説を取得しました</span>';
+          }
+        } else {
+          if (statusBox) {
+            statusBox.className = 'mt-2 p-2 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs flex items-center justify-between';
+            if (statusText) statusText.innerHTML = '<span>辞書に見つかりませんでした。下のGoogleまたはコトバンクで検索できます。</span>';
+          }
+        }
+      });
+    }
+
+    // --- 10. イベントリスナーの接続 ---
     const btnSpeak = content.querySelector('#btnModalSpeakWord');
     if (btnSpeak) {
       btnSpeak.addEventListener('click', () => {
