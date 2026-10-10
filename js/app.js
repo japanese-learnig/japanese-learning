@@ -5707,12 +5707,36 @@
       candidates.push({ word: trimmed, rule: ruleName || '辞書形・原形' });
     }
 
-    // 1. 接頭語の除去 (お・ご)
+    // 1. 接頭語の除去 (お・ご) と お〜連用形 の動詞・定型表現復元
     if ((clean.startsWith('お') || clean.startsWith('ご')) && clean.length >= 2) {
-      addCandidate(clean.slice(1), '接頭語除去');
+      const bare = clean.slice(1);
+      addCandidate(bare, '接頭語除去');
+      expandRenyoukei(bare); // お疲れ -> 疲れる, お待ち -> 待つ, お話し -> 話す
+      if (clean === 'お疲れ' || clean === 'おつかれ') {
+        addCandidate('お疲れ様', '定型表現');
+        addCandidate('疲れる', '動詞・辞書形');
+      }
+      if (clean === 'お願い' || clean === 'おねがい') {
+        addCandidate('お願いします', '定型表現');
+        addCandidate('願う', '動詞・辞書形');
+      }
     }
 
-    // 2. 助詞・付属語の除去
+    // 2. 挨拶・丁寧語尾の除去 (様でした, でした, です, 様)
+    const politeEndings = ['様でした', 'さまでした', 'でした', 'です', '様', 'さま'];
+    for (const pe of politeEndings) {
+      if (clean.endsWith(pe) && clean.length > pe.length) {
+        const stem = clean.slice(0, -pe.length);
+        addCandidate(stem, '丁寧語尾除去');
+        if (stem.startsWith('お') || stem.startsWith('ご')) {
+          const bare = stem.slice(1);
+          addCandidate(bare, '接頭語除去');
+          expandRenyoukei(bare);
+        }
+      }
+    }
+
+    // 3. 助詞・付属語の除去
     const particles = [
       'とか', 'など', 'より', 'から', 'まで', 'だけ', 'ほど', 'ばかり', 'くらい', 'ぐらい',
       'な', 'だ', 'に', 'を', 'の', 'が', 'は', 'で', 'と', 'へ', 'も', 'よ', 'ね', 'か'
